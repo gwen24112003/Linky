@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Card } from '../ui/Card';
 import { Service } from '../../types';
 
@@ -7,8 +8,8 @@ export const ServicesSection: React.FC = () => {
     {
       id: '1',
       title: 'Création d\'outils no-code',
-      description: 'Développer des solutions sur mesure.',
       features: [
+        'Développer des solutions sur mesure',
         'Applications web et mobile',
         'Interfaces intuitives'
       ]
@@ -16,8 +17,8 @@ export const ServicesSection: React.FC = () => {
     {
       id: '2',
       title: 'Automatisation',
-      description: 'Optimisez vos processus.',
       features: [
+        'Optimisez vos processus',
         'Workflows sur mesure',
         'Suppression des tâches répétitives'
       ]
@@ -25,8 +26,8 @@ export const ServicesSection: React.FC = () => {
     {
       id: '3',
       title: 'Maintenance & Support',
-      description: 'Nous vous accompagnons.',
       features: [
+        'Nous vous accompagnons',
         'Suivi post-projet et corrections',
         'Accompagnement technique réactif'
       ]
@@ -34,27 +35,32 @@ export const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-4 pb-20 bg-white">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
             Nos services pour votre transformation digitale
           </h2>
-          <p className="text-gray-600 text-base leading-relaxed">
-            Bénéficiez de solutions sur mesure pour dynamiser vos process et créer rapidement des outils no-code, 
-            automatisation ou support de la maintenance des produits.
+          <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
+            Bénéficiez de solutions sur mesure pour dynamiser vos process et créer rapidement des outils no-code, automatisation ou support de la maintenance des produits.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service) => (
             <Card
               key={service.id}
               title={service.title}
-              description={service.description}
               features={service.features}
             />
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <button className="bg-white text-teal-600 border-2 border-teal-600 px-5 py-3 text-lg font-bold rounded-lg hover:bg-teal-600 hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
+            Découvrez nos services
+            <ArrowRight size={24} />
+          </button>
         </div>
       </div>
     </section>

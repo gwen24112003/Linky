@@ -3,7 +3,7 @@
 export interface Service {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   features: string[];
 }
 

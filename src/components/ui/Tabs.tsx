@@ -18,7 +18,7 @@ export const Tabs: React.FC<TabsProps> = ({ activeTab, onTabChange }) => {
         <button
           key={tab.value}
           onClick={() => onTabChange(tab.value)}
-          className={`pb-3 text-base font-semibold transition-all duration-200 relative ${
+          className={`pb-3 text-2xl font-bold transition-all duration-200 relative ${
             activeTab === tab.value
               ? 'text-gray-900'
               : 'text-gray-500 hover:text-gray-700'
@@ -26,7 +26,7 @@ export const Tabs: React.FC<TabsProps> = ({ activeTab, onTabChange }) => {
         >
           {tab.label}
           {activeTab === tab.value && (
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-teal-600"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-teal-600"></div>
           )}
         </button>
       ))}
