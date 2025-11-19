@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+  sans: ["Meera Inimai", 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+  heading: ["Dongle", 'Meera Inimai', 'ui-sans-serif'],
+  subtitle: ["Lexend", 'Meera Inimai', 'ui-sans-serif'],
+      },
       colors: {
         teal: {
           50: '#f0fdfa',

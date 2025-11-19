@@ -9,9 +9,25 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* Default body font: Meera Inimai (loaded from Google Fonts) */
+  font-family: 'Meera Inimai', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use Dongle (Google Font) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Dongle', 'Proxima Nova', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Subtitle utility class uses Lexend (Google Font) */
+.subtitle {
+  font-family: 'Lexend', 'Proxima Nova', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Lead / paragraph helper */
+.lead {
+  font-family: 'Meera Inimai', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }

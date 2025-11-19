@@ -31,8 +31,8 @@ export const Home: React.FC = () => {
           <>
             <ServicesSection />
             <ProcessSection />
-            {/* Témoignages masqués pour le moment comme demandé */}
-            {/* <TestimonialsSection /> */}
+            {/* Affiche les témoignages pour correspondre à la maquette */}
+            <TestimonialsSection />
           </>
         )}
 
