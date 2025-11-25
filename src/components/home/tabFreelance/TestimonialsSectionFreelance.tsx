@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Testimonial } from '../../types';
+import { Testimonial } from '../../../types';
 
-export const TestimonialsSection: React.FC = () => {
+export const TestimonialsSectionFreelance: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [
@@ -41,7 +41,7 @@ export const TestimonialsSection: React.FC = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-16 text-center">
-          Ce que nos clients disent de nous
+          Ce que nos collaborateurs disent de nous
         </h2>
 
         <div className="relative">

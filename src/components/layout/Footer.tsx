@@ -36,8 +36,8 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto px-6">
+    <footer className="bg-gray-900 text-white rounded-t-3xl py-16 container mx-auto px-6">
+      <div className="max-w-[75%] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>

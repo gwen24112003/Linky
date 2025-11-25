@@ -1,35 +1,32 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Card } from '../ui/Card';
-import { Service } from '../../types';
+import { Card } from '../../ui/Card';
+import { Service } from '../../../types';
 
-export const ServicesSection: React.FC = () => {
+export const ServicesSectionFreelance: React.FC = () => {
   const services: Service[] = [
     {
       id: '1',
-      title: 'Création d\'outils no-code',
+      title: 'Client fournis',
       features: [
-        'Développer des solutions sur mesure',
-        'Applications web et mobile',
-        'Interfaces intuitives'
+        'Pas de prospection',
+        'Intégrité des missions'
       ]
     },
     {
       id: '2',
-      title: 'Automatisation',
+      title: 'Gestion du contact client',
       features: [
-        'Optimisez vos processus',
-        'Workflows sur mesure',
-        'Suppression des tâches répétitives'
+        'Nous gérons vos échanges',
+        'Concentration sur la mission'
       ]
     },
     {
       id: '3',
-      title: 'Maintenance & Support',
+      title: 'Liberté sans engagements',
       features: [
-        'Nous vous accompagnons',
-        'Suivi post-projet et corrections',
-        'Accompagnement technique réactif'
+        'Choisissez vos missions',
+        'Activez votre profil quand vous le souhaitez'
       ]
     }
   ];
@@ -39,10 +36,10 @@ export const ServicesSection: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
-            Nos services pour votre transformation digitale
+            Rejoignez notre collectif freelance
           </h2>
           <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
-            Bénéficiez de solutions sur mesure pour dynamiser vos process et créer rapidement des outils no-code, automatisation ou support de la maintenance des produits.
+            Activez votre profil, recevez des missions, choisissez en toute liberté.
           </p>
         </div>
 
@@ -58,7 +55,7 @@ export const ServicesSection: React.FC = () => {
 
         <div className="flex justify-center mt-12">
           <button className="bg-white text-teal-600 border-2 border-teal-600 px-5 py-3 text-lg font-bold rounded-lg hover:bg-teal-600 hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
-            Découvrez nos services
+            Découvrez notre collectif
             <ArrowRight size={24} />
           </button>
         </div>
