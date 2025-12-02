@@ -1,30 +1,24 @@
 /** @type {import('tailwindcss').Config} */
+const { colors, fonts, spacing, radius, shadows, sizes } = require('./src/theme');
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-  sans: ["Meera Inimai", 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
-  heading: ["Dongle", 'Meera Inimai', 'ui-sans-serif'],
-  subtitle: ["Lexend", 'Meera Inimai', 'ui-sans-serif'],
-      },
-      colors: {
-        teal: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
-        },
-      },
+      fontFamily: fonts,
+      colors: colors,
+      spacing: spacing,
+      borderRadius: radius,
+      boxShadow: shadows,
+      width: sizes,
+      height: sizes,
+      minWidth: sizes,
+      minHeight: sizes,
+      maxWidth: sizes,
+      maxHeight: sizes,
     },
   },
   plugins: [],
-} 
+}

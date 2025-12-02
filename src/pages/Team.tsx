@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Lightbulb, User, Settings, ThumbsUp, Brain } from 'lucide-react';
+import { bannerStyles, bannerOverlayClass } from '../theme/bannerStyles';
 
 interface TeamMember {
   name: string;
@@ -19,14 +20,14 @@ export const Team: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       name: 'Enzo Monnier',
-      role: 'Fondateur &',
-      description: 'Développeur No-Code',
+      role: 'Fondateur',
+      description: 'Expert No-Code',
       image: '/images/enzo.jpg'
     },
     {
       name: 'Gwendoline Vanelle',
-      role: 'Office Manager &',
-      description: 'Développeuse No-Code',
+      role: 'Office Manager',
+      description: 'Experte No-Code',
       image: '/images/gwendoline.png'
     }
   ];
@@ -67,19 +68,14 @@ export const Team: React.FC = () => {
           {/* Banner Background */}
           <div 
             className="relative overflow-hidden flex items-center justify-center" 
-            style={{
-              backgroundImage: 'url(/images/linky-banner.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              minHeight: '50vh'
-            }}
+            style={bannerStyles}
           >
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/20"></div>
+            <div className={bannerOverlayClass}></div>
             
             <div className="container mx-auto px-6 relative z-10">
               <h1 className="text-4xl md:text-6xl lg:text-8xl text-white text-center leading-tight">
-                Notre équipe
+                L'équipe Linky
               </h1>
             </div>
           </div>
@@ -133,12 +129,14 @@ export const Team: React.FC = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="bg-white rounded-3xl border-2 border-gray-200 p-12 shadow-lg">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">Notre mission</h2>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
+                Pourquoi Linky ?
+              </h2>
               <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed mb-6">
-                Nous croyons que le no-code permet de créer rapidement des produits à l'image de ceux qui les imaginent, sans barrières techniques.
+                Nous croyons que le no-code permet de concrétiser vos idées rapidement, sans barrières techniques.
               </p>
               <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
-                Avec Linky, vous bénéficiez de deux experts en no-code, automation et IA, dédiés à transformer vos idées en solutions concrètes et personnalisées.
+                Chez Linky, deux experts en no-code, automation et IA transforment vos idées en solutions concrètes et sur mesure.
               </p>
 
               {/* Values Icons */}

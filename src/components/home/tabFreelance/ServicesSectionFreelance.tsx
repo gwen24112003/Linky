@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Card } from '../../ui/Card';
 import { Service } from '../../../types';
 
@@ -10,7 +11,7 @@ export const ServicesSectionFreelance: React.FC = () => {
       title: 'Client fournis',
       features: [
         'Pas de prospection',
-        'Intégrité des missions'
+        'Missions qualifiées'
       ]
     },
     {
@@ -36,10 +37,10 @@ export const ServicesSectionFreelance: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
-            Rejoignez notre collectif freelance
+            Rejoignez notre collectif freelance d'experts no-code
           </h2>
           <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
-            Activez votre profil, recevez des missions, choisissez en toute liberté.
+            Activez votre profil, recevez des missions qualifiées, choisissez en toute liberté.
           </p>
         </div>
 
@@ -54,10 +55,10 @@ export const ServicesSectionFreelance: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-12">
-          <button className="bg-white text-teal-600 border-2 border-teal-600 px-5 py-3 text-lg font-bold rounded-lg hover:bg-teal-600 hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
-            Découvrez notre collectif
+          <Link to="/services#creation" className="bg-white text-teal-600 border-2 border-teal-600 px-5 py-3 text-lg font-bold rounded-lg hover:bg-teal-600 hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
+            En savoir plus
             <ArrowRight size={24} />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

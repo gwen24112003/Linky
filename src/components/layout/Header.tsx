@@ -7,20 +7,27 @@ export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks: NavLink[] = [
+    { label: 'Accueil', href: '/' },
     { label: 'Notre équipe', href: '/equipe' },
-    { label: 'Nos projets', href: '/projets' },
-    { label: 'Contact', href: '#contact' }
+    // { label: 'Nos projets', href: '/projets' },
+    { label: 'Nos Services', href: '/services' },
+    { label: 'Contact', href: '/contact' }
   ];
 
+  const handleNavClick = () => {
+    window.scrollTo(0, 0);
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <header className="bg-white/75 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo: using inline style to force larger size since Tailwind classes are being overridden */}
-          <Link to="/" className="flex items-center gap-0">
+          <Link to="/" className="flex items-center gap-0" aria-label="Retour à l'accueil">
             <img
               src="/images/linky-logo.png"
-              alt="Linky"
+              alt="Logo Linky"
               className="object-contain"
               style={{ width: 'auto', height: '75px', maxHeight: '250px' }}
             />
@@ -42,6 +49,7 @@ export const Header: React.FC = () => {
                 <Link
                   key={link.label}
                   to={link.href}
+                  onClick={handleNavClick}
                   className="text-xl text-gray-600 hover:text-teal-600 transition-colors duration-200 font-bold"
                 >
                   {link.label}
@@ -50,12 +58,14 @@ export const Header: React.FC = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-700 hover:text-teal-600"
+            className="md:hidden text-gray-600 hover:text-teal-600 transition-colors"
+            aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isMenuOpen}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
@@ -77,7 +87,7 @@ export const Header: React.FC = () => {
                   key={link.label}
                   to={link.href}
                   className="block text-sm text-gray-600 hover:text-teal-600 transition-colors duration-200 font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleNavClick}
                 >
                   {link.label}
                 </Link>

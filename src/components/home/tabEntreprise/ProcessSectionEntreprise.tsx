@@ -56,14 +56,14 @@ export const ProcessSectionEntreprise: React.FC = () => {
             Notre processus
           </h2>
 
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-2">
+          <div className="flex flex-col lg:flex-row items-start justify-center gap-6 lg:gap-2">
             {processSteps.map((step, index) => (
               <React.Fragment key={step.id}>
                 <div className="flex flex-col items-center flex-1">
                   <div className="w-16 h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 rounded-full bg-gradient-to-br from-teal-400 to-teal-800 flex items-center justify-center mb-4 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
                     {getIcon(step.icon)}
                   </div>
-                  <p className="text-sm lg:text-base xl:text-lg text-center text-gray-600 leading-relaxed px-2">
+                  <p className="text-sm lg:text-base xl:text-lg text-center text-gray-600 leading-relaxed px-2 min-h-[3rem]">
                     {step.title}
                   </p>
                 </div>
@@ -71,7 +71,7 @@ export const ProcessSectionEntreprise: React.FC = () => {
                 {index < processSteps.length - 1 && (
                   <>
                     {/* Flèche horizontale pour desktop */}
-                    <div className="hidden lg:flex items-center mx-2 xl:mx-5" style={{ height: '80px', alignSelf: 'flex-start' }}>
+                    <div className="hidden lg:flex items-center mx-2 xl:mx-5 self-start" style={{ marginTop: '32px' }}>
                       <svg width="40" height="20" viewBox="0 0 40 20" fill="none" className="xl:w-[60px] xl:h-[24px]">
                         <path d="M0 10 L35 10 M22 4 L35 10 L22 16" stroke="#0d9488" strokeWidth="2.5" />
                       </svg>

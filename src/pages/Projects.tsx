@@ -31,11 +31,11 @@ export const Projects: React.FC = () => {
         'Applications web et mobile',
         'Bases de données personnalisées',
         'Interfaces utilisateur intuitives',
-        'Déroulement rapide et sécurisé'
+        'Déploiement rapide et sécurisé'
       ],
       fullDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nis ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      duration: 'la durée peut être',
-      clientReview: 'et un avis du référent'
+      duration: '4 mois',
+      clientReview: 'Une collaboration très productive et des résultats au-delà de nos attentes'
     },
     {
       id: '2',
@@ -116,11 +116,11 @@ export const Projects: React.FC = () => {
             minHeight: '50vh'
           }}
         >
-          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 bg-overlay"></div>
           
           <div className="container mx-auto px-6 relative z-10">
             <h1 className="text-4xl md:text-6xl lg:text-8xl text-white text-center leading-tight">
-              Nos projets
+              Nos réalisations
             </h1>
           </div>
         </section>
@@ -191,6 +191,8 @@ export const Projects: React.FC = () => {
                             <button
                               onClick={() => toggleProject(project.id)}
                               className="flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-4 py-2 rounded-lg font-lexend text-lg font-semibold hover:bg-teal-600 hover:border-teal-600 hover:scale-105 transition-all duration-300"
+                              aria-expanded={expandedProject === project.id}
+                              aria-label={expandedProject === project.id ? "Fermer les détails du projet" : "Voir les détails du projet"}
                             >
                               {expandedProject === project.id ? (
                                 <X size={20} />
