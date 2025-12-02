@@ -1,46 +1,155 @@
-# Getting Started with Create React App
+# 🔗 Linky - Site Web Officiel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site web vitrine de **Linky**, votre partenaire en solutions no-code et automatisation pour booster votre productivité.
 
-## Available Scripts
+## 📋 À propos
 
-In the project directory, you can run:
+Linky propose des services de création d'outils no-code, d'automatisation de processus et de maintenance pour les freelances et entreprises qui souhaitent optimiser leur productivité sans coder.
 
-### `npm start`
+## 🚀 Technologies utilisées
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React** 19.2.0 avec TypeScript
+- **React Router DOM** 7.9.6 pour la navigation
+- **Tailwind CSS** 3.4.1 pour le styling
+- **Lucide React** pour les icônes
+- **EmailJS** pour le formulaire de contact
+- **CRACO** pour la configuration personnalisée
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📦 Prérequis
 
-### `npm test`
+Avant de commencer, assurez-vous d'avoir installé :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Node.js** (version 16 ou supérieure)
+- **npm** (généralement installé avec Node.js)
 
-### `npm run build`
+Pour vérifier vos versions :
+```bash
+node --version
+npm --version
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Installation et lancement
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Cloner le repository**
+   ```bash
+   git clone https://github.com/gwen24112003/Linky.git
+   cd Linky_site/Linky_site
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Installer les dépendances**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Lancer le projet**
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+L'application sera accessible sur :
+- **Local** : [http://localhost:3000](http://localhost:3000)
+- **Réseau** : http://192.168.x.x:3000
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Le serveur se rechargera automatiquement à chaque modification du code.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📁 Structure du projet
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+Linky_site/
+├── public/
+│   ├── images/              # Images et logos
+│   └── index.html           # Template HTML
+├── src/
+│   ├── components/          # Composants React
+│   │   ├── home/           # Composants de la page d'accueil
+│   │   └── layout/         # Header, Footer, etc.
+│   ├── pages/              # Pages de l'application
+│   │   ├── Home.tsx
+│   │   ├── Services.tsx
+│   │   ├── Team.tsx
+│   │   ├── Projects.tsx
+│   │   └── Contact.tsx
+│   ├── theme/              # Configuration du thème
+│   │   ├── colors.js
+│   │   ├── fonts.js
+│   │   ├── bannerStyles.js
+│   │   └── index.js
+│   ├── types/              # Types TypeScript
+│   ├── App.tsx             # Composant principal
+│   └── index.tsx           # Point d'entrée
+├── tailwind.config.js      # Configuration Tailwind
+├── craco.config.js         # Configuration CRACO
+└── package.json
+```
 
-## Learn More
+## 🎨 Pages disponibles
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **/** - Page d'accueil avec onglets Freelances/Entreprises
+- **/services** - Présentation détaillée des services
+- **/equipe** - Présentation de l'équipe Linky
+- **/projets** - Portfolio des projets réalisés
+- **/contact** - Formulaire de contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔧 Configuration
+
+### Tailwind CSS
+
+Le projet utilise Tailwind CSS avec une configuration personnalisée incluant :
+- Polices personnalisées (Lexend, Meera Inimai)
+- Palette de couleurs personnalisée
+- Animations et transitions
+
+### EmailJS
+
+Pour le formulaire de contact, configurez vos clés EmailJS dans le composant `Contact.tsx`.
+
+## 🌐 Déploiement
+
+Le projet peut être déployé sur :
+- **Vercel** (recommandé pour React)
+- **Netlify**
+- **GitHub Pages**
+- Tout hébergeur supportant les applications React
+
+### Exemple avec Vercel :
+
+```bash
+npm install -g vercel
+npm run build
+vercel --prod
+```
+
+## 📝 Scripts disponibles
+
+| Commande | Description |
+|----------|-------------|
+| `npm start` | Lance le serveur de développement |
+| `npm run build` | Crée le build de production |
+| `npm test` | Lance les tests |
+| `npm run eject` | Éjecte la configuration CRA (irréversible) |
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à :
+1. Fork le projet
+2. Créer une branche (`git checkout -b feature/amelioration`)
+3. Commit vos changements (`git commit -m 'Ajout d'une fonctionnalité'`)
+4. Push vers la branche (`git push origin feature/amelioration`)
+5. Ouvrir une Pull Request
+
+## 📧 Contact
+
+Pour toute question ou demande :
+- **Site web** : [linky4u.fr](https://linky4u.fr)
+- **Email** : contact@linky4u.fr
+- **Instagram** : [@linky4u_app](https://www.instagram.com/linky4u_app/)
+- **LinkedIn** : [Enzo Monnier](https://www.linkedin.com/in/enzo-monnier-7524ab205/)
+- **X (Twitter)** : [@linky4u_app](https://x.com/linky4u_app)
+
+## 📄 Licence
+
+Ce projet est la propriété de Linky. Tous droits réservés.
+
+---
+
+**Développé avec ❤️ par l'équipe Linky**
