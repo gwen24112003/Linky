@@ -4,8 +4,6 @@ import { Footer } from '../components/layout/Footer';
 import { HeroBanner } from '../components/home/HeroBanner';
 import { ServicesSectionEntreprise } from '../components/home/tabEntreprise/ServicesSectionEntreprise';
 import { ProcessSectionEntreprise } from '../components/home/tabEntreprise/ProcessSectionEntreprise';
-import { TestimonialsSectionEntreprise } from '../components/home/tabEntreprise/TestimonialsSectionEntreprise';
-import { TestimonialsSectionFreelance } from '../components/home/tabFreelance/TestimonialsSectionFreelance';
 import { CTASectionEntreprise } from '../components/home/tabEntreprise/CTASectionEntreprise';
 import { Tabs } from '../components/ui/Tabs';
 import { TabType } from '../types';
