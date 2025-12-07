@@ -73,7 +73,7 @@ export const ArticlesSection: React.FC = () => {
     }
   ];
 
-  const currentArticle = articles.find(a => a.id === selectedArticle);
+
 
   return (
     <section className="py-20 bg-gray-50">
