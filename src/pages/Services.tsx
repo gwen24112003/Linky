@@ -4,6 +4,7 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Card } from '../components/ui/Card';
 import { Service } from '../types';
+import { SEO } from '../components/SEO';
 
 export const Services: React.FC = () => {
   const location = useLocation();
@@ -70,6 +71,11 @@ export const Services: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <SEO 
+        title="Nos Services" 
+        description="Découvrez nos services de création d'applications no-code, d'automatisation de processus et de maintenance."
+        url="https://linky4u.com/services"
+      />
       <Header />
       
       {/* Hero Section */}
@@ -174,7 +180,9 @@ export const Services: React.FC = () => {
             
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Card Glide */}
-              <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow duration-300">
+              <div 
+                className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl hover:border-teal-600 transition-all duration-300 cursor-pointer"
+              >
                 <div className="flex flex-col items-center text-center">
                   <div className="mb-6">
                     <img 
@@ -193,7 +201,9 @@ export const Services: React.FC = () => {
               </div>
 
               {/* Card Make.com */}
-              <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-shadow duration-300">
+              <div 
+                className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl hover:border-teal-600 transition-all duration-300 cursor-pointer"
+              >
                 <div className="flex flex-col items-center text-center">
                   <div className="mb-6">
                     <img 
@@ -214,7 +224,6 @@ export const Services: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

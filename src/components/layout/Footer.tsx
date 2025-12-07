@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin, Youtube } from 'lucide-react';
 import { FooterSection } from '../../types';
 
 // Composant personnalisé pour l'icône X (Twitter)
@@ -44,7 +44,8 @@ export const Footer: React.FC = () => {
   const socialLinks = [
     { icon: Instagram, href: 'https://www.instagram.com/linky4u_app/', label: 'Instagram' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/enzo-monnier-7524ab205/', label: 'LinkedIn' },
-    { icon: XIcon, href: 'https://x.com/linky4u_app', label: 'X' }
+    { icon: XIcon, href: 'https://x.com/linky4u_app', label: 'X' },
+    { icon: Youtube, href: 'https://www.youtube.com', label: 'YouTube' }
   ];
 
   return (

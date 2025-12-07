@@ -10,12 +10,18 @@ import { TabType } from '../types';
 import { ServicesSectionFreelance } from '../components/home/tabFreelance/ServicesSectionFreelance';
 import { ProcessSectionFreelance } from '../components/home/tabFreelance/ProcessSectionFreelance';
 import { CTASectionFreelance } from '../components/home/tabFreelance/CTASectionFreelance';
+import { ArticlesSection } from '../components/home/ArticlesSection';
+import { SEO } from '../components/SEO';
 
 export const Home: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('entreprises');
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <SEO 
+        title="Linky - Solutions No-Code & Automatisation" 
+        description="Transformez vos idées en réalité avec Linky. Experts en création d'outils no-code, automatisation et IA pour booster votre productivité."
+      />
       <Header />
       
       <main className="flex-grow">
@@ -33,7 +39,8 @@ export const Home: React.FC = () => {
           <>
             <ServicesSectionEntreprise />
             <ProcessSectionEntreprise />
-            {/* Affiche les témoignages pour correspondre à la maquette
+            {/*<ArticlesSection />
+            Affiche les témoignages pour correspondre à la maquette
             <TestimonialsSectionEntreprise /> */}
             <CTASectionEntreprise />
           </>
@@ -43,6 +50,7 @@ export const Home: React.FC = () => {
           <>
             <ServicesSectionFreelance />
             <ProcessSectionFreelance />
+            <ArticlesSection />
             {/* Affiche les témoignages pour correspondre à la maquette
             <TestimonialsSectionFreelance /> */}
             <CTASectionFreelance />

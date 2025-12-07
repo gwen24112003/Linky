@@ -3,12 +3,15 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Lightbulb, User, Settings, ThumbsUp, Brain } from 'lucide-react';
 import { bannerStyles, bannerOverlayClass } from '../theme/bannerStyles';
+import { SEO } from '../components/SEO';
 
 interface TeamMember {
   name: string;
   role: string;
   description: string;
   image: string;
+  scale?: number;
+  translateY?: number;
 }
 
 interface Value {
@@ -28,7 +31,9 @@ export const Team: React.FC = () => {
       name: 'Gwendoline Vanelle',
       role: 'Office Manager',
       description: 'Experte No-Code',
-      image: '/images/gwendoline.png'
+      image: '/images/gwen.jpg',
+      scale: 1.5,
+      translateY: 10
     }
   ];
 
@@ -60,6 +65,11 @@ export const Team: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <SEO 
+        title="L'équipe Linky" 
+        description="Rencontrez l'équipe d'experts derrière Linky. Enzo et Gwendoline vous accompagnent dans vos projets no-code et d'automatisation."
+        url="https://linky4u.com/equipe"
+      />
       <Header />
       
       <main className="flex-grow">
@@ -92,7 +102,10 @@ export const Team: React.FC = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300"
+                      style={{ 
+                        transform: `scale(${member.scale || 1}) translateY(${member.translateY || 0}%)` 
+                      }}
                     />
                     {/* Overlay avec dégradé de flou */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 pt-16 text-center text-white">
