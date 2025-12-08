@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ArticleCard } from '../ui/ArticleCard';
 
 interface Article {
@@ -11,8 +11,6 @@ interface Article {
 }
 
 export const ArticlesSection: React.FC = () => {
-  const [selectedArticle, setSelectedArticle] = useState<number | null>(null);
-
   const articles: Article[] = [
     {
       id: 1,
@@ -73,8 +71,6 @@ export const ArticlesSection: React.FC = () => {
     }
   ];
 
-
-
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
@@ -86,7 +82,7 @@ export const ArticlesSection: React.FC = () => {
               description={article.description}
               imageSrc={article.imageSrc}
               overlayImageSrc={article.overlayImageSrc}
-              onClick={() => setSelectedArticle(article.id)}
+              onClick={() => {}}
             />
           ))}
         </div>
