@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "slug": "pourquoi-glide",
+        "title": "Pourquoi GLIDE ?",
+        "description": "Transformez vos tableurs en application métier sans code avec Glide. Livraison rapide, design pro, données prêtes à scaler et automatisations Make.com. Découvrez chiffres clés et cas d’usage pour décider vite.",
+        "imageSrc": "/images/linky-banner.png",
+        "overlayImageSrc": "/images/mockup-linky.png"
+    },
+    {
+        "id": 2,
+        "slug": "10-taches-automatiser",
+        "title": "POURQUOI AUTOMATISER AVEC MAKE ?",
+        "description": "Transformez vos processus manuels en automatisations puissantes avec Make.com. Reliez vos outils, éliminez les copier‑coller et pilotez vos scénarios sur un canvas visuel. Découvrez exemples concrets et gains de temps pour faire passer votre stack no‑code à l’échelle.",
+        "imageSrc": "/images/linky-banner.png",
+        "overlayImageSrc": "/images/mockup-make.png"
+    }
+]

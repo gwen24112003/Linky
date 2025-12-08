@@ -22,19 +22,18 @@ export const Header: React.FC = () => {
   return (
     <header className="bg-white/75 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo: using inline style to force larger size since Tailwind classes are being overridden */}
-          <Link to="/" className="flex items-center gap-0" aria-label="Retour à l'accueil">
+        <div className="relative flex items-center justify-between">
+          {/* Logo: aligned to the start */}
+          <Link to="/" className="flex items-center z-10" aria-label="Retour à l'accueil">
             <img
               src="/images/linky-logo.png"
               alt="Logo Linky"
-              className="object-contain"
+              className="object-contain" // Retaining specific dimensions as requested
               style={{ width: 'auto', height: '75px', maxHeight: '250px' }}
             />
-            <span className="text-4xl font-bold text-gray-800 -ml-3">Linky</span>
           </Link>
 
-          {/* Desktop Navigation - centered */}
+          {/* Desktop Navigation - centered absolutely */}
           <div className="hidden md:flex items-center gap-10 absolute left-1/2 transform -translate-x-1/2">
             {navLinks.map((link) => (
               link.href.startsWith('#') ? (
@@ -61,7 +60,7 @@ export const Header: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-600 hover:text-teal-600 transition-colors"
+            className="md:hidden text-gray-600 hover:text-teal-600 transition-colors z-10"
             aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isMenuOpen}
           >

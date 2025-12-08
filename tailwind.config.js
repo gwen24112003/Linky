@@ -20,5 +20,7 @@ module.exports = {
       maxHeight: sizes,
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
