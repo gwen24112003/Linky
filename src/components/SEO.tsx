@@ -10,13 +10,13 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = 'Linky - Solutions No-Code & Automatisation',
-  description = 'Transformez vos idées en réalité avec Linky. Experts en création d\'outils no-code, automatisation et IA pour booster votre productivité.',
-  keywords = 'no-code, automatisation, IA, intelligence artificielle, productivité, applications web, sites web, Linky',
-  image = '/images/logo-linky-fond-bleu-arrondis.png',
-  url = 'https://linky4u.com' // Remplacez par l'URL réelle de votre site
+  title = 'Linky - Conseil en Organisation & Stratégie Opérationnelle',
+  description = 'Partenaire stratégique des dirigeants. Linky structure, clarifie et optimise vos processus pour une croissance maîtrisée et durable.',
+  keywords = 'conseil, organisation, stratégie opérationnelle, processus, excellence opérationnelle, structuration, croissance, Linky',
+  image = '/images/linky-banner.png',
+  url = 'https://linky4u.com'
 }) => {
-  const siteTitle = title === 'Linky - Solutions No-Code & Automatisation' ? title : `${title} | Linky`;
+  const siteTitle = title === 'Linky - Conseil en Organisation & Stratégie Opérationnelle' ? title : `${title} | Linky`;
 
   return (
     <Helmet>

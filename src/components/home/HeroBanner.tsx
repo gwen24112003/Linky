@@ -9,26 +9,26 @@ export const HeroBanner: React.FC = () => {
       className="relative text-white overflow-hidden flex items-center"
       style={bannerStyles}
     >
-  {/* Light overlay to ensure text contrast over the PNG (lighter per request) */}
-  <div className={bannerOverlayClass} aria-hidden="true" />
+      {/* Light overlay to ensure text contrast over the PNG (lighter per request) */}
+      <div className={bannerOverlayClass} aria-hidden="true" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-8xl mb-10 leading-tight">
-            De l'idée à l'application
+            Donnez à votre Ambition
             <br />
-            Ce que vous imaginez, nous le réalisons
+            la Structure qu'elle mérite
           </h1>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/services">
               <Button variant="primary">
-                Nos services
+                Notre Expertise
               </Button>
             </Link>
             <Link to="/contact">
               <Button variant="secondary">
-                Nous contacter
+                Échanger avec un associé
               </Button>
             </Link>
           </div>

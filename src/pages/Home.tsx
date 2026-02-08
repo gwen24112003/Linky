@@ -18,15 +18,15 @@ export const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <SEO 
-        title="Linky - Solutions No-Code & Automatisation" 
-        description="Transformez vos idées en réalité avec Linky. Experts en création d'outils no-code, automatisation et IA pour booster votre productivité."
+      <SEO
+        title="Linky4U - Conseil en Organisation & Stratégie Opérationnelle"
+        description="Partenaire stratégique des dirigeants. Linky4U structure, clarifie et optimise vos processus pour une croissance maîtrisée et durable."
       />
       <Header />
-      
+
       <main className="flex-grow">
         <HeroBanner />
-        
+
         {/* Section avec tabs */}
         <div className="bg-white py-6">
           <div className="container mx-auto px-6">

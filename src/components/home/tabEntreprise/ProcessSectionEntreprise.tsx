@@ -6,27 +6,27 @@ export const ProcessSectionEntreprise: React.FC = () => {
     {
       id: '1',
       icon: 'lightbulb',
-      title: 'Premier contact'
+      title: 'Audit & Diagnostic'
     },
     {
       id: '2',
       icon: 'layers',
-      title: 'Brainstorming & alignement'
+      title: 'Stratégie & Simplification'
     },
     {
       id: '3',
       icon: 'code',
-      title: 'Prototypage & conception'
+      title: 'Architecture & Mise en œuvre'
     },
     {
       id: '4',
       icon: 'test',
-      title: 'Tests utilisateurs'
+      title: 'Formation & Ancrage'
     },
     {
       id: '5',
       icon: 'rocket',
-      title: 'Livraison des solutions'
+      title: 'Suivi & Pérennisation'
     }
   ];
 
@@ -53,7 +53,7 @@ export const ProcessSectionEntreprise: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-lg">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-12 text-center">
-            Notre processus
+            Notre méthodologie
           </h2>
 
           <div className="flex flex-col lg:flex-row items-start justify-center gap-6 lg:gap-2">

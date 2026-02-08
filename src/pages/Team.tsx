@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
-import { Lightbulb, User, Settings, ThumbsUp, Brain } from 'lucide-react';
+import { Lightbulb, User, Settings, Brain } from 'lucide-react';
 import { bannerStyles, bannerOverlayClass } from '../theme/bannerStyles';
 import { SEO } from '../components/SEO';
 
@@ -23,14 +23,14 @@ export const Team: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       name: 'Enzo Monnier',
-      role: 'Fondateur',
-      description: 'Expert No-Code',
+      role: 'Fondateur & Stratège',
+      description: 'Consultant',
       image: '/images/enzo.jpg'
     },
     {
       name: 'Gwendoline Vanelle',
-      role: 'Office Manager',
-      description: 'Experte No-Code',
+      role: 'Associée & Experte Processus',
+      description: 'Consultante',
       image: '/images/gwen.jpg',
       scale: 1.5,
       translateY: 10
@@ -38,11 +38,10 @@ export const Team: React.FC = () => {
   ];
 
   const values: Value[] = [
-    { icon: 'lightbulb', title: 'Créativité' },
-    { icon: 'user', title: 'Personnalisation' },
-    { icon: 'settings', title: 'Accompagnement' },
-    { icon: 'thumbsup', title: 'Simplicité' },
-    { icon: 'brain', title: 'Innovation' }
+    { icon: 'lightbulb', title: 'Lucidité' },
+    { icon: 'user', title: 'Proximité' },
+    { icon: 'settings', title: 'Excellence' },
+    { icon: 'brain', title: 'Vision' }
   ];
 
   const getIcon = (iconName: string) => {
@@ -54,8 +53,7 @@ export const Team: React.FC = () => {
         return <User {...iconProps} />;
       case 'settings':
         return <Settings {...iconProps} />;
-      case 'thumbsup':
-        return <ThumbsUp {...iconProps} />;
+
       case 'brain':
         return <Brain {...iconProps} />;
       default:
@@ -65,31 +63,31 @@ export const Team: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <SEO 
-        title="L'équipe Linky" 
-        description="Rencontrez l'équipe d'experts derrière Linky. Enzo et Gwendoline vous accompagnent dans vos projets no-code et d'automatisation."
+      <SEO
+        title="L'équipe Linky - Experts en Organisation"
+        description="Rencontrez les associés du cabinet. Des consultants seniors dédiés à la performance opérationnelle de votre entreprise."
         url="https://linky4u.com/equipe"
       />
       <Header />
-      
+
       <main className="flex-grow">
         {/* Hero Section with overlapping team cards */}
         <section className="relative overflow-visible">
           {/* Banner Background */}
-          <div 
-            className="relative overflow-hidden flex items-center justify-center" 
+          <div
+            className="relative overflow-hidden flex items-center justify-center"
             style={bannerStyles}
           >
             {/* Overlay */}
             <div className={bannerOverlayClass}></div>
-            
+
             <div className="container mx-auto px-6 relative z-10">
               <h1 className="text-4xl md:text-6xl lg:text-8xl text-white text-center leading-tight">
                 L'équipe Linky
               </h1>
             </div>
           </div>
-          
+
           {/* Team Members Cards - Overlapping the banner */}
           <div className="container mx-auto px-6 -mt-24 relative z-20">
             <div className="flex flex-wrap justify-center gap-24 max-w-5xl mx-auto">
@@ -103,8 +101,8 @@ export const Team: React.FC = () => {
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover transition-transform duration-300"
-                      style={{ 
-                        transform: `scale(${member.scale || 1}) translateY(${member.translateY || 0}%)` 
+                      style={{
+                        transform: `scale(${member.scale || 1}) translateY(${member.translateY || 0}%)`
                       }}
                     />
                     {/* Overlay avec dégradé de flou */}
@@ -143,13 +141,16 @@ export const Team: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="bg-white rounded-3xl border-2 border-gray-200 p-12 shadow-lg">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
-                Pourquoi Linky ?
+                Notre Vision
               </h2>
               <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed mb-6">
-                Nous croyons que le no-code permet de concrétiser vos idées rapidement, sans barrières techniques.
+                Au-delà de la simple gestion de projet, nous croyons qu'une architecture opérationnelle robuste est le socle indispensable de toute croissance pérenne. Dans un éco-système en perpétuelle mutation, la capacité à exécuter vite et bien ne dépend pas d'outils magiques, mais d'une structure pensée pour l'agilité.
+              </p>
+              <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed mb-6">
+                Linky est né d'une conviction forte : la technologie doit servir la stratégie, et non l'inverse. Trop souvent, les entreprises s'épuisent à compenser des processus défaillants au lieu de se concentrer sur leur vision.
               </p>
               <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
-                Chez Linky, deux experts en no-code, automation et IA transforment vos idées en solutions concrètes et sur mesure.
+                Nous vous apportons cette lucidité structurelle. En alignant vos processus sur vos ambitions, nous transformons votre opérationnel en un levier de performance silencieux mais redoutable.
               </p>
 
               {/* Values Icons */}

@@ -6,27 +6,27 @@ export const ProcessSectionFreelance: React.FC = () => {
     {
       id: '1',
       icon: 'lightbulb',
-      title: 'Inscription'
+      title: 'Candidature'
     },
     {
       id: '2',
       icon: 'layers',
-      title: 'Validation du dossier'
+      title: 'Entretien & Qualification'
     },
     {
       id: '3',
       icon: 'code',
-      title: 'Activation du profil'
+      title: 'Accréditation'
     },
     {
       id: '4',
       icon: 'test',
-      title: 'Reception des missions'
+      title: 'Onboarding'
     },
     {
       id: '5',
       icon: 'rocket',
-      title: 'Choix sans engagement'
+      title: 'Première Mission'
     }
   ];
 

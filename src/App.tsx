@@ -7,6 +7,7 @@ import { Projects } from './pages/Projects';
 import { Contact } from './pages/Contact';
 import { Services } from './pages/Services';
 import { ArticlePage } from './pages/ArticlePage';
+import { ExpertContact } from './pages/ExpertContact';
 import { SEO } from './components/SEO';
 
 function ScrollToTop() {
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/article/:slug" element={<ArticlePage />} />
+          <Route path="/experts-contact" element={<ExpertContact />} />
         </Routes>
       </Router>
     </HelmetProvider>

@@ -8,9 +8,9 @@ export const Header: React.FC = () => {
 
   const navLinks: NavLink[] = [
     { label: 'Accueil', href: '/' },
-    { label: 'Notre équipe', href: '/equipe' },
-    // { label: 'Nos projets', href: '/projets' },
-    { label: 'Nos Services', href: '/services' },
+    { label: 'Le Cabinet', href: '/equipe' },
+    { label: 'Expertise', href: '/services' },
+    // { label: 'Réalisations', href: '/projets' },
     { label: 'Contact', href: '/contact' }
   ];
 

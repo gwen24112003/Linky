@@ -8,8 +8,8 @@ interface TabsProps {
 
 export const Tabs: React.FC<TabsProps> = ({ activeTab, onTabChange }) => {
   const tabs: { value: TabType; label: string }[] = [
-    { value: 'entreprises', label: 'Entreprises' },
-    { value: 'freelances', label: 'Freelances' }
+    { value: 'entreprises', label: 'Dirigeants' },
+    { value: 'freelances', label: 'Experts' }
   ];
 
   return (

@@ -1,18 +1,18 @@
 [
     {
         "id": 1,
-        "slug": "pourquoi-glide",
-        "title": "Pourquoi GLIDE ?",
-        "description": "Transformez vos tableurs en application métier sans code avec Glide. Livraison rapide, design pro, données prêtes à scaler et automatisations Make.com. Découvrez chiffres clés et cas d’usage pour décider vite.",
+        "slug": "automatisation-make",
+        "title": "Boostez votre productivité avec Make",
+        "description": "Découvrez comment Make révolutionne les workflows d'entreprise en connectant vos applications favorites. Une puissance d'automatisation visuelle accessible à tous.",
         "imageSrc": "/images/linky-banner.png",
-        "overlayImageSrc": "/images/mockup-linky.png"
+        "overlayImageSrc": "/images/mockup-make.png"
     },
     {
         "id": 2,
-        "slug": "10-taches-automatiser",
-        "title": "POURQUOI AUTOMATISER AVEC MAKE ?",
-        "description": "Transformez vos processus manuels en automatisations puissantes avec Make.com. Reliez vos outils, éliminez les copier‑coller et pilotez vos scénarios sur un canvas visuel. Découvrez exemples concrets et gains de temps pour faire passer votre stack no‑code à l’échelle.",
+        "slug": "applications-glide",
+        "title": "Créez des apps métier sans coder",
+        "description": "Transformez vos Google Sheets en applications puissantes. Glide permet de créer des outils internes et des portails clients sans écrire une ligne de code.",
         "imageSrc": "/images/linky-banner.png",
-        "overlayImageSrc": "/images/mockup-make.png"
+        "overlayImageSrc": "/images/mockup-linky.png"
     }
 ]

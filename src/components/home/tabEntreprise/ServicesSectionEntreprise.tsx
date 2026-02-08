@@ -8,29 +8,29 @@ export const ServicesSectionEntreprise: React.FC = () => {
   const services: Service[] = [
     {
       id: '1',
-      title: 'Création d\'outils no-code',
+      title: 'Diagnostic & Stratégie',
       features: [
-        'Solutions sur mesure pour vos besoins métier',
-        'Applications web et mobile',
-        'Interfaces intuitives'
+        'Analyse approfondie de l\'existant',
+        'Identification des points de friction',
+        'Feuille de route opérationnelle'
       ]
     },
     {
       id: '2',
-      title: 'Automatisation',
+      title: 'Architecture & Optimisation',
       features: [
-        'Optimisez vos processus',
-        'Workflows sur mesure',
-        'Suppression des tâches répétitives'
+        'Rationalisation de vos outils',
+        'Structuration des flux de données',
+        'Fluidification des processus'
       ]
     },
     {
       id: '3',
-      title: 'Maintenance & Support',
+      title: 'Accompagnement',
       features: [
-        'Nous vous accompagnons',
-        'Suivi post-projet et corrections',
-        'Accompagnement technique réactif'
+        'Formation et montée en compétence',
+        'Suivi de la performance',
+        'Adaptation continue aux enjeux'
       ]
     }
   ];
@@ -40,10 +40,10 @@ export const ServicesSectionEntreprise: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
-            Boostez votre productivité avec Linky
+            L'Excellence Opérationnelle au service de votre Vision
           </h2>
           <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
-            Solutions no-code personnalisées, automatisation intelligente et accompagnement technique. Pour faire plus, plus vite.
+            Nous transformons vos défis organisationnels en leviers de croissance. Une approche pragmatique pour des résultats mesurables et durables.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export const ServicesSectionEntreprise: React.FC = () => {
 
         <div className="flex justify-center mt-12">
           <Link to="/services#creation" className="bg-white text-teal-600 border-2 border-teal-600 px-5 py-3 text-lg font-bold rounded-lg hover:bg-teal-600 hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
-            Découvrez nos services
+            Notre approche détaillée
             <ArrowRight size={24} />
           </Link>
         </div>

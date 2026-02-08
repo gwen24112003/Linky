@@ -21,9 +21,9 @@ export const Footer: React.FC = () => {
     {
       title: 'Nos services',
       links: [
-        { label: 'Création d\'outils no-code', href: '/services#creation' },
-        { label: 'Automatisation', href: '/services#automatisation' },
-        { label: 'Maintenance & Support', href: '/services#maintenance' }
+        { label: 'Diagnostic & Architecture', href: '/services#creation' },
+        { label: 'Optimisation des Processus', href: '/services#automatisation' },
+        { label: 'Accompagnement', href: '/services#maintenance' }
       ]
     },
     {

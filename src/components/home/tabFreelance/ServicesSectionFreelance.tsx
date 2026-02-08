@@ -8,26 +8,29 @@ export const ServicesSectionFreelance: React.FC = () => {
   const services: Service[] = [
     {
       id: '1',
-      title: 'Client fournis',
+      title: 'Missions Stratégiques',
       features: [
-        'Pas de prospection',
-        'Missions qualifiées'
+        'Projets à fort impact',
+        'Grands comptes & ETI',
+        'Enjeux de transformation'
       ]
     },
     {
       id: '2',
-      title: 'Gestion du contact client',
+      title: 'Cadre d\'Intervention',
       features: [
-        'Nous gérons vos échanges',
-        'Concentration sur la mission'
+        'Méthodologie Linky4U',
+        'Outils & Frameworks',
+        'Support opérationnel'
       ]
     },
     {
       id: '3',
-      title: 'Liberté sans engagements',
+      title: 'Partenariat Gagnant',
       features: [
-        'Choisissez vos missions',
-        'Activez votre profil quand vous le souhaitez'
+        'Apport d\'affaires qualifié',
+        'Réseau d\'experts',
+        'Respect de votre indépendance'
       ]
     }
   ];
@@ -37,10 +40,10 @@ export const ServicesSectionFreelance: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
-            Rejoignez notre collectif freelance d'experts no-code
+            Rejoignez notre réseau d'experts
           </h2>
           <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
-            Activez votre profil, recevez des missions qualifiées, choisissez en toute liberté.
+            Nous collaborons avec les meilleurs consultants indépendants pour délivrer une valeur exceptionnelle à nos clients.
           </p>
         </div>
 
@@ -55,8 +58,8 @@ export const ServicesSectionFreelance: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-12">
-          <Link to="/services#creation" className="bg-white text-teal-600 border-2 border-teal-600 px-5 py-3 text-lg font-bold rounded-lg hover:bg-teal-600 hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
-            En savoir plus
+          <Link to="/experts-contact" className="bg-white text-teal-600 border-2 border-teal-600 px-5 py-3 text-lg font-bold rounded-lg hover:bg-teal-600 hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
+            Postuler au réseau
             <ArrowRight size={24} />
           </Link>
         </div>
