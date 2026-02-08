@@ -8,7 +8,7 @@ interface TabsProps {
 
 export const Tabs: React.FC<TabsProps> = ({ activeTab, onTabChange }) => {
   const tabs: { value: TabType; label: string }[] = [
-    { value: 'entreprises', label: 'Dirigeants' },
+    { value: 'entreprises', label: 'Entreprises' },
     { value: 'freelances', label: 'Experts' }
   ];
 
@@ -18,11 +18,10 @@ export const Tabs: React.FC<TabsProps> = ({ activeTab, onTabChange }) => {
         <button
           key={tab.value}
           onClick={() => onTabChange(tab.value)}
-          className={`pb-3 text-2xl font-bold transition-all duration-200 relative ${
-            activeTab === tab.value
+          className={`pb-3 text-2xl font-bold transition-all duration-200 relative ${activeTab === tab.value
               ? 'text-gray-900'
               : 'text-gray-500 hover:text-gray-700'
-          }`}
+            }`}
         >
           {tab.label}
           {activeTab === tab.value && (
