@@ -56,7 +56,7 @@ export const ProcessSectionEntreprise: React.FC = () => {
             Notre méthodologie
           </h2>
 
-          <div className="flex flex-col lg:flex-row items-start justify-center gap-6 lg:gap-2">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-2">
             {processSteps.map((step, index) => (
               <React.Fragment key={step.id}>
                 <div className="flex flex-col items-center flex-1">
@@ -77,7 +77,7 @@ export const ProcessSectionEntreprise: React.FC = () => {
                       </svg>
                     </div>
                     {/* Flèche verticale pour mobile */}
-                    <div className="lg:hidden my-2">
+                    <div className="lg:hidden my-2 flex justify-center">
                       <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
                         <path d="M12 0 L12 35 M6 22 L12 35 L18 22" stroke="#0d9488" strokeWidth="2.5" />
                       </svg>

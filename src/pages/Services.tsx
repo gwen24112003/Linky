@@ -98,20 +98,16 @@ export const Services: React.FC = () => {
             className={`py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
           >
             <div className="container mx-auto px-6 max-w-6xl">
-              {/* Titre et description en haut */}
-              <div className="mb-12">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-dongle">
-                  {service.title}
-                </h2>
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-600 font-meera leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-
-              {/* Checks et Image */}
+              {/* Checks et Image — titre et description dans la colonne gauche */}
               <div className="grid md:grid-cols-2 gap-12 items-center">
-                {/* Liste des features avec checks */}
+                {/* Colonne texte : titre + description + checklist */}
                 <div className={service.id === 'automatisation' ? 'md:order-2' : ''}>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-dongle">
+                    {service.title}
+                  </h2>
+                  <p className="text-lg md:text-xl lg:text-2xl text-gray-600 font-meera leading-relaxed mb-8">
+                    {service.description}
+                  </p>
                   <ul className="space-y-4">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
@@ -136,14 +132,16 @@ export const Services: React.FC = () => {
                   </ul>
                 </div>
 
-                {/* Card ou Image */}
+                {/* Colonne image — style uniforme basé sur la 2ème */}
                 <div className={service.id === 'automatisation' ? 'md:order-1' : ''}>
                   {service.id === 'creation' ? (
-                    <img
-                      src="/images/dashboard-linky.png"
-                      alt="Pilotage d'activité"
-                      className="w-full h-auto rounded-lg shadow-2xl scale-110"
-                    />
+                    <div className="overflow-hidden rounded-lg shadow-2xl">
+                      <img
+                        src="/images/dashboard-linky.png"
+                        alt="Pilotage d'activité"
+                        className="w-full h-auto"
+                      />
+                    </div>
                   ) : service.id === 'automatisation' ? (
                     <div className="overflow-hidden rounded-lg shadow-2xl">
                       <img
@@ -154,11 +152,13 @@ export const Services: React.FC = () => {
                       />
                     </div>
                   ) : service.id === 'maintenance' ? (
-                    <img
-                      src="/images/ticket-linky.png"
-                      alt="Suivi et performance"
-                      className="w-full h-auto rounded-lg shadow-2xl scale-110"
-                    />
+                    <div className="overflow-hidden rounded-lg shadow-2xl">
+                      <img
+                        src="/images/ticket-linky.png"
+                        alt="Suivi et performance"
+                        className="w-full h-auto"
+                      />
+                    </div>
                   ) : (
                     <Card
                       title={service.title}

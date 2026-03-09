@@ -203,7 +203,7 @@ export const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex items-center gap-2 bg-blue-900 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-lexend text-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 hover:shadow-xl text-white px-8 py-3 rounded-lg font-lexend text-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
                     <span>{isSubmitting ? 'Envoi en cours...' : 'Solliciter un audit'}</span>
                     <ArrowRight size={20} />
