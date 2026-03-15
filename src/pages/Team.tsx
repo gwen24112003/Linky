@@ -162,7 +162,7 @@ export const Team: React.FC = () => {
               <div className="flex flex-wrap justify-center gap-24 mt-12">
                 {values.map((value) => (
                   <div key={value.title} className="flex flex-col items-center gap-3">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-teal-400 to-teal-800 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <div className="w-20 h-20 rounded-full bg-teal-700 border border-teal-500/50 flex items-center justify-center hover:bg-teal-600 transition-colors duration-200">
                       {getIcon(value.icon)}
                     </div>
                     <span className="text-sm lg:text-base text-center text-gray-600 leading-relaxed">{value.title}</span>
