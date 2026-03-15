@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
   return (
     <>
       <motion.header
-        className="sticky top-0 z-50 transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         animate={{
           backgroundColor: transparent ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0.75)',
           backdropFilter: transparent ? 'blur(0px)' : 'blur(12px)',

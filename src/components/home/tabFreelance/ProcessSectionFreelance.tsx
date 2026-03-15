@@ -24,7 +24,7 @@ export const ProcessSectionFreelance: React.FC = () => {
   };
 
   return (
-    <section className="section-teal">
+    <section className="section-teal py-28">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-16 text-center"
@@ -39,7 +39,7 @@ export const ProcessSectionFreelance: React.FC = () => {
         {/* Desktop layout */}
         <div className="hidden lg:flex items-start justify-center gap-2 relative">
           <svg
-            className="absolute top-10 left-[10%] right-[10%] w-[80%] h-[2px]"
+            className="absolute top-[68px] left-[10%] right-[10%] w-[80%] h-[2px]"
             style={{ overflow: 'visible' }}
           >
             <motion.line
