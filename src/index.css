@@ -110,7 +110,7 @@ h6 {
   /* Teal section — fond dégradé cohérent avec la charte */
   .section-teal {
     @apply py-20 text-white relative overflow-hidden;
-    background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+    background: linear-gradient(135deg, #0f766e 0%, #0e7490 60%, #0c4a6e 100%);
   }
 
   /* Gradient text (teal only) */

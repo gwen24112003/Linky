@@ -40,11 +40,11 @@ export const ProcessSectionEntreprise: React.FC = () => {
         <div className="hidden lg:flex items-start justify-center gap-2 relative">
           {/* Animated connector line */}
           <svg
-            className="absolute top-[64px] left-[10%] right-[10%] w-[80%] h-[2px]"
+            className="absolute top-[64px] left-0 w-full h-[2px]"
             style={{ overflow: 'visible' }}
           >
             <motion.line
-              x1="0" y1="1" x2="100%" y2="1"
+              x1="10%" y1="1" x2="90%" y2="1"
               stroke="rgba(153,246,228,0.4)"
               strokeWidth="2"
               strokeDasharray="1000"
