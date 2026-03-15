@@ -40,7 +40,7 @@ export const ProcessSectionEntreprise: React.FC = () => {
         <div className="hidden lg:flex items-start justify-center gap-2 relative">
           {/* Animated connector line */}
           <svg
-            className="absolute top-[68px] left-[10%] right-[10%] w-[80%] h-[2px]"
+            className="absolute top-[64px] left-[10%] right-[10%] w-[80%] h-[2px]"
             style={{ overflow: 'visible' }}
           >
             <motion.line
@@ -71,7 +71,7 @@ export const ProcessSectionEntreprise: React.FC = () => {
 
               {/* Icon circle */}
               <motion.div
-                className="w-20 h-20 rounded-full bg-white/20 border border-white/30 flex items-center justify-center mb-4 z-10 relative hover:bg-white/30 transition-colors duration-200"
+                className="w-20 h-20 rounded-full bg-teal-700 border border-teal-500/50 flex items-center justify-center mb-4 z-10 relative hover:bg-teal-600 transition-colors duration-200"
                 whileInView={{
                   boxShadow: ['0 0 0px rgba(153,246,228,0)', '0 0 20px rgba(153,246,228,0.5)', '0 0 8px rgba(153,246,228,0.2)'],
                 }}
