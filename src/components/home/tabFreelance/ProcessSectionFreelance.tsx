@@ -38,21 +38,14 @@ export const ProcessSectionFreelance: React.FC = () => {
 
         {/* Desktop layout */}
         <div className="hidden lg:flex items-start justify-center gap-2 relative">
-          <svg
-            className="absolute top-[64px] left-0 w-full h-[2px]"
-            style={{ overflow: 'visible' }}
-          >
-            <motion.line
-              x1="10%" y1="1" x2="90%" y2="1"
-              stroke="rgba(153,246,228,0.4)"
-              strokeWidth="2"
-              strokeDasharray="1000"
-              strokeDashoffset="1000"
-              whileInView={{ strokeDashoffset: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, delay: 0.3, ease: 'easeInOut' }}
-            />
-          </svg>
+          {/* Animated connector line */}
+          <motion.div
+            className="absolute top-[64px] left-[10%] h-[2px] bg-teal-200/40"
+            initial={{ width: 0 }}
+            whileInView={{ width: '80%' }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 0.3, ease: 'easeInOut' }}
+          />
 
           {processSteps.map((step, index) => (
             <motion.div
