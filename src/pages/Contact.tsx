@@ -90,52 +90,49 @@ export const Contact: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="flex-grow py-20 section-dark">
+      <section className="flex-grow py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             {/* Informations de contact */}
             <div>
-              {/* Ambient glow */}
-              <div className="absolute -left-20 top-1/4 w-64 h-64 rounded-full pointer-events-none" style={{ background: 'rgba(13,148,136,0.1)', filter: 'blur(60px)' }} />
-
               <motion.h2
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white relative z-10"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900"
                 style={{ lineHeight: '0.9' }}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
               >
                 Vos enjeux
                 <br />
                 méritent une <span className="text-gradient">expertise</span>
               </motion.h2>
 
-              <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/60 leading-relaxed relative z-10">
+              <p className="text-lg md:text-xl lg:text-2xl mb-12 text-gray-600 leading-relaxed">
                 Discutons de vos défis de structuration et de croissance. Premier audit de cadrage sans engagement avec un consultant senior.
               </p>
 
               {/* Email */}
-              <div className="flex items-center gap-4 mb-6 relative z-10">
+              <div className="flex items-center gap-4 mb-6">
                 <div className="flex-shrink-0">
-                  <Mail size={32} className="text-teal-400" />
+                  <Mail size={32} className="text-teal-600" />
                 </div>
                 <a
                   href="mailto:linky4u.contact@gmail.com"
-                  className="text-xl md:text-2xl text-white/80 hover:text-teal-400 transition-colors underline"
+                  className="text-xl md:text-2xl text-gray-900 hover:text-teal-600 transition-colors underline"
                 >
                   linky4u.contact@gmail.com
                 </a>
               </div>
 
               {/* Téléphone */}
-              <div className="flex items-center gap-4 relative z-10">
+              <div className="flex items-center gap-4">
                 <div className="flex-shrink-0">
-                  <Phone size={32} className="text-teal-400" />
+                  <Phone size={32} className="text-teal-600" />
                 </div>
                 <a
                   href="tel:+33615756549"
-                  className="text-xl md:text-2xl text-white/80 hover:text-teal-400 transition-colors"
+                  className="text-xl md:text-2xl text-gray-900 hover:text-teal-600 transition-colors"
                 >
                   +33 6 15 75 65 49
                 </a>
@@ -147,7 +144,7 @@ export const Contact: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Objet */}
@@ -159,13 +156,7 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.objet}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg text-lg text-white placeholder-white/40 focus:outline-none transition-all duration-200"
-                    style={{
-                      background: 'rgba(255,255,255,0.04)',
-                      border: '1px solid rgba(13,148,136,0.25)',
-                    }}
-                    onFocus={e => { e.target.style.border = '1px solid #0d9488'; e.target.style.boxShadow = '0 0 0 3px rgba(13,148,136,0.15)'; }}
-                    onBlur={e => { e.target.style.border = '1px solid rgba(13,148,136,0.25)'; e.target.style.boxShadow = 'none'; }}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-2 focus:ring-teal-100 font-sans text-lg text-gray-900 bg-white transition-all duration-200"
                   />
                 </div>
 
@@ -176,19 +167,13 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.service}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 rounded-lg text-lg focus:outline-none transition-all duration-200 ${formData.service === '' ? 'text-white/40' : 'text-white'}`}
-                    style={{
-                      background: 'rgba(26,36,33,0.9)',
-                      border: '1px solid rgba(13,148,136,0.25)',
-                    }}
-                    onFocus={e => { (e.target as HTMLSelectElement).style.border = '1px solid #0d9488'; (e.target as HTMLSelectElement).style.boxShadow = '0 0 0 3px rgba(13,148,136,0.15)'; }}
-                    onBlur={e => { (e.target as HTMLSelectElement).style.border = '1px solid rgba(13,148,136,0.25)'; (e.target as HTMLSelectElement).style.boxShadow = 'none'; }}
+                    className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-2 focus:ring-teal-100 font-sans text-lg bg-white transition-all duration-200 ${formData.service === '' ? 'text-gray-400' : 'text-gray-900'}`}
                   >
-                    <option value="" disabled style={{ background: '#111918' }}>Type de besoin *</option>
-                    <option value="Diagnostic & Stratégie" style={{ background: '#111918' }}>Diagnostic & Stratégie</option>
-                    <option value="Optimisation des Processus" style={{ background: '#111918' }}>Optimisation des Processus</option>
-                    <option value="Accompagnement Long Terme" style={{ background: '#111918' }}>Accompagnement Long Terme</option>
-                    <option value="Autre" style={{ background: '#111918' }}>Autre demande</option>
+                    <option value="" disabled>Type de besoin *</option>
+                    <option value="Diagnostic & Stratégie">Diagnostic & Stratégie</option>
+                    <option value="Optimisation des Processus">Optimisation des Processus</option>
+                    <option value="Accompagnement Long Terme">Accompagnement Long Terme</option>
+                    <option value="Autre">Autre demande</option>
                   </select>
                 </div>
 
@@ -201,13 +186,7 @@ export const Contact: React.FC = () => {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg text-lg text-white placeholder-white/40 focus:outline-none transition-all duration-200 resize-none"
-                    style={{
-                      background: 'rgba(255,255,255,0.04)',
-                      border: '1px solid rgba(13,148,136,0.25)',
-                    }}
-                    onFocus={e => { e.target.style.border = '1px solid #0d9488'; e.target.style.boxShadow = '0 0 0 3px rgba(13,148,136,0.15)'; }}
-                    onBlur={e => { e.target.style.border = '1px solid rgba(13,148,136,0.25)'; e.target.style.boxShadow = 'none'; }}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-2 focus:ring-teal-100 font-sans text-lg text-gray-900 bg-white transition-all duration-200 resize-none"
                   />
                 </div>
 
@@ -220,25 +199,19 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg text-lg text-white placeholder-white/40 focus:outline-none transition-all duration-200"
-                    style={{
-                      background: 'rgba(255,255,255,0.04)',
-                      border: '1px solid rgba(13,148,136,0.25)',
-                    }}
-                    onFocus={e => { e.target.style.border = '1px solid #0d9488'; e.target.style.boxShadow = '0 0 0 3px rgba(13,148,136,0.15)'; }}
-                    onBlur={e => { e.target.style.border = '1px solid rgba(13,148,136,0.25)'; e.target.style.boxShadow = 'none'; }}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 focus:ring-2 focus:ring-teal-100 font-sans text-lg text-gray-900 bg-white transition-all duration-200"
                   />
                 </div>
 
                 {/* Messages de statut */}
                 {submitStatus === 'success' && (
-                  <div className="p-4 rounded-lg text-teal-300 border border-teal-600/30" style={{ background: 'rgba(13,148,136,0.1)' }}>
+                  <div className="p-4 bg-green-50 border border-green-300 text-green-700 rounded-lg">
                     ✓ Message envoyé avec succès !
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="p-4 rounded-lg text-red-300 border border-red-600/30" style={{ background: 'rgba(239,68,68,0.1)' }}>
+                  <div className="p-4 bg-red-50 border border-red-300 text-red-700 rounded-lg">
                     ✗ Une erreur s'est produite. Veuillez réessayer ou nous contacter directement par email.
                   </div>
                 )}

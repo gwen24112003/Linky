@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const CTASectionEntreprise: React.FC = () => {
   return (
-    <section className="section-dark py-32 relative overflow-hidden">
+    <section className="section-teal py-32 relative overflow-hidden">
       {/* Ambient number */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
@@ -55,11 +55,11 @@ export const CTASectionEntreprise: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.55 }}
           >
-            <span className="text-sm font-medium" style={{ color: '#c8a96e' }}>
+            <span className="text-sm font-medium" style={{ color: '#99f6e4' }}>
               &lt; 48h de réponse
             </span>
             <span className="w-px h-4 bg-white/20" />
-            <span className="text-sm font-medium" style={{ color: '#c8a96e' }}>
+            <span className="text-sm font-medium" style={{ color: '#99f6e4' }}>
               Sans engagement
             </span>
           </motion.div>

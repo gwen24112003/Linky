@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
-import { Lightbulb, User, Settings, Brain } from 'lucide-react';
+import { Eye, Handshake, Star, Telescope } from 'lucide-react';
 import { bannerStyles } from '../theme/bannerStyles';
 import { SEO } from '../components/SEO';
 
@@ -39,26 +39,25 @@ export const Team: React.FC = () => {
   ];
 
   const values: Value[] = [
-    { icon: 'lightbulb', title: 'Lucidité' },
-    { icon: 'user', title: 'Proximité' },
-    { icon: 'settings', title: 'Excellence' },
-    { icon: 'brain', title: 'Vision' }
+    { icon: 'eye', title: 'Lucidité' },
+    { icon: 'handshake', title: 'Proximité' },
+    { icon: 'star', title: 'Excellence' },
+    { icon: 'telescope', title: 'Vision' }
   ];
 
   const getIcon = (iconName: string) => {
     const iconProps = { size: 32, className: 'text-white' };
     switch (iconName) {
-      case 'lightbulb':
-        return <Lightbulb {...iconProps} />;
-      case 'user':
-        return <User {...iconProps} />;
-      case 'settings':
-        return <Settings {...iconProps} />;
-
-      case 'brain':
-        return <Brain {...iconProps} />;
+      case 'eye':
+        return <Eye {...iconProps} />;
+      case 'handshake':
+        return <Handshake {...iconProps} />;
+      case 'star':
+        return <Star {...iconProps} />;
+      case 'telescope':
+        return <Telescope {...iconProps} />;
       default:
-        return <Lightbulb {...iconProps} />;
+        return <Eye {...iconProps} />;
     }
   };
 

@@ -107,31 +107,15 @@ h6 {
     background: linear-gradient(to bottom right, #2dd4bf, #0f766e);
   }
 
-  /* Dark section with gradient mesh background */
-  .section-dark {
+  /* Teal section — fond dégradé cohérent avec la charte */
+  .section-teal {
     @apply py-20 text-white relative overflow-hidden;
-    background:
-      radial-gradient(ellipse 80% 60% at 20% 40%, rgba(13,148,136,0.25) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 80% at 80% 20%, rgba(45,212,191,0.12) 0%, transparent 50%),
-      radial-gradient(ellipse 100% 100% at 50% 100%, rgba(15,118,110,0.3) 0%, transparent 70%),
-      #0a0f0e;
+    background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
   }
 
-  /* Glassmorphism card */
-  .card-glass {
-    background: rgba(26, 36, 33, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(13, 148, 136, 0.2);
-    box-shadow:
-      0 0 0 1px rgba(13, 148, 136, 0.1),
-      0 32px 64px rgba(0, 0, 0, 0.4),
-      0 0 80px rgba(13, 148, 136, 0.08);
-  }
-
-  /* Gradient text */
+  /* Gradient text (teal only) */
   .text-gradient {
-    background: linear-gradient(90deg, #0d9488, #2dd4bf, #c8a96e);
+    background: linear-gradient(90deg, #0d9488, #2dd4bf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
