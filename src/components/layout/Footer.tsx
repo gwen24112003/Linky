@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer>
-      <div className="w-[95%] mx-auto bg-gray-900 text-white rounded-t-3xl py-16 px-6 md:px-12 pb-32 border-t-2 border-teal-800/40">
+      <div className="w-[95%] mx-auto bg-gray-900 text-white rounded-t-3xl pt-24 pb-32 px-6 md:px-12 border-t-2 border-teal-800/40">
         <div className="flex flex-col items-center text-center max-w-7xl mx-auto gap-16">
           {/* Logo Linky centré en haut */}
           <div className="flex justify-center">
