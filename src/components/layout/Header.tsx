@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { NavLink } from '../../types';
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const navLinks: NavLink[] = [
     { label: 'Accueil', href: '/' },
@@ -19,6 +22,13 @@ export const Header: React.FC = () => {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
+
+  // Scroll-driven header transparency
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 80);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   // Empêche le scroll du body quand le menu est ouvert
   useEffect(() => {
@@ -35,9 +45,21 @@ export const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  const transparent = isHome && !isScrolled;
+  const navColor = transparent ? 'text-white/90 hover:text-white' : 'text-gray-600 hover:text-teal-600';
+  const burgerColor = transparent ? 'text-white' : 'text-gray-700 hover:text-teal-600';
+
   return (
     <>
-      <header className="bg-white/75 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+      <motion.header
+        className="sticky top-0 z-50 transition-all duration-300"
+        animate={{
+          backgroundColor: transparent ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0.75)',
+          backdropFilter: transparent ? 'blur(0px)' : 'blur(12px)',
+          borderBottomColor: transparent ? 'rgba(255,255,255,0)' : 'rgba(243,244,246,1)',
+        }}
+        style={{ borderBottomWidth: 1, borderBottomStyle: 'solid' }}
+      >
         <nav className="container mx-auto px-6 py-4">
           <div className="relative flex items-center justify-between">
             {/* Logo */}
@@ -57,7 +79,7 @@ export const Header: React.FC = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="text-xl text-gray-600 hover:text-teal-600 transition-colors duration-200 font-bold"
+                    className={`text-xl transition-colors duration-200 font-bold ${navColor}`}
                   >
                     {link.label}
                   </a>
@@ -66,7 +88,7 @@ export const Header: React.FC = () => {
                     key={link.label}
                     to={link.href}
                     onClick={handleNavClick}
-                    className="text-xl text-gray-600 hover:text-teal-600 transition-colors duration-200 font-bold"
+                    className={`text-xl transition-colors duration-200 font-bold ${navColor}`}
                   >
                     {link.label}
                   </Link>
@@ -77,7 +99,7 @@ export const Header: React.FC = () => {
             {/* Burger button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-gray-700 hover:text-teal-600 transition-colors z-[60]"
+              className={`md:hidden transition-colors z-[60] ${burgerColor}`}
               aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               aria-expanded={isMenuOpen}
             >
@@ -85,7 +107,7 @@ export const Header: React.FC = () => {
             </button>
           </div>
         </nav>
-      </header>
+      </motion.header>
 
       {/* Overlay plein écran */}
       <div

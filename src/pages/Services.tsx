@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Card } from '../components/ui/Card';
 import { Service } from '../types';
 import { SEO } from '../components/SEO';
+import { bannerStyles } from '../theme/bannerStyles';
 
 export const Services: React.FC = () => {
   const location = useLocation();
@@ -80,22 +82,30 @@ export const Services: React.FC = () => {
 
       {/* Hero Section */}
       <section
-        className="relative h-[50vh] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: 'url(/images/linky-banner.png)' }}
+        className="relative h-[50vh] flex items-center justify-center overflow-hidden"
+        style={bannerStyles}
       >
-        <div className="absolute inset-0" />
-        <h1 className="relative z-10 text-6xl md:text-7xl lg:text-8xl font-bold text-white font-dongle">
+        <motion.h1
+          className="relative z-10 text-6xl md:text-7xl lg:text-8xl font-bold text-white"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
           Notre Expertise
-        </h1>
+        </motion.h1>
       </section>
 
       {/* Services Sections */}
       <main className="flex-grow">
         {services.map((service, index) => (
-          <section
+          <motion.section
             key={service.id}
             id={service.id}
             className={`py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="container mx-auto px-6 max-w-6xl">
               {/* Checks et Image — titre et description dans la colonne gauche */}
@@ -168,7 +178,7 @@ export const Services: React.FC = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </motion.section>
         ))}
       </main>
       <Footer />

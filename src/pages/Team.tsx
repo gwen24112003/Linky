@@ -1,8 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Lightbulb, User, Settings, Brain } from 'lucide-react';
-import { bannerStyles, bannerOverlayClass } from '../theme/bannerStyles';
+import { bannerStyles } from '../theme/bannerStyles';
 import { SEO } from '../components/SEO';
 
 interface TeamMember {
@@ -78,23 +79,28 @@ export const Team: React.FC = () => {
             className="relative overflow-hidden flex items-center justify-center"
             style={bannerStyles}
           >
-            {/* Overlay */}
-            <div className={bannerOverlayClass}></div>
-
             <div className="container mx-auto px-6 relative z-10">
-              <h1 className="text-4xl md:text-6xl lg:text-8xl text-white text-center leading-tight">
+              <motion.h1
+                className="text-4xl md:text-6xl lg:text-8xl text-white text-center leading-tight"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              >
                 L'équipe Linky
-              </h1>
+              </motion.h1>
             </div>
           </div>
 
           {/* Team Members Cards - Overlapping the banner */}
           <div className="container mx-auto px-6 -mt-24 relative z-20">
             <div className="flex flex-wrap justify-center gap-24 max-w-5xl mx-auto">
-              {teamMembers.map((member) => (
-                <div
+              {teamMembers.map((member, i) => (
+                <motion.div
                   key={member.name}
                   className="rounded-2xl shadow-xl overflow-hidden w-96"
+                  initial={{ opacity: 0, y: 60 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <div className="h-[32rem] relative">
                     <img
@@ -130,7 +136,7 @@ export const Team: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

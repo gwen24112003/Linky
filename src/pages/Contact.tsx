@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { Mail, Phone, ArrowRight } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { SEO } from '../components/SEO';
+import { bannerStyles } from '../theme/bannerStyles';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -74,52 +76,66 @@ export const Contact: React.FC = () => {
 
       {/* Hero Section */}
       <section
-        className="relative h-[50vh] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: 'url(/images/linky-banner.png)' }}
+        className="relative h-[50vh] flex items-center justify-center overflow-hidden"
+        style={bannerStyles}
       >
-        <div className="absolute inset-0" />
-        <h1 className="relative z-10 text-6xl md:text-7xl lg:text-8xl font-bold text-white font-dongle">
+        <motion.h1
+          className="relative z-10 text-6xl md:text-7xl lg:text-8xl font-bold text-white"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
           Contactez nos associés
-        </h1>
+        </motion.h1>
       </section>
 
       {/* Contact Section */}
-      <section className="flex-grow py-20">
+      <section className="flex-grow py-20 section-dark">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             {/* Informations de contact */}
             <div>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-dongle text-gray-900" style={{ lineHeight: '0.8' }}>
+              {/* Ambient glow */}
+              <div className="absolute -left-20 top-1/4 w-64 h-64 rounded-full pointer-events-none" style={{ background: 'rgba(13,148,136,0.1)', filter: 'blur(60px)' }} />
+
+              <motion.h2
+                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white relative z-10"
+                style={{ lineHeight: '0.9' }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              >
                 Vos enjeux
                 <br />
-                méritent une expertise
-              </h2>
+                méritent une <span className="text-gradient">expertise</span>
+              </motion.h2>
 
-              <p className="text-lg md:text-xl lg:text-2xl mb-12 font-meera text-gray-600 leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/60 leading-relaxed relative z-10">
                 Discutons de vos défis de structuration et de croissance. Premier audit de cadrage sans engagement avec un consultant senior.
               </p>
 
               {/* Email */}
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-6 relative z-10">
                 <div className="flex-shrink-0">
-                  <Mail size={32} className="text-gray-900" />
+                  <Mail size={32} className="text-teal-400" />
                 </div>
                 <a
                   href="mailto:linky4u.contact@gmail.com"
-                  className="text-xl md:text-2xl font-lexend text-gray-900 hover:text-teal-600 transition-colors underline"
+                  className="text-xl md:text-2xl text-white/80 hover:text-teal-400 transition-colors underline"
                 >
                   linky4u.contact@gmail.com
                 </a>
               </div>
 
               {/* Téléphone */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 relative z-10">
                 <div className="flex-shrink-0">
-                  <Phone size={32} className="text-gray-900" />
+                  <Phone size={32} className="text-teal-400" />
                 </div>
                 <a
                   href="tel:+33615756549"
-                  className="text-xl md:text-2xl font-lexend text-gray-900 hover:text-teal-600 transition-colors"
+                  className="text-xl md:text-2xl text-white/80 hover:text-teal-400 transition-colors"
                 >
                   +33 6 15 75 65 49
                 </a>
@@ -127,7 +143,12 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Formulaire de contact */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            >
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Objet */}
                 <div>
@@ -138,7 +159,13 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.objet}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 font-lexend text-lg"
+                    className="w-full px-4 py-3 rounded-lg text-lg text-white placeholder-white/40 focus:outline-none transition-all duration-200"
+                    style={{
+                      background: 'rgba(255,255,255,0.04)',
+                      border: '1px solid rgba(13,148,136,0.25)',
+                    }}
+                    onFocus={e => { e.target.style.border = '1px solid #0d9488'; e.target.style.boxShadow = '0 0 0 3px rgba(13,148,136,0.15)'; }}
+                    onBlur={e => { e.target.style.border = '1px solid rgba(13,148,136,0.25)'; e.target.style.boxShadow = 'none'; }}
                   />
                 </div>
 
@@ -149,13 +176,19 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.service}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 font-lexend text-lg bg-white ${formData.service === '' ? 'text-gray-400' : 'text-gray-900'}`}
+                    className={`w-full px-4 py-3 rounded-lg text-lg focus:outline-none transition-all duration-200 ${formData.service === '' ? 'text-white/40' : 'text-white'}`}
+                    style={{
+                      background: 'rgba(26,36,33,0.9)',
+                      border: '1px solid rgba(13,148,136,0.25)',
+                    }}
+                    onFocus={e => { (e.target as HTMLSelectElement).style.border = '1px solid #0d9488'; (e.target as HTMLSelectElement).style.boxShadow = '0 0 0 3px rgba(13,148,136,0.15)'; }}
+                    onBlur={e => { (e.target as HTMLSelectElement).style.border = '1px solid rgba(13,148,136,0.25)'; (e.target as HTMLSelectElement).style.boxShadow = 'none'; }}
                   >
-                    <option value="" disabled>Type de besoin *</option>
-                    <option value="Diagnostic & Stratégie">Diagnostic & Stratégie</option>
-                    <option value="Optimisation des Processus">Optimisation des Processus</option>
-                    <option value="Accompagnement Long Terme">Accompagnement Long Terme</option>
-                    <option value="Autre">Autre demande</option>
+                    <option value="" disabled style={{ background: '#111918' }}>Type de besoin *</option>
+                    <option value="Diagnostic & Stratégie" style={{ background: '#111918' }}>Diagnostic & Stratégie</option>
+                    <option value="Optimisation des Processus" style={{ background: '#111918' }}>Optimisation des Processus</option>
+                    <option value="Accompagnement Long Terme" style={{ background: '#111918' }}>Accompagnement Long Terme</option>
+                    <option value="Autre" style={{ background: '#111918' }}>Autre demande</option>
                   </select>
                 </div>
 
@@ -168,7 +201,13 @@ export const Contact: React.FC = () => {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 font-lexend text-lg resize-none"
+                    className="w-full px-4 py-3 rounded-lg text-lg text-white placeholder-white/40 focus:outline-none transition-all duration-200 resize-none"
+                    style={{
+                      background: 'rgba(255,255,255,0.04)',
+                      border: '1px solid rgba(13,148,136,0.25)',
+                    }}
+                    onFocus={e => { e.target.style.border = '1px solid #0d9488'; e.target.style.boxShadow = '0 0 0 3px rgba(13,148,136,0.15)'; }}
+                    onBlur={e => { e.target.style.border = '1px solid rgba(13,148,136,0.25)'; e.target.style.boxShadow = 'none'; }}
                   />
                 </div>
 
@@ -181,19 +220,25 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 font-lexend text-lg"
+                    className="w-full px-4 py-3 rounded-lg text-lg text-white placeholder-white/40 focus:outline-none transition-all duration-200"
+                    style={{
+                      background: 'rgba(255,255,255,0.04)',
+                      border: '1px solid rgba(13,148,136,0.25)',
+                    }}
+                    onFocus={e => { e.target.style.border = '1px solid #0d9488'; e.target.style.boxShadow = '0 0 0 3px rgba(13,148,136,0.15)'; }}
+                    onBlur={e => { e.target.style.border = '1px solid rgba(13,148,136,0.25)'; e.target.style.boxShadow = 'none'; }}
                   />
                 </div>
 
                 {/* Messages de statut */}
                 {submitStatus === 'success' && (
-                  <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg font-lexend">
+                  <div className="p-4 rounded-lg text-teal-300 border border-teal-600/30" style={{ background: 'rgba(13,148,136,0.1)' }}>
                     ✓ Message envoyé avec succès !
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg font-lexend">
+                  <div className="p-4 rounded-lg text-red-300 border border-red-600/30" style={{ background: 'rgba(239,68,68,0.1)' }}>
                     ✗ Une erreur s'est produite. Veuillez réessayer ou nous contacter directement par email.
                   </div>
                 )}
@@ -203,14 +248,14 @@ export const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 hover:shadow-xl text-white px-8 py-3 rounded-lg font-lexend text-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 hover:shadow-xl text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 btn-shimmer"
                   >
                     <span>{isSubmitting ? 'Envoi en cours...' : 'Solliciter un audit'}</span>
                     <ArrowRight size={20} />
                   </button>
                 </div>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

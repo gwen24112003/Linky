@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer>
-      <div className="w-[95%] mx-auto bg-gray-900 text-white rounded-t-3xl py-16 px-6 md:px-12 pb-32">
+      <div className="w-[95%] mx-auto bg-gray-900 text-white rounded-t-3xl py-16 px-6 md:px-12 pb-32 border-t-2 border-teal-800/40">
         <div className="flex flex-col items-center text-center max-w-7xl mx-auto gap-16">
           {/* Logo Linky centré en haut */}
           <div className="flex justify-center">
@@ -89,7 +89,8 @@ export const Footer: React.FC = () => {
               <a
                 key={social.label}
                 href={social.href}
-                className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
+                className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-teal-400 hover:bg-gray-700 hover:shadow-lg transition-all duration-200"
+                style={{ '--tw-shadow-color': 'rgba(13,148,136,0.4)' } as React.CSSProperties}
                 aria-label={social.label}
                 target="_blank"
                 rel="noopener noreferrer"

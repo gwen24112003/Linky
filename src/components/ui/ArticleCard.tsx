@@ -22,10 +22,13 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ imageSrc, overlayImage
         />
         {overlayImageSrc && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <img 
-              src={overlayImageSrc} 
-              alt="Overlay" 
-              className="w-80 h-80 object-contain drop-shadow-lg transform transition-transform duration-500 group-hover:scale-110"
+            <img
+              src={overlayImageSrc}
+              alt="Overlay"
+              className="w-80 h-80 object-contain drop-shadow-lg transition-all duration-500 group-hover:scale-110"
+              style={{ transform: 'perspective(600px) rotateY(0deg)', transition: 'transform 0.5s ease' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLImageElement).style.transform = 'perspective(600px) rotateY(8deg) scale(1.1)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLImageElement).style.transform = 'perspective(600px) rotateY(0deg) scale(1)'; }}
             />
           </div>
         )}
@@ -38,11 +41,14 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ imageSrc, overlayImage
         <p className="text-black text-lg md:text-lg lg:text-xl leading-relaxed mb-8 flex-grow font-meera line-clamp-4">
           {description}
         </p>
-        <button 
+        <button
           onClick={onClick}
-          className="inline-flex items-center gap-2 text-gray-900 font-bold text-lg hover:text-teal-600 transition-colors w-fit group/btn cursor-pointer"
+          className="inline-flex items-center gap-2 text-gray-900 font-bold text-lg hover:text-teal-600 transition-colors w-fit group/btn cursor-pointer relative"
         >
-          LIRE L'ARTICLE 
+          <span className="relative">
+            LIRE L'ARTICLE
+            <span className="absolute bottom-0 left-0 h-px bg-teal-600 w-0 group-hover/btn:w-full transition-all duration-300" />
+          </span>
           <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
         </button>
       </div>

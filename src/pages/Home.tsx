@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { HeroBanner } from '../components/home/HeroBanner';
@@ -35,27 +36,37 @@ export const Home: React.FC = () => {
         </div>
 
         {/* Contenu basé sur le tab actif */}
-        {activeTab === 'entreprises' && (
-          <>
-            <ServicesSectionEntreprise />
-            <ProcessSectionEntreprise />
-            <ArticlesSection />
-            {/*Affiche les témoignages pour correspondre à la maquette
-            <TestimonialsSectionEntreprise /> */}
-            <CTASectionEntreprise />
-          </>
-        )}
+        <AnimatePresence mode="wait">
+          {activeTab === 'entreprises' && (
+            <motion.div
+              key="entreprises"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <ServicesSectionEntreprise />
+              <ProcessSectionEntreprise />
+              <ArticlesSection />
+              <CTASectionEntreprise />
+            </motion.div>
+          )}
 
-        {activeTab === 'freelances' && (
-          <>
-            <ServicesSectionFreelance />
-            <ProcessSectionFreelance />
-            <ArticlesSection />
-            {/* Affiche les témoignages pour correspondre à la maquette
-            <TestimonialsSectionFreelance /> */}
-            <CTASectionFreelance />
-          </>
-        )}
+          {activeTab === 'freelances' && (
+            <motion.div
+              key="freelances"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <ServicesSectionFreelance />
+              <ProcessSectionFreelance />
+              <ArticlesSection />
+              <CTASectionFreelance />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </main>
 

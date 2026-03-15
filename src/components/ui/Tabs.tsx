@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { TabType } from '../../types';
 
 interface TabsProps {
@@ -25,7 +26,11 @@ export const Tabs: React.FC<TabsProps> = ({ activeTab, onTabChange }) => {
         >
           {tab.label}
           {activeTab === tab.value && (
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-teal-600"></div>
+            <motion.div
+              layoutId="tab-indicator"
+              className="absolute bottom-0 left-0 right-0 h-1 bg-teal-600 rounded-full"
+              transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+            />
           )}
         </button>
       ))}

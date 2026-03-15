@@ -1,92 +1,112 @@
 import React from 'react';
 import { Lightbulb, Layers, Code, TestTube, Rocket } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const ProcessSectionFreelance: React.FC = () => {
   const processSteps = [
-    {
-      id: '1',
-      icon: 'lightbulb',
-      title: 'Candidature'
-    },
-    {
-      id: '2',
-      icon: 'layers',
-      title: 'Entretien & Qualification'
-    },
-    {
-      id: '3',
-      icon: 'code',
-      title: 'Accréditation'
-    },
-    {
-      id: '4',
-      icon: 'test',
-      title: 'Onboarding'
-    },
-    {
-      id: '5',
-      icon: 'rocket',
-      title: 'Première Mission'
-    }
+    { id: '1', icon: 'lightbulb', title: 'Candidature', num: '01' },
+    { id: '2', icon: 'layers', title: 'Entretien & Qualification', num: '02' },
+    { id: '3', icon: 'code', title: 'Accréditation', num: '03' },
+    { id: '4', icon: 'test', title: 'Onboarding', num: '04' },
+    { id: '5', icon: 'rocket', title: 'Première Mission', num: '05' },
   ];
 
   const getIcon = (iconName: string) => {
-    const iconProps = { size: 36, className: 'text-white' };
+    const p = { size: 32, className: 'text-white' };
     switch (iconName) {
-      case 'lightbulb':
-        return <Lightbulb {...iconProps} />;
-      case 'layers':
-        return <Layers {...iconProps} />;
-      case 'code':
-        return <Code {...iconProps} />;
-      case 'test':
-        return <TestTube {...iconProps} />;
-      case 'rocket':
-        return <Rocket {...iconProps} />;
-      default:
-        return <Lightbulb {...iconProps} />;
+      case 'lightbulb': return <Lightbulb {...p} />;
+      case 'layers': return <Layers {...p} />;
+      case 'code': return <Code {...p} />;
+      case 'test': return <TestTube {...p} />;
+      case 'rocket': return <Rocket {...p} />;
+      default: return <Lightbulb {...p} />;
     }
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="section-dark">
       <div className="container mx-auto px-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-lg">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-12 text-center">
-            Notre processus
-          </h2>
+        <motion.h2
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-16 text-center"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Notre processus
+        </motion.h2>
 
-          <div className="flex flex-col lg:flex-row items-start justify-center gap-6 lg:gap-2">
-            {processSteps.map((step, index) => (
-              <React.Fragment key={step.id}>
-                <div className="flex flex-col items-center flex-1">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 rounded-full bg-gradient-to-br from-teal-400 to-teal-800 flex items-center justify-center mb-4 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    {getIcon(step.icon)}
-                  </div>
-                  <p className="text-sm lg:text-base xl:text-lg text-center text-gray-600 leading-relaxed px-2 min-h-[3rem]">
-                    {step.title}
-                  </p>
+        {/* Desktop layout */}
+        <div className="hidden lg:flex items-start justify-center gap-2 relative">
+          <svg
+            className="absolute top-10 left-[10%] right-[10%] w-[80%] h-[2px]"
+            style={{ overflow: 'visible' }}
+          >
+            <motion.line
+              x1="0" y1="1" x2="100%" y2="1"
+              stroke="rgba(13,148,136,0.4)"
+              strokeWidth="2"
+              strokeDasharray="1000"
+              strokeDashoffset="1000"
+              whileInView={{ strokeDashoffset: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, delay: 0.3, ease: 'easeInOut' }}
+            />
+          </svg>
+
+          {processSteps.map((step, index) => (
+            <motion.div
+              key={step.id}
+              className="flex flex-col items-center flex-1 relative"
+              initial={{ opacity: 0, scale: 0.6 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.15, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <span className="text-xs font-bold tracking-widest mb-2 z-10" style={{ color: '#c8a96e' }}>
+                {step.num}
+              </span>
+              <motion.div
+                className="w-20 h-20 rounded-full bg-gradient-to-br from-teal-400 to-teal-800 flex items-center justify-center mb-4 shadow-md z-10 relative"
+                whileInView={{
+                  boxShadow: ['0 0 0px rgba(13,148,136,0)', '0 0 24px rgba(13,148,136,0.7)', '0 0 8px rgba(13,148,136,0.3)'],
+                }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 + index * 0.15 }}
+              >
+                {getIcon(step.icon)}
+              </motion.div>
+              <p className="text-sm lg:text-base text-center text-white/70 leading-relaxed px-2 min-h-[3rem]">
+                {step.title}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile layout */}
+        <div className="lg:hidden flex flex-col items-center gap-6">
+          {processSteps.map((step, index) => (
+            <React.Fragment key={step.id}>
+              <motion.div
+                className="flex flex-col items-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+              >
+                <span className="text-xs font-bold tracking-widest mb-2" style={{ color: '#c8a96e' }}>{step.num}</span>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-400 to-teal-800 flex items-center justify-center mb-3 shadow-md">
+                  {getIcon(step.icon)}
                 </div>
-
-                {index < processSteps.length - 1 && (
-                  <>
-                    {/* Flèche horizontale pour desktop */}
-                    <div className="hidden lg:flex items-center mx-2 xl:mx-5 self-start" style={{ marginTop: '32px' }}>
-                      <svg width="40" height="20" viewBox="0 0 40 20" fill="none" className="xl:w-[60px] xl:h-[24px]">
-                        <path d="M0 10 L35 10 M22 4 L35 10 L22 16" stroke="#0d9488" strokeWidth="2.5" />
-                      </svg>
-                    </div>
-                    {/* Flèche verticale pour mobile */}
-                    <div className="lg:hidden my-2">
-                      <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
-                        <path d="M12 0 L12 35 M6 22 L12 35 L18 22" stroke="#0d9488" strokeWidth="2.5" />
-                      </svg>
-                    </div>
-                  </>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
+                <p className="text-sm text-center text-white/70">{step.title}</p>
+              </motion.div>
+              {index < processSteps.length - 1 && (
+                <svg width="24" height="32" viewBox="0 0 24 32" fill="none">
+                  <path d="M12 0 L12 27 M6 18 L12 27 L18 18" stroke="#0d9488" strokeWidth="2" opacity="0.5" />
+                </svg>
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </section>
