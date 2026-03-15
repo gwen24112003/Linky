@@ -19,7 +19,7 @@ export const ServicesSectionFreelance: React.FC = () => {
       id: '2',
       title: 'Cadre d\'Intervention',
       features: [
-        'Méthodologie Linky4U',
+        'Méthodologie Linky',
         'Outils & Frameworks',
         'Support opérationnel'
       ]

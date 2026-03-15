@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
       ],
       fullDescription: 'Notre client, un acteur majeur de la distribution, souffrait de ruptures de stock chroniques et de pertes liées à un pilotage manuel.\n\nNous avons mené un diagnostic complet de la chaîne de valeur, identifié les points de friction et mis en place une architecture de données unifiée.\n\nRésultat : -15% de ruptures en 6 mois et une visibilité temps réel pour le COMEX.',
       duration: '8 mois',
-      clientReview: 'Linky4U a su parler le langage de nos opérations tout en apportant une vraie vision stratégique.'
+      clientReview: 'Linky a su parler le langage de nos opérations tout en apportant une vraie vision stratégique.'
     },
     {
       id: '2',

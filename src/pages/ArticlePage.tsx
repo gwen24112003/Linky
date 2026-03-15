@@ -45,7 +45,9 @@ export const ArticlePage: React.FC = () => {
     fetch(`/articles/${slug}.md`)
       .then((response) => response.text())
       .then((text) => {
-        setContent(text);
+        // Remove front-matter YAML (between first --- and ---)
+        const contentWithoutFrontMatter = text.replace(/^---[\s\S]*?---/, '');
+        setContent(contentWithoutFrontMatter.trim());
         setLoading(false);
       })
       .catch((error) => {

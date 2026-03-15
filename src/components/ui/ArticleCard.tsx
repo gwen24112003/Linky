@@ -11,41 +11,46 @@ interface ArticleCardProps {
 
 export const ArticleCard: React.FC<ArticleCardProps> = ({ imageSrc, overlayImageSrc, title, description, onClick }) => {
   return (
-    <div 
-      className="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col min-h-[600px] max-w-lg border border-gray-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+    <article 
+      className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col border border-gray-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+      onClick={onClick}
+      onKeyDown={(e) => e.key === 'Enter' && onClick()}
+      tabIndex={0}
+      role="button"
+      aria-label={`Lire l'article: ${title}`}
     >
-      <div className="h-48 sm:h-56 md:h-64 overflow-hidden relative">
+      <div className="h-48 sm:h-56 overflow-hidden relative bg-gray-100">
         <img 
           src={imageSrc} 
-          alt={title} 
+          alt="" 
           className="w-full h-full object-cover blur-sm"
+          aria-hidden="true"
         />
         {overlayImageSrc && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <img 
               src={overlayImageSrc} 
-              alt="Overlay" 
-              className="w-80 h-80 object-contain drop-shadow-lg transform transition-transform duration-500 group-hover:scale-110"
+              alt="" 
+              className="w-64 h-64 object-contain drop-shadow-lg transform transition-transform duration-500 group-hover:scale-105"
+              aria-hidden="true"
             />
           </div>
         )}
-        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300" />
       </div>
-      <div className="p-6 md:p-8 flex flex-col flex-grow">
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-lexend uppercase transition-colors">
+      <div className="p-5 sm:p-6 flex flex-col flex-grow">
+        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 font-lexend uppercase transition-colors line-clamp-2">
           {title}
         </h3>
-        <p className="text-black text-lg md:text-lg lg:text-xl leading-relaxed mb-8 flex-grow font-meera line-clamp-4">
+        <p className="text-gray-600 text-base leading-relaxed mb-6 flex-grow font-meera line-clamp-3">
           {description}
         </p>
-        <button 
-          onClick={onClick}
-          className="inline-flex items-center gap-2 text-gray-900 font-bold text-lg hover:text-teal-600 transition-colors w-fit group/btn cursor-pointer"
-        >
-          LIRE L'ARTICLE 
-          <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
-        </button>
+        <div className="mt-auto">
+          <span className="inline-flex items-center gap-2 text-[#1E3A5F] font-semibold text-base group-hover:text-teal-600 transition-colors">
+            LIRE L'ARTICLE 
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </span>
+        </div>
       </div>
-    </div>
+    </article>
   );
 };

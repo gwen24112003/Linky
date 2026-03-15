@@ -7,6 +7,7 @@ import { Projects } from './pages/Projects';
 import { Contact } from './pages/Contact';
 import { Services } from './pages/Services';
 import { ArticlePage } from './pages/ArticlePage';
+import { ArticlesList } from './pages/ArticlesList';
 import { ExpertContact } from './pages/ExpertContact';
 import { SEO } from './components/SEO';
 
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/projets" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/articles" element={<ArticlesList />} />
           <Route path="/article/:slug" element={<ArticlePage />} />
           <Route path="/experts-contact" element={<ExpertContact />} />
         </Routes>

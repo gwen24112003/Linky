@@ -50,29 +50,29 @@ export const Footer: React.FC = () => {
 
   return (
     <footer>
-      <div className="w-[95%] mx-auto bg-gray-900 text-white rounded-t-3xl py-16 px-6 md:px-12 pb-32">
-        <div className="flex flex-col items-center text-center max-w-7xl mx-auto gap-16">
-          {/* Logo Linky centré en haut */}
+      <div className="w-[95%] mx-auto bg-gray-900 text-white rounded-t-2xl sm:rounded-t-3xl py-10 sm:py-14 lg:py-16 px-4 sm:px-6 pb-24 sm:pb-32">
+        <div className="flex flex-col items-center text-center max-w-7xl mx-auto gap-10 sm:gap-14">
+          {/* Logo Linky centre en haut */}
           <div className="flex justify-center">
             <img
               src="/images/logo-blanc.png"
               alt="Logo Linky - Solutions no-code et automatisation"
-              className="h-16 md:h-20 lg:h-24 object-contain"
+              className="h-12 sm:h-16 md:h-20 object-contain"
             />
           </div>
 
-          {/* Footer Sections - 3 colonnes centrées */}
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24 justify-center">
+          {/* Footer Sections - 3 colonnes centrees */}
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-20 justify-center w-full">
             {footerSections.map((section) => (
-              <div key={section.title} className="w-full md:w-auto text-left">
-                <h4 className="font-semibold mb-6 text-white text-3xl md:text-4xl lg:text-5xl font-lexend whitespace-nowrap">{section.title}</h4>
-                <ul className="space-y-4">
+              <div key={section.title} className="w-full md:w-auto text-center md:text-left">
+                <h4 className="font-semibold mb-4 text-white text-xl sm:text-2xl md:text-3xl font-lexend">{section.title}</h4>
+                <ul className="space-y-3">
                   {section.links.map((link) => (
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-gray-400 hover:text-white transition-colors duration-200 text-xl md:text-2xl lg:text-2xl font-meera whitespace-nowrap inline-block"
-                        aria-label={`Aller à ${link.label}`}
+                        className="text-gray-400 hover:text-white transition-colors duration-200 text-base sm:text-lg inline-block"
+                        aria-label={`Aller a ${link.label}`}
                       >
                         {link.label}
                       </a>
@@ -83,18 +83,18 @@ export const Footer: React.FC = () => {
             ))}
           </div>
 
-          {/* Réseaux sociaux centrés en bas */}
-          <div className="flex gap-8 justify-center">
+          {/* Reseaux sociaux centres en bas */}
+          <div className="flex gap-4 sm:gap-6 justify-center">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
-                className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
                 aria-label={social.label}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <social.icon size={32} />
+                <social.icon size={18} className="sm:w-5 sm:h-5" />
               </a>
             ))}
           </div>

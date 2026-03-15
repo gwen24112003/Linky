@@ -1,0 +1,120 @@
+# SEO Agent Configuration
+
+# Target Site
+target_site:
+  name: "Linky - Cabinet de Conseil No-Code"
+  url: "https://linky4u.fr"
+  blog_path: "./src/data/articles"
+  site_path: "."
+
+# AI Configuration
+ai:
+  provider: "ollama"  # ollama, openai, anthropic
+  model: "llama3.2"
+  temperature: 0.7
+  max_tokens: 2000
+
+# Image Generation (Free: Pollinations.ai)
+image:
+  provider: "none"  # pollinations (free), none (default image)
+  # Note: Pollinations peut avoir des erreurs 500, utiliser 'none' pour eviter
+
+# Publication
+publication:
+  auto_publish: false
+  netlify_hook_url: ""
+  generate_slug: true
+
+# Content Settings
+content:
+  min_words: 800
+  max_title_length: 60
+  max_meta_length: 155
+  keyword_density_min: 0.01
+  keyword_density_max: 0.02
+
+# Backlinks
+backlinks:
+  min_per_article: 2
+  max_per_article: 5
+  authority_sites_file: "./references/authority-sites.md"
+  include_internal: true
+
+# Guest Posting
+guest_posting:
+  enabled: false
+  sites: []
+
+# Veille Technologique
+veille:
+  enabled: true
+  frequency: daily  # hourly, daily, weekly
+  auto_generate: false  # Générer automatiquement des articles
+  auto_publish: false  # Publier automatiquement
+  sources:
+    # Business Francophone
+    - name: "Le Monde Economie"
+      type: "rss"
+      url: "https://www.lemonde.fr/economie/rss_full.xml"
+    - name: "Les Echos"
+      type: "rss"
+      url: "https://www.lesechos.fr/rss/rss_top.xml"
+    - name: "Challenges"
+      type: "rss"
+      url: "https://www.challenges.fr/rss/une.rss"
+    # Business International
+    - name: "Harvard Business Review"
+      type: "rss"
+      url: "https://feeds.hbr.org/headlines.rss"
+    - name: "Forbes Business"
+      type: "rss"
+      url: "https://www.forbes.com/business/feed2/"
+    - name: "Business Insider"
+      type: "rss"
+      url: "https://www.businessinsider.com/rss"
+    # Tech & Innovation
+    - name: "Numerama"
+      type: "rss"
+      url: "https://numerama.com/feed/"
+    - name: "01net"
+      type: "rss"
+      url: "https://www.01net.com/rss/actualites/"
+    # Productivite & No-Code
+    - name: "ProductHunt"
+      type: "rss"
+      url: "https://www.producthunt.com/feed"
+  keywords:
+    # Conseil & Business
+    - "conseil"
+    - "consulting"
+    - "stratégie"
+    - "gestion d'entreprise"
+    - "organisation"
+    - "pme"
+    - "tpe"
+    - "pmi"
+    # Efficacité & Productivité
+    - "productivité"
+    - "efficacité"
+    - "efficience"
+    - "performance"
+    - "amélioration continue"
+    # Process & Workflow
+    - "processus"
+    - "workflow"
+    - "automatisation"
+    - "数字化转型"
+    - "数字化"
+    # No-Code & Tech
+    - "no-code"
+    - "low-code"
+    - "logiciel"
+    - "saas"
+    - "gestion de projet"
+    - "crm"
+    - "erp"
+    # Transformation digitale
+    - "transformation digitale"
+    - "digitalisation"
+    - "numérique"
+    - "innovation"

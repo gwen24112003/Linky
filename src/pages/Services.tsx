@@ -72,7 +72,7 @@ export const Services: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Notre Expertise - Linky4U"
+        title="Notre Expertise - Linky"
         description="Conseil en organisation, optimisation des processus et mise en place de systèmes de pilotage pour dirigeants."
         url="https://linky4u.com/services"
       />
