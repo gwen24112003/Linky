@@ -22,13 +22,5 @@
         "description": "Transformez vos Google Sheets en applications puissantes avec Glide.",
         "imageSrc": "/images/linky-banner.png",
         "overlayImageSrc": "/images/mockup-linky.png"
-    },
-    {
-        "id": 3,
-        "slug": "conseil-organisation",
-        "title": "Organisez votre business plus rapidement",
-        "description": "Decouvrez comment structurer et organiser votre entreprise pour gagner en efficacite.",
-        "imageSrc": "/images/linky-banner.png",
-        "overlayImageSrc": ""
     }
 ]
