@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
     { label: 'Accueil', href: '/' },
     { label: 'Le Cabinet', href: '/equipe' },
     { label: 'Expertise', href: '/services' },
-    // { label: 'Réalisations', href: '/projets' },
+    { label: 'Articles', href: '/articles' },
     { label: 'Contact', href: '/contact' }
   ];
 
@@ -74,8 +74,10 @@ export const Header: React.FC = () => {
 
             {/* Desktop Navigation - centered absolutely */}
             <div className="hidden md:flex items-center gap-10 absolute left-1/2 transform -translate-x-1/2">
-              {navLinks.map((link) => (
-                link.href.startsWith('#') ? (
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.href ||
+                  (link.href !== '/' && location.pathname.startsWith(link.href));
+                return link.href.startsWith('#') ? (
                   <a
                     key={link.label}
                     href={link.href}
@@ -84,16 +86,29 @@ export const Header: React.FC = () => {
                     {link.label}
                   </a>
                 ) : (
-                  <Link
-                    key={link.label}
-                    to={link.href}
-                    onClick={handleNavClick}
-                    className={`text-xl transition-colors duration-200 font-bold ${navColor}`}
-                  >
-                    {link.label}
-                  </Link>
-                )
-              ))}
+                  <div key={link.label} className="relative">
+                    <Link
+                      to={link.href}
+                      onClick={handleNavClick}
+                      className={`text-xl transition-colors duration-200 font-bold ${
+                        isActive
+                          ? transparent ? 'text-white' : 'text-teal-600'
+                          : navColor
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                    {isActive && (
+                      <motion.div
+                        layoutId="nav-indicator"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
+                        style={{ background: transparent ? 'rgba(255,255,255,0.8)' : '#0d9488' }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                      />
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             {/* Burger button */}

@@ -1,5 +1,13 @@
 [
     {
+        "id": 3,
+        "slug": "organisation-avant-developpement",
+        "title": "Organisez avant de développer",
+        "description": "Pourquoi structurer vos processus avant d'investir dans un outil ou un développement est la décision la plus rentable que vous puissiez prendre.",
+        "imageSrc": "/images/linky-banner.png",
+        "overlayImageSrc": "/images/dashboard-linky.png"
+    },
+    {
         "id": 1,
         "slug": "automatisation-make",
         "title": "Boostez votre productivité avec Make",

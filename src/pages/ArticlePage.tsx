@@ -106,7 +106,7 @@ export const ArticlePage: React.FC = () => {
       {/* Article Content */}
       <main className="min-h-screen bg-white">
         {/* Article Section with TOC - includes header */}
-        <div className="relative py-12" ref={articleSectionRef}>
+        <div className="relative pt-32 pb-12" ref={articleSectionRef}>
           {/* TOC with dynamic positioning */}
           <div 
             ref={tocRef}

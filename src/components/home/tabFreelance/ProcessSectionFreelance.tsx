@@ -2,103 +2,124 @@ import React from 'react';
 import { Send, UserCheck, BadgeCheck, Users, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+const processSteps = [
+  {
+    id: '1', icon: 'send', num: '01',
+    title: 'Candidature',
+    desc: 'Envoyez votre profil et décrivez votre expertise via notre formulaire dédié.',
+  },
+  {
+    id: '2', icon: 'usercheck', num: '02',
+    title: 'Entretien & Qualification',
+    desc: 'Échange avec un associé Linky pour valider votre profil et vos domaines d\'expertise.',
+  },
+  {
+    id: '3', icon: 'badge', num: '03',
+    title: 'Accréditation',
+    desc: 'Intégration officielle au réseau après validation de votre expertise.',
+  },
+  {
+    id: '4', icon: 'users', num: '04',
+    title: 'Onboarding',
+    desc: 'Découverte des process Linky, des outils et des standards de livraison.',
+  },
+  {
+    id: '5', icon: 'rocket', num: '05',
+    title: 'Première Mission',
+    desc: 'Démarrage d\'une mission en co-traitance avec accompagnement de nos associés.',
+  },
+];
+
+const getIcon = (iconName: string) => {
+  const p = { size: 26, className: 'text-white' };
+  switch (iconName) {
+    case 'send':      return <Send {...p} />;
+    case 'usercheck': return <UserCheck {...p} />;
+    case 'badge':     return <BadgeCheck {...p} />;
+    case 'users':     return <Users {...p} />;
+    case 'rocket':    return <Rocket {...p} />;
+    default:          return <Send {...p} />;
+  }
+};
+
 export const ProcessSectionFreelance: React.FC = () => {
-  const processSteps = [
-    { id: '1', icon: 'send', title: 'Candidature', num: '01' },
-    { id: '2', icon: 'usercheck', title: 'Entretien & Qualification', num: '02' },
-    { id: '3', icon: 'badge', title: 'Accréditation', num: '03' },
-    { id: '4', icon: 'users', title: 'Onboarding', num: '04' },
-    { id: '5', icon: 'rocket', title: 'Première Mission', num: '05' },
-  ];
-
-  const getIcon = (iconName: string) => {
-    const p = { size: 32, className: 'text-white' };
-    switch (iconName) {
-      case 'send': return <Send {...p} />;
-      case 'usercheck': return <UserCheck {...p} />;
-      case 'badge': return <BadgeCheck {...p} />;
-      case 'users': return <Users {...p} />;
-      case 'rocket': return <Rocket {...p} />;
-      default: return <Send {...p} />;
-    }
-  };
-
   return (
-    <section className="section-teal py-28">
+    <section className="py-24 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-6">
-        <motion.h2
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-16 text-center"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-        >
-          Notre processus
-        </motion.h2>
 
-        {/* Desktop layout */}
-        <div className="hidden lg:flex items-start justify-center gap-2 relative">
-          {/* Animated connector line */}
-          <motion.div
-            className="absolute top-[64px] left-[10%] h-[2px] bg-teal-200/40"
-            initial={{ width: 0 }}
-            whileInView={{ width: '80%' }}
+        {/* ── En-tête ── */}
+        <div className="text-center mb-16">
+          <motion.p
+            className="text-sm font-semibold tracking-[0.2em] uppercase text-teal-600 mb-3"
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.2, delay: 0.3, ease: 'easeInOut' }}
-          />
+            transition={{ duration: 0.5 }}
+          >
+            Comment ça marche
+          </motion.p>
+          <motion.h2
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          >
+            Notre processus
+          </motion.h2>
+        </div>
 
+        {/* ── Grille de cartes ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {processSteps.map((step, index) => (
             <motion.div
               key={step.id}
-              className="flex flex-col items-center flex-1 relative"
-              initial={{ opacity: 0, scale: 0.7 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              className="relative bg-white rounded-2xl p-6 flex flex-col gap-4 group"
+              style={{ border: '1px solid rgba(15,118,110,0.1)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 + index * 0.12, ease: 'easeOut' }}
+              transition={{ duration: 0.5, delay: 0.1 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(15,118,110,0.12)' }}
             >
-              <span className="text-xs font-bold tracking-widest mb-2 z-10 text-teal-200">
+              {/* Numéro watermark */}
+              <span
+                className="absolute top-4 right-5 text-5xl font-bold leading-none select-none"
+                style={{ color: 'rgba(15,118,110,0.06)' }}
+              >
                 {step.num}
               </span>
-              <motion.div
-                className="w-20 h-20 rounded-full bg-teal-700 border border-teal-500/50 flex items-center justify-center mb-4 z-10 relative hover:bg-teal-600 transition-colors duration-200"
-                whileInView={{
-                  boxShadow: ['0 0 0px rgba(153,246,228,0)', '0 0 20px rgba(153,246,228,0.5)', '0 0 8px rgba(153,246,228,0.2)'],
+
+              {/* Icône */}
+              <div
+                className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
+                style={{
+                  background: 'linear-gradient(135deg, #2dd4bf, #0f766e)',
+                  boxShadow: '0 6px 20px rgba(15,118,110,0.35)',
                 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 + index * 0.12 }}
               >
                 {getIcon(step.icon)}
-              </motion.div>
-              <p className="text-sm lg:text-base text-center text-white/80 leading-relaxed px-2 min-h-[3rem]">
-                {step.title}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+              </div>
 
-        {/* Mobile layout */}
-        <div className="lg:hidden flex flex-col items-center gap-6">
-          {processSteps.map((step, index) => (
-            <React.Fragment key={step.id}>
-              <motion.div
-                className="flex flex-col items-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-              >
-                <span className="text-xs font-bold tracking-widest mb-2 text-teal-200">{step.num}</span>
-                <div className="w-16 h-16 rounded-full bg-white/20 border border-white/30 flex items-center justify-center mb-3">
-                  {getIcon(step.icon)}
-                </div>
-                <p className="text-sm text-center text-white/80">{step.title}</p>
-              </motion.div>
+              {/* Texte */}
+              <div>
+                <p className="text-xs font-semibold text-teal-600 uppercase tracking-wider mb-1">{step.num}</p>
+                <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug">{step.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+              </div>
+
+              {/* Connecteur flèche (sauf dernier) */}
               {index < processSteps.length - 1 && (
-                <svg width="24" height="32" viewBox="0 0 24 32" fill="none">
-                  <path d="M12 0 L12 27 M6 18 L12 27 L18 18" stroke="rgba(153,246,228,0.5)" strokeWidth="2" />
-                </svg>
+                <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                  <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    style={{ border: '1px solid rgba(15,118,110,0.2)', boxShadow: '0 2px 6px rgba(0,0,0,0.06)' }}>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M2 5h6M6 2l3 3-3 3" stroke="rgba(15,118,110,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
               )}
-            </React.Fragment>
+            </motion.div>
           ))}
         </div>
       </div>

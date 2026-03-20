@@ -1,120 +1,90 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Quote } from 'lucide-react';
 import { Testimonial } from '../../../types';
 
+const testimonials: Testimonial[] = [
+  { id: '1', name: 'Andy Antonucci',  role: 'Co-founder',   company: 'SAFER Nation', content: 'In the garden of life, some things are just very sweet. This is one of them.' },
+  { id: '2', name: 'Wanja Singleton', role: 'Leadership at', company: 'Butcher',      content: 'Your expectations will fly way high. I felt like I was soaring.' },
+  { id: '3', name: 'Carl Carvalho',   role: 'Growth at',    company: 'Cannon & Co.', content: 'Using this felt like it transformed me completely.' },
+  { id: '4', name: 'Sophie Laurent',  role: 'DG',           company: 'Innov Group',  content: "Une clarté opérationnelle que nous n'aurions jamais atteint seuls." },
+  { id: '5', name: 'Marc Dubois',     role: 'CEO',          company: 'TechFlow',     content: 'Ils ont su transformer notre chaos en architecture cohérente.' },
+];
+
+const TestimonialCard: React.FC<{ t: Testimonial }> = ({ t }) => (
+  <div
+    className="flex-shrink-0 w-80 rounded-2xl p-6"
+    style={{
+      background: 'rgba(255,255,255,0.03)',
+      border: '1px solid rgba(255,255,255,0.07)',
+    }}
+  >
+    <Quote size={20} className="text-teal-500/60 mb-4" />
+    <p className="text-gray-300 text-sm leading-relaxed mb-5 italic">
+      "{t.content}"
+    </p>
+    <div className="flex items-center gap-3">
+      <div
+        className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
+        style={{ background: 'linear-gradient(135deg, #2dd4bf, #0f766e)' }}
+      >
+        {t.name.charAt(0)}
+      </div>
+      <div>
+        <p className="text-sm font-semibold text-white">{t.name}</p>
+        <p className="text-xs text-gray-500">{t.role} {t.company}</p>
+      </div>
+    </div>
+  </div>
+);
+
 export const TestimonialsSectionEntreprise: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const testimonials: Testimonial[] = [
-    {
-      id: '1',
-      name: 'Andy Antonucci',
-      role: 'Co-founder',
-      company: 'SAFER Nation',
-      content: 'In the garden of life, some things are just very sweet. This is one of them.'
-    },
-    {
-      id: '2',
-      name: 'Wanja Singleton',
-      role: 'Leadership at',
-      company: 'Butcher',
-      content: 'Your expectations will fly way high. I felt like I was soaring.'
-    },
-    {
-      id: '3',
-      name: 'Carl Carvalho',
-      role: 'Growth at',
-      company: 'Cannon & Co.',
-      content: 'Using this felt like it transformed me completely.'
-    }
-  ];
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  const row1 = [...testimonials, ...testimonials];
+  const row2 = [...[...testimonials].reverse(), ...[...testimonials].reverse()];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-16 text-center">
-          Ce que nos clients disent de nous
-        </h2>
-
-        <div className="relative">
-          {/* Testimonials Grid - visible sur grand écran */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:shadow-lg transition-shadow duration-300"
-              >
-                <p className="text-gray-700 mb-8 leading-relaxed text-sm">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <p className="font-semibold text-gray-900 mb-1">{testimonial.name}</p>
-                  <p className="text-xs text-gray-500">
-                    {testimonial.role} {testimonial.company}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Carousel - visible sur mobile et tablette */}
-          <div className="lg:hidden">
-            <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 max-w-lg mx-auto">
-              <p className="text-gray-700 mb-8 leading-relaxed">
-                "{testimonials[currentIndex].content}"
-              </p>
-              <div>
-                <p className="font-semibold text-gray-900 mb-1">
-                  {testimonials[currentIndex].name}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {testimonials[currentIndex].role} {testimonials[currentIndex].company}
-                </p>
-              </div>
-            </div>
-
-            {/* Navigation buttons */}
-            <div className="flex justify-center gap-4 mt-8">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 rounded-full bg-teal-600 text-white hover:bg-teal-700 transition-colors shadow-md"
-                aria-label="Témoignage précédent"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <button
-                onClick={nextTestimonial}
-                className="p-3 rounded-full bg-teal-600 text-white hover:bg-teal-700 transition-colors shadow-md"
-                aria-label="Témoignage suivant"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
-
-            {/* Dots indicator */}
-            <div className="flex justify-center gap-2 mt-6">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? 'bg-teal-600 w-8' : 'bg-gray-300 w-2'
-                  }`}
-                  aria-label={`Aller au témoignage ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+    <section className="py-20 bg-gray-950 relative overflow-hidden">
+      <div className="container mx-auto px-6 mb-14">
+        <motion.h2
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Ce que nos <span className="text-gradient">clients</span> disent de nous
+        </motion.h2>
       </div>
+
+      {/* Rangée 1 — défile gauche */}
+      <div className="overflow-hidden mb-5">
+        <motion.div
+          className="flex gap-5"
+          style={{ width: 'max-content' }}
+          animate={{ x: ['0%', '-50%'] }}
+          transition={{ duration: 32, repeat: Infinity, ease: 'linear' }}
+        >
+          {row1.map((t, i) => <TestimonialCard key={i} t={t} />)}
+        </motion.div>
+      </div>
+
+      {/* Rangée 2 — défile droite */}
+      <div className="overflow-hidden">
+        <motion.div
+          className="flex gap-5"
+          style={{ width: 'max-content' }}
+          animate={{ x: ['-50%', '0%'] }}
+          transition={{ duration: 38, repeat: Infinity, ease: 'linear' }}
+        >
+          {row2.map((t, i) => <TestimonialCard key={i} t={t} />)}
+        </motion.div>
+      </div>
+
+      {/* Fade sur les bords */}
+      <div className="absolute inset-y-0 left-0 w-24 pointer-events-none z-10"
+        style={{ background: 'linear-gradient(to right, #030712, transparent)' }} />
+      <div className="absolute inset-y-0 right-0 w-24 pointer-events-none z-10"
+        style={{ background: 'linear-gradient(to left, #030712, transparent)' }} />
     </section>
   );
 };
