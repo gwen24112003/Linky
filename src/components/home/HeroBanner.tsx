@@ -156,7 +156,7 @@ export const HeroBanner: React.FC = () => {
       />
 
       {/* ── Contenu principal ── */}
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 pt-20 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
 
           {/* Overline */}

@@ -31,16 +31,18 @@ export const ArticlesPage: React.FC = () => {
 
       {/* ── Hero ── */}
       <section
-        className="relative h-[45vh] flex items-center justify-center overflow-hidden"
+        className="relative h-[50vh] flex items-center justify-center overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #0f766e, #0e7490, #0c4a6e, #0f766e, #155e75)',
           backgroundSize: '400% 400%',
           animation: 'mesh-shift 14s ease infinite',
         }}
       >
+        <div className="absolute pointer-events-none opacity-20 hidden md:block"
+          style={{ width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, #2dd4bf, transparent)', filter: 'blur(70px)', top: '-20%', right: '5%', animation: 'float 9s ease-in-out infinite' }} />
         <div className="absolute inset-0 pointer-events-none opacity-[0.10]"
           style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 text-center px-6 pt-20 md:pt-0">
           <motion.p
             className="text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-teal-200"
             initial={{ opacity: 0, y: -12 }}
