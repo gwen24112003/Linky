@@ -27,7 +27,7 @@ const colors = {
     700: '#374151',
     800: '#1f2937',
     900: '#111827',
-  }
+  },
 };
 
 module.exports = { colors };

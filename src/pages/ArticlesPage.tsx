@@ -1,0 +1,92 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Header } from '../components/layout/Header';
+import { Footer } from '../components/layout/Footer';
+import { ArticleCard } from '../components/ui/ArticleCard';
+import { SEO } from '../components/SEO';
+import articlesData from '../data/articles.json';
+
+interface ArticleMetadata {
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  overlayImageSrc?: string;
+}
+
+export const ArticlesPage: React.FC = () => {
+  const navigate = useNavigate();
+  const articles: ArticleMetadata[] = articlesData;
+
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <SEO
+        title="Articles - Linky · Conseil en Organisation"
+        description="Ressources et insights pour dirigeants : stratégie, optimisation des processus, outils et méthodes pour une croissance maîtrisée."
+        url="https://linky4u.com/articles"
+      />
+      <Header />
+
+      {/* ── Hero ── */}
+      <section
+        className="relative h-[45vh] flex items-center justify-center overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #0f766e, #0e7490, #0c4a6e, #0f766e, #155e75)',
+          backgroundSize: '400% 400%',
+          animation: 'mesh-shift 14s ease infinite',
+        }}
+      >
+        <div className="absolute inset-0 pointer-events-none opacity-[0.10]"
+          style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div className="relative z-10 text-center px-6">
+          <motion.p
+            className="text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-teal-200"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Ressources · Insights
+          </motion.p>
+          <motion.h1
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          >
+            Articles
+          </motion.h1>
+        </div>
+      </section>
+
+      {/* ── Grid articles ── */}
+      <main className="flex-grow py-20">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            {articles.map((article, i) => (
+              <motion.div
+                key={article.id}
+                className="w-full"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <ArticleCard
+                  title={article.title}
+                  description={article.description}
+                  imageSrc={article.imageSrc}
+                  overlayImageSrc={article.overlayImageSrc}
+                  onClick={() => navigate(`/article/${article.slug}`)}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};

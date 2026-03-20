@@ -1,7 +1,7 @@
 const fonts = {
-  sans: ["Meera Inimai", 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
-  heading: ["Dongle", 'Meera Inimai', 'ui-sans-serif'],
-  subtitle: ["Lexend", 'Meera Inimai', 'ui-sans-serif'],
+  sans: ["Inter", 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+  heading: ["Bricolage Grotesque", 'ui-sans-serif', 'system-ui'],
+  subtitle: ["Lexend", 'ui-sans-serif', 'system-ui'],
 };
 
 const fontSizes = {
