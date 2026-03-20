@@ -116,9 +116,19 @@ export const Team: React.FC = () => {
               }}
             />
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="absolute inset-0 pointer-events-none opacity-[0.10]"
+              style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="relative z-10 text-center px-6 pt-20 md:pt-0">
+              <motion.p
+                className="text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-teal-200"
+                initial={{ opacity: 0, y: -12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                Linky · Notre Équipe
+              </motion.p>
               <motion.h1
-                className="text-4xl md:text-6xl lg:text-8xl text-white text-center leading-tight"
+                className="text-6xl md:text-7xl lg:text-8xl font-bold text-white font-heading"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
