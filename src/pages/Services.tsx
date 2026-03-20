@@ -117,7 +117,7 @@ export const Services: React.FC = () => {
             Linky · Cabinet Conseil
           </motion.p>
           <motion.h1
-            className="text-6xl md:text-7xl lg:text-8xl font-bold text-white"
+            className="text-6xl md:text-7xl lg:text-8xl font-bold text-white font-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
