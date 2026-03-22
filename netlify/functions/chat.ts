@@ -47,10 +47,14 @@ async function streamOllama(
   model: string
 ): Promise<ReadableStream<Uint8Array>> {
   const ollamaUrl = process.env.OLLAMA_URL ?? "http://localhost:11434";
+  const apiKey = process.env.OLLAMA_API_KEY;
+
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  if (apiKey) headers["Authorization"] = `Bearer ${apiKey}`;
 
   const res = await fetch(`${ollamaUrl}/v1/chat/completions`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers,
     body: JSON.stringify({
       model,
       stream: true,
