@@ -85,9 +85,10 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({ botId = 'linky' }) => {
           const updated = [...prev];
           const last = updated[updated.length - 1];
           if (last.role === 'assistant' && last.content === '') {
+            const msg = err instanceof Error ? err.message : 'Erreur inconnue';
             return [
               ...updated.slice(0, -1),
-              { role: 'assistant', content: "Désolé, une erreur s'est produite. Veuillez réessayer." },
+              { role: 'assistant', content: `[DEBUG] ${msg}` },
             ];
           }
           return updated;
