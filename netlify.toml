@@ -1,18 +1,17 @@
 [build]
-  # Commande pour build le projet
   command = "npm run build"
-  
-  # Dossier à publier (celui généré par le build)
   publish = "build"
-  
-  # Dossier de base du projet
   base = "."
 
-# Configuration Node.js
 [build.environment]
   NODE_VERSION = "18"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 # Redirections pour React Router (SPA)
+# Les fonctions Netlify sont accessibles via /.netlify/functions/*
 [[redirects]]
   from = "/*"
   to = "/index.html"

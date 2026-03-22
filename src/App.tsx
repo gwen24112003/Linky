@@ -10,6 +10,7 @@ import { ArticlePage } from './pages/ArticlePage';
 import { ExpertContact } from './pages/ExpertContact';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { SEO } from './components/SEO';
+import { ChatWidget } from './components/ui/ChatWidget';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="/article/:slug" element={<ArticlePage />} />
           <Route path="/experts-contact" element={<ExpertContact />} />
         </Routes>
+        <ChatWidget botId="linky" />
       </Router>
     </HelmetProvider>
   );
