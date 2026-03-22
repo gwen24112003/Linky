@@ -6,12 +6,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-
 # Redirections pour React Router (SPA)
-# Les fonctions Netlify sont accessibles via /.netlify/functions/*
 [[redirects]]
   from = "/*"
   to = "/index.html"
