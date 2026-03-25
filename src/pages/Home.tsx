@@ -20,8 +20,8 @@ export const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Linky4U - Conseil en Organisation & Stratégie Opérationnelle"
-        description="Partenaire stratégique des dirigeants. Linky4U structure, clarifie et optimise vos processus pour une croissance maîtrisée et durable."
+        title="Opus Advisory - Conseil Opérationnel & Digital"
+        description="Partenaire stratégique des dirigeants. Opus Advisory structure, automatise et optimise vos processus pour une croissance maîtrisée."
       />
       <Header />
 

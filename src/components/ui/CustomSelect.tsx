@@ -36,7 +36,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
         type="button"
         onClick={() => setOpen(o => !o)}
         className="w-full flex items-center justify-between border-b py-3 text-lg transition-colors duration-300 text-left focus:outline-none"
-        style={{ borderColor: value ? '#14b8a6' : '#e5e7eb' }}
+        style={{ borderColor: value ? '#C9A84C' : '#e5e7eb' }}
       >
         <span className={value ? 'text-gray-900' : 'text-gray-400'}>
           {selected ? selected.label : placeholder}
@@ -52,7 +52,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
             className="absolute left-0 right-0 top-full z-50 mt-2 rounded-xl overflow-hidden"
             style={{
               background: 'white',
-              border: '1px solid rgba(15,118,110,0.15)',
+              border: '1px solid rgba(201,168,76,0.2)',
               boxShadow: '0 16px 40px rgba(0,0,0,0.1)',
             }}
             initial={{ opacity: 0, y: -8 }}
@@ -65,12 +65,16 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
                 key={option.value}
                 type="button"
                 onClick={() => { onChange(option.value); setOpen(false); }}
-                className="w-full flex items-center justify-between px-4 py-3 text-left text-base hover:bg-teal-50 transition-colors duration-150 group"
+                className="w-full flex items-center justify-between px-4 py-3 text-left text-base transition-colors duration-150 group"
+                style={{ background: undefined }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.06)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = ''; }}
               >
-                <span className={value === option.value ? 'text-teal-700 font-semibold' : 'text-gray-700 group-hover:text-teal-700'}>
+                <span className={value === option.value ? 'font-semibold' : 'text-gray-700'}
+                  style={value === option.value ? { color: '#C9A84C' } : undefined}>
                   {option.label}
                 </span>
-                {value === option.value && <Check size={16} className="text-teal-500 flex-shrink-0" />}
+                {value === option.value && <Check size={16} style={{ color: '#C9A84C' }} className="flex-shrink-0" />}
               </button>
             ))}
           </motion.div>

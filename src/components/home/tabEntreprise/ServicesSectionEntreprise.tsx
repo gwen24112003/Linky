@@ -72,14 +72,14 @@ const TiltServiceCard: React.FC<TiltServiceCardProps> = ({ service, index }) => 
         transition={{ type: 'spring', stiffness: 350, damping: 35 }}
         className="card-glass rounded-2xl p-8 relative overflow-hidden h-full"
         whileHover={{
-          boxShadow: '0 28px 64px rgba(15,118,110,0.22), 0 1px 0 rgba(255,255,255,0.8) inset',
+          boxShadow: '0 28px 64px rgba(26,35,50,0.22), 0 1px 0 rgba(255,255,255,0.8) inset',
         }}
       >
         {/* Grand numéro en perspective recédante */}
         <span
           className="absolute -top-3 -left-1 text-[7rem] font-bold leading-none select-none pointer-events-none"
           style={{
-            color: 'rgba(15,118,110,0.06)',
+            color: 'rgba(201,168,76,0.06)',
             fontFamily: 'Bricolage Grotesque, system-ui',
             transform: 'perspective(180px) rotateX(18deg)',
             transformOrigin: 'top left',
@@ -92,12 +92,12 @@ const TiltServiceCard: React.FC<TiltServiceCardProps> = ({ service, index }) => 
         <div
           className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-300"
           style={{
-            background: `radial-gradient(circle at ${spotX}% ${spotY}%, rgba(45,212,191,0.13) 0%, transparent 60%)`,
+            background: `radial-gradient(circle at ${spotX}% ${spotY}%, rgba(201,168,76,0.08) 0%, transparent 60%)`,
           }}
         />
 
-        {/* Ligne déco teal en haut */}
-        <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-teal-400/40 to-transparent" />
+        {/* Ligne déco gold en haut */}
+        <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-transparent to-transparent" />
 
         {/* Contenu */}
         <div className="relative z-10 pt-6">
@@ -107,10 +107,10 @@ const TiltServiceCard: React.FC<TiltServiceCardProps> = ({ service, index }) => 
           <ul className="space-y-4">
             {service.features?.map((feature, fi) => (
               <li key={fi} className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check size={11} className="text-teal-700" strokeWidth={3} />
+                <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "rgba(201,168,76,0.15)" }}>
+                  <Check size={11} style={{ color: "#C9A84C" }} strokeWidth={3} />
                 </div>
-                <span className="text-gray-600 leading-snug">{feature}</span>
+                <span className="text-gray-800 leading-snug">{feature}</span>
               </li>
             ))}
           </ul>
@@ -165,7 +165,7 @@ export const ServicesSectionEntreprise: React.FC = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
             L'Excellence Opérationnelle au service de votre Vision
           </h2>
-          <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
+          <p className="text-l md:text-l lg:text-xl text-gray-800 text-base leading-relaxed">
             Nous transformons vos défis organisationnels en leviers de croissance. Une approche pragmatique pour des résultats mesurables et durables.
           </p>
         </motion.div>
@@ -179,7 +179,7 @@ export const ServicesSectionEntreprise: React.FC = () => {
         <div className="flex justify-center mt-12">
           <Link
             to="/services#creation"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 text-base rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl hover:shadow-teal-200/40 group btn-shimmer"
+            className="inline-flex items-center gap-3 text-white px-8 py-4 text-base rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer" style={{ background: "#1A2332" }}
           >
             Notre approche détaillée
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-200" />

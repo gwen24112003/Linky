@@ -28,7 +28,8 @@ export const Tabs: React.FC<TabsProps> = ({ activeTab, onTabChange }) => {
           {activeTab === tab.value && (
             <motion.div
               layoutId="tab-indicator"
-              className="absolute bottom-0 left-0 right-0 h-1 bg-teal-600 rounded-full"
+              className="absolute bottom-0 left-0 right-0 h-1 rounded-full"
+              style={{ background: '#C9A84C' }}
               transition={{ type: 'spring', stiffness: 400, damping: 30 }}
             />
           )}

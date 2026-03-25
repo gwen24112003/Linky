@@ -1,4 +1,4 @@
-// Types pour l'application Linky
+// Types pour l'application Opus Advisory
 
 export interface Service {
   id: string;

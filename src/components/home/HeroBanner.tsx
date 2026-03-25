@@ -44,7 +44,7 @@ export const HeroBanner: React.FC = () => {
       className="relative text-white overflow-hidden flex items-center min-h-screen"
       onMouseMove={handleMouseMove}
       style={{
-        background: 'linear-gradient(135deg, #0f766e, #0e7490, #0c4a6e, #0f766e, #155e75)',
+        background: 'linear-gradient(135deg, #1A2332, #2A3A50, #1A2332)',
         backgroundSize: '400% 400%',
         animation: 'mesh-shift 14s ease infinite',
         minHeight: '100vh',
@@ -58,7 +58,7 @@ export const HeroBanner: React.FC = () => {
         <div
           className="w-full h-full rounded-full opacity-25"
           style={{
-            background: 'radial-gradient(circle, #2dd4bf 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(201,168,76,0.5) 0%, transparent 70%)',
             filter: 'blur(80px)',
             animation: 'float 10s ease-in-out infinite',
           }}
@@ -72,7 +72,7 @@ export const HeroBanner: React.FC = () => {
         <div
           className="w-full h-full rounded-full opacity-20"
           style={{
-            background: 'radial-gradient(circle, #0d9488 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(26,35,50,0.8) 0%, transparent 70%)',
             filter: 'blur(60px)',
             animation: 'float-delayed 8s ease-in-out infinite',
           }}
@@ -90,8 +90,8 @@ export const HeroBanner: React.FC = () => {
       >
         <div style={{
           width: 90, height: 90, borderRadius: '50%',
-          border: '1.5px solid rgba(45,212,191,0.3)',
-          boxShadow: '0 0 20px rgba(45,212,191,0.08)',
+          border: '1.5px solid rgba(201,168,76,0.3)',
+          boxShadow: '0 0 20px rgba(201,168,76,0.08)',
         }} />
       </motion.div>
 
@@ -104,11 +104,11 @@ export const HeroBanner: React.FC = () => {
       >
         <div style={{
           width: 70, height: 70, borderRadius: '50%',
-          border: '1.5px solid rgba(45,212,191,0.25)',
+          border: '1.5px solid rgba(201,168,76,0.25)',
         }}>
           <div style={{
             position: 'absolute', inset: 8, borderRadius: '50%',
-            border: '1px solid rgba(45,212,191,0.15)',
+            border: '1px solid rgba(201,168,76,0.15)',
           }} />
         </div>
       </motion.div>
@@ -125,7 +125,7 @@ export const HeroBanner: React.FC = () => {
           transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
           style={{
             width: 50, height: 50,
-            border: '1.5px solid rgba(153,246,228,0.35)',
+            border: '1.5px solid rgba(201,168,76,0.35)',
             borderRadius: 6,
           }}
         />
@@ -139,7 +139,7 @@ export const HeroBanner: React.FC = () => {
         <div
           className="w-full h-full rounded-full opacity-30"
           style={{
-            background: 'radial-gradient(circle, #99f6e4 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(201,168,76,0.4) 0%, transparent 70%)',
             filter: 'blur(30px)',
             animation: 'float 6s ease-in-out infinite',
           }}
@@ -161,7 +161,8 @@ export const HeroBanner: React.FC = () => {
 
           {/* Overline */}
           <motion.p
-            className="text-sm font-semibold tracking-[0.25em] uppercase mb-6 text-teal-200"
+            className="text-sm font-semibold tracking-[0.25em] uppercase mb-6"
+            style={{ color: '#C9A84C' }}
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -188,7 +189,8 @@ export const HeroBanner: React.FC = () => {
                 <motion.span
                   key={word}
                   variants={wordVariants}
-                  className={`inline-block ${word === 'Structure' ? 'text-teal-200' : ''}`}
+                  className="inline-block"
+                  style={word === 'Structure' ? { color: '#C9A84C' } : undefined}
                 >
                   {word}
                 </motion.span>

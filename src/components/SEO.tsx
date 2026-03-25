@@ -10,13 +10,13 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = 'Linky - Conseil en Organisation & Stratégie Opérationnelle',
-  description = 'Partenaire stratégique des dirigeants. Linky structure, clarifie et optimise vos processus pour une croissance maîtrisée et durable.',
-  keywords = 'conseil, organisation, stratégie opérationnelle, processus, excellence opérationnelle, structuration, croissance, Linky',
-  image = '/images/linky-banner.png',
-  url = 'https://linky4u.com'
+  title = 'Opus Advisory - Conseil Opérationnel & Digital',
+  description = 'Partenaire stratégique des dirigeants. Opus Advisory structure, automatise et optimise vos processus pour une croissance maîtrisée.',
+  keywords = 'conseil, organisation, stratégie opérationnelle, processus, excellence opérationnelle, structuration, croissance, Opus Advisory',
+  image = '/images/opus-banner.png',
+  url = 'https://opusadvisory.fr'
 }) => {
-  const siteTitle = title === 'Linky - Conseil en Organisation & Stratégie Opérationnelle' ? title : `${title} | Linky`;
+  const siteTitle = title === 'Opus Advisory - Conseil Opérationnel & Digital' ? title : `${title} | Opus Advisory`;
 
   return (
     <Helmet>

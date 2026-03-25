@@ -74,9 +74,10 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => 
               href={`#${heading.id}`}
               className={`block text-sm md:text-base lg:text-lg transition-colors duration-200 py-1 ${
                 activeId === heading.id
-                  ? 'text-teal-600 font-semibold border-l-2 border-teal-600 pl-3'
-                  : 'text-gray-600 hover:text-teal-500 pl-3'
+                  ? 'font-semibold border-l-2 pl-3'
+                  : 'text-gray-600 pl-3'
               }`}
+              style={activeId === heading.id ? { color: '#C9A84C', borderColor: '#C9A84C' } : undefined}
               onClick={(e) => {
                 e.preventDefault();
                 const element = document.getElementById(heading.id);

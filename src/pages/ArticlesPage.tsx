@@ -23,9 +23,9 @@ export const ArticlesPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Articles - Linky · Conseil en Organisation"
+        title="Articles - Opus Advisory · Conseil en Organisation"
         description="Ressources et insights pour dirigeants : stratégie, optimisation des processus, outils et méthodes pour une croissance maîtrisée."
-        url="https://linky4u.com/articles"
+        url="https://opusadvisory.fr/articles"
       />
       <Header />
 
@@ -33,7 +33,7 @@ export const ArticlesPage: React.FC = () => {
       <section
         className="relative h-[45vh] flex items-center justify-center overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #0f766e, #0e7490, #0c4a6e, #0f766e, #155e75)',
+          background: 'linear-gradient(135deg, #1A2332, #2A3A50, #1A2332)',
           backgroundSize: '400% 400%',
           animation: 'mesh-shift 14s ease infinite',
         }}
@@ -42,7 +42,8 @@ export const ArticlesPage: React.FC = () => {
           style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         <div className="relative z-10 text-center px-6">
           <motion.p
-            className="text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-teal-200"
+            className="text-sm font-semibold tracking-[0.25em] uppercase mb-4"
+            style={{ color: '#C9A84C' }}
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}

@@ -42,9 +42,9 @@ export const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: 'https://www.instagram.com/linky4u_app/', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/opusadvisory/', label: 'Instagram' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/enzo-monnier-7524ab205/', label: 'LinkedIn' },
-    { icon: XIcon, href: 'https://x.com/linky4u_app', label: 'X' },
+    { icon: XIcon, href: 'https://x.com/opusadvisory', label: 'X' },
     { icon: Youtube, href: 'https://www.youtube.com', label: 'YouTube' }
   ];
 
@@ -52,19 +52,19 @@ export const Footer: React.FC = () => {
     <footer>
       <div className="w-[95%] mx-auto bg-gray-900 text-white rounded-t-3xl pt-24 pb-12 px-6 md:px-12 relative overflow-hidden">
 
-        {/* Ligne gradient teal en haut */}
+        {/* Ligne gradient gold en haut */}
         <div
           className="absolute top-0 left-0 right-0 h-px"
           style={{
-            background: 'linear-gradient(90deg, transparent, #0d9488, #2dd4bf, #0d9488, transparent)',
+            background: 'linear-gradient(90deg, transparent, #C9A84C, #e8c76a, #C9A84C, transparent)',
           }}
         />
 
-        {/* Lueur ambiante teal en fond */}
+        {/* Lueur ambiante gold en fond */}
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse, rgba(13,148,136,0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse, rgba(201,168,76,0.12) 0%, transparent 70%)',
             filter: 'blur(20px)',
           }}
         />
@@ -74,8 +74,8 @@ export const Footer: React.FC = () => {
           {/* Logo flottant */}
           <div className="flex justify-center">
             <img
-              src="/images/logo-blanc.png"
-              alt="Logo Linky - Solutions no-code et automatisation"
+              src="/images/opus-logo-white.png"
+              alt="Logo Opus Advisory"
               className="h-16 md:h-20 lg:h-24 object-contain"
               style={{ animation: 'float 6s ease-in-out infinite' }}
             />
@@ -111,10 +111,12 @@ export const Footer: React.FC = () => {
               <motion.a
                 key={social.label}
                 href={social.href}
-                className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-teal-400 hover:bg-gray-700 transition-colors duration-200"
+                className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gray-700 transition-colors duration-200"
+                style={{ color: undefined }}
                 whileHover={{
                   scale: 1.15,
-                  boxShadow: '0 0 22px rgba(13,148,136,0.55)',
+                  color: '#C9A84C',
+                  boxShadow: '0 0 22px rgba(201,168,76,0.55)',
                 }}
                 transition={{ type: 'spring', stiffness: 350, damping: 25 }}
                 aria-label={social.label}
@@ -129,7 +131,7 @@ export const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="w-full border-t border-gray-800 pt-8">
             <p className="text-gray-600 text-sm text-center">
-              © {new Date().getFullYear()} Linky4U. Tous droits réservés.
+              © {new Date().getFullYear()} Opus Advisory. Tous droits réservés.
             </p>
           </div>
 

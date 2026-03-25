@@ -1,7 +1,7 @@
 // Styles centralisés pour toutes les bannières
 const bannerStyles = {
   minHeight: '50vh',
-  background: 'linear-gradient(135deg, #0f766e 0%, #0e7490 60%, #0c4a6e 100%)',
+  background: 'linear-gradient(135deg, #1A2332 0%, #2A3A50 60%, #1A2332 100%)',
 };
 
 // Classe CSS pour l'overlay de la bannière (conservé pour compatibilité)
