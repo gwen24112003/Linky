@@ -11,7 +11,7 @@ const processSteps = [
   {
     id: '2', icon: 'usercheck', num: '02',
     title: 'Entretien & Qualification',
-    desc: 'Échange avec un associé Linky pour valider votre profil et vos domaines d\'expertise.',
+    desc: 'Échange avec un associé Opus Advisory pour valider votre profil et vos domaines d\'expertise.',
   },
   {
     id: '3', icon: 'badge', num: '03',
@@ -21,7 +21,7 @@ const processSteps = [
   {
     id: '4', icon: 'users', num: '04',
     title: 'Onboarding',
-    desc: 'Découverte des process Linky, des outils et des standards de livraison.',
+    desc: 'Découverte des process Opus Advisory, des outils et des standards de livraison.',
   },
   {
     id: '5', icon: 'rocket', num: '05',
@@ -50,7 +50,7 @@ export const ProcessSectionFreelance: React.FC = () => {
         {/* ── En-tête ── */}
         <div className="text-center mb-16">
           <motion.p
-            className="text-sm font-semibold tracking-[0.2em] uppercase text-teal-600 mb-3"
+            className="text-sm font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "#C9A84C" }}
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -75,17 +75,17 @@ export const ProcessSectionFreelance: React.FC = () => {
             <motion.div
               key={step.id}
               className="relative bg-white rounded-2xl p-6 flex flex-col gap-4 group"
-              style={{ border: '1px solid rgba(15,118,110,0.1)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}
+              style={{ border: '1px solid rgba(26,35,50,0.1)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(15,118,110,0.12)' }}
+              whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(26,35,50,0.12)' }}
             >
               {/* Numéro watermark */}
               <span
                 className="absolute top-4 right-5 text-5xl font-bold leading-none select-none"
-                style={{ color: 'rgba(15,118,110,0.06)' }}
+                style={{ color: 'rgba(201,168,76,0.06)' }}
               >
                 {step.num}
               </span>
@@ -94,8 +94,8 @@ export const ProcessSectionFreelance: React.FC = () => {
               <div
                 className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{
-                  background: 'linear-gradient(135deg, #2dd4bf, #0f766e)',
-                  boxShadow: '0 6px 20px rgba(15,118,110,0.35)',
+                  background: 'linear-gradient(135deg, #C9A84C, #a8873a)',
+                  boxShadow: '0 6px 20px rgba(201,168,76,0.35)',
                 }}
               >
                 {getIcon(step.icon)}
@@ -103,18 +103,18 @@ export const ProcessSectionFreelance: React.FC = () => {
 
               {/* Texte */}
               <div>
-                <p className="text-xs font-semibold text-teal-600 uppercase tracking-wider mb-1">{step.num}</p>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "#C9A84C" }}>{step.num}</p>
                 <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug">{step.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+                <p className="text-sm text-gray-700 leading-relaxed">{step.desc}</p>
               </div>
 
               {/* Connecteur flèche (sauf dernier) */}
               {index < processSteps.length - 1 && (
                 <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
                   <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center"
-                    style={{ border: '1px solid rgba(15,118,110,0.2)', boxShadow: '0 2px 6px rgba(0,0,0,0.06)' }}>
+                    style={{ border: '1px solid rgba(26,35,50,0.2)', boxShadow: '0 2px 6px rgba(0,0,0,0.06)' }}>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                      <path d="M2 5h6M6 2l3 3-3 3" stroke="rgba(15,118,110,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M2 5h6M6 2l3 3-3 3" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                 </div>

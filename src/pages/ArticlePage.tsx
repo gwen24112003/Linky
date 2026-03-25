@@ -147,8 +147,8 @@ export const ArticlePage: React.FC = () => {
               prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6 prose-ol:space-y-2
               prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed
               prose-strong:text-gray-900 prose-strong:font-semibold
-              prose-a:text-teal-600 prose-a:no-underline hover:prose-a:underline
-              prose-code:text-teal-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+              prose-a:no-underline hover:prose-a:underline
+              prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
               prose-hr:my-8 prose-hr:border-gray-300
             ">
               <ReactMarkdown 

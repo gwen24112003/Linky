@@ -13,11 +13,14 @@ interface ArticleMetadata {
   overlayImageSrc?: string;
 }
 
+const baseKeywords = [
+  'Stratégie', 'Opérations', 'PME', 'Transformation', 'ETI',
+  'Croissance', 'Organisation', 'Performance', 'Direction', 'Conseil',
+];
+
 const marqueeKeywords = [
-  'Stratégie', 'Opérations', 'PME', 'Transformation', 'ETI',
-  'Croissance', 'Organisation', 'Performance', 'Direction', 'Conseil',
-  'Stratégie', 'Opérations', 'PME', 'Transformation', 'ETI',
-  'Croissance', 'Organisation', 'Performance', 'Direction', 'Conseil',
+  ...baseKeywords, ...baseKeywords, ...baseKeywords, ...baseKeywords,
+  ...baseKeywords, ...baseKeywords, ...baseKeywords, ...baseKeywords,
 ];
 
 export const ArticlesSection: React.FC = () => {
@@ -34,14 +37,13 @@ export const ArticlesSection: React.FC = () => {
       {/* Marquee ticker */}
       <div className="mb-14 relative overflow-hidden">
         <div
-          className="flex gap-8 whitespace-nowrap"
+          className="flex whitespace-nowrap min-w-max"
           style={{ animation: 'marquee 20s linear infinite' }}
         >
           {marqueeKeywords.map((kw, i) => (
             <span
               key={i}
-              className="text-sm font-semibold tracking-[0.2em] uppercase flex-shrink-0"
-              style={{ color: 'rgba(200, 169, 110, 0.5)' }}
+              className="text-sm font-semibold tracking-[0.2em] uppercase flex-shrink-0 text-navy opacity-50 pr-8"
             >
               {kw}
             </span>
@@ -63,42 +65,37 @@ export const ArticlesSection: React.FC = () => {
               onClick={() => handleArticleClick(featured.slug)}
               className="w-full text-left group relative rounded-3xl overflow-hidden block"
               style={{
-                boxShadow: '0 24px 60px rgba(15,118,110,0.12)',
-                border: '1px solid rgba(15,118,110,0.1)',
+                boxShadow: '0 24px 60px rgba(26,35,50,0.12)',
+                border: '1px solid rgba(26,35,50,0.1)',
               }}
             >
-              {/* Image de fond */}
-              <div className="relative h-80 md:h-96 overflow-hidden">
-                <img
-                  src={featured.imageSrc}
-                  alt={featured.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                {/* Overlay sombre dégradé */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/60 to-transparent" />
-
+              {/* Fond dégradé gold */}
+              <div
+                className="h-80 md:h-96 flex flex-col justify-between p-8 md:p-10"
+                style={{ background: 'linear-gradient(135deg, #C9A84C 0%, #e8c96a 50%, #C9A84C 100%)' }}
+              >
                 {/* Badge "Dernière publication" */}
-                <div className="absolute top-6 left-6">
+                <div>
                   <span
-                    className="px-3 py-1 rounded-full text-xs font-semibold text-teal-300 tracking-wider uppercase"
-                    style={{ background: 'rgba(13,148,136,0.25)', border: '1px solid rgba(45,212,191,0.3)' }}
+                    className="px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase"
+                    style={{ color: '#7a5c1e', background: 'rgba(255,255,255,0.3)', border: '1px solid rgba(255,255,255,0.5)' }}
                   >
                     Dernière publication
                   </span>
                 </div>
-              </div>
 
-              {/* Contenu en surimpression */}
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight group-hover:text-teal-200 transition-colors duration-300">
-                  {featured.title}
-                </h3>
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mb-5">
-                  {featured.description}
-                </p>
-                <div className="flex items-center gap-2 text-teal-400 font-semibold text-sm">
-                  <span>Lire l'article</span>
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
+                {/* Contenu */}
+                <div>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight transition-colors duration-300 group-hover:opacity-80">
+                    {featured.title}
+                  </h3>
+                  <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-2xl mb-5">
+                    {featured.description}
+                  </p>
+                  <div className="flex items-center gap-2 font-semibold text-sm text-white">
+                    <span>Lire l'article</span>
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
+                  </div>
                 </div>
               </div>
             </button>
@@ -113,7 +110,10 @@ export const ArticlesSection: React.FC = () => {
             >
               <Link
                 to="/articles"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl border border-teal-200 text-teal-700 font-semibold text-base hover:bg-teal-50 hover:border-teal-400 transition-all duration-200 group"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-base transition-all duration-200 group"
+                style={{ border: '1px solid #C9A84C', color: '#C9A84C' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(201,168,76,0.08)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = ''; }}
               >
                 Voir tous les articles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://linky4u.com/sitemap.xml
+Sitemap: https://opusadvisory.fr/sitemap.xml

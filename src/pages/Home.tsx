@@ -20,29 +20,13 @@ export const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Linky - Conseil en Organisation & Strategie Operationnelle"
-        description="Partenaire strategique des dirigeants. Linky structure, clarifie et optimise vos processus pour une croissance maitrisee et durable."
+        title="Opus Advisory - Conseil Opérationnel & Digital"
+        description="Partenaire stratégique des dirigeants. Opus Advisory structure, automatise et optimise vos processus pour une croissance maîtrisée."
       />
       <Header />
 
-      {/* H1 cache pour SEO */}
-      <h1 className="sr-only">Linky - Conseil en organisation et strategie operationnelle pour les entreprises et freelances</h1>
-
       <main className="flex-grow">
         <HeroBanner />
-
-        {/* Section intro SEO */}
-        <section className="bg-white py-10">
-          <div className="container mx-auto px-4 sm:px-6">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-meera">
-                Linky est votre partenaire strategique en conseil en organisation et strategie operationnelle. 
-                Nous aidons les entreprises et les freelances a structurer leurs processus, optimiser leur gestion 
-                et accelerer leur croissance grace a des solutions no-code et des methodologies eprouvees.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Section avec tabs */}
         <div className="bg-white py-6">

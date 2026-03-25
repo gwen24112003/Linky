@@ -19,14 +19,14 @@ const TestimonialCard: React.FC<{ t: Testimonial }> = ({ t }) => (
       border: '1px solid rgba(255,255,255,0.07)',
     }}
   >
-    <Quote size={20} className="text-teal-500/60 mb-4" />
+    <Quote size={20} className="mb-4" style={{ color: "rgba(201,168,76,0.6)" }} />
     <p className="text-gray-300 text-sm leading-relaxed mb-5 italic">
       "{t.content}"
     </p>
     <div className="flex items-center gap-3">
       <div
         className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-        style={{ background: 'linear-gradient(135deg, #2dd4bf, #0f766e)' }}
+        style={{ background: 'linear-gradient(135deg, #C9A84C, #a8873a)' }}
       >
         {t.name.charAt(0)}
       </div>

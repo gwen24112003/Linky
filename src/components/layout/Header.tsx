@@ -6,9 +6,7 @@ import { NavLink } from '../../types';
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === '/';
 
   const navLinks: NavLink[] = [
     { label: 'Accueil', href: '/' },
@@ -22,13 +20,6 @@ export const Header: React.FC = () => {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
-
-  // Scroll-driven header transparency
-  useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 80);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   // Empêche le scroll du body quand le menu est ouvert
   useEffect(() => {
@@ -45,18 +36,17 @@ export const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
-  const transparent = isHome && !isScrolled;
-  const navColor = transparent ? 'text-white/90 hover:text-white' : 'text-gray-600 hover:text-teal-600';
-  const burgerColor = transparent ? 'text-white' : 'text-gray-700 hover:text-teal-600';
+  const navColor = 'text-gray-600';
+  const burgerColor = 'text-gray-700';
 
   return (
     <>
       <motion.header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         animate={{
-          backgroundColor: transparent ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0.75)',
-          backdropFilter: transparent ? 'blur(0px)' : 'blur(12px)',
-          borderBottomColor: transparent ? 'rgba(255,255,255,0)' : 'rgba(243,244,246,1)',
+          backgroundColor: 'rgba(255,255,255,0.75)',
+          backdropFilter: 'blur(12px)',
+          borderBottomColor: 'rgba(243,244,246,1)',
         }}
         style={{ borderBottomWidth: 1, borderBottomStyle: 'solid' }}
       >
@@ -65,10 +55,10 @@ export const Header: React.FC = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center z-10" aria-label="Retour à l'accueil" onClick={() => window.scrollTo(0, 0)}>
               <img
-                src="/images/linky-logo.png"
-                alt="Logo Linky"
+                src="/images/opus-logo.png"
+                alt="Logo Opus Advisory"
                 className="object-contain"
-                style={{ width: 'auto', height: '75px', maxHeight: '250px' }}
+                style={{ width: 'auto', height: '110px', maxHeight: '250px' }}
               />
             </Link>
 
@@ -90,11 +80,8 @@ export const Header: React.FC = () => {
                     <Link
                       to={link.href}
                       onClick={handleNavClick}
-                      className={`text-xl transition-colors duration-200 font-bold ${
-                        isActive
-                          ? transparent ? 'text-white' : 'text-teal-600'
-                          : navColor
-                      }`}
+                      className={`text-xl transition-colors duration-200 font-bold ${isActive ? '' : navColor}`}
+                      style={isActive ? { color: '#C9A84C' } : undefined}
                     >
                       {link.label}
                     </Link>
@@ -102,7 +89,7 @@ export const Header: React.FC = () => {
                       <motion.div
                         layoutId="nav-indicator"
                         className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
-                        style={{ background: transparent ? 'rgba(255,255,255,0.8)' : '#0d9488' }}
+                        style={{ background: '#C9A84C' }}
                         transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                       />
                     )}
@@ -131,7 +118,7 @@ export const Header: React.FC = () => {
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
         }`}
-        style={{ background: 'linear-gradient(135deg, #0f766e 0%, #0e7490 100%)' }}
+        style={{ background: '#1A2332' }}
         aria-hidden={!isMenuOpen}
       >
         {/* Liens de navigation centrés */}
@@ -168,8 +155,8 @@ export const Header: React.FC = () => {
         {/* Décoration bas */}
         <div className="pb-12 flex justify-center">
           <img
-            src="/images/linky-logo.png"
-            alt="Logo Linky"
+            src="/images/opus-icon.png"
+            alt="Logo Opus Advisory"
             className="h-16 object-contain opacity-30"
           />
         </div>

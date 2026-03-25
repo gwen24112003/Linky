@@ -4,23 +4,23 @@
         "slug": "organisation-avant-developpement",
         "title": "Organisez avant de développer",
         "description": "Pourquoi structurer vos processus avant d'investir dans un outil ou un développement est la décision la plus rentable que vous puissiez prendre.",
-        "imageSrc": "/images/linky-banner.png",
+        "imageSrc": "/images/opus-banner.png",
         "overlayImageSrc": "/images/dashboard-linky.png"
     },
     {
         "id": 1,
         "slug": "automatisation-make",
-        "title": "Boostez votre productivite avec Make",
-        "description": "Decouvrez comment Make revolutionne les workflows d'entreprise en connectant vos applications favorites.",
-        "imageSrc": "/images/linky-banner.png",
+        "title": "Boostez votre productivité avec Make",
+        "description": "Découvrez comment Make révolutionne les workflows d'entreprise en connectant vos applications favorites. Une puissance d'automatisation visuelle accessible à tous.",
+        "imageSrc": "/images/opus-banner.png",
         "overlayImageSrc": "/images/mockup-make.png"
     },
     {
         "id": 2,
         "slug": "applications-glide",
-        "title": "Creez des apps metier sans coder",
-        "description": "Transformez vos Google Sheets en applications puissantes avec Glide.",
-        "imageSrc": "/images/linky-banner.png",
+        "title": "Créez des apps métier sans coder",
+        "description": "Transformez vos Google Sheets en applications puissantes. Glide permet de créer des outils internes et des portails clients sans écrire une ligne de code.",
+        "imageSrc": "/images/opus-banner.png",
         "overlayImageSrc": "/images/mockup-linky.png"
     }
 ]

@@ -16,7 +16,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ imageSrc, overlayImage
     >
       <div
         className="h-48 sm:h-56 md:h-64 overflow-hidden relative flex items-center justify-center"
-        style={{ background: 'linear-gradient(135deg, #f0fdfa, #ccfbf1)' }}
+        style={{ background: 'linear-gradient(135deg, #f8f6f1, #ede8de)' }}
       >
         {overlayImageSrc ? (
           <img
@@ -37,11 +37,11 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ imageSrc, overlayImage
         </p>
         <button
           onClick={onClick}
-          className="inline-flex items-center gap-2 text-gray-900 font-bold text-lg hover:text-teal-600 transition-colors w-fit group/btn cursor-pointer relative"
+          className="inline-flex items-center gap-2 text-gray-900 font-bold text-lg transition-colors w-fit group/btn cursor-pointer relative"
         >
           <span className="relative">
             LIRE L'ARTICLE
-            <span className="absolute bottom-0 left-0 h-px bg-teal-600 w-0 group-hover/btn:w-full transition-all duration-300" />
+            <span className="absolute bottom-0 left-0 h-px w-0 group-hover/btn:w-full transition-all duration-300" style={{ background: '#C9A84C' }} />
           </span>
           <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
         </button>

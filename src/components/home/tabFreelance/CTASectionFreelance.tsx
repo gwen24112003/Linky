@@ -12,7 +12,7 @@ export const CTASectionFreelance: React.FC = () => {
         style={{
           width: 600, height: 600,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(13,148,136,0.07), transparent)',
+          background: 'radial-gradient(circle, rgba(201,168,76,0.07), transparent)',
           filter: 'blur(80px)',
           top: '-20%', right: '-10%',
         }}
@@ -21,7 +21,7 @@ export const CTASectionFreelance: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-5 gap-0 rounded-3xl overflow-hidden"
-          style={{ border: '1px solid rgba(15,118,110,0.15)', boxShadow: '0 32px 80px rgba(15,118,110,0.12)' }}
+          style={{ border: '1px solid rgba(26,35,50,0.15)', boxShadow: '0 32px 80px rgba(26,35,50,0.12)' }}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -58,7 +58,7 @@ export const CTASectionFreelance: React.FC = () => {
             >
               <Link
                 to="/experts-contact"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 text-lg rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl hover:shadow-teal-900/40 group btn-shimmer"
+                className="inline-flex items-center gap-3 text-white px-8 py-4 text-lg rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer" style={{ background: "#1A2332" }}
               >
                 Proposer ma candidature
                 <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -72,16 +72,16 @@ export const CTASectionFreelance: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.55 }}
             >
-              <span className="text-sm font-medium text-teal-400/80">Réponse sous 48h</span>
+              <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Réponse sous 48h</span>
               <span className="w-px h-4 bg-white/15" />
-              <span className="text-sm font-medium text-teal-400/80">Réseau sélectif</span>
+              <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Réseau sélectif</span>
             </motion.div>
           </div>
 
           {/* ── Panneau stat droite ── */}
           <div
             className="lg:col-span-2 p-12 flex flex-col items-center justify-center relative overflow-hidden order-1 lg:order-2"
-            style={{ background: 'linear-gradient(135deg, #0e7490, #0f766e)' }}
+            style={{ background: 'linear-gradient(135deg, #1A2332, #2A3A50)' }}
           >
             {/* Diamant 3D rotatif */}
             <div className="absolute opacity-20 pointer-events-none" style={{ top: '10%', left: '10%' }}>
@@ -92,8 +92,8 @@ export const CTASectionFreelance: React.FC = () => {
                 <div style={{
                   width: 60, height: 60,
                   clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-                  border: '1px solid rgba(45,212,191,0.5)',
-                  background: 'rgba(45,212,191,0.08)',
+                  border: '1px solid rgba(201,168,76,0.5)',
+                  background: 'rgba(201,168,76,0.06)',
                 }} />
               </motion.div>
             </div>
@@ -115,7 +115,7 @@ export const CTASectionFreelance: React.FC = () => {
               >
                 15+
               </motion.span>
-              <p className="text-teal-300 mt-2 text-lg font-medium">experts partenaires</p>
+              <p className="mt-2 text-lg font-medium" style={{ color: "#C9A84C" }}>experts partenaires</p>
               <div className="mt-6 flex flex-col gap-2 text-sm text-white/40">
                 <span>Consultants seniors</span>
                 <span>Multi-secteurs</span>

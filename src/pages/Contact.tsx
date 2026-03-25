@@ -8,7 +8,7 @@ import { SEO } from '../components/SEO';
 import { CustomSelect } from '../components/ui/CustomSelect';
 
 const inputClass =
-  'w-full bg-transparent border-b border-gray-200 focus:border-teal-500 outline-none py-3 text-gray-900 transition-colors duration-300 placeholder:text-gray-400 text-lg';
+  'w-full bg-transparent border-b border-gray-200 outline-none py-3 text-gray-900 transition-colors duration-300 placeholder:text-gray-400 text-lg';
 
 
 export const Contact: React.FC = () => {
@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
       emailjs.init('7nk-E4GjPBoHa_-Py');
       await emailjs.send('service_d1de6lx', 'template_n3wiuwt', {
         from_email: formData.email,
-        to_name: 'Linky',
+        to_name: 'Opus Advisory',
         objet: formData.objet,
         service: formData.service,
         message: formData.message,
@@ -47,9 +47,9 @@ export const Contact: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Contactez Linky - Audit & Conseil Stratégique"
-        description="Prenez rendez-vous avec un associé Linky pour un audit de cadrage. Discutons de vos enjeux de structuration et de croissance."
-        url="https://linky4u.com/contact"
+        title="Contactez Opus Advisory - Audit & Conseil Stratégique"
+        description="Prenez rendez-vous avec un associé Opus Advisory pour un audit de cadrage. Discutons de vos enjeux de structuration et de croissance."
+        url="https://opusadvisory.fr/contact"
       />
       <Header />
 
@@ -57,19 +57,20 @@ export const Contact: React.FC = () => {
       <section
         className="relative h-[50vh] flex items-center justify-center overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #0f766e, #0e7490, #0c4a6e, #0f766e, #155e75)',
+          background: 'linear-gradient(135deg, #1A2332, #2A3A50, #1A2332)',
           backgroundSize: '400% 400%',
           animation: 'mesh-shift 14s ease infinite',
         }}
       >
         <div className="absolute pointer-events-none opacity-20 hidden md:block"
-          style={{ width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, #2dd4bf, transparent)', filter: 'blur(70px)', top: '-20%', right: '5%', animation: 'float 9s ease-in-out infinite' }} />
+          style={{ width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.4), transparent)', filter: 'blur(70px)', top: '-20%', right: '5%', animation: 'float 9s ease-in-out infinite' }} />
         <div className="absolute inset-0 pointer-events-none opacity-[0.10]"
           style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
         <div className="relative z-10 text-center px-6">
           <motion.p
-            className="text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-teal-200"
+            className="text-sm font-semibold tracking-[0.25em] uppercase mb-4"
+            style={{ color: '#C9A84C' }}
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -95,14 +96,14 @@ export const Contact: React.FC = () => {
           <div className="relative bg-gray-50 px-10 py-20 lg:px-16 flex flex-col justify-center overflow-hidden">
             {/* Orbe décoratif */}
             <div className="absolute pointer-events-none"
-              style={{ width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(13,148,136,0.2), transparent)', filter: 'blur(60px)', top: '10%', left: '-20%', animation: 'float 10s ease-in-out infinite' }} />
+              style={{ width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.15), transparent)', filter: 'blur(60px)', top: '10%', left: '-20%', animation: 'float 10s ease-in-out infinite' }} />
             {/* Diamant 3D décoratif */}
             <div className="absolute bottom-20 right-10 opacity-15 hidden lg:block pointer-events-none">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
               >
-                <div style={{ width: 90, height: 90, clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)', border: '1px solid rgba(45,212,191,0.5)', background: 'rgba(45,212,191,0.06)' }} />
+                <div style={{ width: 90, height: 90, clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)', border: '1px solid rgba(201,168,76,0.5)', background: 'rgba(201,168,76,0.06)' }} />
               </motion.div>
             </div>
 
@@ -125,21 +126,21 @@ export const Contact: React.FC = () => {
 
               {/* Carte email */}
               <motion.a
-                href="mailto:linky4u.contact@gmail.com"
+                href="mailto:contact@opusadvisory.fr"
                 className="flex items-center gap-4 mb-4 p-5 rounded-2xl group"
-                style={{ background: 'rgba(15,118,110,0.04)', border: '1px solid rgba(15,118,110,0.12)' }}
-                whileHover={{ background: 'rgba(13,148,136,0.12)', borderColor: 'rgba(45,212,191,0.25)', x: 4 }}
+                style={{ background: 'rgba(201,168,76,0.04)', border: '1px solid rgba(201,168,76,0.12)' }}
+                whileHover={{ background: 'rgba(201,168,76,0.10)', borderColor: 'rgba(201,168,76,0.30)', x: 4 }}
                 transition={{ duration: 0.2 }}
               >
                 <div
                   className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(13,148,136,0.2)' }}
+                  style={{ background: 'rgba(201,168,76,0.2)' }}
                 >
-                  <Mail size={20} className="text-teal-400" />
+                  <Mail size={20} style={{ color: '#C9A84C' }} />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wider">Email</p>
-                  <p className="text-gray-900 font-medium group-hover:text-teal-600 transition-colors">linky4u.contact@gmail.com</p>
+                  <p className="text-gray-900 font-medium transition-colors">contact@opusadvisory.fr</p>
                 </div>
               </motion.a>
 
@@ -147,19 +148,19 @@ export const Contact: React.FC = () => {
               <motion.a
                 href="tel:+33615756549"
                 className="flex items-center gap-4 p-5 rounded-2xl group"
-                style={{ background: 'rgba(15,118,110,0.04)', border: '1px solid rgba(15,118,110,0.12)' }}
-                whileHover={{ background: 'rgba(13,148,136,0.12)', borderColor: 'rgba(45,212,191,0.25)', x: 4 }}
+                style={{ background: 'rgba(201,168,76,0.04)', border: '1px solid rgba(201,168,76,0.12)' }}
+                whileHover={{ background: 'rgba(201,168,76,0.10)', borderColor: 'rgba(201,168,76,0.30)', x: 4 }}
                 transition={{ duration: 0.2 }}
               >
                 <div
                   className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(13,148,136,0.2)' }}
+                  style={{ background: 'rgba(201,168,76,0.2)' }}
                 >
-                  <Phone size={20} className="text-teal-400" />
+                  <Phone size={20} style={{ color: '#C9A84C' }} />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wider">Téléphone</p>
-                  <p className="text-gray-900 font-medium group-hover:text-teal-600 transition-colors">+33 6 15 75 65 49</p>
+                  <p className="text-gray-900 font-medium transition-colors">+33 6 15 75 65 49</p>
                 </div>
               </motion.a>
             </motion.div>
@@ -167,9 +168,9 @@ export const Contact: React.FC = () => {
 
           {/* ── Colonne droite : formulaire glassmorphism ── */}
           <div className="bg-white px-10 py-20 lg:px-16 flex flex-col justify-center relative overflow-hidden">
-            {/* Lueur teal subtile en fond */}
+            {/* Lueur gold subtile en fond */}
             <div className="absolute pointer-events-none opacity-40"
-              style={{ width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(13,148,136,0.06), transparent)', filter: 'blur(40px)', top: '5%', right: '-10%' }} />
+              style={{ width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.06), transparent)', filter: 'blur(40px)', top: '5%', right: '-10%' }} />
 
             <motion.div
               className="relative z-10 max-w-lg mx-auto w-full"
@@ -263,7 +264,8 @@ export const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex items-center gap-3 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-xl text-base font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl hover:shadow-teal-200/40 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 btn-shimmer group"
+                    className="flex items-center gap-3 text-white px-8 py-4 rounded-xl text-base font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 btn-shimmer group"
+                    style={{ background: '#1A2332' }}
                   >
                     <span>{isSubmitting ? 'Envoi en cours…' : 'Solliciter un audit'}</span>
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />

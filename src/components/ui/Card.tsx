@@ -20,7 +20,7 @@ export const Card: React.FC<CardProps> = ({
   const baseClass =
     variant === 'glass'
       ? 'rounded-xl p-8 border border-white/20 bg-white/10'
-      : 'bg-white rounded-xl border border-gray-200 p-8 hover:border-teal-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300';
+      : 'bg-white rounded-xl border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300';
 
   return (
     <motion.div
@@ -45,7 +45,7 @@ export const Card: React.FC<CardProps> = ({
           <ul className="space-y-3 w-3/4">
             {features.map((feature, index) => (
               <li key={index} className={`text-sm leading-relaxed flex items-start gap-2 ${variant === 'glass' ? 'text-white/80' : 'text-gray-700'}`}>
-                <Check className="text-teal-500 flex-shrink-0 mt-1" size={20} />
+                <Check className="flex-shrink-0 mt-1" size={20} style={{ color: '#C9A84C' }} />
                 <span className="text-xl">{feature}</span>
               </li>
             ))}

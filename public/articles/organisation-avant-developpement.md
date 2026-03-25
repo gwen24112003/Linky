@@ -95,4 +95,4 @@ Les organisations qui grandissent durablement ne sont pas celles qui se lancent 
 
 Un processus clair, des responsabilités définies, des indicateurs mesurables : c'est le socle qui transforme un outil en levier, et un investissement en retour.
 
-C'est ce que Linky construit avec vous, avant même d'ouvrir un éditeur de code.
+C'est ce que Opus Advisory construit avec vous, avant même d'ouvrir un éditeur de code.

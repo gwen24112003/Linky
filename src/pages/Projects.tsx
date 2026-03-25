@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
       ],
       fullDescription: 'Notre client, un acteur majeur de la distribution, souffrait de ruptures de stock chroniques et de pertes liées à un pilotage manuel.\n\nNous avons mené un diagnostic complet de la chaîne de valeur, identifié les points de friction et mis en place une architecture de données unifiée.\n\nRésultat : -15% de ruptures en 6 mois et une visibilité temps réel pour le COMEX.',
       duration: '8 mois',
-      clientReview: 'Linky a su parler le langage de nos opérations tout en apportant une vraie vision stratégique.'
+      clientReview: 'Opus Advisory a su parler le langage de nos opérations tout en apportant une vraie vision stratégique.'
     },
     {
       id: '2',
@@ -105,9 +105,9 @@ export const Projects: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Réalisations & Cas Clients - Linky"
-        description="Découvrez comment Linky a transformé l'organisation de leaders de la distribution, scale-ups B2B et PME industrielles."
-        url="https://linky4u.com/projets"
+        title="Réalisations & Cas Clients - Opus Advisory"
+        description="Découvrez comment Opus Advisory a transformé l'organisation de leaders de la distribution, scale-ups B2B et PME industrielles."
+        url="https://opusadvisory.fr/projets"
       />
       <Header />
 
@@ -116,7 +116,7 @@ export const Projects: React.FC = () => {
         <section
           className="relative overflow-hidden flex items-center justify-center"
           style={{
-            backgroundImage: 'url(/images/linky-banner.png)',
+            backgroundImage: 'url(/images/opus-banner.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             minHeight: '50vh'
@@ -138,7 +138,10 @@ export const Projects: React.FC = () => {
               {/* Bouton navigation gauche */}
               <button
                 onClick={prevProject}
-                className="flex-shrink-0 bg-gray-200 hover:bg-teal-600 hover:text-white text-gray-700 p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                className="flex-shrink-0 bg-gray-200 hover:text-white text-gray-700 p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                style={{ '--hover-bg': '#1A2332' } as React.CSSProperties}
+                onMouseEnter={e => (e.currentTarget.style.background = '#1A2332')}
+                onMouseLeave={e => (e.currentTarget.style.background = '')}
                 aria-label="Projet précédent"
               >
                 <ChevronLeft size={32} />
@@ -196,7 +199,9 @@ export const Projects: React.FC = () => {
 
                               <button
                                 onClick={() => toggleProject(project.id)}
-                                className="flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-4 py-2 rounded-lg font-lexend text-lg font-semibold hover:bg-teal-600 hover:border-teal-600 hover:scale-105 transition-all duration-300"
+                                className="flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-4 py-2 rounded-lg font-lexend text-lg font-semibold hover:scale-105 transition-all duration-300"
+                                onMouseEnter={e => { e.currentTarget.style.background = '#C9A84C'; e.currentTarget.style.borderColor = '#C9A84C'; }}
+                                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'white'; }}
                                 aria-expanded={expandedProject === project.id}
                                 aria-label={expandedProject === project.id ? "Fermer les détails du projet" : "Voir les détails du projet"}
                               >
@@ -219,7 +224,10 @@ export const Projects: React.FC = () => {
               {/* Bouton navigation droite */}
               <button
                 onClick={nextProject}
-                className="flex-shrink-0 bg-gray-200 hover:bg-teal-600 hover:text-white text-gray-700 p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                className="flex-shrink-0 bg-gray-200 hover:text-white text-gray-700 p-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                style={{ '--hover-bg': '#1A2332' } as React.CSSProperties}
+                onMouseEnter={e => (e.currentTarget.style.background = '#1A2332')}
+                onMouseLeave={e => (e.currentTarget.style.background = '')}
                 aria-label="Projet suivant"
               >
                 <ChevronRight size={32} />
@@ -236,9 +244,10 @@ export const Projects: React.FC = () => {
                     setCurrentProjectIndex(index);
                   }}
                   className={`h-3 rounded-full transition-all duration-300 ${index === currentProjectIndex
-                    ? 'bg-teal-600 w-8'
+                    ? 'w-8'
                     : 'bg-gray-300 w-3 hover:bg-gray-400'
                     }`}
+                  style={index === currentProjectIndex ? { background: '#C9A84C' } : undefined}
                   aria-label={`Aller au projet ${index + 1}`}
                 />
               ))}
@@ -280,28 +289,28 @@ export const Projects: React.FC = () => {
 
                       <div className="space-y-12">
                         <div>
-                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 font-dongle text-teal-600">Objectif</h3>
+                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 font-dongle" style={{ color: '#C9A84C' }}>Objectif</h3>
                           <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-meera text-gray-700">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                           </p>
                         </div>
 
                         <div>
-                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 font-dongle text-teal-600">Problématique</h3>
+                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 font-dongle" style={{ color: '#C9A84C' }}>Problématique</h3>
                           <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-meera text-gray-700">
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                           </p>
                         </div>
 
                         <div>
-                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 font-dongle text-teal-600">Processus</h3>
+                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 font-dongle" style={{ color: '#C9A84C' }}>Processus</h3>
                           <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-meera text-gray-700">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                           </p>
                         </div>
 
                         <div>
-                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 font-dongle text-teal-600">Résultats</h3>
+                          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 font-dongle" style={{ color: '#C9A84C' }}>Résultats</h3>
                           <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-meera text-gray-700">
                             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
                           </p>
@@ -311,7 +320,8 @@ export const Projects: React.FC = () => {
                       <div className="flex justify-center mt-16">
                         <button
                           onClick={() => setExpandedProject(null)}
-                          className="flex items-center justify-center gap-2 bg-teal-600 text-white px-8 py-4 rounded-lg font-lexend text-xl font-bold hover:bg-teal-700 hover:scale-105 transition-all duration-300 shadow-lg"
+                          className="flex items-center justify-center gap-2 text-white px-8 py-4 rounded-lg font-lexend text-xl font-bold hover:scale-105 transition-all duration-300 shadow-lg"
+                          style={{ background: '#1A2332' }}
                         >
                           <X size={24} />
                           <span>Fermer</span>

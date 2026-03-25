@@ -71,9 +71,9 @@ export const Team: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="L'équipe Linky - Experts en Organisation"
+        title="L'équipe Opus Advisory - Experts en Organisation"
         description="Rencontrez les associés du cabinet. Des consultants seniors dédiés à la performance opérationnelle de votre entreprise."
-        url="https://linky4u.com/equipe"
+        url="https://opusadvisory.fr/equipe"
       />
       <Header />
 
@@ -86,7 +86,7 @@ export const Team: React.FC = () => {
             className="relative overflow-hidden flex items-center justify-center"
             style={{
               ...bannerStyles,
-              background: 'linear-gradient(135deg, #0f766e, #0e7490, #0c4a6e, #0f766e, #155e75)',
+              background: 'linear-gradient(135deg, #1A2332, #2A3A50, #1A2332)',
               backgroundSize: '400% 400%',
               animation: 'mesh-shift 14s ease infinite',
             }}
@@ -97,7 +97,7 @@ export const Team: React.FC = () => {
               style={{
                 width: 500, height: 500,
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, #2dd4bf, transparent)',
+                background: 'radial-gradient(circle, rgba(201,168,76,0.4), transparent)',
                 filter: 'blur(90px)',
                 top: '-20%', left: '-10%',
                 animation: 'float 10s ease-in-out infinite',
@@ -109,31 +109,30 @@ export const Team: React.FC = () => {
               style={{
                 width: 300, height: 300,
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, #0e7490, transparent)',
+                background: 'radial-gradient(circle, rgba(26,35,50,0.8), transparent)',
                 filter: 'blur(70px)',
                 bottom: '-10%', right: '-5%',
                 animation: 'float-delayed 7s ease-in-out infinite',
               }}
             />
 
-            <div className="absolute inset-0 pointer-events-none opacity-[0.10]"
-              style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-            <div className="relative z-10 text-center px-6 pt-20 md:pt-0">
+            <div className="container mx-auto px-6 relative z-10 text-center">
               <motion.p
-                className="text-sm font-semibold tracking-[0.25em] uppercase mb-4 text-teal-200"
+                className="text-sm font-semibold tracking-[0.25em] uppercase mb-4"
+                style={{ color: '#C9A84C' }}
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                Linky · Notre Équipe
+                Opus Advisory · Les Associés
               </motion.p>
               <motion.h1
-                className="text-6xl md:text-7xl lg:text-8xl font-bold text-white font-heading"
+                className="text-4xl md:text-6xl lg:text-8xl font-bold text-white text-center leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               >
-                L'équipe Linky
+                L'équipe Opus
               </motion.h1>
             </div>
           </div>
@@ -147,13 +146,13 @@ export const Team: React.FC = () => {
                   className="rounded-2xl shadow-xl overflow-hidden w-96"
                   style={{
                     y: cardYOffsets[i],
-                    boxShadow: '0 20px 60px rgba(15,118,110,0.15), 0 0 0 1px rgba(15,118,110,0.08)',
+                    boxShadow: '0 20px 60px rgba(26,35,50,0.15), 0 0 0 1px rgba(26,35,50,0.08)',
                   }}
                   initial={{ opacity: 0, y: 60 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
                   whileHover={{
-                    boxShadow: '0 32px 80px rgba(15,118,110,0.28), 0 0 0 2px rgba(45,212,191,0.35)',
+                    boxShadow: '0 32px 80px rgba(26,35,50,0.28), 0 0 0 2px rgba(201,168,76,0.35)',
                     scale: 1.02,
                   }}
                 >
@@ -184,8 +183,8 @@ export const Team: React.FC = () => {
                         maskImage: 'linear-gradient(to top, black 30%, transparent 70%)',
                         WebkitMaskImage: 'linear-gradient(to top, black 30%, transparent 70%)',
                       }} />
-                      {/* Ligne accent teal */}
-                      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-teal-400/50 to-transparent" />
+                      {/* Ligne accent gold */}
+                      <div className="absolute inset-x-0 bottom-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,76,0.5), transparent)' }} />
                       <div className="relative z-10">
                         <h3 className="text-3xl md:text-4xl font-bold mb-2">{member.name}</h3>
                         <p className="text-lg md:text-xl">{member.role}</p>
@@ -203,11 +202,11 @@ export const Team: React.FC = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="bg-white rounded-3xl border-2 border-gray-200 p-12 shadow-lg relative overflow-hidden">
-              {/* Lueur déco teal en fond */}
+              {/* Lueur déco gold en fond */}
               <div
                 className="absolute -top-20 -right-20 w-64 h-64 rounded-full pointer-events-none opacity-10"
                 style={{
-                  background: 'radial-gradient(circle, #0d9488, transparent)',
+                  background: 'radial-gradient(circle, #C9A84C, transparent)',
                   filter: 'blur(40px)',
                 }}
               />
@@ -219,7 +218,7 @@ export const Team: React.FC = () => {
                 Au-delà de la simple gestion de projet, nous croyons qu'une architecture opérationnelle robuste est le socle indispensable de toute croissance pérenne. Dans un éco-système en perpétuelle mutation, la capacité à exécuter vite et bien ne dépend pas d'outils magiques, mais d'une structure pensée pour l'agilité.
               </p>
               <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed mb-6">
-                Linky est né d'une conviction forte : la technologie doit servir la stratégie, et non l'inverse. Trop souvent, les entreprises s'épuisent à compenser des processus défaillants au lieu de se concentrer sur leur vision.
+                Opus Advisory est né d'une conviction forte : la technologie doit servir la stratégie, et non l'inverse. Trop souvent, les entreprises s'épuisent à compenser des processus défaillants au lieu de se concentrer sur leur vision.
               </p>
               <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
                 Nous vous apportons cette lucidité structurelle. En alignant vos processus sur vos ambitions, nous transformons votre opérationnel en un levier de performance silencieux mais redoutable.
@@ -240,11 +239,11 @@ export const Team: React.FC = () => {
                     <motion.div
                       className="w-20 h-20 rounded-full flex items-center justify-center relative"
                       style={{
-                        background: 'linear-gradient(135deg, #2dd4bf, #0f766e)',
-                        boxShadow: '0 4px 16px rgba(15,118,110,0.3)',
+                        background: 'linear-gradient(135deg, #C9A84C, #a8873a)',
+                        boxShadow: '0 4px 16px rgba(201,168,76,0.3)',
                       }}
                       whileHover={{
-                        boxShadow: '0 8px 32px rgba(45,212,191,0.5)',
+                        boxShadow: '0 8px 32px rgba(201,168,76,0.5)',
                         scale: 1.08,
                       }}
                       transition={{ type: 'spring', stiffness: 350, damping: 25 }}
