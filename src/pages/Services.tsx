@@ -88,8 +88,8 @@ export const Services: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Notre Expertise - Opus Advisory"
-        description="Diagnostic, implémentation et suivi continu. Opus Advisory structure vos processus et développe vos outils métier."
+        title="Notre Expertise - Opus Advisor"
+        description="Diagnostic, implémentation et suivi continu. Opus Advisor structure vos processus et développe vos outils métier."
         url="https://opusadvisor.fr/services"
       />
       <Header />
@@ -121,7 +121,7 @@ export const Services: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Opus Advisory · Cabinet Conseil
+            Opus Advisor · Cabinet Conseil
           </motion.p>
           <motion.h1
             className="text-6xl md:text-7xl lg:text-8xl font-bold text-white"

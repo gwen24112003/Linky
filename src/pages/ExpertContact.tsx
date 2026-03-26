@@ -26,7 +26,7 @@ export const ExpertContact: React.FC = () => {
       emailjs.init('7nk-E4GjPBoHa_-Py');
       await emailjs.send('service_d1de6lx', 'template_n3wiuwt', {
         from_email: formData.email,
-        to_name: 'Opus Advisory Recrutement',
+        to_name: 'Opus Advisor Recrutement',
         objet: `[Candidature Expert] ${formData.objet}`,
         service: `Expertise: ${formData.expertise}`,
         message: `Nom: ${formData.nom}\nPrénom: ${formData.prenom}\nLinkedIn: ${formData.linkedin}\n\nMessage:\n${formData.message}`,
@@ -49,7 +49,7 @@ export const ExpertContact: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Rejoignez le réseau Opus Advisory - Candidature Expert"
+        title="Rejoignez le réseau Opus Advisor - Candidature Expert"
         description="Vous êtes consultant ou expert en organisation ? Rejoignez notre réseau de partenaires qualifiés."
         url="https://opusadvisor.fr/expert-contact"
       />
@@ -199,7 +199,7 @@ export const ExpertContact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Pourquoi rejoindre Opus Advisory ?</label>
+                  <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Pourquoi rejoindre Opus Advisor ?</label>
                   <textarea name="message" placeholder="Décrivez votre parcours, vos motivations et comment vous souhaitez collaborer…" required rows={5} value={formData.message} onChange={handleChange} className={`${inputClass} resize-none`} />
                 </div>
 

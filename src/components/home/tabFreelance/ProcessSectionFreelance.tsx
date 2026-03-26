@@ -11,7 +11,7 @@ const processSteps = [
   {
     id: '2', icon: 'usercheck', num: '02',
     title: 'Entretien & Qualification',
-    desc: 'Échange avec un associé Opus Advisory pour valider votre profil et vos domaines d\'expertise.',
+    desc: 'Échange avec un associé Opus Advisor pour valider votre profil et vos domaines d\'expertise.',
   },
   {
     id: '3', icon: 'badge', num: '03',
@@ -21,7 +21,7 @@ const processSteps = [
   {
     id: '4', icon: 'users', num: '04',
     title: 'Onboarding',
-    desc: 'Découverte des process Opus Advisory, des outils et des standards de livraison.',
+    desc: 'Découverte des process Opus Advisor, des outils et des standards de livraison.',
   },
   {
     id: '5', icon: 'rocket', num: '05',

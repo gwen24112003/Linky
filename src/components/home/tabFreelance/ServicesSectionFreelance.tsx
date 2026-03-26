@@ -119,7 +119,7 @@ export const ServicesSectionFreelance: React.FC = () => {
       id: '2',
       title: "Cadre d'Intervention",
       features: [
-        'Méthodologie Opus Advisory',
+        'Méthodologie Opus Advisor',
         'Outils & Frameworks',
         'Support opérationnel',
       ],

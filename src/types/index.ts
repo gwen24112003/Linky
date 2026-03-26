@@ -1,4 +1,4 @@
-// Types pour l'application Opus Advisory
+// Types pour l'application Opus Advisor
 
 export interface Service {
   id: string;

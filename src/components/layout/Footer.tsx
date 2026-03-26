@@ -42,9 +42,9 @@ export const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: 'https://www.instagram.com/opusadvisory/', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/opusadvisor/', label: 'Instagram' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/enzo-monnier-7524ab205/', label: 'LinkedIn' },
-    { icon: XIcon, href: 'https://x.com/opusadvisory', label: 'X' },
+    { icon: XIcon, href: 'https://x.com/opusadvisor', label: 'X' },
     { icon: Youtube, href: 'https://www.youtube.com', label: 'YouTube' }
   ];
 
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
           <div className="flex justify-center">
             <img
               src="/images/opus-logo-white.png"
-              alt="Logo Opus Advisory"
+              alt="Logo Opus Advisor"
               className="h-16 md:h-20 lg:h-24 object-contain"
               style={{ animation: 'float 6s ease-in-out infinite' }}
             />
@@ -131,7 +131,7 @@ export const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="w-full border-t border-gray-800 pt-8">
             <p className="text-gray-600 text-sm text-center">
-              © {new Date().getFullYear()} Opus Advisory. Tous droits réservés.
+              © {new Date().getFullYear()} Opus Advisor. Tous droits réservés.
             </p>
           </div>
 

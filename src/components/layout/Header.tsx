@@ -56,7 +56,7 @@ export const Header: React.FC = () => {
             <Link to="/" className="flex items-center z-10" aria-label="Retour à l'accueil" onClick={() => window.scrollTo(0, 0)}>
               <img
                 src="/images/opus-logo.png"
-                alt="Logo Opus Advisory"
+                alt="Logo Opus Advisor"
                 className="object-contain"
                 style={{ width: 'auto', height: '110px', maxHeight: '250px' }}
               />
@@ -156,7 +156,7 @@ export const Header: React.FC = () => {
         <div className="pb-12 flex justify-center">
           <img
             src="/images/opus-icon.png"
-            alt="Logo Opus Advisory"
+            alt="Logo Opus Advisor"
             className="h-16 object-contain opacity-30"
           />
         </div>

@@ -20,8 +20,8 @@ export const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Opus Advisory - Conseil Opérationnel & Digital"
-        description="Partenaire stratégique des dirigeants. Opus Advisory structure, automatise et optimise vos processus pour une croissance maîtrisée."
+        title="Opus Advisor - Conseil Opérationnel & Digital"
+        description="Partenaire stratégique des dirigeants. Opus Advisor structure, automatise et optimise vos processus pour une croissance maîtrisée."
       />
       <Header />
 

@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
       ],
       fullDescription: 'Notre client, un acteur majeur de la distribution, souffrait de ruptures de stock chroniques et de pertes liées à un pilotage manuel.\n\nNous avons mené un diagnostic complet de la chaîne de valeur, identifié les points de friction et mis en place une architecture de données unifiée.\n\nRésultat : -15% de ruptures en 6 mois et une visibilité temps réel pour le COMEX.',
       duration: '8 mois',
-      clientReview: 'Opus Advisory a su parler le langage de nos opérations tout en apportant une vraie vision stratégique.'
+      clientReview: 'Opus Advisor a su parler le langage de nos opérations tout en apportant une vraie vision stratégique.'
     },
     {
       id: '2',
@@ -105,8 +105,8 @@ export const Projects: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Réalisations & Cas Clients - Opus Advisory"
-        description="Découvrez comment Opus Advisory a transformé l'organisation de leaders de la distribution, scale-ups B2B et PME industrielles."
+        title="Réalisations & Cas Clients - Opus Advisor"
+        description="Découvrez comment Opus Advisor a transformé l'organisation de leaders de la distribution, scale-ups B2B et PME industrielles."
         url="https://opusadvisor.fr/projets"
       />
       <Header />

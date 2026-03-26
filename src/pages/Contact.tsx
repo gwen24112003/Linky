@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
       emailjs.init('7nk-E4GjPBoHa_-Py');
       await emailjs.send('service_d1de6lx', 'template_n3wiuwt', {
         from_email: formData.email,
-        to_name: 'Opus Advisory',
+        to_name: 'Opus Advisor',
         objet: formData.objet,
         service: formData.service,
         message: formData.message,
@@ -47,8 +47,8 @@ export const Contact: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Contactez Opus Advisory - Audit & Conseil Stratégique"
-        description="Prenez rendez-vous avec un associé Opus Advisory pour un audit de cadrage. Discutons de vos enjeux de structuration et de croissance."
+        title="Contactez Opus Advisor - Audit & Conseil Stratégique"
+        description="Prenez rendez-vous avec un associé Opus Advisor pour un audit de cadrage. Discutons de vos enjeux de structuration et de croissance."
         url="https://opusadvisor.fr/contact"
       />
       <Header />

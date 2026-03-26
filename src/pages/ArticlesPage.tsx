@@ -23,7 +23,7 @@ export const ArticlesPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Articles - Opus Advisory · Conseil en Organisation"
+        title="Articles - Opus Advisor · Conseil en Organisation"
         description="Ressources et insights pour dirigeants : stratégie, optimisation des processus, outils et méthodes pour une croissance maîtrisée."
         url="https://opusadvisor.fr/articles"
       />

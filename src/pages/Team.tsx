@@ -71,7 +71,7 @@ export const Team: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="L'équipe Opus Advisory - Experts en Organisation"
+        title="L'équipe Opus Advisor - Experts en Organisation"
         description="Rencontrez les associés du cabinet. Des consultants seniors dédiés à la performance opérationnelle de votre entreprise."
         url="https://opusadvisor.fr/equipe"
       />
@@ -124,7 +124,7 @@ export const Team: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                Opus Advisory · Les Associés
+                Opus Advisor · Les Associés
               </motion.p>
               <motion.h1
                 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white text-center leading-tight"
@@ -218,7 +218,7 @@ export const Team: React.FC = () => {
                 Au-delà de la simple gestion de projet, nous croyons qu'une architecture opérationnelle robuste est le socle indispensable de toute croissance pérenne. Dans un éco-système en perpétuelle mutation, la capacité à exécuter vite et bien ne dépend pas d'outils magiques, mais d'une structure pensée pour l'agilité.
               </p>
               <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed mb-6">
-                Opus Advisory est né d'une conviction forte : la technologie doit servir la stratégie, et non l'inverse. Trop souvent, les entreprises s'épuisent à compenser des processus défaillants au lieu de se concentrer sur leur vision.
+                Opus Advisor est né d'une conviction forte : la technologie doit servir la stratégie, et non l'inverse. Trop souvent, les entreprises s'épuisent à compenser des processus défaillants au lieu de se concentrer sur leur vision.
               </p>
               <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
                 Nous vous apportons cette lucidité structurelle. En alignant vos processus sur vos ambitions, nous transformons votre opérationnel en un levier de performance silencieux mais redoutable.

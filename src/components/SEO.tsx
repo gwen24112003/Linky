@@ -10,13 +10,13 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = 'Opus Advisory - Conseil Opérationnel & Digital',
-  description = 'Partenaire stratégique des dirigeants. Opus Advisory structure, automatise et optimise vos processus pour une croissance maîtrisée.',
-  keywords = 'conseil, organisation, stratégie opérationnelle, processus, excellence opérationnelle, structuration, croissance, Opus Advisory',
+  title = 'Opus Advisor - Conseil Opérationnel & Digital',
+  description = 'Partenaire stratégique des dirigeants. Opus Advisor structure, automatise et optimise vos processus pour une croissance maîtrisée.',
+  keywords = 'conseil, organisation, stratégie opérationnelle, processus, excellence opérationnelle, structuration, croissance, Opus Advisor',
   image = '/images/opus-banner.png',
   url = 'https://opusadvisor.fr'
 }) => {
-  const siteTitle = title === 'Opus Advisory - Conseil Opérationnel & Digital' ? title : `${title} | Opus Advisory`;
+  const siteTitle = title === 'Opus Advisor - Conseil Opérationnel & Digital' ? title : `${title} | Opus Advisor`;
 
   return (
     <Helmet>
