@@ -73,7 +73,7 @@ export const Team: React.FC = () => {
       <SEO
         title="L'équipe Opus Advisory - Experts en Organisation"
         description="Rencontrez les associés du cabinet. Des consultants seniors dédiés à la performance opérationnelle de votre entreprise."
-        url="https://opusadvisory.fr/equipe"
+        url="https://opusadvisor.fr/equipe"
       />
       <Header />
 

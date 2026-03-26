@@ -49,7 +49,7 @@ export const Contact: React.FC = () => {
       <SEO
         title="Contactez Opus Advisory - Audit & Conseil Stratégique"
         description="Prenez rendez-vous avec un associé Opus Advisory pour un audit de cadrage. Discutons de vos enjeux de structuration et de croissance."
-        url="https://opusadvisory.fr/contact"
+        url="https://opusadvisor.fr/contact"
       />
       <Header />
 
@@ -126,7 +126,7 @@ export const Contact: React.FC = () => {
 
               {/* Carte email */}
               <motion.a
-                href="mailto:contact@opusadvisory.fr"
+                href="mailto:contact@opusadvisor.fr"
                 className="flex items-center gap-4 mb-4 p-5 rounded-2xl group"
                 style={{ background: 'rgba(201,168,76,0.04)', border: '1px solid rgba(201,168,76,0.12)' }}
                 whileHover={{ background: 'rgba(201,168,76,0.10)', borderColor: 'rgba(201,168,76,0.30)', x: 4 }}
@@ -140,7 +140,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wider">Email</p>
-                  <p className="text-gray-900 font-medium transition-colors">contact@opusadvisory.fr</p>
+                  <p className="text-gray-900 font-medium transition-colors">contact@opusadvisor.fr</p>
                 </div>
               </motion.a>
 

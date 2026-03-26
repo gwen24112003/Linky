@@ -51,7 +51,7 @@ export const ExpertContact: React.FC = () => {
       <SEO
         title="Rejoignez le réseau Opus Advisory - Candidature Expert"
         description="Vous êtes consultant ou expert en organisation ? Rejoignez notre réseau de partenaires qualifiés."
-        url="https://opusadvisory.fr/expert-contact"
+        url="https://opusadvisor.fr/expert-contact"
       />
       <Header />
 

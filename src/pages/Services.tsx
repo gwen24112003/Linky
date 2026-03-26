@@ -90,7 +90,7 @@ export const Services: React.FC = () => {
       <SEO
         title="Notre Expertise - Opus Advisory"
         description="Diagnostic, implémentation et suivi continu. Opus Advisory structure vos processus et développe vos outils métier."
-        url="https://opusadvisory.fr/services"
+        url="https://opusadvisor.fr/services"
       />
       <Header />
 

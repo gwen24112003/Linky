@@ -107,7 +107,7 @@ export const Projects: React.FC = () => {
       <SEO
         title="Réalisations & Cas Clients - Opus Advisory"
         description="Découvrez comment Opus Advisory a transformé l'organisation de leaders de la distribution, scale-ups B2B et PME industrielles."
-        url="https://opusadvisory.fr/projets"
+        url="https://opusadvisor.fr/projets"
       />
       <Header />
 

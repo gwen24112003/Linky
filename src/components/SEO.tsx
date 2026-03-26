@@ -14,7 +14,7 @@ export const SEO: React.FC<SEOProps> = ({
   description = 'Partenaire stratégique des dirigeants. Opus Advisory structure, automatise et optimise vos processus pour une croissance maîtrisée.',
   keywords = 'conseil, organisation, stratégie opérationnelle, processus, excellence opérationnelle, structuration, croissance, Opus Advisory',
   image = '/images/opus-banner.png',
-  url = 'https://opusadvisory.fr'
+  url = 'https://opusadvisor.fr'
 }) => {
   const siteTitle = title === 'Opus Advisory - Conseil Opérationnel & Digital' ? title : `${title} | Opus Advisory`;
 
