@@ -164,8 +164,11 @@ export const HeroBanner: React.FC = () => {
             Cabinet de Conseil en Organisation & Transformation
           </motion.p>
 
-          {/* H1 */}
-          <motion.h1
+          {/* Vrai H1 pour le SEO (caché visuellement) */}
+          <h1 className="sr-only">Consultant & Cabinet de Conseil en Automatisation pour PME</h1>
+
+          {/* Titre visuel principal */}
+          <motion.div
             className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-8"
             variants={containerVariants}
             initial="hidden"
@@ -190,7 +193,7 @@ export const HeroBanner: React.FC = () => {
                 </motion.span>
               ))}
             </span>
-          </motion.h1>
+          </motion.div>
 
           {/* Subtitle */}
           <motion.p

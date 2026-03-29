@@ -186,14 +186,14 @@ export const ServicesSectionEntreprise: React.FC = () => {
     <section className="pt-4 pb-20 bg-white" aria-labelledby="services-title">
       <div className="container mx-auto px-6">
         <motion.div
-          className="mb-16"
+          className="max-w-4xl mb-16 relative z-10"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 id="services-title" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
-            Ce que nous mettons en place pour vous
+            Nos expertises : de l'Audit Opérationnel à l'Intégration d'IA
           </h2>
           <p className="text-base lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
             Des solutions calibrées à votre structure et à vos outils existants. Pas de sur-ingénierie, pas de dépendances inutiles.

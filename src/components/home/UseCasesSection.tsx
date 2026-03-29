@@ -63,7 +63,7 @@ export const UseCasesSection: React.FC = () => {
             Cas d'usage
           </p>
           <h2 id="usecases-title" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Exemples de missions concrètes
+            Des stratégies d'automatisation adaptées à votre secteur
           </h2>
           <p className="text-gray-600 leading-relaxed">
             Six situations réelles, six systèmes mis en place. À titre d'illustration de ce que nous construisons au quotidien.

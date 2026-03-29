@@ -125,7 +125,7 @@ export const FAQSection: React.FC = () => {
                 Questions fréquentes
               </p>
               <h2 id="faq-title" className="text-4xl md:text-5xl font-bold text-gray-900">
-                FAQ Automatisation
+                Questions fréquentes sur nos services d'automatisation et de conseil
               </h2>
             </motion.div>
 

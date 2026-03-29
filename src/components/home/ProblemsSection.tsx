@@ -51,7 +51,7 @@ export const ProblemsSection: React.FC = () => {
             Pourquoi automatiser
           </p>
           <h2 id="problems-title" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Ce qui vous coûte du temps chaque semaine
+            Pourquoi auditer et automatiser vos processus métier ?
           </h2>
           <p className="text-gray-600 leading-relaxed">
             La plupart des inefficacités ne viennent pas d'un manque d'outils. Elles viennent du fait que les outils ne se parlent pas et que les tâches répétitives restent manuelles.

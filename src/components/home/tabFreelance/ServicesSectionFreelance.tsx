@@ -141,7 +141,7 @@ export const ServicesSectionFreelance: React.FC = () => {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 id="services-experts-title" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
-            Rejoignez notre réseau d'experts
+            Rejoignez notre réseau de Consultants en Automatisation
           </h2>
           <p className="text-gray-700 text-base lg:text-xl leading-relaxed max-w-2xl">
             Nous collaborons avec des consultants indépendants sélectionnés pour délivrer une valeur concrète à nos clients. Si vous êtes expert en organisation, transformation ou opérations, parlons-nous.
