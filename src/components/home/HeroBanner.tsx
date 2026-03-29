@@ -150,7 +150,7 @@ export const HeroBanner: React.FC = () => {
       />
 
       {/* ── Contenu principal ── */}
-      <div className="container mx-auto px-6 relative z-10 pt-20 md:pt-0">
+      <div className="container mx-auto px-6 relative z-10 pt-32 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
 
           {/* Overline */}
@@ -224,7 +224,7 @@ export const HeroBanner: React.FC = () => {
 
           {/* Trust signal */}
           <motion.div
-            className="inline-flex items-center justify-center gap-6 px-8 py-3 rounded-full text-sm text-white/70"
+            className="inline-flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 px-6 md:px-8 py-5 md:py-3 rounded-2xl md:rounded-full text-sm text-white/70"
             style={{
               backdropFilter: 'blur(12px)',
               WebkitBackdropFilter: 'blur(12px)',
@@ -235,10 +235,12 @@ export const HeroBanner: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.2 }}
           >
-            <span>Automatisation · Outils Sur-Mesure · Data · API</span>
-            <span className="w-px h-4 bg-white/25" />
+            <span className="text-center font-medium">Automatisation · Outils Sur-Mesure · Data · API</span>
+            <span className="hidden md:block w-px h-4 bg-white/25" />
+            <span className="md:hidden w-8 h-px bg-white/20" />
             <span>France</span>
-            <span className="w-px h-4 bg-white/25" />
+            <span className="hidden md:block w-px h-4 bg-white/25" />
+            <span className="md:hidden w-8 h-px bg-white/20" />
             <span>Missions depuis 2022</span>
           </motion.div>
         </div>
