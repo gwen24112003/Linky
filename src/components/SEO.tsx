@@ -11,7 +11,7 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = 'Opus Advisor : Cabinet Automatisation, IA et No-Code pour PME',
+  title = 'Opus Advisor - Cabinet de conseil en organisation & transformation',
   description = 'Cabinet de conseil en automatisation, IA et no-code pour TPE et PME. Audit de processus, implémentation de workflows n8n et Make, formation et maintenance. Basé en France.',
   keywords = 'freelance automatisation, consultant automatisation, automatisation PME, expert no-code, workflow n8n, consultant Make, automatisation IA, intégration IA entreprise, automatisation processus',
   image = '/images/opus-banner.png',
@@ -19,7 +19,7 @@ export const SEO: React.FC<SEOProps> = ({
   jsonLd,
 }) => {
   const siteTitle =
-    title === 'Opus Advisor : Cabinet Automatisation, IA et No-Code pour PME'
+    title === 'Opus Advisor - Cabinet de conseil en organisation & transformation'
       ? title
       : `${title} | Opus Advisor`;
 

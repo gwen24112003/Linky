@@ -23,7 +23,7 @@ export const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Opus Advisor : Cabinet Automatisation, IA et No-Code pour PME"
+        title="Opus Advisor - Cabinet de conseil en organisation & transformation"
         description="Cabinet de conseil en automatisation, IA et no-code pour TPE et PME. Audit de processus, implémentation de workflows n8n et Make, formation et maintenance. Basé en France."
       />
       <Header />
