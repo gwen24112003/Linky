@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { Service } from '../../../types';
 
-// ── Hook tilt 3D ──────────────────────────────────────────────────────────────
 function useTilt(maxDeg = 12) {
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -21,7 +20,6 @@ function useTilt(maxDeg = 12) {
   return { rotateX, rotateY, onMove, onLeave };
 }
 
-// ── Carte service avec tilt + glassmorphisme ──────────────────────────────────
 interface TiltServiceCardProps {
   service: Service;
   index: number;
@@ -50,14 +48,14 @@ const TiltServiceCard: React.FC<TiltServiceCardProps> = ({ service, index }) => 
     setSpotY(50);
   };
 
-  const numbers = ['01', '02', '03'];
+  const numbers = ['01', '02', '03', '04', '05', '06'];
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.5, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       style={{ perspective: '1000px' }}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
@@ -75,7 +73,6 @@ const TiltServiceCard: React.FC<TiltServiceCardProps> = ({ service, index }) => 
           boxShadow: '0 28px 64px rgba(26,35,50,0.22), 0 1px 0 rgba(255,255,255,0.8) inset',
         }}
       >
-        {/* Grand numéro en perspective recédante */}
         <span
           className="absolute -top-3 -left-1 text-[7rem] font-bold leading-none select-none pointer-events-none"
           style={{
@@ -88,7 +85,6 @@ const TiltServiceCard: React.FC<TiltServiceCardProps> = ({ service, index }) => 
           {numbers[index]}
         </span>
 
-        {/* Tache lumineuse dynamique */}
         <div
           className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-300"
           style={{
@@ -96,21 +92,23 @@ const TiltServiceCard: React.FC<TiltServiceCardProps> = ({ service, index }) => 
           }}
         />
 
-        {/* Ligne déco gold en haut */}
-        <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-transparent to-transparent" />
-
-        {/* Contenu */}
         <div className="relative z-10 pt-6">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 leading-tight">
+          <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
             {service.title}
           </h3>
-          <ul className="space-y-4">
+          {service.description && (
+            <p className="text-sm text-gray-600 leading-relaxed mb-4">{service.description}</p>
+          )}
+          <ul className="space-y-3">
             {service.features?.map((feature, fi) => (
               <li key={fi} className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "rgba(201,168,76,0.15)" }}>
-                  <Check size={11} style={{ color: "#C9A84C" }} strokeWidth={3} />
+                <div
+                  className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                  style={{ background: 'rgba(201,168,76,0.15)' }}
+                >
+                  <Check size={11} style={{ color: '#C9A84C' }} strokeWidth={3} />
                 </div>
-                <span className="text-gray-800 leading-snug">{feature}</span>
+                <span className="text-gray-800 text-sm leading-snug">{feature}</span>
               </li>
             ))}
           </ul>
@@ -120,40 +118,72 @@ const TiltServiceCard: React.FC<TiltServiceCardProps> = ({ service, index }) => 
   );
 };
 
-// ── Section principale ────────────────────────────────────────────────────────
 export const ServicesSectionEntreprise: React.FC = () => {
   const services: Service[] = [
     {
       id: '1',
-      title: 'Diagnostic & Stratégie',
+      title: 'Audit des processus',
+      description: 'Cartographie de vos flux actuels, identification des tâches automatisables et plan d\'action priorisé.',
       features: [
-        "Analyse approfondie de l'existant",
-        'Identification des points de friction',
-        'Feuille de route opérationnelle'
-      ]
+        'Analyse des processus existants',
+        'Identification des tâches répétitives',
+        'Rapport d\'audit + feuille de route',
+      ],
     },
     {
       id: '2',
-      title: 'Architecture & Optimisation',
+      title: 'Automatisation no-code',
+      description: 'Mise en place de workflows Make ou n8n adaptés à vos outils existants, sans repartir de zéro.',
       features: [
-        'Rationalisation de vos outils',
-        'Structuration des flux de données',
-        'Fluidification des processus'
-      ]
+        'Workflows Make et n8n',
+        'Connexion de vos outils actuels',
+        'Tests et validation inclus',
+      ],
     },
     {
       id: '3',
-      title: 'Accompagnement',
+      title: 'Intégration d\'outils',
+      description: 'Connexion entre vos applications métier pour éliminer les doubles saisies et les silos.',
       features: [
-        'Formation et montée en compétence',
-        'Suivi de la performance',
-        'Adaptation continue aux enjeux'
-      ]
-    }
+        'CRM, Airtable, Notion, Google Sheets',
+        'Slack, email, APIs tierces',
+        'Synchronisation en temps réel',
+      ],
+    },
+    {
+      id: '4',
+      title: 'Intégration IA',
+      description: 'Agents IA internes, extraction automatique de données et assistants sur vos documents.',
+      features: [
+        'Agents IA sur mesure',
+        'Génération de comptes-rendus',
+        'Extraction et traitement de données',
+      ],
+    },
+    {
+      id: '5',
+      title: 'Reporting automatique',
+      description: 'Tableaux de bord et rapports générés et envoyés automatiquement depuis vos données.',
+      features: [
+        'Rapports hebdomadaires automatiques',
+        'Dashboards temps réel',
+        'Alertes et notifications',
+      ],
+    },
+    {
+      id: '6',
+      title: 'Qualification et relance',
+      description: 'Systèmes de gestion de leads : qualification, ajout CRM et relances sans intervention manuelle.',
+      features: [
+        'Qualification automatique des leads',
+        'Intégration CRM automatique',
+        'Séquences de relance programmées',
+      ],
+    },
   ];
 
   return (
-    <section className="pt-4 pb-20 bg-white">
+    <section className="pt-4 pb-20 bg-white" aria-labelledby="services-title">
       <div className="container mx-auto px-6">
         <motion.div
           className="mb-16"
@@ -162,11 +192,11 @@ export const ServicesSectionEntreprise: React.FC = () => {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
-            L'Excellence Opérationnelle au service de votre Vision
+          <h2 id="services-title" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
+            Ce que nous mettons en place pour vous
           </h2>
-          <p className="text-l md:text-l lg:text-xl text-gray-800 text-base leading-relaxed">
-            Nous transformons vos défis organisationnels en leviers de croissance. Une approche pragmatique pour des résultats mesurables et durables.
+          <p className="text-base lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
+            Des solutions calibrées à votre structure et à vos outils existants. Pas de sur-ingénierie, pas de dépendances inutiles.
           </p>
         </motion.div>
 
@@ -178,10 +208,11 @@ export const ServicesSectionEntreprise: React.FC = () => {
 
         <div className="flex justify-center mt-12">
           <Link
-            to="/services#creation"
-            className="inline-flex items-center gap-3 text-white px-8 py-4 text-base rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer" style={{ background: "#1A2332" }}
+            to="/services"
+            className="inline-flex items-center gap-3 text-white px-8 py-4 text-base rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer"
+            style={{ background: '#1A2332' }}
           >
-            Notre approche détaillée
+            Voir le détail de nos services
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
         </div>

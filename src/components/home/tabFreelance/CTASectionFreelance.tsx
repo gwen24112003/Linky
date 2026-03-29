@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 export const CTASectionFreelance: React.FC = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      {/* Orbe ambiant */}
       <div
         className="absolute pointer-events-none"
         style={{
@@ -47,7 +46,7 @@ export const CTASectionFreelance: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.35 }}
             >
-              Rejoignez un réseau sélectif de consultants seniors et accédez à des missions stratégiques auprès de dirigeants ambitieux.
+              Rejoignez un réseau sélectif de consultants seniors et accédez à des missions stratégiques auprès de dirigeants ambitieux. Apport d'affaires, co-traitance, ou intégration à temps partiel.
             </motion.p>
 
             <motion.div
@@ -58,7 +57,8 @@ export const CTASectionFreelance: React.FC = () => {
             >
               <Link
                 to="/experts-contact"
-                className="inline-flex items-center gap-3 text-white px-8 py-4 text-lg rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer" style={{ background: "#1A2332" }}
+                className="inline-flex items-center gap-3 text-white px-8 py-4 text-lg rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer"
+                style={{ background: '#1A2332' }}
               >
                 Proposer ma candidature
                 <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -66,7 +66,7 @@ export const CTASectionFreelance: React.FC = () => {
             </motion.div>
 
             <motion.div
-              className="flex items-center gap-6 mt-6"
+              className="flex flex-wrap items-center gap-6 mt-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -75,6 +75,8 @@ export const CTASectionFreelance: React.FC = () => {
               <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Réponse sous 48h</span>
               <span className="w-px h-4 bg-white/15" />
               <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Réseau sélectif</span>
+              <span className="w-px h-4 bg-white/15" />
+              <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Indépendance respectée</span>
             </motion.div>
           </div>
 
@@ -83,21 +85,6 @@ export const CTASectionFreelance: React.FC = () => {
             className="lg:col-span-2 p-12 flex flex-col items-center justify-center relative overflow-hidden order-1 lg:order-2"
             style={{ background: 'linear-gradient(135deg, #1A2332, #2A3A50)' }}
           >
-            {/* Diamant 3D rotatif */}
-            <div className="absolute opacity-20 pointer-events-none" style={{ top: '10%', left: '10%' }}>
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-              >
-                <div style={{
-                  width: 60, height: 60,
-                  clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-                  border: '1px solid rgba(201,168,76,0.5)',
-                  background: 'rgba(201,168,76,0.06)',
-                }} />
-              </motion.div>
-            </div>
-
             <span
               className="absolute text-[12rem] font-bold leading-none pointer-events-none"
               style={{ color: 'rgba(255,255,255,0.03)', fontFamily: 'Bricolage Grotesque, sans-serif' }}
@@ -115,7 +102,7 @@ export const CTASectionFreelance: React.FC = () => {
               >
                 15+
               </motion.span>
-              <p className="mt-2 text-lg font-medium" style={{ color: "#C9A84C" }}>experts partenaires</p>
+              <p className="mt-2 text-lg font-medium" style={{ color: '#C9A84C' }}>experts partenaires</p>
               <div className="mt-6 flex flex-col gap-2 text-sm text-white/40">
                 <span>Consultants seniors</span>
                 <span>Multi-secteurs</span>

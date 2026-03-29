@@ -12,6 +12,9 @@ import { ServicesSectionFreelance } from '../components/home/tabFreelance/Servic
 import { ProcessSectionFreelance } from '../components/home/tabFreelance/ProcessSectionFreelance';
 import { CTASectionFreelance } from '../components/home/tabFreelance/CTASectionFreelance';
 import { ArticlesSection } from '../components/home/ArticlesSection';
+import { ProblemsSection } from '../components/home/ProblemsSection';
+import { UseCasesSection } from '../components/home/UseCasesSection';
+import { FAQSection } from '../components/home/FAQSection';
 import { SEO } from '../components/SEO';
 
 export const Home: React.FC = () => {
@@ -20,8 +23,8 @@ export const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Opus Advisor - Conseil Opérationnel & Digital"
-        description="Partenaire stratégique des dirigeants. Opus Advisor structure, automatise et optimise vos processus pour une croissance maîtrisée."
+        title="Opus Advisor : Cabinet Automatisation, IA et No-Code pour PME"
+        description="Cabinet de conseil en automatisation, IA et no-code pour TPE et PME. Audit de processus, implémentation de workflows n8n et Make, formation et maintenance. Basé en France."
       />
       <Header />
 
@@ -45,9 +48,12 @@ export const Home: React.FC = () => {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
+              <ProblemsSection />
               <ServicesSectionEntreprise />
               <ProcessSectionEntreprise />
+              <UseCasesSection />
               <ArticlesSection />
+              <FAQSection />
               <CTASectionEntreprise />
             </motion.div>
           )}
@@ -62,7 +68,9 @@ export const Home: React.FC = () => {
             >
               <ServicesSectionFreelance />
               <ProcessSectionFreelance />
+              <UseCasesSection />
               <ArticlesSection />
+              <FAQSection />
               <CTASectionFreelance />
             </motion.div>
           )}

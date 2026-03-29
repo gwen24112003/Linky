@@ -20,12 +20,23 @@ export const ArticlesPage: React.FC = () => {
   const navigate = useNavigate();
   const articles: ArticleMetadata[] = articlesData;
 
+  const articleListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": articles.map((article, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `https://opusadvisor.fr/article/${article.slug}`
+    }))
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
         title="Articles - Opus Advisor · Conseil en Organisation"
         description="Ressources et insights pour dirigeants : stratégie, optimisation des processus, outils et méthodes pour une croissance maîtrisée."
         url="https://opusadvisor.fr/articles"
+        jsonLd={articleListJsonLd}
       />
       <Header />
 

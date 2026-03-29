@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
   const navLinks: NavLink[] = [
     { label: 'Accueil', href: '/' },
     { label: 'Le Cabinet', href: '/equipe' },
-    { label: 'Expertise', href: '/services' },
+    { label: 'Services', href: '/services' },
     { label: 'Articles', href: '/articles' },
     { label: 'Contact', href: '/contact' }
   ];
@@ -50,7 +50,7 @@ export const Header: React.FC = () => {
         }}
         style={{ borderBottomWidth: 1, borderBottomStyle: 'solid' }}
       >
-        <nav className="container mx-auto px-6 py-4">
+        <nav className="container mx-auto px-6 py-2 md:py-3">
           <div className="relative flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center z-10" aria-label="Retour à l'accueil" onClick={() => window.scrollTo(0, 0)}>
@@ -58,7 +58,7 @@ export const Header: React.FC = () => {
                 src="/images/opus-logo.png"
                 alt="Logo Opus Advisor"
                 className="object-contain"
-                style={{ width: 'auto', height: '110px', maxHeight: '250px' }}
+                style={{ width: 'auto', height: '85px', maxHeight: '150px', transform: 'scale(1.35)', transformOrigin: 'left center' }}
               />
             </Link>
 

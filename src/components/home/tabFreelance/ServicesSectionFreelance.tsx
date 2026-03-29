@@ -60,7 +60,6 @@ const TiltCard: React.FC<TiltCardProps> = ({ service, index }) => {
           boxShadow: '0 28px 64px rgba(26,35,50,0.22), 0 1px 0 rgba(255,255,255,0.8) inset',
         }}
       >
-        {/* Numéro en perspective */}
         <span
           className="absolute -top-3 -left-1 text-[7rem] font-bold leading-none select-none pointer-events-none"
           style={{
@@ -73,16 +72,12 @@ const TiltCard: React.FC<TiltCardProps> = ({ service, index }) => {
           {numbers[index]}
         </span>
 
-        {/* Spotlight dynamique */}
         <div
           className="absolute inset-0 rounded-2xl pointer-events-none"
           style={{
             background: `radial-gradient(circle at ${spotX}% ${spotY}%, rgba(201,168,76,0.08) 0%, transparent 60%)`,
           }}
         />
-
-        {/* Ligne accent gold en haut */}
-        <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-transparent to-transparent" />
 
         <div className="relative z-10 pt-6">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 leading-tight">
@@ -91,8 +86,8 @@ const TiltCard: React.FC<TiltCardProps> = ({ service, index }) => {
           <ul className="space-y-4">
             {service.features?.map((feature, fi) => (
               <li key={fi} className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "rgba(201,168,76,0.15)" }}>
-                  <Check size={11} style={{ color: "#C9A84C" }} strokeWidth={3} />
+                <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(201,168,76,0.15)' }}>
+                  <Check size={11} style={{ color: '#C9A84C' }} strokeWidth={3} />
                 </div>
                 <span className="text-gray-800 leading-snug">{feature}</span>
               </li>
@@ -108,35 +103,35 @@ export const ServicesSectionFreelance: React.FC = () => {
   const services: Service[] = [
     {
       id: '1',
-      title: 'Missions Stratégiques',
+      title: 'Missions à fort impact',
       features: [
-        'Projets à fort impact',
-        'Grands comptes & ETI',
-        'Enjeux de transformation',
+        'Projets de transformation organisationnelle',
+        'Clients PME, ETI et grands comptes',
+        'Missions avec enjeux mesurables',
       ],
     },
     {
       id: '2',
-      title: "Cadre d'Intervention",
+      title: "Cadre d'intervention structuré",
       features: [
         'Méthodologie Opus Advisor',
-        'Outils & Frameworks',
-        'Support opérationnel',
+        'Outils, frameworks et livrables partagés',
+        'Support opérationnel tout au long de la mission',
       ],
     },
     {
       id: '3',
-      title: 'Partenariat Gagnant',
+      title: 'Partenariat sur mesure',
       features: [
         "Apport d'affaires qualifié",
-        "Réseau d'experts",
-        'Respect de votre indépendance',
+        "Réseau d'experts complémentaires",
+        'Respect total de votre indépendance',
       ],
     },
   ];
 
   return (
-    <section className="pt-4 pb-20 bg-white">
+    <section className="pt-4 pb-20 bg-white" aria-labelledby="services-experts-title">
       <div className="container mx-auto px-6">
         <motion.div
           className="mb-16"
@@ -145,11 +140,11 @@ export const ServicesSectionFreelance: React.FC = () => {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
+          <h2 id="services-experts-title" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
             Rejoignez notre réseau d'experts
           </h2>
-          <p className="text-gray-800 text-base lg:text-xl leading-relaxed">
-            Nous collaborons avec les meilleurs consultants indépendants pour délivrer une valeur exceptionnelle à nos clients.
+          <p className="text-gray-700 text-base lg:text-xl leading-relaxed max-w-2xl">
+            Nous collaborons avec des consultants indépendants sélectionnés pour délivrer une valeur concrète à nos clients. Si vous êtes expert en organisation, transformation ou opérations, parlons-nous.
           </p>
         </motion.div>
 
@@ -162,7 +157,8 @@ export const ServicesSectionFreelance: React.FC = () => {
         <div className="flex justify-center mt-12">
           <Link
             to="/experts-contact"
-            className="inline-flex items-center gap-3 text-white px-8 py-4 text-base rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer" style={{ background: "#1A2332" }}
+            className="inline-flex items-center gap-3 text-white px-8 py-4 text-base rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer"
+            style={{ background: '#1A2332' }}
           >
             Postuler au réseau
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-200" />

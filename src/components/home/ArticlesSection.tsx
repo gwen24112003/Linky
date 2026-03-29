@@ -16,6 +16,7 @@ interface ArticleMetadata {
 const baseKeywords = [
   'Stratégie', 'Opérations', 'PME', 'Transformation', 'ETI',
   'Croissance', 'Organisation', 'Performance', 'Direction', 'Conseil',
+  'Automatisation', 'No-Code', 'IA', 'Workflow', 'Processus',
 ];
 
 const marqueeKeywords = [
@@ -38,7 +39,7 @@ export const ArticlesSection: React.FC = () => {
       <div className="mb-14 relative overflow-hidden">
         <div
           className="flex whitespace-nowrap min-w-max"
-          style={{ animation: 'marquee 20s linear infinite' }}
+          style={{ animation: 'marquee 60s linear infinite' }}
         >
           {marqueeKeywords.map((kw, i) => (
             <span

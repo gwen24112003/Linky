@@ -10,13 +10,13 @@ const processSteps = [
   },
   {
     id: '2', icon: 'usercheck', num: '02',
-    title: 'Entretien & Qualification',
+    title: 'Entretien',
     desc: 'Échange avec un associé Opus Advisor pour valider votre profil et vos domaines d\'expertise.',
   },
   {
     id: '3', icon: 'badge', num: '03',
-    title: 'Accréditation',
-    desc: 'Intégration officielle au réseau après validation de votre expertise.',
+    title: 'Qualification',
+    desc: 'Intégration officielle au réseau après validation de votre expertise et de votre approche.',
   },
   {
     id: '4', icon: 'users', num: '04',
@@ -25,8 +25,8 @@ const processSteps = [
   },
   {
     id: '5', icon: 'rocket', num: '05',
-    title: 'Première Mission',
-    desc: 'Démarrage d\'une mission en co-traitance avec accompagnement de nos associés.',
+    title: 'Première mission',
+    desc: 'Démarrage d\'une mission en co-traitance avec l\'accompagnement de nos associés.',
   },
 ];
 
@@ -44,32 +44,32 @@ const getIcon = (iconName: string) => {
 
 export const ProcessSectionFreelance: React.FC = () => {
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden">
+    <section className="py-24 bg-gray-50 overflow-hidden" aria-labelledby="process-experts-title">
       <div className="container mx-auto px-6">
 
-        {/* ── En-tête ── */}
         <div className="text-center mb-16">
           <motion.p
-            className="text-sm font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "#C9A84C" }}
+            className="text-sm font-semibold tracking-[0.2em] uppercase mb-3"
+            style={{ color: '#C9A84C' }}
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Comment ça marche
+            Comment ça fonctionne
           </motion.p>
           <motion.h2
+            id="process-experts-title"
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            Notre processus
+            Le parcours d'intégration
           </motion.h2>
         </div>
 
-        {/* ── Grille de cartes ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {processSteps.map((step, index) => (
             <motion.div
@@ -82,7 +82,6 @@ export const ProcessSectionFreelance: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(26,35,50,0.12)' }}
             >
-              {/* Numéro watermark */}
               <span
                 className="absolute top-4 right-5 text-5xl font-bold leading-none select-none"
                 style={{ color: 'rgba(201,168,76,0.06)' }}
@@ -90,7 +89,6 @@ export const ProcessSectionFreelance: React.FC = () => {
                 {step.num}
               </span>
 
-              {/* Icône */}
               <div
                 className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{
@@ -101,19 +99,19 @@ export const ProcessSectionFreelance: React.FC = () => {
                 {getIcon(step.icon)}
               </div>
 
-              {/* Texte */}
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "#C9A84C" }}>{step.num}</p>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#C9A84C' }}>{step.num}</p>
                 <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug">{step.title}</h3>
                 <p className="text-sm text-gray-700 leading-relaxed">{step.desc}</p>
               </div>
 
-              {/* Connecteur flèche (sauf dernier) */}
               {index < processSteps.length - 1 && (
                 <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-                  <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center"
-                    style={{ border: '1px solid rgba(26,35,50,0.2)', boxShadow: '0 2px 6px rgba(0,0,0,0.06)' }}>
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <div
+                    className="w-6 h-6 rounded-full bg-white flex items-center justify-center"
+                    style={{ border: '1px solid rgba(26,35,50,0.2)', boxShadow: '0 2px 6px rgba(0,0,0,0.06)' }}
+                  >
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
                       <path d="M2 5h6M6 2l3 3-3 3" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>

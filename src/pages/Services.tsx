@@ -21,7 +21,7 @@ const services: ServiceData[] = [
   {
     id: 'diagnostic',
     title: 'Diagnostic & Stratégie',
-    description: "On ne touche à rien avant de comprendre. Audit de votre organisation, cartographie des flux, identification des vrais blocages. Vous repartez avec une feuille de route claire — pas un rapport de 80 pages.",
+    description: "On ne touche à rien avant de comprendre. Audit de votre organisation, cartographie des flux, identification des vrais blocages. Vous repartez avec une feuille de route claire, pas un rapport de 80 pages.",
     features: [
       "Audit complet de l'existant",
       "Identification des points de friction",
@@ -165,11 +165,11 @@ export const Services: React.FC = () => {
                 </motion.div>
 
                 {/* Bento grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
 
                   {/* Grande carte titre + description + features */}
                   <motion.div
-                    className="lg:col-span-2 card-glass rounded-3xl p-10 relative overflow-hidden"
+                    className="card-glass rounded-3xl p-8 lg:p-10 relative overflow-hidden flex flex-col justify-center"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -215,24 +215,18 @@ export const Services: React.FC = () => {
 
                   {/* Carte image */}
                   <motion.div
-                    className="lg:col-span-1 rounded-3xl overflow-hidden relative"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    className="relative"
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    style={{ boxShadow: '0 16px 48px rgba(26,35,50,0.15)', minHeight: '320px', height: '100%' }}
-                    whileHover={{ scale: 1.02 }}
                   >
                     <img
                       src={service.image}
                       alt={service.imageAlt}
-                      className="w-full object-cover"
-                      style={{ height: '100%', minHeight: '320px' }}
+                      className="w-full h-full object-cover object-left rounded-3xl shadow-[0_20px_50px_rgba(26,35,50,0.15)]"
                       loading="lazy"
                     />
-                    {/* Halo gold sur les bords */}
-                    <div className="absolute inset-0 rounded-3xl pointer-events-none"
-                      style={{ boxShadow: 'inset 0 0 0 1px rgba(201,168,76,0.2)' }} />
                   </motion.div>
                 </div>
               </div>

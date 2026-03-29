@@ -29,10 +29,10 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ imageSrc, overlayImage
         )}
       </div>
       <div className="p-6 md:p-8 flex flex-col flex-grow">
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-lexend uppercase transition-colors">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 font-lexend uppercase transition-colors leading-snug">
           {title}
         </h3>
-        <p className="text-black text-lg md:text-lg lg:text-xl leading-relaxed mb-8 flex-grow font-meera line-clamp-4">
+        <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-8 flex-grow font-meera line-clamp-4">
           {description}
         </p>
         <button

@@ -84,8 +84,8 @@ export const CTASectionEntreprise: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              Prêt à structurer votre{' '}
-              <span className="text-gradient">croissance</span> ?
+              Vous avez un processus à{' '}
+              <span className="text-gradient">automatiser</span> ?
             </motion.h2>
 
             <motion.p
@@ -95,7 +95,7 @@ export const CTASectionEntreprise: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.35 }}
             >
-              Un audit de cadrage avec un associé senior pour cartographier vos enjeux et définir les leviers d'action.
+              Décrivez-nous votre situation en quelques lignes. Nous vous répondons avec une approche concrète sous 24h, sans engagement.
             </motion.p>
 
             <motion.div
@@ -108,7 +108,7 @@ export const CTASectionEntreprise: React.FC = () => {
                 to="/contact"
                 className="inline-flex items-center gap-3 text-white px-8 py-4 text-lg rounded-xl font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl group btn-shimmer" style={{ background: "#1A2332" }}
               >
-                Solliciter un audit
+                Démarrer un audit
                 <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
             </motion.div>
@@ -120,9 +120,11 @@ export const CTASectionEntreprise: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.55 }}
             >
-              <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>&lt; 48h de réponse</span>
+              <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Premier échange gratuit</span>
               <span className="w-px h-4 bg-white/15" />
-              <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Sans engagement</span>
+              <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Réponse sous 24h</span>
+              <span className="w-px h-4 bg-white/15" />
+              <span className="text-sm font-medium" style={{ color: 'rgba(201,168,76,0.8)' }}>Basé en France</span>
             </motion.div>
           </div>
         </motion.div>

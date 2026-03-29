@@ -15,15 +15,14 @@ const wordVariants: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const line1 = ['Donnez', 'à', 'votre', 'Ambition'];
-const line2 = ['la', 'Structure', "qu'elle", 'mérite'];
+const line1 = ['Vos', 'opérations,'];
+const line2 = ['structurées', 'et', 'automatisées.'];
 
 export const HeroBanner: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const rawX = useMotionValue(0);
   const rawY = useMotionValue(0);
 
-  // 3 depth layers — vitesses différentes pour l'illusion de profondeur
   const bgX  = useTransform(rawX, [-0.5, 0.5], ['-20px', '20px']);
   const bgY  = useTransform(rawY, [-0.5, 0.5], ['-10px', '10px']);
   const midX = useTransform(rawX, [-0.5, 0.5], ['-45px', '45px']);
@@ -43,6 +42,7 @@ export const HeroBanner: React.FC = () => {
       ref={sectionRef}
       className="relative text-white overflow-hidden flex items-center min-h-screen"
       onMouseMove={handleMouseMove}
+      aria-label="Présentation Opus Advisor"
       style={{
         background: 'linear-gradient(135deg, #1A2332, #2A3A50, #1A2332)',
         backgroundSize: '400% 400%',
@@ -79,9 +79,7 @@ export const HeroBanner: React.FC = () => {
         />
       </motion.div>
 
-      {/* ── Couche 2 : Formes géométriques 3D (desktop uniquement) ── */}
-
-      {/* Anneau rotatif — gauche */}
+      {/* ── Couche 2 : Formes géométriques (desktop uniquement) ── */}
       <motion.div
         className="absolute hidden md:block pointer-events-none"
         style={{ x: midX, y: midY, top: '15%', left: '5%' }}
@@ -95,7 +93,6 @@ export const HeroBanner: React.FC = () => {
         }} />
       </motion.div>
 
-      {/* Anneau rotatif lent — droite */}
       <motion.div
         className="absolute hidden md:block pointer-events-none"
         style={{ x: midX, y: midY, top: '18%', right: '8%' }}
@@ -113,12 +110,9 @@ export const HeroBanner: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Petit carré rotatif — bas droite */}
       <motion.div
         className="absolute hidden md:block pointer-events-none"
         style={{ x: fgX, y: fgY, bottom: '25%', right: '18%' }}
-        animate={{ rotate: 45 }}
-        transition={{ duration: 0.01, repeat: 0 }}
       >
         <motion.div
           animate={{ rotate: 360 }}
@@ -131,7 +125,7 @@ export const HeroBanner: React.FC = () => {
         />
       </motion.div>
 
-      {/* ── Couche 3 : Orbe proche (fort parallaxe) ── */}
+      {/* ── Couche 3 : Orbe proche ── */}
       <motion.div
         className="absolute hidden md:block pointer-events-none"
         style={{ x: fgX, y: fgY, top: '55%', left: '12%', width: '180px', height: '180px' }}
@@ -167,10 +161,10 @@ export const HeroBanner: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Conseil en Organisation · Experts Sélectionnés
+            Cabinet de Conseil en Organisation & Transformation
           </motion.p>
 
-          {/* H1 word stagger */}
+          {/* H1 */}
           <motion.h1
             className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-8"
             variants={containerVariants}
@@ -178,19 +172,19 @@ export const HeroBanner: React.FC = () => {
             animate="visible"
           >
             <span className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-              {line1.map((word) => (
-                <motion.span key={word} variants={wordVariants} className="inline-block">
+              {line1.map((word, i) => (
+                <motion.span key={word + i} variants={wordVariants} className="inline-block">
                   {word}
                 </motion.span>
               ))}
             </span>
             <span className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-1">
-              {line2.map((word) => (
+              {line2.map((word, i) => (
                 <motion.span
-                  key={word}
+                  key={word + i}
                   variants={wordVariants}
                   className="inline-block"
-                  style={word === 'Structure' ? { color: '#C9A84C' } : undefined}
+                  style={word === 'structurées' ? { color: '#C9A84C' } : undefined}
                 >
                   {word}
                 </motion.span>
@@ -205,7 +199,8 @@ export const HeroBanner: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            Nous aidons les dirigeants à structurer, clarifier et optimiser leurs processus pour une croissance maîtrisée.
+            Opus Advisor structure vos opérations, optimise vos processus et déploie l'automatisation
+            là où elle crée de la valeur, de l'audit initial jusqu'à la maintenance.
           </motion.p>
 
           {/* CTAs */}
@@ -215,19 +210,19 @@ export const HeroBanner: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.0 }}
           >
-            <Link to="/services">
+            <Link to="/contact">
               <Button variant="primary" className="btn-shimmer">
-                Notre Expertise
+                Demander un audit
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/services">
               <Button variant="secondary">
-                Échanger avec un associé
+                Notre expertise
               </Button>
             </Link>
           </motion.div>
 
-          {/* Trust signal — pill glassmorphism */}
+          {/* Trust signal */}
           <motion.div
             className="inline-flex items-center justify-center gap-6 px-8 py-3 rounded-full text-sm text-white/70"
             style={{
@@ -240,7 +235,7 @@ export const HeroBanner: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.2 }}
           >
-            <span>2 associés seniors</span>
+            <span>Make · n8n · Airtable · Notion · API</span>
             <span className="w-px h-4 bg-white/25" />
             <span>France</span>
             <span className="w-px h-4 bg-white/25" />

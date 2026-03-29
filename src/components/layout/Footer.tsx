@@ -22,20 +22,18 @@ export const Footer: React.FC = () => {
     {
       title: 'Nos services',
       links: [
-        { label: 'Diagnostic & Architecture', href: '/services#creation' },
-        { label: 'Optimisation des Processus', href: '/services#automatisation' },
-        { label: 'Accompagnement', href: '/services#maintenance' }
+        { label: 'Audit de processus', href: '/services' },
+        { label: 'Automatisation no-code', href: '/services' },
+        { label: 'Intégration d\'outils', href: '/services' },
+        { label: 'Intégration IA', href: '/services' },
+        { label: 'Formation & Maintenance', href: '/services' }
       ]
     },
     {
-      title: 'En savoir plus',
+      title: 'Navigation',
       links: [
+        { label: 'Articles', href: '/articles' },
         { label: 'Notre équipe', href: '/equipe' },
-      ]
-    },
-    {
-      title: 'Support',
-      links: [
         { label: 'Contact', href: '/contact' }
       ]
     }
@@ -85,7 +83,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-12 md:gap-24 justify-center">
             {footerSections.map((section) => (
               <div key={section.title} className="w-full md:w-auto text-left">
-                <h4 className="font-semibold mb-6 text-white text-3xl md:text-4xl lg:text-5xl font-lexend whitespace-nowrap">
+                <h4 className="font-semibold mb-6 text-white text-xl md:text-2xl font-lexend whitespace-nowrap">
                   {section.title}
                 </h4>
                 <ul className="space-y-4">
@@ -93,7 +91,7 @@ export const Footer: React.FC = () => {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-gray-400 hover:text-white transition-colors duration-200 text-xl md:text-2xl lg:text-2xl font-meera whitespace-nowrap inline-block"
+                        className="text-gray-400 hover:text-white transition-colors duration-200 text-base md:text-lg font-meera whitespace-nowrap inline-block"
                         aria-label={`Aller à ${link.label}`}
                       >
                         {link.label}
@@ -131,7 +129,7 @@ export const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="w-full border-t border-gray-800 pt-8">
             <p className="text-gray-600 text-sm text-center">
-              © {new Date().getFullYear()} Opus Advisor. Tous droits réservés.
+              © {new Date().getFullYear()} Opus Advisor - Cabinet de conseil en organisation &amp; transformation. Tous droits réservés.
             </p>
           </div>
 
