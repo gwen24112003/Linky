@@ -235,7 +235,7 @@ export const HeroBanner: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.2 }}
           >
-            <span>Make · n8n · Airtable · Notion · API</span>
+            <span>Automatisation · Outils Sur-Mesure · Data · API</span>
             <span className="w-px h-4 bg-white/25" />
             <span>France</span>
             <span className="w-px h-4 bg-white/25" />
