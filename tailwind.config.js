@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-const { colors, fonts, spacing, radius, shadows, sizes } = require('./src/theme');
+const { colors, fonts, spacing, radius, shadows, sizes } = require('./theme');
 
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    './app/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {
@@ -20,7 +21,5 @@ module.exports = {
       maxHeight: sizes,
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [require('@tailwindcss/typography')],
+};
