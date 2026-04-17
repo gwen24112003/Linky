@@ -18,6 +18,7 @@ interface ArticleMetadata {
   description: string;
   imageSrc: string;
   overlayImageSrc?: string;
+  icon?: string;
 }
 
 export const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentArticleId }) => {
@@ -53,6 +54,7 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentArticle
               description={article.description}
               imageSrc={article.imageSrc}
               overlayImageSrc={article.overlayImageSrc}
+              icon={article.icon}
               onClick={() => handleArticleClick(article.slug)}
             />
           ))}

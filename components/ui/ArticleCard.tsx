@@ -1,9 +1,38 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import {
+  ArrowRight,
+  AlertTriangle,
+  FileText,
+  LayoutDashboard,
+  Layers,
+  Sparkles,
+  Stethoscope,
+  TrendingDown,
+  Users,
+  Wallet,
+  Workflow,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
+
+const iconMap: Record<string, LucideIcon> = {
+  'alert-triangle': AlertTriangle,
+  'file-text': FileText,
+  'layers': Layers,
+  'layout-dashboard': LayoutDashboard,
+  'sparkles': Sparkles,
+  'stethoscope': Stethoscope,
+  'trending-down': TrendingDown,
+  'users': Users,
+  'wallet': Wallet,
+  'workflow': Workflow,
+  'zap': Zap,
+};
 
 interface ArticleCardProps {
   imageSrc: string;
   overlayImageSrc?: string;
+  icon?: string;
   title: string;
   description: string;
   onClick: () => void;
@@ -12,17 +41,28 @@ interface ArticleCardProps {
 export const ArticleCard: React.FC<ArticleCardProps> = ({
   imageSrc,
   overlayImageSrc,
+  icon,
   title,
   description,
   onClick,
 }) => {
+  const Icon = icon ? iconMap[icon] : null;
+
   return (
     <div className="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col min-h-[500px] w-full border border-gray-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 group">
       <div
         className="h-48 sm:h-56 md:h-64 overflow-hidden relative flex items-center justify-center"
         style={{ background: 'linear-gradient(135deg, #f8f6f1, #ede8de)' }}
       >
-        {overlayImageSrc ? (
+        {Icon ? (
+          <Icon
+            size={96}
+            strokeWidth={1.4}
+            className="transition-transform duration-500 group-hover:scale-110"
+            style={{ color: '#C9A84C' }}
+            aria-label={title}
+          />
+        ) : overlayImageSrc ? (
           <img
             src={overlayImageSrc}
             alt={title}

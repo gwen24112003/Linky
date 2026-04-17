@@ -12,6 +12,7 @@ interface ArticleMetadata {
   description: string;
   imageSrc: string;
   overlayImageSrc?: string;
+  icon?: string;
 }
 
 export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articles }) => {
@@ -33,6 +34,7 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
             description={article.description}
             imageSrc={article.imageSrc}
             overlayImageSrc={article.overlayImageSrc}
+            icon={article.icon}
             onClick={() => router.push(`/article/${article.slug}`)}
           />
         </motion.div>

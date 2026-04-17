@@ -5,7 +5,7 @@
         "title": "Facturation électronique obligatoire en septembre 2026",
         "description": "Ce que la réforme change vraiment pour votre PME : au-delà de la conformité technique, ce sont vos processus, vos circuits de validation et votre trésorerie qui vont bouger.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/dashboard-linky.png"
+        "icon": "file-text"
     },
     {
         "id": 10,
@@ -13,7 +13,7 @@
         "title": "Trésorerie PME : les aides et leviers méconnus en 2026",
         "description": "Bpifrance, étalements Urssaf, CIR/CII, affacturage, dispositifs régionaux. Les leviers qui peuvent libérer plusieurs dizaines de milliers d'euros sur une année.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/ticket-linky.png"
+        "icon": "wallet"
     },
     {
         "id": 9,
@@ -21,7 +21,7 @@
         "title": "IA en PME : 26% l'utilisent déjà, par où commencer ?",
         "description": "Les PME qui ont démarré n'ont pas lancé un projet IA. Elles ont attaqué un cas d'usage précis, à gain mesurable en trois mois. Méthode et pièges à éviter.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/make-scenario.jpg"
+        "icon": "sparkles"
     },
     {
         "id": 8,
@@ -29,7 +29,7 @@
         "title": "Les 5 signaux que votre organisation a décroché de votre croissance",
         "description": "Quand l'entreprise grandit plus vite que son organisation, les symptômes sont diffus mais identifiables. Cinq signaux pour réagir avant la bascule.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/mockup-linky.png"
+        "icon": "alert-triangle"
     },
     {
         "id": 7,
@@ -37,7 +37,7 @@
         "title": "Automatiser ses processus sans ERP à 50 000€",
         "description": "Les PME agiles ne choisissent plus un ERP. Elles construisent un écosystème d'outils spécialisés connectés entre eux, pour un coût dix à vingt fois inférieur.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/mockup-make.png"
+        "icon": "workflow"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "title": "Comment structurer un diagnostic opérationnel en PME",
         "description": "La plupart des diagnostics produisent un PowerPoint de 60 pages qui ne change rien. La méthode qui tient en cinq étapes et débouche sur des décisions actionnables.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/dashboard-linky.png"
+        "icon": "stethoscope"
     },
     {
         "id": 5,
@@ -53,7 +53,7 @@
         "title": "Consultant indépendant vs cabinet : ce que les PME cherchent en 2026",
         "description": "Derrière le choix de format se jouent des écarts réels de prix, de méthode et de profondeur. Comment arbitrer sujet par sujet plutôt que par principe.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/mockup-make.png"
+        "icon": "users"
     },
     {
         "id": 4,
@@ -61,7 +61,7 @@
         "title": "PME françaises en 2026 : pourquoi l'investissement recule",
         "description": "Le recul n'est pas qu'une question de taux. Les dirigeants ne savent plus lesquels de leurs projets prioriser. Comment en tirer parti à contre-cycle.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/ticket-linky.png"
+        "icon": "trending-down"
     },
     {
         "id": 3,
@@ -69,7 +69,7 @@
         "title": "Organisez avant de développer",
         "description": "Pourquoi structurer vos processus avant d'investir dans un outil ou un développement est la décision la plus rentable que vous puissiez prendre.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/dashboard-linky.png"
+        "icon": "layers"
     },
     {
         "id": 1,
@@ -77,7 +77,7 @@
         "title": "Boostez votre productivité avec Make",
         "description": "Découvrez comment Make révolutionne les workflows d'entreprise en connectant vos applications favorites. Une puissance d'automatisation visuelle accessible à tous.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/mockup-make.png"
+        "icon": "zap"
     },
     {
         "id": 2,
@@ -85,6 +85,6 @@
         "title": "Créez des apps métier sans coder",
         "description": "Transformez vos Google Sheets en applications puissantes. Glide permet de créer des outils internes et des portails clients sans écrire une ligne de code.",
         "imageSrc": "/images/opus-banner.png",
-        "overlayImageSrc": "/images/mockup-linky.png"
+        "icon": "layout-dashboard"
     }
 ]
