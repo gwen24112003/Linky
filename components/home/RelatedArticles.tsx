@@ -1,7 +1,9 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { ArrowRight } from 'lucide-react';
 import { ArticleCard } from '../ui/ArticleCard';
 import articlesData from '@/lib/articles.json';
 
@@ -54,6 +56,22 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentArticle
               onClick={() => handleArticleClick(article.slug)}
             />
           ))}
+        </div>
+        <div className="flex justify-center mt-10">
+          <Link
+            href="/articles"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-base transition-all duration-200 group"
+            style={{ border: '1px solid #C9A84C', color: '#C9A84C' }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(201,168,76,0.08)';
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.background = '';
+            }}
+          >
+            Voir tous les articles
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />
+          </Link>
         </div>
       </div>
     </section>
