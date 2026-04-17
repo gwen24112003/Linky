@@ -10,6 +10,7 @@ export interface ArticleMetadata {
   imageSrc: string;
   overlayImageSrc?: string;
   icon?: string;
+  publishedAt?: string;
 }
 
 export function getAllArticles(): ArticleMetadata[] {

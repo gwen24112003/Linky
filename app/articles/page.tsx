@@ -5,10 +5,28 @@ import { ArticlesHero } from '@/components/pages/ArticlesHero';
 import { ArticlesGrid } from '@/components/pages/ArticlesGrid';
 import { getAllArticles } from '@/lib/articles';
 
+const PAGE_URL = 'https://opusadvisor.fr/articles';
+const PAGE_TITLE = 'Articles - Opus Advisor · Conseil en Organisation';
+const PAGE_DESCRIPTION =
+  'Ressources et insights pour dirigeants : stratégie, optimisation des processus, outils et méthodes pour une croissance maîtrisée.';
+
 export const metadata: Metadata = {
-  title: 'Articles - Opus Advisor · Conseil en Organisation',
-  description: 'Ressources et insights pour dirigeants : stratégie, optimisation des processus, outils et méthodes pour une croissance maîtrisée.',
-  alternates: { canonical: 'https://opusadvisor.fr/articles' },
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
+    type: 'website',
+    images: [{ url: 'https://opusadvisor.fr/images/opus-banner.png' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: ['https://opusadvisor.fr/images/opus-banner.png'],
+  },
 };
 
 export default function ArticlesPage() {

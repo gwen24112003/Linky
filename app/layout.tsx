@@ -108,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600&family=Lexend:wght@300;400;600;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="preload" as="image" href="/images/opus-banner.png" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

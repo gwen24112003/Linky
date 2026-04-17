@@ -18,16 +18,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) return {};
+  const pageUrl = `https://opusadvisor.fr/article/${article.slug}`;
+  const ogImage = article.imageSrc
+    ? `https://opusadvisor.fr${article.imageSrc}`
+    : 'https://opusadvisor.fr/images/opus-banner.png';
   return {
     title: article.title,
     description: article.description,
-    alternates: { canonical: `https://opusadvisor.fr/article/${article.slug}` },
+    alternates: { canonical: pageUrl },
     openGraph: {
       title: article.title,
       description: article.description,
       type: 'article',
-      url: `https://opusadvisor.fr/article/${article.slug}`,
-      images: article.imageSrc ? [{ url: article.imageSrc }] : undefined,
+      url: pageUrl,
+      images: [{ url: ogImage }],
+      publishedTime: article.publishedAt,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.description,
+      images: [ogImage],
     },
   };
 }
@@ -38,18 +49,41 @@ export default async function ArticlePage({ params }: PageProps) {
   if (!article) notFound();
   const content = getArticleContent(slug);
 
+  const pageUrl = `https://opusadvisor.fr/article/${article.slug}`;
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: article.title,
     description: article.description,
     image: `https://opusadvisor.fr${article.imageSrc}`,
-    url: `https://opusadvisor.fr/article/${article.slug}`,
-    publisher: {
+    url: pageUrl,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+    datePublished: article.publishedAt,
+    dateModified: article.publishedAt,
+    author: {
       '@type': 'Organization',
       name: 'Opus Advisor',
       url: 'https://opusadvisor.fr',
     },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Opus Advisor',
+      url: 'https://opusadvisor.fr',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://opusadvisor.fr/images/opus-icon.png',
+      },
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://opusadvisor.fr/' },
+      { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://opusadvisor.fr/articles' },
+      { '@type': 'ListItem', position: 3, name: article.title, item: pageUrl },
+    ],
   };
 
   return (
@@ -57,6 +91,10 @@ export default async function ArticlePage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
       <main className="min-h-screen bg-white">
