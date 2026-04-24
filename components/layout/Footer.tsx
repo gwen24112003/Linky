@@ -25,18 +25,19 @@ export const Footer: React.FC = () => {
     {
       title: 'Nos services',
       links: [
-        { label: 'Audit de processus', href: '/services' },
-        { label: 'Automatisation no-code', href: '/services' },
-        { label: "Intégration d'outils", href: '/services' },
-        { label: 'Intégration IA', href: '/services' },
-        { label: 'Formation & Maintenance', href: '/services' },
+        { label: 'Pré-audit gratuit', href: '/services' },
+        { label: 'Diagnostic', href: '/services' },
+        { label: 'Implémentation', href: '/services' },
+        { label: 'Suivi mensuel', href: '/services' },
+        { label: 'Conformité 2027', href: '/services' },
       ],
     },
     {
       title: 'Navigation',
       links: [
+        { label: 'Cas clients', href: '/cas-clients' },
         { label: 'Articles', href: '/articles' },
-        { label: 'Notre équipe', href: '/equipe' },
+        { label: 'Équipe', href: '/equipe' },
         { label: 'Contact', href: '/contact' },
       ],
     },
@@ -129,7 +130,7 @@ export const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="w-full border-t border-gray-800 pt-8">
             <p className="text-gray-600 text-sm text-center">
-              © {new Date().getFullYear()} Opus Advisor - Cabinet de conseil en organisation &amp; transformation. Tous droits réservés.
+              © {new Date().getFullYear()} Opus Advisory · Consultant ops pour les patrons du BTP second œuvre. Tous droits réservés.
             </p>
           </div>
         </div>

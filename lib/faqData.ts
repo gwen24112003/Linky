@@ -1,43 +1,45 @@
 export const faqs = [
   {
-    question: "Qu'est-ce que l'automatisation no-code pour une PME ?",
+    question:
+      "Je suis patron d'une boîte d'électricité ou de plomberie. Vous bossez avec des boîtes comme la mienne ?",
     answer:
-      "L'automatisation no-code permet de connecter vos outils et d'automatiser vos tâches répétitives sans écrire de code. Des plateformes comme Make ou n8n permettent de créer des workflows entre votre CRM, vos emails, vos tableurs et vos applications métier.",
+      "Oui, c'est même notre cœur de métier. On cible les entreprises du second œuvre (électricité, plomberie, chauffage-clim) entre 8 et 25 salariés. On parle votre langage et on connaît vos outils (Batappli, Tolteck, Obat, EBP Bâtiment). Si votre boîte ne colle pas à ce profil, on vous le dit franchement.",
   },
   {
-    question: 'Quels outils utilisez-vous pour automatiser ?',
+    question:
+      "J'utilise déjà Batappli (ou Tolteck, Obat, EBP). Est-ce qu'il faut que je change ?",
     answer:
-      "Nous utilisons principalement Make (ex-Integromat), n8n, Zapier, Airtable, Notion, Google Sheets ainsi que les APIs natives de vos outils. Le choix des outils dépend de votre situation, pas l'inverse.",
+      "Non. Dans 9 cas sur 10, on garde votre outil métier et on l'exploite à fond. Ce qui manque, c'est la couche autour : relances, planning équipe, suivi chantier, automation. On ajoute ce qu'il faut, on ne remplace pas pour remplacer.",
   },
   {
-    question: 'Comment se déroule une mission avec Opus Advisor ?',
+    question: 'Ça coûte combien au total pour refaire mon système ?',
     answer:
-      'Chaque mission suit 4 étapes : Audit (cartographie de vos processus et identification des gains), Implémentation (mise en place des automatisations), Formation (vous et votre équipe maîtrisez les systèmes en place), puis Maintenance (suivi, optimisation et corrections dans le temps).',
+      "Pré-audit : 0 €. Diagnostic : 2 500 € forfaitaires. Implémentation : de 5 000 € à 15 000 € selon le périmètre (on chiffre précisément après le diagnostic). Suivi mensuel optionnel : 400 à 600 €/mois. Vous savez exactement ce que vous payez avant de démarrer.",
   },
   {
-    question: "Ai-je besoin d'un service informatique pour travailler avec vous ?",
+    question: 'Combien de temps ça prend avant que je voie des résultats ?',
     answer:
-      "Non. C'est précisément l'intérêt du no-code : mettre en place des systèmes fonctionnels sans infrastructure technique lourde. Nous gérons la conception et l'implémentation, et vous formons pour que votre équipe soit autonome.",
+      "Première automation en production en 2 à 3 semaines après le kick-off. Gain de temps mesurable dès le premier mois. Système complet déployé entre 6 et 13 semaines selon la taille de la boîte.",
   },
   {
-    question: 'Combien coûte une automatisation ?',
+    question: 'Je suis nul en informatique. Vous m\'obligez à apprendre 10 outils ?',
     answer:
-      'Un audit de processus démarre à 300€. Une automatisation simple commence autour de 500€. Un système complet (intégration multi-outils, agents IA) peut aller de 1 500€ à 5 000€. Nous fournissons toujours un devis précis après un premier échange gratuit.',
+      "Non. Le but, c'est moins d'outils, pas plus. Vous gardez ceux que vous maîtrisez déjà, on connecte le reste pour qu'il travaille tout seul en arrière-plan. Formation incluse pour vous et votre équipe, en français, sur vos propres données.",
   },
   {
-    question: "Qu'est-ce que n8n et Make ?",
+    question: 'La facturation électronique 2027, c\'est urgent pour moi ?',
     answer:
-      "Make (anciennement Integromat) et n8n sont des plateformes d'automatisation no-code. Elles permettent de connecter des applications et de déclencher des actions automatiques en fonction d'événements. n8n est open-source et hébergeable, Make est une solution SaaS avec une interface très accessible.",
+      "Oui si vous voulez être tranquille. L'échéance est au 1er septembre 2027 pour toutes les PME. Si vous vous y prenez en 2026, vous avez le temps de tester, ajuster, former. Si vous attendez l'été 2027, vous payez plus cher et en urgence.",
   },
   {
-    question: 'Quels résultats concrets peut-on attendre ?',
+    question: 'Qu\'est-ce qui se passe si vous disparaissez dans 2 ans ?',
     answer:
-      'Les gains varient selon le processus automatisé : entre 2 et 10 heures par semaine économisées sur les tâches manuelles, réduction des erreurs de saisie, relances systématiques sans oubli, reporting automatique, synchronisation en temps réel entre outils.',
+      "Votre système continue de tourner. On ne développe rien de propriétaire : tout repose sur des outils standards du marché (Make, n8n, Notion, logiciels BTP). La documentation est à vous. Un autre prestataire peut reprendre en main sans difficulté.",
   },
   {
-    question: 'Que se passe-t-il si une automatisation tombe en panne ?',
+    question: 'Vous pouvez bosser avec ma comptable ou mon expert-comptable ?',
     answer:
-      "Les plateformes Make et n8n intègrent des alertes en cas d'erreur. Nous configurons des notifications et assurons la maintenance dans le cadre de notre offre de suivi. En cas de panne, nous diagnostiquons et corrigeons rapidement.",
+      "Oui, et on le fait tout le temps. Votre expert-comptable reste votre interlocuteur pour la compta. Nous, on s'assure que les flux entre votre facturation, votre banque et sa saisie sont automatisés et propres. Tout le monde y gagne du temps.",
   },
 ];
 

@@ -4,9 +4,10 @@ import { Footer } from '@/components/layout/Footer';
 import { ContactView } from '@/components/pages/ContactView';
 
 const PAGE_URL = 'https://opusadvisor.fr/contact';
-const PAGE_TITLE = 'Contactez Opus Advisor - Audit & Conseil Stratégique';
+const PAGE_TITLE =
+  'Pré-audit gratuit 30 min — Opus Advisory (BTP second œuvre)';
 const PAGE_DESCRIPTION =
-  'Prenez rendez-vous avec un associé Opus Advisor pour un audit de cadrage. Discutons de vos enjeux de structuration et de croissance.';
+  "Réservez 30 min en visio. On passe en revue vos outils (Batappli, Obat, Tolteck, EBP) et on identifie 3 points de friction en direct. Gratuit, sans engagement.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

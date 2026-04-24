@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SEO Agent - Linky
+SEO Agent - Opus Advisory
 Audit et scoring SEO du site
 """
 import sys
@@ -163,7 +163,7 @@ def audit_site(url):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='SEO Auditor')
-    parser.add_argument('url', nargs='?', default='https://linky4u.com', help='URL du site a auditer')
+    parser.add_argument('url', nargs='?', default='https://opusadvisor.fr', help='URL du site a auditer')
     args = parser.parse_args()
     
     audit_site(args.url)

@@ -1,191 +1,267 @@
 'use client';
 
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Eye, Handshake, Star, Telescope } from 'lucide-react';
-import { bannerStyles } from '@/theme/bannerStyles';
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Code2,
+  HardHat,
+  Lightbulb,
+  Users,
+  User as UserIcon,
+  Scale,
+  MapPin,
+  Calendar,
+} from 'lucide-react';
 
-interface TeamMember {
+const GOLD = '#C9A84C';
+const NAVY = '#1A2332';
+
+interface Bullet {
+  icon: React.ComponentType<{ size?: number; style?: React.CSSProperties }>;
+  title: string;
+  desc: string;
+}
+
+interface Member {
   name: string;
   role: string;
-  description: string;
-  image: string;
-  scale?: number;
-  translateY?: number;
+  photo: string;
+  location: string;
+  experience: string;
+  heading: string;
+  bullets: Bullet[];
 }
 
-interface Value {
-  icon: string;
-  title: string;
-}
+const team: Member[] = [
+  {
+    name: 'Enzo Monnier',
+    role: 'Consultant ops · Fondateur',
+    photo: '/images/enzo.jpg',
+    location: 'Rennes · Interventions partout en France',
+    experience: 'Epitech · 5 ans de dev avant Opus',
+    heading: 'Un outil efficace, pas une belle présentation.',
+    bullets: [
+      {
+        icon: Code2,
+        title: 'Dev pendant 4 ans, consultant ops depuis',
+        desc: "J'ai codé des systèmes métier avant de pivoter vers le conseil. Je code encore ce que je déploie chez vous. Pas de sous-traitance cachée, pas de chef de projet qui vous envoie un stagiaire.",
+      },
+      {
+        icon: Lightbulb,
+        title: "Ce que j'ai compris en bossant pour d'autres",
+        desc: "Un logiciel bien choisi mais mal déployé, ça ne sert à rien. Trop souvent, un outil acheté 3k€/an reste utilisé à 20%. Mon job chez vous : pas vendre un logiciel de plus, mais faire en sorte que celui que vous avez (ou qu'on va choisir ensemble) soit réellement utilisé au quotidien.",
+      },
+      {
+        icon: HardHat,
+        title: 'Pourquoi le second œuvre',
+        desc: "Un élec ou un plombier de 15 salariés, c'est 1 à 3 M€/an. À cette taille, le dirigeant est encore sur les chantiers et la compta passe à 22h. C'est là qu'on gagne 10h/semaine avec les bons outils, pas en embauchant un assistant de plus.",
+      },
+    ],
+  },
+  {
+    name: 'Gwendoline',
+    role: 'Associée',
+    photo: '/images/gwen.jpg',
+    location: 'Rennes · Interventions partout en France',
+    experience: 'Epitech · 5 ans de dev avant Opus',
+    heading: 'Deux têtes sur votre système, un seul interlocuteur.',
+    bullets: [
+      {
+        icon: UserIcon,
+        title: 'Vous gardez un seul contact',
+        desc: "Celui que vous préférez entre nous deux. Pas de réunions à trois, pas de chaîne de validation interne. Vous appelez, on répond.",
+      },
+      {
+        icon: Users,
+        title: 'On bosse à deux derrière',
+        desc: "Sur chaque décision qui compte — choix d'outil, paramétrage, intégration — on se challenge avant de vous livrer. Concrètement : moins d'erreurs, moins d'allers-retours, et personne ne valide par politesse.",
+      },
+      {
+        icon: Scale,
+        title: 'Pourquoi ça change quelque chose pour vous',
+        desc: "Un consultant seul va vite valider ses propres choix. À deux, on est obligés de justifier. C'est vous qui y gagnez : chaque décision qui part chez vous a été contestée au moins une fois en interne.",
+      },
+    ],
+  },
+];
 
 export const TeamView: React.FC = () => {
-  const cardsRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: cardsRef,
-    offset: ['start end', 'end start'],
-  });
-
-  const card1Y = useTransform(scrollYProgress, [0, 1], [-20, 20]);
-  const card2Y = useTransform(scrollYProgress, [0, 1], [20, -20]);
-
-  const teamMembers: TeamMember[] = [
-    { name: 'Enzo Monnier', role: 'Fondateur & Stratège', description: 'Consultant', image: '/images/enzo.jpg' },
-    { name: 'Gwendoline Vanelle', role: 'Associée & Experte Processus', description: 'Consultante', image: '/images/gwen.jpg', scale: 1.5, translateY: 10 },
-  ];
-
-  const cardYOffsets = [card1Y, card2Y];
-
-  const values: Value[] = [
-    { icon: 'eye', title: 'Lucidité' },
-    { icon: 'handshake', title: 'Proximité' },
-    { icon: 'star', title: 'Excellence' },
-    { icon: 'telescope', title: 'Vision' },
-  ];
-
-  const getIcon = (iconName: string) => {
-    const iconProps = { size: 32, className: 'text-white' };
-    switch (iconName) {
-      case 'eye': return <Eye {...iconProps} />;
-      case 'handshake': return <Handshake {...iconProps} />;
-      case 'star': return <Star {...iconProps} />;
-      case 'telescope': return <Telescope {...iconProps} />;
-      default: return <Eye {...iconProps} />;
-    }
-  };
-
   return (
     <main className="flex-grow">
-      <section className="relative overflow-visible">
+      {/* Hero */}
+      <section
+        className="relative text-white overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20"
+        style={{ background: `linear-gradient(135deg, ${NAVY}, #223047 55%, ${NAVY})` }}
+      >
         <div
-          className="relative overflow-hidden flex items-center justify-center"
+          className="absolute pointer-events-none opacity-40"
           style={{
-            ...bannerStyles,
-            background: 'linear-gradient(135deg, #1A2332, #2A3A50, #1A2332)',
-            backgroundSize: '400% 400%',
-            animation: 'mesh-shift 14s ease infinite',
+            top: '-10%',
+            right: '-10%',
+            width: 500,
+            height: 500,
+            background: `radial-gradient(circle, ${GOLD}33 0%, transparent 70%)`,
+            filter: 'blur(80px)',
           }}
-        >
-          <div className="absolute pointer-events-none opacity-20 hidden md:block"
-            style={{ width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.4), transparent)', filter: 'blur(90px)', top: '-20%', left: '-10%', animation: 'float 10s ease-in-out infinite' }} />
-          <div className="absolute pointer-events-none opacity-15 hidden md:block"
-            style={{ width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(26,35,50,0.8), transparent)', filter: 'blur(70px)', bottom: '-10%', right: '-5%', animation: 'float-delayed 7s ease-in-out infinite' }} />
+        />
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.08]"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
 
-          <div className="container mx-auto px-6 relative z-10 text-center">
-            <motion.p
-              className="text-sm font-semibold tracking-[0.25em] uppercase mb-4"
-              style={{ color: '#C9A84C' }}
-              initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            className="max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <p
+              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-4"
+              style={{ color: GOLD }}
             >
-              Opus Advisor · Les Associés
-            </motion.p>
-            <motion.h1
-              className="text-4xl md:text-6xl lg:text-8xl font-bold text-white text-center leading-tight"
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            >
-              L'équipe Opus
-            </motion.h1>
-          </div>
-        </div>
-
-        <div ref={cardsRef} className="container mx-auto px-6 -mt-12 md:-mt-24 relative z-20">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 lg:gap-24 max-w-5xl mx-auto">
-            {teamMembers.map((member, i) => (
-              <motion.div
-                key={member.name}
-                className="rounded-2xl shadow-xl overflow-hidden w-96"
-                style={{
-                  y: cardYOffsets[i],
-                  boxShadow: '0 20px 60px rgba(26,35,50,0.15), 0 0 0 1px rgba(26,35,50,0.08)',
-                }}
-                initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{
-                  boxShadow: '0 32px 80px rgba(26,35,50,0.28), 0 0 0 2px rgba(201,168,76,0.35)',
-                  scale: 1.02,
-                }}
-              >
-                <div className="h-[32rem] relative">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-300"
-                    loading="lazy"
-                    style={{ transform: `scale(${member.scale || 1}) translateY(${member.translateY || 0}%)` }}
-                  />
-
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 pt-20 text-center text-white">
-                    <div style={{
-                      position: 'absolute', inset: 0,
-                      backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)',
-                      maskImage: 'linear-gradient(to top, transparent, black)',
-                      WebkitMaskImage: 'linear-gradient(to top, transparent, black)',
-                    }} />
-                    <div style={{
-                      position: 'absolute', inset: 0,
-                      backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)',
-                      maskImage: 'linear-gradient(to top, black 30%, transparent 70%)',
-                      WebkitMaskImage: 'linear-gradient(to top, black 30%, transparent 70%)',
-                    }} />
-                    <div className="absolute inset-x-0 bottom-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,76,0.5), transparent)' }} />
-                    <div className="relative z-10">
-                      <h3 className="text-3xl md:text-4xl font-bold mb-2">{member.name}</h3>
-                      <p className="text-lg md:text-xl">{member.role}</p>
-                      <p className="text-lg md:text-xl">{member.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              Équipe
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Qui bosse sur votre système.
+            </h1>
+            <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
+              Deux profils complémentaires. Un seul interlocuteur par mission.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="bg-white rounded-3xl border-2 border-gray-200 p-12 shadow-lg relative overflow-hidden">
-            <div
-              className="absolute -top-20 -right-20 w-64 h-64 rounded-full pointer-events-none opacity-10"
-              style={{ background: 'radial-gradient(circle, #C9A84C, transparent)', filter: 'blur(40px)' }}
-            />
-
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">Notre Vision</h2>
-            <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed mb-6">
-              Au-delà de la simple gestion de projet, nous croyons qu'une architecture opérationnelle robuste est le socle indispensable de toute croissance pérenne. Dans un éco-système en perpétuelle mutation, la capacité à exécuter vite et bien ne dépend pas d'outils magiques, mais d'une structure pensée pour l'agilité.
-            </p>
-            <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed mb-6">
-              Opus Advisor est né d'une conviction forte : la technologie doit servir la stratégie, et non l'inverse. Trop souvent, les entreprises s'épuisent à compenser des processus défaillants au lieu de se concentrer sur leur vision.
-            </p>
-            <p className="text-l md:text-l lg:text-xl text-gray-600 text-base leading-relaxed">
-              Nous vous apportons cette lucidité structurelle. En alignant vos processus sur vos ambitions, nous transformons votre opérationnel en un levier de performance silencieux mais redoutable.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-20 mt-14">
-              {values.map((value, i) => (
-                <motion.div
-                  key={value.title}
-                  className="flex flex-col items-center gap-3"
-                  initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}
-                  whileHover={{ y: -4 }}
+      {/* Profils */}
+      <section className="py-16 md:py-24 bg-[#FAF8F4]">
+        <div className="container mx-auto px-6 max-w-5xl space-y-10 md:space-y-14">
+          {team.map((m, idx) => (
+            <motion.div
+              key={m.name}
+              className="bg-white rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-12"
+              style={{
+                border: '1px solid rgba(26,35,50,0.08)',
+                boxShadow: '0 12px 40px rgba(26,35,50,0.06)',
+              }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.6, delay: idx * 0.05 }}
+            >
+              <div
+                className="md:col-span-5 p-8 md:p-10 flex flex-col justify-center items-center text-center"
+                style={{ background: NAVY }}
+              >
+                <div
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-full mb-5 overflow-hidden"
+                  style={{
+                    border: `3px solid ${GOLD}`,
+                    boxShadow: `0 0 0 4px rgba(201,168,76,0.15)`,
+                  }}
                 >
-                  <motion.div
-                    className="w-20 h-20 rounded-full flex items-center justify-center relative"
-                    style={{ background: 'linear-gradient(135deg, #C9A84C, #a8873a)', boxShadow: '0 4px 16px rgba(201,168,76,0.3)' }}
-                    whileHover={{ boxShadow: '0 8px 32px rgba(201,168,76,0.5)', scale: 1.08 }}
-                    transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-                  >
-                    {getIcon(value.icon)}
-                  </motion.div>
-                  <span className="text-sm lg:text-base text-center text-gray-600 leading-relaxed font-medium">
-                    {value.title}
+                  <img
+                    src={m.photo}
+                    alt={m.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">{m.name}</h2>
+                <p className="text-sm md:text-base" style={{ color: GOLD }}>
+                  {m.role}
+                </p>
+                <div
+                  className="mt-5 pt-5 border-t w-full flex flex-col gap-2 text-xs md:text-sm text-white/60"
+                  style={{ borderColor: 'rgba(255,255,255,0.1)' }}
+                >
+                  <span className="inline-flex items-center justify-center gap-2">
+                    <MapPin size={14} style={{ color: GOLD, opacity: 0.8 }} />
+                    {m.location}
                   </span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+                  <span className="inline-flex items-center justify-center gap-2">
+                    <Calendar size={14} style={{ color: GOLD, opacity: 0.8 }} />
+                    {m.experience}
+                  </span>
+                </div>
+              </div>
+
+              <div className="md:col-span-7 p-8 md:p-10 flex flex-col gap-6">
+                <div>
+                  <p
+                    className="text-xs font-semibold tracking-[0.2em] uppercase mb-3"
+                    style={{ color: GOLD }}
+                  >
+                    {idx === 0 ? 'Pourquoi Opus Advisory' : 'Pourquoi une équipe de deux'}
+                  </p>
+                  <h3
+                    className="text-2xl md:text-3xl font-bold leading-tight"
+                    style={{ color: NAVY }}
+                  >
+                    {m.heading}
+                  </h3>
+                </div>
+
+                <ul className="space-y-5">
+                  {m.bullets.map((b) => {
+                    const Icon = b.icon;
+                    return (
+                      <li key={b.title} className="flex gap-4 items-start">
+                        <div
+                          className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                          style={{ background: `${GOLD}18`, border: `1px solid ${GOLD}55` }}
+                        >
+                          <Icon size={18} style={{ color: NAVY }} />
+                        </div>
+                        <div>
+                          <h4
+                            className="font-bold text-base md:text-lg mb-1"
+                            style={{ color: NAVY }}
+                          >
+                            {b.title}
+                          </h4>
+                          <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">
+                            {b.desc}
+                          </p>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <h2
+            className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-5"
+            style={{ color: NAVY }}
+          >
+            Un seul interlocuteur, du premier échange jusqu'à la mise en production.
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+            Pas de commercial qui vous vend, puis passe la main à un chef de projet qui lui-même passe la main à un consultant junior. Vous parlez à la personne qui bosse sur votre système.
+          </p>
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-200 hover:scale-[1.02] btn-shimmer"
+            style={{ background: GOLD, color: NAVY }}
+          >
+            Réserver 30 min en visio
+            <ArrowRight
+              size={20}
+              className="group-hover:translate-x-1 transition-transform"
+            />
+          </Link>
         </div>
       </section>
     </main>

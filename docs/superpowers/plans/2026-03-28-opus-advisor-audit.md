@@ -1,4 +1,4 @@
-# Opus Advisor Audit SaaS — Implementation Plan
+﻿# Opus Advisor Audit SaaS — Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -108,11 +108,11 @@ STRIPE_WEBHOOK_SECRET=whsec_...
 VITE_STRIPE_PUBLIC_KEY=pk_test_...
 SMTP_HOST=smtp.ionos.fr
 SMTP_PORT=587
-SMTP_USER=contact@opusadvisory.fr
+SMTP_USER=enzo@opusadvisor.fr
 SMTP_PASS=
-EMAIL_FROM=contact@opusadvisory.fr
+EMAIL_FROM=enzo@opusadvisor.fr
 PORT=3001
-CLIENT_URL=https://audit.opusadvisory.fr
+CLIENT_URL=https://audit.opusadvisor.fr
 ```
 
 - [ ] **Step 3: Create nginx.conf**
@@ -120,7 +120,7 @@ CLIENT_URL=https://audit.opusadvisory.fr
 ```nginx
 server {
     listen 80;
-    server_name audit.opusadvisory.fr;
+    server_name audit.opusadvisor.fr;
 
     location / {
         root /var/www/audit/client/dist;
@@ -540,7 +540,7 @@ router.post('/audits/:id/envoyer', async (req, res) => {
             </div>
             <hr style="border:none;border-top:1px solid #ddd;margin:24px 0">
             <p style="color:#666;font-size:12px">
-              audit.opusadvisory.fr · contact@opusadvisory.fr
+              audit.opusadvisor.fr · enzo@opusadvisor.fr
             </p>
           </div>
         </div>
@@ -1371,7 +1371,7 @@ export function generateFreePDF(
   doc.rect(0, 275, 210, 22, 'F')
   doc.setTextColor(...gold)
   doc.setFontSize(9)
-  doc.text('audit.opusadvisory.fr · contact@opusadvisory.fr', 14, 288)
+  doc.text('audit.opusadvisor.fr · enzo@opusadvisor.fr', 14, 288)
 
   doc.save(`audit-opus-advisor-${entreprise.toLowerCase().replace(/\s+/g, '-')}.pdf`)
 }
@@ -1464,7 +1464,7 @@ export default function Resultats() {
             Rapport détaillé personnalisé — 29€ →
           </button>
           <a
-            href="mailto:contact@opusadvisory.fr"
+            href="mailto:enzo@opusadvisor.fr"
             className="block w-full text-center text-sm text-navy/50 hover:text-navy py-2 transition"
           >
             Prendre un appel avec un expert →
@@ -1629,7 +1629,7 @@ export default function Confirmation() {
                 Vous le recevrez par email <strong>sous 48h</strong>.
               </p>
               <a
-                href="https://opusadvisory.fr"
+                href="https://opusadvisor.fr"
                 className="inline-block bg-navy text-gold font-semibold px-8 py-3 rounded-xl hover:bg-navy/90 transition"
               >
                 Retour au site Opus Advisor
@@ -1643,8 +1643,8 @@ export default function Confirmation() {
               <h1 className="text-2xl font-bold text-navy mb-3">Une erreur est survenue</h1>
               <p className="text-navy/60 mb-8">
                 Si votre paiement a bien été effectué, contactez-nous à{' '}
-                <a href="mailto:contact@opusadvisory.fr" className="text-gold">
-                  contact@opusadvisory.fr
+                <a href="mailto:enzo@opusadvisor.fr" className="text-gold">
+                  enzo@opusadvisor.fr
                 </a>
               </p>
             </>

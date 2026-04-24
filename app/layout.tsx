@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 const SITE_URL = 'https://opusadvisor.fr';
-const SITE_NAME = 'Opus Advisor';
-const DEFAULT_TITLE = 'Opus Advisor - Cabinet de conseil en organisation & transformation';
+const SITE_NAME = 'Opus Advisory';
+const DEFAULT_TITLE =
+  'Opus Advisory — Consultant ops pour les patrons du BTP second œuvre';
 const DEFAULT_DESCRIPTION =
-  "Cabinet de conseil en automatisation, IA et no-code pour TPE et PME. Audit de processus, implémentation de workflows n8n et Make, formation et maintenance. Basé en France.";
+  "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, facturation 2027 prête. Diagnostic 2 500 €, pré-audit gratuit.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -15,15 +16,15 @@ export const metadata: Metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   keywords: [
-    'freelance automatisation',
-    'consultant automatisation',
-    'automatisation PME',
-    'expert no-code',
-    'workflow n8n',
-    'consultant Make',
-    'automatisation IA',
-    'intégration IA entreprise',
-    'automatisation processus',
+    'consultant automatisation BTP',
+    'logiciel gestion électricien PME',
+    'facturation électronique électricien 2027',
+    'automatisation devis plombier',
+    'relance automatique impayés BTP',
+    'système unifié entreprise bâtiment',
+    'Batappli consultant',
+    'Obat Tolteck EBP Bâtiment',
+    'gestion chantier second œuvre',
   ],
   robots: { index: true, follow: true },
   icons: {
@@ -56,10 +57,11 @@ const organizationJsonLd = {
       '@type': 'ProfessionalService',
       '@id': `${SITE_URL}/#organization`,
       name: SITE_NAME,
+      alternateName: 'Opus Advisor',
       description:
-        "Cabinet de conseil en automatisation, IA et no-code pour TPE et PME. Audit de processus, implémentation de workflows n8n et Make, intégration d'outils, formation et maintenance.",
+        "Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation 2027. Diagnostic chiffré, implémentation, formation équipe.",
       url: SITE_URL,
-      email: 'contact@opusadvisor.fr',
+      email: 'enzo@opusadvisor.fr',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Rennes',
@@ -68,26 +70,28 @@ const organizationJsonLd = {
       },
       areaServed: { '@type': 'Country', name: 'France' },
       serviceType: [
-        'Audit de processus',
-        'Automatisation no-code',
-        'Workflow n8n',
-        'Workflow Make',
-        "Intégration d'outils",
-        'Intégration IA',
-        'Formation automatisation',
-        'Maintenance workflows',
+        'Consultant ops BTP',
+        'Système de gestion second œuvre',
+        'Automatisation devis et relances',
+        'Mise en conformité facturation électronique 2027',
+        "Implémentation Batappli / Obat / Tolteck / EBP Bâtiment",
+        'Automatisation Make et n8n',
+        'Formation équipe BTP',
       ],
       knowsAbout: [
-        'n8n',
+        'second œuvre',
+        'électricité',
+        'plomberie',
+        'chauffage-climatisation',
+        'Batappli',
+        'Obat',
+        'Tolteck',
+        'EBP Bâtiment',
+        'facturation électronique 2027',
         'Make',
-        'Zapier',
-        'Airtable',
+        'n8n',
         'Notion',
-        'Google Sheets',
-        'API REST',
-        'Intelligence artificielle',
-        'automatisation',
-        'no-code',
+        'WhatsApp Business',
       ],
       sameAs: [
         'https://www.linkedin.com/in/enzo-monnier-7524ab205/',

@@ -1,70 +1,104 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
+
+const GOLD = '#C9A84C';
+const NAVY = '#1A2332';
 
 interface ServiceData {
   id: string;
+  n: string;
+  tag: string;
   title: string;
+  hook: string;
   description: string;
-  features: string[];
-  image: string;
-  imageAlt: string;
+  deliverables: string[];
   price: string;
   priceNote?: string;
+  duration: string;
+  cta?: string;
 }
 
 const services: ServiceData[] = [
   {
-    id: 'diagnostic',
-    title: 'Diagnostic & Stratégie',
-    description: "On ne touche à rien avant de comprendre. Audit de votre organisation, cartographie des flux, identification des vrais blocages. Vous repartez avec une feuille de route claire, pas un rapport de 80 pages.",
-    features: [
-      "Audit complet de l'existant",
-      "Identification des points de friction",
-      "Cartographie des processus",
-      "Conseil stratégique et priorisation",
-      "Feuille de route opérationnelle",
+    id: 'pre-audit',
+    n: '01',
+    tag: 'Sans engagement',
+    title: 'Pré-audit gratuit',
+    hook: 'Vous voyez ce que ça donne avant de décider quoi que ce soit.',
+    description:
+      "30 minutes en visio. Vous me montrez vos outils en partage d'écran. J'identifie 3 points de friction concrets sur votre boîte, et je vous montre en direct comment on les règle. Pas de slide, pas de vente.",
+    deliverables: [
+      'Tour rapide de vos outils actuels',
+      '3 points de friction identifiés en direct',
+      "1 automation démontrée sur vos propres données",
+      "Recommandation honnête : go / no-go",
     ],
-    image: '/images/dashboard-linky.png',
-    imageAlt: 'Diagnostic & Stratégie',
-    price: 'À partir de 2 000€',
+    price: 'Gratuit',
+    duration: '30 min · Visio',
+    cta: 'Réserver mon créneau',
+  },
+  {
+    id: 'diagnostic',
+    n: '02',
+    tag: 'Forfait fixe',
+    title: 'Diagnostic opérationnel',
+    hook: 'On cartographie votre boîte et on chiffre ce qu\'on vous fait gagner.',
+    description:
+      "Deux à trois semaines pour comprendre votre boîte de fond en comble. Interviews de l'équipe, cartographie des flux, analyse des outils en place. Livraison : un plan de consolidation précis, chiffré, avec ROI attendu. Si ça vous parle, on exécute. Sinon, vous gardez le plan.",
+    deliverables: [
+      "Cartographie complète de l'existant",
+      'Identification des 5 à 10 chantiers prioritaires',
+      'Vision cible sur 12 mois',
+      'Plan d\'exécution chiffré (coûts + gains estimés)',
+      'Restitution live avec votre équipe',
+    ],
+    price: '2 500 €',
+    priceNote: 'Forfait · TVA non applicable art. 293 B CGI',
+    duration: '2 à 3 semaines',
   },
   {
     id: 'implementation',
-    title: 'Implémentation',
-    description: "On construit, on n'envoie pas des specs. Automatisation, développement d'applications métier sur-mesure, intégrations. On passe de la stratégie au produit fonctionnel sans intermédiaire.",
-    features: [
-      "Automatisation (Make, Zapier, n8n)",
-      "Développement d'applications métier sur-mesure",
-      "Intégrations et interconnexion d'outils",
-      "Interfaces adaptées à vos process",
-      "Fiabilisation et structuration de la donnée",
+    n: '03',
+    tag: 'Livrable fonctionnel',
+    title: 'Implémentation système',
+    hook: "On configure, on connecte, on forme. Pas de livraison dans le vide.",
+    description:
+      "On déploie le système défini au diagnostic. Configuration des outils métier (Batappli, Obat, Tolteck, EBP), mise en place des automations (Make, n8n), couche collaborative (Notion, Google Workspace, WhatsApp Business). Tests sur vos vrais chantiers, formation de l'équipe, documentation écrite.",
+    deliverables: [
+      "Outil métier BTP implémenté et optimisé",
+      'Automations en production (relances, reporting, synchro)',
+      'Couche collaborative connectée (Notion / Drive + WhatsApp)',
+      "Formation équipe en français, sur vos données",
+      'Documentation et schémas remis',
     ],
-    image: '/images/make-scenario.jpg',
-    imageAlt: 'Implémentation',
-    price: 'À partir de 5 000€',
+    price: '5 000 € à 15 000 €',
+    priceNote: 'Selon périmètre · chiffré précisément après diagnostic',
+    duration: '4 à 10 semaines',
   },
   {
     id: 'suivi',
-    title: 'Suivi & Croissance',
-    description: "On reste parce que ça a de la valeur. Maintenance, mises à jour, nouvelles fonctionnalités, formation des équipes. Un partenariat continu pour que vos outils évoluent avec votre activité.",
-    features: [
-      "Maintenance et mises à jour",
-      "Développement de nouvelles fonctionnalités",
-      "Formation des équipes",
-      "Suivi de la performance",
-      "Support prioritaire",
+    n: '04',
+    tag: 'Optionnel · engagement 3 mois',
+    title: 'Suivi mensuel',
+    hook: "Votre système évolue avec votre boîte. On maintient, on ajuste, on ajoute.",
+    description:
+      "Un interlocuteur qui connaît votre système. Check mensuel, monitoring des automations, corrections si panne, nouvelles briques au fil de l'eau. Pas de ticket dans un support offshore : vous m'écrivez, je réponds.",
+    deliverables: [
+      'Monitoring des automations (alertes en cas de panne)',
+      'Point mensuel (30 min visio ou async)',
+      '2 à 4 heures d\'évolutions incluses / mois',
+      "Accès direct par mail et WhatsApp",
+      'Backup documentaire maintenu à jour',
     ],
-    image: '/images/ticket-linky.png',
-    imageAlt: 'Suivi & Croissance',
-    price: 'À partir de 400€ / mois',
-    priceNote: 'MAJ & formations sur devis',
+    price: '400 à 600 €/mois',
+    priceNote: 'Selon complexité du système · engagement 3 mois minimum',
+    duration: 'Mensuel',
   },
 ];
-
-const serviceNumbers = ['01', '02', '03'];
 
 export const ServicesView: React.FC = () => {
   useEffect(() => {
@@ -74,8 +108,9 @@ export const ServicesView: React.FC = () => {
       const element = document.getElementById(sectionId);
       if (element) {
         setTimeout(() => {
-          const navbarHeight = 80;
-          const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          const navbarHeight = 100;
+          const offsetPosition =
+            element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
           window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }, 100);
       }
@@ -83,131 +118,213 @@ export const ServicesView: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <main className="flex-grow">
+      {/* Hero */}
       <section
-        className="relative h-[55vh] flex items-center justify-center overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #1A2332, #2A3A50, #1A2332)',
-          backgroundSize: '400% 400%',
-          animation: 'mesh-shift 14s ease infinite',
-        }}
+        className="relative text-white overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20"
+        style={{ background: `linear-gradient(135deg, ${NAVY}, #223047 55%, ${NAVY})` }}
       >
-        <div className="absolute pointer-events-none opacity-20 hidden md:block"
-          style={{ width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.3), transparent)', filter: 'blur(80px)', top: '-30%', left: '-5%', animation: 'float 10s ease-in-out infinite' }} />
-        <div className="absolute pointer-events-none opacity-15 hidden md:block"
-          style={{ width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(26,35,50,0.6), transparent)', filter: 'blur(60px)', bottom: '-15%', right: '10%', animation: 'float-delayed 8s ease-in-out infinite' }} />
+        <div
+          className="absolute pointer-events-none opacity-40"
+          style={{
+            top: '-10%',
+            left: '-10%',
+            width: 600,
+            height: 600,
+            background: `radial-gradient(circle, ${GOLD}33 0%, transparent 70%)`,
+            filter: 'blur(80px)',
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.08]"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
 
-        <div className="absolute inset-0 pointer-events-none opacity-[0.10]"
-          style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-
-        <div className="relative z-10 text-center px-6">
-          <motion.p
-            className="text-sm font-semibold tracking-[0.25em] uppercase mb-4"
-            style={{ color: '#C9A84C' }}
-            initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            className="max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            Opus Advisor · Cabinet Conseil
-          </motion.p>
-          <motion.h1
-            className="text-6xl md:text-7xl lg:text-8xl font-bold text-white"
-            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Notre Expertise
-          </motion.h1>
+            <p
+              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-4"
+              style={{ color: GOLD }}
+            >
+              Nos services
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Quatre offres claires, chiffrées, sans surprise.
+            </h1>
+            <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
+              Vous payez ce qui est dit. Vous savez combien ça coûte avant de signer. Vous sortez quand vous voulez.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <main className="flex-grow">
-        {services.map((service, index) => (
-          <React.Fragment key={service.id}>
-            <motion.section
-              id={service.id}
-              className="py-20 bg-white"
-              initial={{ opacity: 0, y: 40 }}
+      {/* Cards */}
+      <section className="py-16 md:py-20 bg-[#FAF8F4]">
+        <div className="container mx-auto px-6 max-w-6xl space-y-10 md:space-y-14">
+          {services.map((s, i) => (
+            <motion.div
+              key={s.id}
+              id={s.id}
+              className="bg-white rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 scroll-mt-28"
+              style={{
+                border: '1px solid rgba(26,35,50,0.08)',
+                boxShadow: '0 12px 40px rgba(26,35,50,0.06)',
+              }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.6, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="container mx-auto px-6 max-w-6xl">
-                <motion.div
-                  className="flex items-center gap-4 mb-10"
-                  initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }} transition={{ duration: 0.5 }}
-                >
+              {/* Colonne gauche — num + meta */}
+              <div
+                className="lg:col-span-4 p-8 md:p-10 flex flex-col justify-between gap-8"
+                style={{ background: i === 0 ? `${GOLD}12` : NAVY, color: i === 0 ? NAVY : 'white' }}
+              >
+                <div>
                   <span
-                    className="text-6xl font-bold leading-none"
-                    style={{ color: 'rgba(201,168,76,0.25)', fontFamily: 'Bricolage Grotesque, system-ui' }}
+                    className="text-7xl md:text-8xl font-bold leading-none"
+                    style={{ color: i === 0 ? GOLD : `${GOLD}99`, opacity: i === 0 ? 0.6 : 1 }}
                   >
-                    {serviceNumbers[index]}
+                    {s.n}
                   </span>
-                  <div className="h-px flex-1" style={{ background: 'linear-gradient(to right, rgba(201,168,76,0.3), transparent)' }} />
-                </motion.div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-                  <motion.div
-                    className="card-glass rounded-3xl p-8 lg:p-10 relative overflow-hidden flex flex-col justify-center"
-                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
-                    whileHover={{ boxShadow: '0 24px 60px rgba(201,168,76,0.12), 0 1px 0 rgba(255,255,255,0.8) inset' }}
+                  <p
+                    className="mt-5 text-[11px] font-semibold uppercase tracking-[0.2em]"
+                    style={{ color: i === 0 ? NAVY : 'rgba(255,255,255,0.55)' }}
                   >
-                    <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full pointer-events-none opacity-30"
-                      style={{ background: 'radial-gradient(circle, rgba(201,168,76,0.5), transparent)', filter: 'blur(30px)' }} />
-
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 leading-tight relative z-10">
-                      {service.title}
-                    </h2>
-                    <p className="text-gray-800 text-lg leading-relaxed mb-8 relative z-10">{service.description}</p>
-
-                    <ul className="space-y-3 relative z-10">
-                      {service.features.map((feature, fi) => (
-                        <motion.li
-                          key={fi}
-                          className="flex items-start gap-3"
-                          initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.2 + fi * 0.07 }}
-                        >
-                          <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(201,168,76,0.15)' }}>
-                            <Check size={11} style={{ color: '#C9A84C' }} strokeWidth={3} />
-                          </div>
-                          <span className="text-gray-900 leading-snug">{feature}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-
-                    <div className="mt-8 pt-6 border-t border-gray-100 relative z-10">
-                      <p className="text-2xl font-bold text-gray-900">{service.price}</p>
-                      {service.priceNote && (
-                        <p className="text-sm text-gray-400 mt-1">{service.priceNote}</p>
-                      )}
-                    </div>
-                  </motion.div>
-
-                  <motion.div
-                    className="relative"
-                    initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
+                    {s.tag}
+                  </p>
+                  <h2
+                    className="text-2xl md:text-3xl font-bold mt-2 leading-tight"
+                    style={{ color: i === 0 ? NAVY : 'white' }}
                   >
-                    <img
-                      src={service.image}
-                      alt={service.imageAlt}
-                      className="w-full h-full object-cover object-left rounded-3xl shadow-[0_20px_50px_rgba(26,35,50,0.15)]"
-                      loading="lazy"
-                    />
-                  </motion.div>
+                    {s.title}
+                  </h2>
+                  <p
+                    className="text-sm md:text-base mt-3 leading-relaxed italic"
+                    style={{ color: i === 0 ? 'rgba(26,35,50,0.75)' : 'rgba(255,255,255,0.75)' }}
+                  >
+                    « {s.hook} »
+                  </p>
+                </div>
+
+                <div
+                  className="pt-5 border-t"
+                  style={{
+                    borderColor: i === 0 ? 'rgba(26,35,50,0.15)' : 'rgba(255,255,255,0.15)',
+                  }}
+                >
+                  <p
+                    className="text-xs font-semibold uppercase tracking-wider mb-1"
+                    style={{ color: i === 0 ? 'rgba(26,35,50,0.5)' : 'rgba(255,255,255,0.5)' }}
+                  >
+                    {s.duration}
+                  </p>
+                  <p
+                    className="text-2xl md:text-3xl font-bold"
+                    style={{ color: i === 0 ? NAVY : 'white' }}
+                  >
+                    {s.price}
+                  </p>
+                  {s.priceNote && (
+                    <p
+                      className="text-xs mt-1"
+                      style={{ color: i === 0 ? 'rgba(26,35,50,0.5)' : 'rgba(255,255,255,0.5)' }}
+                    >
+                      {s.priceNote}
+                    </p>
+                  )}
                 </div>
               </div>
-            </motion.section>
 
-            {index < services.length - 1 && (
-              <div className="container mx-auto px-6 max-w-6xl">
-                <div className="h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,76,0.25), transparent)' }} />
+              {/* Colonne droite — description + livrables */}
+              <div className="lg:col-span-8 p-8 md:p-10 flex flex-col gap-6">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  {s.description}
+                </p>
+
+                <div>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
+                    style={{ color: GOLD }}
+                  >
+                    Ce qui est livré
+                  </p>
+                  <ul className="space-y-3">
+                    {s.deliverables.map((d, di) => (
+                      <li key={di} className="flex items-start gap-3">
+                        <div
+                          className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                          style={{ background: `${GOLD}22`, border: `1px solid ${GOLD}66` }}
+                        >
+                          <Check size={11} style={{ color: NAVY }} strokeWidth={3} />
+                        </div>
+                        <span className="text-sm md:text-[15px] text-gray-700 leading-snug">
+                          {d}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {s.cta && (
+                  <div
+                    className="pt-4 mt-auto border-t"
+                    style={{ borderColor: 'rgba(26,35,50,0.08)' }}
+                  >
+                    <Link
+                      href="/contact"
+                      className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm md:text-base transition-all duration-200 hover:scale-[1.02]"
+                      style={{ background: GOLD, color: NAVY }}
+                    >
+                      {s.cta}
+                      <ArrowRight
+                        size={18}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
+                    </Link>
+                  </div>
+                )}
               </div>
-            )}
-          </React.Fragment>
-        ))}
-      </main>
-    </>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA bas */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <h2
+            className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-5"
+            style={{ color: NAVY }}
+          >
+            Vous hésitez sur l'offre qui colle à votre boîte ?
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+            Commencez par le pré-audit. Il est gratuit, il dure 30 min, et vous en ressortez avec
+            3 points de friction identifiés. On décide ensuite, ensemble, si on continue ou pas.
+          </p>
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-200 hover:scale-[1.02] btn-shimmer"
+            style={{ background: GOLD, color: NAVY }}
+          >
+            Réserver mon pré-audit
+            <ArrowRight
+              size={20}
+              className="group-hover:translate-x-1 transition-transform"
+            />
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 };

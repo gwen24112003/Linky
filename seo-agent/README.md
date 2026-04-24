@@ -1,6 +1,6 @@
-# SEO Auditor - Linky
+# SEO Auditor - Opus Advisory
 
-Outil d'audit et de scoring SEO pour le site Linky.
+Outil d'audit et de scoring SEO pour le site Opus Advisory.
 
 ## Installation
 
@@ -14,7 +14,7 @@ pip install -r requirements.txt
 python seo_auditor.py
 ```
 
-Par defaut, analyse https://linky4u.fr
+Par defaut, analyse https://opusadvisor.fr
 
 Pour specifier une URL:
 ```bash

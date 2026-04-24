@@ -1,215 +1,218 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, ArrowRight } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import { CustomSelect } from '@/components/ui/CustomSelect';
+import {
+  Calendar,
+  Clock,
+  Mail,
+  Linkedin,
+  ShieldCheck,
+  ArrowRight,
+  Phone,
+} from 'lucide-react';
 
-const inputClass =
-  'w-full bg-transparent border-b border-gray-200 outline-none py-3 text-gray-900 transition-colors duration-300 placeholder:text-gray-400 text-lg';
+const GOLD = '#C9A84C';
+const NAVY = '#1A2332';
+
+const CAL_URL = 'https://cal.com/enzo-monnier-qc1nqv/30min';
 
 export const ContactView: React.FC = () => {
-  const [formData, setFormData] = useState({ objet: '', service: '', message: '', email: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    try {
-      emailjs.init('7nk-E4GjPBoHa_-Py');
-      await emailjs.send('service_d1de6lx', 'template_n3wiuwt', {
-        from_email: formData.email,
-        to_name: 'Opus Advisor',
-        objet: formData.objet,
-        service: formData.service,
-        message: formData.message,
-      });
-      setSubmitStatus('success');
-      setFormData({ objet: '', service: '', message: '', email: '' });
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } catch {
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
-    <>
+    <main className="flex-grow">
+      {/* Hero contact */}
       <section
-        className="relative h-[50vh] flex items-center justify-center overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #1A2332, #2A3A50, #1A2332)',
-          backgroundSize: '400% 400%',
-          animation: 'mesh-shift 14s ease infinite',
-        }}
+        className="relative text-white overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20"
+        style={{ background: `linear-gradient(135deg, ${NAVY}, #223047 55%, ${NAVY})` }}
       >
-        <div className="absolute pointer-events-none opacity-20 hidden md:block"
-          style={{ width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.4), transparent)', filter: 'blur(70px)', top: '-20%', right: '5%', animation: 'float 9s ease-in-out infinite' }} />
-        <div className="absolute inset-0 pointer-events-none opacity-[0.10]"
-          style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div
+          className="absolute pointer-events-none opacity-40"
+          style={{
+            top: '-10%',
+            right: '-10%',
+            width: 500,
+            height: 500,
+            background: `radial-gradient(circle, ${GOLD}33 0%, transparent 70%)`,
+            filter: 'blur(80px)',
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.08]"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
 
-        <div className="relative z-10 text-center px-6">
-          <motion.p
-            className="text-sm font-semibold tracking-[0.25em] uppercase mb-4"
-            style={{ color: '#C9A84C' }}
-            initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            className="max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            Audit · Premier échange
-          </motion.p>
-          <motion.h1
-            className="text-5xl md:text-6xl lg:text-8xl font-bold text-white font-heading"
-            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Contactez nos associés
-          </motion.h1>
+            <p
+              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-4"
+              style={{ color: GOLD }}
+            >
+              Pré-audit · 30 min · Gratuit
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              On parle de votre boîte ?
+            </h1>
+            <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
+              30 minutes en visio. Vous me montrez vos outils. Je vous identifie 3 points de friction et je vous montre en direct comment les régler.
+              <br />
+              <span className="text-white font-medium">
+                Pas de vente, pas d'engagement.
+              </span>
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="flex-grow relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative bg-gray-50 px-10 py-20 lg:px-16 flex flex-col justify-center overflow-hidden">
-            <div className="absolute pointer-events-none"
-              style={{ width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.15), transparent)', filter: 'blur(60px)', top: '10%', left: '-20%', animation: 'float 10s ease-in-out infinite' }} />
-            <div className="absolute bottom-20 right-10 opacity-15 hidden lg:block pointer-events-none">
-              <motion.div animate={{ rotate: 360 }} transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}>
-                <div style={{ width: 90, height: 90, clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)', border: '1px solid rgba(201,168,76,0.5)', background: 'rgba(201,168,76,0.06)' }} />
-              </motion.div>
-            </div>
-
+      {/* Bloc Cal.com + coordonnées */}
+      <section className="py-16 md:py-20 bg-[#FAF8F4]">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Colonne Cal.com (placeholder) */}
             <motion.div
-              className="relative z-10"
-              initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-2 bg-white rounded-2xl p-6 md:p-8"
+              style={{
+                border: '1px solid rgba(26,35,50,0.08)',
+                boxShadow: '0 4px 24px rgba(26,35,50,0.04)',
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-[0.95]">
-                Vos enjeux<br />méritent une{' '}
-                <span className="text-gradient">expertise</span>
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-md">
-                Discutons de vos défis de structuration et de croissance. Premier audit de cadrage sans engagement avec un consultant senior.
-              </p>
+              <div className="flex items-center gap-3 mb-5">
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style={{ background: `${GOLD}18`, border: `1px solid ${GOLD}55` }}
+                >
+                  <Calendar size={20} style={{ color: NAVY }} />
+                </div>
+                <h2 className="text-xl md:text-2xl font-bold" style={{ color: NAVY }}>
+                  Réserver un créneau
+                </h2>
+              </div>
 
-              <motion.a
-                href="mailto:contact@opusadvisor.fr"
-                className="flex items-center gap-4 mb-4 p-5 rounded-2xl group"
-                style={{ background: 'rgba(201,168,76,0.04)', border: '1px solid rgba(201,168,76,0.12)' }}
-                whileHover={{ background: 'rgba(201,168,76,0.10)', borderColor: 'rgba(201,168,76,0.30)', x: 4 }}
-                transition={{ duration: 0.2 }}
+              <div
+                className="rounded-xl overflow-hidden"
+                style={{ border: '1px solid rgba(26,35,50,0.08)' }}
               >
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(201,168,76,0.2)' }}>
-                  <Mail size={20} style={{ color: '#C9A84C' }} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wider">Email</p>
-                  <p className="text-gray-900 font-medium transition-colors">contact@opusadvisor.fr</p>
-                </div>
-              </motion.a>
+                <iframe
+                  src={CAL_URL}
+                  title="Réserver un créneau de pré-audit avec Opus Advisory"
+                  className="w-full h-[720px] border-0"
+                  loading="lazy"
+                  allow="camera; microphone; fullscreen; payment"
+                />
+              </div>
 
-              <motion.a
-                href="tel:+33615756549"
-                className="flex items-center gap-4 p-5 rounded-2xl group"
-                style={{ background: 'rgba(201,168,76,0.04)', border: '1px solid rgba(201,168,76,0.12)' }}
-                whileHover={{ background: 'rgba(201,168,76,0.10)', borderColor: 'rgba(201,168,76,0.30)', x: 4 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(201,168,76,0.2)' }}>
-                  <Phone size={20} style={{ color: '#C9A84C' }} />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 mb-0.5 uppercase tracking-wider">Téléphone</p>
-                  <p className="text-gray-900 font-medium transition-colors">+33 6 15 75 65 49</p>
-                </div>
-              </motion.a>
+              <div className="mt-4 text-center">
+                <a
+                  href={CAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs md:text-sm text-gray-500 hover:text-gray-700 transition-colors"
+                >
+                  <ArrowRight size={14} />
+                  Ouvrir le calendrier dans un nouvel onglet
+                </a>
+              </div>
+
+              <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs md:text-sm text-gray-500">
+                <li className="inline-flex items-center gap-2">
+                  <Clock size={14} style={{ color: GOLD }} /> 30 min · Visio
+                </li>
+                <li className="inline-flex items-center gap-2">
+                  <ShieldCheck size={14} style={{ color: GOLD }} /> Annulation libre jusqu'à 2h avant
+                </li>
+                <li className="inline-flex items-center gap-2">
+                  <Calendar size={14} style={{ color: GOLD }} /> Plages dispo sous 5 jours
+                </li>
+              </ul>
             </motion.div>
-          </div>
 
-          <div className="bg-white px-10 py-20 lg:px-16 flex flex-col justify-center relative overflow-hidden">
-            <div className="absolute pointer-events-none opacity-40"
-              style={{ width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.06), transparent)', filter: 'blur(40px)', top: '5%', right: '-10%' }} />
-
-            <motion.div
-              className="relative z-10 max-w-lg mx-auto w-full"
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            {/* Colonne coordonnées secours */}
+            <motion.aside
+              className="bg-white rounded-2xl p-6 md:p-8 flex flex-col gap-5 h-fit"
+              style={{
+                border: '1px solid rgba(26,35,50,0.08)',
+                boxShadow: '0 4px 24px rgba(26,35,50,0.04)',
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Envoyez-nous un message</h3>
+              <div>
+                <p
+                  className="text-xs font-semibold tracking-[0.2em] uppercase mb-3"
+                  style={{ color: GOLD }}
+                >
+                  Ou par écrit
+                </p>
+                <h3 className="text-lg md:text-xl font-bold mb-4" style={{ color: NAVY }}>
+                  Si la visio vous gonfle, on peut commencer par mail.
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Décrivez votre boîte en 3 lignes : métier, taille, outils actuels, principale galère. Je vous réponds sous 24h ouvrées.
+                </p>
+              </div>
 
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div>
-                  <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Objet</label>
-                  <input type="text" name="objet" placeholder="Quel est l'objet de votre message ?" required value={formData.objet} onChange={handleChange} className={inputClass} />
-                </div>
+              <div
+                className="flex flex-col gap-3 pt-4 border-t"
+                style={{ borderColor: 'rgba(26,35,50,0.08)' }}
+              >
+                <a
+                  href="mailto:enzo@opusadvisor.fr"
+                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-75 transition-opacity"
+                  style={{ color: NAVY }}
+                >
+                  <Mail size={18} style={{ color: GOLD }} />
+                  enzo@opusadvisor.fr
+                </a>
+                <a
+                  href="tel:+33615756549"
+                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-75 transition-opacity"
+                  style={{ color: NAVY }}
+                >
+                  <Phone size={18} style={{ color: GOLD }} />
+                  +33 6 15 75 65 49
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/enzo-monnier-7524ab205/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-75 transition-opacity"
+                  style={{ color: NAVY }}
+                >
+                  <Linkedin size={18} style={{ color: GOLD }} />
+                  Enzo Monnier
+                </a>
+              </div>
 
-                <div>
-                  <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Type de besoin</label>
-                  <CustomSelect
-                    name="service"
-                    value={formData.service}
-                    onChange={(val) => setFormData((f) => ({ ...f, service: val }))}
-                    placeholder="Sélectionner un service…"
-                    required
-                    options={[
-                      { value: 'Diagnostic & Stratégie', label: 'Diagnostic & Stratégie' },
-                      { value: 'Optimisation des Processus', label: 'Optimisation des Processus' },
-                      { value: 'Accompagnement Long Terme', label: 'Accompagnement Long Terme' },
-                      { value: 'Autre', label: 'Autre demande' },
-                    ]}
-                  />
-                </div>
-
-                <div>
-                  <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Message</label>
-                  <textarea name="message" placeholder="Décrivez vos enjeux en quelques lignes…" required rows={5} value={formData.message} onChange={handleChange} className={`${inputClass} resize-none`} />
-                </div>
-
-                <div>
-                  <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Email professionnel</label>
-                  <input type="email" name="email" placeholder="votre@email.com" required value={formData.email} onChange={handleChange} className={inputClass} />
-                </div>
-
-                {submitStatus === 'success' && (
-                  <motion.div className="p-4 rounded-xl"
-                    style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.3)' }}
-                    initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }}>
-                    <p className="text-emerald-700 font-medium">✓ Message envoyé avec succès !</p>
-                  </motion.div>
-                )}
-
-                {submitStatus === 'error' && (
-                  <motion.div className="p-4 rounded-xl"
-                    style={{ background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.25)' }}
-                    initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }}>
-                    <p className="text-red-600 font-medium">✗ Erreur lors de l'envoi. Réessayez ou contactez-nous directement.</p>
-                  </motion.div>
-                )}
-
-                <div className="flex justify-end pt-2">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="flex items-center gap-3 text-white px-8 py-4 rounded-xl text-base font-semibold hover:scale-105 transition-all duration-200 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 btn-shimmer group"
-                    style={{ background: '#1A2332' }}
-                  >
-                    <span>{isSubmitting ? 'Envoi en cours…' : 'Solliciter un audit'}</span>
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />
-                  </button>
-                </div>
-              </form>
-            </motion.div>
+              <div
+                className="mt-2 p-4 rounded-xl text-xs text-gray-600 leading-relaxed"
+                style={{ background: '#FAF8F4' }}
+              >
+                <strong style={{ color: NAVY }}>Ce qu'on fera au pré-audit :</strong>
+                <ul className="mt-2 space-y-1 list-disc list-inside">
+                  <li>Tour rapide de vos outils actuels</li>
+                  <li>3 points de friction identifiés en direct</li>
+                  <li>1 automation démontrée sur vos propres données</li>
+                  <li>Aucun engagement, aucune vente</li>
+                </ul>
+              </div>
+            </motion.aside>
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };

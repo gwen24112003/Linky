@@ -4,9 +4,10 @@ import { Footer } from '@/components/layout/Footer';
 import { ServicesView } from '@/components/pages/ServicesView';
 
 const PAGE_URL = 'https://opusadvisor.fr/services';
-const PAGE_TITLE = 'Notre Expertise - Opus Advisor';
+const PAGE_TITLE =
+  'Services & tarifs — Opus Advisory (BTP second œuvre)';
 const PAGE_DESCRIPTION =
-  'Diagnostic, implémentation et suivi continu. Opus Advisor structure vos processus et développe vos outils métier.';
+  'Pré-audit gratuit 30 min. Diagnostic 2 500 €. Implémentation 5 000 à 15 000 €. Suivi mensuel 400 à 600 €. Quatre offres claires, chiffrées, sans surprise.';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
