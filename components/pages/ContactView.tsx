@@ -106,7 +106,7 @@ export const ContactView: React.FC = () => {
               >
                 <iframe
                   src={CAL_URL}
-                  title="Réserver un créneau de pré-audit avec Opus Advisory"
+                  title="Réserver un créneau de pré-audit avec Opus Advisor"
                   className="w-full h-[720px] border-0"
                   loading="lazy"
                   allow="camera; microphone; fullscreen; payment"

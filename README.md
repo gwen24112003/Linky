@@ -1,6 +1,6 @@
-# Opus Advisory - Site Web
+# Opus Advisor - Site Web
 
-Site vitrine d'**Opus Advisory**, consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim).
+Site vitrine d'**Opus Advisor**, consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim).
 
 On rend 10h/semaine aux patrons en centralisant leurs outils : devis, chantiers, relances, facturation 2027.
 
@@ -96,4 +96,4 @@ vercel --prod
 
 ## Licence
 
-Propriété d'Opus Advisory. Tous droits réservés.
+Propriété d'Opus Advisor. Tous droits réservés.

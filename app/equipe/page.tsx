@@ -4,7 +4,7 @@ import { Footer } from '@/components/layout/Footer';
 import { TeamView } from '@/components/pages/TeamView';
 
 const PAGE_URL = 'https://opusadvisor.fr/equipe';
-const PAGE_TITLE = "Qui bosse sur votre système — Opus Advisory";
+const PAGE_TITLE = "Qui bosse sur votre système — Opus Advisor";
 const PAGE_DESCRIPTION =
   "Enzo Monnier, développeur devenu consultant ops pour le BTP second œuvre. Je code encore les systèmes que je déploie chez vous. Pas de sous-traitance, pas de chef de projet.";
 

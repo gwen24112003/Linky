@@ -83,13 +83,13 @@ export default async function ArticlePage({ params }: PageProps) {
       jobTitle: 'Consultant ops · Fondateur',
       worksFor: {
         '@type': 'Organization',
-        name: 'Opus Advisory',
+        name: 'Opus Advisor',
         url: 'https://opusadvisor.fr',
       },
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Opus Advisory',
+      name: 'Opus Advisor',
       url: 'https://opusadvisor.fr',
       logo: {
         '@type': 'ImageObject',

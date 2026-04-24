@@ -2,7 +2,7 @@
 
 # Target Site
 target_site:
-  name: "Opus Advisory - Consultant ops BTP second œuvre"
+  name: "Opus Advisor - Consultant ops BTP second œuvre"
   url: "https://opusadvisor.fr"
   blog_path: "./src/data/articles"
   site_path: "."

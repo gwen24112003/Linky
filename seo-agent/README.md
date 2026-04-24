@@ -1,6 +1,6 @@
-# SEO Auditor - Opus Advisory
+# SEO Auditor - Opus Advisor
 
-Outil d'audit et de scoring SEO pour le site Opus Advisory.
+Outil d'audit et de scoring SEO pour le site Opus Advisor.
 
 ## Installation
 

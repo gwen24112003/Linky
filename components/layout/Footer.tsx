@@ -130,7 +130,7 @@ export const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="w-full border-t border-gray-800 pt-8">
             <p className="text-gray-600 text-sm text-center">
-              © {new Date().getFullYear()} Opus Advisory · Consultant ops pour les patrons du BTP second œuvre. Tous droits réservés.
+              © {new Date().getFullYear()} Opus Advisor · Consultant ops pour les patrons du BTP second œuvre. Tous droits réservés.
             </p>
           </div>
         </div>

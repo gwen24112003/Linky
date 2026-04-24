@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion, type Variants } from 'framer-motion';
-import { ArrowRight, Clock, Calendar, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Clock, Calendar, ShieldCheck, Network } from 'lucide-react';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
@@ -18,16 +18,24 @@ const item: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-// Petits blocs "avant / après" pour le visuel éditorial
-const beforeTools = ['Excel', 'WhatsApp', 'Batappli', 'Emails', 'Papiers', 'Banque'];
-const afterTools = ['Devis', 'Chantier', 'Facturation', 'Équipe', 'Banque', 'SAV'];
+// Outils réels d'une boîte du second œuvre.
+// Mêmes noms avant/après : on ne les remplace pas, on les connecte.
+// Positions en % dans le conteneur radial (left, top), centre = hub à 50/50.
+const tools = [
+  { name: 'Excel',    left: 20, top: 18 },
+  { name: 'WhatsApp', left: 80, top: 18 },
+  { name: 'Batappli', left: 10, top: 50 },
+  { name: 'Emails',   left: 90, top: 50 },
+  { name: 'Papiers',  left: 20, top: 82 },
+  { name: 'Banque',   left: 80, top: 82 },
+];
 
 export const HeroBTP: React.FC = () => {
   return (
     <section
       className="relative text-white overflow-hidden min-h-[calc(100vh-5rem)] flex items-center"
       style={{ background: `linear-gradient(135deg, ${NAVY}, #223047 55%, ${NAVY})` }}
-      aria-label="Opus Advisory — Consultant ops pour les patrons du BTP second œuvre"
+      aria-label="Opus Advisor — Consultant ops pour les patrons du BTP second œuvre"
     >
       {/* Blob doré en fond */}
       <div
@@ -152,7 +160,7 @@ export const HeroBTP: React.FC = () => {
                 boxShadow: '0 24px 60px rgba(0,0,0,0.35)',
               }}
             >
-              {/* Avant */}
+              {/* Avant — mêmes outils, dispersés, aucun lien */}
               <div className="mb-5">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="inline-block h-2 w-2 rounded-full bg-red-400/80" />
@@ -160,22 +168,24 @@ export const HeroBTP: React.FC = () => {
                     Aujourd'hui
                   </span>
                 </div>
-                <div className="grid grid-cols-3 gap-2">
-                  {beforeTools.map((t) => (
+                <div className="relative h-[200px] md:h-[220px]">
+                  {tools.map((t) => (
                     <div
-                      key={t}
-                      className="text-xs md:text-sm px-2 py-2.5 rounded-lg text-center text-white/75"
+                      key={t.name}
+                      className="absolute -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm px-3 py-1.5 rounded-lg text-white/75 whitespace-nowrap"
                       style={{
+                        left: `${t.left}%`,
+                        top: `${t.top}%`,
                         background: 'rgba(255,255,255,0.04)',
                         border: '1px dashed rgba(255,255,255,0.18)',
                       }}
                     >
-                      {t}
+                      {t.name}
                     </div>
                   ))}
                 </div>
                 <p className="mt-3 text-[11px] text-white/40 italic">
-                  6 outils qui ne se parlent pas.
+                  6 outils en silo. Chacun dans son coin.
                 </p>
               </div>
 
@@ -195,7 +205,7 @@ export const HeroBTP: React.FC = () => {
                 <div className="flex-1 h-px bg-white/15" />
               </div>
 
-              {/* Après */}
+              {/* Après — mêmes outils, reliés à un hub central */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <span
@@ -209,23 +219,64 @@ export const HeroBTP: React.FC = () => {
                     Après
                   </span>
                 </div>
-                <div className="grid grid-cols-3 gap-2">
-                  {afterTools.map((t) => (
+                <div className="relative h-[200px] md:h-[220px]">
+                  {/* Lignes qui relient chaque outil au hub central */}
+                  <svg
+                    className="absolute inset-0 w-full h-full pointer-events-none"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                  >
+                    {tools.map((t) => (
+                      <line
+                        key={t.name}
+                        x1="50"
+                        y1="50"
+                        x2={t.left}
+                        y2={t.top}
+                        stroke={GOLD}
+                        strokeOpacity="0.6"
+                        strokeWidth="1.3"
+                        strokeLinecap="round"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    ))}
+                  </svg>
+
+                  {/* Mêmes chips qu'avant, mêmes positions — on change pas les outils */}
+                  {tools.map((t) => (
                     <div
-                      key={t}
-                      className="text-xs md:text-sm px-2 py-2.5 rounded-lg text-center font-medium"
+                      key={t.name}
+                      className="absolute -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm px-3 py-1.5 rounded-lg font-medium whitespace-nowrap z-10"
                       style={{
-                        background: `${GOLD}14`,
-                        border: `1px solid ${GOLD}55`,
+                        left: `${t.left}%`,
+                        top: `${t.top}%`,
+                        background: `${GOLD}1A`,
+                        border: `1px solid ${GOLD}66`,
                         color: 'white',
                       }}
                     >
-                      {t}
+                      {t.name}
                     </div>
                   ))}
+
+                  {/* Hub central — la couche Opus qui fait le liant */}
+                  <div
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-10"
+                    style={{
+                      width: 52,
+                      height: 52,
+                      background: GOLD,
+                      color: NAVY,
+                      boxShadow: `0 0 0 6px ${GOLD}22, 0 0 28px ${GOLD}55`,
+                    }}
+                    aria-label="Hub Opus — couche qui connecte vos outils"
+                  >
+                    <Network size={22} strokeWidth={2.2} />
+                  </div>
                 </div>
                 <p className="mt-3 text-[11px] text-white/60 italic">
-                  Un hub central. Tout le monde parle la même langue.
+                  Les mêmes outils. On les fait juste parler ensemble.
                 </p>
               </div>
             </div>

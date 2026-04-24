@@ -123,7 +123,7 @@ export default function CasClientsPage() {
                 3 places pour construire la v1 avec nous.
               </h1>
               <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
-                On démarre Opus Advisory. Plutôt que d'inventer des cas clients bidons, on ouvre 3 places pilotes pour des boîtes du second œuvre en Bretagne et Pays-de-la-Loire. Système complet, tarif pilote, et on publie le cas après 6 mois de prod.
+                On démarre Opus Advisor. Plutôt que d'inventer des cas clients bidons, on ouvre 3 places pilotes pour des boîtes du second œuvre en Bretagne et Pays-de-la-Loire. Système complet, tarif pilote, et on publie le cas après 6 mois de prod.
               </p>
             </div>
           </div>
@@ -305,15 +305,16 @@ export default function CasClientsPage() {
 
             <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
               <p>
-                Plein de consultants vendent des frameworks sortis de webinaires LinkedIn. Nous, on part du postulat inverse : la méthode Opus doit se tester sur 3 boîtes réelles, avec des vraies contraintes métier, avant qu'on la passe au catalogue standard.
+                Plein de consultants vendent des frameworks sortis de webinaires LinkedIn. Nous, on part du postulat inverse : la méthode Opus doit se tester sur 3 boîtes réelles, avec de vraies contraintes métier, avant qu'on la passe au catalogue standard.
               </p>
               <p>
-                C'est pour ça qu'on ouvre 3 places pilotes à tarif réduit. Vous gagnez un système complet pour 40% de moins. On gagne la validation terrain qu'il nous faut pour construire la suite sérieusement.
-              </p>
-              <p className="font-medium" style={{ color: NAVY }}>
-                Quand les 3 premiers cas sont publiés (prévu : janvier 2027), le tarif repasse au catalogue. Les pilotes, eux, gardent leur tarif sur les 6 mois de suivi.
+                C'est pour ça qu'on ouvre 3 places à tarif pilote. Vous gagnez un système complet pour 40% de moins. On gagne la validation terrain qu'il nous faut pour construire la suite sérieusement.
               </p>
             </div>
+
+            <p className="mt-6 text-sm text-gray-500 italic">
+              Places ouvertes jusqu'aux 3 premiers cas publiés. Les pilotes conservent leur tarif pendant les 6 mois de suivi.
+            </p>
           </div>
         </section>
 

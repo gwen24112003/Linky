@@ -6,13 +6,14 @@ import { PainSection } from '@/components/home/PainSection';
 import { SystemSection } from '@/components/home/SystemSection';
 import { ConvictionsSection } from '@/components/home/ConvictionsSection';
 import { MethodSection } from '@/components/home/MethodSection';
+import { WhyNowSection } from '@/components/home/WhyNowSection';
 import { FAQSectionBTP } from '@/components/home/FAQSectionBTP';
 import { FinalCTASection } from '@/components/home/FinalCTASection';
 import { faqJsonLd } from '@/lib/faqData';
 
 const PAGE_URL = 'https://opusadvisor.fr/';
 const PAGE_TITLE =
-  'Opus Advisory — Consultant ops pour les patrons du BTP second œuvre';
+  'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre';
 const PAGE_DESCRIPTION =
   "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, devis qui ne traînent plus. Diagnostic 2 500 €, pré-audit gratuit.";
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   description: PAGE_DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP',
+    title: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP',
     description:
       'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
     url: PAGE_URL,
@@ -31,19 +32,19 @@ export const metadata: Metadata = {
         url: 'https://opusadvisor.fr/images/opus-banner.png',
         width: 1200,
         height: 630,
-        alt: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP second œuvre',
+        alt: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP second œuvre',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP',
+    title: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP',
     description:
       'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
     images: [
       {
         url: 'https://opusadvisor.fr/images/opus-banner.png',
-        alt: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP second œuvre',
+        alt: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP second œuvre',
       },
     ],
   },
@@ -136,6 +137,7 @@ export default function HomePage() {
         <SystemSection />
         <ConvictionsSection />
         <MethodSection />
+        <WhyNowSection />
         <FAQSectionBTP />
         <FinalCTASection />
       </main>

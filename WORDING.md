@@ -1,4 +1,4 @@
-# WORDING.md — Refonte Opus Advisory
+# WORDING.md — Refonte Opus Advisor
 
 > **Statut :** Proposition de copywriting pour validation.
 > **Version :** 1 — 2026-04-24
@@ -230,7 +230,7 @@ Plages disponibles sous 5 jours · Annulation libre jusqu'à 2h avant
 ## 9. MENTIONS / FOOTER
 
 ### Baseline footer
-Opus Advisory — Consultant ops pour les patrons du BTP second œuvre.
+Opus Advisor — Consultant ops pour les patrons du BTP second œuvre.
 
 ### Navigation footer
 - Services
@@ -255,13 +255,13 @@ On utilise des cookies de mesure d'audience anonymisée (Plausible / self-hosted
 ### Balises page d'accueil
 
 **`<title>`**
-Opus Advisory — Consultant ops pour les patrons du BTP second œuvre
+Opus Advisor — Consultant ops pour les patrons du BTP second œuvre
 
 **`<meta name="description">`**
 On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, facturation 2027 prête. Diagnostic 2 500 €, pré-audit gratuit.
 
 **Open Graph**
-- og:title — Opus Advisory — 10h par semaine rendues aux patrons du BTP
+- og:title — Opus Advisor — 10h par semaine rendues aux patrons du BTP
 - og:description — Relances auto, chantiers centralisés, facturation 2027 prête. Un système fait pour votre boîte, pas une plateforme générique.
 - og:image — `/og/opus-hero.png` (à produire — schéma Avant/Après, 1200×630)
 - og:locale — fr_FR

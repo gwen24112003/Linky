@@ -4,7 +4,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
 const PAGE_URL = 'https://opusadvisor.fr/projets';
-const PAGE_TITLE = 'Cas clients — Opus Advisory';
+const PAGE_TITLE = 'Cas clients — Opus Advisor';
 const PAGE_DESCRIPTION =
   "Cette page a été déplacée vers /cas-clients.";
 

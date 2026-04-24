@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SEO Agent - Opus Advisory
+SEO Agent - Opus Advisor
 Audit et scoring SEO du site
 """
 import sys

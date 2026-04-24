@@ -197,7 +197,7 @@ export const TeamView: React.FC = () => {
                     className="text-xs font-semibold tracking-[0.2em] uppercase mb-3"
                     style={{ color: GOLD }}
                   >
-                    {idx === 0 ? 'Pourquoi Opus Advisory' : 'Pourquoi une équipe de deux'}
+                    {idx === 0 ? 'Pourquoi Opus Advisor' : 'Pourquoi une équipe de deux'}
                   </p>
                   <h3
                     className="text-2xl md:text-3xl font-bold leading-tight"

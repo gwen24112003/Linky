@@ -100,4 +100,4 @@ N'attendez pas d'être submergé pour agir. Commencez dès aujourd'hui par un se
 
 ---
 
-*Vous souhaitez transformer votre organisation ? Contactez Opus Advisory pour un diagnostic personnalisé.*
+*Vous souhaitez transformer votre organisation ? Contactez Opus Advisor pour un diagnostic personnalisé.*

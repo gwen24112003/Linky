@@ -120,7 +120,7 @@ h6 {
     background: linear-gradient(to bottom right, #C9A84C, #a8873a);
   }
 
-  /* Navy section — fond cohérent avec la charte Opus Advisory */
+  /* Navy section — fond cohérent avec la charte Opus Advisor */
   .section-teal {
     @apply py-20 text-white relative overflow-hidden;
     background: #1A2332;

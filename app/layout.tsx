@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 const SITE_URL = 'https://opusadvisor.fr';
-const SITE_NAME = 'Opus Advisory';
-const DEFAULT_TITLE = 'Opus Advisory — Consultant ops BTP second œuvre';
+const SITE_NAME = 'Opus Advisor';
+const DEFAULT_TITLE = 'Opus Advisor — Consultant ops BTP second œuvre';
 const DEFAULT_DESCRIPTION =
   "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, devis qui ne traînent plus. Diagnostic 2 500 €, pré-audit gratuit.";
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/opus-banner.png`,
         width: 1200,
         height: 630,
-        alt: 'Opus Advisory — Consultant ops pour les patrons du BTP second œuvre',
+        alt: 'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre',
       },
     ],
   },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${SITE_URL}/images/opus-banner.png`,
-        alt: 'Opus Advisory — Consultant ops pour les patrons du BTP second œuvre',
+        alt: 'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre',
       },
     ],
   },

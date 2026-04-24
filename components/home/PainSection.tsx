@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import {
   Clock,
   Wallet,
-  FileWarning,
+  Calculator,
   MessageSquare,
   CalendarClock,
   PhoneMissed,
@@ -26,9 +26,9 @@ const pains = [
     desc: "1 artisan sur 3 subit des retards de paiement. Moyenne d'un impayé BTP : 3 000 €. Quand on oublie de relancer, le cash dort.",
   },
   {
-    icon: FileWarning,
-    title: 'Facturation électronique 2027',
-    desc: "Au 1er septembre 2027, toutes les PME du BTP doivent émettre en électronique. Amendes jusqu'à 50 € par facture non conforme. Ça se prépare maintenant.",
+    icon: Calculator,
+    title: 'Marge chantier jamais claire',
+    desc: "Votre dernier job, rentable ou pas ? Vous sauriez pas dire. Les heures réelles, les achats hors devis, les reprises : tout se perd entre Batappli, Excel et les tickets de caisse dans le camion.",
   },
   {
     icon: MessageSquare,
