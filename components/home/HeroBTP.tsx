@@ -227,31 +227,27 @@ export const HeroBTP: React.FC = () => {
                     preserveAspectRatio="none"
                     aria-hidden="true"
                   >
-                    {tools.map((t) => {
-                      // On raccourcit la ligne à 70% du trajet hub→chip
-                      // pour que le trait s'arrête avant la card (pas de
-                      // chevauchement visuel sous le chip).
-                      const shrink = 0.7;
-                      const x2 = 50 + (t.left - 50) * shrink;
-                      const y2 = 50 + (t.top - 50) * shrink;
-                      return (
-                        <line
-                          key={t.name}
-                          x1="50"
-                          y1="50"
-                          x2={x2}
-                          y2={y2}
-                          stroke={GOLD}
-                          strokeOpacity="0.6"
-                          strokeWidth="1.3"
-                          strokeLinecap="round"
-                          vectorEffect="non-scaling-stroke"
-                        />
-                      );
-                    })}
+                    {tools.map((t) => (
+                      // Ligne jusqu'au centre du chip. Le chip ayant un fond
+                      // opaque, la portion sous la card est masquée : le
+                      // trait semble s'arrêter pile au bord de la card.
+                      <line
+                        key={t.name}
+                        x1="50"
+                        y1="50"
+                        x2={t.left}
+                        y2={t.top}
+                        stroke={GOLD}
+                        strokeOpacity="0.6"
+                        strokeWidth="1.3"
+                        strokeLinecap="round"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    ))}
                   </svg>
 
-                  {/* Mêmes chips qu'avant, mêmes positions — on change pas les outils */}
+                  {/* Mêmes chips qu'avant, mêmes positions — on change pas les outils.
+                      Fond opaque (NAVY + gold overlay) pour masquer la portion de ligne sous la card. */}
                   {tools.map((t) => (
                     <div
                       key={t.name}
@@ -259,7 +255,7 @@ export const HeroBTP: React.FC = () => {
                       style={{
                         left: `${t.left}%`,
                         top: `${t.top}%`,
-                        background: `${GOLD}1A`,
+                        background: `linear-gradient(${GOLD}22, ${GOLD}22), ${NAVY}`,
                         border: `1px solid ${GOLD}66`,
                         color: 'white',
                       }}
