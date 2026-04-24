@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, Rocket, BookOpen } from 'lucide-react';
 
 const GOLD = '#C9A84C';
 const NAVY = '#1A2332';
@@ -299,8 +299,117 @@ export const ServicesView: React.FC = () => {
         </div>
       </section>
 
+      {/* Pour aller plus loin — internal linking */}
+      <section className="py-16 md:py-20 bg-white border-t" style={{ borderColor: 'rgba(26,35,50,0.06)' }}>
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="max-w-2xl mb-10">
+            <p
+              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-3"
+              style={{ color: GOLD }}
+            >
+              Pour aller plus loin
+            </p>
+            <h2
+              className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
+              style={{ color: NAVY }}
+            >
+              Avant de décider, prenez deux minutes.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Opus Pilotes */}
+            <Link
+              href="/cas-clients"
+              className="group relative rounded-3xl p-8 md:p-10 transition-all duration-200 hover:-translate-y-1"
+              style={{
+                background: `${GOLD}10`,
+                border: `1px solid ${GOLD}44`,
+              }}
+            >
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                style={{ background: GOLD, color: NAVY }}
+              >
+                <Rocket size={22} strokeWidth={2.2} />
+              </div>
+              <p
+                className="text-xs font-semibold uppercase tracking-[0.18em] mb-2"
+                style={{ color: GOLD }}
+              >
+                Programme pilote · 3 places
+              </p>
+              <h3
+                className="text-xl md:text-2xl font-bold mb-3 leading-tight"
+                style={{ color: NAVY }}
+              >
+                Opus Pilotes — construisez la v1 avec nous
+              </h3>
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-5">
+                Trois boîtes du second œuvre, tarif pilote -40 %, accès direct. En échange,
+                on documente ensemble ce qui marche. Si vous voulez être dans les premiers,
+                c'est maintenant.
+              </p>
+              <span
+                className="inline-flex items-center gap-2 font-semibold text-sm md:text-base"
+                style={{ color: NAVY }}
+              >
+                Voir le programme
+                <ArrowRight
+                  size={18}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
+              </span>
+            </Link>
+
+            {/* Articles */}
+            <Link
+              href="/articles"
+              className="group relative rounded-3xl p-8 md:p-10 transition-all duration-200 hover:-translate-y-1"
+              style={{
+                background: '#FAF8F4',
+                border: '1px solid rgba(26,35,50,0.08)',
+              }}
+            >
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                style={{ background: NAVY, color: GOLD }}
+              >
+                <BookOpen size={22} strokeWidth={2.2} />
+              </div>
+              <p
+                className="text-xs font-semibold uppercase tracking-[0.18em] mb-2"
+                style={{ color: NAVY, opacity: 0.5 }}
+              >
+                Conseils & retours terrain
+              </p>
+              <h3
+                className="text-xl md:text-2xl font-bold mb-3 leading-tight"
+                style={{ color: NAVY }}
+              >
+                Articles — comment on procède, concrètement
+              </h3>
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-5">
+                Méthodes de consolidation, outils BTP comparés, facturation électronique,
+                automatisations testées sur le terrain. Lecture courte, sans jargon.
+              </p>
+              <span
+                className="inline-flex items-center gap-2 font-semibold text-sm md:text-base"
+                style={{ color: NAVY }}
+              >
+                Lire les articles
+                <ArrowRight
+                  size={18}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA bas */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-[#FAF8F4]">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2
             className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-5"

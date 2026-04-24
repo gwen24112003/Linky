@@ -4,7 +4,12 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ArticleView } from '@/components/pages/ArticleView';
 import { RelatedArticles } from '@/components/home/RelatedArticles';
-import { getAllArticles, getArticleBySlug, getArticleContent } from '@/lib/articles';
+import {
+  getAllArticles,
+  getArticleBySlug,
+  getArticleContent,
+  getArticleFrontMatter,
+} from '@/lib/articles';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -18,27 +23,33 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) return {};
+  const frontMatter = getArticleFrontMatter(slug);
   const pageUrl = `https://opusadvisor.fr/article/${article.slug}`;
   const ogImage = article.imageSrc
     ? `https://opusadvisor.fr${article.imageSrc}`
     : 'https://opusadvisor.fr/images/opus-banner.png';
+  const ogImageAlt = `Illustration de l'article : ${article.title}`;
   return {
     title: article.title,
     description: article.description,
+    ...(frontMatter.keywords && frontMatter.keywords.length > 0
+      ? { keywords: frontMatter.keywords }
+      : {}),
     alternates: { canonical: pageUrl },
     openGraph: {
       title: article.title,
       description: article.description,
       type: 'article',
       url: pageUrl,
-      images: [{ url: ogImage }],
+      images: [{ url: ogImage, alt: ogImageAlt }],
       publishedTime: article.publishedAt,
+      authors: ['Enzo Monnier'],
     },
     twitter: {
       card: 'summary_large_image',
       title: article.title,
       description: article.description,
-      images: [ogImage],
+      images: [{ url: ogImage, alt: ogImageAlt }],
     },
   };
 }
@@ -48,6 +59,7 @@ export default async function ArticlePage({ params }: PageProps) {
   const article = getArticleBySlug(slug);
   if (!article) notFound();
   const content = getArticleContent(slug);
+  const frontMatter = getArticleFrontMatter(slug);
 
   const pageUrl = `https://opusadvisor.fr/article/${article.slug}`;
   const articleJsonLd = {
@@ -60,14 +72,24 @@ export default async function ArticlePage({ params }: PageProps) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
+    articleSection: 'Conseil ops PME et BTP second œuvre',
+    ...(frontMatter.keywords && frontMatter.keywords.length > 0
+      ? { keywords: frontMatter.keywords.join(', ') }
+      : {}),
     author: {
-      '@type': 'Organization',
-      name: 'Opus Advisor',
-      url: 'https://opusadvisor.fr',
+      '@type': 'Person',
+      name: 'Enzo Monnier',
+      url: 'https://opusadvisor.fr/equipe',
+      jobTitle: 'Consultant ops · Fondateur',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Opus Advisory',
+        url: 'https://opusadvisor.fr',
+      },
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Opus Advisor',
+      name: 'Opus Advisory',
       url: 'https://opusadvisor.fr',
       logo: {
         '@type': 'ImageObject',

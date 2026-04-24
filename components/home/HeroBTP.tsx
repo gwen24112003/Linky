@@ -92,7 +92,7 @@ export const HeroBTP: React.FC = () => {
               className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8"
               variants={item}
             >
-              Relances automatiques, chantiers centralisés, facturation 2027 prête.
+              Relances automatiques, chantiers centralisés, devis qui ne traînent plus.
               Un outil unique, adapté à votre boîte. Pas une énième plateforme.
             </motion.p>
 
@@ -144,6 +144,8 @@ export const HeroBTP: React.FC = () => {
           >
             <div
               className="rounded-2xl p-5 md:p-6 backdrop-blur-xl"
+              role="figure"
+              aria-label="Comparaison avant/après : de 6 outils déconnectés à un système unifié"
               style={{
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.12)',

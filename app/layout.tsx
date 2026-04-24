@@ -39,14 +39,26 @@ export const metadata: Metadata = {
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
-    images: [{ url: `${SITE_URL}/images/opus-banner.png` }],
+    images: [
+      {
+        url: `${SITE_URL}/images/opus-banner.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Opus Advisory — Consultant ops pour les patrons du BTP second œuvre',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@opusadvisor',
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    images: [`${SITE_URL}/images/opus-banner.png`],
+    images: [
+      {
+        url: `${SITE_URL}/images/opus-banner.png`,
+        alt: 'Opus Advisory — Consultant ops pour les patrons du BTP second œuvre',
+      },
+    ],
   },
 };
 

@@ -26,14 +26,26 @@ export const metadata: Metadata = {
       'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
     url: PAGE_URL,
     type: 'website',
-    images: [{ url: 'https://opusadvisor.fr/images/opus-banner.png' }],
+    images: [
+      {
+        url: 'https://opusadvisor.fr/images/opus-banner.png',
+        width: 1200,
+        height: 630,
+        alt: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP second œuvre',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP',
     description:
       'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
-    images: ['https://opusadvisor.fr/images/opus-banner.png'],
+    images: [
+      {
+        url: 'https://opusadvisor.fr/images/opus-banner.png',
+        alt: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP second œuvre',
+      },
+    ],
   },
 };
 
