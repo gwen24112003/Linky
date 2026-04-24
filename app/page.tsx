@@ -6,7 +6,6 @@ import { PainSection } from '@/components/home/PainSection';
 import { SystemSection } from '@/components/home/SystemSection';
 import { ConvictionsSection } from '@/components/home/ConvictionsSection';
 import { MethodSection } from '@/components/home/MethodSection';
-import { UrgencySection } from '@/components/home/UrgencySection';
 import { FAQSectionBTP } from '@/components/home/FAQSectionBTP';
 import { FinalCTASection } from '@/components/home/FinalCTASection';
 import { faqJsonLd } from '@/lib/faqData';
@@ -15,7 +14,7 @@ const PAGE_URL = 'https://opusadvisor.fr/';
 const PAGE_TITLE =
   'Opus Advisory — Consultant ops pour les patrons du BTP second œuvre';
 const PAGE_DESCRIPTION =
-  "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, facturation 2027 prête. Diagnostic 2 500 €, pré-audit gratuit.";
+  "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, devis qui ne traînent plus. Diagnostic 2 500 €, pré-audit gratuit.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP',
     description:
-      'Relances auto, chantiers centralisés, facturation 2027 prête. Un système fait pour votre boîte, pas une plateforme générique.',
+      'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
     url: PAGE_URL,
     type: 'website',
     images: [{ url: 'https://opusadvisor.fr/images/opus-banner.png' }],
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Opus Advisory — 10h par semaine rendues aux patrons du BTP',
     description:
-      'Relances auto, chantiers centralisés, facturation 2027 prête. Un système fait pour votre boîte, pas une plateforme générique.',
+      'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
     images: ['https://opusadvisor.fr/images/opus-banner.png'],
   },
 };
@@ -125,7 +124,6 @@ export default function HomePage() {
         <SystemSection />
         <ConvictionsSection />
         <MethodSection />
-        <UrgencySection />
         <FAQSectionBTP />
         <FinalCTASection />
       </main>

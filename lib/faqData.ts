@@ -27,9 +27,9 @@ export const faqs = [
       "Non. Le but, c'est moins d'outils, pas plus. Vous gardez ceux que vous maîtrisez déjà, on connecte le reste pour qu'il travaille tout seul en arrière-plan. Formation incluse pour vous et votre équipe, en français, sur vos propres données.",
   },
   {
-    question: 'La facturation électronique 2027, c\'est urgent pour moi ?',
+    question: 'Et la facturation électronique 2027, vous gérez ?',
     answer:
-      "Oui si vous voulez être tranquille. L'échéance est au 1er septembre 2027 pour toutes les PME. Si vous vous y prenez en 2026, vous avez le temps de tester, ajuster, former. Si vous attendez l'été 2027, vous payez plus cher et en urgence.",
+      "C'est pas notre angle principal parce que votre logiciel BTP (Batappli, Obat, Tolteck, EBP) sera homologué à temps, l'éditeur s'en occupe. Par contre, dans le diagnostic, on s'assure que le circuit autour tient : archivage, relances qui s'alignent sur les délais légaux, intégration avec votre expert-comptable. C'est un point de contrôle, pas un chantier en soi.",
   },
   {
     question: 'Qu\'est-ce qui se passe si vous disparaissez dans 2 ans ?',

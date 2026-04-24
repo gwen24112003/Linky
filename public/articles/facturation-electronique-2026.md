@@ -1,3 +1,10 @@
+---
+title: "Facturation électronique 2026-2027 : ce que les PME du BTP doivent vraiment préparer"
+metaDescription: "Septembre 2026 réception, septembre 2027 émission. Comment votre boîte du second œuvre doit préparer le passage à la facturation électronique sans y laisser des heures."
+date: "2026-03-10"
+keywords: ["facturation électronique 2027", "PDP BTP", "Factur-X", "PME bâtiment", "conformité facturation"]
+---
+
 ## Une réforme qui n'est plus négociable
 
 À partir du **1er septembre 2026**, toutes les entreprises françaises devront être capables de **recevoir** une facture électronique au format structuré. Grandes entreprises et ETI devront en plus **émettre** leurs factures dans ce format à la même date. Les PME et TPE, elles, auront jusqu'au 1er septembre 2027 pour passer à l'émission.

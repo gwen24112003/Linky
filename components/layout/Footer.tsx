@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
         { label: 'Diagnostic', href: '/services' },
         { label: 'Implémentation', href: '/services' },
         { label: 'Suivi mensuel', href: '/services' },
-        { label: 'Conformité 2027', href: '/services' },
+        { label: 'Opus Pilotes', href: '/cas-clients' },
       ],
     },
     {

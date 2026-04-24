@@ -3,10 +3,9 @@ import './globals.css';
 
 const SITE_URL = 'https://opusadvisor.fr';
 const SITE_NAME = 'Opus Advisory';
-const DEFAULT_TITLE =
-  'Opus Advisory — Consultant ops pour les patrons du BTP second œuvre';
+const DEFAULT_TITLE = 'Opus Advisory — Consultant ops BTP second œuvre';
 const DEFAULT_DESCRIPTION =
-  "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, facturation 2027 prête. Diagnostic 2 500 €, pré-audit gratuit.";
+  "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, devis qui ne traînent plus. Diagnostic 2 500 €, pré-audit gratuit.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -16,15 +15,16 @@ export const metadata: Metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   keywords: [
-    'consultant automatisation BTP',
-    'logiciel gestion électricien PME',
-    'facturation électronique électricien 2027',
-    'automatisation devis plombier',
+    'consultant ops BTP second œuvre',
+    'automatisation devis plombier électricien',
     'relance automatique impayés BTP',
+    'centralisation chantiers second œuvre',
     'système unifié entreprise bâtiment',
-    'Batappli consultant',
-    'Obat Tolteck EBP Bâtiment',
+    'logiciel gestion électricien PME',
+    'Batappli Obat Tolteck EBP Bâtiment',
+    'automatisation Make n8n BTP',
     'gestion chantier second œuvre',
+    'consultant automatisation BTP',
   ],
   robots: { index: true, follow: true },
   icons: {
@@ -59,7 +59,7 @@ const organizationJsonLd = {
       name: SITE_NAME,
       alternateName: 'Opus Advisor',
       description:
-        "Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation 2027. Diagnostic chiffré, implémentation, formation équipe.",
+        "Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation. Diagnostic chiffré, implémentation, formation équipe.",
       url: SITE_URL,
       email: 'enzo@opusadvisor.fr',
       address: {
