@@ -1,100 +1,95 @@
-## L'ERP n'est plus le seul passage obligé
+---
+title: "Votre boîte BTP n'a pas besoin d'un logiciel à 50 000 €. Voici ce dont elle a vraiment besoin."
+metaDescription: "Vous passez de 8 à 15 salariés et un commercial vous propose un logiciel tout-en-un à 35 000 €. Dans la majorité des cas, 200 à 500 € par mois d'outils existants couvrent 90 % du besoin. Pourquoi, comment, et les rares cas où le gros logiciel se justifie quand même."
+date: "2026-04-25"
+keywords: ["logiciel BTP second œuvre", "Batappli Obat Tolteck EBP", "automatisation BTP TPE", "Make n8n bâtiment", "outils numériques bâtiment"]
+---
 
-Pendant vingt ans, la question d'automatisation en PME se posait dans un seul cadre : **faut-il installer un ERP ?**. Les projets coûtaient entre 50 000 et 300 000 euros, duraient 12 à 18 mois, mobilisaient toute l'entreprise, et réussissaient à peu près une fois sur deux.
+*Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Ce modèle existe toujours. Il est encore pertinent dans certains contextes industriels complexes. Mais pour la majorité des PME de services, du négoce, ou de l'ingénierie, une autre voie s'est ouverte.
-
-Les PME agiles ne "choisissent plus un ERP". Elles **construisent progressivement un écosystème d'outils spécialisés connectés entre eux**, pour un coût dix à vingt fois inférieur, et avec une capacité d'évolution bien supérieure.
-
-Ce n'est pas une mode. C'est une conséquence directe de la maturation du no-code et de l'automatisation légère.
+Vous êtes passé de 8 à 15 salariés. Votre comptable vous dit qu'il faut "un vrai logiciel qui fait tout". Le commercial qui passe vous fait une démo qui fait rêver, devis à 35 000 € d'installation et 8 000 € de licences par an. Avant de signer, prenez 7 minutes. Dans la majorité des cas, vos outils actuels couvrent déjà 70 % du besoin. Vous payez juste pour ne pas vous en servir.
 
 ---
 
-## Les briques qui remplacent l'ERP en pratique
+## La tentation du logiciel qui fait tout
 
-Une PME agile de 2026 ne s'équipe pas d'une plateforme unique. Elle combine cinq à dix outils spécialisés, chacun excellent sur son périmètre.
+Le scénario revient toujours. Une boîte d'élec ou de plomberie qui passe le cap des 15 salariés. Le patron sent que ça déborde. Devis qui traînent, situations de travaux refaites à la main, photos de chantier perdues dans WhatsApp, comptable qui ressaisit tout en fin de mois. La conclusion paraît évidente : "il nous faut un logiciel qui fait tout, qu'on arrête avec les bouts de ficelle".
 
-**Gestion commerciale et CRM : HubSpot, Pipedrive, Attio.** Moins de 100 euros par utilisateur et par mois, prise en main en quelques jours, paramétrable sans consultant externe. Les fonctions critiques (pipeline, relances, devis, facturation simple) sont couvertes.
+Le commercial du gros éditeur entre en jeu. Démo bien rodée, modules qui s'enchaînent, gestion des chantiers connectée à la facturation, à la paie, au planning, au stock. Devis : 30 000 à 50 000 € d'installation, plus 8 000 à 15 000 € par an de licences pour 15 utilisateurs.
 
-**Gestion de projet et delivery : Notion, ClickUp, Monday.** Suivi des projets, allocation des ressources, visibilité par client. Des outils qu'un chef de projet structure en deux à trois semaines, sans intégrateur.
+C'est tentant. C'est rassurant. Et c'est très rarement ce qu'il vous faut.
 
-**Comptabilité et finance : Pennylane, Qonto, Fygr.** Ces plateformes ont absorbé ce qu'un expert-comptable faisait seul il y a cinq ans, et s'interconnectent directement avec la banque et les outils de facturation.
+## Pourquoi ça finit mal le plus souvent
 
-**Base de données métier : Airtable, Baserow, Glide.** C'est ici que les PME remplacent vraiment les modules ERP spécifiques. Suivi de stock simple, base fournisseurs, référentiel produit, tableau de charge : ce qui demandait un développement interne se construit en quelques jours.
+Quatre raisons reviennent en boucle dans les boîtes BTP qui ont basculé sur ces logiciels.
 
-**Automatisation transversale : Make, n8n, Zapier.** Ces outils connectent tout ce qui précède. C'est le tissu conjonctif du nouvel écosystème.
+**Le logiciel ne colle pas à la réalité du chantier.** La facturation BTP n'est pas linéaire. Vous gérez des acomptes, des situations mensuelles, des retenues de garantie de 5 %, de l'autoliquidation TVA pour la sous-traitance, des avenants, des moins-values. Un logiciel généraliste plié à votre métier coûte 6 mois de paramétrage. Un vrai logiciel BTP métier, vous l'avez peut-être déjà.
 
-**Reporting : Metabase, Power BI, Looker Studio.** Un tableau de bord consolidé sans équipe data.
+**L'équipe terrain ne l'utilise pas.** Vos chefs de chantier ouvrent WhatsApp 80 fois par jour. Le grand logiciel sur tablette qui demande un login, 4 clics et une connexion correcte, ils l'ouvrent 3 fois la première semaine puis plus jamais. Résultat : le bureau passe son temps à ressaisir ce que les chefs de chantier disent par messagerie.
 
-L'ensemble coûte typiquement entre 500 et 2 500 euros par mois pour une PME de 30 à 80 salariés, licences incluses. Soit moins qu'un seul mois de prestation d'intégrateur ERP.
+**Le paramétrage prend 6 à 12 mois pendant lesquels rien ne change.** Le temps que les modèles soient en place, que les imports clients soient propres, que les circuits de validation soient calés, vous avez payé 35 000 € et travaillez toujours comme avant. Les études sectorielles convergent toutes vers le même ordre de grandeur : autour de 70 % des projets de gros logiciel en PME n'atteignent pas leurs objectifs initiaux. Les causes sont rarement techniques. Elles sont organisationnelles : process flous, conduite du changement bâclée, données mal préparées en amont.
+
+**Quand le système est enfin en place, le besoin a évolué.** Vous avez embauché, perdu un client, gagné un nouveau type de chantier. Le logiciel paramétré pour la boîte d'il y a 18 mois ne colle déjà plus.
+
+## L'alternative : 3 outils qui se parlent, pour 5 fois moins cher
+
+Pour une boîte BTP de 8 à 25 salariés, le trio qui marche tient en 3 piliers.
+
+**Le pilier métier : votre logiciel BTP, mieux exploité.** Vous l'avez probablement déjà. Le baromètre France Num 2025 confirme que 76 % des TPE-PME du bâtiment sont équipées d'un logiciel de facturation. Batappli, Obat, Tolteck ou EBP Bâtiment couvrent 80 à 90 % du besoin courant en second œuvre : devis chiffrés, situations de travaux, retenues de garantie, factures aux normes, suivi de chantier basique. Tarifs publics 2026 vérifiés :
+
+- Batappli : 39 à 119 €/mois HT selon la formule, utilisateur supplémentaire à 19 €/mois
+- Obat : 39 à 129 €/mois HT en engagement annuel (jusqu'à 50 salariés)
+- Tolteck : 19 à 25 €/mois HT
+- EBP Bâtiment : à partir de 29 €/mois HT en engagement 24 mois
+
+Pour une boîte de 15 personnes avec 4 à 5 utilisateurs simultanés, comptez 100 à 250 €/mois.
+
+**Le pilier collaboratif : un endroit unique pour les documents et la communication.** Google Workspace (6,80 à 21 €/utilisateur/mois selon la formule) ou Notion (10 €/utilisateur/mois) pour ranger devis signés, comptes-rendus de chantier, photos, contrats, plans, CCTP, DPGF. WhatsApp Business pour la communication terrain (gratuit). Pour 15 personnes, comptez 60 à 200 €/mois selon la formule.
+
+**Le pilier automation : faire parler les outils entre eux.** Make ou n8n. C'est ce qui fait que les photos WhatsApp d'un chantier atterrissent automatiquement dans le bon dossier, que la facture émise dans Batappli génère une relance à 30 jours, que le devis signé crée une fiche chantier dans le drive partagé. Make démarre à environ 10 $/mois, n8n à 24 €/mois en cloud (gratuit en self-hosted). Comptez 30 à 100 €/mois selon le volume d'opérations.
+
+**Total pour une boîte de 15 personnes : 200 à 500 €/mois**, soit 2 400 à 6 000 € par an. Face à 35 000 € d'installation et 10 000 €/an de licences pour le gros logiciel, l'écart est de 5 à 10 fois moins cher la première année, et 2 à 3 fois moins cher en rythme de croisière.
+
+## Ce qu'on voit sur le terrain
+
+Le scénario qu'on rencontre le plus souvent en pré-audit, c'est celui-ci. Une boîte d'élec de 15 personnes paie Batappli depuis 4 ans à 79 €/mois. Le patron utilise le module devis et le module facture. Pas le module suivi de chantier, pas le module situation, pas l'export comptable. Le drive Google contient 3 200 fichiers, dont 200 nommés "Devis_v2_FINAL_corrigé.pdf". Les photos de chantier circulent dans 12 groupes WhatsApp distincts, jamais sauvegardées. Le comptable reçoit chaque mois un Excel rempli à la main par l'assistante.
+
+Le besoin réel n'est pas un nouveau logiciel. C'est de :
+
+- Activer les modules Batappli déjà payés mais non utilisés
+- Mettre en place une structure de drive lisible (un dossier par chantier, point)
+- Brancher WhatsApp sur le drive via une automation simple
+- Connecter Batappli au comptable via un export propre
+
+Coût total : 0 € d'investissement, 60 à 100 €/mois en plus de l'existant, 3 à 5 semaines de mise en place. Effet : 6 à 10 heures par semaine récupérées au bureau, comptable qui ne ressaisit plus rien, photos chantier classées sans intervention humaine.
+
+## Quand le gros logiciel se justifie quand même
+
+Soyons honnêtes. Il y a des cas où la grosse machine est la bonne réponse :
+
+- Au-delà de 50 salariés avec une vraie complexité multi-équipes et multi-sites
+- Pour les activités industrielles type préfabrication, où le chiffrage repose sur des nomenclatures et de la GPAO
+- Quand vous gérez des chantiers internationaux avec des règles de TVA croisées
+- Quand votre activité bascule fondamentalement (intégration d'une activité de SAV avec contrats de maintenance, par exemple)
+
+Sous 25 salariés et sur de l'installation classique en second œuvre, ces cas représentent une minorité.
+
+## Que faire concrètement avant d'investir
+
+Trois actions à mener dans les 30 jours, avant de signer quoi que ce soit.
+
+**1. Listez les 5 frictions qui vous coûtent le plus de temps par semaine.** Pas en théorie. En vrai. Combien d'heures votre assistante passe-t-elle à ressaisir des données ? Combien de fois vos chefs de chantier appellent-ils le bureau pour une info qui devrait être dans un document ? Combien de devis sortent en retard à cause d'un modèle non paramétré ?
+
+**2. Vérifiez ce que votre logiciel actuel couvre déjà.** Demandez à votre éditeur (Batappli, Obat, Tolteck, EBP) la liste des modules de votre formule. Cochez ceux que vous utilisez réellement. La plupart des boîtes utilisent 30 à 50 % de ce qu'elles paient.
+
+**3. Faites un test à 500 €/mois sur 3 mois avant tout engagement à 50 000 €.** Activez les modules manquants, ajoutez Make ou n8n pour une automation pilote, structurez votre drive. Si au bout de 3 mois vous avez réglé 60 % de vos frictions, vous avez votre réponse. Si vous n'avez rien bougé, ce n'est pas un problème d'outil. C'est un problème d'organisation, et un nouveau logiciel à 50 000 € ne le réglera pas non plus.
 
 ---
 
-## Ce que le no-code et l'automatisation ont vraiment changé
+**Vous voulez voir ce que ça donne pour votre boîte ?** Pré-audit gratuit en visio, 30 minutes, sans engagement. Vous me montrez vos outils, je vous dis en direct combien vous laissez sur la table chaque semaine et où on pourrait commencer.
 
-Trois évolutions techniques expliquent ce basculement.
-
-**L'interopérabilité est devenue la norme.** Chaque outil SaaS sérieux expose une API. Make ou n8n permettent de connecter deux outils en une heure, sans écrire une ligne de code. Ce qui nécessitait un intégrateur en 2018 se fait aujourd'hui par un responsable d'administration des ventes formé en deux jours.
-
-**La logique métier peut vivre hors des outils.** Une automatisation bien conçue applique les règles métier dans Make ou n8n, pas dans chacun des outils connectés. On change de CRM sans tout casser, parce que la logique est dans le tuyau, pas dans les murs.
-
-**La courbe d'adoption s'est effondrée.** Là où un ERP demandait 3 à 6 mois de formation avant usage productif, les outils SaaS modernes produisent de la valeur dès la première semaine. Pas de "projet" au sens classique : une série de sprints courts, réversibles.
+[Réserver un créneau](/contact)
 
 ---
 
-## Un exemple concret de stack à 1 200 euros par mois
-
-Une PME de conseil en ingénierie, 45 salariés, 8 M€ de chiffre d'affaires, qui avait déployé un ERP généraliste en 2019 sans jamais en tirer pleinement parti, a reconstruit son système en six mois avec cette stack :
-
-- **HubSpot** (250 €/mois) pour le pipeline commercial et les propositions.
-- **Notion** (150 €/mois) pour le delivery projet et le référentiel client.
-- **Airtable** (180 €/mois) pour le suivi des ressources et la planification.
-- **Pennylane** (200 €/mois) pour la compta, la facturation et le rapprochement bancaire.
-- **Make** (90 €/mois) pour les automatisations transversales (devis → projet → facturation).
-- **Metabase** (self-hosted, 50 €/mois) pour le reporting direction.
-- Licences annexes et connecteurs : **300 €/mois**.
-
-Total : **1 220 €/mois**, soit 14 640 €/an. À comparer avec le contrat ERP précédent, qui coûtait 28 000 €/an de licences + 22 000 € de maintenance et d'évolutions par an.
-
-Gains mesurés à 12 mois : deux postes administratifs requalifiés sur des sujets à plus forte valeur, délai moyen de facturation passé de 9 jours à 2 jours, et un reporting mensuel produit en 4 heures au lieu de 3 jours.
-
----
-
-## Les pièges à éviter quand on assemble sa propre stack
-
-Cette approche n'est pas automatiquement gagnante. Trois pièges reviennent.
-
-**L'empilement sans pilote.** Chaque équipe choisit son outil, chacune connecte ses propres automatisations, personne n'a la vision globale. Au bout de dix-huit mois, l'écosystème est devenu aussi illisible qu'un ERP mal implémenté. Il faut un responsable unique qui arbitre les choix et maintient la cohérence.
-
-**La dépendance à une personne.** L'expert Make interne quitte l'entreprise, et plus personne ne sait ce que font les 40 scénarios d'automatisation en place. Documentation minimale, nommage explicite et revues mensuelles sont indispensables. Ce n'est pas optionnel.
-
-**Le contournement des processus.** Un outil flexible ne structure rien par défaut. Si vos processus ne sont pas clairs avant le déploiement, le no-code reproduira exactement le chaos existant, avec plus de vitesse. Le gain apparent est alors une illusion.
-
----
-
-## Quand l'ERP reste la bonne réponse
-
-Cette approche ne remplace pas l'ERP dans tous les cas. Quatre contextes continuent de justifier un ERP classique :
-
-- **Une industrie à gestion de production complexe** (nomenclatures multi-niveaux, planification de capacité, ordonnancement fin).
-- **Un multi-sociétés consolidé avec des flux inter-compagnies** et des obligations réglementaires poussées.
-- **Une activité avec traçabilité réglementée** (agro, pharmaceutique, aéronautique).
-- **Un pilotage analytique à gros volume** qui demande une base unique cohérente et un reporting standardisé.
-
-En dehors de ces cas, la stack modulaire produit souvent de meilleurs résultats à un coût très inférieur.
-
----
-
-## Ce que le dirigeant doit arbitrer vraiment
-
-La vraie question n'est pas technique. C'est stratégique.
-
-**Êtes-vous prêt à piloter une architecture évolutive, ou préférez-vous un système unique et structurant ?**
-
-Un ERP impose une colonne vertébrale. Il contraint, mais il stabilise. Une stack modulaire donne de la liberté, mais exige une gouvernance continue. L'un n'est pas supérieur à l'autre dans l'absolu.
-
-Ce qui fait basculer le choix, c'est la taille, la complexité des flux, la maturité digitale des équipes, et l'appétence du dirigeant pour un pilotage continu de son système d'information.
-
-Dans la majorité des PME de services, de négoce ou d'ingénierie que nous accompagnons, le verdict penche clairement vers la stack modulaire. C'est moins cher, plus rapide à mettre en place, et surtout plus réversible quand un choix s'avère mauvais.
-
-C'est ce type d'écosystème que nous construisons avec les dirigeants chez Opus Advisor, en partant toujours du processus avant l'outil.
+*Sources : [Baromètre France Num 2025](https://www.economie.gouv.fr/actualites/transformation-numerique-des-tpepme-les-enseignements-du-barometre-2025-de-france-num) (DGE, 11 021 entreprises), [tarifs Batappli 2026](https://www.batappli.fr/tarifs), [tarifs Obat 2026](https://www.obat.fr/tarifs/), [tarifs EBP Bâtiment](https://www.ebp.com/logiciel-devis-facture-batiment/batiment/), [Make.com pricing](https://www.make.com/en/pricing), [n8n pricing](https://n8n.io/pricing/), synthèse Force5 sur l'échec des projets logiciel en PME ([source](https://force5.ca/blog/4-erreurs-transformation-erp-pme-echec/)).*

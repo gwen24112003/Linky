@@ -11,29 +11,29 @@
     {
         "id": 7,
         "slug": "automatiser-sans-erp",
-        "title": "Automatiser sans ERP à 50 000 €",
-        "description": "Les boîtes agiles ne choisissent plus un ERP. Elles connectent les outils spécialisés qu'elles ont déjà, pour un coût dix à vingt fois inférieur.",
+        "title": "Votre boîte BTP n'a pas besoin d'un logiciel à 50 000 €",
+        "description": "Vous passez de 8 à 15 salariés et un commercial vous propose un logiciel tout-en-un à 35 000 €. Dans la majorité des cas, 200 à 500 € par mois d'outils existants couvrent 90 % du besoin.",
         "imageSrc": "/images/opus-banner.png",
         "icon": "workflow",
-        "publishedAt": "2026-04-17"
+        "publishedAt": "2026-04-25"
     },
     {
         "id": 6,
         "slug": "diagnostic-operationnel-pme",
-        "title": "Comment structurer un diagnostic opérationnel",
-        "description": "La plupart des diagnostics produisent un PowerPoint de 60 pages qui ne change rien. La méthode qui tient en cinq étapes et débouche sur des décisions actionnables.",
+        "title": "Diagnostiquer une boîte du second œuvre en 3 semaines",
+        "description": "Les cabinets vendent un audit à 15 à 30 000 € sur 2 à 3 mois. Notre méthode tient en 3 semaines pour 2 500 €. Ce qu'on regarde, dans quel ordre, et pourquoi ça suffit.",
         "imageSrc": "/images/opus-banner.png",
         "icon": "stethoscope",
-        "publishedAt": "2026-04-17"
+        "publishedAt": "2026-04-25"
     },
     {
         "id": 3,
         "slug": "organisation-avant-developpement",
-        "title": "Organisez avant de développer",
-        "description": "Pourquoi structurer vos circuits avant d'investir dans un outil ou un développement est la décision la plus rentable que vous puissiez prendre.",
+        "title": "Avant d'investir 30 000 € dans un nouvel outil, regardez ce que vous avez déjà",
+        "description": "Un patron sur deux qu'on rencontre veut changer de logiciel. Dans la plupart des cas, le vrai problème n'est pas l'outil. Quatre questions à se poser avant de signer.",
         "imageSrc": "/images/opus-banner.png",
         "icon": "layers",
-        "publishedAt": "2025-12-10"
+        "publishedAt": "2026-04-25"
     },
     {
         "id": 2,
