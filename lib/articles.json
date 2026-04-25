@@ -38,10 +38,10 @@
     {
         "id": 2,
         "slug": "applications-glide",
-        "title": "Créez des apps métier sans coder",
-        "description": "Transformez vos Google Sheets en applications utiles. Glide permet de créer des outils internes et des portails clients sans écrire une ligne de code.",
+        "title": "Faut-il une app sur mesure pour vos chefs de chantier ?",
+        "description": "Glide, Softr, Bubble pour une boîte BTP : utile dans 3 cas précis, inutile dans tous les autres. Comment savoir où vous en êtes avant d'investir 5 000 ou 15 000 € dans une app maison.",
         "imageSrc": "/images/opus-banner.png",
         "icon": "layout-dashboard",
-        "publishedAt": "2025-08-20"
+        "publishedAt": "2026-04-25"
     }
 ]
