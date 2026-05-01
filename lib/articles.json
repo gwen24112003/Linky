@@ -1,5 +1,14 @@
 [
     {
+        "id": 12,
+        "slug": "relances-automatiques-impayes-btp",
+        "title": "1 artisan sur 3 attend ses paiements plus de 60 jours",
+        "description": "Dans le BTP second œuvre, la moyenne d'un impayé tourne autour de 3 000 €. La cause numéro 1 n'est pas le client mauvais payeur, c'est la relance qui n'est jamais partie. Le système qu'on monte en 2 semaines, sans changer de logiciel.",
+        "imageSrc": "/images/opus-banner.png",
+        "icon": "wallet",
+        "publishedAt": "2026-05-01"
+    },
+    {
         "id": 11,
         "slug": "facturation-electronique-2026",
         "title": "Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre",
