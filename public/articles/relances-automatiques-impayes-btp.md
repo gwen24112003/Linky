@@ -7,7 +7,7 @@ keywords: ["relance automatique impayés BTP", "recouvrement artisan bâtiment",
 
 *Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Les patrons de boîtes d'élec, de plomberie ou de chauffage-clim qu'on rencontre ont presque tous le même angle mort : entre 8 et 20 % du chiffre facturé tourne à plus de 60 jours, et personne ne sait précisément qui doit quoi à quelle date. Pas par mauvaise volonté du client. Par défaut de système. Voici ce qu'on monte chez les boîtes qu'on accompagne — la séquence qu'on automatise, les vrais délais légaux, et comment câbler tout ça sur Batappli, Obat, Tolteck ou EBP sans changer d'outil.
+Les patrons de boîtes d'élec, de plomberie ou de chauffage-clim qu'on rencontre ont presque tous le même angle mort : entre 8 et 20 % du chiffre facturé tourne à plus de 60 jours, et personne ne sait précisément qui doit quoi à quelle date. Pas par mauvaise volonté du client. Par défaut de système. Voici comment on cadre le sujet — la séquence à mettre en place, les vrais délais légaux, et comment câbler tout ça sur Batappli, Obat, Tolteck ou EBP sans changer d'outil.
 
 ---
 
@@ -43,7 +43,7 @@ Vous n'êtes pas obligé d'appliquer tout ça à un client historique sur un ret
 
 ## La séquence de relance qui marche
 
-Sur les boîtes qu'on accompagne, la séquence type tient en 5 étapes. Elle commence avant l'échéance et se termine en pré-contentieux.
+La séquence type qui marche dans cette niche tient en 5 étapes. Elle commence avant l'échéance et se termine en pré-contentieux.
 
 **J-3 (avant l'échéance) — rappel courtois automatique.** Mail envoyé 3 jours avant la date d'échéance. Tonalité informative : "votre facture n°2026-0142 d'un montant de 4 280 € arrive à échéance le 15 mai". Aucun reproche, aucune pression. Ce seul mail récupère 30 à 50 % des oublis purs et simples. Coût en énergie patron : zéro.
 
@@ -59,7 +59,7 @@ Cette séquence est exécutée à 90 % par des outils, à 10 % par un humain. C'
 
 ## Comment l'automatiser sur vos outils actuels
 
-Vous n'avez pas besoin de changer de logiciel BTP. Toutes les boîtes qu'on accompagne gardent Batappli, Obat, Tolteck ou EBP, et on ajoute la couche relance autour.
+Vous n'avez pas besoin de changer de logiciel BTP. Dans la grande majorité des cas, on garde Batappli, Obat, Tolteck ou EBP, et on ajoute la couche relance autour.
 
 **Si votre logiciel BTP exporte les factures vers un Google Sheet ou Airtable** (Batappli, Obat, Tolteck le font tous via export quotidien ou API), Make ou n8n lit la liste des factures non payées chaque matin, calcule l'écart entre la date d'échéance et aujourd'hui, et déclenche le bon mail au bon moment. Coût : 30 à 60 €/mois selon le volume.
 
@@ -69,13 +69,13 @@ Vous n'avez pas besoin de changer de logiciel BTP. Toutes les boîtes qu'on acco
 
 Le point sensible n'est jamais l'outil. C'est la donnée d'entrée. Pour qu'une relance automatique parte au bon moment, il faut que la date de paiement réel soit synchronisée chaque jour entre votre banque, votre logiciel BTP et votre comptabilité. Sans ça, vous relancez un client qui a déjà payé. Une fois. Vous perdez la confiance du système. Personne ne l'utilise plus.
 
-## Ce qu'on voit sur le terrain
+## Deux profils typiques qu'on rencontre
 
-Deux scénarios qu'on a câblés en avril 2026.
+Pour donner une idée concrète de ce que ça change, deux scénarios représentatifs des boîtes du second œuvre. Pas des noms de clients, des profils-types.
 
-**Cas 1 — boîte de plomberie 14 salariés, 1,8 M€ CA.** DSO mesuré au diagnostic : 76 jours. Outil métier : Batappli. Mise en place : export quotidien Batappli vers Airtable, séquence Make 4 étapes (J-3, J+1, J+8 alerte téléphone, J+15 mise en demeure auto via La Poste API), branchement Pennylane pour la lettrure bancaire. Délai de mise en place : 11 jours ouvrés. DSO 8 semaines après : 54 jours. Trésorerie débloquée : environ 110 000 €.
+**Profil 1 — boîte de plomberie autour de 15 salariés, sous Batappli.** Le DSO réel observé en diagnostic est régulièrement entre 70 et 80 jours, avec un patron qui n'a aucune visibilité sur les retards. La mise en place type : export quotidien des factures vers une base de données légère, séquence d'envoi 4 touches via Make (J-3 rappel, J+1 mail ferme, J+8 alerte appel, J+15 mise en demeure pré-remplie), branchement comptable pour lettrer les paiements automatiquement. Sur ce profil, ramener le DSO entre 50 et 60 jours est l'ordre de grandeur attendu sur 8 à 12 semaines, soit plusieurs dizaines de milliers d'euros de trésorerie qui repassent en disponible.
 
-**Cas 2 — boîte d'électricité 8 salariés, 720 k€ CA.** DSO mesuré : 62 jours, mais 4 dossiers anciens à 180+ jours. Outil métier : Tolteck. Mise en place beaucoup plus simple : activation native des relances Tolteck + Pennylane, sans Make. Travail en parallèle sur les 4 vieux dossiers via une plateforme de recouvrement amiable à 12 % du recouvré. Délai de mise en place : 4 jours. Récupération sur les anciens : 2 dossiers sur 4 (8 200 €), avec lettre recommandée et plateforme. Les 2 autres en contentieux.
+**Profil 2 — boîte d'électricité autour de 8 salariés, sous Tolteck ou Obat.** DSO souvent moins catastrophique (60-65 jours), mais avec une queue de 3 ou 4 vieux dossiers oubliés à 150 jours et plus. Là, la mise en place est plus simple : activer les relances natives du logiciel + de l'outil comptable, sans Make. Le vrai gain ne vient pas tant du DSO global que du traitement des anciens dossiers, en parallèle, via une plateforme de recouvrement amiable (commission classique 10-15 % du recouvré). Sur ces vieux dossiers, on ne récupère jamais tout — on récupère ce qui peut l'être avant qu'ils prescrivent.
 
 Pas le même outil, pas le même budget. Le point commun : la séquence est la même, et elle tourne sans le patron.
 

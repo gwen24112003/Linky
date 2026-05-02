@@ -33,7 +33,7 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentArticle
   }
 
   const handleArticleClick = (slug: string) => {
-    router.push(`/article/${slug}`);
+    router.push(`/articles/${slug}`);
   };
 
   return (

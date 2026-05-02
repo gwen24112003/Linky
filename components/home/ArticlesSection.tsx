@@ -33,7 +33,7 @@ export const ArticlesSection: React.FC = () => {
   const [featured] = articles;
 
   const handleArticleClick = (slug: string) => {
-    router.push(`/article/${slug}`);
+    router.push(`/articles/${slug}`);
   };
 
   return (

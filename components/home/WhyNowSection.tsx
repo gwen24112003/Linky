@@ -107,7 +107,7 @@ export const WhyNowSection: React.FC = () => {
                 />
               </Link>
               <Link
-                href="/article/facturation-electronique-2026"
+                href="/articles/facturation-electronique-2026"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm md:text-base border-2 border-white/25 text-white/90 hover:bg-white/5 hover:border-white/40 transition-all duration-200"
               >
                 Lire le point complet

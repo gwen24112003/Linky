@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = getArticleBySlug(slug);
   if (!article) return {};
   const frontMatter = getArticleFrontMatter(slug);
-  const pageUrl = `https://opusadvisor.fr/article/${article.slug}`;
+  const pageUrl = `https://opusadvisor.fr/articles/${article.slug}`;
   const ogImage = article.imageSrc
     ? `https://opusadvisor.fr${article.imageSrc}`
     : 'https://opusadvisor.fr/images/opus-banner.png';
@@ -61,7 +61,7 @@ export default async function ArticlePage({ params }: PageProps) {
   const content = getArticleContent(slug);
   const frontMatter = getArticleFrontMatter(slug);
 
-  const pageUrl = `https://opusadvisor.fr/article/${article.slug}`;
+  const pageUrl = `https://opusadvisor.fr/articles/${article.slug}`;
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',

@@ -35,7 +35,7 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
             imageSrc={article.imageSrc}
             overlayImageSrc={article.overlayImageSrc}
             icon={article.icon}
-            onClick={() => router.push(`/article/${article.slug}`)}
+            onClick={() => router.push(`/articles/${article.slug}`)}
           />
         </motion.div>
       ))}
