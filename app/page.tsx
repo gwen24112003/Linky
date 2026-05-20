@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HeroBTP } from '@/components/home/HeroBTP';
+import { ManifestoSection } from '@/components/home/ManifestoSection';
 import { PainSection } from '@/components/home/PainSection';
 import { SystemSection } from '@/components/home/SystemSection';
 import { ConvictionsSection } from '@/components/home/ConvictionsSection';
@@ -133,6 +134,7 @@ export default function HomePage() {
       <Header />
       <main className="flex-grow">
         <HeroBTP />
+        <ManifestoSection />
         <PainSection />
         <SystemSection />
         <ConvictionsSection />

@@ -138,6 +138,36 @@ export const TeamView: React.FC = () => {
         </div>
       </section>
 
+      {/* Manifeste — exergue */}
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <blockquote
+            className="max-w-[760px] mx-auto rounded-2xl p-8 md:p-12"
+            style={{
+              background: '#FAF7F0',
+              borderLeft: `4px solid ${GOLD}`,
+              boxShadow: '0 12px 40px rgba(26,35,50,0.06)',
+            }}
+          >
+            <p
+              className="text-2xl md:text-3xl font-bold leading-tight mb-4"
+              style={{ color: NAVY }}
+            >
+              Ni développeur, ni cabinet conseil.
+            </p>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              Les éditeurs de logiciels vendent leur outil et passent à l'entreprise
+              suivante. Les cabinets de conseil livrent une feuille de route et laissent le
+              patron l'appliquer seul. Entre les deux, il y a un vide.{' '}
+              <strong style={{ color: NAVY }}>Opus Advisor occupe ce vide.</strong> Nous
+              sommes des <strong style={{ color: GOLD }}>opérateurs</strong> : on
+              diagnostique votre système, on le met en œuvre, on reste à vos côtés pour le
+              faire évoluer.
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
       {/* Profils */}
       <section className="py-16 md:py-24 bg-[#FAF8F4]">
         <div className="container mx-auto px-6 max-w-5xl space-y-10 md:space-y-14">
