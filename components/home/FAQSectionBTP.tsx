@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { faqs } from '@/lib/faqData';
 
 const GOLD = '#C9A84C';
@@ -47,9 +49,9 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onToggle })
           transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
           style={{ overflow: 'hidden' }}
         >
-          <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed pb-5 md:pb-6 pr-8">
-            {answer}
-          </p>
+          <div className="prose prose-sm max-w-none pb-5 md:pb-6 pr-8 text-gray-600 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600 prose-li:my-1 prose-strong:text-[#1A2332] prose-strong:font-semibold">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{answer}</ReactMarkdown>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
