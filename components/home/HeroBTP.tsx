@@ -101,7 +101,7 @@ export const HeroBTP: React.FC = () => {
               variants={item}
             >
               Relances automatiques, chantiers centralisés, devis qui ne traînent plus.
-              Un outil unique, adapté à votre boîte. Pas une énième plateforme.
+              Un système calé sur votre boîte. Pas une plateforme générique.
             </motion.p>
 
             <motion.div

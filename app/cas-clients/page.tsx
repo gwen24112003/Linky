@@ -66,14 +66,14 @@ const profilCriteria = [
 
 const dealGive = [
   'Diagnostic complet de votre stack actuelle (valeur 2 500 €)',
-  'Implémentation du système : logiciel BTP correctement paramétré, Notion/Drive chantiers, automatisations Make ou n8n',
+  'Mise en œuvre du système : logiciel BTP correctement paramétré, Notion/Drive chantiers, automatisations Make ou n8n',
   'Formation de votre équipe (2 sessions en visio + doc écrite)',
-  'Suivi mensuel pendant 6 mois après la mise en prod',
+  'Gardien du système pendant 6 mois après la mise en prod',
   'Tarif pilote : 40% de moins que le catalogue standard',
 ];
 
 const dealTake = [
-  "Accès à vos données réelles pendant l'implémentation (chiffres, devis, chantiers)",
+  "Accès à vos données réelles pendant la mise en œuvre (chiffres, devis, chantiers)",
   'Autorisation de publier un cas détaillé après 6 mois, avec les chiffres avant/après',
   'Un témoignage vidéo de 3 à 5 minutes une fois le système en production (optionnel mais apprécié)',
   'Votre patience : on construit la v1 de la méthode Opus avec vous, pas à côté',

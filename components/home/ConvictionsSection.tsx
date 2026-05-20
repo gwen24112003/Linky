@@ -22,7 +22,7 @@ const convictions = [
   },
   {
     title: 'Si on ne peut pas vous aider, on le dit',
-    desc: "Certaines boîtes n'ont pas besoin de nous. On préfère vous dire non que facturer pour rien. On recommande d'autres solutions si c'est le cas.",
+    desc: "Certaines boîtes n'ont pas besoin de nous. On préfère vous dire non que facturer pour rien. On vous oriente vers d'autres prestataires si c'est le cas.",
   },
 ];
 

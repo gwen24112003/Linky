@@ -71,7 +71,7 @@ const organizationJsonLd = {
       name: SITE_NAME,
       alternateName: 'Opus Advisor',
       description:
-        "Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation. Diagnostic chiffré, implémentation, formation équipe.",
+        "Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation. Diagnostic chiffré, mise en œuvre, formation équipe.",
       url: SITE_URL,
       email: 'enzo@opusadvisor.fr',
       address: {
@@ -86,7 +86,7 @@ const organizationJsonLd = {
         'Système de gestion second œuvre',
         'Automatisation devis et relances',
         'Mise en conformité facturation électronique 2027',
-        "Implémentation Batappli / Obat / Tolteck / EBP Bâtiment",
+        "Mise en œuvre Batappli / Obat / Tolteck / EBP Bâtiment",
         'Automatisation Make et n8n',
         'Formation équipe BTP',
       ],

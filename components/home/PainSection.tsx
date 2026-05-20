@@ -23,7 +23,7 @@ const pains = [
   {
     icon: Wallet,
     title: 'Impayés qui plombent la trésorerie',
-    desc: "1 artisan sur 3 subit des retards de paiement. Moyenne d'un impayé BTP : 3 000 €. Quand on oublie de relancer, le cash dort.",
+    desc: "1 patron sur 3 subit des retards de paiement. Moyenne d'un impayé BTP : 3 000 €. Quand on oublie de relancer, le cash dort.",
   },
   {
     icon: Calculator,
@@ -72,7 +72,7 @@ export const PainSection: React.FC = () => {
             Votre boîte tourne sur 6 outils qui ne se parlent pas.
           </h2>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            Vos devis dans Batappli (ou Tolteck, ou Obat). Vos chantiers dans WhatsApp. Vos factures dans Excel. Vos relances dans votre tête. Vos photos de chantier dispersées. Vos SAV oubliés 6 mois plus tard.
+            Vos devis dans Batappli (ou Tolteck, ou Obat). Vos chantiers dans WhatsApp. Vos factures dans Excel. Vos relances que vous portez seul. Vos photos de chantier dispersées. Vos SAV oubliés 6 mois plus tard.
             <br />
             <span className="font-medium" style={{ color: NAVY }}>
               On connaît. On voit ça dans chaque boîte de second œuvre qu'on rencontre.
