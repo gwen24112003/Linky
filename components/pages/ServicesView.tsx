@@ -119,6 +119,33 @@ const services: ServiceData[] = [
   },
 ];
 
+const differentiators = [
+  {
+    vs: 'Vs un éditeur de logiciel BTP',
+    lead: 'Un éditeur vend son outil et passe à la boîte suivante.',
+    bold: 'On ne vend rien. On orchestre ce que vous avez déjà.',
+    tail: "Votre Batappli, votre Obat, votre EBP — on les fait parler ensemble plutôt que d'en ajouter un onzième.",
+  },
+  {
+    vs: 'Vs un cabinet de conseil classique',
+    lead: "Un cabinet livre une feuille de route et vous laisse l'appliquer.",
+    bold: "On l'applique avec vous.",
+    tail: 'Pas de PowerPoint sans action. Chaque mission produit un système qui tourne, pas un document à activer.',
+  },
+  {
+    vs: 'Vs un freelance Make ou Zapier',
+    lead: 'Un freelance facture des journées.',
+    bold: 'On vend un système qui tient.',
+    tail: 'Documentation complète, formation de vos équipes, Gardien optionnel à 400 €/mois pour ne jamais vous retrouver seul face à un système qui plante.',
+  },
+  {
+    vs: 'Vs un programme France Num gratuit',
+    lead: 'Un programme financé accompagne 1500 entreprises avec la même méthode.',
+    bold: 'On bosse pour la vôtre, pas pour la moyenne.',
+    tail: 'Recommandations basées sur vos outils réels, votre activité réelle, vos contraintes réelles.',
+  },
+];
+
 export const ServicesView: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -315,6 +342,43 @@ export const ServicesView: React.FC = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Pourquoi Opus Advisor — différenciants vs concurrents */}
+      <section className="py-16 md:py-20 bg-white border-t" style={{ borderColor: 'rgba(26,35,50,0.06)' }}>
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="max-w-2xl mb-10 md:mb-12">
+            <p
+              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-3"
+              style={{ color: GOLD }}
+            >
+              Pourquoi Opus Advisor
+            </p>
+            <h2
+              className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
+              style={{ color: NAVY }}
+            >
+              Ce qui change avec nous.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+            {differentiators.map((d) => (
+              <div
+                key={d.vs}
+                className="rounded-2xl p-7 md:p-8"
+                style={{ background: '#FAF8F4', border: '1px solid rgba(26,35,50,0.08)' }}
+              >
+                <h3 className="text-lg md:text-xl font-bold mb-3" style={{ color: NAVY }}>
+                  {d.vs}
+                </h3>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                  {d.lead} <strong style={{ color: GOLD }}>{d.bold}</strong> {d.tail}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
