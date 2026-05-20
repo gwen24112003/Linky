@@ -29,7 +29,7 @@ Vos fournisseurs de cuivre, de chaudières, de gaines, de PVC, ce sont souvent d
 
 OpinionWay a publié un sondage il y a 3 jours pour la fintech Tiime. Le chiffre : **4 TPE sur 10 ne seront pas prêtes** au 1er septembre 2026. Sur les 10 millions d'entreprises concernées par la réforme, ça fait beaucoup de monde qui va découvrir l'obligation au moment où ses fournisseurs commenceront à lui envoyer des factures qu'elle ne peut pas traiter.
 
-Le sondage ne segmente pas par secteur. Mais quand on connaît le BTP second œuvre, on sait que les boîtes de 8 à 25 personnes sont rarement en avance sur les sujets administratifs. Le devis, la facture, la situation, c'est déjà fait à l'arrache entre Excel et Batappli. Alors la Plateforme Agréée, le Factur-X, les 4 nouvelles mentions obligatoires sur les factures, tout ça arrive très loin dans la liste des priorités.
+Le sondage ne segmente pas par secteur. Mais quand on connaît le BTP second œuvre, on sait que les boîtes de 8 à 60+ collaborateurs sont rarement en avance sur les sujets administratifs. Le devis, la facture, la situation, c'est déjà fait à l'arrache entre Excel et Batappli. Alors la Plateforme Agréée, le Factur-X, les 4 nouvelles mentions obligatoires sur les factures, tout ça arrive très loin dans la liste des priorités.
 
 Sauf que la priorité, ce n'est pas septembre 2027 quand vous devrez émettre. C'est septembre 2026 quand vous devrez recevoir.
 

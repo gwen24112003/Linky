@@ -49,8 +49,8 @@ const profilCriteria = [
   },
   {
     icon: Users,
-    label: '5 à 20 salariés',
-    desc: 'Une boîte assez grande pour que le système ait un impact, assez petite pour qu\'on soit encore agile.',
+    label: '8 à 60+ collaborateurs',
+    desc: 'Des artisans structurés aux PME multi-agences. Assez de volume pour que le système ait un impact mesurable.',
   },
   {
     icon: MapPin,
