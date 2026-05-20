@@ -7,7 +7,7 @@ const PAGE_URL = 'https://opusadvisor.fr/services';
 const PAGE_TITLE =
   'Services & tarifs — Opus Advisor (BTP second œuvre)';
 const PAGE_DESCRIPTION =
-  'Pré-audit gratuit 30 min. Diagnostic 2 500 €. Implémentation 5 000 à 15 000 €. Suivi mensuel 400 à 600 €. Quatre offres claires, chiffrées, sans surprise.';
+  'Pré-audit gratuit. Audit Stack 990 €. Diagnostic 2 500 €. Mise en œuvre 5 500 à 25 000 €. Gardien du système 400 à 1 500 €/mois. Cinq étapes claires, chiffrées, sans surprise.';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

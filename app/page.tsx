@@ -70,6 +70,19 @@ const servicesJsonLd = {
     },
     {
       '@type': 'Service',
+      name: 'Audit Stack',
+      provider: { '@id': 'https://opusadvisor.fr/#organization' },
+      description:
+        "Cartographie des outils actuels et identification des points de friction. Préconisation explicite : ajouter, remplacer ou orchestrer. Indépendant, revendeur de personne. Livré en 10 jours ouvrés.",
+      areaServed: { '@type': 'Country', name: 'France' },
+      offers: {
+        '@type': 'Offer',
+        price: '990',
+        priceCurrency: 'EUR',
+      },
+    },
+    {
+      '@type': 'Service',
       name: 'Diagnostic opérationnel BTP',
       provider: { '@id': 'https://opusadvisor.fr/#organization' },
       description:
@@ -83,7 +96,7 @@ const servicesJsonLd = {
     },
     {
       '@type': 'Service',
-      name: 'Implémentation système BTP',
+      name: 'Mise en œuvre système BTP',
       provider: { '@id': 'https://opusadvisor.fr/#organization' },
       description:
         "Configuration et connexion des outils (Batappli/Obat/Tolteck/EBP, Notion, Make, n8n), tests, formation équipe. 4 à 10 semaines.",
@@ -93,18 +106,18 @@ const servicesJsonLd = {
         priceCurrency: 'EUR',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          minPrice: '5000',
-          maxPrice: '15000',
+          minPrice: '5500',
+          maxPrice: '25000',
           priceCurrency: 'EUR',
         },
       },
     },
     {
       '@type': 'Service',
-      name: 'Suivi mensuel',
+      name: 'Gardien du système',
       provider: { '@id': 'https://opusadvisor.fr/#organization' },
       description:
-        "Maintenance, ajustements, nouvelles automations au fil de l'eau. Un interlocuteur unique qui connaît votre système.",
+        "Maintenance, ajustements, nouvelles automations au fil de l'eau. L'opérateur qui reste à vos côtés et connaît votre système.",
       areaServed: { '@type': 'Country', name: 'France' },
       offers: {
         '@type': 'Offer',
@@ -112,7 +125,7 @@ const servicesJsonLd = {
         priceSpecification: {
           '@type': 'PriceSpecification',
           minPrice: '400',
-          maxPrice: '600',
+          maxPrice: '1500',
           priceCurrency: 'EUR',
         },
       },

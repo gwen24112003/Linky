@@ -18,24 +18,31 @@ const steps = [
   },
   {
     n: '02',
+    title: 'Audit Stack',
+    meta: '10 jours ouvrés',
+    price: '990 € HT',
+    desc: "On cartographie vos outils actuels et les points de friction. Préconisation claire : ajouter un outil, en remplacer un, ou orchestrer ceux que vous avez déjà. On n'est revendeur de personne.",
+  },
+  {
+    n: '03',
     title: 'Diagnostic',
     meta: '2 à 3 semaines',
     price: '2 500 €',
     desc: "On cartographie votre boîte. On définit la vision cible. On vous livre un plan de consolidation précis, chiffré, avec ROI attendu. Si ça vous parle, on exécute. Sinon, vous gardez le plan.",
   },
   {
-    n: '03',
-    title: 'Implémentation',
+    n: '04',
+    title: 'Mise en œuvre',
     meta: '4 à 10 semaines',
     price: 'Selon périmètre',
     desc: "On configure les outils, on connecte, on teste, on forme l'équipe. Pas de livraison dans le vide. Vous validez chaque brique.",
   },
   {
-    n: '04',
-    title: 'Suivi mensuel',
-    meta: 'Optionnel',
-    price: '400 à 600 €/mois',
-    desc: "Votre système évolue avec votre boîte. On maintient, on ajuste, on ajoute des automations au fil de l'eau. Un interlocuteur qui connaît votre système.",
+    n: '05',
+    title: 'Gardien du système',
+    meta: 'Optionnel · L\'opérateur qui reste à vos côtés',
+    price: '400 à 1 500 €/mois',
+    desc: "Votre système évolue avec votre boîte. On maintient, on ajuste, on ajoute des automations au fil de l'eau. Un opérateur qui connaît votre système et reste à vos côtés.",
   },
 ];
 
@@ -68,7 +75,7 @@ export const MethodSection: React.FC = () => {
             Comment on bosse ensemble.
           </h2>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            Quatre étapes claires. Prix affichés. Pas de surprise.
+            Cinq étapes claires. Prix affichés. Pas de surprise.
           </p>
         </motion.div>
 

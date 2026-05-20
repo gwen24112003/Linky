@@ -42,8 +42,27 @@ const services: ServiceData[] = [
     cta: 'Réserver mon créneau',
   },
   {
-    id: 'diagnostic',
+    id: 'audit-stack',
     n: '02',
+    tag: 'Indépendant · revendeur de personne',
+    title: 'Audit Stack',
+    hook: 'Pour 990 €, en 10 jours, vous savez où vous en êtes.',
+    description:
+      "Cartographie de vos outils actuels et identification des points de friction. Préconisation explicite : faut-il ajouter un outil, en remplacer un, ou orchestrer ceux que vous avez déjà ? Indépendance totale : on n'est revendeur de personne.",
+    deliverables: [
+      'Cartographie complète de vos outils actuels',
+      'Identification des points de friction prioritaires',
+      'Préconisation explicite : ajouter / remplacer / orchestrer',
+      'Estimation chiffrée des chantiers à mener',
+    ],
+    price: '990 € HT',
+    priceNote: 'Livré en 10 jours ouvrés',
+    duration: '10 jours ouvrés',
+    cta: 'Demander un Audit Stack',
+  },
+  {
+    id: 'diagnostic',
+    n: '03',
     tag: 'Forfait fixe',
     title: 'Diagnostic opérationnel',
     hook: 'On cartographie votre boîte et on chiffre ce qu\'on vous fait gagner.',
@@ -62,12 +81,12 @@ const services: ServiceData[] = [
   },
   {
     id: 'implementation',
-    n: '03',
+    n: '04',
     tag: 'Livrable fonctionnel',
-    title: 'Implémentation système',
+    title: 'Mise en œuvre système',
     hook: "On configure, on connecte, on forme. Pas de livraison dans le vide.",
     description:
-      "On déploie le système défini au diagnostic. Configuration des outils métier (Batappli, Obat, Tolteck, EBP), mise en place des automations (Make, n8n), couche collaborative (Notion, Google Workspace, WhatsApp Business). Tests sur vos vrais chantiers, formation de l'équipe, documentation écrite.",
+      "On met en œuvre le système défini au diagnostic. Configuration des outils métier (Batappli, Obat, Tolteck, EBP), mise en place des automations (Make, n8n), couche collaborative (Notion, Google Workspace, WhatsApp Business). Tests sur vos vrais chantiers, formation de l'équipe, documentation écrite.",
     deliverables: [
       "Outil métier BTP implémenté et optimisé",
       'Automations en production (relances, reporting, synchro)',
@@ -75,18 +94,18 @@ const services: ServiceData[] = [
       "Formation équipe en français, sur vos données",
       'Documentation et schémas remis',
     ],
-    price: '5 000 € à 15 000 €',
+    price: '5 500 € à 25 000 €',
     priceNote: 'Selon périmètre · chiffré précisément après diagnostic',
     duration: '4 à 10 semaines',
   },
   {
     id: 'suivi',
-    n: '04',
-    tag: 'Optionnel · engagement 3 mois',
-    title: 'Suivi mensuel',
+    n: '05',
+    tag: 'Optionnel · l\'opérateur qui reste à vos côtés',
+    title: 'Gardien du système',
     hook: "Votre système évolue avec votre boîte. On maintient, on ajuste, on ajoute.",
     description:
-      "Un interlocuteur qui connaît votre système. Check mensuel, monitoring des automations, corrections si panne, nouvelles briques au fil de l'eau. Pas de ticket dans un support offshore : vous m'écrivez, je réponds.",
+      "Un opérateur qui connaît votre système et reste à vos côtés. Check mensuel, monitoring des automations, corrections si panne, nouvelles briques au fil de l'eau. Pas de ticket dans un support offshore : vous m'écrivez, je réponds.",
     deliverables: [
       'Monitoring des automations (alertes en cas de panne)',
       'Point mensuel (30 min visio ou async)',
@@ -94,8 +113,8 @@ const services: ServiceData[] = [
       "Accès direct par mail et WhatsApp",
       'Backup documentaire maintenu à jour',
     ],
-    price: '400 à 600 €/mois',
-    priceNote: 'Selon complexité du système · engagement 3 mois minimum',
+    price: '400 à 1 500 €/mois',
+    priceNote: 'Selon complexité du système · sans engagement (Premium sur engagement 12 mois)',
     duration: 'Mensuel',
   },
 ];
@@ -158,7 +177,7 @@ export const ServicesView: React.FC = () => {
               Nos services
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Quatre offres claires, chiffrées, sans surprise.
+              Cinq étapes claires, chiffrées, sans surprise.
             </h1>
             <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
               Vous payez ce qui est dit. Vous savez combien ça coûte avant de signer. Vous sortez quand vous voulez.
