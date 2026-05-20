@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Clock, ShieldCheck, Phone } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const GOLD = '#C9A84C';
 const NAVY = '#1A2332';
@@ -60,48 +60,79 @@ export const FinalCTASection: React.FC = () => {
             }}
           />
 
-          <div className="relative z-10 px-6 md:px-12 py-16 md:py-20 text-center">
-            <p
-              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-4"
-              style={{ color: GOLD }}
-            >
-              On se parle ?
-            </p>
-            <h2
-              id="cta-title"
-              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6"
-            >
-              On parle de votre boîte ?
-            </h2>
-            <p className="text-base md:text-lg text-white/75 leading-relaxed mb-10 max-w-2xl mx-auto">
-              30 minutes en visio. Vous nous montrez vos outils. On identifie 3 points de friction et on vous montre en direct comment les régler.
-              <br />
-              <span className="text-white font-medium">Pas de vente, pas d'engagement.</span>
-            </p>
+          <div className="relative z-10 px-6 md:px-12 py-16 md:py-20">
+            <div className="text-center mb-10 md:mb-12">
+              <p
+                className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-4"
+                style={{ color: GOLD }}
+              >
+                On se parle ?
+              </p>
+              <h2
+                id="cta-title"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white"
+              >
+                Deux façons de démarrer.
+              </h2>
+            </div>
 
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-200 hover:scale-[1.02] shadow-lg hover:shadow-2xl btn-shimmer"
-              style={{ background: GOLD, color: NAVY }}
-            >
-              Réserver un créneau
-              <ArrowRight
-                size={20}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-4xl mx-auto">
+              {/* Pré-audit gratuit */}
+              <div
+                className="rounded-2xl p-7 md:p-8 flex flex-col"
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                }}
+              >
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                  Pré-audit gratuit
+                </h3>
+                <p className="text-sm md:text-base text-white/75 leading-relaxed mb-4">
+                  30 minutes en visio. Vous nous montrez vos outils. On identifie 3 points de
+                  friction et on vous montre en direct comment les régler.
+                </p>
+                <p className="text-sm font-semibold mb-6" style={{ color: GOLD }}>
+                  Gratuit · Sans engagement
+                </p>
+                <Link
+                  href="/contact"
+                  className="group mt-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm md:text-base transition-all duration-200 hover:scale-[1.02] btn-shimmer"
+                  style={{ background: GOLD, color: NAVY }}
+                >
+                  Réserver un créneau
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
 
-            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-8 text-xs md:text-sm text-white/60">
-              <li className="inline-flex items-center gap-2">
-                <Clock size={14} style={{ color: GOLD }} /> Plages dispo sous 5 jours
-              </li>
-              <li className="inline-flex items-center gap-2">
-                <ShieldCheck size={14} style={{ color: GOLD }} /> Annulation libre jusqu'à 2h avant
-              </li>
-              <li className="inline-flex items-center gap-2">
-                <Phone size={14} style={{ color: GOLD }} /> Visio · 30 min · Gratuit
-              </li>
-            </ul>
+              {/* Audit Stack */}
+              <div
+                className="rounded-2xl p-7 md:p-8 flex flex-col"
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: `1px solid ${GOLD}66`,
+                }}
+              >
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                  Audit Stack
+                </h3>
+                <p className="text-sm md:text-base text-white/75 leading-relaxed mb-4">
+                  10 jours pour cartographier vos outils, identifier les frictions et savoir ce
+                  qu'il faut vraiment changer. Avec préconisation chiffrée.
+                </p>
+                <p className="text-sm font-semibold mb-6" style={{ color: GOLD }}>
+                  990 € HT · Livré en 10 jours ouvrés
+                </p>
+                <Link
+                  href="/contact"
+                  className="group mt-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm md:text-base border-2 text-white hover:bg-white/5 transition-all duration-200"
+                  style={{ borderColor: GOLD }}
+                >
+                  Demander un Audit Stack
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

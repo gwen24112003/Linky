@@ -119,12 +119,13 @@ export const HeroBTP: React.FC = () => {
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </Link>
-              <a
-                href="#methode"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg border-2 border-white/25 text-white/90 hover:bg-white/5 hover:border-white/40 transition-all duration-200"
+              <Link
+                href="/services#audit-stack"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg border-2 text-white hover:bg-white/5 transition-all duration-200"
+                style={{ borderColor: GOLD }}
               >
-                Voir comment on procède
-              </a>
+                Audit Stack — 990 € HT
+              </Link>
             </motion.div>
 
             <motion.ul
