@@ -7,6 +7,7 @@ import { PainSection } from '@/components/home/PainSection';
 import { SystemSection } from '@/components/home/SystemSection';
 import { ConvictionsSection } from '@/components/home/ConvictionsSection';
 import { MethodSection } from '@/components/home/MethodSection';
+import { CaseTeasersSection } from '@/components/home/CaseTeasersSection';
 import { WhyNowSection } from '@/components/home/WhyNowSection';
 import { FAQSectionBTP } from '@/components/home/FAQSectionBTP';
 import { FinalCTASection } from '@/components/home/FinalCTASection';
@@ -152,6 +153,7 @@ export default function HomePage() {
         <SystemSection />
         <ConvictionsSection />
         <MethodSection />
+        <CaseTeasersSection />
         <WhyNowSection />
         <FAQSectionBTP />
         <FinalCTASection />
