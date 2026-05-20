@@ -3,7 +3,7 @@ export const faqs = [
     question:
       "Je suis patron d'une boîte d'électricité ou de plomberie. Vous bossez avec des boîtes comme la mienne ?",
     answer:
-      "Oui, c'est même notre cœur de métier. On cible les entreprises du second œuvre (électricité, plomberie, chauffage-clim) entre 8 et 25 salariés. On parle votre langage et on connaît vos outils (Batappli, Tolteck, Obat, EBP Bâtiment). Si votre boîte ne colle pas à ce profil, on vous le dit franchement.",
+      "Oui, c'est même notre cœur de métier. On cible les entreprises du second œuvre (électricité, plomberie, chauffage-clim) de 8 à 60+ collaborateurs, des artisans structurés aux PME multi-agences. On parle votre langage et on connaît vos outils (Batappli, Tolteck, Obat, EBP Bâtiment). Si votre boîte ne colle pas à ce profil, on vous le dit franchement.",
   },
   {
     question:
