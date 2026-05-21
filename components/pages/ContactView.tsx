@@ -1,131 +1,68 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Calendar,
-  Clock,
-  Mail,
-  Linkedin,
-  ShieldCheck,
-  ArrowRight,
-  Phone,
-} from 'lucide-react';
+import { Clock, Mail, Linkedin, ShieldCheck, ArrowRight, Phone, Calendar } from 'lucide-react';
+import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
 const NAVY = '#1A2332';
+const PAPER = '#FAF7F0';
+const RULE = 'rgba(26,35,50,0.16)';
 
 const CAL_URL = 'https://cal.com/enzo-monnier-qc1nqv/30min';
 
 export const ContactView: React.FC = () => {
   return (
     <main className="flex-grow">
-      {/* Hero contact */}
-      <section
-        className="relative text-white overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20"
-        style={{ background: `linear-gradient(135deg, ${NAVY}, #223047 55%, ${NAVY})` }}
-      >
-        <div
-          className="absolute pointer-events-none opacity-40"
-          style={{
-            top: '-10%',
-            right: '-10%',
-            width: 500,
-            height: 500,
-            background: `radial-gradient(circle, ${GOLD}33 0%, transparent 70%)`,
-            filter: 'blur(80px)',
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.08]"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
-            backgroundSize: '32px 32px',
-          }}
-        />
-
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p
-              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-4"
-              style={{ color: GOLD }}
-            >
-              Pré-audit · 30 min · Gratuit
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              On parle de votre boîte ?
-            </h1>
-            <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
-              30 minutes en visio. Vous me montrez vos outils. Je vous identifie 3 points de friction et je vous montre en direct comment les régler.
-              <br />
-              <span className="text-white font-medium">
-                Pas de vente, pas d'engagement.
-              </span>
-            </p>
-          </motion.div>
+      {/* Hero */}
+      <section className="pt-36 pb-20 md:pt-44 md:pb-24" style={{ background: NAVY }}>
+        <div className="container mx-auto px-6 max-w-5xl">
+          <SectionKicker label="Pré-audit · 30 min · gratuit" tone="dark" className="mb-8" />
+          <h1 className="font-heading font-bold leading-[1.0] tracking-tight text-5xl md:text-6xl lg:text-7xl text-white">
+            On parle de votre boîte ?
+          </h1>
+          <p className="mt-7 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
+            30 minutes en visio. Vous me montrez vos outils. J'identifie 3 points de friction et je
+            vous montre en direct comment les régler.{' '}
+            <span className="text-white font-medium">Pas de vente, pas d'engagement.</span>
+          </p>
         </div>
       </section>
 
-      {/* Bloc Cal.com + coordonnées */}
-      <section className="py-16 md:py-20 bg-[#FAF8F4]">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Colonne Cal.com (placeholder) */}
-            <motion.div
-              className="lg:col-span-2 bg-white rounded-2xl p-6 md:p-8"
-              style={{
-                border: '1px solid rgba(26,35,50,0.08)',
-                boxShadow: '0 4px 24px rgba(26,35,50,0.04)',
-              }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style={{ background: `${GOLD}18`, border: `1px solid ${GOLD}55` }}
-                >
-                  <Calendar size={20} style={{ color: NAVY }} />
-                </div>
-                <h2 className="text-xl md:text-2xl font-bold" style={{ color: NAVY }}>
-                  Réserver un créneau
-                </h2>
-              </div>
+      {/* Réservation + coordonnées */}
+      <section className="py-20 md:py-28" style={{ background: PAPER }}>
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            {/* Calendrier */}
+            <div className="lg:col-span-7 border-t pt-8" style={{ borderColor: NAVY }}>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: GOLD }}>
+                Réserver un créneau
+              </p>
+              <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6" style={{ color: NAVY }}>
+                Choisissez votre horaire.
+              </h2>
 
-              <div
-                className="rounded-xl overflow-hidden"
-                style={{ border: '1px solid rgba(26,35,50,0.08)' }}
-              >
+              <div className="overflow-hidden rounded-lg" style={{ border: `1px solid ${RULE}` }}>
                 <iframe
                   src={CAL_URL}
                   title="Réserver un créneau de pré-audit avec Opus Advisor"
-                  className="w-full h-[720px] border-0"
+                  className="w-full h-[720px] border-0 bg-white"
                   loading="lazy"
                   allow="camera; microphone; fullscreen; payment"
                 />
               </div>
 
-              <div className="mt-4 text-center">
-                <a
-                  href={CAL_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs md:text-sm text-gray-500 hover:text-gray-700 transition-colors"
-                >
-                  <ArrowRight size={14} />
-                  Ouvrir le calendrier dans un nouvel onglet
-                </a>
-              </div>
+              <a
+                href={CAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition-colors"
+              >
+                <ArrowRight size={14} style={{ color: GOLD }} />
+                Ouvrir le calendrier dans un nouvel onglet
+              </a>
 
-              <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs md:text-sm text-gray-500">
+              <ul className="mt-6 flex flex-wrap gap-x-7 gap-y-2 text-xs md:text-sm text-gray-500">
                 <li className="inline-flex items-center gap-2">
                   <Clock size={14} style={{ color: GOLD }} /> 30 min · Visio
                 </li>
@@ -136,42 +73,25 @@ export const ContactView: React.FC = () => {
                   <Calendar size={14} style={{ color: GOLD }} /> Plages dispo sous 5 jours
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
-            {/* Colonne coordonnées secours */}
-            <motion.aside
-              className="bg-white rounded-2xl p-6 md:p-8 flex flex-col gap-5 h-fit"
-              style={{
-                border: '1px solid rgba(26,35,50,0.08)',
-                boxShadow: '0 4px 24px rgba(26,35,50,0.04)',
-              }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div>
-                <p
-                  className="text-xs font-semibold tracking-[0.2em] uppercase mb-3"
-                  style={{ color: GOLD }}
-                >
-                  Ou par écrit
-                </p>
-                <h3 className="text-lg md:text-xl font-bold mb-4" style={{ color: NAVY }}>
-                  Si la visio vous gonfle, on peut commencer par mail.
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Décrivez votre boîte en 3 lignes : métier, taille, outils actuels, principale galère. Je vous réponds sous 24h ouvrées.
-                </p>
-              </div>
+            {/* Aside */}
+            <aside className="lg:col-span-5 border-t pt-8" style={{ borderColor: RULE }}>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: GOLD }}>
+                Ou par écrit
+              </p>
+              <h3 className="font-heading font-bold text-2xl md:text-3xl mb-4" style={{ color: NAVY }}>
+                Si la visio vous gonfle, on commence par mail.
+              </h3>
+              <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">
+                Décrivez votre boîte en 3 lignes : métier, taille, outils actuels, principale galère.
+                Je vous réponds sous 24h ouvrées.
+              </p>
 
-              <div
-                className="flex flex-col gap-3 pt-4 border-t"
-                style={{ borderColor: 'rgba(26,35,50,0.08)' }}
-              >
+              <div className="mt-7 flex flex-col gap-4 pt-6 border-t" style={{ borderColor: RULE }}>
                 <a
                   href="mailto:enzo@opusadvisor.fr"
-                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-75 transition-opacity"
+                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-70 transition-opacity"
                   style={{ color: NAVY }}
                 >
                   <Mail size={18} style={{ color: GOLD }} />
@@ -179,7 +99,7 @@ export const ContactView: React.FC = () => {
                 </a>
                 <a
                   href="tel:+33615756549"
-                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-75 transition-opacity"
+                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-70 transition-opacity"
                   style={{ color: NAVY }}
                 >
                   <Phone size={18} style={{ color: GOLD }} />
@@ -189,7 +109,7 @@ export const ContactView: React.FC = () => {
                   href="https://www.linkedin.com/in/enzo-monnier-7524ab205/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-75 transition-opacity"
+                  className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-70 transition-opacity"
                   style={{ color: NAVY }}
                 >
                   <Linkedin size={18} style={{ color: GOLD }} />
@@ -197,19 +117,25 @@ export const ContactView: React.FC = () => {
                 </a>
               </div>
 
-              <div
-                className="mt-2 p-4 rounded-xl text-xs text-gray-600 leading-relaxed"
-                style={{ background: '#FAF8F4' }}
-              >
-                <strong style={{ color: NAVY }}>Ce qu'on fera au pré-audit :</strong>
-                <ul className="mt-2 space-y-1 list-disc list-inside">
-                  <li>Tour rapide de vos outils actuels</li>
-                  <li>3 points de friction identifiés en direct</li>
-                  <li>1 automation démontrée sur vos propres données</li>
-                  <li>Aucun engagement, aucune vente</li>
+              <div className="mt-8 pt-6 border-t" style={{ borderColor: RULE }}>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: GOLD }}>
+                  Ce qu'on fera au pré-audit
+                </p>
+                <ul className="space-y-2.5 text-sm text-gray-600">
+                  {[
+                    'Tour rapide de vos outils actuels',
+                    '3 points de friction identifiés en direct',
+                    '1 automation démontrée sur vos propres données',
+                    'Aucun engagement, aucune vente',
+                  ].map((d) => (
+                    <li key={d} className="flex items-start gap-2.5">
+                      <span className="mt-2 h-px w-3 shrink-0" style={{ background: GOLD }} />
+                      <span className="leading-relaxed">{d}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
-            </motion.aside>
+            </aside>
           </div>
         </div>
       </section>
