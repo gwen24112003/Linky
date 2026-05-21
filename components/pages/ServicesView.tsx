@@ -2,11 +2,14 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Check, ArrowRight, Rocket, BookOpen } from 'lucide-react';
+import { motion, type Variants } from 'framer-motion';
+import { Check, ArrowRight } from 'lucide-react';
+import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
 const NAVY = '#1A2332';
+const PAPER = '#FAF7F0';
+const RULE = 'rgba(26,35,50,0.16)';
 
 interface ServiceData {
   id: string;
@@ -34,8 +37,8 @@ const services: ServiceData[] = [
     deliverables: [
       'Tour rapide de vos outils actuels',
       '3 points de friction identifiés en direct',
-      "1 automation démontrée sur vos propres données",
-      "Recommandation honnête : go / no-go",
+      '1 automation démontrée sur vos propres données',
+      'Recommandation honnête : go / no-go',
     ],
     price: 'Gratuit',
     duration: '30 min · Visio',
@@ -65,14 +68,14 @@ const services: ServiceData[] = [
     n: '03',
     tag: 'Forfait fixe',
     title: 'Diagnostic opérationnel',
-    hook: 'On cartographie votre boîte et on chiffre ce qu\'on vous fait gagner.',
+    hook: "On cartographie votre boîte et on chiffre ce qu'on vous fait gagner.",
     description:
       "Deux à trois semaines pour comprendre votre boîte de fond en comble. Interviews de l'équipe, cartographie des flux, analyse des outils en place. Livraison : un plan de consolidation précis, chiffré, avec ROI attendu. Si ça vous parle, on exécute. Sinon, vous gardez le plan.",
     deliverables: [
       "Cartographie complète de l'existant",
       'Identification des 5 à 10 chantiers prioritaires',
       'Vision cible sur 12 mois',
-      'Plan d\'exécution chiffré (coûts + gains estimés)',
+      "Plan d'exécution chiffré (coûts + gains estimés)",
       'Restitution live avec votre équipe',
     ],
     price: '2 500 €',
@@ -84,14 +87,14 @@ const services: ServiceData[] = [
     n: '04',
     tag: 'Livrable fonctionnel',
     title: 'Mise en œuvre système',
-    hook: "On configure, on connecte, on forme. Pas de livraison dans le vide.",
+    hook: 'On configure, on connecte, on forme. Pas de livraison dans le vide.',
     description:
       "On met en œuvre le système défini au diagnostic. Configuration des outils métier (Batappli, Obat, Tolteck, EBP), mise en place des automations (Make, n8n), couche collaborative (Notion, Google Workspace, WhatsApp Business). Tests sur vos vrais chantiers, formation de l'équipe, documentation écrite.",
     deliverables: [
-      "Outil métier BTP implémenté et optimisé",
+      'Outil métier BTP implémenté et optimisé',
       'Automations en production (relances, reporting, synchro)',
       'Couche collaborative connectée (Notion / Drive + WhatsApp)',
-      "Formation équipe en français, sur vos données",
+      'Formation équipe en français, sur vos données',
       'Documentation et schémas remis',
     ],
     price: '5 500 € à 25 000 €',
@@ -101,16 +104,16 @@ const services: ServiceData[] = [
   {
     id: 'suivi',
     n: '05',
-    tag: 'Optionnel · l\'opérateur qui reste à vos côtés',
+    tag: "Optionnel · l'opérateur qui reste à vos côtés",
     title: 'Gardien du système',
-    hook: "Votre système évolue avec votre boîte. On maintient, on ajuste, on ajoute.",
+    hook: 'Votre système évolue avec votre boîte. On maintient, on ajuste, on ajoute.',
     description:
       "Un opérateur qui connaît votre système et reste à vos côtés. Check mensuel, monitoring des automations, corrections si panne, nouvelles briques au fil de l'eau. Pas de ticket dans un support offshore : vous m'écrivez, je réponds.",
     deliverables: [
       'Monitoring des automations (alertes en cas de panne)',
       'Point mensuel (30 min visio ou async)',
-      '2 à 4 heures d\'évolutions incluses / mois',
-      "Accès direct par mail et WhatsApp",
+      "2 à 4 heures d'évolutions incluses / mois",
+      'Accès direct par mail et WhatsApp',
       'Backup documentaire maintenu à jour',
     ],
     price: '400 à 1 500 €/mois',
@@ -121,30 +124,39 @@ const services: ServiceData[] = [
 
 const differentiators = [
   {
+    n: '01',
     vs: 'Vs un éditeur de logiciel BTP',
     lead: 'Un éditeur vend son outil et passe à la boîte suivante.',
     bold: 'On ne vend rien. On orchestre ce que vous avez déjà.',
     tail: "Votre Batappli, votre Obat, votre EBP — on les fait parler ensemble plutôt que d'en ajouter un onzième.",
   },
   {
+    n: '02',
     vs: 'Vs un cabinet de conseil classique',
     lead: "Un cabinet livre une feuille de route et vous laisse l'appliquer.",
     bold: "On l'applique avec vous.",
     tail: 'Pas de PowerPoint sans action. Chaque mission produit un système qui tourne, pas un document à activer.',
   },
   {
+    n: '03',
     vs: 'Vs un freelance Make ou Zapier',
     lead: 'Un freelance facture des journées.',
     bold: 'On vend un système qui tient.',
     tail: 'Documentation complète, formation de vos équipes, Gardien optionnel à 400 €/mois pour ne jamais vous retrouver seul face à un système qui plante.',
   },
   {
+    n: '04',
     vs: 'Vs un programme France Num gratuit',
     lead: 'Un programme financé accompagne 1500 entreprises avec la même méthode.',
     bold: 'On bosse pour la vôtre, pas pour la moyenne.',
     tail: 'Recommandations basées sur vos outils réels, votre activité réelle, vos contraintes réelles.',
   },
 ];
+
+const reveal: Variants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+};
 
 export const ServicesView: React.FC = () => {
   useEffect(() => {
@@ -166,325 +178,164 @@ export const ServicesView: React.FC = () => {
   return (
     <main className="flex-grow">
       {/* Hero */}
-      <section
-        className="relative text-white overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20"
-        style={{ background: `linear-gradient(135deg, ${NAVY}, #223047 55%, ${NAVY})` }}
-      >
-        <div
-          className="absolute pointer-events-none opacity-40"
-          style={{
-            top: '-10%',
-            left: '-10%',
-            width: 600,
-            height: 600,
-            background: `radial-gradient(circle, ${GOLD}33 0%, transparent 70%)`,
-            filter: 'blur(80px)',
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.08]"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
-            backgroundSize: '32px 32px',
-          }}
-        />
-
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p
-              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-4"
-              style={{ color: GOLD }}
-            >
-              Nos services
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Cinq étapes claires, chiffrées, sans surprise.
-            </h1>
-            <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
-              Vous payez ce qui est dit. Vous savez combien ça coûte avant de signer. Vous sortez quand vous voulez.
-            </p>
-          </motion.div>
+      <section className="pt-36 pb-20 md:pt-44 md:pb-24" style={{ background: NAVY }}>
+        <div className="container mx-auto px-6 max-w-5xl">
+          <SectionKicker label="Services & tarifs" tone="dark" className="mb-8" />
+          <h1 className="font-heading font-bold leading-[1.0] tracking-tight text-5xl md:text-6xl lg:text-7xl text-white">
+            Cinq étapes claires, chiffrées, sans surprise.
+          </h1>
+          <p className="mt-7 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
+            Vous payez ce qui est dit. Vous savez combien ça coûte avant de signer. Vous sortez quand
+            vous voulez.
+          </p>
         </div>
       </section>
 
-      {/* Cards */}
-      <section className="py-16 md:py-20 bg-[#FAF8F4]">
-        <div className="container mx-auto px-6 max-w-6xl space-y-10 md:space-y-14">
-          {services.map((s, i) => (
-            <motion.div
+      {/* Offres — ledger éditorial */}
+      <section className="py-20 md:py-28" style={{ background: PAPER }}>
+        <div className="container mx-auto px-6 max-w-5xl">
+          {services.map((s) => (
+            <motion.article
               key={s.id}
               id={s.id}
-              className="bg-white rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 scroll-mt-28"
-              style={{
-                border: '1px solid rgba(26,35,50,0.08)',
-                boxShadow: '0 12px 40px rgba(26,35,50,0.06)',
-              }}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
+              className="border-t scroll-mt-28"
+              style={{ borderColor: RULE }}
+              variants={reveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-80px' }}
             >
-              {/* Colonne gauche — num + meta */}
-              <div
-                className="lg:col-span-4 p-8 md:p-10 flex flex-col justify-between gap-8"
-                style={{ background: i === 0 ? `${GOLD}12` : NAVY, color: i === 0 ? NAVY : 'white' }}
-              >
-                <div>
-                  <span
-                    className="text-7xl md:text-8xl font-bold leading-none"
-                    style={{ color: i === 0 ? GOLD : `${GOLD}99`, opacity: i === 0 ? 0.6 : 1 }}
-                  >
-                    {s.n}
-                  </span>
-                  <p
-                    className="mt-5 text-[11px] font-semibold uppercase tracking-[0.2em]"
-                    style={{ color: i === 0 ? NAVY : 'rgba(255,255,255,0.55)' }}
-                  >
-                    {s.tag}
-                  </p>
-                  <h2
-                    className="text-2xl md:text-3xl font-bold mt-2 leading-tight"
-                    style={{ color: i === 0 ? NAVY : 'white' }}
-                  >
-                    {s.title}
-                  </h2>
-                  <p
-                    className="text-sm md:text-base mt-3 leading-relaxed italic"
-                    style={{ color: i === 0 ? 'rgba(26,35,50,0.75)' : 'rgba(255,255,255,0.75)' }}
-                  >
-                    « {s.hook} »
-                  </p>
-                </div>
+              <div className="py-10 md:py-12 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+                {/* Gauche */}
+                <div className="md:col-span-5">
+                  <div className="flex items-start gap-5">
+                    <span className="font-heading font-bold text-4xl md:text-5xl leading-none" style={{ color: GOLD }}>
+                      {s.n}
+                    </span>
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-2" style={{ color: 'rgba(26,35,50,0.45)' }}>
+                        {s.tag}
+                      </p>
+                      <h2 className="font-heading font-bold text-2xl md:text-3xl leading-tight" style={{ color: NAVY }}>
+                        {s.title}
+                      </h2>
+                      <p className="mt-3 text-base text-gray-500 italic leading-relaxed">{s.hook}</p>
+                    </div>
+                  </div>
 
-                <div
-                  className="pt-5 border-t"
-                  style={{
-                    borderColor: i === 0 ? 'rgba(26,35,50,0.15)' : 'rgba(255,255,255,0.15)',
-                  }}
-                >
-                  <p
-                    className="text-xs font-semibold uppercase tracking-wider mb-1"
-                    style={{ color: i === 0 ? 'rgba(26,35,50,0.5)' : 'rgba(255,255,255,0.5)' }}
-                  >
-                    {s.duration}
-                  </p>
-                  <p
-                    className="text-2xl md:text-3xl font-bold"
-                    style={{ color: i === 0 ? NAVY : 'white' }}
-                  >
-                    {s.price}
-                  </p>
-                  {s.priceNote && (
-                    <p
-                      className="text-xs mt-1"
-                      style={{ color: i === 0 ? 'rgba(26,35,50,0.5)' : 'rgba(255,255,255,0.5)' }}
-                    >
-                      {s.priceNote}
+                  <div className="mt-7 md:pl-[3.6rem]">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-400 mb-1">
+                      {s.duration}
                     </p>
-                  )}
+                    <p className="font-heading font-bold text-2xl md:text-3xl" style={{ color: NAVY }}>
+                      {s.price}
+                    </p>
+                    {s.priceNote && <p className="text-xs text-gray-400 mt-1.5 max-w-xs">{s.priceNote}</p>}
+                  </div>
                 </div>
-              </div>
 
-              {/* Colonne droite — description + livrables */}
-              <div className="lg:col-span-8 p-8 md:p-10 flex flex-col gap-6">
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  {s.description}
-                </p>
+                {/* Droite */}
+                <div className="md:col-span-7">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">{s.description}</p>
 
-                <div>
-                  <p
-                    className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
-                    style={{ color: GOLD }}
-                  >
+                  <p className="mt-7 text-xs font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: GOLD }}>
                     Ce qui est livré
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2.5">
                     {s.deliverables.map((d, di) => (
                       <li key={di} className="flex items-start gap-3">
-                        <div
-                          className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                          style={{ background: `${GOLD}22`, border: `1px solid ${GOLD}66` }}
-                        >
-                          <Check size={11} style={{ color: NAVY }} strokeWidth={3} />
-                        </div>
-                        <span className="text-sm md:text-[15px] text-gray-700 leading-snug">
-                          {d}
-                        </span>
+                        <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD }} />
+                        <span className="text-sm md:text-[15px] text-gray-700 leading-snug">{d}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
 
-                {s.cta && (
-                  <div
-                    className="pt-4 mt-auto border-t"
-                    style={{ borderColor: 'rgba(26,35,50,0.08)' }}
-                  >
+                  {s.cta && (
                     <Link
                       href="/contact"
-                      className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm md:text-base transition-all duration-200 hover:scale-[1.02]"
+                      className="group mt-7 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm md:text-base transition-all duration-200 hover:scale-[1.02]"
                       style={{ background: GOLD, color: NAVY }}
                     >
                       {s.cta}
-                      <ArrowRight
-                        size={18}
-                        className="group-hover:translate-x-1 transition-transform"
-                      />
+                      <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
+          <div className="border-t" style={{ borderColor: RULE }} />
         </div>
       </section>
 
-      {/* Pourquoi Opus Advisor — différenciants vs concurrents */}
-      <section className="py-16 md:py-20 bg-white border-t" style={{ borderColor: 'rgba(26,35,50,0.06)' }}>
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="max-w-2xl mb-10 md:mb-12">
-            <p
-              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-3"
-              style={{ color: GOLD }}
-            >
-              Pourquoi Opus Advisor
-            </p>
-            <h2
-              className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
-              style={{ color: NAVY }}
-            >
-              Ce qui change avec nous.
-            </h2>
-          </div>
+      {/* Différenciants */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <SectionKicker label="Pourquoi Opus Advisor" className="mb-8" />
+          <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl mb-12" style={{ color: NAVY }}>
+            Ce qui change avec nous.
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14">
             {differentiators.map((d) => (
-              <div
-                key={d.vs}
-                className="rounded-2xl p-7 md:p-8"
-                style={{ background: '#FAF8F4', border: '1px solid rgba(26,35,50,0.08)' }}
-              >
-                <h3 className="text-lg md:text-xl font-bold mb-3" style={{ color: NAVY }}>
-                  {d.vs}
-                </h3>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  {d.lead} <strong style={{ color: GOLD }}>{d.bold}</strong> {d.tail}
-                </p>
+              <div key={d.n} className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-7 border-t" style={{ borderColor: RULE }}>
+                <span className="font-heading font-bold text-base leading-none pt-1" style={{ color: GOLD }}>
+                  {d.n}
+                </span>
+                <div>
+                  <h3 className="font-semibold text-lg md:text-xl leading-snug mb-2" style={{ color: NAVY }}>
+                    {d.vs}
+                  </h3>
+                  <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">
+                    {d.lead} <strong style={{ color: GOLD }}>{d.bold}</strong> {d.tail}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pour aller plus loin — internal linking */}
-      <section className="py-16 md:py-20 bg-white border-t" style={{ borderColor: 'rgba(26,35,50,0.06)' }}>
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="max-w-2xl mb-10">
-            <p
-              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-3"
-              style={{ color: GOLD }}
-            >
-              Pour aller plus loin
-            </p>
-            <h2
-              className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
-              style={{ color: NAVY }}
-            >
-              Avant de décider, prenez deux minutes.
-            </h2>
-          </div>
+      {/* Pour aller plus loin */}
+      <section className="py-20 md:py-28" style={{ background: PAPER }}>
+        <div className="container mx-auto px-6 max-w-5xl">
+          <SectionKicker label="Pour aller plus loin" className="mb-8" />
+          <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl mb-12" style={{ color: NAVY }}>
+            Avant de décider, prenez deux minutes.
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Opus Pilotes */}
-            <Link
-              href="/cas-clients"
-              className="group relative rounded-3xl p-8 md:p-10 transition-all duration-200 hover:-translate-y-1"
-              style={{
-                background: `${GOLD}10`,
-                border: `1px solid ${GOLD}44`,
-              }}
-            >
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                style={{ background: GOLD, color: NAVY }}
-              >
-                <Rocket size={22} strokeWidth={2.2} />
-              </div>
-              <p
-                className="text-xs font-semibold uppercase tracking-[0.18em] mb-2"
-                style={{ color: GOLD }}
-              >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14">
+            <Link href="/cas-clients" className="group py-7 border-t flex flex-col" style={{ borderColor: NAVY }}>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: GOLD }}>
                 Programme pilote · 3 places
-              </p>
-              <h3
-                className="text-xl md:text-2xl font-bold mb-3 leading-tight"
-                style={{ color: NAVY }}
-              >
+              </span>
+              <h3 className="font-heading font-bold text-xl md:text-2xl leading-snug mb-3" style={{ color: NAVY }}>
                 Opus Pilotes — construisez la v1 avec nous
               </h3>
-              <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-5">
-                Trois boîtes du second œuvre, tarif pilote -40 %, accès direct. En échange,
-                on documente ensemble ce qui marche. Si vous voulez être dans les premiers,
-                c'est maintenant.
+              <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed mb-5 flex-1">
+                Trois boîtes du second œuvre, tarif pilote -40 %, accès direct. En échange, on
+                documente ensemble ce qui marche.
               </p>
-              <span
-                className="inline-flex items-center gap-2 font-semibold text-sm md:text-base"
-                style={{ color: NAVY }}
-              >
+              <span className="inline-flex items-center gap-2 font-semibold text-sm md:text-base" style={{ color: NAVY }}>
                 Voir le programme
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
+                <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
 
-            {/* Articles */}
-            <Link
-              href="/articles"
-              className="group relative rounded-3xl p-8 md:p-10 transition-all duration-200 hover:-translate-y-1"
-              style={{
-                background: '#FAF8F4',
-                border: '1px solid rgba(26,35,50,0.08)',
-              }}
-            >
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                style={{ background: NAVY, color: GOLD }}
-              >
-                <BookOpen size={22} strokeWidth={2.2} />
-              </div>
-              <p
-                className="text-xs font-semibold uppercase tracking-[0.18em] mb-2"
-                style={{ color: NAVY, opacity: 0.5 }}
-              >
+            <Link href="/articles" className="group py-7 border-t flex flex-col" style={{ borderColor: NAVY }}>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: 'rgba(26,35,50,0.45)' }}>
                 Conseils & retours terrain
-              </p>
-              <h3
-                className="text-xl md:text-2xl font-bold mb-3 leading-tight"
-                style={{ color: NAVY }}
-              >
+              </span>
+              <h3 className="font-heading font-bold text-xl md:text-2xl leading-snug mb-3" style={{ color: NAVY }}>
                 Articles — comment on procède, concrètement
               </h3>
-              <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-5">
+              <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed mb-5 flex-1">
                 Méthodes de consolidation, outils BTP comparés, facturation électronique,
                 automatisations testées sur le terrain. Lecture courte, sans jargon.
               </p>
-              <span
-                className="inline-flex items-center gap-2 font-semibold text-sm md:text-base"
-                style={{ color: NAVY }}
-              >
+              <span className="inline-flex items-center gap-2 font-semibold text-sm md:text-base" style={{ color: NAVY }}>
                 Lire les articles
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
+                <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
           </div>
@@ -492,28 +343,23 @@ export const ServicesView: React.FC = () => {
       </section>
 
       {/* CTA bas */}
-      <section className="py-16 md:py-20 bg-[#FAF8F4]">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h2
-            className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-5"
-            style={{ color: NAVY }}
-          >
+      <section className="py-20 md:py-28" style={{ background: NAVY }}>
+        <div className="container mx-auto px-6 max-w-5xl">
+          <SectionKicker label="Démarrer" tone="dark" className="mb-8" />
+          <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl text-white max-w-3xl">
             Vous hésitez sur l'offre qui colle à votre boîte ?
           </h2>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-            Commencez par le pré-audit. Il est gratuit, il dure 30 min, et vous en ressortez avec
-            3 points de friction identifiés. On décide ensuite, ensemble, si on continue ou pas.
+          <p className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
+            Commencez par le pré-audit. Gratuit, 30 minutes, et vous en ressortez avec 3 points de
+            friction identifiés. On décide ensuite, ensemble, si on continue ou pas.
           </p>
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-200 hover:scale-[1.02] btn-shimmer"
+            className="group mt-9 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm md:text-base transition-all duration-200 hover:scale-[1.02]"
             style={{ background: GOLD, color: NAVY }}
           >
             Réserver mon pré-audit
-            <ArrowRight
-              size={20}
-              className="group-hover:translate-x-1 transition-transform"
-            />
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </section>
