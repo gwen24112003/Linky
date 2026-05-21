@@ -11,41 +11,11 @@ const NAVY = '#1A2332';
 const RULE = 'rgba(26,35,50,0.16)';
 
 const steps = [
-  {
-    n: '01',
-    title: 'Pré-audit gratuit',
-    meta: '30 min · Visio',
-    price: 'Gratuit',
-    desc: "Vous me montrez vos outils. J'identifie 3 points de friction. Je vous montre en live comment on les règle. Pas de vente. Vous voyez ce que ça donne, on décide ensuite.",
-  },
-  {
-    n: '02',
-    title: 'Audit Stack',
-    meta: '10 jours ouvrés',
-    price: '990 € HT',
-    desc: "On cartographie vos outils actuels et les points de friction. Préconisation claire : ajouter un outil, en remplacer un, ou orchestrer ceux que vous avez déjà. On n'est revendeur de personne.",
-  },
-  {
-    n: '03',
-    title: 'Diagnostic',
-    meta: '2 à 3 semaines',
-    price: '2 500 €',
-    desc: "On cartographie votre boîte. On définit la vision cible. On vous livre un plan de consolidation précis, chiffré, avec ROI attendu. Si ça vous parle, on exécute. Sinon, vous gardez le plan.",
-  },
-  {
-    n: '04',
-    title: 'Mise en œuvre',
-    meta: '4 à 10 semaines',
-    price: 'Selon périmètre',
-    desc: "On configure les outils, on connecte, on teste, on forme l'équipe. Pas de livraison dans le vide. Vous validez chaque brique.",
-  },
-  {
-    n: '05',
-    title: 'Gardien du système',
-    meta: "Optionnel · l'opérateur qui reste à vos côtés",
-    price: '400 à 1 500 €/mois',
-    desc: "Votre système évolue avec votre boîte. On maintient, on ajuste, on ajoute des automations au fil de l'eau. Un opérateur qui connaît votre système et reste à vos côtés.",
-  },
+  { n: '01', title: 'Pré-audit gratuit', line: '30 min en visio. 3 points de friction repérés en direct.' },
+  { n: '02', title: 'Audit Stack', line: 'Cartographie de vos outils et préconisation chiffrée.' },
+  { n: '03', title: 'Diagnostic', line: 'Un plan de consolidation chiffré, avec le ROI attendu.' },
+  { n: '04', title: 'Mise en œuvre', line: 'On configure, on connecte, on forme vos équipes.' },
+  { n: '05', title: 'Gardien du système', line: "L'opérateur qui reste à vos côtés, au fil de l'eau." },
 ];
 
 const container: Variants = {
@@ -79,55 +49,45 @@ export const MethodSection: React.FC = () => {
           >
             Comment on bosse ensemble.
           </motion.h2>
-          <motion.p variants={item} className="mt-6 text-lg md:text-xl text-gray-600">
-            Cinq étapes claires. Prix affichés. Pas de surprise.
+          <motion.p variants={item} className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl">
+            Cinq étapes claires, du premier échange jusqu'au système qui tourne.
           </motion.p>
 
-          <motion.ol variants={item} className="mt-14">
-            {steps.map((s, i) => (
-              <li key={s.n} className="border-t py-7" style={{ borderColor: RULE }}>
-                <div className="flex flex-col sm:flex-row gap-x-7 gap-y-3">
+          <motion.ol variants={item} className="mt-12">
+            {steps.map((s) => (
+              <li key={s.n} className="border-t py-5" style={{ borderColor: RULE }}>
+                <div className="flex flex-col sm:flex-row sm:items-baseline gap-x-6 gap-y-1">
                   <span
-                    className="font-heading font-bold text-2xl md:text-3xl leading-none shrink-0 sm:w-12"
+                    className="font-heading font-bold text-lg md:text-xl leading-none shrink-0 sm:w-8"
                     style={{ color: GOLD }}
                   >
                     {s.n}
                   </span>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-1">
-                      <h3
-                        className="font-semibold text-xl md:text-2xl leading-tight"
-                        style={{ color: NAVY }}
-                      >
-                        {s.title}
-                      </h3>
-                      <span
-                        className="font-heading font-bold text-lg md:text-xl whitespace-nowrap"
-                        style={{ color: i === 0 || i === 1 ? GOLD : NAVY }}
-                      >
-                        {s.price}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-500 mt-1">{s.meta}</p>
-                    <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed mt-3 max-w-2xl">
-                      {s.desc}
-                    </p>
-                    {i === 0 && (
-                      <Link
-                        href="/contact"
-                        className="group inline-flex items-center gap-1.5 text-sm font-semibold mt-4 hover:gap-2.5 transition-all"
-                        style={{ color: NAVY }}
-                      >
-                        Réserver mon créneau
-                        <ArrowRight size={16} style={{ color: GOLD }} />
-                      </Link>
-                    )}
-                  </div>
+                  <h3
+                    className="font-semibold text-lg md:text-xl leading-snug shrink-0 sm:w-64"
+                    style={{ color: NAVY }}
+                  >
+                    {s.title}
+                  </h3>
+                  <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed flex-1">
+                    {s.line}
+                  </p>
                 </div>
               </li>
             ))}
             <li className="border-t" style={{ borderColor: RULE }} />
           </motion.ol>
+
+          <motion.div variants={item} className="mt-10">
+            <Link
+              href="/services"
+              className="group inline-flex items-center gap-2 font-semibold text-base"
+              style={{ color: NAVY }}
+            >
+              Voir le détail et les tarifs
+              <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
