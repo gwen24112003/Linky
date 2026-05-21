@@ -2,11 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
 const NAVY = '#1A2332';
+const RULE = 'rgba(26,35,50,0.16)';
 
 const steps = [
   {
@@ -40,102 +42,93 @@ const steps = [
   {
     n: '05',
     title: 'Gardien du système',
-    meta: 'Optionnel · L\'opérateur qui reste à vos côtés',
+    meta: "Optionnel · l'opérateur qui reste à vos côtés",
     price: '400 à 1 500 €/mois',
     desc: "Votre système évolue avec votre boîte. On maintient, on ajuste, on ajoute des automations au fil de l'eau. Un opérateur qui connaît votre système et reste à vos côtés.",
   },
 ];
 
+const container: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
+};
+const item: Variants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+};
+
 export const MethodSection: React.FC = () => {
   return (
-    <section
-      id="methode"
-      className="py-20 md:py-24 bg-[#FAF8F4] scroll-mt-24"
-      aria-labelledby="method-title"
-    >
-      <div className="container mx-auto px-6">
+    <section id="methode" className="py-24 md:py-32 bg-white scroll-mt-24" aria-labelledby="method-title">
+      <div className="container mx-auto px-6 max-w-5xl">
         <motion.div
-          className="max-w-3xl mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
         >
-          <p
-            className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-3"
-            style={{ color: GOLD }}
-          >
-            Notre méthode
-          </p>
-          <h2
+          <motion.div variants={item} className="mb-10 md:mb-12">
+            <SectionKicker label="Méthode" index="05" />
+          </motion.div>
+
+          <motion.h2
             id="method-title"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5"
+            variants={item}
+            className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl"
             style={{ color: NAVY }}
           >
             Comment on bosse ensemble.
-          </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+          </motion.h2>
+          <motion.p variants={item} className="mt-6 text-lg md:text-xl text-gray-600">
             Cinq étapes claires. Prix affichés. Pas de surprise.
-          </p>
-        </motion.div>
+          </motion.p>
 
-        <ol className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-          {steps.map((s, i) => (
-            <motion.li
-              key={s.n}
-              className="bg-white rounded-2xl p-6 md:p-8 relative flex flex-col gap-4"
-              style={{
-                border: '1px solid rgba(26,35,50,0.08)',
-                boxShadow: '0 2px 12px rgba(26,35,50,0.04)',
-              }}
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ y: -3, boxShadow: '0 12px 32px rgba(26,35,50,0.1)' }}
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-3">
+          <motion.ol variants={item} className="mt-14">
+            {steps.map((s, i) => (
+              <li key={s.n} className="border-t py-7" style={{ borderColor: RULE }}>
+                <div className="flex flex-col sm:flex-row gap-x-7 gap-y-3">
                   <span
-                    className="text-5xl md:text-6xl font-bold leading-none"
-                    style={{ color: GOLD, opacity: 0.35 }}
+                    className="font-heading font-bold text-2xl md:text-3xl leading-none shrink-0 sm:w-12"
+                    style={{ color: GOLD }}
                   >
                     {s.n}
                   </span>
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold leading-tight" style={{ color: NAVY }}>
-                      {s.title}
-                    </h3>
-                    <p className="text-xs md:text-sm text-gray-500 mt-1">{s.meta}</p>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-1">
+                      <h3
+                        className="font-semibold text-xl md:text-2xl leading-tight"
+                        style={{ color: NAVY }}
+                      >
+                        {s.title}
+                      </h3>
+                      <span
+                        className="font-heading font-bold text-lg md:text-xl whitespace-nowrap"
+                        style={{ color: i === 0 || i === 1 ? GOLD : NAVY }}
+                      >
+                        {s.price}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-1">{s.meta}</p>
+                    <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed mt-3 max-w-2xl">
+                      {s.desc}
+                    </p>
+                    {i === 0 && (
+                      <Link
+                        href="/contact"
+                        className="group inline-flex items-center gap-1.5 text-sm font-semibold mt-4 hover:gap-2.5 transition-all"
+                        style={{ color: NAVY }}
+                      >
+                        Réserver mon créneau
+                        <ArrowRight size={16} style={{ color: GOLD }} />
+                      </Link>
+                    )}
                   </div>
                 </div>
-                <span
-                  className="text-sm md:text-base font-bold px-3 py-1.5 rounded-full whitespace-nowrap"
-                  style={{
-                    background: i === 0 ? `${GOLD}22` : 'rgba(26,35,50,0.05)',
-                    color: i === 0 ? NAVY : NAVY,
-                    border: i === 0 ? `1px solid ${GOLD}66` : '1px solid rgba(26,35,50,0.1)',
-                  }}
-                >
-                  {s.price}
-                </span>
-              </div>
-
-              <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{s.desc}</p>
-
-              {i === 0 && (
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-1 text-sm font-semibold mt-auto pt-2 hover:gap-2 transition-all"
-                  style={{ color: NAVY }}
-                >
-                  Réserver mon créneau
-                  <ArrowRight size={16} />
-                </Link>
-              )}
-            </motion.li>
-          ))}
-        </ol>
+              </li>
+            ))}
+            <li className="border-t" style={{ borderColor: RULE }} />
+          </motion.ol>
+        </motion.div>
       </div>
     </section>
   );

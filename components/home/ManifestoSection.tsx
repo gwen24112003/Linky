@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
+import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
 const NAVY = '#1A2332';
@@ -33,14 +34,8 @@ export const ManifestoSection: React.FC = () => {
         viewport={{ once: true, margin: '-100px' }}
       >
         {/* Kicker */}
-        <motion.div variants={item} className="flex items-center gap-5 mb-10 md:mb-14">
-          <span
-            className="text-xs font-semibold uppercase tracking-[0.28em] whitespace-nowrap"
-            style={{ color: GOLD }}
-          >
-            Manifeste <span style={{ color: NAVY, opacity: 0.35 }}>/ 01</span>
-          </span>
-          <span className="flex-1 h-px" style={{ background: RULE }} />
+        <motion.div variants={item} className="mb-10 md:mb-14">
+          <SectionKicker label="Manifeste" index="01" />
         </motion.div>
 
         {/* Titre */}
