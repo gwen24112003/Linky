@@ -6,9 +6,9 @@ import { ArticlesGrid } from '@/components/pages/ArticlesGrid';
 import { getAllArticles } from '@/lib/articles';
 
 const PAGE_URL = 'https://opusadvisor.fr/articles';
-const PAGE_TITLE = 'Articles - Opus Advisor · Conseil en Organisation';
+const PAGE_TITLE = 'Articles — Opus Advisor (BTP second œuvre)';
 const PAGE_DESCRIPTION =
-  'Ressources et insights pour dirigeants : stratégie, optimisation des processus, outils et méthodes pour une croissance maîtrisée.';
+  "Conseils et retours terrain pour les patrons du BTP second œuvre : consolidation des outils, comparatifs (Batappli, Obat, Tolteck, EBP), facturation électronique 2027, automatisations testées.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -50,10 +50,12 @@ export default function ArticlesPage() {
       />
       <Header />
       <ArticlesHero />
-      <main className="flex-grow py-20">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <ArticlesGrid articles={articles} />
-        </div>
+      <main className="flex-grow">
+        <section className="py-20 md:py-28 bg-white">
+          <div className="container mx-auto px-6 max-w-5xl">
+            <ArticlesGrid articles={articles} />
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
