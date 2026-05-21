@@ -195,7 +195,7 @@ export const ServicesView: React.FC = () => {
       <section className="py-20 md:py-28" style={{ background: PAPER }}>
         <div className="container mx-auto px-6 max-w-5xl">
           {services.map((s) => (
-            <motion.article
+            <motion.div
               key={s.id}
               id={s.id}
               className="border-t scroll-mt-28"
@@ -262,7 +262,7 @@ export const ServicesView: React.FC = () => {
                   )}
                 </div>
               </div>
-            </motion.article>
+            </motion.div>
           ))}
           <div className="border-t" style={{ borderColor: RULE }} />
         </div>
