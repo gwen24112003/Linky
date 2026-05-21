@@ -1,5 +1,14 @@
 [
     {
+        "id": 12,
+        "slug": "maprimerenov-2026",
+        "title": "MaPrimeRénov' 2026 : suspendu, rouvert, durci — vos dossiers tiennent le choc ?",
+        "description": "Suspendu au 1er janvier faute de budget, rouvert au printemps, durci au 1er septembre avec l'exclusion du gaz : le dispositif a changé trois fois en 2026. Le vrai coût pour votre boîte, ce n'est pas l'aide — c'est le dossier.",
+        "imageSrc": "/images/opus-banner.png",
+        "icon": "alert-triangle",
+        "publishedAt": "2026-05-22"
+    },
+    {
         "id": 11,
         "slug": "facturation-electronique-2026",
         "title": "Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre",
