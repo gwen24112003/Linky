@@ -86,7 +86,7 @@ export const ProjectsView: React.FC = () => {
       <section
         className="relative overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: 'url(/images/opus-banner.png)',
+          backgroundImage: 'url(/images/opus-icon.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '50vh',

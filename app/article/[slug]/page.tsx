@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const pageUrl = `https://opusadvisor.fr/article/${article.slug}`;
   const ogImage = article.imageSrc
     ? `https://opusadvisor.fr${article.imageSrc}`
-    : 'https://opusadvisor.fr/images/opus-banner.png';
+    : 'https://opusadvisor.fr/images/opus-icon.png';
   const ogImageAlt = `Illustration de l'article : ${article.title}`;
   return {
     title: article.title,

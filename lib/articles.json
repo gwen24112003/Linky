@@ -4,7 +4,7 @@
         "slug": "maprimerenov-2026",
         "title": "MaPrimeRénov' 2026 : suspendu, rouvert, durci — vos dossiers tiennent le choc ?",
         "description": "Suspendu au 1er janvier faute de budget, rouvert au printemps, durci au 1er septembre avec l'exclusion du gaz : le dispositif a changé trois fois en 2026. Le vrai coût pour votre boîte, ce n'est pas l'aide — c'est le dossier.",
-        "imageSrc": "/images/opus-banner.png",
+        "imageSrc": "/images/opus-icon.png",
         "icon": "alert-triangle",
         "publishedAt": "2026-05-22"
     },
@@ -13,7 +13,7 @@
         "slug": "facturation-electronique-2026",
         "title": "Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre",
         "description": "À 5 mois de l'échéance du 1er septembre 2026, 40 % des TPE ne sont pas prêtes à recevoir des factures électroniques. Pour les boîtes du BTP, c'est probablement pire. Ce qu'il faut faire dans les 30 jours.",
-        "imageSrc": "/images/opus-banner.png",
+        "imageSrc": "/images/opus-icon.png",
         "icon": "file-text",
         "publishedAt": "2026-04-25"
     },
@@ -22,7 +22,7 @@
         "slug": "automatiser-sans-erp",
         "title": "Votre boîte BTP n'a pas besoin d'un logiciel à 50 000 €",
         "description": "Vous passez de 8 à 15 salariés et un commercial vous propose un logiciel tout-en-un à 35 000 €. Dans la majorité des cas, 200 à 500 € par mois d'outils existants couvrent 90 % du besoin.",
-        "imageSrc": "/images/opus-banner.png",
+        "imageSrc": "/images/opus-icon.png",
         "icon": "workflow",
         "publishedAt": "2026-04-25"
     },
@@ -31,7 +31,7 @@
         "slug": "diagnostic-operationnel-pme",
         "title": "Diagnostiquer une boîte du second œuvre en 3 semaines",
         "description": "Les cabinets vendent un audit à 15 à 30 000 € sur 2 à 3 mois. Notre méthode tient en 3 semaines pour 2 500 €. Ce qu'on regarde, dans quel ordre, et pourquoi ça suffit.",
-        "imageSrc": "/images/opus-banner.png",
+        "imageSrc": "/images/opus-icon.png",
         "icon": "stethoscope",
         "publishedAt": "2026-04-25"
     },
@@ -40,7 +40,7 @@
         "slug": "organisation-avant-developpement",
         "title": "Avant d'investir 30 000 € dans un nouvel outil, regardez ce que vous avez déjà",
         "description": "Un patron sur deux qu'on rencontre veut changer de logiciel. Dans la plupart des cas, le vrai problème n'est pas l'outil. Quatre questions à se poser avant de signer.",
-        "imageSrc": "/images/opus-banner.png",
+        "imageSrc": "/images/opus-icon.png",
         "icon": "layers",
         "publishedAt": "2026-04-25"
     },
@@ -49,7 +49,7 @@
         "slug": "applications-glide",
         "title": "Faut-il une app sur mesure pour vos chefs de chantier ?",
         "description": "Glide, Softr, Bubble pour une boîte BTP : utile dans 3 cas précis, inutile dans tous les autres. Comment savoir où vous en êtes avant d'investir 5 000 ou 15 000 € dans une app maison.",
-        "imageSrc": "/images/opus-banner.png",
+        "imageSrc": "/images/opus-icon.png",
         "icon": "layout-dashboard",
         "publishedAt": "2026-04-25"
     }

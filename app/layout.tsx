@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     images: [
       {
-        url: `${SITE_URL}/images/opus-banner.png`,
+        url: `${SITE_URL}/images/opus-icon.png`,
         width: 1200,
         height: 630,
         alt: 'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: `${SITE_URL}/images/opus-banner.png`,
+        url: `${SITE_URL}/images/opus-icon.png`,
         alt: 'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre',
       },
     ],
@@ -124,7 +124,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600&family=Lexend:wght@300;400;600;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="preload" as="image" href="/images/opus-banner.png" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/opus-icon.png" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
