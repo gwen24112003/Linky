@@ -48,7 +48,7 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentArticle
           {related.map((article, i) => (
             <Link
               key={article.id}
-              href={`/article/${article.slug}`}
+              href={`/articles/${article.slug}`}
               className="group block border-t py-8"
               style={{ borderColor: RULE }}
             >

@@ -38,7 +38,7 @@ export default function ArticlesPage() {
     itemListElement: articles.map((article, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      url: `https://opusadvisor.fr/article/${article.slug}`,
+      url: `https://opusadvisor.fr/articles/${article.slug}`,
     })),
   };
 

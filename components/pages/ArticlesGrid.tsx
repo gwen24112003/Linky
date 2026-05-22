@@ -37,7 +37,7 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
           transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
         >
           <Link
-            href={`/article/${article.slug}`}
+            href={`/articles/${article.slug}`}
             className="group block border-t py-9 md:py-11"
             style={{ borderColor: RULE }}
           >

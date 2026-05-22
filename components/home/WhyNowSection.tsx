@@ -75,7 +75,7 @@ export const WhyNowSection: React.FC = () => {
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  href="/article/facturation-electronique-2026"
+                  href="/articles/facturation-electronique-2026"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm md:text-base border-2 text-white hover:bg-white/5 transition-all duration-200"
                   style={{ borderColor: 'rgba(255,255,255,0.3)' }}
                 >

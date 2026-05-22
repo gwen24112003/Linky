@@ -1,6 +1,6 @@
 [
     {
-        "id": 12,
+        "id": 13,
         "slug": "maprimerenov-2026",
         "title": "MaPrimeRénov' 2026 : suspendu, rouvert, durci — vos dossiers tiennent le choc ?",
         "description": "Suspendu au 1er janvier faute de budget, rouvert au printemps, durci au 1er septembre avec l'exclusion du gaz : le dispositif a changé trois fois en 2026. Le vrai coût pour votre boîte, ce n'est pas l'aide — c'est le dossier.",
@@ -16,6 +16,15 @@
         "imageSrc": "/images/opus-icon.png",
         "icon": "file-text",
         "publishedAt": "2026-05-20"
+    },
+    {
+        "id": 12,
+        "slug": "relances-automatiques-impayes-btp",
+        "title": "1 artisan sur 3 attend ses paiements plus de 60 jours",
+        "description": "Dans le BTP second œuvre, la moyenne d'un impayé tourne autour de 3 000 €. La cause numéro 1 n'est pas le client mauvais payeur, c'est la relance qui n'est jamais partie. Le système qu'on monte en 2 semaines, sans changer de logiciel.",
+        "imageSrc": "/images/opus-icon.png",
+        "icon": "wallet",
+        "publishedAt": "2026-05-01"
     },
     {
         "id": 7,
