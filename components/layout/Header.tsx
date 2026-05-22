@@ -68,19 +68,12 @@ export const Header: React.FC = () => {
               <img
                 src="/images/opus-logo.png"
                 alt="Logo Opus Advisor"
-                className="object-contain"
-                style={{
-                  width: 'auto',
-                  height: '85px',
-                  maxHeight: '150px',
-                  transform: 'scale(1.35)',
-                  transformOrigin: 'left center',
-                }}
+                className="h-10 md:h-11 w-auto object-contain"
               />
             </Link>
 
             {/* Desktop Navigation - centered absolutely */}
-            <div className="hidden md:flex items-center gap-10 absolute left-1/2 transform -translate-x-1/2">
+            <div className="hidden lg:flex items-center gap-8 xl:gap-10 absolute left-1/2 transform -translate-x-1/2">
               {navLinks.map((link) => {
                 const currentPath = pathname ?? '/';
                 const normalized = currentPath.endsWith('/') && currentPath !== '/'
@@ -123,7 +116,7 @@ export const Header: React.FC = () => {
             {/* Burger button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`md:hidden transition-colors z-[60] ${burgerColor}`}
+              className={`lg:hidden transition-colors z-[60] ${burgerColor}`}
               aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               aria-expanded={isMenuOpen}
             >
@@ -135,7 +128,7 @@ export const Header: React.FC = () => {
 
       {/* Overlay plein écran */}
       <div
-        className={`fixed inset-0 z-[55] flex flex-col md:hidden transition-all duration-500 ${
+        className={`fixed inset-0 z-[55] flex flex-col lg:hidden transition-all duration-500 ${
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         style={{ background: '#1A2332' }}
