@@ -1,13 +1,13 @@
 ---
 title: "Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre. Vous comptez en faire partie ?"
-metaDescription: "À 5 mois de l'échéance du 1er septembre 2026, 40 % des TPE françaises ne sont pas prêtes à recevoir des factures électroniques. Pour les boîtes du BTP second œuvre, c'est probablement pire. Ce qu'il faut faire dans les 30 jours."
-date: "2026-04-25"
+metaDescription: "À un peu plus de 3 mois de l'échéance du 1er septembre 2026, 40 % des TPE françaises ne sont pas prêtes à recevoir des factures électroniques. Pour les boîtes du BTP second œuvre, c'est probablement pire. Ce qu'il faut faire dans les 30 jours."
+date: "2026-05-20"
 keywords: ["facturation électronique 2026", "Plateforme Agréée DGFiP", "Factur-X BTP", "réception facture électronique", "TPE BTP second œuvre"]
 ---
 
 *Catégorie : Réglementation BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Un sondage sorti la semaine dernière chiffre l'impréparation des TPE françaises à 5 mois de l'échéance : 40 % ne seront pas prêtes au 1er septembre 2026. Pour les entreprises du BTP, c'est probablement pire. Et le pire, c'est que beaucoup de patrons pensent encore que ça ne les concerne qu'en 2027.
+Un sondage récent chiffre l'impréparation des TPE françaises à un peu plus de 3 mois de l'échéance : 40 % ne seront pas prêtes au 1er septembre 2026. Pour les entreprises du BTP, c'est probablement pire. Et le pire, c'est que beaucoup de patrons pensent encore que ça ne les concerne qu'en 2027.
 
 ---
 
@@ -17,7 +17,7 @@ Vous avez sûrement entendu parler de la facturation électronique obligatoire a
 
 Mais 2027, c'est la deuxième vague.
 
-La première vague, elle tombe le **1er septembre 2026**. Dans 5 mois.
+La première vague, elle tombe le **1er septembre 2026**. Dans un peu plus de 3 mois.
 
 À cette date, toutes les entreprises françaises assujetties à la TVA, y compris la vôtre, doivent être **capables de recevoir** des factures électroniques. Pas papier. Pas PDF par mail. Des factures structurées au format Factur-X, UBL ou CII, qui transitent par une Plateforme Agréée par l'État.
 
@@ -27,9 +27,9 @@ Vos fournisseurs de cuivre, de chaudières, de gaines, de PVC, ce sont souvent d
 
 ## Le sondage qui devrait vous alerter
 
-OpinionWay a publié un sondage il y a 3 jours pour la fintech Tiime. Le chiffre : **4 TPE sur 10 ne seront pas prêtes** au 1er septembre 2026. Sur les 10 millions d'entreprises concernées par la réforme, ça fait beaucoup de monde qui va découvrir l'obligation au moment où ses fournisseurs commenceront à lui envoyer des factures qu'elle ne peut pas traiter.
+OpinionWay a publié au printemps un sondage pour la fintech Tiime. Le chiffre : **4 TPE sur 10 ne seront pas prêtes** au 1er septembre 2026. Sur les 10 millions d'entreprises concernées par la réforme, ça fait beaucoup de monde qui va découvrir l'obligation au moment où ses fournisseurs commenceront à lui envoyer des factures qu'elle ne peut pas traiter.
 
-Le sondage ne segmente pas par secteur. Mais quand on connaît le BTP second œuvre, on sait que les boîtes de 8 à 25 personnes sont rarement en avance sur les sujets administratifs. Le devis, la facture, la situation, c'est déjà fait à l'arrache entre Excel et Batappli. Alors la Plateforme Agréée, le Factur-X, les 4 nouvelles mentions obligatoires sur les factures, tout ça arrive très loin dans la liste des priorités.
+Le sondage ne segmente pas par secteur. Mais quand on connaît le BTP second œuvre, on sait que les boîtes de 8 à 60+ collaborateurs sont rarement en avance sur les sujets administratifs. Le devis, la facture, la situation, c'est déjà fait à l'arrache entre Excel et Batappli. Alors la Plateforme Agréée, le Factur-X, les 4 nouvelles mentions obligatoires sur les factures, tout ça arrive très loin dans la liste des priorités.
 
 Sauf que la priorité, ce n'est pas septembre 2027 quand vous devrez émettre. C'est septembre 2026 quand vous devrez recevoir.
 
@@ -59,9 +59,9 @@ Dans les boîtes de second œuvre qu'on rencontre, le scénario typique est pres
 
 Le patron a entendu parler de la réforme mais ne sait pas exactement ce que ça implique. Il a Batappli ou Obat mais ne sait pas si une PA est intégrée. Son fichier clients est à 60 % rempli, sans SIREN systématique. Ses devis et factures sortent du logiciel, parfois d'Excel, parfois directement sur papier pour les gros clients qui demandent des situations très spécifiques. Les acomptes, les situations, les retenues de garantie sont gérés à la main dans des tableurs annexes.
 
-À 5 mois de l'échéance, c'est tout sauf prêt.
+À un peu plus de 3 mois de l'échéance, c'est tout sauf prêt.
 
-Le pire, c'est que la solution n'est pas compliquée techniquement. Elle est juste fastidieuse : il faut faire le tour des outils, vérifier les compatibilités, désigner une PA, nettoyer la base clients, tester l'émission de factures conformes, former l'équipe. Compté correctement, c'est 2 à 3 mois de chantier interne pour une boîte de 15 personnes. Si vous démarrez en mai, vous êtes à l'aise. Si vous démarrez en août, vous êtes dans le rouge.
+Le pire, c'est que la solution n'est pas compliquée techniquement. Elle est juste fastidieuse : il faut faire le tour des outils, vérifier les compatibilités, désigner une PA, nettoyer la base clients, tester l'émission de factures conformes, former l'équipe. Compté correctement, c'est 2 à 3 mois de chantier interne pour une boîte de 15 personnes. Si vous démarrez maintenant, vous êtes à l'aise. Si vous attendez août, vous êtes dans le rouge.
 
 ## Ce que vous devez faire dans les 30 jours
 

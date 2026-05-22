@@ -7,7 +7,7 @@ keywords: ["diagnostic opérationnel BTP", "audit PME bâtiment", "méthode Opus
 
 *Catégorie : Méthode Opus — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-La plupart des cabinets vendent un audit opérationnel entre 15 000 et 30 000 € sur 2 à 3 mois. Le livrable : un PowerPoint de 40 à 50 slides qui finit dans un drive partagé et que plus personne ne rouvre passé la restitution. Notre méthode tient en 3 semaines à 2 500 €. Voici ce qu'on regarde, dans quel ordre, et pourquoi ça suffit dans la plupart des cas pour une boîte du second œuvre de 8 à 25 salariés.
+La plupart des cabinets vendent un audit opérationnel entre 15 000 et 30 000 € sur 2 à 3 mois. Le livrable : un PowerPoint de 40 à 50 slides qui finit dans un drive partagé et que plus personne ne rouvre passé la restitution. Notre méthode tient en 3 semaines à 2 500 €. Voici ce qu'on regarde, dans quel ordre, et pourquoi ça suffit dans la plupart des cas pour une boîte du second œuvre de 8 à 60+ collaborateurs.
 
 ---
 

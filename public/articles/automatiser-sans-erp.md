@@ -33,7 +33,7 @@ Quatre raisons reviennent en boucle dans les boîtes BTP qui ont basculé sur ce
 
 ## L'alternative : 3 outils qui se parlent, pour 5 fois moins cher
 
-Pour une boîte BTP de 8 à 25 salariés, le trio qui marche tient en 3 piliers.
+Pour une boîte BTP de 8 à 60+ collaborateurs, le trio qui marche tient en 3 piliers.
 
 **Le pilier métier : votre logiciel BTP, mieux exploité.** Vous l'avez probablement déjà. Le baromètre France Num 2025 confirme que 76 % des TPE-PME du bâtiment sont équipées d'un logiciel de facturation. Batappli, Obat, Tolteck ou EBP Bâtiment couvrent 80 à 90 % du besoin courant en second œuvre : devis chiffrés, situations de travaux, retenues de garantie, factures aux normes, suivi de chantier basique. Tarifs publics 2026 vérifiés :
 

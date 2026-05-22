@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     description: PAGE_DESCRIPTION,
     url: PAGE_URL,
     type: 'website',
-    images: [{ url: 'https://opusadvisor.fr/images/opus-banner.png' }],
+    images: [{ url: 'https://opusadvisor.fr/images/opus-icon.png' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    images: ['https://opusadvisor.fr/images/opus-banner.png'],
+    images: ['https://opusadvisor.fr/images/opus-icon.png'],
   },
 };
 

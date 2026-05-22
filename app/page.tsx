@@ -2,10 +2,12 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HeroBTP } from '@/components/home/HeroBTP';
+import { ManifestoSection } from '@/components/home/ManifestoSection';
 import { PainSection } from '@/components/home/PainSection';
 import { SystemSection } from '@/components/home/SystemSection';
 import { ConvictionsSection } from '@/components/home/ConvictionsSection';
 import { MethodSection } from '@/components/home/MethodSection';
+import { CaseTeasersSection } from '@/components/home/CaseTeasersSection';
 import { WhyNowSection } from '@/components/home/WhyNowSection';
 import { FAQSectionBTP } from '@/components/home/FAQSectionBTP';
 import { FinalCTASection } from '@/components/home/FinalCTASection';
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://opusadvisor.fr/images/opus-banner.png',
+        url: 'https://opusadvisor.fr/images/opus-icon.png',
         width: 1200,
         height: 630,
         alt: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP second œuvre',
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
       'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
     images: [
       {
-        url: 'https://opusadvisor.fr/images/opus-banner.png',
+        url: 'https://opusadvisor.fr/images/opus-icon.png',
         alt: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP second œuvre',
       },
     ],
@@ -69,6 +71,19 @@ const servicesJsonLd = {
     },
     {
       '@type': 'Service',
+      name: 'Audit Stack',
+      provider: { '@id': 'https://opusadvisor.fr/#organization' },
+      description:
+        "Cartographie des outils actuels et identification des points de friction. Préconisation explicite : ajouter, remplacer ou orchestrer. Indépendant, revendeur de personne. Livré en 10 jours ouvrés.",
+      areaServed: { '@type': 'Country', name: 'France' },
+      offers: {
+        '@type': 'Offer',
+        price: '990',
+        priceCurrency: 'EUR',
+      },
+    },
+    {
+      '@type': 'Service',
       name: 'Diagnostic opérationnel BTP',
       provider: { '@id': 'https://opusadvisor.fr/#organization' },
       description:
@@ -82,7 +97,7 @@ const servicesJsonLd = {
     },
     {
       '@type': 'Service',
-      name: 'Implémentation système BTP',
+      name: 'Mise en œuvre système BTP',
       provider: { '@id': 'https://opusadvisor.fr/#organization' },
       description:
         "Configuration et connexion des outils (Batappli/Obat/Tolteck/EBP, Notion, Make, n8n), tests, formation équipe. 4 à 10 semaines.",
@@ -92,18 +107,18 @@ const servicesJsonLd = {
         priceCurrency: 'EUR',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          minPrice: '5000',
-          maxPrice: '15000',
+          minPrice: '5500',
+          maxPrice: '25000',
           priceCurrency: 'EUR',
         },
       },
     },
     {
       '@type': 'Service',
-      name: 'Suivi mensuel',
+      name: 'Gardien du système',
       provider: { '@id': 'https://opusadvisor.fr/#organization' },
       description:
-        "Maintenance, ajustements, nouvelles automations au fil de l'eau. Un interlocuteur unique qui connaît votre système.",
+        "Maintenance, ajustements, nouvelles automations au fil de l'eau. L'opérateur qui reste à vos côtés et connaît votre système.",
       areaServed: { '@type': 'Country', name: 'France' },
       offers: {
         '@type': 'Offer',
@@ -111,7 +126,7 @@ const servicesJsonLd = {
         priceSpecification: {
           '@type': 'PriceSpecification',
           minPrice: '400',
-          maxPrice: '600',
+          maxPrice: '1500',
           priceCurrency: 'EUR',
         },
       },
@@ -133,10 +148,12 @@ export default function HomePage() {
       <Header />
       <main className="flex-grow">
         <HeroBTP />
+        <ManifestoSection />
         <PainSection />
         <SystemSection />
         <ConvictionsSection />
         <MethodSection />
+        <CaseTeasersSection />
         <WhyNowSection />
         <FAQSectionBTP />
         <FinalCTASection />

@@ -1,121 +1,105 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Hammer, Users, Zap } from 'lucide-react';
+import { motion, type Variants } from 'framer-motion';
+import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
 const NAVY = '#1A2332';
+const RULE = 'rgba(26,35,50,0.16)';
 
 const pillars = [
   {
-    icon: Hammer,
-    tag: 'PILIER 1 — VOTRE LOGICIEL MÉTIER',
+    n: '01',
+    tag: 'Votre logiciel métier',
     title: 'Batappli, Tolteck, Obat, EBP — celui que vous avez déjà.',
     desc: "On l'audite, on corrige le paramétrage, on l'exploite à fond. Devis, factures, acomptes, situations : tout propre. Si vous n'en avez aucun, on choisit ensemble.",
   },
   {
-    icon: Users,
-    tag: "PILIER 2 — LA MÉMOIRE D'ÉQUIPE",
+    n: '02',
+    tag: "La mémoire d'équipe",
     title: 'Vos chantiers, vos photos, vos SAV — accessibles à tous.',
     desc: "Le plus souvent avec Notion ou Google Workspace branché à votre WhatsApp. Plus jamais d'info perdue entre le chef de chantier et le bureau.",
   },
   {
-    icon: Zap,
-    tag: 'PILIER 3 — LE LIANT',
+    n: '03',
+    tag: 'Le liant',
     title: 'Vos outils arrêtent de vivre chacun de leur côté.',
     desc: "Make ou n8n relie votre logiciel BTP, votre compta et votre banque. Relances auto, notifications équipe, rapports hebdo. Sans que vous touchiez à rien.",
   },
 ];
 
+const container: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
+};
+const item: Variants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+};
+
 export const SystemSection: React.FC = () => {
   return (
-    <section className="py-20 md:py-24 bg-white" aria-labelledby="system-title">
-      <div className="container mx-auto px-6">
+    <section className="py-24 md:py-32" style={{ background: '#FAF7F0' }} aria-labelledby="system-title">
+      <div className="container mx-auto px-6 max-w-5xl">
         <motion.div
-          className="max-w-3xl mb-14"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
         >
-          <p
-            className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-3"
-            style={{ color: GOLD }}
-          >
-            Ce qu'on construit
-          </p>
-          <h2
+          <motion.div variants={item} className="mb-10 md:mb-12">
+            <SectionKicker label="Le système" index="03" />
+          </motion.div>
+
+          <motion.h2
             id="system-title"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5"
+            variants={item}
+            className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl max-w-3xl"
             style={{ color: NAVY }}
           >
-            On ne remplace pas vos outils.
-            <br />
+            On ne remplace pas vos outils.{' '}
             <span style={{ color: GOLD }}>On les fait enfin travailler ensemble.</span>
-          </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            Chaque boîte du second œuvre a déjà un logiciel BTP, un drive, un WhatsApp d'équipe. Le problème n'est pas ce que vous avez — c'est que personne ne les a connectés.
-            <br />
+          </motion.h2>
+
+          <motion.p
+            variants={item}
+            className="mt-7 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"
+          >
+            Chaque boîte du second œuvre a déjà un logiciel BTP, un drive, un WhatsApp d'équipe. Le
+            problème n'est pas ce que vous avez — c'est que personne ne les a connectés.{' '}
             <span className="font-medium" style={{ color: NAVY }}>
-              On centralise, on automatise, on branche. Vous gardez vos outils, ils commencent à se parler.
+              On centralise, on automatise, on branche.
             </span>
-          </p>
-        </motion.div>
+          </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-          {pillars.map((p, i) => {
-            const Icon = p.icon;
-            return (
-              <motion.div
-                key={p.tag}
-                className="rounded-2xl p-6 md:p-7 flex flex-col gap-4 h-full"
-                style={{
-                  background: i === 1 ? NAVY : '#FAF8F4',
-                  border: `1px solid ${i === 1 ? 'rgba(201,168,76,0.3)' : 'rgba(26,35,50,0.08)'}`,
-                  boxShadow: '0 2px 12px rgba(26,35,50,0.04)',
-                  color: i === 1 ? 'white' : NAVY,
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -4 }}
+          <motion.ol variants={item} className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-x-10">
+            {pillars.map((p) => (
+              <li
+                key={p.n}
+                className="pt-6 border-t flex flex-col"
+                style={{ borderColor: NAVY }}
               >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{
-                    background: i === 1 ? 'rgba(201,168,76,0.18)' : `${GOLD}18`,
-                    border: `1px solid ${GOLD}55`,
-                  }}
+                <span
+                  className="font-heading font-bold text-2xl leading-none mb-4"
+                  style={{ color: GOLD }}
                 >
-                  <Icon size={22} style={{ color: GOLD }} />
-                </div>
-
-                <p
-                  className="text-[11px] font-semibold uppercase tracking-[0.18em]"
-                  style={{ color: i === 1 ? 'rgba(255,255,255,0.55)' : 'rgba(26,35,50,0.5)' }}
+                  {p.n}
+                </span>
+                <span
+                  className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-2"
+                  style={{ color: 'rgba(26,35,50,0.45)' }}
                 >
                   {p.tag}
-                </p>
-
-                <h3
-                  className="text-lg md:text-xl font-bold leading-snug"
-                  style={{ color: i === 1 ? 'white' : NAVY }}
-                >
+                </span>
+                <h3 className="font-semibold text-lg md:text-xl leading-snug mb-3" style={{ color: NAVY }}>
                   {p.title}
                 </h3>
-
-                <p
-                  className="text-sm md:text-[15px] leading-relaxed"
-                  style={{ color: i === 1 ? 'rgba(255,255,255,0.75)' : 'rgba(26,35,50,0.7)' }}
-                >
-                  {p.desc}
-                </p>
-              </motion.div>
-            );
-          })}
-        </div>
+                <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{p.desc}</p>
+              </li>
+            ))}
+          </motion.ol>
+        </motion.div>
       </div>
     </section>
   );
