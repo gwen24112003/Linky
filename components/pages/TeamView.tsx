@@ -76,21 +76,6 @@ const team: Member[] = [
   },
 ];
 
-const rejectedCodes = [
-  {
-    lead: "L'orange et le jaune des artisans terrain.",
-    rest: "Évoque le casque, le gilet, l'outil. On s'adresse à des patrons qui pilotent des entreprises de 10 à 60 personnes, pas à des exécutants. On l'a refusé.",
-  },
-  {
-    lead: 'Le bleu industriel des majors.',
-    rest: "Vinci, Bouygues, Eiffage. Sobre mais froid, distant, institutionnel. On bosse aux côtés des patrons, pas au-dessus d'eux. On l'a refusé.",
-  },
-  {
-    lead: 'Le violet et les dégradés des startups tech.',
-    rest: "Évoque le no-code à la mode. Manque de gravité pour parler à un patron de 50 ans qui pilote 8 millions d'euros de chantiers. On l'a refusé.",
-  },
-];
-
 const reveal: Variants = {
   hidden: { opacity: 0, y: 18 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
@@ -176,53 +161,6 @@ export const TeamView: React.FC = () => {
             </motion.div>
           ))}
           <div className="border-t" style={{ borderColor: RULE }} />
-        </div>
-      </section>
-
-      {/* Démarche visuelle */}
-      <section id="demarche-visuelle" className="py-20 md:py-28 bg-white scroll-mt-24">
-        <div className="container mx-auto px-6 max-w-[760px]">
-          <motion.div
-            variants={reveal}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
-          >
-            <SectionKicker label="Notre démarche" className="mb-8" />
-            <h2 className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-4xl lg:text-5xl" style={{ color: NAVY }}>
-              Pourquoi le navy et le doré.
-            </h2>
-            <p className="mt-7 text-lg md:text-xl text-gray-600 leading-relaxed">
-              Trois codes visuels dominent le BTP français. Aucun ne nous correspondait.
-            </p>
-
-            <ul className="mt-10">
-              {rejectedCodes.map((c) => (
-                <li key={c.lead} className="py-6 border-t" style={{ borderColor: RULE }}>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <strong className="font-semibold" style={{ color: NAVY }}>{c.lead}</strong> {c.rest}
-                  </p>
-                </li>
-              ))}
-            </ul>
-
-            {/* Exergue finale */}
-            <div
-              className="mt-10 rounded-2xl p-7 md:p-9"
-              style={{ background: '#FAF7F0', borderLeft: `4px solid ${GOLD}` }}
-            >
-              <p className="text-lg md:text-xl leading-relaxed" style={{ color: NAVY }}>
-                <strong className="font-bold">
-                  Le navy profond et le doré mat, ce sont les codes du conseil patrimonial.
-                </strong>{' '}
-                Cabinets de gestion privée, horlogerie suisse, éditions reliées. Ils disent sérieux,
-                valeur, durée. Ils disent qu'on s'adresse à un patron.
-              </p>
-              <p className="mt-4 text-base md:text-lg text-gray-600 leading-relaxed">
-                C'est exactement ce qu'Opus Advisor veut dire dès le premier coup d'œil.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
