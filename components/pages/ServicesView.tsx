@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { motion, type Variants } from 'framer-motion';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, X, ArrowRight } from 'lucide-react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
@@ -153,6 +153,15 @@ const differentiators = [
   },
 ];
 
+const identity = [
+  { est: 'Un opérateur spécialisé BTP second œuvre', nest: 'Un cabinet de conseil généraliste' },
+  { est: "Un orchestrateur d'outils existants", nest: 'Un revendeur de logiciels' },
+  { est: 'Un partenaire long terme (Gardien)', nest: 'Un prestataire one-shot au TJM' },
+  { est: 'Un système qui rend du temps mesurable', nest: 'Une promesse de transformation digitale floue' },
+  { est: 'Indépendant de tout éditeur', nest: 'Affilié à Batappli, Obat, EBP ou autre' },
+  { est: 'Concret : des automatisations qui tournent', nest: 'Théorique : des feuilles de route à activer' },
+];
+
 const reveal: Variants = {
   hidden: { opacity: 0, y: 18 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
@@ -292,6 +301,62 @@ export const ServicesView: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Identité — ce qu'on est / n'est pas */}
+      <section id="identite" className="py-20 md:py-28 scroll-mt-28" style={{ background: PAPER }}>
+        <div className="container mx-auto px-6 max-w-5xl">
+          <SectionKicker label="En une phrase" className="mb-8" />
+          <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl mb-12" style={{ color: NAVY }}>
+            Ce qu'on est, ce qu'on n'est pas.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-14">
+            {/* EST */}
+            <div>
+              <div className="pb-3 border-b-2" style={{ borderColor: GOLD }}>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GOLD }}>
+                  Opus Advisor est
+                </span>
+              </div>
+              <ul>
+                {identity.map((r) => (
+                  <li
+                    key={r.est}
+                    className="flex items-start gap-3 py-4 border-t"
+                    style={{ borderColor: RULE }}
+                  >
+                    <Check size={16} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD }} />
+                    <span className="text-base md:text-lg font-semibold" style={{ color: NAVY }}>
+                      {r.est}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* N'EST PAS */}
+            <div>
+              <div className="pb-3 border-b-2" style={{ borderColor: 'rgba(26,35,50,0.25)' }}>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'rgba(26,35,50,0.45)' }}>
+                  Opus Advisor n'est pas
+                </span>
+              </div>
+              <ul>
+                {identity.map((r) => (
+                  <li
+                    key={r.nest}
+                    className="flex items-start gap-3 py-4 border-t"
+                    style={{ borderColor: RULE }}
+                  >
+                    <X size={16} strokeWidth={2.5} className="mt-1 shrink-0 text-gray-400" />
+                    <span className="text-base md:text-lg italic text-gray-500">{r.nest}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
