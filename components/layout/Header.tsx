@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
               <img
                 src="/images/opus-logo.png"
                 alt="Logo Opus Advisor"
-                className="h-10 md:h-11 w-auto object-contain"
+                className="h-14 md:h-16 w-auto object-contain"
               />
             </Link>
 
