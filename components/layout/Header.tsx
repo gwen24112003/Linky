@@ -56,7 +56,7 @@ export const Header: React.FC = () => {
         }}
         style={{ borderBottomWidth: 1, borderBottomStyle: 'solid' }}
       >
-        <nav className="container mx-auto px-6 py-2 md:py-3">
+        <nav className="container mx-auto px-6 py-1 md:py-1.5">
           <div className="relative flex items-center justify-between">
             {/* Logo */}
             <Link
@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
               <img
                 src="/images/opus-logo.png"
                 alt="Logo Opus Advisor"
-                className="h-14 md:h-16 w-auto object-contain"
+                className="h-16 md:h-20 w-auto object-contain"
               />
             </Link>
 
