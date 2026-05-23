@@ -30,7 +30,7 @@ export const FinalCTASection: React.FC = () => {
           viewport={{ once: true, margin: '-100px' }}
         >
           <motion.div variants={item} className="mb-10 md:mb-12">
-            <SectionKicker label="Démarrer" index="09" tone="dark" />
+            <SectionKicker label="Démarrer" index="10" tone="dark" />
           </motion.div>
 
           <motion.h2

@@ -51,7 +51,7 @@ export const CaseTeasersSection: React.FC = () => {
           viewport={{ once: true, margin: '-100px' }}
         >
           <motion.div variants={item} className="mb-10 md:mb-12">
-            <SectionKicker label="Réalisations" index="06" />
+            <SectionKicker label="Réalisations" index="07" />
           </motion.div>
 
           <motion.h2

@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroBTP } from '@/components/home/HeroBTP';
 import { ManifestoSection } from '@/components/home/ManifestoSection';
 import { PainSection } from '@/components/home/PainSection';
+import { ContextSection } from '@/components/home/ContextSection';
 import { SystemSection } from '@/components/home/SystemSection';
 import { ConvictionsSection } from '@/components/home/ConvictionsSection';
 import { MethodSection } from '@/components/home/MethodSection';
@@ -150,6 +151,7 @@ export default function HomePage() {
         <HeroBTP />
         <ManifestoSection />
         <PainSection />
+        <ContextSection />
         <SystemSection />
         <ConvictionsSection />
         <MethodSection />

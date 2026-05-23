@@ -49,7 +49,7 @@ export const SystemSection: React.FC = () => {
           viewport={{ once: true, margin: '-100px' }}
         >
           <motion.div variants={item} className="mb-10 md:mb-12">
-            <SectionKicker label="Le système" index="03" />
+            <SectionKicker label="Le système" index="04" />
           </motion.div>
 
           <motion.h2

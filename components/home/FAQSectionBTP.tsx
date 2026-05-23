@@ -67,7 +67,7 @@ export const FAQSectionBTP: React.FC = () => {
     <section className="py-24 md:py-32 bg-white" aria-labelledby="faq-title">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="mb-10 md:mb-12">
-          <SectionKicker label="Questions" index="08" className="mb-8" />
+          <SectionKicker label="Questions" index="09" className="mb-8" />
           <h2
             id="faq-title"
             className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl"
