@@ -51,7 +51,7 @@ export const ConvictionsSection: React.FC = () => {
           viewport={{ once: true, margin: '-100px' }}
         >
           <motion.div variants={item} className="mb-10 md:mb-12">
-            <SectionKicker label="Convictions" index="04" tone="dark" />
+            <SectionKicker label="Convictions" index="05" tone="dark" />
           </motion.div>
 
           <motion.h2

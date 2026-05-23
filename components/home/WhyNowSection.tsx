@@ -29,7 +29,7 @@ export const WhyNowSection: React.FC = () => {
           viewport={{ once: true, margin: '-100px' }}
         >
           <motion.div variants={item} className="mb-10 md:mb-12">
-            <SectionKicker label="Échéance" index="07" tone="dark" />
+            <SectionKicker label="Échéance" index="08" tone="dark" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
