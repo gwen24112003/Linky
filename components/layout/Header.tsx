@@ -66,14 +66,14 @@ export const Header: React.FC = () => {
               onClick={() => window.scrollTo(0, 0)}
             >
               <img
-                src="/images/opus-logo.png"
+                src="/images/Logo_1200x630.png"
                 alt="Logo Opus Advisor"
-                className="h-16 md:h-20 w-auto object-contain"
+                className="h-10 w-[185px] md:h-12 md:w-[240px] object-cover object-center"
               />
             </Link>
 
             {/* Desktop Navigation - centered absolutely */}
-            <div className="hidden lg:flex items-center gap-8 xl:gap-10 absolute left-1/2 transform -translate-x-1/2">
+            <div className="hidden lg:flex items-center gap-8 xl:gap-10">
               {navLinks.map((link) => {
                 const currentPath = pathname ?? '/';
                 const normalized = currentPath.endsWith('/') && currentPath !== '/'
