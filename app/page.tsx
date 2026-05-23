@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://opusadvisor.fr/images/opus-icon.png',
+        url: 'https://opusadvisor.fr/images/Logo_1200x630.png',
         width: 1200,
         height: 630,
         alt: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP second œuvre',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
     images: [
       {
-        url: 'https://opusadvisor.fr/images/opus-icon.png',
+        url: 'https://opusadvisor.fr/images/Logo_1200x630.png',
         alt: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP second œuvre',
       },
     ],

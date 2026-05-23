@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     images: [
       {
-        url: `${SITE_URL}/images/opus-icon.png`,
+        url: `${SITE_URL}/images/Logo_1200x630.png`,
         width: 1200,
         height: 630,
         alt: 'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: `${SITE_URL}/images/opus-icon.png`,
+        url: `${SITE_URL}/images/Logo_1200x630.png`,
         alt: 'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre',
       },
     ],
