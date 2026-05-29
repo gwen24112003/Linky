@@ -1,5 +1,5 @@
 ---
-title: "Pénurie de main-d'œuvre BTP : pourquoi l'organisation fait rester vos meilleurs"
+title: "Pénurie de main-d'œuvre BTP : garder vos meilleurs se joue sur l'organisation"
 metaDescription: "Les recrutements reculent de 16 % dans le BTP en 2026 et les profils qualifiés restent introuvables. Le vrai chantier, c'est de garder vos bons gars. Et ça se joue surtout sur l'organisation, plus que sur la paie."
 date: "2026-05-29"
 keywords: ["pénurie main d'oeuvre BTP", "fidélisation salariés bâtiment", "organisation de chantier second œuvre", "recrutement artisan 2026", "turnover BTP"]
@@ -17,7 +17,7 @@ L'autre moitié, celle dont on parle peu, c'est la sortie. Un bon électricien, 
 
 Tant que vous remplacez plus vite que vous ne fidélisez, vous courez après l'eau. Recruter mieux ne sert à rien si la boîte fuit par le bas.
 
-## Pourquoi vos meilleurs partent, et l'argent n'explique pas tout
+## Vos meilleurs partent rarement pour le salaire
 
 On a tendance à croire que tout se règle au salaire. Les boîtes qui fidélisent le mieux prouvent le contraire. Le levier qui marche combine plusieurs choses, et la rémunération n'est qu'une pièce parmi d'autres.
 
@@ -39,11 +39,11 @@ Autrement dit, l'organisation est devenue un argument d'attractivité à part en
 
 Et ça, ça relève moins du budget que du système.
 
-## Ce qu'un système bien orchestré change pour vos équipes
+## Ce qu'un système qui tient change pour vos équipes
 
 On ne va pas vous vendre un logiciel RH, le sujet est ailleurs. La plupart des frictions qui font fuir vos bons gars viennent d'outils qui ne se parlent pas : le planning dans une tête, les chantiers dans WhatsApp, les heures sur un carnet, le matériel nulle part.
 
-Quand on orchestre tout ça, voilà ce que vos équipes voient changer sur le terrain :
+Quand on remet tout ça en ordre, voilà ce que vos équipes voient changer sur le terrain :
 
 - **Un planning unique, à jour, visible par tous.** Fini les trois versions contradictoires. Chacun sait où il va, et quand ça bouge, tout le monde le voit en même temps.
 - **Des chantiers préparés en amont.** Le matériel, les plans, les accès, les contacts : centralisés, accessibles depuis le téléphone, plus de compagnon qui poireaute devant un chantier fermé.

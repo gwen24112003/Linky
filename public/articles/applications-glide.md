@@ -17,7 +17,7 @@ Le scénario revient toujours. Une boîte d'élec ou de plomberie, 15 personnes.
 
 L'envie est légitime. La signature au commercial qui passe l'est moins. Une app sur mesure facturée 8 000 à 25 000 € en développement classique, ou 3 000 à 8 000 € en no-code, ne se justifie qu'en présence de besoins très précis. Hors de ces cas, c'est de l'argent jeté.
 
-## Pourquoi l'app est rarement la première réponse
+## L'app est rarement la première réponse
 
 Avant de penser à une app, faites quelques vérifications de base.
 
@@ -25,7 +25,7 @@ Avant de penser à une app, faites quelques vérifications de base.
 
 **Un Make ou un Notion bien câblé règle 70 % des frictions.** Photos WhatsApp qui finissent automatiquement dans le bon dossier Drive, formulaire Notion accessible depuis le téléphone des chefs de chantier qui crée une fiche chantier en 30 secondes, alerte automatique au bureau quand un bon est soumis. Coût : 30 à 100 €/mois et une à deux semaines de mise en place. Pas d'app à développer, pas d'app à maintenir.
 
-**Vos équipes terrain ont déjà 8 apps qu'elles n'ouvrent jamais.** Batappli mobile, WhatsApp, le pointage, l'app du fabricant de chaudières, l'app fournisseur sanitaire, le SMS d'agence intérim, le tableau de bord du véhicule. Une 9e app pour faire mieux que les 8 premières finit rarement utilisée. Plus la pile d'apps grossit, moins le terrain en ouvre une seule. C'est même ce qu'on observe statistiquement.
+**Vos équipes terrain ont déjà 8 apps qu'elles n'ouvrent jamais.** Batappli mobile, WhatsApp, le pointage, l'app du fabricant de chaudières, l'app fournisseur sanitaire, le SMS d'agence intérim, le tableau de bord du véhicule. Une 9e app pour faire mieux que les 8 premières finit rarement utilisée. Plus la pile d'apps grossit, moins le terrain en ouvre une seule.
 
 ## Les 3 cas où une app sur mesure se justifie vraiment
 
@@ -33,7 +33,7 @@ Sur la centaine de boîtes BTP qu'on voit passer, 3 situations légitiment un pr
 
 **1. Besoin métier précis non couvert par votre logiciel BTP.** Exemple typique : un installateur de fenêtres ou de cuisines avec un catalogue produits propre, des dimensions, des options croisées, et un chiffrage qui ne tient pas dans Batappli. Là, un Glide ou un Softr connecté à un Google Sheets ou un Airtable génère un devis personnalisé en 5 minutes au lieu de 45.
 
-**2. Portail client B2B.** Vous gérez des comptes importants (bailleurs sociaux, syndics, foncières) qui demandent à voir l'avancement de leurs chantiers, leurs factures, leurs situations, leurs DOE. Un portail Softr ou Glide branché sur votre logiciel BTP via Make leur donne cet accès sans que vous ressaisissiez quoi que ce soit. Ça vous économise 1 à 2 heures par client par mois et améliore nettement la perception de pro.
+**2. Portail client B2B.** Vous gérez des comptes importants (bailleurs sociaux, syndics, foncières) qui demandent à voir l'avancement de leurs chantiers, leurs factures, leurs situations, leurs DOE. Un portail Softr ou Glide branché sur votre logiciel BTP via Make leur donne cet accès sans que vous ressaisissiez quoi que ce soit. Ça vous économise 1 à 2 heures par client par mois, et le client a l'info sans vous appeler.
 
 **3. Outil interne récurrent pour un circuit de travail très spécifique.** Préparation des tournées SAV avec parcours optimisé, suivi des stocks de consommables sur véhicule, pointage avec géolocalisation chantier. Quand le besoin est précis, récurrent, et qu'aucun logiciel BTP du marché ne le couvre, une app no-code interne paie son ticket en 2 à 3 mois d'usage.
 
@@ -50,7 +50,7 @@ Tarifs publics 2026 vérifiés, en plan annuel :
 Le critère qui compte n'est pas l'outil lui-même. C'est plutôt ceci :
 
 - **Qui va l'utiliser ?** Chefs de chantier sur smartphone : Glide. Clients sur ordinateur : Softr. Mix terrain et bureau avec logique métier complexe : Bubble.
-- **À quelle fréquence ?** Si l'app est ouverte 2 fois par mois, n'importe quelle option suffit. Si elle est utilisée 20 fois par jour, soigner la rapidité et l'autonomie hors ligne change tout.
+- **À quelle fréquence ?** Si l'app est ouverte 2 fois par mois, n'importe quelle option suffit. Si elle est utilisée 20 fois par jour, la rapidité et le mode hors ligne deviennent le critère numéro un.
 - **Connectée à quoi ?** Tout no-code se branche sur Make ou n8n. C'est ce branchement qui détermine si l'app reste un gadget ou devient une pièce du système qui tourne.
 
 Sur les boîtes qu'on accompagne, on bascule régulièrement d'un outil à l'autre selon le projet. Glide pour la majorité des cas terrain, Softr pour les portails clients, Bubble quand il faut vraiment du sur-mesure. Pas de dogme, ça dépend du besoin.
@@ -65,7 +65,7 @@ Deux scénarios opposés qu'on a vus le mois dernier.
 
 Même outil, même éditeur, mêmes tarifs. Deux verdicts opposés. Tout se joue sur le besoin réel, et le no-code n'y change rien.
 
-## Que faire avant de lancer un projet d'app
+## Les 3 étapes avant de lancer un projet d'app
 
 Trois étapes à respecter dans l'ordre.
 

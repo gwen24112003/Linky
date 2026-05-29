@@ -1,6 +1,6 @@
 ---
-title: "Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre. Vous comptez en faire partie ?"
-metaDescription: "À un peu plus de 3 mois de l'échéance du 1er septembre 2026, 40 % des TPE françaises ne sont pas prêtes à recevoir des factures électroniques. Pour les boîtes du BTP second œuvre, le retard est souvent pire. Voilà ce qu'il faut faire dans les 30 jours."
+title: "Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026"
+metaDescription: "À un peu plus de 3 mois de l'échéance du 1er septembre 2026, 40 % des TPE françaises ne sont pas prêtes à recevoir des factures électroniques. Dans le BTP second œuvre, le retard est souvent pire. Voici quoi faire dans les 30 jours."
 date: "2026-05-20"
 keywords: ["facturation électronique 2026", "Plateforme Agréée DGFiP", "Factur-X BTP", "réception facture électronique", "TPE BTP second œuvre"]
 ---
@@ -37,7 +37,7 @@ Trois changements concrets, dans cet ordre.
 
 **3. Vous devez cartographier vos flux de factures B2B.** Qui vous facture ? Qui vous commande ? Vos sous-traitants ? Vos fournisseurs ? Vos donneurs d'ordre généraux ? Chaque flux va être touché. La facturation BTP est rarement linéaire : acomptes, situations mensuelles, retenues de garantie, autoliquidation TVA pour la sous-traitance. Tous ces documents doivent passer dans le nouveau format, sans aucun raccourci possible.
 
-## Pourquoi attendre 2027 est une mauvaise idée
+## Attendre 2027 vous coûte cher dès maintenant
 
 Il y a trois raisons de ne pas reporter.
 
@@ -53,11 +53,11 @@ Dans les boîtes de second œuvre qu'on rencontre, le scénario typique est pres
 
 À un peu plus de 3 mois de l'échéance, c'est tout sauf prêt.
 
-Bonne nouvelle quand même : la solution est simple techniquement, juste fastidieuse. Il faut faire le tour des outils, vérifier les compatibilités, désigner une PA, nettoyer la base clients, tester l'émission de factures conformes et former l'équipe. Compté correctement, c'est 2 à 3 mois de chantier interne pour une boîte de 15 personnes. Si vous démarrez maintenant, vous êtes à l'aise. Si vous attendez août, vous êtes dans le rouge.
+Bonne nouvelle quand même : techniquement, il n'y a rien de sorcier. C'est surtout fastidieux. Il faut faire le tour des outils, vérifier les compatibilités, désigner une PA, nettoyer la base clients, tester l'émission de factures conformes et former l'équipe. Compté correctement, c'est 2 à 3 mois de chantier interne pour une boîte de 15 personnes. Si vous démarrez maintenant, vous êtes à l'aise. Si vous attendez août, vous êtes dans le rouge.
 
 ## Ce que vous devez faire dans les 30 jours
 
-Sans drama et sans urgence factice, voilà la liste minimale qui vous met à l'abri.
+Voilà la liste minimale qui vous met à l'abri.
 
 Premièrement, appelez votre éditeur de logiciel BTP cette semaine. Posez 3 questions : votre logiciel est-il connecté à une Plateforme Agréée immatriculée par la DGFiP, est-elle incluse ou en supplément, et peut-il déjà recevoir et émettre du Factur-X aujourd'hui ? Si la réponse à l'une de ces 3 questions est non ou floue, vous savez ce qu'il vous reste à faire.
 

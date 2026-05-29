@@ -1,6 +1,6 @@
 ---
 title: "1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie."
-metaDescription: "Dans le BTP second œuvre, la moyenne d'un impayé tourne autour de 3 000 €. La cause numéro 1, c'est la relance qui n'est jamais partie, bien plus que le client mauvais payeur. Comment monter une séquence de relance automatique en 2 semaines, sans changer de logiciel."
+metaDescription: "Dans le BTP second œuvre, un impayé tourne autour de 3 000 € en moyenne, et la première cause reste la relance qui n'est jamais partie. Comment monter une séquence de relance automatique en 2 semaines, sans changer de logiciel."
 date: "2026-05-01"
 keywords: ["relance automatique impayés BTP", "recouvrement artisan bâtiment", "DSO entreprise BTP", "Make Batappli relance", "indemnité forfaitaire 40 euros"]
 ---
@@ -19,7 +19,7 @@ Quand on chiffre l'impact pour une boîte de 12 personnes qui facture 1,2 M€ p
 
 ## Pourquoi les relances ne partent jamais
 
-Avant de parler outils, il faut nommer le vrai problème. La quasi-totalité des artisans BTP qu'on voit savent qui leur doit de l'argent. Ce qu'ils ne font pas, c'est relancer dans les temps. Quelques raisons reviennent.
+La quasi-totalité des artisans BTP qu'on voit savent qui leur doit de l'argent. Ce qu'ils ne font pas, c'est relancer dans les temps. Quelques raisons reviennent.
 
 **Le patron ne sait plus à quelle date la facture est partie.** Elle a été émise dans Batappli, envoyée par mail, le client a accusé réception oralement, mais la date d'échéance, personne ne la suit. Quand on s'en aperçoit, on est déjà à J+45 et le client a tout oublié.
 
@@ -29,7 +29,7 @@ Avant de parler outils, il faut nommer le vrai problème. La quasi-totalité des
 
 ## Ce que la loi vous autorise (et que vous n'utilisez pas)
 
-Avant d'automatiser quoi que ce soit, il faut connaître son cadre. Le Code de commerce prévoit plusieurs leviers qui passent souvent à la trappe.
+Le Code de commerce prévoit plusieurs leviers qui passent souvent à la trappe.
 
 **Le délai maximum de paiement entre professionnels est plafonné.** Article L441-10 du Code de commerce : 60 jours à compter de l'émission de la facture, ou 45 jours fin de mois si c'est expressément mentionné dans vos CGV. Tout délai supérieur convenu est nul. Vos CGV doivent le rappeler clairement.
 
@@ -69,7 +69,7 @@ Le point sensible n'est jamais l'outil, c'est la donnée d'entrée. Pour qu'une 
 
 ## Deux profils typiques qu'on rencontre
 
-Pour donner une idée concrète de ce que ça change, voici deux scénarios représentatifs des boîtes du second œuvre. Pas des noms de clients, des profils-types.
+Voici deux scénarios représentatifs des boîtes du second œuvre. Pas des noms de clients, des profils-types.
 
 **Profil 1, boîte de plomberie autour de 15 salariés, sous Batappli.** Le DSO réel observé en diagnostic est régulièrement entre 70 et 80 jours, avec un patron qui n'a aucune visibilité sur les retards. La mise en place type : export quotidien des factures vers une base de données légère, séquence d'envoi 4 touches via Make (J-3 rappel, J+1 mail ferme, J+8 alerte appel, J+15 mise en demeure pré-remplie), branchement comptable pour lettrer les paiements automatiquement. Sur ce profil, ramener le DSO entre 50 et 60 jours est l'ordre de grandeur attendu sur 8 à 12 semaines, soit plusieurs dizaines de milliers d'euros de trésorerie qui repassent en disponible.
 
