@@ -19,7 +19,7 @@ interface ArticleMetadata {
 const formatDate = (d?: string): string => {
   if (!d) return '';
   try {
-    return new Intl.DateTimeFormat('fr-FR', { month: 'long', year: 'numeric' }).format(new Date(d));
+    return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(d));
   } catch {
     return '';
   }
