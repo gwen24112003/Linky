@@ -73,7 +73,7 @@ export const FinalCTASection: React.FC = () => {
                   Audit Stack
                 </h3>
                 <span className="font-heading font-bold text-lg whitespace-nowrap" style={{ color: GOLD }}>
-                  990 € HT
+                  990 €
                 </span>
               </div>
               <p className="text-base text-white/75 leading-relaxed flex-1">
