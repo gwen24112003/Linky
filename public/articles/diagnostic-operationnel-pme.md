@@ -9,19 +9,17 @@ keywords: ["diagnostic opérationnel BTP", "audit PME bâtiment", "méthode Opus
 
 La plupart des cabinets vendent un audit opérationnel entre 15 000 et 30 000 € sur 2 à 3 mois. Le livrable : un PowerPoint de 40 à 50 slides qui finit dans un drive partagé et que plus personne ne rouvre passé la restitution. Notre méthode tient en 3 semaines à 2 500 €. Voici ce qu'on regarde, dans quel ordre, et pourquoi ça suffit dans la plupart des cas pour une boîte du second œuvre de 8 à 60+ collaborateurs.
 
----
-
 ## Ce qu'on refuse de faire
 
-Trois choses, parce que c'est là que la valeur du conseil se perd dans 90 % des missions qu'on a vues passer.
+Trois habitudes du conseil classique, parce que c'est là que la valeur se perd dans 90 % des missions qu'on a vues passer.
 
-**Pas de PowerPoint à 60 slides.** Les templates de conseil business tournent autour de 25 à 45 slides en standard, c'est un format calibré pour des comités de direction d'ETI ou de grands groupes. Pour une boîte BTP de 15 personnes, ce format ne passe pas. Le patron lit en diagonale en bout de journée, l'équipe terrain ne le verra jamais. On livre 8 pages maximum, lisibles en 20 minutes.
+**Pas de PowerPoint à 60 slides.** Les templates de conseil business tournent autour de 25 à 45 slides en standard, un format calibré pour des comités de direction d'ETI ou de grands groupes. Pour une boîte BTP de 15 personnes, ce format ne passe pas. Le patron lit en diagonale en bout de journée et l'équipe terrain ne le verra jamais. On livre 8 pages maximum, lisibles en 20 minutes.
 
-**Pas de "best practices" copiées d'autres secteurs.** Les méthodes vues en distribution, en industrie ou en SaaS n'ont quasiment aucune transposition utile dans une boîte d'élec ou de plomberie. Un chantier n'est pas un projet logiciel. Une situation de travaux n'est pas une commande client. Une retenue de garantie n'est pas un escompte commercial.
+**Pas de "best practices" copiées d'autres secteurs.** Les méthodes vues en distribution, en industrie ou en SaaS n'ont quasiment aucune transposition utile dans une boîte d'élec ou de plomberie. Un chantier fonctionne autrement qu'un projet logiciel. Une situation de travaux suit ses propres règles, une retenue de garantie aussi. Ce qui marche ailleurs ne se transpose pas mécaniquement ici.
 
-**Pas de recommandations qu'on ne sait pas implémenter soi-même.** Si on vous propose une action, on est capable de la faire après le diagnostic, pour un prix fixe. Pas de transfert vers un intégrateur partenaire à 1 200 € la journée. Pas de "vous trouverez bien quelqu'un".
+**Pas de recommandations qu'on ne sait pas implémenter soi-même.** Si on vous propose une action, on est capable de la faire après le diagnostic, pour un prix fixe. On ne vous renvoie pas vers un intégrateur partenaire à 1 200 € la journée, et on évite le classique "vous trouverez bien quelqu'un".
 
-Une étude BCG de 2024 le formule autrement : 73 % des organisations sont incapables de prouver le ROI des programmes de transformation qu'elles ont financés. Côté patron BTP, ça veut dire un audit payé 25 000 € dont on ne saura jamais s'il a servi à quelque chose. C'est ce qu'on refuse de reproduire.
+Une étude BCG de 2024 le formule autrement : 73 % des organisations sont incapables de prouver le ROI des programmes de transformation qu'elles ont financés. Côté patron BTP, ça veut dire un audit payé 25 000 € dont on ne saura jamais s'il a servi à quelque chose. On refuse de reproduire ça.
 
 ## Les 5 étapes du diagnostic Opus
 
@@ -31,29 +29,29 @@ Une étude BCG de 2024 le formule autrement : 73 % des organisations sont incapa
 
 **Semaine 2-3 : chiffrage des gains.** On reprend chaque friction repérée et on la chiffre en heures par semaine puis en euros par mois. Combien d'heures à ressaisir des données. Combien d'euros bloqués dans des situations non facturées à temps. Combien de devis perdus parce que le modèle traîne. Livrable : un tableau ROI chantier par chantier d'amélioration, avec un effort estimé en jours.
 
-**Semaine 3 : plan d'exécution.** Priorisation des actions par ratio impact / effort. Phasage sur 4 à 10 semaines selon ce qui sort. Pour chaque action retenue, un devis fixe. Pas de TJM ouvert, pas de "ça dépendra du temps passé". Livrable : une feuille de route chiffrée prête à être signée si vous décidez d'avancer.
+**Semaine 3 : plan d'exécution.** Priorisation des actions par ratio impact / effort. Phasage sur 4 à 10 semaines selon ce qui sort. Pour chaque action retenue, un devis fixe, pas de TJM ouvert ni de "ça dépendra du temps passé". Livrable : une feuille de route chiffrée prête à être signée si vous décidez d'avancer.
 
-**Semaine 3 : restitution.** 2 heures avec le patron et son équipe clé. Présentation orale, document de 8 pages maximum. À la fin de la séance, vous savez 3 choses : où vous en êtes, quoi faire dans les 30 jours, et combien ça coûte si vous voulez qu'on s'en occupe. Vous décidez sur place ou vous gardez le plan. Pas de relance commerciale.
+**Semaine 3 : restitution.** 2 heures avec le patron et son équipe rapprochée. Présentation orale, document de 8 pages maximum. À la fin de la séance, vous savez où vous en êtes, quoi faire dans les 30 jours, et combien ça coûte si vous voulez qu'on s'en occupe. Vous décidez sur place ou vous gardez le plan. Pas de relance commerciale.
 
 ## Pourquoi 3 semaines, pas plus
 
-Trois raisons pratiques.
+Trois raisons pratiques, toutes vérifiées sur le terrain.
 
 **Au-delà de 3 semaines, le contexte de la boîte a changé.** Un nouveau chantier démarre, vous embauchez un compagnon, un client casse son contrat, un fournisseur change de représentant. Un diagnostic qui tourne 3 mois finit par décrire une boîte qui n'existe plus.
 
-**Un diagnostic qui dure 3 mois coûte plus cher que la solution.** À 800 € la journée de consultant senior (TJM moyen 2025 sur le marché français du conseil PME), 3 mois de diagnostic à mi-temps représentent vite 30 000 €. C'est plus que l'enveloppe que la plupart des boîtes BTP de 15 personnes peuvent allouer, et c'est plus que le coût total de la solution dans la plupart des cas.
+**Un diagnostic qui dure 3 mois coûte plus cher que la solution.** À 800 € la journée de consultant senior (TJM moyen 2025 sur le marché français du conseil PME), 3 mois de diagnostic à mi-temps représentent vite 30 000 €. C'est au-dessus de l'enveloppe que la plupart des boîtes BTP de 15 personnes peuvent allouer, et c'est plus que le coût total de la solution dans la plupart des cas.
 
-**Le patron BTP ne peut pas mobiliser son équipe 3 mois.** Vos chefs de chantier sont déjà sur le pont 50 heures par semaine. Votre assistante porte la moitié de la boîte. Les rendre disponibles 3 fois par semaine pendant 12 semaines pour répondre à des questions de consultant, ce n'est pas réaliste. 3 semaines, c'est tenable.
+**Le patron BTP ne peut pas mobiliser son équipe 3 mois.** Vos chefs de chantier sont déjà sur le pont 50 heures par semaine. Votre assistante porte la moitié de la boîte. Les rendre disponibles 3 fois par semaine pendant 12 semaines pour répondre à des questions de consultant, ça reste hors de portée. 3 semaines, c'est tenable.
 
 ## Pourquoi ça marche en BTP spécifiquement
 
-Le diagnostic court ne marcherait pas dans tous les secteurs. Il marche dans le second œuvre pour 3 raisons.
+Le diagnostic court ne tiendrait pas dans tous les secteurs. Dans le second œuvre, il marche pour quelques raisons précises.
 
 Le métier est concret. Un chantier, c'est un point de départ et un point d'arrivée. Les frictions sont visibles à l'œil nu, elles ne se cachent pas derrière des dashboards à 8 KPI.
 
 Les outils standards du marché sont peu nombreux. Quatre à cinq logiciels BTP couvrent 90 % des boîtes du second œuvre en France. Pas besoin de cartographier 30 outils maison. On connaît Batappli, Obat, Tolteck, EBP, et leurs principales limites.
 
-Les chantiers sont des unités de mesure naturelles pour quantifier les gains. "Faire gagner 4 heures par chantier sur 80 chantiers par an", c'est un chiffre qui parle à un patron. Plus parlant qu'une "amélioration de 12 % de la productivité opérationnelle".
+Les chantiers servent d'unités de mesure naturelles pour quantifier les gains. "Faire gagner 4 heures par chantier sur 80 chantiers par an", voilà un chiffre qui parle à un patron, bien plus qu'une "amélioration de 12 % de la productivité opérationnelle".
 
 ## Si vous voulez commencer à vous auto-diagnostiquer
 
