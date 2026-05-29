@@ -8,7 +8,7 @@ import { getAllArticles } from '@/lib/articles';
 const PAGE_URL = 'https://opusadvisor.fr/articles';
 const PAGE_TITLE = 'Articles — BTP second œuvre';
 const PAGE_DESCRIPTION =
-  "Conseils et retours terrain pour les patrons du BTP second œuvre : consolidation des outils, comparatifs (Batappli, Obat, Tolteck, EBP), facturation électronique 2027, automatisations testées.";
+  "Conseils et retours terrain pour les patrons du BTP second œuvre : consolidation des outils, comparatifs Batappli/Obat/EBP, facturation 2027, automatisations.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

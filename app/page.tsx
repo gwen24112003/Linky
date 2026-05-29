@@ -18,7 +18,7 @@ const PAGE_URL = 'https://opusadvisor.fr/';
 const PAGE_TITLE =
   'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre';
 const PAGE_DESCRIPTION =
-  "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, devis qui ne traînent plus. Diagnostic 2 500 €, pré-audit gratuit.";
+  "On rend 10 h/semaine aux patrons du BTP second œuvre : relances auto, chantiers centralisés, devis qui partent vite. Diagnostic 2 500 €, pré-audit gratuit.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
