@@ -1,0 +1,40 @@
+# Workflow de deploiement continu du site Opus Advisor sur le VPS.
+#
+# A chaque push sur main (ou declenchement manuel), ce workflow se connecte
+# en SSH au VPS et execute /var/www/linky/deploy.sh, qui effectue un build
+# zero-downtime avec swap atomique vers /var/www/linky/out, puis recharge
+# nginx. Le script lui-meme n'est pas modifie ici.
+#
+# Secrets requis dans les parametres GitHub du depot :
+#   - SSH_HOST          : hostname ou IP du VPS
+#   - SSH_USER          : utilisateur SSH ayant le droit d'executer deploy.sh
+#   - SSH_PRIVATE_KEY   : cle privee SSH (format OpenSSH) associee au user
+#   - SSH_PORT          : optionnel, defaut 22
+
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-vps
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: SSH deploy
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            set -euo pipefail
+            bash /var/www/linky/deploy.sh
