@@ -109,7 +109,6 @@ const servicesJsonLd = {
         priceSpecification: {
           '@type': 'PriceSpecification',
           minPrice: '5500',
-          maxPrice: '25000',
           priceCurrency: 'EUR',
         },
       },
