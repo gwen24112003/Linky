@@ -1,13 +1,13 @@
 ---
 title: "Avant d'investir 30 000 € dans un nouvel outil, regardez ce que vous avez déjà"
-metaDescription: "Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Le plus souvent, le frein vient de l'usage qu'on en fait, pas de l'outil. Quatre questions à se poser avant de signer un devis à 30 000 €."
+metaDescription: "Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions à se poser avant de signer un devis à 30 000 €."
 date: "2026-04-25"
 keywords: ["changement logiciel BTP", "Batappli vs Obat", "audit usage logiciel bâtiment", "France Num BTP", "investissement numérique TPE BTP"]
 ---
 
 *Catégorie : Outils & organisation BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Le plus souvent, le vrai problème n'est pas l'outil, c'est l'usage qu'on en fait. Une étude Pendo sur 615 abonnements à des logiciels professionnels chiffre le gaspillage : 80 % des fonctionnalités achetées sont rarement ou jamais utilisées. Côté France, le baromètre France Num 2025 montre que 73 % des TPE-PME du bâtiment investissent moins de 1 000 € par an dans le numérique. Avant de signer un devis à 30 000 €, prenez 6 minutes pour vérifier une chose : que vous n'êtes pas en train d'acheter un nouveau logiciel pour ne pas l'utiliser non plus.
+Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Et presque à chaque fois, ce qui coince tient à l'usage qu'on en fait, pas à l'outil. Une étude Pendo sur 615 abonnements à des logiciels professionnels chiffre le gaspillage : 80 % des fonctionnalités achetées sont rarement ou jamais utilisées. Côté France, le baromètre France Num 2025 montre que 73 % des TPE-PME du bâtiment investissent moins de 1 000 € par an dans le numérique. Avant de signer un devis à 30 000 €, prenez 6 minutes pour vérifier une chose : que vous n'êtes pas en train d'acheter un nouveau logiciel pour ne pas l'utiliser non plus.
 
 ---
 
@@ -29,7 +29,7 @@ Trois choses, dans cet ordre.
 
 **Le patron paie 2 fois plus cher pour le même résultat.** L'investissement initial, plus le coût caché de la migration : 6 mois de paramétrage, 3 mois de double saisie pendant la transition, formation de l'équipe, données mal reprises qu'il faut nettoyer. Au bout de 18 mois, on est revenu au point de départ avec une nouvelle facture.
 
-À noter : la durée de vie moyenne d'un logiciel de gestion en PME tourne autour de 8 à 10 ans. Si vous changez tous les 3 ans, vous reproduisez le même cycle d'échec 3 fois plus souvent que la moyenne.
+La durée de vie moyenne d'un logiciel de gestion en PME tourne autour de 8 à 10 ans. Si vous changez tous les 3 ans, vous reproduisez le même cycle d'échec 3 fois plus souvent que la moyenne.
 
 ## Les 4 questions à se poser avant d'acheter
 
@@ -61,7 +61,7 @@ Le cas typique en pré-audit, c'est une boîte d'élec qui veut quitter Batappli
 
 Changer pour Obat coûterait 3 000 à 8 000 € de migration plus l'abonnement plus 6 mois de mise en place. Re-paramétrer Batappli proprement coûte 0 € d'abonnement supplémentaire et 2 à 3 semaines de travail. Au bout du compte, le patron règle 70 % de ses frictions sans changer d'outil.
 
-Batappli n'est ni meilleur ni moins bon qu'Obat. Les deux sont solides. Le vrai sujet, c'était l'usage, pas le choix de l'outil. Et tant qu'on ne l'a pas vu, on remplace un logiciel sous-utilisé par un autre logiciel sous-utilisé.
+Batappli et Obat se valent : les deux font le travail. Ce qui bloquait, c'était l'usage, pas le choix de l'outil. Et tant qu'on ne l'a pas vu, on remplace un logiciel sous-utilisé par un autre logiciel sous-utilisé.
 
 ## Que faire avant tout achat
 

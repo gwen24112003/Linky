@@ -1,5 +1,5 @@
 ---
-title: "MaPrimeRénov' 2026 : suspendue, rouverte, durcie. Vos dossiers tiennent-ils le choc ?"
+title: "MaPrimeRénov' 2026 : trois changements de règles en un an. Vos dossiers suivent-ils ?"
 metaDescription: "Suspendue au 1er janvier faute de budget, rouverte au printemps, durcie au 1er septembre avec l'exclusion du gaz : MaPrimeRénov' a changé trois fois en 2026. Sur votre boîte, le coût qui fait mal, c'est le dossier, pas l'aide. Comment reprendre la main."
 date: "2026-05-22"
 keywords: ["MaPrimeRénov 2026", "rénovation énergétique BTP", "plombier chauffagiste pompe à chaleur", "dossier MaPrimeRénov artisan", "plan électrification gaz", "veille réglementaire BTP"]
@@ -11,14 +11,14 @@ En janvier, MaPrimeRénov' était à l'arrêt, faute de budget voté. Au printem
 
 ## Trois changements en un an, et le suivant arrive
 
-Récapitulons l'année, parce que beaucoup de patrons ont décroché en route :
+Beaucoup de patrons ont décroché en route. L'année en bref :
 
 - **1er janvier 2026 :** le guichet est suspendu, le budget n'étant pas voté. Effet de sidération immédiat sur le marché, avec des ménages qui attendent et des carnets de commandes qui se vident.
 - **Réouverture au printemps**, une fois la loi de finances promulguée. Mais les artisans dénoncent toujours des délais de paiement trop longs sur les versements.
 - **Chaudières à bois** : plus éligibles en monogeste depuis le 1er janvier.
 - **1er septembre 2026 :** dans le cadre du plan d'électrification, les rénovations d'ampleur qui conservent un chauffage au gaz sortent du dispositif.
 
-Ajoutez l'arrivée de la sixième période des CEE qui redistribue les priorités, et l'assouplissement du RGE salué par la CAPEB. Le message est clair : **un dossier monté en février sur les hypothèses de janvier peut être hors-clous en septembre.**
+Ajoutez l'arrivée de la sixième période des CEE qui redistribue les priorités, et l'assouplissement du RGE salué par la CAPEB. Résultat : **un dossier monté en février sur les hypothèses de janvier peut être hors-clous en septembre.**
 
 ## Le coût qui fait mal, c'est le dossier
 

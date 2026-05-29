@@ -7,7 +7,7 @@ keywords: ["diagnostic opérationnel BTP", "audit PME bâtiment", "méthode Opus
 
 *Catégorie : Méthode Opus — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-La plupart des cabinets vendent un audit opérationnel entre 15 000 et 30 000 € sur 2 à 3 mois. Le livrable : un PowerPoint de 40 à 50 slides qui finit dans un drive partagé et que plus personne ne rouvre passé la restitution. Notre méthode tient en 3 semaines à 2 500 €. Voici ce qu'on regarde, dans quel ordre, et pourquoi ça suffit dans la plupart des cas pour une boîte du second œuvre de 8 à 60+ collaborateurs.
+La plupart des cabinets vendent un audit opérationnel entre 15 000 et 30 000 € sur 2 à 3 mois. Le livrable : un PowerPoint de 40 à 50 slides qui finit dans un drive partagé et que plus personne ne rouvre passé la restitution. Notre méthode tient en 3 semaines à 2 500 €. Voici ce qu'on regarde, dans quel ordre, et pourquoi ça suffit neuf fois sur dix pour une boîte du second œuvre de 8 à 60+ collaborateurs.
 
 ## Ce qu'on refuse de faire
 
@@ -15,7 +15,7 @@ Trois habitudes du conseil classique, parce que c'est là que la valeur se perd 
 
 **Pas de PowerPoint à 60 slides.** Les templates de conseil business tournent autour de 25 à 45 slides en standard, un format calibré pour des comités de direction d'ETI ou de grands groupes. Pour une boîte BTP de 15 personnes, ce format ne passe pas. Le patron lit en diagonale en bout de journée et l'équipe terrain ne le verra jamais. On livre 8 pages maximum, lisibles en 20 minutes.
 
-**Pas de "best practices" copiées d'autres secteurs.** Les méthodes vues en distribution, en industrie ou en SaaS n'ont quasiment aucune transposition utile dans une boîte d'élec ou de plomberie. Un chantier fonctionne autrement qu'un projet logiciel. Une situation de travaux suit ses propres règles, une retenue de garantie aussi. Ce qui marche ailleurs ne se transpose pas mécaniquement ici.
+**Pas de "best practices" copiées d'autres secteurs.** Les méthodes vues en distribution, en industrie ou en SaaS n'ont quasiment aucune transposition utile dans une boîte d'élec ou de plomberie. Un chantier fonctionne autrement qu'un projet logiciel. Une situation de travaux suit ses propres règles, une retenue de garantie aussi.
 
 **Pas de recommandations qu'on ne sait pas implémenter soi-même.** Si on vous propose une action, on est capable de la faire après le diagnostic, pour un prix fixe. On ne vous renvoie pas vers un intégrateur partenaire à 1 200 € la journée, et on évite le classique "vous trouverez bien quelqu'un".
 
