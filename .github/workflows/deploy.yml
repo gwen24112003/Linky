@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy-${{ github.ref }}
+  group: deploy-vps
   cancel-in-progress: false
 
 jobs:
