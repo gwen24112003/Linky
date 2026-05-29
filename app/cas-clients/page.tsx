@@ -13,7 +13,7 @@ const RULE = 'rgba(26,35,50,0.16)';
 const PAGE_URL = 'https://opusadvisor.fr/cas-clients';
 const PAGE_TITLE = 'Opus Pilotes — 3 boîtes pour construire la v1 ensemble';
 const PAGE_DESCRIPTION =
-  "On ouvre 3 places pilotes en Bretagne et Pays-de-la-Loire. Système complet à tarif pilote (-40%). En échange, on publie le cas après 6 mois. Candidatures ouvertes.";
+  "3 places pilotes en Bretagne et Pays-de-la-Loire : système complet à tarif pilote (-40 %), cas publié après 6 mois. Candidatures ouvertes.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

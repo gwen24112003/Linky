@@ -3,7 +3,7 @@
         "id": 14,
         "slug": "penurie-main-doeuvre-organisation",
         "title": "Pénurie de main-d'œuvre BTP : garder vos meilleurs se joue sur l'organisation",
-        "description": "Les recrutements reculent de 16 % dans le BTP en 2026 et les profils qualifiés restent introuvables. Garder vos bons gars se joue surtout sur la façon dont tournent vos chantiers, bien avant la paie.",
+        "description": "Recrutements en baisse de 16 % dans le BTP en 2026, profils qualifiés introuvables. Garder vos bons gars se joue surtout sur l'organisation des chantiers.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "users",
         "publishedAt": "2026-05-29"
@@ -12,7 +12,7 @@
         "id": 13,
         "slug": "maprimerenov-2026",
         "title": "MaPrimeRénov' 2026 : trois changements de règles en un an. Vos dossiers suivent-ils ?",
-        "description": "Suspendue au 1er janvier faute de budget, rouverte au printemps, durcie au 1er septembre avec l'exclusion du gaz : MaPrimeRénov' a changé trois fois en 2026. Sur votre boîte, le coût qui fait mal, c'est le dossier, pas l'aide.",
+        "description": "Suspendue, rouverte, puis durcie avec l'exclusion du gaz : MaPrimeRénov' a changé trois fois en 2026. Sur votre boîte, ce qui coûte cher, c'est le dossier.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "alert-triangle",
         "publishedAt": "2026-05-22"
@@ -21,7 +21,7 @@
         "id": 11,
         "slug": "facturation-electronique-2026",
         "title": "Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026",
-        "description": "À un peu plus de 3 mois du 1er septembre 2026, 40 % des TPE françaises ne sont pas prêtes à recevoir des factures électroniques. Dans le BTP second œuvre, le retard est souvent pire. Voici quoi faire dans les 30 jours.",
+        "description": "À 3 mois du 1er septembre 2026, 40 % des TPE ne peuvent pas recevoir une facture électronique. Dans le BTP, c'est pire. Quoi faire dans les 30 jours.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "file-text",
         "publishedAt": "2026-05-20"
@@ -30,7 +30,7 @@
         "id": 12,
         "slug": "relances-automatiques-impayes-btp",
         "title": "1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie.",
-        "description": "Dans le BTP second œuvre, un impayé tourne autour de 3 000 € en moyenne, et la première cause reste la relance qui n'est jamais partie. Comment monter une séquence de relance automatique en 2 semaines, sans changer de logiciel.",
+        "description": "Un impayé BTP tourne autour de 3 000 €, souvent faute de relance partie à temps. Monter une séquence automatique en 2 semaines, sans changer d'outil.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "wallet",
         "publishedAt": "2026-05-01"
@@ -39,7 +39,7 @@
         "id": 7,
         "slug": "automatiser-sans-erp",
         "title": "Votre boîte BTP peut s'équiper pour 200 à 500 € par mois au lieu d'un logiciel à 50 000 €",
-        "description": "Vous passez de 8 à 15 salariés et un commercial vous propose un logiciel tout-en-un à 35 000 €. Dans la majorité des cas, 200 à 500 € par mois d'outils existants couvrent 90 % du besoin. Voici pourquoi, comment, et les rares cas où le gros logiciel se justifie.",
+        "description": "Un commercial vous propose un tout-en-un à 35 000 € ? Le plus souvent, 200 à 500 €/mois d'outils existants couvrent 90 % du besoin. Pourquoi, et comment.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "workflow",
         "publishedAt": "2026-04-25"
@@ -48,7 +48,7 @@
         "id": 6,
         "slug": "diagnostic-operationnel-pme",
         "title": "Comment on diagnostique une boîte du second œuvre en 3 semaines",
-        "description": "La plupart des cabinets vendent un audit opérationnel à 15 à 30 000 € sur 2 à 3 mois. Notre méthode tient en 3 semaines pour 2 500 €. Ce qu'on regarde, dans quel ordre, et pourquoi ça suffit dans neuf cas sur dix.",
+        "description": "Les cabinets facturent un audit 15 à 30 000 € sur 2-3 mois. Notre méthode tient en 3 semaines pour 2 500 €. Ce qu'on regarde et pourquoi ça suffit.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "stethoscope",
         "publishedAt": "2026-04-25"
@@ -57,7 +57,7 @@
         "id": 3,
         "slug": "organisation-avant-developpement",
         "title": "Avant d'investir 30 000 € dans un nouvel outil, regardez ce que vous avez déjà",
-        "description": "Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions à se poser avant de signer un devis à 30 000 €.",
+        "description": "Un patron sur deux veut changer de logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions avant de signer un devis à 30 000 €.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "layers",
         "publishedAt": "2026-04-25"
@@ -66,7 +66,7 @@
         "id": 2,
         "slug": "applications-glide",
         "title": "Faut-il une app sur mesure pour vos chefs de chantier ? Ça dépend du projet.",
-        "description": "Glide, Softr, Bubble pour une boîte BTP : utiles dans 3 cas précis, de l'argent jeté dans les autres. Comment savoir où vous en êtes avant d'investir 5 000 ou 15 000 € dans une app maison.",
+        "description": "Glide, Softr, Bubble pour une boîte BTP : utiles dans 3 cas précis, inutiles ailleurs. Comment savoir avant d'investir 5 000 à 15 000 € dans une app maison.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "layout-dashboard",
         "publishedAt": "2026-04-25"
