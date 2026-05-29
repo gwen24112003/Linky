@@ -23,7 +23,7 @@ On n'est revendeur d'aucun éditeur. Si on recommande un changement, c'est dans 
 - **Patron 15-25 personnes** : Diagnostic 2 500 € + Mise en œuvre 9 000 € + Gardien 600 €/mois. LTV 24 mois environ 26 000 €.
 - **PME multi-agences 30-60+ personnes** : Diagnostic Premium 4 500 € + Mise en œuvre 25 000 € + Gardien Premium 1 500 €/mois sur engagement 12 mois. LTV 24 mois environ 65 000 €.
 
-Vous pouvez aussi démarrer par l'Audit Stack à 990 € HT pour cartographier votre situation avant de vous engager.`,
+Vous pouvez aussi démarrer par l'Audit Stack à 990 € pour cartographier votre situation avant de vous engager.`,
   },
   {
     question: 'Combien de temps avant de voir des résultats ?',

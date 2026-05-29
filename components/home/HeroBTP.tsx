@@ -124,7 +124,7 @@ export const HeroBTP: React.FC = () => {
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg border-2 text-white hover:bg-white/5 transition-all duration-200"
                 style={{ borderColor: GOLD }}
               >
-                Audit Stack — 990 € HT
+                Audit Stack — 990 €
               </Link>
             </motion.div>
 
