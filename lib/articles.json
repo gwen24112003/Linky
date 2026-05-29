@@ -1,5 +1,14 @@
 [
     {
+        "id": 14,
+        "slug": "penurie-main-doeuvre-organisation",
+        "title": "Pénurie de main-d'œuvre : et si le problème n'était pas le salaire, mais l'organisation ?",
+        "description": "Les recrutements reculent de 16 % dans le BTP en 2026 et les profils qualifiés restent introuvables. Mais le vrai problème, c'est de garder vos bons gars. Et ça se joue moins sur la paie que sur l'organisation des chantiers.",
+        "imageSrc": "/images/Logo_1200x630.png",
+        "icon": "users",
+        "publishedAt": "2026-05-29"
+    },
+    {
         "id": 13,
         "slug": "maprimerenov-2026",
         "title": "MaPrimeRénov' 2026 : suspendu, rouvert, durci — vos dossiers tiennent le choc ?",
