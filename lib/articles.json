@@ -6,7 +6,8 @@
         "description": "Recrutements en baisse de 16 % dans le BTP en 2026, profils qualifiés introuvables. Garder vos bons gars se joue surtout sur l'organisation des chantiers.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "users",
-        "publishedAt": "2026-05-29"
+        "publishedAt": "2026-05-29",
+        "category": "Organisation"
     },
     {
         "id": 13,
@@ -15,7 +16,8 @@
         "description": "Suspendue, rouverte, puis durcie avec l'exclusion du gaz : MaPrimeRénov' a changé trois fois en 2026. Sur votre boîte, ce qui coûte cher, c'est le dossier.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "alert-triangle",
-        "publishedAt": "2026-05-22"
+        "publishedAt": "2026-05-22",
+        "category": "Réglementation"
     },
     {
         "id": 11,
@@ -24,7 +26,8 @@
         "description": "À 3 mois du 1er septembre 2026, 40 % des TPE ne peuvent pas recevoir une facture électronique. Dans le BTP, c'est pire. Quoi faire dans les 30 jours.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "file-text",
-        "publishedAt": "2026-05-20"
+        "publishedAt": "2026-05-20",
+        "category": "Réglementation"
     },
     {
         "id": 12,
@@ -33,7 +36,8 @@
         "description": "Un impayé BTP tourne autour de 3 000 €, souvent faute de relance partie à temps. Monter une séquence automatique en 2 semaines, sans changer d'outil.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "wallet",
-        "publishedAt": "2026-05-01"
+        "publishedAt": "2026-05-01",
+        "category": "Organisation"
     },
     {
         "id": 7,
@@ -42,7 +46,8 @@
         "description": "Un commercial vous propose un tout-en-un à 35 000 € ? Le plus souvent, 200 à 500 €/mois d'outils existants couvrent 90 % du besoin. Pourquoi, et comment.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "workflow",
-        "publishedAt": "2026-04-25"
+        "publishedAt": "2026-04-25",
+        "category": "Outils & systèmes"
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "description": "Les cabinets facturent un audit 15 à 30 000 € sur 2-3 mois. Notre méthode tient en 3 semaines pour 2 500 €. Ce qu'on regarde et pourquoi ça suffit.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "stethoscope",
-        "publishedAt": "2026-04-25"
+        "publishedAt": "2026-04-25",
+        "category": "Méthode"
     },
     {
         "id": 3,
@@ -60,7 +66,8 @@
         "description": "Un patron sur deux veut changer de logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions avant de signer un devis à 30 000 €.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "layers",
-        "publishedAt": "2026-04-25"
+        "publishedAt": "2026-04-25",
+        "category": "Outils & systèmes"
     },
     {
         "id": 2,
@@ -69,6 +76,7 @@
         "description": "Glide, Softr, Bubble pour une boîte BTP : utiles dans 3 cas précis, inutiles ailleurs. Comment savoir avant d'investir 5 000 à 15 000 € dans une app maison.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "layout-dashboard",
-        "publishedAt": "2026-04-25"
+        "publishedAt": "2026-04-25",
+        "category": "Outils & systèmes"
     }
 ]
