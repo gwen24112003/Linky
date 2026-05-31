@@ -57,7 +57,8 @@ CHARTE & TON (à respecter strictement) :
 
 ÉTAPE 4 — Intégration
 - Ajoute l'entrée en TÊTE de lib/articles.json :
-  { "id": <max des id existants + 1>, "slug": "<slug>", "title": "<même titre que le frontmatter>", "description": "<150-160 car.>", "imageSrc": "/images/Logo_1200x630.png", "icon": "file-text", "publishedAt": "<date du jour>" }
+  { "id": <max des id existants + 1>, "slug": "<slug>", "title": "<même titre que le frontmatter>", "description": "<150-160 car.>", "imageSrc": "/images/Logo_1200x630.png", "icon": "file-text", "publishedAt": "<date du jour>", "category": "<une des catégories ci-dessous>" }
+- "category" DOIT valoir exactement l'une de : "Réglementation", "Outils & systèmes", "Organisation", "Méthode" (ce sont les filtres de la page /articles). Choisis la plus juste. N'invente pas de nouvelle catégorie sans raison.
 - Respecte l'indentation 4 espaces du JSON.
 
 ÉTAPE 5 — Vérification

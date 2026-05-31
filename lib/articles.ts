@@ -12,6 +12,7 @@ export interface ArticleMetadata {
   overlayImageSrc?: string;
   icon?: string;
   publishedAt?: string;
+  category?: string;
 }
 
 export interface ArticleFrontMatter {
