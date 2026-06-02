@@ -1,5 +1,15 @@
 [
     {
+        "id": 15,
+        "slug": "temps-administratif-artisans-btp",
+        "title": "13 heures par semaine sur l'administratif : le vrai salaire caché du patron BTP",
+        "description": "Une étude d'avril 2026 chiffre à 13 h 21/semaine le temps administratif d'un patron du bâtiment. Où il part, et comment en récupérer la moitié.",
+        "imageSrc": "/images/Logo_1200x630.png",
+        "icon": "clock",
+        "publishedAt": "2026-06-02",
+        "category": "Organisation"
+    },
+    {
         "id": 14,
         "slug": "penurie-main-doeuvre-organisation",
         "title": "Pénurie de main-d'œuvre BTP : garder vos meilleurs se joue sur l'organisation",
