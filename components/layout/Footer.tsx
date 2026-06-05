@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
 
   const socialLinks = [
     { icon: Instagram, href: 'https://www.instagram.com/opusadvisor/', label: 'Instagram' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/enzo-monnier-7524ab205/', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/enzo-monnier/', label: 'LinkedIn' },
     { icon: XIcon, href: 'https://x.com/opusadvisor', label: 'X' },
     { icon: Youtube, href: 'https://www.youtube.com', label: 'YouTube' },
   ];
@@ -92,7 +92,10 @@ export const Footer: React.FC = () => {
         {/* Bas : copyright + réseaux */}
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="text-xs md:text-sm text-white/40">
-            © {new Date().getFullYear()} Opus Advisor · Consultant ops BTP second œuvre.
+            © {new Date().getFullYear()} Opus Advisor · Consultant ops BTP second œuvre ·{' '}
+            <Link href="/mentions-legales" className="hover:text-white transition-colors duration-200">
+              Mentions légales
+            </Link>
           </p>
           <div className="flex items-center gap-6">
             {socialLinks.map((social) => (
