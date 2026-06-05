@@ -1,5 +1,29 @@
 import type { Metadata } from 'next';
+import { Inter, Bricolage_Grotesque, Lexend } from 'next/font/google';
 import './globals.css';
+
+// Polices auto-hébergées au build (next/font) : aucune requête navigateur
+// vers Google au runtime, donc aucune fuite d'IP vers Google (RGPD) + plus rapide.
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-bricolage',
+});
+
+const lexend = Lexend({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+  display: 'swap',
+  variable: '--font-lexend',
+});
 
 const SITE_URL = 'https://opusadvisor.fr';
 const SITE_NAME = 'Opus Advisor';
@@ -116,14 +140,8 @@ const organizationJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${inter.variable} ${bricolage.variable} ${lexend.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600&family=Lexend:wght@300;400;600;700&display=swap"
-          rel="stylesheet"
-        />
         <link rel="preload" as="image" href="/images/opus-icon.png" fetchPriority="high" />
         <script
           type="application/ld+json"
