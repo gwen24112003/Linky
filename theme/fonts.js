@@ -1,7 +1,7 @@
 const fonts = {
-  sans: ["Inter", 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
-  heading: ["Bricolage Grotesque", 'ui-sans-serif', 'system-ui'],
-  subtitle: ["Lexend", 'ui-sans-serif', 'system-ui'],
+  sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+  heading: ['var(--font-bricolage)', 'ui-sans-serif', 'system-ui'],
+  subtitle: ['var(--font-lexend)', 'ui-sans-serif', 'system-ui'],
 };
 
 const fontSizes = {
