@@ -1,5 +1,15 @@
 [
     {
+        "id": 16,
+        "slug": "sous-traitance-btp-paiement-direct",
+        "title": "Sous-traitance BTP : le droit qui vous fait payer même quand le donneur d'ordre coule",
+        "description": "47 % des factures BTP sont payées en retard. La loi de 1975 donne au sous-traitant un droit au paiement direct par le client final, souvent ignoré.",
+        "imageSrc": "/images/Logo_1200x630.png",
+        "icon": "file-text",
+        "publishedAt": "2026-06-10",
+        "category": "Réglementation"
+    },
+    {
         "id": 15,
         "slug": "temps-administratif-artisans-btp",
         "title": "13 heures par semaine sur l'administratif : le vrai salaire caché du patron BTP",
