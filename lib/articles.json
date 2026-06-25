@@ -1,5 +1,15 @@
 [
     {
+        "id": 17,
+        "slug": "ia-btp-donnees-propres",
+        "title": "L'IA dans le BTP : inutile tant que vos données sont en vrac",
+        "description": "Une étude 2026 sur 621 entreprises du BTP le confirme : le frein n°1 à l'IA, c'est la qualité des données. Pourquoi il faut ranger avant d'automatiser.",
+        "imageSrc": "/images/Logo_1200x630.png",
+        "icon": "workflow",
+        "publishedAt": "2026-06-25",
+        "category": "Outils & systèmes"
+    },
+    {
         "id": 16,
         "slug": "sous-traitance-btp-paiement-direct",
         "title": "Sous-traitance BTP : le droit qui vous fait payer même quand le donneur d'ordre coule",
