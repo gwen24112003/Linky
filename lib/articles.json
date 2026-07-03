@@ -1,5 +1,15 @@
 [
     {
+        "id": 18,
+        "slug": "marge-chantier-suivi-reel",
+        "title": "Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre",
+        "description": "Petites dépenses non suivies, heures improductives, avenants oubliés : où part vraiment votre marge chantier, et pourquoi le chiffrage ne suffit pas.",
+        "imageSrc": "/images/Logo_1200x630.png",
+        "icon": "stethoscope",
+        "publishedAt": "2026-07-03",
+        "category": "Méthode"
+    },
+    {
         "id": 17,
         "slug": "ia-btp-donnees-propres",
         "title": "L'IA dans le BTP : inutile tant que vos données sont en vrac",
