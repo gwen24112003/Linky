@@ -1,7 +1,4 @@
-'use client';
-
 import React from 'react';
-import { motion, type Variants } from 'framer-motion';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
@@ -31,61 +28,44 @@ const convictions = [
   },
 ];
 
-const container: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
-};
-const item: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
-};
-
 export const ConvictionsSection: React.FC = () => {
   return (
     <section className="py-24 md:py-32" style={{ background: NAVY }} aria-labelledby="convictions-title">
       <div className="container mx-auto px-6 max-w-5xl">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
+        <div className="mb-10 md:mb-12">
+          <SectionKicker label="Convictions" index="05" tone="dark" />
+        </div>
+
+        <h2
+          id="convictions-title"
+          className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl text-white max-w-3xl"
         >
-          <motion.div variants={item} className="mb-10 md:mb-12">
-            <SectionKicker label="Convictions" index="05" tone="dark" />
-          </motion.div>
+          Comment on travaille{' '}
+          <span className="text-white/55">(et ce qu'on refuse de faire).</span>
+        </h2>
 
-          <motion.h2
-            id="convictions-title"
-            variants={item}
-            className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl text-white max-w-3xl"
-          >
-            Comment on travaille{' '}
-            <span className="text-white/55">(et ce qu'on refuse de faire).</span>
-          </motion.h2>
-
-          <motion.ol variants={item} className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-14">
-            {convictions.map((c) => (
-              <li
-                key={c.n}
-                className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-6 border-t"
-                style={{ borderColor: RULE }}
+        <ol className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-14">
+          {convictions.map((c) => (
+            <li
+              key={c.n}
+              className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-6 border-t"
+              style={{ borderColor: RULE }}
+            >
+              <span
+                className="font-heading font-bold text-base leading-none pt-1"
+                style={{ color: GOLD }}
               >
-                <span
-                  className="font-heading font-bold text-base leading-none pt-1"
-                  style={{ color: GOLD }}
-                >
-                  {c.n}
-                </span>
-                <div>
-                  <h3 className="font-semibold text-lg md:text-xl leading-snug mb-2 text-white">
-                    {c.title}
-                  </h3>
-                  <p className="text-sm md:text-[15px] text-white/65 leading-relaxed">{c.desc}</p>
-                </div>
-              </li>
-            ))}
-          </motion.ol>
-        </motion.div>
+                {c.n}
+              </span>
+              <div>
+                <h3 className="font-semibold text-lg md:text-xl leading-snug mb-2 text-white">
+                  {c.title}
+                </h3>
+                <p className="text-sm md:text-[15px] text-white/65 leading-relaxed">{c.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

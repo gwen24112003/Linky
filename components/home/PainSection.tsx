@@ -1,7 +1,4 @@
-'use client';
-
 import React from 'react';
-import { motion, type Variants } from 'framer-motion';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
@@ -41,87 +38,63 @@ const pains = [
   },
 ];
 
-const container: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.06, delayChildren: 0.05 } },
-};
-const item: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
-};
-
 export const PainSection: React.FC = () => {
   return (
     <section className="py-24 md:py-32 bg-white" aria-labelledby="pain-title">
       <div className="container mx-auto px-6 max-w-5xl">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
+        <div className="mb-10 md:mb-12">
+          <SectionKicker label="Le terrain" index="02" />
+        </div>
+
+        <h2
+          id="pain-title"
+          className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl max-w-3xl"
+          style={{ color: NAVY }}
         >
-          <motion.div variants={item} className="mb-10 md:mb-12">
-            <SectionKicker label="Le terrain" index="02" />
-          </motion.div>
+          Votre boîte tourne sur 6 outils qui ne se parlent pas.
+        </h2>
 
-          <motion.h2
-            id="pain-title"
-            variants={item}
-            className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl max-w-3xl"
-            style={{ color: NAVY }}
-          >
-            Votre boîte tourne sur 6 outils qui ne se parlent pas.
-          </motion.h2>
+        <p className="mt-7 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+          Devis dans Batappli, chantiers dans WhatsApp, factures dans Excel, relances que vous
+          portez seul, photos dispersées, SAV oubliés six mois plus tard.{' '}
+          <span className="font-medium" style={{ color: NAVY }}>
+            On voit ça dans chaque boîte de second œuvre qu'on rencontre.
+          </span>
+        </p>
 
-          <motion.p
-            variants={item}
-            className="mt-7 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"
-          >
-            Devis dans Batappli, chantiers dans WhatsApp, factures dans Excel, relances que vous
-            portez seul, photos dispersées, SAV oubliés six mois plus tard.{' '}
-            <span className="font-medium" style={{ color: NAVY }}>
-              On voit ça dans chaque boîte de second œuvre qu'on rencontre.
-            </span>
-          </motion.p>
-
-          <motion.ul
-            variants={item}
-            className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-14"
-          >
-            {pains.map((p) => (
-              <li
-                key={p.n}
-                className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-6 border-t"
-                style={{ borderColor: RULE }}
+        <ul className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-14">
+          {pains.map((p) => (
+            <li
+              key={p.n}
+              className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-6 border-t"
+              style={{ borderColor: RULE }}
+            >
+              <span
+                className="font-heading font-bold text-base leading-none pt-1"
+                style={{ color: GOLD }}
               >
-                <span
-                  className="font-heading font-bold text-base leading-none pt-1"
-                  style={{ color: GOLD }}
+                {p.n}
+              </span>
+              <div>
+                <h3
+                  className="font-semibold text-lg md:text-xl leading-snug mb-2"
+                  style={{ color: NAVY }}
                 >
-                  {p.n}
-                </span>
-                <div>
-                  <h3
-                    className="font-semibold text-lg md:text-xl leading-snug mb-2"
-                    style={{ color: NAVY }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{p.desc}</p>
-                </div>
-              </li>
-            ))}
-          </motion.ul>
+                  {p.title}
+                </h3>
+                <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{p.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
 
-          <motion.p
-            variants={item}
-            className="mt-12 pt-8 border-t text-lg md:text-xl font-medium"
-            style={{ color: NAVY, borderColor: RULE }}
-          >
-            Vous cochez 3 cases sur 6 ?{' '}
-            <span style={{ color: GOLD }}>On a exactement ce qu'il faut.</span>
-          </motion.p>
-        </motion.div>
+        <p
+          className="mt-12 pt-8 border-t text-lg md:text-xl font-medium"
+          style={{ color: NAVY, borderColor: RULE }}
+        >
+          Vous cochez 3 cases sur 6 ?{' '}
+          <span style={{ color: GOLD }}>On a exactement ce qu'il faut.</span>
+        </p>
       </div>
     </section>
   );

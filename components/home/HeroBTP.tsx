@@ -1,22 +1,9 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import { motion, type Variants } from 'framer-motion';
 import { ArrowRight, Clock, Calendar, ShieldCheck, Network } from 'lucide-react';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
-
-const container: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } },
-};
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
-};
 
 // Outils réels d'une boîte du second œuvre.
 // Mêmes noms avant/après : on ne les remplace pas, on les connecte.
@@ -73,41 +60,26 @@ export const HeroBTP: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-24 md:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Colonne texte */}
-          <motion.div
-            className="lg:col-span-7"
-            variants={container}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.p
+          <div className="lg:col-span-7">
+            <p
               className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-5"
               style={{ color: GOLD }}
-              variants={item}
             >
               Second œuvre · Élec · Plomberie · Chauffage-clim
-            </motion.p>
+            </p>
 
-            <motion.h1
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] mb-6"
-              variants={item}
-            >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] mb-6">
               On rend{' '}
               <span style={{ color: GOLD }}>10h par semaine</span>
               <br className="hidden sm:block" /> aux patrons du second œuvre.
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8"
-              variants={item}
-            >
+            <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
               Relances automatiques, chantiers centralisés, devis qui ne traînent plus.
               Un système calé sur votre boîte. Pas une plateforme générique.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8"
-              variants={item}
-            >
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
               <Link
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-200 hover:scale-[1.02] shadow-lg hover:shadow-xl btn-shimmer"
@@ -126,12 +98,9 @@ export const HeroBTP: React.FC = () => {
               >
                 Audit Stack — 990 €
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.ul
-              className="flex flex-wrap gap-x-5 gap-y-2 text-xs md:text-sm text-white/60"
-              variants={item}
-            >
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-xs md:text-sm text-white/60">
               <li className="inline-flex items-center gap-2">
                 <Clock size={14} style={{ color: GOLD }} /> Visio
               </li>
@@ -141,16 +110,11 @@ export const HeroBTP: React.FC = () => {
               <li className="inline-flex items-center gap-2">
                 <Calendar size={14} style={{ color: GOLD }} /> 3 points de friction identifiés en direct
               </li>
-            </motion.ul>
-          </motion.div>
+            </ul>
+          </div>
 
           {/* Colonne visuel "Avant / Après" */}
-          <motion.div
-            className="lg:col-span-5"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <div className="lg:col-span-5">
             <div
               className="rounded-2xl p-5 md:p-6 backdrop-blur-xl"
               role="figure"
@@ -285,7 +249,7 @@ export const HeroBTP: React.FC = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

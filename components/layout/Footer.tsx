@@ -103,11 +103,13 @@ export const Footer: React.FC = () => {
                 key={social.label}
                 href={social.href}
                 className="text-white/45 hover:text-[#C9A84C] transition-colors duration-200"
-                aria-label={social.label}
+                aria-label={`Opus Advisor sur ${social.label}`}
+                title={`Opus Advisor sur ${social.label}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <social.icon size={20} />
+                <span className="sr-only">{social.label}</span>
               </a>
             ))}
           </div>
