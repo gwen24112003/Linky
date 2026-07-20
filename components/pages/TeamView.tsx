@@ -38,7 +38,7 @@ const team: Member[] = [
     heading: 'Un outil efficace, pas une belle présentation.',
     bullets: [
       {
-        title: 'Dev pendant 4 ans, consultant ops depuis',
+        title: 'Dev pendant 5 ans, consultant ops depuis',
         desc: "J'ai codé des systèmes métier avant de pivoter vers le conseil. Je code encore ce que je déploie chez vous. Pas de sous-traitance cachée, pas de chef de projet qui vous envoie un stagiaire.",
       },
       {
