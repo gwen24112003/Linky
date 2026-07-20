@@ -45,7 +45,7 @@ La séquence type qui marche dans cette niche tient en 5 étapes. Elle commence 
 
 **J-3 (avant l'échéance) : rappel courtois automatique.** Mail envoyé 3 jours avant la date d'échéance. Tonalité informative : "votre facture n°2026-0142 d'un montant de 4 280 € arrive à échéance le 15 mai". Aucun reproche, aucune pression. Ce seul mail récupère 30 à 50 % des oublis purs et simples, pour zéro énergie côté patron.
 
-**J+1 : premier relance écrite.** Le lendemain de l'échéance, mail automatique avec l'objet "Facture 2026-0142, échéance dépassée hier" et un PDF rappel joint. Tonalité ferme mais professionnelle.
+**J+1 : première relance écrite.** Le lendemain de l'échéance, mail automatique avec l'objet "Facture 2026-0142, échéance dépassée hier" et un PDF rappel joint. Tonalité ferme mais professionnelle.
 
 **J+8 : relance téléphonique humaine.** Le système notifie l'assistante (ou le patron) qu'il faut appeler. Surtout pas un mail à ce stade, un appel. C'est le moment où on comprend si le retard est un oubli, un problème de trésorerie chez le client, ou un litige sur les travaux. La nature de la suite dépend de cet appel.
 
