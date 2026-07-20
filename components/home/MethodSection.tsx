@@ -1,8 +1,5 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import { motion, type Variants } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
@@ -18,77 +15,60 @@ const steps = [
   { n: '05', title: 'Gardien du système', line: "L'opérateur qui reste à vos côtés, au fil de l'eau." },
 ];
 
-const container: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
-};
-const item: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
-};
-
 export const MethodSection: React.FC = () => {
   return (
     <section id="methode" className="py-24 md:py-32 bg-white scroll-mt-24" aria-labelledby="method-title">
       <div className="container mx-auto px-6 max-w-5xl">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          <motion.div variants={item} className="mb-10 md:mb-12">
-            <SectionKicker label="Méthode" index="06" />
-          </motion.div>
+        <div className="mb-10 md:mb-12">
+          <SectionKicker label="Méthode" index="06" />
+        </div>
 
-          <motion.h2
-            id="method-title"
-            variants={item}
-            className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl"
+        <h2
+          id="method-title"
+          className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl"
+          style={{ color: NAVY }}
+        >
+          Comment on bosse ensemble.
+        </h2>
+        <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl">
+          Cinq étapes claires, du premier échange jusqu'au système qui tourne.
+        </p>
+
+        <ol className="mt-12">
+          {steps.map((s) => (
+            <li key={s.n} className="border-t py-5" style={{ borderColor: RULE }}>
+              <div className="flex flex-col sm:flex-row sm:items-baseline gap-x-6 gap-y-1">
+                <span
+                  className="font-heading font-bold text-lg md:text-xl leading-none shrink-0 sm:w-8"
+                  style={{ color: GOLD }}
+                >
+                  {s.n}
+                </span>
+                <h3
+                  className="font-semibold text-lg md:text-xl leading-snug shrink-0 sm:w-64"
+                  style={{ color: NAVY }}
+                >
+                  {s.title}
+                </h3>
+                <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed flex-1">
+                  {s.line}
+                </p>
+              </div>
+            </li>
+          ))}
+          <li className="border-t" style={{ borderColor: RULE }} />
+        </ol>
+
+        <div className="mt-10">
+          <Link
+            href="/services"
+            className="group inline-flex items-center gap-2 font-semibold text-base"
             style={{ color: NAVY }}
           >
-            Comment on bosse ensemble.
-          </motion.h2>
-          <motion.p variants={item} className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl">
-            Cinq étapes claires, du premier échange jusqu'au système qui tourne.
-          </motion.p>
-
-          <motion.ol variants={item} className="mt-12">
-            {steps.map((s) => (
-              <li key={s.n} className="border-t py-5" style={{ borderColor: RULE }}>
-                <div className="flex flex-col sm:flex-row sm:items-baseline gap-x-6 gap-y-1">
-                  <span
-                    className="font-heading font-bold text-lg md:text-xl leading-none shrink-0 sm:w-8"
-                    style={{ color: GOLD }}
-                  >
-                    {s.n}
-                  </span>
-                  <h3
-                    className="font-semibold text-lg md:text-xl leading-snug shrink-0 sm:w-64"
-                    style={{ color: NAVY }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed flex-1">
-                    {s.line}
-                  </p>
-                </div>
-              </li>
-            ))}
-            <li className="border-t" style={{ borderColor: RULE }} />
-          </motion.ol>
-
-          <motion.div variants={item} className="mt-10">
-            <Link
-              href="/services"
-              className="group inline-flex items-center gap-2 font-semibold text-base"
-              style={{ color: NAVY }}
-            >
-              Voir le détail et les tarifs
-              <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
-        </motion.div>
+            Voir le détail et les tarifs
+            <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -15,8 +15,7 @@ import { FinalCTASection } from '@/components/home/FinalCTASection';
 import { faqJsonLd } from '@/lib/faqData';
 
 const PAGE_URL = 'https://opusadvisor.fr/';
-const PAGE_TITLE =
-  'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre';
+const PAGE_TITLE = 'Consultant ops BTP second œuvre — Opus Advisor';
 const PAGE_DESCRIPTION =
   "On rend 10 h/semaine aux patrons du BTP second œuvre : relances auto, chantiers centralisés, devis qui partent vite. Diagnostic 2 500 €, pré-audit gratuit.";
 
