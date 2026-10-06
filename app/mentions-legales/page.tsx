@@ -50,9 +50,25 @@ const blocks: Block[] = [
   {
     title: 'Hébergeur',
     rows: [
-      { label: 'Société', value: 'INFRAWIRE NETWORKS' },
-      { label: 'SIREN', value: '990 307 316' },
-      { label: 'Adresse', value: '59 rue de Ponthieu, 75008 Paris, France' },
+      { label: 'Société', value: 'OVH SAS (OVHcloud)' },
+      { label: 'Forme', value: 'SAS au capital de 50 000 000 €' },
+      { label: 'RCS', value: 'Lille Métropole 424 761 419' },
+      { label: 'Adresse', value: '2 rue Kellermann, 59100 Roubaix, France' },
+      { label: 'Téléphone', value: '+33 9 72 10 10 07' },
+      {
+        label: 'Site web',
+        value: (
+          <a
+            href="https://www.ovhcloud.com/fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:opacity-70"
+          >
+            ovhcloud.com
+          </a>
+        ),
+      },
+      { label: 'Serveurs', value: 'Datacenter OVHcloud de Beauharnois (Québec, Canada)' },
     ],
   },
 ];
@@ -70,7 +86,7 @@ export default function MentionsLegalesPage() {
               Mentions légales
             </h1>
             <p className="mt-6 text-base md:text-lg text-white/70">
-              Dernière mise à jour : juin 2026.
+              Dernière mise à jour : octobre 2026.
             </p>
           </div>
         </section>
@@ -133,9 +149,15 @@ export default function MentionsLegalesPage() {
               <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
                 <p>
                   Le site ne collecte aucune donnée personnelle à votre insu. Les seules données
-                  recueillies sont celles que vous transmettez volontairement, par e-mail ou via la
-                  prise de rendez-vous (pré-audit). Elles servent uniquement à répondre à votre
-                  demande et ne sont ni vendues, ni cédées à des tiers.
+                  recueillies sont celles que vous transmettez volontairement, par e-mail, via le
+                  formulaire de contact ou via la prise de rendez-vous (pré-audit). Elles servent
+                  uniquement à répondre à votre demande et ne sont ni vendues, ni cédées à des
+                  tiers.
+                </p>
+                <p>
+                  Le site est hébergé sur un serveur situé au Canada, pays reconnu par la Commission
+                  européenne comme assurant un niveau de protection adéquat des données personnelles
+                  (décision d'adéquation).
                 </p>
                 <p>
                   Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de
@@ -146,9 +168,10 @@ export default function MentionsLegalesPage() {
                   .
                 </p>
                 <p>
-                  La prise de rendez-vous s'appuie sur un service tiers (Cal.com) ; les informations
-                  que vous y saisissez sont traitées selon la politique de confidentialité de ce
-                  prestataire.
+                  La prise de rendez-vous s'appuie sur un service tiers (Cal.com), et le formulaire de
+                  contact sur le service Web3Forms, qui transmet votre message par e-mail. Les
+                  informations que vous y saisissez sont traitées selon la politique de
+                  confidentialité de ces prestataires.
                 </p>
               </div>
             </div>
