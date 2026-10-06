@@ -7,7 +7,7 @@ HOST="${1:-opus-vps}"
 SSH_USER="ubuntu"
 WEBROOT="/var/www/opusadvisor"
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
-TS=$(date +%Y%m%d%H%M%S)
+TS=$(date -u +%Y%m%d%H%M%S)
 
 cd "$REPO"
 rm -rf out
