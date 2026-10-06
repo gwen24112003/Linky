@@ -1,0 +1,9 @@
+[Unit]
+Description=Mise a jour d'opusadvisor.fr depuis la branche deploy
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+ExecStart=/usr/local/bin/opus-pull

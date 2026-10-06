@@ -1,41 +1,58 @@
-# Workflow de deploiement continu du site Opus Advisor sur le VPS.
+# Deploiement continu d'opusadvisor.fr (mode "pull").
 #
-# A chaque push sur main (ou declenchement manuel), ce workflow se connecte
-# en SSH au VPS et execute /var/www/linky/deploy.sh, qui effectue un build
-# zero-downtime avec swap atomique vers /var/www/linky/out, puis recharge
-# nginx. Le script lui-meme n'est pas modifie ici.
+# A chaque push sur main, GitHub compile le site et publie le resultat (out/)
+# dans la branche "deploy". Le VPS verifie cette branche toutes les 2 minutes
+# (infra/opus-pull.sh, minuterie systemd) et bascule le site s'il a change.
 #
-# Secrets requis dans les parametres GitHub du depot :
-#   - SSH_HOST          : hostname ou IP du VPS
-#   - SSH_USER          : utilisateur SSH ayant le droit d'executer deploy.sh
-#   - SSH_PRIVATE_KEY   : cle privee SSH (format OpenSSH) associee au user
-#   - SSH_PORT          : optionnel, defaut 22
+# Aucun secret requis : le depot est public et la publication utilise le
+# GITHUB_TOKEN fourni automatiquement. Une compilation en echec ne publie rien,
+# le site en ligne reste sur la version precedente.
 
-name: Deploy to VPS
+name: Build & publish
 
 on:
-  # Declenchement automatique suspendu : l'ancien VPS (Infrawire) a ete supprime
-  # le 06/10/2026. Le site tourne desormais sur un VPS OVH. A reactiver une fois
-  # les secrets SSH_* mis a jour vers ce serveur (droits admin du depot requis)
-  # et le script adapte : /var/www/linky/deploy.sh n'existe plus.
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
-  group: deploy-vps
-  cancel-in-progress: false
+  group: publish
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: SSH deploy
-        uses: appleboy/ssh-action@v1
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          script: |
-            set -euo pipefail
-            bash /var/www/linky/deploy.sh
+          node-version: 24
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Publier out/ dans la branche deploy
+        env:
+          # Passe par l'environnement : jamais interpole directement dans le script.
+          COMMIT_MSG: ${{ github.event.head_commit.message || 'manual' }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          test -f out/index.html
+          cd out
+          git init -q
+          git checkout -q -b deploy
+          git add -A
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "deploy ${GITHUB_SHA::7}: ${COMMIT_MSG%%$'\n'*}"
+          git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" deploy
