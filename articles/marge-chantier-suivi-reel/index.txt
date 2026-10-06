@@ -1,0 +1,83 @@
+1:"$Sreact.fragment"
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[2960,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"Header"]
+6:I[2619,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","974","static/chunks/app/page-e35f15bc1979b9c7.js"],""]
+7:I[3370,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"Footer"]
+b:I[7150,[],""]
+:HL["/_next/static/media/793968fa3513f5d6-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/9d5a263311222317-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/0eb5fd38ba0e563b.css","style"]
+:HL["/_next/static/css/9e3b0b7235b9ac64.css","style"]
+2:T691,{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://opusadvisor.fr/#organization","name":"Opus Advisor","alternateName":"Opus Advisor","description":"Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation. Diagnostic chiffré, mise en œuvre, formation équipe.","url":"https://opusadvisor.fr","email":"enzo@opusadvisor.fr","telephone":"+33615756549","founder":{"@type":"Person","name":"Enzo Monnier","jobTitle":"Consultant ops BTP second œuvre","url":"https://www.linkedin.com/in/enzo-monnier-7524ab205/"},"address":{"@type":"PostalAddress","streetAddress":"25 allée du petit domaine","postalCode":"35590","addressLocality":"L'Hermitage","addressRegion":"Bretagne","addressCountry":"FR"},"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"enzo@opusadvisor.fr","telephone":"+33615756549","areaServed":"FR","availableLanguage":["French"]},"areaServed":{"@type":"Country","name":"France"},"serviceType":["Consultant ops BTP","Système de gestion second œuvre","Automatisation devis et relances","Mise en conformité facturation électronique 2027","Mise en œuvre Batappli / Obat / Tolteck / EBP Bâtiment","Automatisation Make et n8n","Formation équipe BTP"],"knowsAbout":["second œuvre","électricité","plomberie","chauffage-climatisation","Batappli","Obat","Tolteck","EBP Bâtiment","facturation électronique 2027","Make","n8n","Notion","WhatsApp Business"],"sameAs":["https://www.linkedin.com/in/enzo-monnier-7524ab205/","https://www.instagram.com/opusadvisor/","https://x.com/opusadvisor"]}]}0:{"P":null,"b":"3PE6ouQlG3hgWFqOA7Ww0","p":"","c":["","articles","marge-chantier-suivi-reel",""],"i":false,"f":[[["",{"children":["articles",{"children":[["slug","marge-chantier-suivi-reel","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0eb5fd38ba0e563b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/9e3b0b7235b9ac64.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"fr","className":"__variable_aa6f30 __variable_e3a89d __variable_9dc2af","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preload","as":"image","href":"/images/opus-icon.png","fetchPriority":"high"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"min-h-screen flex flex-col bg-white","children":[["$","$L5",null,{}],["$","main",null,{"className":"flex-grow flex items-center justify-center py-24","children":["$","div",null,{"className":"text-center px-6","children":[["$","p",null,{"className":"text-sm font-semibold tracking-[0.25em] uppercase mb-4","style":{"color":"#C9A84C"},"children":"Erreur 404"}],["$","h1",null,{"className":"text-5xl md:text-7xl font-bold text-gray-900 mb-6","children":"Page introuvable"}],["$","p",null,{"className":"text-gray-600 text-lg mb-10 max-w-md mx-auto","children":"La page que vous recherchez n'existe pas ou a été déplacée."}],["$","$L6",null,{"href":"/","className":"inline-flex items-center gap-3 text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-200","style":{"background":"#1A2332"},"children":"Retour à l'accueil"}]]}]}],["$","$L7",null,{}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["articles",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","marge-chantier-suivi-reel","d"],"$L8",{"children":["__PAGE__","$L9",{},null,false]},null,false]},null,false]},null,false],"$La",false]],"m":"$undefined","G":["$b",[]],"s":false,"S":true}
+d:I[4431,[],"OutletBoundary"]
+f:I[5278,[],"AsyncMetadataOutlet"]
+11:I[4431,[],"ViewportBoundary"]
+13:I[4431,[],"MetadataBoundary"]
+14:"$Sreact.suspense"
+8:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+9:["$","$1","c",{"children":["$Lc",null,["$","$Ld",null,{"children":["$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}]
+a:["$","$1","h",{"children":[null,[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L13",null,{"children":["$","div",null,{"hidden":true,"children":["$","$14",null,{"fallback":null,"children":"$L15"}]}]}]]}]
+17:I[6405,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"ArticleView"]
+16:T4a2,{"@context":"https://schema.org","@type":"BlogPosting","headline":"Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre","description":"Petites dépenses non suivies, heures improductives, avenants oubliés : où part vraiment votre marge chantier, et pourquoi le chiffrage ne suffit pas.","image":"https://opusadvisor.fr/images/Logo_1200x630.png","url":"https://opusadvisor.fr/articles/marge-chantier-suivi-reel","mainEntityOfPage":{"@type":"WebPage","@id":"https://opusadvisor.fr/articles/marge-chantier-suivi-reel"},"datePublished":"2026-07-03","dateModified":"2026-07-03","articleSection":"Conseil ops PME et BTP second œuvre","keywords":"marge chantier BTP, rentabilité chantier, déboursé sec, suivi coûts second œuvre, heures improductives BTP","author":{"@type":"Person","name":"Enzo Monnier","url":"https://opusadvisor.fr/equipe","jobTitle":"Consultant ops · Fondateur","worksFor":{"@type":"Organization","name":"Opus Advisor","url":"https://opusadvisor.fr"}},"publisher":{"@type":"Organization","name":"Opus Advisor","url":"https://opusadvisor.fr","logo":{"@type":"ImageObject","url":"https://opusadvisor.fr/images/opus-icon.png"}}}18:T12c7,*Catégorie : Méthode Opus — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
+
+Posez la question à un patron du second œuvre : « Ton dernier chantier, il t'a rapporté combien ? » Neuf fois sur dix, la réponse est une estimation au feeling, pas un chiffre. Le devis était peut-être bien fait. Mais entre le prix vendu et ce qui reste vraiment dans la poche, il y a un trou que personne ne mesure. Et ce trou, c'est votre marge qui s'y perd.
+
+## Chiffrer, ce n'est pas suivre
+
+La plupart des boîtes savent faire un devis. Elles calculent leur déboursé sec (main-d'œuvre, matériaux, matériel), ajoutent les frais généraux et une marge, et sortent un prix. Jusque-là, tout va bien.
+
+Le problème arrive après la signature. Une fois le chantier lancé, plus personne ne compare ce qui avait été prévu à ce qui se passe réellement. Les heures dérapent, les achats hors devis s'accumulent, une reprise passe à la trappe. À la fin, le patron sent que « ça s'est bien passé » ou « ça a été juste », mais il ne sait pas de combien.
+
+Les contenus pros de 2026 convergent tous sur le même constat : les artisans veulent un suivi de la rentabilité réelle, pas seulement un chiffrage initial. C'est là que se joue la différence entre une boîte qui gagne sa vie et une qui rame sans comprendre pourquoi.
+
+## Où part la marge, concrètement
+
+Trois fuites reviennent sur presque tous les chantiers.
+
+**Les petites dépenses qu'on oublie de compter.** Nettoyage de fin de chantier, EPI, petites fournitures, allers-retours au dépôt. Prises une par une, elles semblent négligeables. Cumulées, elles pèsent 5 à 15 % du déboursé sec. Sur un chantier chiffré serré, ça suffit à effacer la marge.
+
+**Les heures improductives.** Un compagnon n'est pas productif 100 % de son temps payé : en moyenne, 70 à 75 % seulement. Le reste part en déplacements, attente de matériel, reprises, aléas. Deux heures improductives par jour sur une équipe de trois, ça représente environ 40 000 € sur l'année. Si vous ne les suivez pas, vous ne les voyez pas.
+
+**Les avenants jamais facturés.** Le client demande un petit truc en plus, vous le faites pour ne pas bloquer le chantier, et ça ne ressort nulle part. Du travail livré, jamais payé.
+
+## Pourquoi vous ne le voyez pas
+
+Ce n'est pas un problème de compétence. C'est un problème de données éparpillées. Les heures sont sur un carnet ou dans la tête du chef d'équipe. Les achats sont dans des tickets qui traînent dans le camion. Les avenants se décident à l'oral sur le chantier. Le devis, lui, dort dans le logiciel.
+
+Rien de tout ça ne se parle. Donc personne ne peut mettre côte à côte « ce qui était prévu » et « ce qui a été dépensé ». La marge réelle n'est pas fausse, elle est juste invisible.
+
+## Ce qu'un suivi propre change
+
+Vous n'avez pas besoin d'un contrôleur de gestion. Vous avez besoin que trois choses remontent automatiquement au bon endroit, chantier par chantier :
+
+- **Les heures réelles**, pointées simplement par les équipes, comparées aux heures vendues.
+- **Les achats**, rattachés au bon chantier dès le ticket, pas ressaisis en fin de mois.
+- **Les avenants**, tracés au moment où ils sont décidés, pour être facturés.
+
+Avec ça, à la fin de chaque chantier, vous avez un chiffre : marge prévue contre marge réelle. Et surtout, vous voyez le pattern se répéter. Tel type de chantier est toujours sous-marge. Tel client fait toujours déraper les heures. Là, vous pouvez agir : réajuster vos prix, refuser certains jobs, corriger une habitude.
+
+## Par où commencer
+
+Prenez votre dernier chantier terminé. Essayez de reconstituer, même à la louche : heures réellement passées, total des achats, avenants livrés. Comparez au devis. L'écart va vous surprendre, et il vous dira dans quel sens vous vous trompez sur vos prix.
+
+C'est exactement ce qu'on met en place au pré-audit : un suivi de marge chantier par chantier, à partir de vos données réelles, sans que vous ayez à ressaisir quoi que ce soit. On ne devine plus si un chantier est rentable. On le sait.
+
+---
+
+**Vous voulez voir ce que ça donne pour votre boîte ?** Pré-audit gratuit en visio, 30 minutes, sans engagement. On regarde comment suivre la marge réelle de vos chantiers, à partir de ce que vous avez déjà.
+
+[Réserver un créneau](/contact)
+
+---
+
+*Sources : [Obat — déboursé sec, le guide complet](https://www.obat.fr/blog/debourse-sec/), [Altagem — calculer et suivre le déboursé sec sur chantier BTP en 2026](https://altagem.com/blog/calculer-et-suivre-le-d%C3%A9bours%C3%A9-sec-sur-chantier-btp-en-2026), [Batup — comment suivre la rentabilité d'un chantier BTP](https://www.batup.fr/blog/comment-suivre-rentabilite-chantier-btp/).*c:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$16"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://opusadvisor.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Articles\",\"item\":\"https://opusadvisor.fr/articles\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre\",\"item\":\"https://opusadvisor.fr/articles/marge-chantier-suivi-reel\"}]}"}}],["$","$L5",null,{}],["$","main",null,{"className":"min-h-screen bg-white","children":[["$","$L17",null,{"title":"Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre","description":"Petites dépenses non suivies, heures improductives, avenants oubliés : où part vraiment votre marge chantier, et pourquoi le chiffrage ne suffit pas.","content":"$18"}],"$L19"]}],"$L1a"]
+1b:I[74,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"RelatedArticles"]
+19:["$","$L1b",null,{"currentArticleId":18}]
+1a:["$","$L7",null,{}]
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:null
+1c:I[622,[],"IconMark"]
+10:{"metadata":[["$","title","0",{"children":"Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre | Opus Advisor"}],["$","meta","1",{"name":"description","content":"Petites dépenses non suivies, heures improductives, avenants oubliés : où part vraiment votre marge chantier, et pourquoi le chiffrage ne suffit pas."}],["$","link","2",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","3",{"name":"keywords","content":"marge chantier BTP,rentabilité chantier,déboursé sec,suivi coûts second œuvre,heures improductives BTP"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","link","5",{"rel":"canonical","href":"https://opusadvisor.fr/articles/marge-chantier-suivi-reel/"}],["$","meta","6",{"property":"og:title","content":"Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre"}],["$","meta","7",{"property":"og:description","content":"Petites dépenses non suivies, heures improductives, avenants oubliés : où part vraiment votre marge chantier, et pourquoi le chiffrage ne suffit pas."}],["$","meta","8",{"property":"og:url","content":"https://opusadvisor.fr/articles/marge-chantier-suivi-reel/"}],["$","meta","9",{"property":"og:image","content":"https://opusadvisor.fr/images/Logo_1200x630.png"}],["$","meta","10",{"property":"og:image:alt","content":"Illustration de l'article : Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"property":"article:published_time","content":"2026-07-03"}],["$","meta","13",{"property":"article:author","content":"Enzo Monnier"}],["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","15",{"name":"twitter:title","content":"Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre"}],["$","meta","16",{"name":"twitter:description","content":"Petites dépenses non suivies, heures improductives, avenants oubliés : où part vraiment votre marge chantier, et pourquoi le chiffrage ne suffit pas."}],["$","meta","17",{"name":"twitter:image","content":"https://opusadvisor.fr/images/Logo_1200x630.png"}],["$","meta","18",{"name":"twitter:image:alt","content":"Illustration de l'article : Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre"}],["$","link","19",{"rel":"icon","href":"/images/opus-icon.png"}],["$","link","20",{"rel":"apple-touch-icon","href":"/images/opus-icon.png"}],["$","$L1c","21",{}]],"error":null,"digest":"$undefined"}
+15:"$10:metadata"

@@ -1,0 +1,121 @@
+1:"$Sreact.fragment"
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[2960,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"Header"]
+6:I[2619,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","974","static/chunks/app/page-e35f15bc1979b9c7.js"],""]
+7:I[3370,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"Footer"]
+b:I[7150,[],""]
+:HL["/_next/static/media/793968fa3513f5d6-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/9d5a263311222317-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/0eb5fd38ba0e563b.css","style"]
+:HL["/_next/static/css/9e3b0b7235b9ac64.css","style"]
+2:T691,{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://opusadvisor.fr/#organization","name":"Opus Advisor","alternateName":"Opus Advisor","description":"Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation. Diagnostic chiffré, mise en œuvre, formation équipe.","url":"https://opusadvisor.fr","email":"enzo@opusadvisor.fr","telephone":"+33615756549","founder":{"@type":"Person","name":"Enzo Monnier","jobTitle":"Consultant ops BTP second œuvre","url":"https://www.linkedin.com/in/enzo-monnier-7524ab205/"},"address":{"@type":"PostalAddress","streetAddress":"25 allée du petit domaine","postalCode":"35590","addressLocality":"L'Hermitage","addressRegion":"Bretagne","addressCountry":"FR"},"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"enzo@opusadvisor.fr","telephone":"+33615756549","areaServed":"FR","availableLanguage":["French"]},"areaServed":{"@type":"Country","name":"France"},"serviceType":["Consultant ops BTP","Système de gestion second œuvre","Automatisation devis et relances","Mise en conformité facturation électronique 2027","Mise en œuvre Batappli / Obat / Tolteck / EBP Bâtiment","Automatisation Make et n8n","Formation équipe BTP"],"knowsAbout":["second œuvre","électricité","plomberie","chauffage-climatisation","Batappli","Obat","Tolteck","EBP Bâtiment","facturation électronique 2027","Make","n8n","Notion","WhatsApp Business"],"sameAs":["https://www.linkedin.com/in/enzo-monnier-7524ab205/","https://www.instagram.com/opusadvisor/","https://x.com/opusadvisor"]}]}0:{"P":null,"b":"3PE6ouQlG3hgWFqOA7Ww0","p":"","c":["","articles","relances-automatiques-impayes-btp",""],"i":false,"f":[[["",{"children":["articles",{"children":[["slug","relances-automatiques-impayes-btp","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0eb5fd38ba0e563b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/9e3b0b7235b9ac64.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"fr","className":"__variable_aa6f30 __variable_e3a89d __variable_9dc2af","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preload","as":"image","href":"/images/opus-icon.png","fetchPriority":"high"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"min-h-screen flex flex-col bg-white","children":[["$","$L5",null,{}],["$","main",null,{"className":"flex-grow flex items-center justify-center py-24","children":["$","div",null,{"className":"text-center px-6","children":[["$","p",null,{"className":"text-sm font-semibold tracking-[0.25em] uppercase mb-4","style":{"color":"#C9A84C"},"children":"Erreur 404"}],["$","h1",null,{"className":"text-5xl md:text-7xl font-bold text-gray-900 mb-6","children":"Page introuvable"}],["$","p",null,{"className":"text-gray-600 text-lg mb-10 max-w-md mx-auto","children":"La page que vous recherchez n'existe pas ou a été déplacée."}],["$","$L6",null,{"href":"/","className":"inline-flex items-center gap-3 text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-200","style":{"background":"#1A2332"},"children":"Retour à l'accueil"}]]}]}],["$","$L7",null,{}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["articles",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","relances-automatiques-impayes-btp","d"],"$L8",{"children":["__PAGE__","$L9",{},null,false]},null,false]},null,false]},null,false],"$La",false]],"m":"$undefined","G":["$b",[]],"s":false,"S":true}
+d:I[4431,[],"OutletBoundary"]
+f:I[5278,[],"AsyncMetadataOutlet"]
+11:I[4431,[],"ViewportBoundary"]
+13:I[4431,[],"MetadataBoundary"]
+14:"$Sreact.suspense"
+8:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+9:["$","$1","c",{"children":["$Lc",null,["$","$Ld",null,{"children":["$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}]
+a:["$","$1","h",{"children":[null,[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L13",null,{"children":["$","div",null,{"hidden":true,"children":["$","$14",null,{"fallback":null,"children":"$L15"}]}]}]]}]
+17:I[6405,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"ArticleView"]
+16:T4df,{"@context":"https://schema.org","@type":"BlogPosting","headline":"1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie.","description":"Un impayé BTP tourne autour de 3 000 €, souvent faute de relance partie à temps. Monter une séquence automatique en 2 semaines, sans changer d'outil.","image":"https://opusadvisor.fr/images/Logo_1200x630.png","url":"https://opusadvisor.fr/articles/relances-automatiques-impayes-btp","mainEntityOfPage":{"@type":"WebPage","@id":"https://opusadvisor.fr/articles/relances-automatiques-impayes-btp"},"datePublished":"2026-05-01","dateModified":"2026-05-01","articleSection":"Conseil ops PME et BTP second œuvre","keywords":"relance automatique impayés BTP, recouvrement artisan bâtiment, DSO entreprise BTP, Make Batappli relance, indemnité forfaitaire 40 euros","author":{"@type":"Person","name":"Enzo Monnier","url":"https://opusadvisor.fr/equipe","jobTitle":"Consultant ops · Fondateur","worksFor":{"@type":"Organization","name":"Opus Advisor","url":"https://opusadvisor.fr"}},"publisher":{"@type":"Organization","name":"Opus Advisor","url":"https://opusadvisor.fr","logo":{"@type":"ImageObject","url":"https://opusadvisor.fr/images/opus-icon.png"}}}18:T2b1d,*Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*
+
+Les patrons de boîtes d'élec, de plomberie ou de chauffage-clim qu'on rencontre ont presque tous le même angle mort. Entre 8 et 20 % du chiffre facturé tourne à plus de 60 jours, et personne ne sait précisément qui doit quoi à quelle date. Le client n'est pas de mauvaise volonté, c'est le système qui manque. Voici comment on cadre le sujet : la séquence à mettre en place, les vrais délais légaux, et comment câbler tout ça sur Batappli, Obat, Tolteck ou EBP sans changer d'outil.
+
+## Le vrai coût des impayés dans le second œuvre
+
+Une facture qui glisse de 30 jours à 90 jours ne se résume pas à un client en retard. C'est de la trésorerie qui dort, des découverts bancaires qui coûtent 8 à 12 % par an, et un patron qui finit par accepter le délai de paiement comme une fatalité.
+
+L'Observatoire des délais de paiement publié chaque année par la Banque de France situe la France parmi les pays européens où les délais sont les plus longs, avec un DSO moyen toutes entreprises confondues autour de 50 jours. Le BTP est nettement au-dessus. Pour les TPE-PME du second œuvre, la moyenne réelle qu'on mesure en diagnostic se situe entre 65 et 85 jours, avec une queue de distribution qui part régulièrement à 120 jours sur les marchés publics et les bailleurs sociaux.
+
+Quand on chiffre l'impact pour une boîte de 12 personnes qui facture 1,2 M€ par an, 15 jours de DSO en moins, c'est 50 000 € de trésorerie immédiatement disponible. Le sujet mérite mieux qu'un post-it sur le bureau du patron.
+
+## Pourquoi les relances ne partent jamais
+
+La quasi-totalité des artisans BTP qu'on voit savent qui leur doit de l'argent. Ce qu'ils ne font pas, c'est relancer dans les temps. Quelques raisons reviennent.
+
+**Le patron ne sait plus à quelle date la facture est partie.** Elle a été émise dans Batappli, envoyée par mail, le client a accusé réception oralement, mais la date d'échéance, personne ne la suit. Quand on s'en aperçoit, on est déjà à J+45 et le client a tout oublié.
+
+**La relance est vécue comme un acte commercial désagréable.** Beaucoup de patrons hésitent à relancer un client important par peur de "casser la relation". Sauf qu'un client habitué à payer à 90 jours sans rappel deviendra structurellement un client à 90 jours.
+
+**La séquence n'est pas standardisée.** Pour les uns, c'est un appel téléphonique au feeling. Pour les autres, un mail à J+30 puis plus rien. Pas de relance écrite formelle, pas de mise en demeure, pas d'application des indemnités légales. Le client comprend implicitement qu'il y a peu de risque à payer en retard.
+
+## Ce que la loi vous autorise (et que vous n'utilisez pas)
+
+Le Code de commerce prévoit plusieurs leviers qui passent souvent à la trappe.
+
+**Le délai maximum de paiement entre professionnels est plafonné.** Article L441-10 du Code de commerce : 60 jours à compter de l'émission de la facture, ou 45 jours fin de mois si c'est expressément mentionné dans vos CGV. Tout délai supérieur convenu est nul. Vos CGV doivent le rappeler clairement.
+
+**Les pénalités de retard sont dues automatiquement.** Pas besoin de mise en demeure préalable. Le taux est au minimum celui de la BCE majoré de 10 points, soit autour de 13-14 % en 2026, à mentionner sur la facture et les CGV. Beaucoup d'artisans BTP ont la mention par défaut sur leur logiciel et ne s'en servent jamais.
+
+**L'indemnité forfaitaire de 40 € pour frais de recouvrement est due de plein droit.** Article D441-5 du Code de commerce, pour chaque facture payée en retard. Si vous facturez 30 chantiers par mois et qu'un tiers paye en retard, c'est 400 € à 600 € par mois que vous n'allez jamais chercher.
+
+Vous n'êtes pas obligé d'appliquer tout ça à un client historique sur un retard de 5 jours. Mais à partir du moment où vous avez le droit de le faire, votre relance devient un rappel d'obligations légales plutôt qu'une supplique. Le ton change, et la réponse des clients aussi.
+
+## La séquence de relance qui marche
+
+La séquence type qui marche dans cette niche tient en 5 étapes. Elle commence avant l'échéance et se termine en pré-contentieux.
+
+**J-3 (avant l'échéance) : rappel courtois automatique.** Mail envoyé 3 jours avant la date d'échéance. Tonalité informative : "votre facture n°2026-0142 d'un montant de 4 280 € arrive à échéance le 15 mai". Aucun reproche, aucune pression. Ce seul mail récupère 30 à 50 % des oublis purs et simples, pour zéro énergie côté patron.
+
+**J+1 : première relance écrite.** Le lendemain de l'échéance, mail automatique avec l'objet "Facture 2026-0142, échéance dépassée hier" et un PDF rappel joint. Tonalité ferme mais professionnelle.
+
+**J+8 : relance téléphonique humaine.** Le système notifie l'assistante (ou le patron) qu'il faut appeler. Surtout pas un mail à ce stade, un appel. C'est le moment où on comprend si le retard est un oubli, un problème de trésorerie chez le client, ou un litige sur les travaux. La nature de la suite dépend de cet appel.
+
+**J+15 : mise en demeure formelle par lettre recommandée.** Modèle pré-rédigé avec mention des pénalités de retard et de l'indemnité forfaitaire de 40 €. Cette étape change la perception du dossier côté client : vous arrêtez de relancer, vous commencez à constituer un dossier.
+
+**J+30 à J+45 : décision recouvrement.** Soit vous sous-traitez à une plateforme de recouvrement (GCollect, Rubypayeur, ou un huissier), soit vous saisissez le tribunal de commerce pour les montants supérieurs à 5 000 €. À ce stade, 80 % des dossiers se débloquent rien qu'à l'annonce.
+
+Cette séquence est exécutée à 90 % par des outils, à 10 % par un humain. C'est ce ratio qu'il faut viser.
+
+## Comment l'automatiser sur vos outils actuels
+
+Vous n'avez pas besoin de changer de logiciel BTP. Dans la grande majorité des cas, on garde Batappli, Obat, Tolteck ou EBP, et on ajoute la couche relance autour.
+
+**Si votre logiciel BTP exporte les factures vers un Google Sheet ou Airtable** (Batappli, Obat, Tolteck le font tous via export quotidien ou API), Make ou n8n lit la liste des factures non payées chaque matin, calcule l'écart entre la date d'échéance et aujourd'hui, et déclenche le bon mail au bon moment. Coût : 30 à 60 €/mois selon le volume.
+
+**Si vous facturez via Pennylane, Sellsy ou Axonaut**, les séquences de relance par mail sont natives. Il suffit de les activer et de personnaliser les modèles. La vraie limite : elles n'embarquent ni la mise en demeure recommandée ni l'appel J+8, donc il faut compléter avec un Make qui prévient l'assistante.
+
+**Si vous travaillez en cabinet partagé avec votre expert-comptable**, demandez-lui s'il a accès à Pennylane Cabinet, Tiime Apps ou Cegid Loop. Beaucoup d'experts-comptables peuvent activer les relances automatiques de leur côté, à condition que les factures émises soient remontées rapidement, pas une fois par mois.
+
+Le point sensible n'est jamais l'outil, c'est la donnée d'entrée. Pour qu'une relance automatique parte au bon moment, il faut que la date de paiement réel soit synchronisée chaque jour entre votre banque, votre logiciel BTP et votre comptabilité. Sans ça, vous relancez un client qui a déjà payé. Une fois suffit : vous perdez la confiance dans le système, et plus personne ne l'utilise.
+
+## Deux profils typiques qu'on rencontre
+
+Voici deux scénarios représentatifs des boîtes du second œuvre. Pas des noms de clients, des profils-types.
+
+**Profil 1, boîte de plomberie autour de 15 salariés, sous Batappli.** Le DSO réel observé en diagnostic est régulièrement entre 70 et 80 jours, avec un patron qui n'a aucune visibilité sur les retards. La mise en place type : export quotidien des factures vers une base de données légère, séquence d'envoi 4 touches via Make (J-3 rappel, J+1 mail ferme, J+8 alerte appel, J+15 mise en demeure pré-remplie), branchement comptable pour lettrer les paiements automatiquement. Sur ce profil, ramener le DSO entre 50 et 60 jours est l'ordre de grandeur attendu sur 8 à 12 semaines, soit plusieurs dizaines de milliers d'euros de trésorerie qui repassent en disponible.
+
+**Profil 2, boîte d'électricité autour de 8 salariés, sous Tolteck ou Obat.** DSO souvent moins catastrophique (60-65 jours), mais avec une queue de 3 ou 4 vieux dossiers oubliés à 150 jours et plus. Là, la mise en place est plus simple : activer les relances natives du logiciel et de l'outil comptable, sans Make. Le vrai gain tient au traitement des anciens dossiers plus qu'au DSO global, en parallèle, via une plateforme de recouvrement amiable (commission classique 10-15 % du recouvré). Sur ces vieux dossiers, on ne récupère jamais tout. On récupère ce qui peut l'être avant qu'ils prescrivent.
+
+Pas le même outil, pas le même budget. Le point commun, c'est que la séquence reste la même et qu'elle tourne sans le patron.
+
+## Les 3 erreurs qui font échouer le projet
+
+Avant de lancer le vôtre, voici ce qui plante régulièrement.
+
+**Vouloir tout automatiser, y compris l'appel téléphonique.** Le J+8 doit rester humain. C'est lui qui qualifie le dossier (oubli ? litige ? trésorerie cassée ?). Si vous le remplacez par un mail, vous perdez l'information qui détermine la suite.
+
+**Démarrer sans nettoyer le stock.** Si vous avez 40 factures de plus de 60 jours en backlog, l'automatisation ne va pas les rattraper. Il faut les traiter à part, avant de mettre la séquence en route, sinon elles polluent les statistiques et les modèles de mails.
+
+**Ne pas former l'assistante (ou la conjointe associée).** Sur 9 boîtes sur 10, c'est une personne précise qui gère le suivi factures. Si elle ne comprend pas pourquoi le système relance maintenant et plus à l'ancienne, elle court-circuite tout. Une demi-journée de formation est non négociable.
+
+---
+
+**Vous voulez chiffrer ce que les retards de paiement coûtent vraiment à votre boîte ?** Pré-audit gratuit en visio, 30 minutes, sans engagement. Vous me montrez votre logiciel BTP et 3 ou 4 factures récentes, je vous donne en direct votre DSO réel et l'ordre de grandeur de trésorerie qu'une séquence de relance automatique peut débloquer.
+
+[Réserver un créneau](/contact)
+
+---
+
+*Sources : [Article L441-10 du Code de commerce — délais de paiement](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041836691), [Article D441-5 du Code de commerce — indemnité forfaitaire 40 €](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027016078), [Observatoire des délais de paiement, Banque de France](https://www.banque-france.fr/fr/publications-et-statistiques/publications/rapport-annuel-de-lobservatoire-des-delais-de-paiement), [Étude Allianz Trade sur les comportements de paiement en France](https://www.allianz-trade.com/fr_FR/actualites/etudes-economiques.html).*c:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$16"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://opusadvisor.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Articles\",\"item\":\"https://opusadvisor.fr/articles\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie.\",\"item\":\"https://opusadvisor.fr/articles/relances-automatiques-impayes-btp\"}]}"}}],["$","$L5",null,{}],["$","main",null,{"className":"min-h-screen bg-white","children":[["$","$L17",null,{"title":"1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie.","description":"Un impayé BTP tourne autour de 3 000 €, souvent faute de relance partie à temps. Monter une séquence automatique en 2 semaines, sans changer d'outil.","content":"$18"}],"$L19"]}],"$L1a"]
+1b:I[74,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"RelatedArticles"]
+19:["$","$L1b",null,{"currentArticleId":12}]
+1a:["$","$L7",null,{}]
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:null
+1c:I[622,[],"IconMark"]
+10:{"metadata":[["$","title","0",{"children":"1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie. | Opus Advisor"}],["$","meta","1",{"name":"description","content":"Un impayé BTP tourne autour de 3 000 €, souvent faute de relance partie à temps. Monter une séquence automatique en 2 semaines, sans changer d'outil."}],["$","link","2",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","3",{"name":"keywords","content":"relance automatique impayés BTP,recouvrement artisan bâtiment,DSO entreprise BTP,Make Batappli relance,indemnité forfaitaire 40 euros"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","link","5",{"rel":"canonical","href":"https://opusadvisor.fr/articles/relances-automatiques-impayes-btp/"}],["$","meta","6",{"property":"og:title","content":"1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie."}],["$","meta","7",{"property":"og:description","content":"Un impayé BTP tourne autour de 3 000 €, souvent faute de relance partie à temps. Monter une séquence automatique en 2 semaines, sans changer d'outil."}],["$","meta","8",{"property":"og:url","content":"https://opusadvisor.fr/articles/relances-automatiques-impayes-btp/"}],["$","meta","9",{"property":"og:image","content":"https://opusadvisor.fr/images/Logo_1200x630.png"}],["$","meta","10",{"property":"og:image:alt","content":"Illustration de l'article : 1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie."}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"property":"article:published_time","content":"2026-05-01"}],["$","meta","13",{"property":"article:author","content":"Enzo Monnier"}],["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","15",{"name":"twitter:title","content":"1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie."}],["$","meta","16",{"name":"twitter:description","content":"Un impayé BTP tourne autour de 3 000 €, souvent faute de relance partie à temps. Monter une séquence automatique en 2 semaines, sans changer d'outil."}],["$","meta","17",{"name":"twitter:image","content":"https://opusadvisor.fr/images/Logo_1200x630.png"}],["$","meta","18",{"name":"twitter:image:alt","content":"Illustration de l'article : 1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie."}],["$","link","19",{"rel":"icon","href":"/images/opus-icon.png"}],["$","link","20",{"rel":"apple-touch-icon","href":"/images/opus-icon.png"}],["$","$L1c","21",{}]],"error":null,"digest":"$undefined"}
+15:"$10:metadata"

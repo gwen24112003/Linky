@@ -1,0 +1,101 @@
+1:"$Sreact.fragment"
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[2960,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"Header"]
+6:I[2619,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","974","static/chunks/app/page-e35f15bc1979b9c7.js"],""]
+7:I[3370,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"Footer"]
+b:I[7150,[],""]
+:HL["/_next/static/media/793968fa3513f5d6-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/9d5a263311222317-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/0eb5fd38ba0e563b.css","style"]
+:HL["/_next/static/css/9e3b0b7235b9ac64.css","style"]
+2:T691,{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://opusadvisor.fr/#organization","name":"Opus Advisor","alternateName":"Opus Advisor","description":"Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation. Diagnostic chiffré, mise en œuvre, formation équipe.","url":"https://opusadvisor.fr","email":"enzo@opusadvisor.fr","telephone":"+33615756549","founder":{"@type":"Person","name":"Enzo Monnier","jobTitle":"Consultant ops BTP second œuvre","url":"https://www.linkedin.com/in/enzo-monnier-7524ab205/"},"address":{"@type":"PostalAddress","streetAddress":"25 allée du petit domaine","postalCode":"35590","addressLocality":"L'Hermitage","addressRegion":"Bretagne","addressCountry":"FR"},"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"enzo@opusadvisor.fr","telephone":"+33615756549","areaServed":"FR","availableLanguage":["French"]},"areaServed":{"@type":"Country","name":"France"},"serviceType":["Consultant ops BTP","Système de gestion second œuvre","Automatisation devis et relances","Mise en conformité facturation électronique 2027","Mise en œuvre Batappli / Obat / Tolteck / EBP Bâtiment","Automatisation Make et n8n","Formation équipe BTP"],"knowsAbout":["second œuvre","électricité","plomberie","chauffage-climatisation","Batappli","Obat","Tolteck","EBP Bâtiment","facturation électronique 2027","Make","n8n","Notion","WhatsApp Business"],"sameAs":["https://www.linkedin.com/in/enzo-monnier-7524ab205/","https://www.instagram.com/opusadvisor/","https://x.com/opusadvisor"]}]}0:{"P":null,"b":"3PE6ouQlG3hgWFqOA7Ww0","p":"","c":["","articles","facturation-electronique-2026",""],"i":false,"f":[[["",{"children":["articles",{"children":[["slug","facturation-electronique-2026","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0eb5fd38ba0e563b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/9e3b0b7235b9ac64.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"fr","className":"__variable_aa6f30 __variable_e3a89d __variable_9dc2af","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preload","as":"image","href":"/images/opus-icon.png","fetchPriority":"high"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"min-h-screen flex flex-col bg-white","children":[["$","$L5",null,{}],["$","main",null,{"className":"flex-grow flex items-center justify-center py-24","children":["$","div",null,{"className":"text-center px-6","children":[["$","p",null,{"className":"text-sm font-semibold tracking-[0.25em] uppercase mb-4","style":{"color":"#C9A84C"},"children":"Erreur 404"}],["$","h1",null,{"className":"text-5xl md:text-7xl font-bold text-gray-900 mb-6","children":"Page introuvable"}],["$","p",null,{"className":"text-gray-600 text-lg mb-10 max-w-md mx-auto","children":"La page que vous recherchez n'existe pas ou a été déplacée."}],["$","$L6",null,{"href":"/","className":"inline-flex items-center gap-3 text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-200","style":{"background":"#1A2332"},"children":"Retour à l'accueil"}]]}]}],["$","$L7",null,{}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["articles",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","facturation-electronique-2026","d"],"$L8",{"children":["__PAGE__","$L9",{},null,false]},null,false]},null,false]},null,false],"$La",false]],"m":"$undefined","G":["$b",[]],"s":false,"S":true}
+d:I[4431,[],"OutletBoundary"]
+f:I[5278,[],"AsyncMetadataOutlet"]
+11:I[4431,[],"ViewportBoundary"]
+13:I[4431,[],"MetadataBoundary"]
+14:"$Sreact.suspense"
+8:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+9:["$","$1","c",{"children":["$Lc",null,["$","$Ld",null,{"children":["$Le",["$","$Lf",null,{"promise":"$@10"}]]}]]}]
+a:["$","$1","h",{"children":[null,[["$","$L11",null,{"children":"$L12"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L13",null,{"children":["$","div",null,{"hidden":true,"children":["$","$14",null,{"fallback":null,"children":"$L15"}]}]}]]}]
+17:I[6405,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"ArticleView"]
+16:T4b0,{"@context":"https://schema.org","@type":"BlogPosting","headline":"Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026","description":"À 3 mois du 1er septembre 2026, 40 % des TPE ne peuvent pas recevoir une facture électronique. Dans le BTP, c'est pire. Quoi faire dans les 30 jours.","image":"https://opusadvisor.fr/images/Logo_1200x630.png","url":"https://opusadvisor.fr/articles/facturation-electronique-2026","mainEntityOfPage":{"@type":"WebPage","@id":"https://opusadvisor.fr/articles/facturation-electronique-2026"},"datePublished":"2026-05-20","dateModified":"2026-05-20","articleSection":"Conseil ops PME et BTP second œuvre","keywords":"facturation électronique 2026, Plateforme Agréée DGFiP, Factur-X BTP, réception facture électronique, TPE BTP second œuvre","author":{"@type":"Person","name":"Enzo Monnier","url":"https://opusadvisor.fr/equipe","jobTitle":"Consultant ops · Fondateur","worksFor":{"@type":"Organization","name":"Opus Advisor","url":"https://opusadvisor.fr"}},"publisher":{"@type":"Organization","name":"Opus Advisor","url":"https://opusadvisor.fr","logo":{"@type":"ImageObject","url":"https://opusadvisor.fr/images/opus-icon.png"}}}18:T206a,*Catégorie : Réglementation BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
+
+Un sondage récent chiffre l'impréparation des TPE françaises à un peu plus de 3 mois de l'échéance : 40 % ne seront pas prêtes au 1er septembre 2026. Pour les entreprises du BTP, le retard est probablement pire. Et le plus inquiétant, c'est que beaucoup de patrons croient encore que ça ne les concerne qu'en 2027.
+
+## Ce que personne ne vous a dit clairement
+
+Vous avez sûrement entendu parler de la facturation électronique obligatoire au 1er septembre 2027. C'est ce que vos confrères répètent, ce que votre comptable a vaguement évoqué, ce que votre logiciel BTP vous matraque par mail. Sauf que 2027, c'est la deuxième vague. La première tombe le **1er septembre 2026**, dans un peu plus de 3 mois.
+
+À cette date, toutes les entreprises françaises assujetties à la TVA, y compris la vôtre, doivent être **capables de recevoir** des factures électroniques. Fini le papier et le PDF par mail. On parle de factures structurées au format Factur-X, UBL ou CII, qui transitent par une Plateforme Agréée par l'État.
+
+Concrètement : à partir de septembre 2026, vos fournisseurs de matériaux qui sont des grandes entreprises ou des ETI vont commencer à vous envoyer leurs factures uniquement par voie électronique. Si vous n'avez pas désigné de Plateforme Agréée, vous ne pourrez pas les recevoir. Vous bloquez vos commandes. Vous perdez la déduction TVA. Et vous prenez 500 € d'amende, puis 1 000 € tous les 3 mois tant que vous ne vous mettez pas en règle.
+
+Vos fournisseurs de cuivre, de chaudières, de gaines, de PVC, ce sont souvent des ETI ou des grandes entreprises. Ils seront obligés de basculer en septembre 2026. Pas vous, mais vous devrez les recevoir.
+
+## Le sondage qui devrait vous alerter
+
+OpinionWay a publié au printemps un sondage pour la fintech Tiime. Le chiffre : **4 TPE sur 10 ne seront pas prêtes** au 1er septembre 2026. Sur les 10 millions d'entreprises concernées par la réforme, ça fait beaucoup de monde qui va découvrir l'obligation au moment où ses fournisseurs commenceront à lui envoyer des factures qu'elle ne peut pas traiter.
+
+Le sondage ne segmente pas par secteur. Mais quand on connaît le BTP second œuvre, on sait que les boîtes de 8 à 60+ collaborateurs sont rarement en avance sur les sujets administratifs. Le devis, la facture, la situation, c'est déjà fait à l'arrache entre Excel et Batappli. Alors la Plateforme Agréée, le Factur-X, les 4 nouvelles mentions obligatoires sur les factures, tout ça arrive très loin dans la liste des priorités.
+
+Sauf que la vraie échéance pour vous n'est pas septembre 2027, quand vous devrez émettre. C'est septembre 2026, quand vous devrez recevoir.
+
+## Ce qui change pour un élec ou un plombier de 15 personnes
+
+Trois changements concrets, dans cet ordre.
+
+**1. Vous devez choisir une Plateforme Agréée d'ici septembre 2026.** Pas le choix. La liste est publiée sur [impots.gouv.fr](https://www.impots.gouv.fr) et mise à jour régulièrement. Cette plateforme fait l'interface entre vous, vos fournisseurs, vos clients et l'administration fiscale. Si votre logiciel BTP a déjà une PA intégrée (Batappli avec Cecurity, Obat avec Iopole, etc.), c'est en partie réglé. Si votre logiciel n'en a pas, il faut en désigner une séparément.
+
+**2. Vous devez nettoyer votre fichier clients.** À partir de septembre 2026, les nouvelles factures émises devront porter 4 mentions supplémentaires : le numéro SIREN du client professionnel, l'adresse de livraison si elle diffère de la facturation (très fréquent pour vos chantiers), la nature de l'opération (livraison de biens, prestation de services, ou opération mixte, ce qui est votre cas en BTP), et l'option de paiement de la TVA. Si votre fichier clients est à moitié rempli, c'est maintenant qu'il faut le compléter.
+
+**3. Vous devez cartographier vos flux de factures B2B.** Qui vous facture ? Qui vous commande ? Vos sous-traitants ? Vos fournisseurs ? Vos donneurs d'ordre généraux ? Chaque flux va être touché. La facturation BTP est rarement linéaire : acomptes, situations mensuelles, retenues de garantie, autoliquidation TVA pour la sous-traitance. Tous ces documents doivent passer dans le nouveau format, sans aucun raccourci possible.
+
+## Attendre 2027 vous coûte cher dès maintenant
+
+Il y a trois raisons de ne pas reporter.
+
+**La première : vos fournisseurs commencent dès 2026.** Si vous attendez 2027 pour bouger, ça fait 12 mois pendant lesquels vous recevez des factures que vous ne savez pas traiter. Vos commandes ralentissent, votre comptable fait des heures supplémentaires pour récupérer les données manuellement, et vous payez des amendes.
+
+**La deuxième : l'embouteillage de rentrée.** Si 4 TPE sur 10 ne sont pas prêtes au 1er septembre 2026, ça veut dire 4 millions d'entreprises qui vont chercher une PA en urgence à la rentrée. Les éditeurs de logiciels BTP, les Plateformes Agréées, les comptables, tout le monde sera saturé. Les délais de paramétrage vont exploser. Vous risquez de ne pas être servi à temps, même en payant.
+
+**La troisième : 2027 arrive vite.** Une fois la réception réglée en 2026, il vous reste 12 mois pour préparer l'émission. C'est court. Émettre une facture électronique conforme suppose que votre logiciel produise du Factur-X, que vos données clients soient propres, et que vos workflows internes soient adaptés (qui valide quoi, qui envoie quand). Si vous démarrez en juillet 2027, c'est trop tard.
+
+## Ce qu'on voit sur le terrain
+
+Dans les boîtes de second œuvre qu'on rencontre, le scénario typique est presque toujours le même. Le patron a entendu parler de la réforme mais ne sait pas exactement ce que ça implique. Il a Batappli ou Obat mais ignore si une PA est intégrée. Son fichier clients est à 60 % rempli, sans SIREN systématique. Ses devis et factures sortent du logiciel, parfois d'Excel, parfois directement sur papier pour les gros clients qui demandent des situations très spécifiques. Les acomptes, les situations, les retenues de garantie sont gérés à la main dans des tableurs annexes.
+
+À un peu plus de 3 mois de l'échéance, c'est tout sauf prêt.
+
+Bonne nouvelle quand même : techniquement, il n'y a rien de sorcier. C'est surtout fastidieux. Il faut faire le tour des outils, vérifier les compatibilités, désigner une PA, nettoyer la base clients, tester l'émission de factures conformes et former l'équipe. Compté correctement, c'est 2 à 3 mois de chantier interne pour une boîte de 15 personnes. Si vous démarrez maintenant, vous êtes à l'aise. Si vous attendez août, vous êtes dans le rouge.
+
+## Ce que vous devez faire dans les 30 jours
+
+Voilà la liste minimale qui vous met à l'abri.
+
+Premièrement, appelez votre éditeur de logiciel BTP cette semaine. Posez 3 questions : votre logiciel est-il connecté à une Plateforme Agréée immatriculée par la DGFiP, est-elle incluse ou en supplément, et peut-il déjà recevoir et émettre du Factur-X aujourd'hui ? Si la réponse à l'une de ces 3 questions est non ou floue, vous savez ce qu'il vous reste à faire.
+
+Deuxièmement, exportez votre fichier clients. Comptez le pourcentage de fiches qui ont un SIREN renseigné. Si c'est en dessous de 80 %, mettez quelqu'un dessus pendant 2 semaines pour compléter avant l'été.
+
+Troisièmement, listez vos 5 plus gros donneurs d'ordre B2B et demandez-leur s'ils sont eux-mêmes prêts. C'est aussi un bon moyen de signaler à vos clients que vous prenez le sujet au sérieux, et les bons clients apprécieront.
+
+Si après ces 3 étapes vous voyez que c'est plus compliqué que prévu, c'est le moment de vous faire accompagner. Pas dans 4 mois, en panique.
+
+---
+
+**Vous voulez voir ce que ça donne pour votre boîte ?** Pré-audit gratuit en visio, 30 minutes, sans engagement. Vous me montrez vos outils, je vous montre en direct où vous en êtes sur la facturation électronique et les 2 ou 3 autres points qui vous coûtent du temps chaque semaine.
+
+[Réserver un créneau](/contact)
+
+---
+
+*Sources : [economie.gouv.fr](https://www.economie.gouv.fr), FFB, sondage OpinionWay/Tiime (avril 2026), loi de finances 2026.*c:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$16"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Accueil\",\"item\":\"https://opusadvisor.fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Articles\",\"item\":\"https://opusadvisor.fr/articles\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026\",\"item\":\"https://opusadvisor.fr/articles/facturation-electronique-2026\"}]}"}}],["$","$L5",null,{}],["$","main",null,{"className":"min-h-screen bg-white","children":[["$","$L17",null,{"title":"Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026","description":"À 3 mois du 1er septembre 2026, 40 % des TPE ne peuvent pas recevoir une facture électronique. Dans le BTP, c'est pire. Quoi faire dans les 30 jours.","content":"$18"}],"$L19"]}],"$L1a"]
+1b:I[74,["911","static/chunks/911-e5ced211f6b588b3.js","930","static/chunks/930-e50a8888dd86902a.js","904","static/chunks/app/articles/%5Bslug%5D/page-b6223ccac79ed2d2.js"],"RelatedArticles"]
+19:["$","$L1b",null,{"currentArticleId":11}]
+1a:["$","$L7",null,{}]
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:null
+1c:I[622,[],"IconMark"]
+10:{"metadata":[["$","title","0",{"children":"Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026 | Opus Advisor"}],["$","meta","1",{"name":"description","content":"À 3 mois du 1er septembre 2026, 40 % des TPE ne peuvent pas recevoir une facture électronique. Dans le BTP, c'est pire. Quoi faire dans les 30 jours."}],["$","link","2",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","3",{"name":"keywords","content":"facturation électronique 2026,Plateforme Agréée DGFiP,Factur-X BTP,réception facture électronique,TPE BTP second œuvre"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","link","5",{"rel":"canonical","href":"https://opusadvisor.fr/articles/facturation-electronique-2026/"}],["$","meta","6",{"property":"og:title","content":"Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026"}],["$","meta","7",{"property":"og:description","content":"À 3 mois du 1er septembre 2026, 40 % des TPE ne peuvent pas recevoir une facture électronique. Dans le BTP, c'est pire. Quoi faire dans les 30 jours."}],["$","meta","8",{"property":"og:url","content":"https://opusadvisor.fr/articles/facturation-electronique-2026/"}],["$","meta","9",{"property":"og:image","content":"https://opusadvisor.fr/images/Logo_1200x630.png"}],["$","meta","10",{"property":"og:image:alt","content":"Illustration de l'article : Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"property":"article:published_time","content":"2026-05-20"}],["$","meta","13",{"property":"article:author","content":"Enzo Monnier"}],["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","15",{"name":"twitter:title","content":"Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026"}],["$","meta","16",{"name":"twitter:description","content":"À 3 mois du 1er septembre 2026, 40 % des TPE ne peuvent pas recevoir une facture électronique. Dans le BTP, c'est pire. Quoi faire dans les 30 jours."}],["$","meta","17",{"name":"twitter:image","content":"https://opusadvisor.fr/images/Logo_1200x630.png"}],["$","meta","18",{"name":"twitter:image:alt","content":"Illustration de l'article : Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septembre 2026"}],["$","link","19",{"rel":"icon","href":"/images/opus-icon.png"}],["$","link","20",{"rel":"apple-touch-icon","href":"/images/opus-icon.png"}],["$","$L1c","21",{}]],"error":null,"digest":"$undefined"}
+15:"$10:metadata"
