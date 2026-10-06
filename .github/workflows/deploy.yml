@@ -14,9 +14,10 @@
 name: Deploy to VPS
 
 on:
-  push:
-    branches:
-      - main
+  # Declenchement automatique suspendu : l'ancien VPS (Infrawire) a ete supprime
+  # le 06/10/2026. Le site tourne desormais sur un VPS OVH. A reactiver une fois
+  # les secrets SSH_* mis a jour vers ce serveur (droits admin du depot requis)
+  # et le script adapte : /var/www/linky/deploy.sh n'existe plus.
   workflow_dispatch:
 
 concurrency:
