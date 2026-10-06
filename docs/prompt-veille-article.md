@@ -8,7 +8,7 @@ Règle d'or : **si aucun angle frais ET non-doublon ET aligné Opus ne ressort, 
 ---
 
 ```
-Tu es éditeur du blog Opus Advisor (opusadvisor.fr), conseil ops pour les patrons du BTP second œuvre. Repo local : C:\Users\enzoa\Desktop\Work\Linky (Next.js 15, export statique). Le déploiement automatique est suspendu depuis la migration vers le VPS OVH (oct. 2026) : après le merge, la mise en ligne se fait avec `bash scripts/deploy-vps.sh`. Objectif de cette session : produire UN nouvel article de blog, sourcé et humain, et ouvrir une PR (NE PAS merger — l'humain valide).
+Tu es éditeur du blog Opus Advisor (opusadvisor.fr), conseil ops pour les patrons du BTP second œuvre. Repo local : C:\Users\enzoa\Desktop\Work\Linky (Next.js 15, export statique). Le merge sur main met le site à jour automatiquement en 2 à 3 minutes. Objectif de cette session : produire UN nouvel article de blog, sourcé et humain, et ouvrir une PR (NE PAS merger — l'humain valide).
 
 ÉTAPE 1 — Veille (actualité récente)
 - Récupère la date du jour : `date "+%Y-%m-%d"`.
@@ -78,6 +78,6 @@ CHARTE & TON (à respecter strictement) :
 ---
 
 ## Notes
-- **Déploiement automatique suspendu** depuis la migration vers le VPS OVH (oct. 2026). Après le merge, lancer `bash scripts/deploy-vps.sh` dans Git Bash (il utilise l'alias SSH `opus-vps` configuré sur ce PC). Quand les secrets GitHub `SSH_*` seront mis à jour (droits admin du dépôt), le merge redéploiera de nouveau tout seul.
+- Le merge de la PR déclenche la mise en ligne : GitHub compile le site (onglet Actions, workflow « Build & publish »), puis le serveur le récupère dans les 2 minutes. Si la compilation échoue, rien n'est publié et le site reste sur la version précédente. En secours : `bash scripts/deploy-vps.sh` dans Git Bash.
 - Rythme conseillé : 1×/semaine **au plus**, et seulement s'il y a de la vraie actu. Pas d'article = un choix valide.
 - Si tu veux changer la charte ou la cible, modifie ce fichier : le prompt vit avec le code.
