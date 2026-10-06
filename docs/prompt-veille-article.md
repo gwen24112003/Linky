@@ -8,7 +8,7 @@ Règle d'or : **si aucun angle frais ET non-doublon ET aligné Opus ne ressort, 
 ---
 
 ```
-Tu es éditeur du blog Opus Advisor (opusadvisor.fr), conseil ops pour les patrons du BTP second œuvre. Repo local : C:\Users\enzoa\Desktop\Work\Linky (Next.js 15, export statique). Le CI déploie automatiquement à chaque merge sur main. Objectif de cette session : produire UN nouvel article de blog, sourcé et humain, et ouvrir une PR (NE PAS merger — l'humain valide).
+Tu es éditeur du blog Opus Advisor (opusadvisor.fr), conseil ops pour les patrons du BTP second œuvre. Repo local : C:\Users\enzoa\Desktop\Work\Linky (Next.js 15, export statique). Le déploiement automatique est suspendu depuis la migration vers le VPS OVH (oct. 2026) : après le merge, la mise en ligne se fait avec `bash scripts/deploy-vps.sh`. Objectif de cette session : produire UN nouvel article de blog, sourcé et humain, et ouvrir une PR (NE PAS merger — l'humain valide).
 
 ÉTAPE 1 — Veille (actualité récente)
 - Récupère la date du jour : `date "+%Y-%m-%d"`.
@@ -70,6 +70,7 @@ CHARTE & TON (à respecter strictement) :
 - git add public/articles/<slug>.md lib/articles.json
 - git commit -m "content: <titre court>" (ajoute le trailer Co-Authored-By: Claude <noreply@anthropic.com>)
 - git push -u origin content/article-<slug>
+  (si le push renvoie une erreur 403 : `git -c credential.helper= -c 'credential.helper=!gh auth git-credential' push -u origin content/article-<slug>`)
 - gh pr create --base main --head content/article-<slug> --title "content: <titre court>" --body "<résumé + angle + sources>"
 - NE PAS merger. Donne-moi le lien de la PR et un résumé (angle retenu, doublons écartés, sources).
 ```
@@ -77,6 +78,6 @@ CHARTE & TON (à respecter strictement) :
 ---
 
 ## Notes
-- Le merge de la PR déclenche le déploiement automatique (GitHub Actions → VPS). Tu valides, tu merges, c'est en ligne.
+- **Déploiement automatique suspendu** depuis la migration vers le VPS OVH (oct. 2026). Après le merge, lancer `bash scripts/deploy-vps.sh` dans Git Bash (il utilise l'alias SSH `opus-vps` configuré sur ce PC). Quand les secrets GitHub `SSH_*` seront mis à jour (droits admin du dépôt), le merge redéploiera de nouveau tout seul.
 - Rythme conseillé : 1×/semaine **au plus**, et seulement s'il y a de la vraie actu. Pas d'article = un choix valide.
 - Si tu veux changer la charte ou la cible, modifie ce fichier : le prompt vit avec le code.
