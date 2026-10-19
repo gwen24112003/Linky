@@ -1,6 +1,6 @@
 ---
 title: "Changer de logiciel BTP ? 4 questions avant de signer"
-metaDescription: "Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions à se poser avant de signer un devis à 30 000 €."
+metaDescription: "Quand ses outils l'agacent, un patron du BTP pense d'abord à en acheter un nouveau. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions à se poser avant de signer un devis à 30 000 €."
 date: "2026-04-25"
 keywords: ["changement logiciel BTP", "Batappli vs Obat", "audit usage logiciel bâtiment", "France Num BTP", "investissement numérique TPE BTP"]
 essentiel:
@@ -15,7 +15,7 @@ ctaMid:
 
 *Catégorie : Outils & organisation BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Et presque à chaque fois, ce qui coince tient à l'usage qu'on en fait, pas à l'outil. Une étude Pendo sur 615 abonnements à des logiciels professionnels chiffre le gaspillage : 80 % des fonctionnalités achetées sont rarement ou jamais utilisées. Côté France, le baromètre France Num 2025 montre que 73 % des TPE-PME du bâtiment investissent moins de 1 000 € par an dans le numérique. Avant de signer un devis à 30 000 €, prenez 6 minutes pour vérifier une chose : que vous n'êtes pas en train d'acheter un nouveau logiciel pour ne pas l'utiliser non plus.
+Quand ses outils l'agacent, un patron du BTP pense d'abord à en acheter un nouveau. Or ce qui coince tient le plus souvent à l'usage qu'on en fait, pas à l'outil. Une étude Pendo sur 615 abonnements à des logiciels professionnels chiffre le gaspillage : 80 % des fonctionnalités achetées sont rarement ou jamais utilisées. Côté France, le baromètre France Num 2025 montre que 73 % des TPE-PME du bâtiment investissent moins de 1 000 € par an dans le numérique. Avant de signer un devis à 30 000 €, prenez 6 minutes pour vérifier une chose : que vous n'êtes pas en train d'acheter un nouveau logiciel pour ne pas l'utiliser non plus.
 
 ---
 
@@ -63,11 +63,11 @@ Voici les cas où changer est la bonne décision.
 
 Hors de ces trois cas, le réflexe "je change de logiciel" coûte presque toujours plus cher que la réponse "je structure mieux ce que j'ai déjà".
 
-## Ce qu'on voit sur le terrain
+## Un cas type
 
-Le cas typique en pré-audit, c'est une boîte d'élec qui veut quitter Batappli pour Obat. À l'écoute du patron, le vrai problème ressort en 15 minutes. Les modèles de devis n'ont jamais été paramétrés depuis l'installation 4 ans plus tôt. Les commerciaux ressaisissent l'essentiel à la main à chaque devis. Le module situation existe mais n'est pas activé, et l'export comptable n'est pas connecté.
+Un exemple construit à partir d'une situation courante : une boîte d'élec qui veut quitter Batappli pour Obat. En écoutant le patron, le vrai problème ressort vite. Les modèles de devis n'ont jamais été paramétrés depuis l'installation 4 ans plus tôt. Les commerciaux ressaisissent l'essentiel à la main à chaque devis. Le module situation existe mais n'est pas activé, et l'export comptable n'est pas connecté.
 
-Changer pour Obat coûterait 3 000 à 8 000 € de migration plus l'abonnement plus 6 mois de mise en place. Re-paramétrer Batappli proprement coûte 0 € d'abonnement supplémentaire et 2 à 3 semaines de travail. Au bout du compte, le patron règle 70 % de ses frictions sans changer d'outil.
+Changer pour Obat coûterait 3 000 à 8 000 € de migration plus l'abonnement plus 6 mois de mise en place. Re-paramétrer Batappli proprement coûte 0 € d'abonnement supplémentaire et 2 à 3 semaines de travail. Dans ce cas, re-paramétrer suffit à régler l'essentiel des frictions, sans changer d'outil.
 
 Batappli et Obat se valent : les deux font le travail. Ce qui bloquait, c'était l'usage, pas le choix de l'outil. Et tant qu'on ne l'a pas vu, on remplace un logiciel sous-utilisé par un autre logiciel sous-utilisé.
 

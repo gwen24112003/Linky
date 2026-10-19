@@ -11,7 +11,7 @@ essentiel:
 
 *Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Une fois par mois, un patron BTP nous arrive avec la même phrase : "il nous faudrait une app pour les chefs de chantier". Parfois la demande est solide. Le plus souvent, elle remplace une réflexion sur ce qui coince dans la chaîne d'information. Glide, Softr ou Bubble règlent des problèmes très concrets pour une boîte de second œuvre, dans des cas précis. On va voir trois situations où ça marche, trois situations où c'est de l'argent jeté, et combien ça coûte vraiment.
+« Il nous faudrait une app pour les chefs de chantier. » La phrase revient souvent chez les patrons du second œuvre. Parfois la demande est solide. Le plus souvent, elle remplace une réflexion sur ce qui coince dans la chaîne d'information. Glide, Softr ou Bubble règlent des problèmes très concrets pour une boîte de second œuvre, dans des cas précis. On va voir trois situations où ça marche, trois situations où c'est de l'argent jeté, et combien ça coûte vraiment.
 
 ---
 
@@ -33,7 +33,7 @@ Avant de penser à une app, faites quelques vérifications de base.
 
 ## Les 3 cas où une app sur mesure se justifie vraiment
 
-Sur la centaine de boîtes BTP qu'on voit passer, 3 situations légitiment un projet d'app no-code.
+Trois situations justifient un projet d'app no-code.
 
 **1. Besoin métier précis non couvert par votre logiciel BTP.** Exemple typique : un installateur de fenêtres ou de cuisines avec un catalogue produits propre, des dimensions, des options croisées, et un chiffrage qui ne tient pas dans Batappli. Là, un Glide ou un Softr connecté à un Google Sheets ou un Airtable génère un devis personnalisé en 5 minutes au lieu de 45.
 
@@ -57,15 +57,15 @@ Le critère qui compte n'est pas l'outil lui-même. C'est plutôt ceci :
 - **À quelle fréquence ?** Si l'app est ouverte 2 fois par mois, n'importe quelle option suffit. Si elle est utilisée 20 fois par jour, la rapidité et le mode hors ligne deviennent le critère numéro un.
 - **Connectée à quoi ?** Tout no-code se branche sur Make ou n8n. C'est ce branchement qui détermine si l'app reste un gadget ou devient une pièce du système qui tourne.
 
-Sur les boîtes qu'on accompagne, on bascule régulièrement d'un outil à l'autre selon le projet. Glide pour la majorité des cas terrain, Softr pour les portails clients, Bubble quand il faut vraiment du sur-mesure. Pas de dogme, ça dépend du besoin.
+En pratique, l'outil se choisit projet par projet : Glide pour la plupart des outils terrain, Softr pour les portails clients, Bubble quand il faut vraiment du sur-mesure.
 
-## Ce qu'on voit sur le terrain
+## Deux cas types
 
-Deux scénarios opposés qu'on a vus le mois dernier.
+Deux exemples construits pour l'illustration, à partir de situations courantes dans le second œuvre. Ce ne sont pas des clients.
 
-**Cas 1, demande non justifiée.** Patron d'une boîte de plomberie de 18 personnes. Demande : une app pour suivre les interventions des chefs de chantier. Diagnostic : ils ont Batappli avec le module chantier mobile inclus dans la formule à 89 €/mois, jamais activé. Coût pour activer le module et former l'équipe : 0 € de plus, 2 jours de paramétrage. Économie versus une app Glide sur mesure : 5 000 à 8 000 € de développement, et une app de moins à maintenir.
+**Cas 1, demande non justifiée.** Patron d'une boîte de plomberie de 18 personnes. Demande : une app pour suivre les interventions des chefs de chantier. En regardant de près, l'entreprise a Batappli, avec un module de suivi de chantier mobile inclus dans sa formule mais jamais activé. Coût pour activer le module et former l'équipe : 0 € de plus, 2 jours de paramétrage. Économie versus une app Glide sur mesure : 5 000 à 8 000 € de développement, et une app de moins à maintenir.
 
-**Cas 2, demande justifiée.** Boîte de menuiserie de 12 personnes spécialisée en agencement sur mesure. Chaque devis demande 2 heures de chiffrage manuel parce que le configurateur produit n'est dans aucun logiciel du marché. Solution : Glide branché sur un Airtable de 1 200 références produit avec règles de prix. 35 $/mois Glide plus 24 €/mois Airtable. Temps de chiffrage divisé par 4. Le temps économisé paie l'outil en 6 semaines.
+**Cas 2, demande justifiée.** Boîte de menuiserie de 12 personnes spécialisée en agencement sur mesure. Chaque devis demande 2 heures de chiffrage manuel parce que le configurateur produit n'est dans aucun logiciel du marché. Solution : Glide branché sur un Airtable de 1 200 références produit avec règles de prix. 25 $/mois pour Glide (formule Maker) plus 24 €/mois pour Airtable. Objectif : diviser le temps de chiffrage par 4. À ce rythme, le temps gagné paie l'outil en 6 semaines.
 
 Même outil, même éditeur, mêmes tarifs. Deux verdicts opposés. Tout se joue sur le besoin réel, et le no-code n'y change rien.
 

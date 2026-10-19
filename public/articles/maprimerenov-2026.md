@@ -26,7 +26,7 @@ Ajoutez l'arrivée de la sixième période des CEE qui redistribue les priorité
 
 ## Le coût qui fait mal, c'est le dossier
 
-On le voit sur le terrain. Le montage d'un dossier de rénovation prend facilement plusieurs heures. Une pièce manquante, un critère mal lu, et c'est le refus. Le versement, lui, traîne des semaines, et c'est votre trésorerie qui encaisse l'attente.
+Le montage d'un dossier de rénovation prend facilement plusieurs heures. Une pièce manquante, un critère mal lu, et c'est le refus. Le versement, lui, traîne des semaines, et c'est votre trésorerie qui encaisse l'attente.
 
 Le vrai problème est ailleurs. À chaque changement de règle, vos modèles de devis et vos checklists deviennent périmés. Vous re-improvisez. Vous vous trompez une fois sur cinq. Et le client, lui, attend pendant que vous appelez votre conseiller pour vérifier ce qui est encore éligible.
 
@@ -39,7 +39,7 @@ Vous n'avez pas besoin d'un logiciel de plus. Ce qu'il vous faut, c'est un circu
 - **Des modèles de devis calés sur le parcours en cours.** Plus de ressaisie, plus de mention oubliée.
 - **Une veille** qui met à jour tout ça le jour où la règle bouge, pas trois mois après.
 
-Concrètement, sur les boîtes qu'on outille, le montage d'un dossier passe de 6 heures à 90 minutes, et les refus évitables tombent à zéro. Aucune magie là-dedans : c'est le même travail, mais cadré.
+L'objectif : faire passer le montage d'un dossier de 6 heures à 90 minutes, et ne plus perdre de dossier pour une pièce manquante. Aucune magie là-dedans : c'est le même travail, mais cadré.
 
 ## Chauffagistes : le piège (et l'opportunité) du gaz
 

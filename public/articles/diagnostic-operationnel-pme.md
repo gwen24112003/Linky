@@ -15,11 +15,11 @@ ctaMid:
 
 *Catégorie : Méthode Opus — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-La plupart des cabinets vendent un audit opérationnel entre 15 000 et 30 000 € sur 2 à 3 mois. Le livrable : un PowerPoint de 40 à 50 slides qui finit dans un drive partagé et que plus personne ne rouvre passé la restitution. Notre méthode tient en 3 semaines à 2 500 €. Voici ce qu'on regarde, dans quel ordre, et pourquoi ça suffit neuf fois sur dix pour une boîte du second œuvre de 8 à 60+ collaborateurs.
+La plupart des cabinets vendent un audit opérationnel entre 15 000 et 30 000 € sur 2 à 3 mois. Le livrable : un PowerPoint de 40 à 50 slides qui finit dans un drive partagé et que plus personne ne rouvre passé la restitution. Notre méthode tient en 3 semaines à 2 500 €. Voici ce qu'on regarde, dans quel ordre, et pourquoi ça suffit pour la plupart des boîtes du second œuvre de 8 à 60+ collaborateurs.
 
 ## Ce qu'on refuse de faire
 
-Trois habitudes du conseil classique, parce que c'est là que la valeur se perd dans 90 % des missions qu'on a vues passer.
+Trois habitudes du conseil classique, parce que c'est là que la valeur se perd le plus souvent.
 
 **Pas de PowerPoint à 60 slides.** Les templates de conseil business tournent autour de 25 à 45 slides en standard, un format calibré pour des comités de direction d'ETI ou de grands groupes. Pour une boîte BTP de 15 personnes, ce format ne passe pas. Le patron lit en diagonale en bout de journée et l'équipe terrain ne le verra jamais. On livre 8 pages maximum, lisibles en 20 minutes.
 
@@ -43,7 +43,7 @@ Une étude BCG de 2024 le formule autrement : 73 % des organisations sont incapa
 
 ## Pourquoi 3 semaines, pas plus
 
-Trois raisons pratiques, toutes vérifiées sur le terrain.
+Trois raisons pratiques.
 
 **Au-delà de 3 semaines, le contexte de la boîte a changé.** Un nouveau chantier démarre, vous embauchez un compagnon, un client casse son contrat, un fournisseur change de représentant. Un diagnostic qui tourne 3 mois finit par décrire une boîte qui n'existe plus.
 

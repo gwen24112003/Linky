@@ -15,7 +15,7 @@ ctaMid:
 
 *Catégorie : Méthode Opus — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Posez la question à un patron du second œuvre : « Ton dernier chantier, il t'a rapporté combien ? » Neuf fois sur dix, la réponse est une estimation au feeling, pas un chiffre. Le devis était peut-être bien fait. Mais entre le prix vendu et ce qui reste vraiment dans la poche, il y a un trou que personne ne mesure. Et ce trou, c'est votre marge qui s'y perd.
+Posez la question à un patron du second œuvre : « Ton dernier chantier, il t'a rapporté combien ? » Bien souvent, la réponse est une estimation au feeling, pas un chiffre. Le devis était peut-être bien fait. Mais entre le prix vendu et ce qui reste vraiment dans la poche, il y a un trou que personne ne mesure. Et ce trou, c'est votre marge qui s'y perd.
 
 ## Chiffrer, ce n'est pas suivre
 

@@ -53,9 +53,9 @@ Il y a trois raisons de ne pas reporter.
 
 **La troisième : 2027 arrive vite.** Une fois la réception réglée en 2026, il vous reste 12 mois pour préparer l'émission. C'est court. Émettre une facture électronique conforme suppose que votre logiciel produise du Factur-X, que vos données clients soient propres, et que vos workflows internes soient adaptés (qui valide quoi, qui envoie quand). Si vous démarrez en juillet 2027, c'est trop tard.
 
-## Ce qu'on voit sur le terrain
+## Le scénario le plus courant
 
-Dans les boîtes de second œuvre qu'on rencontre, le scénario typique est presque toujours le même. Le patron a entendu parler de la réforme mais ne sait pas exactement ce que ça implique. Il a Batappli ou Obat mais ignore si une PA est intégrée. Son fichier clients est à 60 % rempli, sans SIREN systématique. Ses devis et factures sortent du logiciel, parfois d'Excel, parfois directement sur papier pour les gros clients qui demandent des situations très spécifiques. Les acomptes, les situations, les retenues de garantie sont gérés à la main dans des tableurs annexes.
+Dans beaucoup d'entreprises du second œuvre, le tableau se ressemble. Le patron a entendu parler de la réforme mais ne sait pas exactement ce que ça implique. Il a Batappli ou Obat mais ignore si une PA est intégrée. Son fichier clients est à 60 % rempli, sans SIREN systématique. Ses devis et factures sortent du logiciel, parfois d'Excel, parfois directement sur papier pour les gros clients qui demandent des situations très spécifiques. Les acomptes, les situations, les retenues de garantie sont gérés à la main dans des tableurs annexes.
 
 À un peu plus de 3 mois de l'échéance, c'est tout sauf prêt.
 
