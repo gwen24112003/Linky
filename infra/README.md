@@ -27,3 +27,17 @@ bash scripts/deploy-vps.sh
    `scp infra/opus-pull.sh infra/opus-pull.service infra/opus-pull.timer <hote>:/tmp/`, puis sur le serveur :
    `sudo install -m 755 /tmp/opus-pull.sh /usr/local/bin/opus-pull && sudo install -m 644 /tmp/opus-pull.{service,timer} /etc/systemd/system/ && sudo systemctl daemon-reload && sudo systemctl enable --now opus-pull.timer`
 5. Une fois le DNS propagé : `sudo certbot --nginx -d opusadvisor.fr -d www.opusadvisor.fr --redirect`
+
+## Mesure d'audience (Umami)
+Umami 3.4.0 tourne dans Docker sur le VPS (`/srv/umami`, fichiers dans `infra/umami/`), sans cookie.
+- Le site charge `opusadvisor.fr/s.js` et envoie ses mesures à `opusadvisor.fr/api/send` : nginx relaie vers `127.0.0.1:3100` (snippet `umami-proxy.conf`, inclus dans le vhost du site).
+- Tableau de bord : `https://stats.opusadvisor.fr`, identifiant `admin`. Le mot de passe se définit sans jamais transiter en clair : `ssh -t opus-vps sudo umami-password`.
+- Secrets (`DB_PASSWORD`, `APP_SECRET`) : `/srv/umami/.env`, générés sur le serveur, jamais versionnés.
+- Mise à jour : changer la version de l'image dans `docker-compose.yml`, recopier le fichier, puis `cd /srv/umami && sudo docker compose pull && sudo docker compose up -d`.
+
+Installation sur un serveur neuf :
+1. `sudo apt install docker.io docker-compose-v2 python3-bcrypt`
+2. Copier `docker-compose.yml` dans `/srv/umami/`, créer `.env` (chmod 600) avec deux valeurs aléatoires, puis `sudo docker compose up -d`.
+3. `sudo install -m 755 umami-password /usr/local/bin/` puis `sudo umami-password --lock` : le compte `admin/umami` créé par défaut est aussitôt verrouillé.
+4. Copier `umami-proxy.conf` dans `/etc/nginx/snippets/` et l'inclure dans le vhost du site ; copier `stats.opusadvisor.fr.conf` dans `sites-available/`, l'activer, puis `sudo certbot --nginx -d stats.opusadvisor.fr`.
+5. Le site Umami (ID dans `lib/analytics.ts`) est déjà en base ; sur une base neuve, le recréer depuis le tableau de bord et reporter le nouvel ID.

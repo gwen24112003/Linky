@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Clock, Mail, Linkedin, ShieldCheck, ArrowRight, Phone, Calendar, Check } from 'lucide-react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
+import { track } from '@/lib/analytics';
 
 const GOLD = '#C9A84C';
 // Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
@@ -49,6 +50,7 @@ export const ContactView: React.FC = () => {
       const data = await res.json();
       if (data.success) {
         setStatus('ok');
+        track('Formulaire de contact envoyé');
         form.reset();
       } else {
         setStatus('error');

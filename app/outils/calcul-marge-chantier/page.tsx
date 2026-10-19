@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 import { MarginCalculator } from '@/components/pages/MarginCalculator';
+import { TrackFirstUse } from '@/components/analytics/TrackFirstUse';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
@@ -100,7 +101,9 @@ export default function MarginCalculatorPage() {
         {/* Calculateur */}
         <section className="py-14 md:py-20 bg-white">
           <div className="container mx-auto px-6 max-w-6xl">
-            <MarginCalculator />
+            <TrackFirstUse tool="Calcul de marge chantier">
+              <MarginCalculator />
+            </TrackFirstUse>
           </div>
         </section>
 
