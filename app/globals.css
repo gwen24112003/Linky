@@ -282,13 +282,13 @@ article strong {
   color: #111827 !important;
 }
 
-article a {
+article a:not([data-plain]) {
   color: #8A6A1C !important;
   text-decoration: underline !important;
   text-underline-offset: 3px;
 }
 
-article a:hover {
+article a:not([data-plain]):hover {
   text-decoration-thickness: 2px !important;
 }
 

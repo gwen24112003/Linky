@@ -9,6 +9,8 @@ import {
   getArticleBySlug,
   getArticleContent,
   getArticleFrontMatter,
+  getReadingMinutes,
+  formatDateFr,
 } from '@/lib/articles';
 
 interface PageProps {
@@ -24,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = getArticleBySlug(slug);
   if (!article) return {};
   const frontMatter = getArticleFrontMatter(slug);
-  const pageUrl = `https://opusadvisor.fr/articles/${article.slug}`;
+  const pageUrl = `https://opusadvisor.fr/articles/${article.slug}/`;
   const ogImage = article.imageSrc
     ? `https://opusadvisor.fr${article.imageSrc}`
     : 'https://opusadvisor.fr/images/opus-icon.png';
@@ -43,6 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: pageUrl,
       images: [{ url: ogImage, alt: ogImageAlt }],
       publishedTime: article.publishedAt,
+      ...(article.updatedAt ? { modifiedTime: article.updatedAt } : {}),
       authors: ['Enzo Monnier'],
     },
     twitter: {
@@ -61,7 +64,7 @@ export default async function ArticlePage({ params }: PageProps) {
   const content = getArticleContent(slug);
   const frontMatter = getArticleFrontMatter(slug);
 
-  const pageUrl = `https://opusadvisor.fr/articles/${article.slug}`;
+  const pageUrl = `https://opusadvisor.fr/articles/${article.slug}/`;
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -71,7 +74,7 @@ export default async function ArticlePage({ params }: PageProps) {
     url: pageUrl,
     mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
     datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
+    dateModified: article.updatedAt ?? article.publishedAt,
     articleSection: 'Conseil ops PME et BTP second œuvre',
     ...(frontMatter.keywords && frontMatter.keywords.length > 0
       ? { keywords: frontMatter.keywords.join(', ') }
@@ -79,7 +82,7 @@ export default async function ArticlePage({ params }: PageProps) {
     author: {
       '@type': 'Person',
       name: 'Enzo Monnier',
-      url: 'https://opusadvisor.fr/equipe',
+      url: 'https://opusadvisor.fr/equipe/',
       jobTitle: 'Consultant ops · Fondateur',
       worksFor: {
         '@type': 'Organization',
@@ -103,10 +106,24 @@ export default async function ArticlePage({ params }: PageProps) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://opusadvisor.fr/' },
-      { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://opusadvisor.fr/articles' },
+      { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://opusadvisor.fr/articles/' },
       { '@type': 'ListItem', position: 3, name: article.title, item: pageUrl },
     ],
   };
+
+  const faq = frontMatter.faq ?? [];
+  const faqJsonLd =
+    faq.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faq.map((item) => ({
+            '@type': 'Question',
+            name: item.q,
+            acceptedAnswer: { '@type': 'Answer', text: item.a },
+          })),
+        }
+      : null;
 
   return (
     <>
@@ -114,13 +131,28 @@ export default async function ArticlePage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
       <main className="min-h-screen bg-white">
-        <ArticleView title={article.title} description={article.description} content={content} />
+        <ArticleView
+          title={article.title}
+          description={article.description}
+          content={content}
+          publishedLabel={article.publishedAt ? formatDateFr(article.publishedAt) : undefined}
+          updatedLabel={
+            article.updatedAt && article.updatedAt !== article.publishedAt ? formatDateFr(article.updatedAt) : undefined
+          }
+          readingMinutes={getReadingMinutes(content)}
+          essentiel={frontMatter.essentiel}
+          faq={faq}
+          ctaMid={frontMatter.ctaMid}
+        />
         <RelatedArticles currentArticleId={article.id} />
       </main>
       <Footer />

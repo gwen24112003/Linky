@@ -3,6 +3,10 @@ title: "Appli de suivi de chantier sur mesure : quand ça vaut le coup"
 metaDescription: "Glide, Softr, Bubble : une application de suivi de chantier sur mesure est utile dans 3 cas précis. Comment le savoir avant d'y mettre 5 000 à 15 000 €."
 date: "2026-04-25"
 keywords: ["app no-code BTP", "Glide bâtiment", "Softr portail client BTP", "Bubble PME", "outil mobile chefs de chantier"]
+essentiel:
+  - "Avant de payer une appli sur mesure, regardez l'appli mobile de votre logiciel BTP : Batappli, Obat, Tolteck et EBP en ont une."
+  - "Trois cas la justifient : un besoin métier non couvert, un portail pour vos clients professionnels, un outil interne très spécifique."
+  - "Glide pour le terrain, Softr pour les portails clients, Bubble pour le vrai sur mesure, à partir de 25 $ par mois."
 ---
 
 *Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*

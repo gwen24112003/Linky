@@ -3,6 +3,14 @@ title: "Logiciel BTP : s'équiper pour 200 à 500 € par mois, sans ERP"
 metaDescription: "Vous passez de 8 à 15 salariés et un commercial vous propose un logiciel tout-en-un à 35 000 €. Dans la majorité des cas, 200 à 500 € par mois d'outils existants couvrent 90 % du besoin. Voici pourquoi, comment, et les rares cas où le gros logiciel se justifie."
 date: "2026-04-25"
 keywords: ["logiciel BTP second œuvre", "Batappli Obat Tolteck EBP", "automatisation BTP TPE", "Make n8n bâtiment", "outils numériques bâtiment"]
+essentiel:
+  - "Un logiciel « qui fait tout » coûte souvent 30 000 à 50 000 € d'installation, plus 8 000 à 15 000 € de licences par an pour 15 utilisateurs."
+  - "Logiciel BTP, espace de documents partagé et automatisations : comptez 200 à 500 € par mois pour une entreprise de 15 personnes."
+  - "Avant de signer, testez trois mois à 500 € par mois. Si rien ne bouge, le problème vient de l'organisation."
+ctaMid:
+  text: "Vous voulez savoir ce que vos outils actuels couvrent déjà ? C'est l'objet de l'Audit Stack : 990 €, rendu en 10 jours ouvrés."
+  label: "Voir l'Audit Stack"
+  href: "/services/#audit-stack"
 ---
 
 *Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*

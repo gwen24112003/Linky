@@ -1,4 +1,5 @@
 import { getAllArticles } from '@/lib/articles';
+import { tools } from '@/lib/tools';
 
 const SITE_URL = 'https://opusadvisor.fr';
 
@@ -9,6 +10,10 @@ export const dynamic = 'force-static';
 export function GET() {
   const articles = getAllArticles()
     .map((a) => `- [${a.title}](${SITE_URL}/articles/${a.slug}/): ${a.description}`)
+    .join('\n');
+
+  const toolLines = tools
+    .map((t) => `- [${t.title}](${SITE_URL}/outils/${t.slug}/): ${t.description}`)
     .join('\n');
 
   const body = `# Opus Advisor
@@ -23,13 +28,14 @@ export function GET() {
 - [Gardien du système](${SITE_URL}/services/#suivi): 400 à 1 500 € HT par mois. Surveillance, point mensuel et évolutions du système.
 
 ## Outils gratuits
-- [Calcul de marge chantier](${SITE_URL}/outils/calcul-marge-chantier/): calculateur de déboursé sec, prix de revient, marge brute, bénéfice net et prix de vente conseillé pour un chantier BTP.
+${toolLines}
 
 ## Articles
 ${articles}
 
 ## À propos
 - [Équipe](${SITE_URL}/equipe/): Enzo Monnier (fondateur, ancien développeur) et Gwendoline (associée).
+- [Consultant BTP à Rennes](${SITE_URL}/consultant-btp-rennes/): installés à Rennes, déplacements sur site pendant les missions à moins de deux heures de Rennes (Bretagne, Pays-de-la-Loire) ; pré-audit en visio partout en France.
 - [Programme Opus Pilotes](${SITE_URL}/cas-clients/): 3 places pilotes pour des entreprises du second œuvre en Bretagne et Pays-de-la-Loire.
 - Contact : enzo@opusadvisor.fr
 `;

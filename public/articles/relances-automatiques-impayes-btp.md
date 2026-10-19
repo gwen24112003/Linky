@@ -3,6 +3,25 @@ title: "Facture impayée dans le BTP : modèles de relance et séquence"
 metaDescription: "Modèles de relance de facture impayée pour le BTP : rappel, relance par mail, dernier rappel avant mise en demeure, et la séquence pour les automatiser."
 date: "2026-05-01"
 keywords: ["relance facture impayée", "modèle relance facture impayée", "mise en demeure facture impayée", "relance impayés BTP", "indemnité forfaitaire 40 euros"]
+essentiel:
+  - "Entre professionnels, les pénalités de retard et l'indemnité de 40 € sont dues dès le lendemain de l'échéance, sans mise en demeure."
+  - "La séquence : un rappel à J-3, une relance écrite à J+1, un appel à J+8, la mise en demeure en recommandé à J+15."
+  - "Quatre modèles de relance prêts à copier, et la façon de les envoyer automatiquement depuis Batappli, Obat, Tolteck ou EBP."
+faq:
+  - q: "Combien de relances avant la mise en demeure ?"
+    a: "La loi n'impose aucun nombre minimum. Dans la séquence qu'on recommande, il y en a trois : un rappel avant l'échéance, une relance écrite le lendemain, puis un appel à J+8. La mise en demeure part à J+15."
+  - q: "Faut-il une mise en demeure pour réclamer les pénalités de retard ?"
+    a: "Non, pas entre professionnels. Les pénalités courent dès le lendemain de l'échéance (article L441-10 du Code de commerce) et l'indemnité de 40 € est due de plein droit. La mise en demeure sert pour la suite : injonction de payer ou recouvrement."
+  - q: "Peut-on réclamer l'indemnité de 40 € à un particulier ?"
+    a: "Non. Elle ne s'applique qu'entre professionnels. Pour un particulier, la somme due porte intérêt au taux légal à partir de la mise en demeure (article 1231-6 du Code civil)."
+  - q: "Quel est le délai de paiement maximum entre professionnels ?"
+    a: "60 jours à compter de la date de la facture, ou 45 jours fin de mois si le contrat le prévoit. Sans clause particulière, le paiement est dû 30 jours après l'exécution des travaux."
+  - q: "Comment calculer les pénalités de retard ?"
+    a: "Montant TTC × taux annuel × nombre de jours de retard ÷ 365. Sans taux prévu dans vos conditions générales, c'est 12,40 % au 2nd semestre 2026. Notre calculateur en ligne fait le calcul et ajoute l'indemnité de 40 €."
+ctaMid:
+  text: "Une facture en retard chez un client professionnel ? Le calculateur donne les pénalités au taux de 2026 et ajoute l'indemnité de 40 €."
+  label: "Calculer les pénalités"
+  href: "/outils/calcul-penalites-de-retard/"
 ---
 
 *Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*

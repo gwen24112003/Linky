@@ -3,6 +3,14 @@ title: "Sous-traitance BTP : paiement direct et autoliquidation de TVA"
 metaDescription: "Sous-traitant BTP : obtenir le paiement direct du maître d'ouvrage (loi de 1975) et mettre la bonne mention d'autoliquidation de TVA sur vos factures."
 date: "2026-06-10"
 keywords: ["sous-traitance BTP", "paiement direct loi 1975", "autoliquidation TVA sous-traitance", "retard paiement artisan", "contrat sous-traitance bâtiment"]
+essentiel:
+  - "Si l'entreprise principale ne paie pas, la loi de 1975 permet de réclamer le paiement au maître d'ouvrage, à condition qu'il ait accepté et agréé le sous-traitant."
+  - "En sous-traitance dans le bâtiment, la facture se fait hors taxes avec la mention « Autoliquidation » : l'entreprise principale déclare la TVA."
+  - "Un contrat type agréé avant le démarrage et des modèles de facture avec les bonnes mentions évitent la plupart des rejets."
+ctaMid:
+  text: "Une situation à facturer en autoliquidation ? Le calculateur donne le montant HT, la retenue de garantie et le net à payer."
+  label: "Calculer la situation"
+  href: "/outils/calcul-situation-de-travaux/"
 ---
 
 *Catégorie : Réglementation BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*

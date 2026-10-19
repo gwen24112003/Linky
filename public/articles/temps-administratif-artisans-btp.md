@@ -3,6 +3,19 @@ title: "Temps administratif des artisans du BTP : 13 h par semaine"
 metaDescription: "Une étude d'avril 2026 chiffre à 13 h 21 par semaine le temps qu'un patron du bâtiment passe sur l'administratif. Soit une journée et demie. Où elle part, et comment en récupérer la moitié."
 date: "2026-06-02"
 keywords: ["temps administratif artisan BTP", "paperasse bâtiment", "gestion administrative second œuvre", "productivité patron BTP", "facturation électronique 2026"]
+essentiel:
+  - "13 h 21 par semaine : c'est le temps qu'un dirigeant de petite entreprise du bâtiment passe sur l'administratif (OpinionWay pour Qonto, avril 2026)."
+  - "Devis, factures, relances et comptabilité en prennent l'essentiel, souvent le soir ou le week-end."
+  - "Relier les outils qu'on a déjà rend plus de temps qu'en acheter un nouveau. Viser la moitié est réaliste."
+faq:
+  - q: "Combien de temps un artisan du BTP passe-t-il sur l'administratif ?"
+    a: "13 h 21 par semaine en moyenne pour un dirigeant de petite entreprise du bâtiment, d'après une étude OpinionWay pour Qonto publiée le 9 avril 2026 auprès de 300 dirigeants. La moitié d'entre eux y passent plus d'une journée entière."
+  - q: "Quelles tâches prennent le plus de temps ?"
+    a: "Dans les entreprises du second œuvre qu'on rencontre, les devis prennent 3 à 4 heures par semaine, les factures et les relances 2 à 3 heures, la comptabilité et les déclarations encore 2 à 3 heures. Le reste part en gestion courante : fournisseurs, dossiers d'aides, planning."
+  - q: "Faut-il un nouveau logiciel pour réduire l'administratif ?"
+    a: "Rarement. Le temps se perd surtout en ressaisies entre des outils qui ne se parlent pas : le devis dans le logiciel, la relance de tête, le justificatif dans un mail. Relier ces outils rend plus de temps qu'en ajouter un."
+  - q: "Par où commencer ?"
+    a: "Pendant une semaine, notez chaque tâche administrative et le temps réel qu'elle prend. Au bout de sept jours, vous voyez où partent vos heures, et lesquelles un système pourrait faire à votre place."
 ---
 
 *Catégorie : Organisation BTP — Lecture : 5 minutes — Auteur : Enzo Monnier, Opus Advisor*

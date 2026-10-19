@@ -3,6 +3,14 @@ title: "Changer de logiciel BTP ? 4 questions avant de signer"
 metaDescription: "Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions à se poser avant de signer un devis à 30 000 €."
 date: "2026-04-25"
 keywords: ["changement logiciel BTP", "Batappli vs Obat", "audit usage logiciel bâtiment", "France Num BTP", "investissement numérique TPE BTP"]
+essentiel:
+  - "80 % des fonctionnalités d'un logiciel professionnel sont rarement ou jamais utilisées (étude Pendo sur 615 abonnements)."
+  - "Changer d'outil sans changer d'organisation reproduit les mêmes problèmes, pour deux fois plus cher."
+  - "Quatre questions à se poser avant de signer, et les trois cas où changer de logiciel se justifie."
+ctaMid:
+  text: "Avant de changer de logiciel, mesurez ce que vous utilisez vraiment. C'est l'objet de l'Audit Stack : 990 €, rendu en 10 jours ouvrés."
+  label: "Voir l'Audit Stack"
+  href: "/services/#audit-stack"
 ---
 
 *Catégorie : Outils & organisation BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
