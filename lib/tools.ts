@@ -13,6 +13,18 @@ export const tools: Tool[] = [
       'Déboursé sec, prix de revient, marge brute, bénéfice net et prix de vente à pratiquer pour gagner ce que vous visez.',
   },
   {
+    slug: 'calcul-cout-horaire-main-doeuvre',
+    title: "Calcul du coût horaire de main-d'œuvre",
+    description:
+      "Ce que coûte vraiment une heure de compagnon (salaire chargé, indemnités, véhicule, heures facturées) et le taux horaire à facturer.",
+  },
+  {
+    slug: 'indice-bt01',
+    title: 'Indice BT01 et révision de prix',
+    description:
+      "Dernières valeurs des index BT publiés par l'INSEE, mises à jour automatiquement, et calcul de la révision d'un prix entre deux mois.",
+  },
+  {
     slug: 'calcul-penalites-de-retard',
     title: 'Calcul des pénalités de retard',
     description:
