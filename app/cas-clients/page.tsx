@@ -7,6 +7,8 @@ import { ArrowRight, Check } from 'lucide-react';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
 
@@ -69,7 +71,7 @@ const dealTake = [
   "Accès à vos données réelles pendant la mise en œuvre (chiffres, devis, chantiers)",
   'Autorisation de publier un cas détaillé après 6 mois, avec les chiffres avant/après',
   'Un témoignage vidéo de 3 à 5 minutes une fois le système en production (optionnel mais apprécié)',
-  'Votre patience : on construit la v1 de la méthode Opus avec vous, pas à côté',
+  'Votre patience : on construit la première version de la méthode Opus avec vous',
 ];
 
 export default function CasClientsPage() {
@@ -95,23 +97,17 @@ export default function CasClientsPage() {
         {/* Profil recherché */}
         <section className="py-20 md:py-28" style={{ background: PAPER }}>
           <div className="container mx-auto px-6 max-w-5xl">
-            <SectionKicker label="Pour qui" className="mb-8" />
             <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl mb-12" style={{ color: NAVY }}>
               Vous correspondez si…
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14">
               {profilCriteria.map((item) => (
-                <div key={item.n} className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-7 border-t" style={{ borderColor: RULE }}>
-                  <span className="font-heading font-bold text-base leading-none pt-1" style={{ color: GOLD }}>
-                    {item.n}
-                  </span>
-                  <div>
-                    <h3 className="font-semibold text-lg md:text-xl leading-snug mb-2" style={{ color: NAVY }}>
-                      {item.label}
-                    </h3>
-                    <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{item.desc}</p>
-                  </div>
+                <div key={item.n} className="py-7 border-t" style={{ borderColor: RULE }}>
+                  <h3 className="font-semibold text-lg md:text-xl leading-snug mb-2" style={{ color: NAVY }}>
+                    {item.label}
+                  </h3>
+                  <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -121,20 +117,19 @@ export default function CasClientsPage() {
         {/* Le deal */}
         <section className="py-20 md:py-28 bg-white">
           <div className="container mx-auto px-6 max-w-5xl">
-            <SectionKicker label="Le deal" className="mb-8" />
             <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl mb-12" style={{ color: NAVY }}>
               Ce qu'on échange.
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
               <div className="border-t pt-7" style={{ borderColor: NAVY }}>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-5" style={{ color: GOLD }}>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-5" style={{ color: GOLD_INK }}>
                   Ce qu'on vous donne
                 </p>
                 <ul className="space-y-3.5">
                   {dealGive.map((d) => (
                     <li key={d} className="flex items-start gap-3 text-sm md:text-[15px] text-gray-700 leading-relaxed">
-                      <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD }} />
+                      <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD_INK }} />
                       <span>{d}</span>
                     </li>
                   ))}
@@ -148,7 +143,7 @@ export default function CasClientsPage() {
                 <ul className="space-y-3.5">
                   {dealTake.map((d) => (
                     <li key={d} className="flex items-start gap-3 text-sm md:text-[15px] text-gray-700 leading-relaxed">
-                      <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD }} />
+                      <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD_INK }} />
                       <span>{d}</span>
                     </li>
                   ))}
@@ -161,7 +156,6 @@ export default function CasClientsPage() {
         {/* Pourquoi ce format */}
         <section className="py-20 md:py-28" style={{ background: PAPER }}>
           <div className="container mx-auto px-6 max-w-3xl">
-            <SectionKicker label="Pourquoi ce format" className="mb-8" />
             <h2 className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-4xl lg:text-5xl mb-8" style={{ color: NAVY }}>
               On refuse de vendre une méthode qu'on n'a pas validée sur du vrai.
             </h2>
@@ -187,7 +181,6 @@ export default function CasClientsPage() {
         {/* CTA final */}
         <section className="py-20 md:py-28" style={{ background: NAVY }}>
           <div className="container mx-auto px-6 max-w-5xl">
-            <SectionKicker label="Candidater" tone="dark" className="mb-8" />
             <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl text-white max-w-3xl">
               3 places. Pré-audit gratuit pour qualifier la compatibilité.
             </h2>

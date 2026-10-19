@@ -60,7 +60,7 @@ export const Card: React.FC<CardProps> = ({
                   variant === 'glass' ? 'text-white/80' : 'text-gray-700'
                 }`}
               >
-                <Check className="flex-shrink-0 mt-1" size={20} style={{ color: '#C9A84C' }} />
+                <Check className="flex-shrink-0 mt-1" size={20} style={{ color: '#8A6A1C' }} />
                 <span className="text-xl">{feature}</span>
               </li>
             ))}

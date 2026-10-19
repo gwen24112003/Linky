@@ -5,6 +5,8 @@ import { Clock, Mail, Linkedin, ShieldCheck, ArrowRight, Phone, Calendar, Check 
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
@@ -68,7 +70,7 @@ export const ContactView: React.FC = () => {
           <p className="mt-7 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
             30 minutes en visio. Vous me montrez vos outils. J'identifie 3 points de friction et je
             vous montre en direct comment les régler.{' '}
-            <span className="text-white font-medium">Pas de vente, pas d'engagement.</span>
+            <span className="text-white font-medium">C'est gratuit et sans engagement.</span>
           </p>
         </div>
       </section>
@@ -79,7 +81,7 @@ export const ContactView: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Calendrier */}
             <div className="lg:col-span-7 border-t pt-8" style={{ borderColor: NAVY }}>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: GOLD }}>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: GOLD_INK }}>
                 Réserver un créneau
               </p>
               <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6" style={{ color: NAVY }}>
@@ -102,26 +104,26 @@ export const ContactView: React.FC = () => {
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition-colors"
               >
-                <ArrowRight size={14} style={{ color: GOLD }} />
+                <ArrowRight size={14} style={{ color: GOLD_INK }} />
                 Ouvrir le calendrier dans un nouvel onglet
               </a>
 
               <ul className="mt-6 flex flex-wrap gap-x-7 gap-y-2 text-xs md:text-sm text-gray-500">
                 <li className="inline-flex items-center gap-2">
-                  <Clock size={14} style={{ color: GOLD }} /> 30 min · Visio
+                  <Clock size={14} style={{ color: GOLD_INK }} /> 30 min · Visio
                 </li>
                 <li className="inline-flex items-center gap-2">
-                  <ShieldCheck size={14} style={{ color: GOLD }} /> Annulation libre jusqu'à 2h avant
+                  <ShieldCheck size={14} style={{ color: GOLD_INK }} /> Annulation libre jusqu'à 2h avant
                 </li>
                 <li className="inline-flex items-center gap-2">
-                  <Calendar size={14} style={{ color: GOLD }} /> Plages dispo sous 5 jours
+                  <Calendar size={14} style={{ color: GOLD_INK }} /> Plages dispo sous 5 jours
                 </li>
               </ul>
             </div>
 
             {/* Formulaire court */}
             <aside className="lg:col-span-5 border-t pt-8" style={{ borderColor: RULE }}>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: GOLD }}>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] mb-2" style={{ color: GOLD_INK }}>
                 Ou par écrit
               </p>
               <h3 className="font-heading font-bold text-2xl md:text-3xl mb-4" style={{ color: NAVY }}>
@@ -137,7 +139,7 @@ export const ContactView: React.FC = () => {
                   className="rounded-lg p-6 flex items-start gap-3"
                   style={{ background: 'rgba(201,168,76,0.10)', border: `1px solid ${GOLD}55` }}
                 >
-                  <Check size={20} style={{ color: GOLD }} className="mt-0.5 shrink-0" />
+                  <Check size={20} style={{ color: GOLD_INK }} className="mt-0.5 shrink-0" />
                   <div>
                     <p className="font-semibold" style={{ color: NAVY }}>
                       C'est reçu.
@@ -242,8 +244,8 @@ export const ContactView: React.FC = () => {
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     )}
                   </button>
-                  <p className="text-xs text-gray-400 leading-relaxed">
-                    Vos infos servent uniquement à vous recontacter. Aucune revente, aucun spam.
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    Vos coordonnées servent seulement à vous répondre.
                   </p>
                 </form>
               )}
@@ -255,7 +257,7 @@ export const ContactView: React.FC = () => {
                   className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-70 transition-opacity"
                   style={{ color: NAVY }}
                 >
-                  <Mail size={18} style={{ color: GOLD }} />
+                  <Mail size={18} style={{ color: GOLD_INK }} />
                   enzo@opusadvisor.fr
                 </a>
                 <a
@@ -263,7 +265,7 @@ export const ContactView: React.FC = () => {
                   className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-70 transition-opacity"
                   style={{ color: NAVY }}
                 >
-                  <Phone size={18} style={{ color: GOLD }} />
+                  <Phone size={18} style={{ color: GOLD_INK }} />
                   +33 6 15 75 65 49
                 </a>
                 <a
@@ -273,21 +275,21 @@ export const ContactView: React.FC = () => {
                   className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-70 transition-opacity"
                   style={{ color: NAVY }}
                 >
-                  <Linkedin size={18} style={{ color: GOLD }} />
+                  <Linkedin size={18} style={{ color: GOLD_INK }} />
                   Enzo Monnier
                 </a>
               </div>
 
               <div className="mt-8 pt-6 border-t" style={{ borderColor: RULE }}>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: GOLD }}>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: GOLD_INK }}>
                   Ce qu'on fera au pré-audit
                 </p>
                 <ul className="space-y-2.5 text-sm text-gray-600">
                   {[
                     'Tour rapide de vos outils actuels',
                     '3 points de friction identifiés en direct',
-                    '1 automation démontrée sur vos propres données',
-                    'Aucun engagement, aucune vente',
+                    '1 automatisation montrée sur vos propres données',
+                    'Sans engagement de votre part',
                   ].map((d) => (
                     <li key={d} className="flex items-start gap-2.5">
                       <span className="mt-2 h-px w-3 shrink-0" style={{ background: GOLD }} />

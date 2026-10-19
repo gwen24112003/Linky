@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP',
     description:
-      'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
+      "Le devis part le jour de la visite, la relance s'envoie toute seule. On garde vos outils et on les relie entre eux.",
     url: PAGE_URL,
     type: 'website',
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Opus Advisor — 10h par semaine rendues aux patrons du BTP',
     description:
-      'Relances auto, chantiers centralisés, devis qui ne traînent plus. Un système fait pour votre boîte, pas une plateforme générique.',
+      "Le devis part le jour de la visite, la relance s'envoie toute seule. On garde vos outils et on les relie entre eux.",
     images: [
       {
         url: 'https://opusadvisor.fr/images/Logo_1200x630.png',
@@ -117,7 +117,7 @@ const servicesJsonLd = {
       name: 'Gardien du système',
       provider: { '@id': 'https://opusadvisor.fr/#organization' },
       description:
-        "Maintenance, ajustements, nouvelles automations au fil de l'eau. L'opérateur qui reste à vos côtés et connaît votre système.",
+        "Surveillance des automatisations, point mensuel et évolutions au fil de l'eau, par quelqu'un qui connaît votre système.",
       areaServed: { '@type': 'Country', name: 'France' },
       offers: {
         '@type': 'Offer',

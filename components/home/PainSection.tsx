@@ -1,11 +1,10 @@
 import React from 'react';
-import { SectionKicker } from '@/components/ui/SectionKicker';
+import { PainChecklist, type Pain } from '@/components/home/PainChecklist';
 
-const GOLD = '#C9A84C';
 const NAVY = '#1A2332';
-const RULE = 'rgba(26,35,50,0.14)';
+const PAPER = '#FAF7F0';
 
-const pains = [
+const pains: Pain[] = [
   {
     n: '01',
     title: '10-15 h/semaine sur la paperasse',
@@ -40,15 +39,11 @@ const pains = [
 
 export const PainSection: React.FC = () => {
   return (
-    <section className="py-24 md:py-32 bg-white" aria-labelledby="pain-title">
+    <section className="py-24 md:py-32" style={{ background: PAPER }} aria-labelledby="pain-title">
       <div className="container mx-auto px-6 max-w-5xl">
-        <div className="mb-10 md:mb-12">
-          <SectionKicker label="Le terrain" index="02" />
-        </div>
-
         <h2
           id="pain-title"
-          className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl max-w-3xl"
+          className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
           style={{ color: NAVY }}
         >
           Votre boîte tourne sur 6 outils qui ne se parlent pas.
@@ -62,39 +57,7 @@ export const PainSection: React.FC = () => {
           </span>
         </p>
 
-        <ul className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-14">
-          {pains.map((p) => (
-            <li
-              key={p.n}
-              className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-6 border-t"
-              style={{ borderColor: RULE }}
-            >
-              <span
-                className="font-heading font-bold text-base leading-none pt-1"
-                style={{ color: GOLD }}
-              >
-                {p.n}
-              </span>
-              <div>
-                <h3
-                  className="font-semibold text-lg md:text-xl leading-snug mb-2"
-                  style={{ color: NAVY }}
-                >
-                  {p.title}
-                </h3>
-                <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{p.desc}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-
-        <p
-          className="mt-12 pt-8 border-t text-lg md:text-xl font-medium"
-          style={{ color: NAVY, borderColor: RULE }}
-        >
-          Vous cochez 3 cases sur 6 ?{' '}
-          <span style={{ color: GOLD }}>On a exactement ce qu'il faut.</span>
-        </p>
+        <PainChecklist pains={pains} />
       </div>
     </section>
   );
