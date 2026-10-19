@@ -12,9 +12,9 @@ const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
 
 const PAGE_URL = 'https://opusadvisor.fr/outils/';
-const PAGE_TITLE = 'Outils gratuits pour le BTP : calculateurs de marge, pénalités, retenue, situation';
+const PAGE_TITLE = 'Outils gratuits pour le BTP : calculateurs et indice BT01';
 const PAGE_DESCRIPTION =
-  'Quatre calculateurs gratuits pour les entreprises du bâtiment : marge chantier, pénalités de retard, retenue de garantie et facture de situation. Sans inscription.';
+  'Calculateurs gratuits pour les entreprises du bâtiment : marge chantier, coût horaire, indice BT01 et révision de prix, pénalités de retard, retenue de garantie, facture de situation. Sans inscription.';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -57,7 +57,7 @@ export default function ToolsPage() {
               Les calculs qu'on refait sans arrêt au bureau
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-              Marge d'un chantier, pénalités d'une facture en retard, retenue de garantie, situation de travaux. Chaque
+              Marge d'un chantier, coût horaire d'un compagnon, révision de prix, pénalités d'une facture en retard, retenue de garantie, situation de travaux. Chaque
               outil donne le résultat et explique le calcul. Pas d'inscription, rien n'est enregistré.
             </p>
           </div>
