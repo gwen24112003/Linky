@@ -35,7 +35,8 @@ const breadcrumbJsonLd = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://opusadvisor.fr/' },
-    { '@type': 'ListItem', position: 2, name: 'Calcul de marge chantier', item: PAGE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Outils', item: 'https://opusadvisor.fr/outils/' },
+    { '@type': 'ListItem', position: 3, name: 'Calcul de marge chantier', item: PAGE_URL },
   ],
 };
 
@@ -80,7 +81,9 @@ export default function MarginCalculatorPage() {
         {/* Hero */}
         <section className="pt-32 md:pt-40 pb-14 md:pb-16" style={{ background: PAPER }}>
           <div className="container mx-auto px-6 max-w-6xl">
-            <SectionKicker label="Outil gratuit" className="mb-6" />
+            <Link href="/outils/" className="inline-block mb-6 text-sm font-semibold hover:opacity-70 transition-opacity" style={{ color: GOLD_INK }}>
+              ← Tous les outils
+            </Link>
             <h1
               className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-6xl max-w-4xl"
               style={{ color: NAVY }}

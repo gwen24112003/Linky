@@ -3,6 +3,10 @@ title: "Pénurie de main-d'œuvre dans le BTP : garder vos bons ouvriers"
 metaDescription: "Les recrutements reculent de 16 % dans le BTP en 2026 et les profils qualifiés restent introuvables. Le vrai chantier, c'est de garder vos bons gars. Et ça se joue surtout sur l'organisation, plus que sur la paie."
 date: "2026-05-29"
 keywords: ["pénurie main d'oeuvre BTP", "fidélisation salariés bâtiment", "organisation de chantier second œuvre", "recrutement artisan 2026", "turnover BTP"]
+essentiel:
+  - "Les projets de recrutement dans la construction reculent de 16,4 % en 2026 : garder ses bons ouvriers compte autant que recruter."
+  - "Les bons compagnons partent souvent à cause du désordre : matériel absent, planning qui change trois fois, heures sup' non notées."
+  - "Un planning unique, des chantiers préparés et des heures qui remontent seules suppriment ces frictions."
 ---
 
 *Catégorie : Organisation & équipe BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*

@@ -12,6 +12,7 @@ export interface ArticleMetadata {
   overlayImageSrc?: string;
   icon?: string;
   publishedAt?: string;
+  updatedAt?: string;
   category?: string;
 }
 
@@ -20,6 +21,12 @@ export interface ArticleFrontMatter {
   metaDescription?: string;
   date?: string;
   keywords?: string[];
+  /** 3 puces affichées en tête d'article (« L'essentiel en 30 secondes »). */
+  essentiel?: string[];
+  /** Questions affichées en fin d'article et reprises en FAQPage JSON-LD. */
+  faq?: { q: string; a: string }[];
+  /** Encart affiché avant le 3e intertitre ; à défaut, renvoi vers le pré-audit. */
+  ctaMid?: { text: string; label: string; href: string };
 }
 
 export function getAllArticles(): ArticleMetadata[] {
@@ -39,8 +46,24 @@ function readArticleFile(slug: string): string {
 export function getArticleContent(slug: string): string {
   const raw = readArticleFile(slug);
   if (!raw) return '';
-  // Remove front-matter YAML if any
-  return raw.replace(/^---[\s\S]*?---/, '').trim();
+  // Retire le front-matter YAML, puis la ligne « *Catégorie : … — Auteur : …* » remplacée par la signature de l'article.
+  return raw
+    .replace(/^---[\s\S]*?---/, '')
+    .trim()
+    .replace(/^\*Catégorie :[^\n]*\*\s*/, '');
+}
+
+export function getReadingMinutes(content: string): number {
+  const words = content.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 230));
+}
+
+/** « 2026-05-01 » → « 1er mai 2026 ». */
+export function formatDateFr(iso: string): string {
+  const d = new Date(`${iso}T00:00:00Z`);
+  const day = d.getUTCDate();
+  const rest = d.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+  return `${day === 1 ? '1er' : day} ${rest}`;
 }
 
 export function getArticleFrontMatter(slug: string): ArticleFrontMatter {

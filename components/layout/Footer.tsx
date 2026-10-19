@@ -34,7 +34,8 @@ export const Footer: React.FC = () => {
       links: [
         { label: 'Cas clients', href: '/cas-clients' },
         { label: 'Articles', href: '/articles' },
-        { label: 'Calcul de marge chantier', href: '/outils/calcul-marge-chantier' },
+        { label: 'Outils gratuits', href: '/outils' },
+        { label: 'Consultant BTP à Rennes', href: '/consultant-btp-rennes' },
         { label: 'Équipe', href: '/equipe' },
         { label: 'Contact', href: '/contact' },
       ],
@@ -93,7 +94,7 @@ export const Footer: React.FC = () => {
 
         {/* Bas : copyright + réseaux */}
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <p className="text-xs md:text-sm text-white/40">
+          <p className="text-xs md:text-sm text-white/60">
             © {new Date().getFullYear()} Opus Advisor · Consultant ops BTP second œuvre ·{' '}
             <Link href="/mentions-legales" className="hover:text-white transition-colors duration-200">
               Mentions légales

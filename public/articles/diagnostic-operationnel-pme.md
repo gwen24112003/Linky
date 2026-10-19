@@ -3,6 +3,14 @@ title: "Comment on diagnostique une boîte du second œuvre en 3 semaines"
 metaDescription: "La plupart des cabinets vendent un audit opérationnel à 15 à 30 000 € sur 2 à 3 mois. Notre méthode tient en 3 semaines pour 2 500 €. Ce qu'on regarde, dans quel ordre, et pourquoi ça suffit dans neuf cas sur dix."
 date: "2026-04-25"
 keywords: ["diagnostic opérationnel BTP", "audit PME bâtiment", "méthode Opus Advisor", "second œuvre conseil", "Bpifrance Diag PME"]
+essentiel:
+  - "Trois semaines et 2 500 €, au lieu des 15 000 à 30 000 € d'un audit opérationnel classique."
+  - "Cartographie des flux, audit des outils, chiffrage des gains, puis un plan d'exécution avec un prix fixe pour chaque action."
+  - "Le livrable fait 8 pages au maximum, se lit en 20 minutes et vous est présenté en 2 heures, avec votre équipe."
+ctaMid:
+  text: "Le diagnostic complet coûte 2 500 € et dure 2 à 3 semaines. Le contenu détaillé est sur la page Services."
+  label: "Voir le diagnostic"
+  href: "/services/#diagnostic"
 ---
 
 *Catégorie : Méthode Opus — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*

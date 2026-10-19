@@ -3,6 +3,19 @@ title: "L'IA dans le BTP : inutile tant que vos données sont en vrac"
 metaDescription: "Une étude de 2026 sur 621 entreprises du BTP le confirme : le frein n°1 à l'IA n'est pas le coût, c'est la qualité des données. Pourquoi il faut ranger avant d'automatiser."
 date: "2026-06-25"
 keywords: ["IA BTP", "intelligence artificielle bâtiment", "données chantier", "automatisation second œuvre", "numérique artisan BTP"]
+essentiel:
+  - "7 % des entreprises du BTP de moins de 10 salariés utilisent réellement l'IA (Observatoire des métiers du BTP, février 2026)."
+  - "Le principal frein est l'état des données : devis, photos, factures et heures éparpillés entre plusieurs outils."
+  - "Ranger d'abord, avec un dossier par chantier et des fiches clients complètes. L'IA ne sert qu'ensuite."
+faq:
+  - q: "Combien d'entreprises du BTP utilisent vraiment l'IA ?"
+    a: "7 % des entreprises de moins de 10 salariés, d'après l'étude de l'Observatoire des métiers du BTP publiée en février 2026 auprès de 621 entreprises. Le chiffre de 31 % souvent cité compte aussi les fonctions d'IA déjà intégrées aux logiciels, comme la lecture automatique des factures."
+  - q: "Qu'est-ce qui freine l'IA dans les petites entreprises du bâtiment ?"
+    a: "L'interopérabilité des logiciels et le coût, mais surtout la qualité des données. Quand les devis sont dans un logiciel, les photos dans WhatsApp, les factures fournisseurs dans les mails et les heures sur un carnet, une IA n'a rien d'exploitable."
+  - q: "Que faut-il ranger avant de se lancer ?"
+    a: "Un dossier par chantier, des devis et des factures qui sortent d'un seul outil, des fiches clients complètes (coordonnées, SIREN, historique) et des heures et des achats qui remontent sans ressaisie."
+  - q: "À quoi l'IA sert-elle déjà sur un chantier ?"
+    a: "À des tâches précises, sur des données propres : transcrire et résumer une réunion de chantier, trier des documents, signaler un retard. Elle accélère un système qui tient déjà, elle n'en remplace pas un."
 ---
 
 *Catégorie : Outils & systèmes BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*

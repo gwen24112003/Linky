@@ -3,6 +3,14 @@ title: "Calculer la marge d'un chantier : prévue contre réelle"
 metaDescription: "Comment calculer la marge réelle d'un chantier BTP : déboursé sec, heures improductives, petites dépenses oubliées. Avec un calculateur gratuit."
 date: "2026-07-03"
 keywords: ["marge chantier BTP", "rentabilité chantier", "déboursé sec", "suivi coûts second œuvre", "heures improductives BTP"]
+essentiel:
+  - "Un devis bien chiffré ne dit pas ce que le chantier a rapporté : il faut comparer le prévu au réel."
+  - "Trois fuites reviennent : les petites dépenses (5 à 15 % du déboursé sec), les heures improductives et les avenants jamais facturés."
+  - "Pour connaître la marge réelle, il suffit que les heures, les achats et les avenants remontent chantier par chantier."
+ctaMid:
+  text: "Faites le calcul sur votre dernier chantier : déboursé sec, marge brute et bénéfice net en une minute."
+  label: "Calculer la marge"
+  href: "/outils/calcul-marge-chantier/"
 ---
 
 *Catégorie : Méthode Opus — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*

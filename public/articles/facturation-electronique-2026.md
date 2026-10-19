@@ -3,6 +3,10 @@ title: "Facturation électronique : 4 TPE sur 10 ne seront pas prêtes en septem
 metaDescription: "À un peu plus de 3 mois de l'échéance du 1er septembre 2026, 40 % des TPE françaises ne sont pas prêtes à recevoir des factures électroniques. Dans le BTP second œuvre, le retard est souvent pire. Voici quoi faire dans les 30 jours."
 date: "2026-05-20"
 keywords: ["facturation électronique 2026", "Plateforme Agréée DGFiP", "Factur-X BTP", "réception facture électronique", "TPE BTP second œuvre"]
+essentiel:
+  - "Depuis le 1er septembre 2026, toutes les entreprises assujetties à la TVA doivent pouvoir recevoir des factures électroniques, via une plateforme agréée."
+  - "Le 1er septembre 2027, les PME et les microentreprises devront aussi les émettre."
+  - "Trois chantiers pour s'y préparer : choisir une plateforme agréée, compléter le fichier clients (SIREN, adresse de livraison), recenser vos flux de factures."
 ---
 
 *Catégorie : Réglementation BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*

@@ -17,6 +17,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "workflow",
         "publishedAt": "2026-06-25",
+        "updatedAt": "2026-10-19",
         "category": "Outils & systèmes"
     },
     {
@@ -37,6 +38,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "clock",
         "publishedAt": "2026-06-02",
+        "updatedAt": "2026-10-19",
         "category": "Organisation"
     },
     {
@@ -67,6 +69,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "file-text",
         "publishedAt": "2026-05-20",
+        "updatedAt": "2026-10-19",
         "category": "Réglementation"
     },
     {
@@ -77,6 +80,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "wallet",
         "publishedAt": "2026-05-01",
+        "updatedAt": "2026-10-19",
         "category": "Organisation"
     },
     {
