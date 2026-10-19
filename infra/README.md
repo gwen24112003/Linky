@@ -21,7 +21,7 @@ bash scripts/deploy-vps.sh
 
 ## Reconstruire un serveur de zéro
 1. Commander un VPS Ubuntu, installer la clé SSH, vérifier la connexion par clé.
-2. `scp infra/setup-vps.sh <hote>:/tmp/ && ssh <hote> 'bash /tmp/setup-vps.sh'`
+2. `scp infra/setup-vps.sh <hote>:/tmp/ && ssh <hote> 'bash /tmp/setup-vps.sh'` (pose aussi le bloc nginx par défaut `00-default`, qui coupe la connexion pour les noms d'hôte inconnus)
 3. Pointer le DNS du domaine (enregistrement A chez IONOS) vers la nouvelle IP.
 4. Installer le déploiement automatique :
    `scp infra/opus-pull.sh infra/opus-pull.service infra/opus-pull.timer <hote>:/tmp/`, puis sur le serveur :
