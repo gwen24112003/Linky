@@ -7,6 +7,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "stethoscope",
         "publishedAt": "2026-07-03",
+        "updatedAt": "2026-10-19",
         "category": "Méthode"
     },
     {
@@ -28,6 +29,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "file-text",
         "publishedAt": "2026-06-10",
+        "updatedAt": "2026-10-19",
         "category": "Réglementation"
     },
     {
@@ -49,6 +51,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "users",
         "publishedAt": "2026-05-29",
+        "updatedAt": "2026-10-19",
         "category": "Organisation"
     },
     {
@@ -59,6 +62,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "alert-triangle",
         "publishedAt": "2026-05-22",
+        "updatedAt": "2026-10-19",
         "category": "Réglementation"
     },
     {
@@ -91,6 +95,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "workflow",
         "publishedAt": "2026-04-25",
+        "updatedAt": "2026-10-19",
         "category": "Outils & systèmes"
     },
     {
@@ -101,16 +106,18 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "stethoscope",
         "publishedAt": "2026-04-25",
+        "updatedAt": "2026-10-19",
         "category": "Méthode"
     },
     {
         "id": 3,
         "slug": "organisation-avant-developpement",
         "title": "Changer de logiciel BTP ? 4 questions avant de signer",
-        "description": "Un patron sur deux veut changer de logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions avant de signer un devis à 30 000 €.",
+        "description": "Envie de changer de logiciel BTP ? Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions avant de signer un devis à 30 000 €.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "layers",
         "publishedAt": "2026-04-25",
+        "updatedAt": "2026-10-19",
         "category": "Outils & systèmes"
     },
     {
@@ -121,6 +128,7 @@
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "layout-dashboard",
         "publishedAt": "2026-04-25",
+        "updatedAt": "2026-10-19",
         "category": "Outils & systèmes"
     }
 ]

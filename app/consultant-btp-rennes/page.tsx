@@ -164,7 +164,7 @@ export default function ConsultantRennesPage() {
               Ce qu'on règle le plus souvent
             </h2>
             <p className="mt-6 text-lg text-gray-700 leading-relaxed max-w-2xl">
-              Ces problèmes reviennent dans la plupart des entreprises du second œuvre qu'on rencontre, quelle que soit
+              Ces problèmes reviennent dans la plupart des entreprises du second œuvre, quelle que soit
               leur taille.
             </p>
             <ul className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-12">

@@ -26,19 +26,19 @@ ctaMid:
 
 *Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Les patrons de boîtes d'élec, de plomberie ou de chauffage-clim qu'on rencontre ont presque tous le même angle mort. Entre 8 et 20 % du chiffre facturé tourne à plus de 60 jours, et personne ne sait précisément qui doit quoi à quelle date. Le client n'est pas de mauvaise volonté, c'est le système qui manque. Voici comment on cadre le sujet : la séquence à mettre en place, les vrais délais légaux, quatre modèles de relance prêts à copier, et comment câbler tout ça sur Batappli, Obat, Tolteck ou EBP sans changer d'outil.
+Dans beaucoup de boîtes d'élec, de plomberie ou de chauffage-clim, une partie du chiffre facturé tourne à plus de 60 jours, et personne ne sait précisément qui doit quoi à quelle date. Le client n'est pas de mauvaise volonté, c'est le système qui manque. Voici comment on cadre le sujet : la séquence à mettre en place, les vrais délais légaux, quatre modèles de relance prêts à copier, et comment câbler tout ça sur Batappli, Obat, Tolteck ou EBP sans changer d'outil.
 
 ## Le vrai coût des impayés dans le second œuvre
 
 Une facture qui glisse de 30 jours à 90 jours ne se résume pas à un client en retard. C'est de la trésorerie qui dort, des découverts bancaires qui coûtent 8 à 12 % par an, et un patron qui finit par accepter le délai de paiement comme une fatalité.
 
-L'Observatoire des délais de paiement publié chaque année par la Banque de France situe la France parmi les pays européens où les délais sont les plus longs, avec un DSO moyen toutes entreprises confondues autour de 50 jours. Le BTP est nettement au-dessus. Pour les TPE-PME du second œuvre, la moyenne réelle qu'on mesure en diagnostic se situe entre 65 et 85 jours, avec une queue de distribution qui part régulièrement à 120 jours sur les marchés publics et les bailleurs sociaux.
+L'Observatoire des délais de paiement publié chaque année par la Banque de France situe la France parmi les pays européens où les délais sont les plus longs, avec un DSO moyen toutes entreprises confondues autour de 50 jours. Le BTP est nettement au-dessus, en particulier sur les marchés publics et avec les bailleurs sociaux.
 
 Quand on chiffre l'impact pour une boîte de 12 personnes qui facture 1,2 M€ par an, 15 jours de DSO en moins, c'est 50 000 € de trésorerie immédiatement disponible. Le sujet mérite mieux qu'un post-it sur le bureau du patron.
 
 ## Pourquoi les relances ne partent jamais
 
-La quasi-totalité des artisans BTP qu'on voit savent qui leur doit de l'argent. Ce qu'ils ne font pas, c'est relancer dans les temps. Quelques raisons reviennent.
+La plupart des artisans du BTP savent qui leur doit de l'argent. Ce qu'ils ne font pas, c'est relancer dans les temps. Quelques raisons reviennent.
 
 **Le patron ne sait plus à quelle date la facture est partie.** Elle a été émise dans Batappli, envoyée par mail, le client a accusé réception oralement, mais la date d'échéance, personne ne la suit. Quand on s'en aperçoit, on est déjà à J+45 et le client a tout oublié.
 
@@ -156,13 +156,13 @@ Vous n'avez pas besoin de changer de logiciel BTP. Dans la grande majorité des 
 
 Le point sensible n'est jamais l'outil, c'est la donnée d'entrée. Pour qu'une relance automatique parte au bon moment, il faut que la date de paiement réel soit synchronisée chaque jour entre votre banque, votre logiciel BTP et votre comptabilité. Sans ça, vous relancez un client qui a déjà payé. Une fois suffit : vous perdez la confiance dans le système, et plus personne ne l'utilise.
 
-## Deux profils typiques qu'on rencontre
+## Deux cas types
 
-Voici deux scénarios représentatifs des boîtes du second œuvre. Pas des noms de clients, des profils-types.
+Deux exemples construits pour l'illustration, à partir de situations courantes dans le second œuvre. Ce ne sont pas des clients.
 
-**Profil 1, boîte de plomberie autour de 15 salariés, sous Batappli.** Le DSO réel observé en diagnostic est régulièrement entre 70 et 80 jours, avec un patron qui n'a aucune visibilité sur les retards. La mise en place type : export quotidien des factures vers une base de données légère, séquence d'envoi 4 touches via Make (J-3 rappel, J+1 mail ferme, J+8 alerte appel, J+15 mise en demeure pré-remplie), branchement comptable pour lettrer les paiements automatiquement. Sur ce profil, ramener le DSO entre 50 et 60 jours est l'ordre de grandeur attendu sur 8 à 12 semaines, soit plusieurs dizaines de milliers d'euros de trésorerie qui repassent en disponible.
+**Profil 1, boîte de plomberie autour de 15 salariés, sous Batappli.** Prenons un DSO de 70 à 80 jours, avec un patron qui n'a aucune visibilité sur les retards. La mise en place type : export quotidien des factures vers une base de données légère, séquence d'envoi 4 touches via Make (J-3 rappel, J+1 mail ferme, J+8 alerte appel, J+15 mise en demeure pré-remplie), branchement comptable pour lettrer les paiements automatiquement. L'objectif : ramener le DSO entre 50 et 60 jours en 8 à 12 semaines. À cette taille, cela représente plusieurs dizaines de milliers d'euros de trésorerie disponible.
 
-**Profil 2, boîte d'électricité autour de 8 salariés, sous Tolteck ou Obat.** DSO souvent moins catastrophique (60-65 jours), mais avec une queue de 3 ou 4 vieux dossiers oubliés à 150 jours et plus. Là, la mise en place est plus simple : activer les relances natives du logiciel et de l'outil comptable, sans Make. Le vrai gain tient au traitement des anciens dossiers plus qu'au DSO global, en parallèle, via une plateforme de recouvrement amiable (commission classique 10-15 % du recouvré). Sur ces vieux dossiers, on ne récupère jamais tout. On récupère ce qui peut l'être avant qu'ils prescrivent.
+**Profil 2, boîte d'électricité autour de 8 salariés, sous Tolteck ou Obat.** DSO moins dégradé (60 à 65 jours), mais avec une queue de 3 ou 4 vieux dossiers oubliés à 150 jours et plus. Là, la mise en place est plus simple : activer les relances natives du logiciel et de l'outil comptable, sans Make. Le vrai gain tient au traitement des anciens dossiers plus qu'au DSO global, en parallèle, via une plateforme de recouvrement amiable (commission classique 10-15 % du recouvré). Sur ces vieux dossiers, on ne récupère jamais tout. On récupère ce qui peut l'être avant qu'ils prescrivent.
 
 Pas le même outil, pas le même budget. Le point commun, c'est que la séquence reste la même et qu'elle tourne sans le patron.
 
@@ -174,7 +174,7 @@ Avant de lancer le vôtre, voici ce qui plante régulièrement.
 
 **Démarrer sans nettoyer le stock.** Si vous avez 40 factures de plus de 60 jours en backlog, l'automatisation ne va pas les rattraper. Il faut les traiter à part, avant de mettre la séquence en route, sinon elles polluent les statistiques et les modèles de mails.
 
-**Ne pas former l'assistante (ou la conjointe associée).** Sur 9 boîtes sur 10, c'est une personne précise qui gère le suivi factures. Si elle ne comprend pas pourquoi le système relance maintenant et plus à l'ancienne, elle court-circuite tout. Une demi-journée de formation est non négociable.
+**Ne pas former l'assistante (ou la conjointe associée).** Dans la plupart des entreprises, c'est une seule personne qui gère le suivi des factures. Si elle ne comprend pas pourquoi le système relance maintenant et plus à l'ancienne, elle court-circuite tout. Une demi-journée de formation est non négociable.
 
 ---
 

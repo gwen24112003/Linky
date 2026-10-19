@@ -56,9 +56,9 @@ Pour une boîte de 15 personnes avec 4 à 5 utilisateurs simultanés, comptez 10
 
 **Total pour une boîte de 15 personnes : 200 à 500 €/mois**, soit 2 400 à 6 000 € par an. Face à 35 000 € d'installation et 10 000 €/an de licences pour le gros logiciel, l'écart est de 5 à 10 fois moins cher la première année, et 2 à 3 fois moins cher en rythme de croisière.
 
-## Ce qu'on voit sur le terrain
+## Un cas type
 
-Voici le scénario qu'on rencontre le plus souvent en pré-audit. Une boîte d'élec de 15 personnes paie Batappli depuis 4 ans à 79 €/mois. Le patron utilise le module devis et le module facture, mais pas le module suivi de chantier, pas le module situation, pas l'export comptable. Le drive Google contient 3 200 fichiers, dont 200 nommés "Devis_v2_FINAL_corrigé.pdf". Les photos de chantier circulent dans 12 groupes WhatsApp distincts, jamais sauvegardées. Le comptable reçoit chaque mois un Excel rempli à la main par l'assistante.
+Un exemple construit à partir de situations courantes dans le second œuvre. Une boîte d'élec de 15 personnes paie Batappli depuis 4 ans à 79 €/mois. Le patron utilise le module devis et le module facture, mais pas le module suivi de chantier, pas le module situation, pas l'export comptable. Le drive Google contient 3 200 fichiers, dont 200 nommés "Devis_v2_FINAL_corrigé.pdf". Les photos de chantier circulent dans 12 groupes WhatsApp distincts, jamais sauvegardées. Le comptable reçoit chaque mois un Excel rempli à la main par l'assistante.
 
 Le vrai besoin, c'est de :
 
@@ -67,7 +67,7 @@ Le vrai besoin, c'est de :
 - Brancher WhatsApp sur le drive via une automation simple
 - Connecter Batappli au comptable via un export propre
 
-Coût total : 0 € d'investissement, 60 à 100 €/mois en plus de l'existant, 3 à 5 semaines de mise en place. Effet : 6 à 10 heures par semaine récupérées au bureau, comptable qui ne ressaisit plus rien, photos chantier classées sans intervention humaine.
+Coût total : 0 € d'investissement, 60 à 100 €/mois en plus de l'existant, 3 à 5 semaines de mise en place. Gain visé : 6 à 10 heures par semaine au bureau, un comptable qui ne ressaisit plus rien et des photos de chantier classées toutes seules.
 
 ## Quand le gros logiciel se justifie quand même
 

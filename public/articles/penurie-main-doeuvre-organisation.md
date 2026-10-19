@@ -11,7 +11,7 @@ essentiel:
 
 *Catégorie : Organisation & équipe BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-En 2026, les recrutements reculent de 16 % dans le bâtiment, et les profils qualifiés restent introuvables. Tous les patrons qu'on rencontre nous parlent de la difficulté à embaucher. Beaucoup moins de la difficulté à garder. C'est pourtant là que se joue le vrai sujet. La bonne nouvelle : garder ses bons gars dépend surtout de la façon dont tournent vos chantiers, bien avant la paie.
+En 2026, les recrutements reculent de 16 % dans le bâtiment, et les profils qualifiés restent introuvables. Tous les patrons du bâtiment parlent de la difficulté à embaucher. Beaucoup moins de la difficulté à garder. C'est pourtant là que se joue le vrai sujet. La bonne nouvelle : garder ses bons gars dépend surtout de la façon dont tournent vos chantiers, bien avant la paie.
 
 ## Le vrai chiffre n'est pas celui que vous croyez
 

@@ -48,7 +48,7 @@ Vous n'avez pas besoin d'un juriste à demeure. Vous avez besoin que le circuit 
 - **Un suivi des échéances** : qui doit payer quoi, à quelle date, et la relance qui part toute seule au bon moment.
 - **Les pièces classées par chantier**, accessibles le jour où il faut activer un recours.
 
-Sur les boîtes qu'on outille, ce cadrage évite les rejets de factures et raccourcit les délais de paiement, parce que le dossier ne donne aucune raison de retarder.
+Ce cadrage évite les rejets de factures et raccourcit les délais de paiement : le dossier ne donne plus aucune raison de retarder.
 
 ## Par où commencer
 

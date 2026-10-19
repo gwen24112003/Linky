@@ -53,7 +53,7 @@ export const PainSection: React.FC = () => {
           Devis dans Batappli, chantiers dans WhatsApp, factures dans Excel, relances que vous
           portez seul, photos dispersées, SAV oubliés six mois plus tard.{' '}
           <span className="font-medium" style={{ color: NAVY }}>
-            On voit ça dans chaque boîte de second œuvre qu'on rencontre.
+            C'est le quotidien de la plupart des boîtes du second œuvre.
           </span>
         </p>
 
