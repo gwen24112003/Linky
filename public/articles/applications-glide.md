@@ -1,6 +1,6 @@
 ---
-title: "Faut-il une app sur mesure pour vos chefs de chantier ? Ça dépend du projet."
-metaDescription: "Glide, Softr, Bubble pour une boîte BTP : utiles dans 3 cas précis, et de l'argent jeté dans les autres. Comment savoir où vous en êtes avant d'investir 5 000 ou 15 000 € dans une app maison."
+title: "Appli de suivi de chantier sur mesure : quand ça vaut le coup"
+metaDescription: "Glide, Softr, Bubble : une application de suivi de chantier sur mesure est utile dans 3 cas précis. Comment le savoir avant d'y mettre 5 000 à 15 000 €."
 date: "2026-04-25"
 keywords: ["app no-code BTP", "Glide bâtiment", "Softr portail client BTP", "Bubble PME", "outil mobile chefs de chantier"]
 ---

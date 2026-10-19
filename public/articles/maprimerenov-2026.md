@@ -1,5 +1,5 @@
 ---
-title: "MaPrimeRénov' 2026 : trois changements de règles en un an. Vos dossiers suivent-ils ?"
+title: "MaPrimeRénov' 2026 : ce qui change pour les dossiers des artisans"
 metaDescription: "Suspendue au 1er janvier faute de budget, rouverte au printemps, durcie au 1er septembre avec l'exclusion du gaz : MaPrimeRénov' a changé trois fois en 2026. Sur votre boîte, le coût qui fait mal, c'est le dossier, pas l'aide. Comment reprendre la main."
 date: "2026-05-22"
 keywords: ["MaPrimeRénov 2026", "rénovation énergétique BTP", "plombier chauffagiste pompe à chaleur", "dossier MaPrimeRénov artisan", "plan électrification gaz", "veille réglementaire BTP"]
