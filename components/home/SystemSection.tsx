@@ -1,82 +1,61 @@
 import React from 'react';
-import { SectionKicker } from '@/components/ui/SectionKicker';
 
-// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
-const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
+const RULE = 'rgba(26,35,50,0.16)';
 
 const pillars = [
   {
-    n: '01',
-    tag: 'Votre logiciel métier',
-    title: 'Batappli, Tolteck, Obat, EBP — celui que vous avez déjà.',
-    desc: "On l'audite, on corrige le paramétrage, on l'exploite à fond. Devis, factures, acomptes, situations : tout propre. Si vous n'en avez aucun, on choisit ensemble.",
+    what: 'Votre logiciel de devis et factures',
+    tools: 'Batappli, Tolteck, Obat, EBP',
+    desc: "On corrige le paramétrage et on s'en sert jusqu'au bout : devis, acomptes, situations. Si vous n'en avez pas encore, on le choisit avec vous.",
   },
   {
-    n: '02',
-    tag: "La mémoire d'équipe",
-    title: 'Vos chantiers, vos photos, vos SAV — accessibles à tous.',
-    desc: "Le plus souvent avec Notion ou Google Workspace branché à votre WhatsApp. Plus jamais d'info perdue entre le chef de chantier et le bureau.",
+    what: 'Le dossier de chaque chantier',
+    tools: 'Notion ou Google Drive, relié à WhatsApp',
+    desc: 'Photos, imprévus et SAV arrivent au même endroit. Le bureau voit ce que voit le chef de chantier.',
   },
   {
-    n: '03',
-    tag: 'Le liant',
-    title: 'Vos outils arrêtent de vivre chacun de leur côté.',
-    desc: "Make ou n8n relie votre logiciel BTP, votre compta et votre banque. Relances auto, notifications équipe, rapports hebdo. Sans que vous touchiez à rien.",
+    what: 'Les liaisons entre vos outils',
+    tools: 'Make ou n8n',
+    desc: 'Votre logiciel échange avec la banque et la compta. Les relances partent seules, et vous recevez un point chaque semaine.',
   },
 ];
 
+// Présentation en registre : ce que vous avez (à gauche), ce qu'on en fait (à droite).
 export const SystemSection: React.FC = () => {
   return (
     <section className="py-24 md:py-32" style={{ background: '#FAF7F0' }} aria-labelledby="system-title">
       <div className="container mx-auto px-6 max-w-5xl">
-        <div className="mb-10 md:mb-12">
-          <SectionKicker label="Le système" index="04" />
-        </div>
-
         <h2
           id="system-title"
-          className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl max-w-3xl"
+          className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
           style={{ color: NAVY }}
         >
-          On ne remplace pas vos outils.{' '}
-          <span style={{ color: GOLD_INK }}>On les fait enfin travailler ensemble.</span>
+          Vous gardez Batappli. On le branche sur le reste.
         </h2>
-
-        <p className="mt-7 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-          Chaque boîte du second œuvre a déjà un logiciel BTP, un drive, un WhatsApp d'équipe. Le
-          problème n'est pas ce que vous avez — c'est que personne ne les a connectés.{' '}
-          <span className="font-medium" style={{ color: NAVY }}>
-            On centralise, on automatise, on branche.
-          </span>
+        <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+          Chaque boîte a déjà un logiciel de devis, un drive et un groupe WhatsApp. Ce qui manque, ce
+          sont les liens entre eux.
         </p>
 
-        <ol className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-x-10">
+        <dl className="mt-12">
           {pillars.map((p) => (
-            <li
-              key={p.n}
-              className="pt-6 border-t flex flex-col"
-              style={{ borderColor: NAVY }}
+            <div
+              key={p.what}
+              className="grid grid-cols-1 md:grid-cols-12 gap-x-10 gap-y-2 py-7 border-t"
+              style={{ borderColor: RULE }}
             >
-              <span
-                className="font-heading font-bold text-2xl leading-none mb-4"
-                style={{ color: GOLD_INK }}
-              >
-                {p.n}
-              </span>
-              <span
-                className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-2"
-                style={{ color: 'rgba(26,35,50,0.45)' }}
-              >
-                {p.tag}
-              </span>
-              <h3 className="font-semibold text-lg md:text-xl leading-snug mb-3" style={{ color: NAVY }}>
-                {p.title}
-              </h3>
-              <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{p.desc}</p>
-            </li>
+              <dt className="md:col-span-5">
+                <span className="block font-semibold text-lg md:text-xl leading-snug" style={{ color: NAVY }}>
+                  {p.what}
+                </span>
+                <span className="block mt-1 text-sm text-gray-500">{p.tools}</span>
+              </dt>
+              <dd className="md:col-span-7 text-base md:text-lg text-gray-700 leading-relaxed">{p.desc}</dd>
+            </div>
           ))}
-        </ol>
+          <div className="border-t" style={{ borderColor: RULE }} />
+        </dl>
       </div>
     </section>
   );

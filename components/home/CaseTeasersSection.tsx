@@ -1,80 +1,70 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { SectionKicker } from '@/components/ui/SectionKicker';
 
-// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
 const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
+const RULE = 'rgba(26,35,50,0.16)';
 
+// Pas encore de client à montrer : on présente des objectifs, jamais des résultats.
 const builds = [
   {
-    n: '01',
-    profile: 'Plombier-chauffagiste · 8-20 personnes',
-    title: "Workflow MaPrimeRénov' automatisé",
-    desc: "Le montage d'un dossier passe de 6 heures à 90 minutes. Pièces vérifiées automatiquement, refus évités avant l'envoi.",
+    profile: 'Plombier-chauffagiste, 8 à 20 personnes',
+    title: "Dossiers MaPrimeRénov' automatisés",
+    desc: "Objectif : passer de 6 heures à 90 minutes par dossier. Les pièces sont vérifiées avant l'envoi, ce qui évite les refus.",
   },
   {
-    n: '02',
-    profile: 'Électricien · 8-15 personnes',
-    title: 'Devis dans la journée, relances automatiques',
-    desc: "Les devis partent le jour même au lieu de traîner 2 à 3 semaines. Les situations oubliées sont relancées toutes seules : la trésorerie rentre.",
+    profile: 'Électricien, 8 à 15 personnes',
+    title: 'Devis le jour même, relances automatiques',
+    desc: 'Objectif : un devis envoyé le jour de la visite, au lieu de 2 à 3 semaines. Les situations oubliées sont relancées toutes seules.',
   },
   {
-    n: '03',
-    profile: 'Multi-technique · 30-60+ personnes · multi-agences',
-    title: 'Reporting consolidé en temps réel',
-    desc: "Marge chantier et trésorerie consolidées sur toutes les agences. Plusieurs jours de DAF récupérés chaque mois, retenues de garantie recensées.",
+    profile: 'Multi-technique, 30 à 60+ personnes, plusieurs agences',
+    title: 'Marge et trésorerie de toutes les agences',
+    desc: 'Objectif : un tableau de bord commun, à jour en continu, et plusieurs jours de travail rendus chaque mois à la personne qui tient les comptes.',
   },
 ];
 
 export const CaseTeasersSection: React.FC = () => {
   return (
     <section className="py-24 md:py-32" style={{ background: '#FAF7F0' }} aria-labelledby="builds-title">
-      <div className="container mx-auto px-6 max-w-5xl">
-        <div className="mb-10 md:mb-12">
-          <SectionKicker label="Réalisations" index="07" />
-        </div>
-
+      <div className="container mx-auto px-6 max-w-6xl">
         <h2
           id="builds-title"
-          className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl max-w-3xl"
+          className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
           style={{ color: NAVY }}
         >
-          Des systèmes taillés pour le second œuvre.
+          Trois systèmes qu'on sait monter
         </h2>
-        <p className="mt-7 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-          On démarre tout juste : pas de cas clients à exhiber. Voici les chantiers concrets qu'on
-          met en œuvre — et qu'on documentera avec nos premiers pilotes.
+        <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+          On démarre, et on n'a pas encore de client à vous présenter. Voici trois systèmes typiques,
+          qu'on documentera avec nos premiers clients pilotes.
         </p>
 
-        <ol className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-x-10">
+        <ul className="mt-12">
           {builds.map((b) => (
-            <li key={b.n} className="pt-6 border-t flex flex-col" style={{ borderColor: NAVY }}>
-              <span className="font-heading font-bold text-2xl leading-none mb-4" style={{ color: GOLD_INK }}>
-                {b.n}
-              </span>
-              <span
-                className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-3"
-                style={{ color: 'rgba(26,35,50,0.45)' }}
-              >
-                {b.profile}
-              </span>
-              <h3 className="font-semibold text-lg md:text-xl leading-snug mb-3" style={{ color: NAVY }}>
+            <li
+              key={b.title}
+              className="grid grid-cols-1 md:grid-cols-12 gap-x-10 gap-y-2 py-7 border-t"
+              style={{ borderColor: RULE }}
+            >
+              <span className="md:col-span-3 text-sm text-gray-500 leading-snug">{b.profile}</span>
+              <h3 className="md:col-span-4 font-semibold text-lg md:text-xl leading-snug" style={{ color: NAVY }}>
                 {b.title}
               </h3>
-              <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">{b.desc}</p>
+              <p className="md:col-span-5 text-base text-gray-700 leading-relaxed">{b.desc}</p>
             </li>
           ))}
-        </ol>
+          <li className="border-t" style={{ borderColor: RULE }} aria-hidden="true" />
+        </ul>
 
-        <div className="mt-12">
+        <div className="mt-10">
           <Link
             href="/cas-clients"
             className="group inline-flex items-center gap-2 font-semibold text-base"
             style={{ color: NAVY }}
           >
-            Voir le programme Opus Pilotes
+            Le programme Opus Pilotes
             <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

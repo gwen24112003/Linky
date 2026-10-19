@@ -70,7 +70,7 @@ export const ContactView: React.FC = () => {
           <p className="mt-7 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
             30 minutes en visio. Vous me montrez vos outils. J'identifie 3 points de friction et je
             vous montre en direct comment les régler.{' '}
-            <span className="text-white font-medium">Pas de vente, pas d'engagement.</span>
+            <span className="text-white font-medium">C'est gratuit et sans engagement.</span>
           </p>
         </div>
       </section>
@@ -245,7 +245,7 @@ export const ContactView: React.FC = () => {
                     )}
                   </button>
                   <p className="text-xs text-gray-500 leading-relaxed">
-                    Vos infos servent uniquement à vous recontacter. Aucune revente, aucun spam.
+                    Vos coordonnées servent seulement à vous répondre.
                   </p>
                 </form>
               )}
@@ -288,8 +288,8 @@ export const ContactView: React.FC = () => {
                   {[
                     'Tour rapide de vos outils actuels',
                     '3 points de friction identifiés en direct',
-                    '1 automation démontrée sur vos propres données',
-                    'Aucun engagement, aucune vente',
+                    '1 automatisation montrée sur vos propres données',
+                    'Sans engagement de votre part',
                   ].map((d) => (
                     <li key={d} className="flex items-start gap-2.5">
                       <span className="mt-2 h-px w-3 shrink-0" style={{ background: GOLD }} />

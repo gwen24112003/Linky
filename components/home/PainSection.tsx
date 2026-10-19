@@ -1,5 +1,4 @@
 import React from 'react';
-import { SectionKicker } from '@/components/ui/SectionKicker';
 import { PainChecklist, type Pain } from '@/components/home/PainChecklist';
 
 const NAVY = '#1A2332';
@@ -42,13 +41,9 @@ export const PainSection: React.FC = () => {
   return (
     <section className="py-24 md:py-32" style={{ background: PAPER }} aria-labelledby="pain-title">
       <div className="container mx-auto px-6 max-w-5xl">
-        <div className="mb-10 md:mb-12">
-          <SectionKicker label="Le terrain" index="02" />
-        </div>
-
         <h2
           id="pain-title"
-          className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl max-w-3xl"
+          className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
           style={{ color: NAVY }}
         >
           Votre boîte tourne sur 6 outils qui ne se parlent pas.

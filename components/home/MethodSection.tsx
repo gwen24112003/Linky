@@ -1,63 +1,54 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { SectionKicker } from '@/components/ui/SectionKicker';
 
-// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
 const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 const RULE = 'rgba(26,35,50,0.16)';
 
+// Les prix sont ceux de la page Services : les montrer dès l'accueil rassure plus qu'un discours.
 const steps = [
-  { n: '01', title: 'Pré-audit gratuit', line: '30 min en visio. 3 points de friction repérés en direct.' },
-  { n: '02', title: 'Audit Stack', line: 'Cartographie de vos outils et préconisation chiffrée.' },
-  { n: '03', title: 'Diagnostic', line: 'Un plan de consolidation chiffré, avec le ROI attendu.' },
-  { n: '04', title: 'Mise en œuvre', line: 'On configure, on connecte, on forme vos équipes.' },
-  { n: '05', title: 'Gardien du système', line: "L'opérateur qui reste à vos côtés, au fil de l'eau." },
+  { name: 'Pré-audit', price: 'Gratuit', line: '30 minutes en visio pour repérer 3 points de friction dans vos outils.' },
+  { name: 'Audit Stack', price: '990 €', line: '10 jours pour cartographier vos outils et savoir lesquels garder.' },
+  { name: 'Diagnostic', price: '2 500 €', line: '2 à 3 semaines. Un plan chiffré, avec le gain attendu.' },
+  { name: 'Mise en œuvre', price: 'Dès 5 500 €', line: '4 à 10 semaines pour installer le système et former votre équipe.' },
+  { name: 'Gardien du système', price: '400 à 1 500 €/mois', line: "On surveille le système et on l'adapte quand votre boîte change." },
 ];
 
 export const MethodSection: React.FC = () => {
   return (
     <section id="methode" className="py-24 md:py-32 bg-white scroll-mt-24" aria-labelledby="method-title">
-      <div className="container mx-auto px-6 max-w-5xl">
-        <div className="mb-10 md:mb-12">
-          <SectionKicker label="Méthode" index="06" />
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end">
+          <h2
+            id="method-title"
+            className="md:col-span-7 font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl"
+            style={{ color: NAVY }}
+          >
+            Comment on avance, et ce que ça coûte
+          </h2>
+          <p className="md:col-span-5 text-base md:text-lg text-gray-600 leading-relaxed">
+            Chaque étape est facturée à part. À la fin de chacune, vous décidez si on continue.
+          </p>
         </div>
 
-        <h2
-          id="method-title"
-          className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl lg:text-6xl"
-          style={{ color: NAVY }}
-        >
-          Comment on bosse ensemble.
-        </h2>
-        <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl">
-          Cinq étapes claires, du premier échange jusqu'au système qui tourne.
-        </p>
-
-        <ol className="mt-12">
-          {steps.map((s) => (
-            <li key={s.n} className="border-t py-5" style={{ borderColor: RULE }}>
-              <div className="flex flex-col sm:flex-row sm:items-baseline gap-x-6 gap-y-1">
-                <span
-                  className="font-heading font-bold text-lg md:text-xl leading-none shrink-0 sm:w-8"
-                  style={{ color: GOLD_INK }}
-                >
-                  {s.n}
-                </span>
-                <h3
-                  className="font-semibold text-lg md:text-xl leading-snug shrink-0 sm:w-64"
-                  style={{ color: NAVY }}
-                >
-                  {s.title}
-                </h3>
-                <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed flex-1">
-                  {s.line}
-                </p>
-              </div>
+        <ol className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border-t" style={{ borderColor: NAVY }}>
+          {steps.map((s, i) => (
+            <li
+              key={s.name}
+              className={`py-7 lg:pr-5 ${i > 0 ? 'lg:pl-5 lg:border-l border-t lg:border-t-0' : ''} ${i === 1 ? 'sm:border-t-0' : ''}`}
+              style={{ borderColor: RULE }}
+            >
+              <span className="block text-sm text-gray-500">Étape {i + 1}</span>
+              <span className="block mt-2 font-semibold text-lg leading-snug" style={{ color: NAVY }}>
+                {s.name}
+              </span>
+              <span className="block mt-1 font-semibold text-base" style={{ color: GOLD_INK }}>
+                {s.price}
+              </span>
+              <span className="block mt-3 text-sm text-gray-600 leading-relaxed">{s.line}</span>
             </li>
           ))}
-          <li className="border-t" style={{ borderColor: RULE }} />
         </ol>
 
         <div className="mt-10">
@@ -66,7 +57,7 @@ export const MethodSection: React.FC = () => {
             className="group inline-flex items-center gap-2 font-semibold text-base"
             style={{ color: NAVY }}
           >
-            Voir le détail et les tarifs
+            Le détail de chaque étape
             <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

@@ -29,7 +29,8 @@ export const SectionKicker: React.FC<SectionKickerProps> = ({
 
   return (
     <div className={`flex items-center gap-5 ${className}`}>
-      <span className="text-xs font-semibold uppercase tracking-[0.28em] whitespace-nowrap">
+      {/* Retour à la ligne autorisé sur mobile : un libellé long débordait de l'écran. */}
+      <span className="text-xs font-semibold uppercase tracking-[0.28em] sm:whitespace-nowrap">
         <span style={{ color: labelColor }}>{label}</span>
         {index && <span style={{ color: indexColor }}> / {index}</span>}
       </span>

@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 // Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
@@ -75,14 +74,8 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
       </div>
 
       {/* Liste */}
-      {filtered.map((article, i) => (
-        <motion.div
-          key={article.id}
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-        >
+      {filtered.map((article) => (
+        <div key={article.id}>
           <Link
             href={`/articles/${article.slug}`}
             className="group block border-t py-9 md:py-11"
@@ -90,11 +83,8 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
           >
             <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-8">
               <div className="md:col-span-3">
-                <span className="font-heading font-bold text-base" style={{ color: GOLD_INK }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
                 {article.publishedAt && (
-                  <span className="block text-xs uppercase tracking-[0.16em] text-gray-500 mt-2">
+                  <span className="block text-xs uppercase tracking-[0.16em] text-gray-500">
                     {formatDate(article.publishedAt)}
                   </span>
                 )}
@@ -126,7 +116,7 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
               </div>
             </div>
           </Link>
-        </motion.div>
+        </div>
       ))}
       <div className="border-t" style={{ borderColor: RULE }} />
     </div>
