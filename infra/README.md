@@ -27,6 +27,7 @@ bash scripts/deploy-vps.sh
    `scp infra/opus-pull.sh infra/opus-pull.service infra/opus-pull.timer <hote>:/tmp/`, puis sur le serveur :
    `sudo install -m 755 /tmp/opus-pull.sh /usr/local/bin/opus-pull && sudo install -m 644 /tmp/opus-pull.{service,timer} /etc/systemd/system/ && sudo systemctl daemon-reload && sudo systemctl enable --now opus-pull.timer`
 5. Une fois le DNS propagé : `sudo certbot --nginx -d opusadvisor.fr -d www.opusadvisor.fr --redirect`
+6. Réinstaller les redirections des anciennes URL (route `/article/` au singulier, articles supprimés) : copier `docs/nginx-redirects.conf` vers `/etc/nginx/snippets/opus-redirects.conf`, ajouter `include snippets/opus-redirects.conf;` dans le vhost opusadvisor.fr (avant `location /`), puis `sudo nginx -t && sudo systemctl reload nginx`. Sans ce fichier, Google voit des 404 sur des pages qu'il connaît encore.
 
 ## Mesure d'audience (Umami)
 Umami 3.4.0 tourne dans Docker sur le VPS (`/srv/umami`, fichiers dans `infra/umami/`), sans cookie.
