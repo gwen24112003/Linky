@@ -15,7 +15,7 @@ APT_OPTS=(-y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confo
 echo "==> Mises à jour système + paquets"
 sudo -E apt-get update -y
 sudo -E apt-get upgrade "${APT_OPTS[@]}"
-sudo -E apt-get install "${APT_OPTS[@]}" nginx certbot python3-certbot-nginx ufw fail2ban python3-systemd unattended-upgrades curl git
+sudo -E apt-get install "${APT_OPTS[@]}" nginx ssl-cert certbot python3-certbot-nginx ufw fail2ban python3-systemd unattended-upgrades curl git
 
 echo "==> Swap 2 Go (filet de sécurité mémoire)"
 if ! swapon --show | grep -q '/swapfile'; then
@@ -114,6 +114,23 @@ server {
 }
 EOF
 
+# Bloc par défaut : un nom d'hôte inconnu (IP nue, sous-domaine sans vhost) coupe la connexion.
+# Sans lui, nginx sert le premier site par ordre alphabétique sous n'importe quel nom :
+# le 06/10/2026, Google a ainsi vu ElymNails à l'adresse enzo.opusadvisor.fr.
+# Certificat autosigné (snakeoil, paquet ssl-cert) : il n'est présenté qu'aux noms inconnus.
+sudo tee /etc/nginx/sites-available/00-default >/dev/null <<'EOF'
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    listen 443 ssl default_server;
+    listen [::]:443 ssl default_server;
+    server_name _;
+    include snippets/snakeoil.conf;
+    return 444;
+}
+EOF
+
+sudo ln -sfn /etc/nginx/sites-available/00-default /etc/nginx/sites-enabled/00-default
 sudo ln -sfn "/etc/nginx/sites-available/$DOMAIN" "/etc/nginx/sites-enabled/$DOMAIN"
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo nginx -t
