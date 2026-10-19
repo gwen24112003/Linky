@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
-const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 const RULE = 'rgba(26,35,50,0.16)';
 
@@ -89,18 +90,18 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
           >
             <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-8">
               <div className="md:col-span-3">
-                <span className="font-heading font-bold text-base" style={{ color: GOLD }}>
+                <span className="font-heading font-bold text-base" style={{ color: GOLD_INK }}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 {article.publishedAt && (
-                  <span className="block text-xs uppercase tracking-[0.16em] text-gray-400 mt-2">
+                  <span className="block text-xs uppercase tracking-[0.16em] text-gray-500 mt-2">
                     {formatDate(article.publishedAt)}
                   </span>
                 )}
                 {article.category && (
                   <span
                     className="block text-xs font-semibold uppercase tracking-[0.16em] mt-1"
-                    style={{ color: GOLD }}
+                    style={{ color: GOLD_INK }}
                   >
                     {article.category}
                   </span>
@@ -108,7 +109,7 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
               </div>
 
               <div className="md:col-span-9">
-                <h2 className="font-heading font-bold text-2xl md:text-3xl leading-tight text-[#1A2332] group-hover:text-[#C9A84C] transition-colors duration-200">
+                <h2 className="font-heading font-bold text-2xl md:text-3xl leading-tight text-[#1A2332] group-hover:text-[#8A6A1C] transition-colors duration-200">
                   {article.title}
                 </h2>
                 <p className="mt-3 text-base text-gray-600 leading-relaxed max-w-2xl line-clamp-2">
@@ -118,7 +119,7 @@ export const ArticlesGrid: React.FC<{ articles: ArticleMetadata[] }> = ({ articl
                   Lire l'article
                   <ArrowRight
                     size={16}
-                    style={{ color: GOLD }}
+                    style={{ color: GOLD_INK }}
                     className="group-hover:translate-x-1 transition-transform"
                   />
                 </span>

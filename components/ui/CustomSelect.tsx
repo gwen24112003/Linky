@@ -94,12 +94,12 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
               >
                 <span
                   className={value === option.value ? 'font-semibold' : 'text-gray-700'}
-                  style={value === option.value ? { color: '#C9A84C' } : undefined}
+                  style={value === option.value ? { color: '#8A6A1C' } : undefined}
                 >
                   {option.label}
                 </span>
                 {value === option.value && (
-                  <Check size={16} style={{ color: '#C9A84C' }} className="flex-shrink-0" />
+                  <Check size={16} style={{ color: '#8A6A1C' }} className="flex-shrink-0" />
                 )}
               </button>
             ))}

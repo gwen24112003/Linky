@@ -2,15 +2,15 @@ import React from 'react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
-const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
 
 export const ManifestoSection: React.FC = () => {
   return (
     <section
-      className="py-24 md:py-32"
-      style={{ background: PAPER }}
+      className="py-24 md:py-32 bg-white"
       aria-labelledby="manifeste-title"
     >
       <div className="container mx-auto px-6 max-w-5xl">
@@ -99,7 +99,7 @@ export const ManifestoSection: React.FC = () => {
             >
               <p
                 className="font-heading font-bold leading-none whitespace-nowrap text-3xl md:text-4xl"
-                style={{ color: GOLD }}
+                style={{ color: GOLD_INK }}
               >
                 10 h / semaine
               </p>

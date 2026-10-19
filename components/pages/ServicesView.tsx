@@ -7,6 +7,8 @@ import { Check, X, ArrowRight } from 'lucide-react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
@@ -218,7 +220,7 @@ export const ServicesView: React.FC = () => {
                 {/* Gauche */}
                 <div className="md:col-span-5">
                   <div className="flex items-start gap-5">
-                    <span className="font-heading font-bold text-4xl md:text-5xl leading-none" style={{ color: GOLD }}>
+                    <span className="font-heading font-bold text-4xl md:text-5xl leading-none" style={{ color: GOLD_INK }}>
                       {s.n}
                     </span>
                     <div>
@@ -233,13 +235,13 @@ export const ServicesView: React.FC = () => {
                   </div>
 
                   <div className="mt-7 md:pl-[3.6rem]">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-400 mb-1">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 mb-1">
                       {s.duration}
                     </p>
                     <p className="font-heading font-bold text-2xl md:text-3xl" style={{ color: NAVY }}>
                       {s.price}
                     </p>
-                    {s.priceNote && <p className="text-xs text-gray-400 mt-1.5 max-w-xs">{s.priceNote}</p>}
+                    {s.priceNote && <p className="text-xs text-gray-500 mt-1.5 max-w-xs">{s.priceNote}</p>}
                   </div>
                 </div>
 
@@ -247,13 +249,13 @@ export const ServicesView: React.FC = () => {
                 <div className="md:col-span-7">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">{s.description}</p>
 
-                  <p className="mt-7 text-xs font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: GOLD }}>
+                  <p className="mt-7 text-xs font-semibold uppercase tracking-[0.18em] mb-4" style={{ color: GOLD_INK }}>
                     Ce qui est livré
                   </p>
                   <ul className="space-y-2.5">
                     {s.deliverables.map((d, di) => (
                       <li key={di} className="flex items-start gap-3">
-                        <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD }} />
+                        <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD_INK }} />
                         <span className="text-sm md:text-[15px] text-gray-700 leading-snug">{d}</span>
                       </li>
                     ))}
@@ -288,7 +290,7 @@ export const ServicesView: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14">
             {differentiators.map((d) => (
               <div key={d.n} className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-7 border-t" style={{ borderColor: RULE }}>
-                <span className="font-heading font-bold text-base leading-none pt-1" style={{ color: GOLD }}>
+                <span className="font-heading font-bold text-base leading-none pt-1" style={{ color: GOLD_INK }}>
                   {d.n}
                 </span>
                 <div>
@@ -296,7 +298,7 @@ export const ServicesView: React.FC = () => {
                     {d.vs}
                   </h3>
                   <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed">
-                    {d.lead} <strong style={{ color: GOLD }}>{d.bold}</strong> {d.tail}
+                    {d.lead} <strong style={{ color: GOLD_INK }}>{d.bold}</strong> {d.tail}
                   </p>
                 </div>
               </div>
@@ -317,7 +319,7 @@ export const ServicesView: React.FC = () => {
             {/* EST */}
             <div>
               <div className="pb-3 border-b-2" style={{ borderColor: GOLD }}>
-                <span className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GOLD }}>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GOLD_INK }}>
                   Opus Advisor est
                 </span>
               </div>
@@ -328,7 +330,7 @@ export const ServicesView: React.FC = () => {
                     className="flex items-start gap-3 py-4 border-t"
                     style={{ borderColor: RULE }}
                   >
-                    <Check size={16} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD }} />
+                    <Check size={16} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD_INK }} />
                     <span className="text-base md:text-lg font-semibold" style={{ color: NAVY }}>
                       {r.est}
                     </span>
@@ -351,7 +353,7 @@ export const ServicesView: React.FC = () => {
                     className="flex items-start gap-3 py-4 border-t"
                     style={{ borderColor: RULE }}
                   >
-                    <X size={16} strokeWidth={2.5} className="mt-1 shrink-0 text-gray-400" />
+                    <X size={16} strokeWidth={2.5} className="mt-1 shrink-0 text-gray-500" />
                     <span className="text-base md:text-lg italic text-gray-500">{r.nest}</span>
                   </li>
                 ))}
@@ -371,7 +373,7 @@ export const ServicesView: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14">
             <Link href="/cas-clients" className="group py-7 border-t flex flex-col" style={{ borderColor: NAVY }}>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: GOLD }}>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] mb-3" style={{ color: GOLD_INK }}>
                 Programme pilote · 3 places
               </span>
               <h3 className="font-heading font-bold text-xl md:text-2xl leading-snug mb-3" style={{ color: NAVY }}>
@@ -383,7 +385,7 @@ export const ServicesView: React.FC = () => {
               </p>
               <span className="inline-flex items-center gap-2 font-semibold text-sm md:text-base" style={{ color: NAVY }}>
                 Voir le programme
-                <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
 
@@ -400,7 +402,7 @@ export const ServicesView: React.FC = () => {
               </p>
               <span className="inline-flex items-center gap-2 font-semibold text-sm md:text-base" style={{ color: NAVY }}>
                 Lire les articles
-                <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
           </div>

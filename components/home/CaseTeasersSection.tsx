@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
-const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 
 const builds = [
@@ -50,7 +51,7 @@ export const CaseTeasersSection: React.FC = () => {
         <ol className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-x-10">
           {builds.map((b) => (
             <li key={b.n} className="pt-6 border-t flex flex-col" style={{ borderColor: NAVY }}>
-              <span className="font-heading font-bold text-2xl leading-none mb-4" style={{ color: GOLD }}>
+              <span className="font-heading font-bold text-2xl leading-none mb-4" style={{ color: GOLD_INK }}>
                 {b.n}
               </span>
               <span
@@ -74,7 +75,7 @@ export const CaseTeasersSection: React.FC = () => {
             style={{ color: NAVY }}
           >
             Voir le programme Opus Pilotes
-            <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

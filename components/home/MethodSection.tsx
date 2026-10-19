@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
-const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 const RULE = 'rgba(26,35,50,0.16)';
 
@@ -40,7 +41,7 @@ export const MethodSection: React.FC = () => {
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-x-6 gap-y-1">
                 <span
                   className="font-heading font-bold text-lg md:text-xl leading-none shrink-0 sm:w-8"
-                  style={{ color: GOLD }}
+                  style={{ color: GOLD_INK }}
                 >
                   {s.n}
                 </span>
@@ -66,7 +67,7 @@ export const MethodSection: React.FC = () => {
             style={{ color: NAVY }}
           >
             Voir le détail et les tarifs
-            <ArrowRight size={18} style={{ color: GOLD }} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

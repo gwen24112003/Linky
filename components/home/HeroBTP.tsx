@@ -1,260 +1,157 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Calendar, ShieldCheck, Network } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
+const GOLD_INK = '#8A6A1C';
+const PAPER = '#FAF7F0';
+const RULE = 'rgba(26,35,50,0.16)';
 
-// Outils réels d'une boîte du second œuvre.
-// Mêmes noms avant/après : on ne les remplace pas, on les connecte.
-// Positions en % dans le conteneur radial (left, top), centre = hub à 50/50.
-const tools = [
-  { name: 'Excel',    left: 20, top: 18 },
-  { name: 'WhatsApp', left: 80, top: 18 },
-  { name: 'Batappli', left: 10, top: 50 },
-  { name: 'Emails',   left: 90, top: 50 },
-  { name: 'Papiers',  left: 20, top: 82 },
-  { name: 'Banque',   left: 80, top: 82 },
+// Outils réels d'une boîte du second œuvre : on ne les remplace pas, on les relie.
+const tools = ['Excel', 'WhatsApp', 'Batappli', 'Emails', 'Papiers', 'Banque'];
+
+// Chiffres repris de l'offre elle-même : aucune statistique inventée.
+const keyFigures = [
+  { value: '10 h', label: 'rendues chaque semaine' },
+  { value: '30 min', label: 'de pré-audit gratuit, en visio' },
+  { value: '2 500 €', label: 'le diagnostic, prix fixe' },
 ];
+
+// Schéma « 6 outils → 1 système », dessiné à plat (repère : viewBox 300 × 220).
+const BOX_W = 96;
+const BOX_H = 26;
+const HUB = { x: 206, y: 88, w: 94, h: 44 };
+const hubCenterY = HUB.y + HUB.h / 2;
 
 export const HeroBTP: React.FC = () => {
   return (
     <section
-      className="relative text-white overflow-hidden min-h-[calc(100vh-5rem)] flex items-center"
-      style={{ background: `linear-gradient(135deg, ${NAVY}, #223047 55%, ${NAVY})` }}
+      className="pt-28 md:pt-36"
+      style={{ background: PAPER, color: NAVY }}
       aria-label="Opus Advisor — Consultant ops pour les patrons du BTP second œuvre"
     >
-      {/* Blob doré en fond */}
-      <div
-        className="absolute pointer-events-none opacity-40"
-        style={{
-          top: '-15%',
-          left: '-10%',
-          width: 620,
-          height: 620,
-          background: `radial-gradient(circle, ${GOLD}33 0%, transparent 70%)`,
-          filter: 'blur(70px)',
-        }}
-      />
-      <div
-        className="absolute pointer-events-none opacity-30"
-        style={{
-          bottom: '-15%',
-          right: '-10%',
-          width: 540,
-          height: 540,
-          background: `radial-gradient(circle, ${GOLD}22 0%, transparent 70%)`,
-          filter: 'blur(80px)',
-        }}
-      />
-
-      {/* Grille points */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.08]"
-        style={{
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-        }}
-      />
-
-      <div className="container mx-auto px-6 relative z-10 pt-28 pb-16 md:pt-24 md:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
           {/* Colonne texte */}
           <div className="lg:col-span-7">
-            <p
-              className="text-xs md:text-sm font-semibold tracking-[0.22em] uppercase mb-5"
-              style={{ color: GOLD }}
-            >
-              Second œuvre · Élec · Plomberie · Chauffage-clim
-            </p>
+            <div className="flex items-center gap-4">
+              <p
+                className="text-xs font-semibold uppercase tracking-[0.24em] sm:whitespace-nowrap"
+                style={{ color: GOLD_INK }}
+              >
+                Second œuvre · Élec · Plomberie · Chauffage-clim
+              </p>
+              <span className="hidden sm:block flex-1 h-px" style={{ background: RULE }} />
+            </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] mb-6">
+            <h1 className="font-heading font-bold leading-[1.02] tracking-tight text-[2.6rem] sm:text-6xl lg:text-[4.25rem] mt-6">
               On rend{' '}
-              <span style={{ color: GOLD }}>10h par semaine</span>
-              <br className="hidden sm:block" /> aux patrons du second œuvre.
+              <span
+                className="sm:whitespace-nowrap"
+                style={{
+                  textDecorationLine: 'underline',
+                  textDecorationColor: GOLD,
+                  textDecorationThickness: '6px',
+                  textUnderlineOffset: '7px',
+                  textDecorationSkipInk: 'none',
+                }}
+              >
+                10 h par semaine
+              </span>{' '}
+              aux patrons du second œuvre.
             </h1>
 
-            <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              Relances automatiques, chantiers centralisés, devis qui ne traînent plus.
-              Un système calé sur votre boîte. Pas une plateforme générique.
+            <p className="mt-7 text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
+              Relances automatiques, chantiers centralisés, devis qui ne traînent plus. On garde vos
+              outils, on les fait parler ensemble.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
+            <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg transition-all duration-200 hover:scale-[1.02] shadow-lg hover:shadow-xl btn-shimmer"
-                style={{ background: GOLD, color: NAVY }}
+                className="group inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg font-semibold text-base bg-[#1A2332] text-[#FAF7F0] hover:bg-[#26334a] transition-colors"
               >
-                Pré-audit gratuit 30 min
-                <ArrowRight
-                  size={20}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
+                Réserver le pré-audit gratuit
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/services#audit-stack"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-base md:text-lg border-2 text-white hover:bg-white/5 transition-all duration-200"
-                style={{ borderColor: GOLD }}
+                href="/services"
+                className="self-start sm:self-auto font-semibold text-base border-b pb-0.5 hover:opacity-70 transition-opacity"
+                style={{ color: GOLD_INK, borderColor: GOLD_INK }}
               >
-                Audit Stack — 990 €
+                Voir les tarifs
               </Link>
             </div>
 
-            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-xs md:text-sm text-white/60">
-              <li className="inline-flex items-center gap-2">
-                <Clock size={14} style={{ color: GOLD }} /> Visio
-              </li>
-              <li className="inline-flex items-center gap-2">
-                <ShieldCheck size={14} style={{ color: GOLD }} /> Sans engagement
-              </li>
-              <li className="inline-flex items-center gap-2">
-                <Calendar size={14} style={{ color: GOLD }} /> 3 points de friction identifiés en direct
-              </li>
-            </ul>
+            <p className="mt-6 text-sm text-gray-500">
+              Visio · Sans engagement · 3 points de friction identifiés en direct
+            </p>
           </div>
 
-          {/* Colonne visuel "Avant / Après" */}
-          <div className="lg:col-span-5">
-            <div
-              className="rounded-2xl p-5 md:p-6 backdrop-blur-xl"
-              role="figure"
-              aria-label="Comparaison avant/après : de 6 outils déconnectés à un système unifié"
-              style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.12)',
-                boxShadow: '0 24px 60px rgba(0,0,0,0.35)',
-              }}
+          {/* Schéma : les mêmes outils, reliés à un seul système */}
+          <figure className="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none">
+            <svg
+              viewBox="0 0 300 220"
+              className="w-full h-auto"
+              role="img"
+              aria-label="Excel, WhatsApp, Batappli, emails, papiers et banque reliés à un seul système"
             >
-              {/* Avant — mêmes outils, dispersés, aucun lien */}
-              <div className="mb-5">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="inline-block h-2 w-2 rounded-full bg-red-400/80" />
-                  <span className="text-[11px] font-semibold tracking-wider uppercase text-white/50">
-                    Aujourd'hui
-                  </span>
-                </div>
-                <div className="relative h-[200px] md:h-[220px]">
-                  {tools.map((t) => (
-                    <div
-                      key={t.name}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm px-3 py-1.5 rounded-lg text-white/75 whitespace-nowrap"
-                      style={{
-                        left: `${t.left}%`,
-                        top: `${t.top}%`,
-                        background: 'rgba(255,255,255,0.04)',
-                        border: '1px dashed rgba(255,255,255,0.18)',
-                      }}
-                    >
-                      {t.name}
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-3 text-[11px] text-white/40 italic">
-                  6 outils en silo. Chacun dans son coin.
-                </p>
-              </div>
+              {tools.map((tool, i) => {
+                const y = 4 + i * 36;
+                const cy = y + BOX_H / 2;
+                return (
+                  <g key={tool}>
+                    <path
+                      d={`M${BOX_W} ${cy} C 150 ${cy}, 150 ${hubCenterY}, ${HUB.x} ${hubCenterY}`}
+                      fill="none"
+                      stroke={GOLD}
+                      strokeWidth="1.5"
+                    />
+                    <rect
+                      x="0.5"
+                      y={y}
+                      width={BOX_W}
+                      height={BOX_H}
+                      rx="2"
+                      fill={PAPER}
+                      stroke={NAVY}
+                      strokeOpacity="0.35"
+                    />
+                    <text x="10" y={cy + 4} fontSize="12" fill={NAVY}>
+                      {tool}
+                    </text>
+                  </g>
+                );
+              })}
+              <rect x={HUB.x} y={HUB.y} width={HUB.w} height={HUB.h} rx="2" fill={NAVY} />
+              <text x={HUB.x + HUB.w / 2} y={hubCenterY - 4} fontSize="12" textAnchor="middle" fill={PAPER}>
+                Un seul
+              </text>
+              <text x={HUB.x + HUB.w / 2} y={hubCenterY + 12} fontSize="12" textAnchor="middle" fill={GOLD}>
+                système
+              </text>
+            </svg>
+            <figcaption className="mt-4 text-sm text-gray-500">
+              Les mêmes outils, enfin reliés entre eux.
+            </figcaption>
+          </figure>
+        </div>
 
-              {/* Flèche */}
-              <div className="flex items-center gap-3 my-4">
-                <div className="flex-1 h-px bg-white/15" />
-                <span
-                  className="text-[10px] font-semibold tracking-[0.18em] uppercase px-2 py-1 rounded-full"
-                  style={{
-                    background: `${GOLD}22`,
-                    color: GOLD,
-                    border: `1px solid ${GOLD}44`,
-                  }}
-                >
-                  Votre système Opus
-                </span>
-                <div className="flex-1 h-px bg-white/15" />
-              </div>
-
-              {/* Après — mêmes outils, reliés à un hub central */}
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span
-                    className="inline-block h-2 w-2 rounded-full"
-                    style={{ background: GOLD }}
-                  />
-                  <span
-                    className="text-[11px] font-semibold tracking-wider uppercase"
-                    style={{ color: GOLD }}
-                  >
-                    Après
-                  </span>
-                </div>
-                <div className="relative h-[200px] md:h-[220px]">
-                  {/* Lignes qui relient chaque outil au hub central */}
-                  <svg
-                    className="absolute inset-0 w-full h-full pointer-events-none"
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none"
-                    aria-hidden="true"
-                  >
-                    {tools.map((t) => (
-                      // Ligne jusqu'au centre du chip. Le chip ayant un fond
-                      // opaque, la portion sous la card est masquée : le
-                      // trait semble s'arrêter pile au bord de la card.
-                      <line
-                        key={t.name}
-                        x1="50"
-                        y1="50"
-                        x2={t.left}
-                        y2={t.top}
-                        stroke={GOLD}
-                        strokeOpacity="0.6"
-                        strokeWidth="1.3"
-                        strokeLinecap="round"
-                        vectorEffect="non-scaling-stroke"
-                      />
-                    ))}
-                  </svg>
-
-                  {/* Mêmes chips qu'avant, mêmes positions — on change pas les outils.
-                      Fond opaque (NAVY + gold overlay) pour masquer la portion de ligne sous la card. */}
-                  {tools.map((t) => (
-                    <div
-                      key={t.name}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm px-3 py-1.5 rounded-lg font-medium whitespace-nowrap z-10"
-                      style={{
-                        left: `${t.left}%`,
-                        top: `${t.top}%`,
-                        background: `linear-gradient(${GOLD}22, ${GOLD}22), ${NAVY}`,
-                        border: `1px solid ${GOLD}66`,
-                        color: 'white',
-                      }}
-                    >
-                      {t.name}
-                    </div>
-                  ))}
-
-                  {/* Hub central — la couche Opus qui fait le liant */}
-                  <div
-                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-10"
-                    style={{
-                      width: 52,
-                      height: 52,
-                      background: GOLD,
-                      color: NAVY,
-                      boxShadow: `0 0 0 6px ${GOLD}22, 0 0 28px ${GOLD}55`,
-                    }}
-                    aria-label="Hub Opus — couche qui connecte vos outils"
-                  >
-                    <Network size={22} strokeWidth={2.2} />
-                  </div>
-                </div>
-                <p className="mt-3 text-[11px] text-white/60 italic">
-                  Les mêmes outils. On les fait juste parler ensemble.
-                </p>
-              </div>
+        {/* Chiffres clés */}
+        <div className="mt-16 md:mt-20 grid grid-cols-3 border-t" style={{ borderColor: NAVY }}>
+          {keyFigures.map((f, i) => (
+            <div
+              key={f.value}
+              className={`py-5 md:py-7 pr-3 ${i > 0 ? 'pl-3 md:pl-8 border-l' : ''}`}
+              style={i > 0 ? { borderColor: RULE } : undefined}
+            >
+              <p className="font-heading font-bold text-2xl md:text-4xl leading-none">{f.value}</p>
+              <p className="mt-2 text-xs md:text-sm text-gray-600 leading-snug">{f.label}</p>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      {/* Dégradé bas vers section suivante */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/[0.04] to-transparent pointer-events-none" />
     </section>
   );
 };

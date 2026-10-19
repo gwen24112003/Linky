@@ -7,6 +7,8 @@ import { ArrowRight, MapPin, Calendar } from 'lucide-react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
 const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
@@ -122,16 +124,16 @@ export const TeamView: React.FC = () => {
                   <h2 className="font-heading font-bold text-2xl md:text-3xl" style={{ color: NAVY }}>
                     {m.name}
                   </h2>
-                  <p className="text-sm md:text-base mt-1" style={{ color: GOLD }}>
+                  <p className="text-sm md:text-base mt-1" style={{ color: GOLD_INK }}>
                     {m.role}
                   </p>
                   <div className="mt-5 flex flex-col gap-2 text-sm text-gray-500">
                     <span className="inline-flex items-center gap-2">
-                      <MapPin size={14} style={{ color: GOLD }} />
+                      <MapPin size={14} style={{ color: GOLD_INK }} />
                       {m.location}
                     </span>
                     <span className="inline-flex items-center gap-2">
-                      <Calendar size={14} style={{ color: GOLD }} />
+                      <Calendar size={14} style={{ color: GOLD_INK }} />
                       {m.experience}
                     </span>
                   </div>

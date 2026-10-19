@@ -8,7 +8,7 @@ export default function NotFound() {
       <Header />
       <main className="flex-grow flex items-center justify-center py-24">
         <div className="text-center px-6">
-          <p className="text-sm font-semibold tracking-[0.25em] uppercase mb-4" style={{ color: '#C9A84C' }}>
+          <p className="text-sm font-semibold tracking-[0.25em] uppercase mb-4" style={{ color: '#8A6A1C' }}>
             Erreur 404
           </p>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">Page introuvable</h1>

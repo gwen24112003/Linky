@@ -1,7 +1,8 @@
 import React from 'react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
-const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 
 const pillars = [
@@ -39,7 +40,7 @@ export const SystemSection: React.FC = () => {
           style={{ color: NAVY }}
         >
           On ne remplace pas vos outils.{' '}
-          <span style={{ color: GOLD }}>On les fait enfin travailler ensemble.</span>
+          <span style={{ color: GOLD_INK }}>On les fait enfin travailler ensemble.</span>
         </h2>
 
         <p className="mt-7 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
@@ -59,7 +60,7 @@ export const SystemSection: React.FC = () => {
             >
               <span
                 className="font-heading font-bold text-2xl leading-none mb-4"
-                style={{ color: GOLD }}
+                style={{ color: GOLD_INK }}
               >
                 {p.n}
               </span>

@@ -7,6 +7,8 @@ import { ArrowRight, Check } from 'lucide-react';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
 
@@ -103,7 +105,7 @@ export default function CasClientsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14">
               {profilCriteria.map((item) => (
                 <div key={item.n} className="grid grid-cols-[2.5rem_1fr] gap-x-4 py-7 border-t" style={{ borderColor: RULE }}>
-                  <span className="font-heading font-bold text-base leading-none pt-1" style={{ color: GOLD }}>
+                  <span className="font-heading font-bold text-base leading-none pt-1" style={{ color: GOLD_INK }}>
                     {item.n}
                   </span>
                   <div>
@@ -128,13 +130,13 @@ export default function CasClientsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
               <div className="border-t pt-7" style={{ borderColor: NAVY }}>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-5" style={{ color: GOLD }}>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-5" style={{ color: GOLD_INK }}>
                   Ce qu'on vous donne
                 </p>
                 <ul className="space-y-3.5">
                   {dealGive.map((d) => (
                     <li key={d} className="flex items-start gap-3 text-sm md:text-[15px] text-gray-700 leading-relaxed">
-                      <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD }} />
+                      <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD_INK }} />
                       <span>{d}</span>
                     </li>
                   ))}
@@ -148,7 +150,7 @@ export default function CasClientsPage() {
                 <ul className="space-y-3.5">
                   {dealTake.map((d) => (
                     <li key={d} className="flex items-start gap-3 text-sm md:text-[15px] text-gray-700 leading-relaxed">
-                      <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD }} />
+                      <Check size={15} strokeWidth={3} className="mt-1 shrink-0" style={{ color: GOLD_INK }} />
                       <span>{d}</span>
                     </li>
                   ))}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
-const GOLD = '#C9A84C';
+// Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
+const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 const RULE = 'rgba(26,35,50,0.16)';
 
@@ -30,7 +31,7 @@ const stats = [
 
 export const ContextSection: React.FC = () => {
   return (
-    <section id="contexte" className="py-24 md:py-32 scroll-mt-24" style={{ background: '#FAF7F0' }} aria-labelledby="context-title">
+    <section id="contexte" className="py-24 md:py-32 scroll-mt-24 bg-white" aria-labelledby="context-title">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="mb-10 md:mb-12">
           <SectionKicker label="Le contexte" index="03" />
@@ -71,7 +72,7 @@ export const ContextSection: React.FC = () => {
           style={{ color: NAVY, borderColor: RULE }}
         >
           Septembre 2027, la facturation électronique sera obligatoire pour toutes les PME.{' '}
-          <span style={{ color: GOLD }}>Le temps presse.</span>
+          <span style={{ color: GOLD_INK }}>Le temps presse.</span>
         </p>
       </div>
     </section>

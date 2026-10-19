@@ -7,18 +7,22 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import type { NavLink } from '@/types';
 
+const NAVY = '#1A2332';
+const GOLD = '#C9A84C';
+
+// "Contact" n'est plus un lien : c'est le bouton de réservation, toujours visible.
+const navLinks: NavLink[] = [
+  { label: 'Services', href: '/services' },
+  { label: 'Cas clients', href: '/cas-clients' },
+  { label: 'Articles', href: '/articles' },
+  { label: 'Équipe', href: '/equipe' },
+];
+
+const mobileLinks: NavLink[] = [{ label: 'Accueil', href: '/' }, ...navLinks];
+
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  const navLinks: NavLink[] = [
-    { label: 'Accueil', href: '/' },
-    { label: 'Services', href: '/services' },
-    { label: 'Cas clients', href: '/cas-clients' },
-    { label: 'Articles', href: '/articles' },
-    { label: 'Équipe', href: '/equipe' },
-    { label: 'Contact', href: '/contact' },
-  ];
 
   // Ferme le menu lors d'un changement de route
   useEffect(() => {
@@ -42,20 +46,16 @@ export const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
-  const navColor = 'text-gray-600';
-  const burgerColor = 'text-gray-700';
+  const isActive = (href: string) => {
+    const currentPath = pathname ?? '/';
+    const normalized =
+      currentPath.endsWith('/') && currentPath !== '/' ? currentPath.slice(0, -1) : currentPath;
+    return normalized === href || (href !== '/' && normalized.startsWith(href));
+  };
 
   return (
     <>
-      <motion.header
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-        animate={{
-          backgroundColor: 'rgba(255,255,255,0.75)',
-          backdropFilter: 'blur(12px)',
-          borderBottomColor: 'rgba(243,244,246,1)',
-        }}
-        style={{ borderBottomWidth: 1, borderBottomStyle: 'solid' }}
-      >
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <nav className="container mx-auto px-6 py-1 md:py-1.5">
           <div className="relative flex items-center justify-between">
             {/* Logo */}
@@ -72,51 +72,45 @@ export const Header: React.FC = () => {
               />
             </Link>
 
-            {/* Desktop Navigation - centered absolutely */}
-            <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+            {/* Navigation ordinateur + bouton de réservation */}
+            <div className="hidden lg:flex items-center gap-9">
               {navLinks.map((link) => {
-                const currentPath = pathname ?? '/';
-                const normalized = currentPath.endsWith('/') && currentPath !== '/'
-                  ? currentPath.slice(0, -1)
-                  : currentPath;
-                const isActive =
-                  normalized === link.href ||
-                  (link.href !== '/' && normalized.startsWith(link.href));
-                return link.href.startsWith('#') ? (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className={`text-xl transition-colors duration-200 font-bold ${navColor}`}
-                  >
-                    {link.label}
-                  </a>
-                ) : (
+                const active = isActive(link.href);
+                return (
                   <div key={link.label} className="relative">
                     <Link
                       href={link.href}
                       onClick={handleNavClick}
-                      className={`text-xl transition-colors duration-200 font-bold ${isActive ? '' : navColor}`}
-                      style={isActive ? { color: '#C9A84C' } : undefined}
+                      className={`text-[13px] font-semibold uppercase tracking-[0.14em] transition-colors ${
+                        active ? 'text-[#1A2332]' : 'text-[#5b6472] hover:text-[#1A2332]'
+                      }`}
                     >
                       {link.label}
                     </Link>
-                    {isActive && (
+                    {active && (
                       <motion.div
                         layoutId="nav-indicator"
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
-                        style={{ background: '#C9A84C' }}
+                        className="absolute -bottom-1.5 left-0 right-0 h-0.5"
+                        style={{ background: GOLD }}
                         transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                       />
                     )}
                   </div>
                 );
               })}
+              <Link
+                href="/contact"
+                onClick={handleNavClick}
+                className="inline-flex items-center px-5 py-2.5 rounded-md text-sm font-semibold bg-[#1A2332] text-[#FAF7F0] hover:bg-[#26334a] transition-colors"
+              >
+                Pré-audit gratuit
+              </Link>
             </div>
 
             {/* Burger button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`lg:hidden transition-colors z-[60] ${burgerColor}`}
+              className="lg:hidden transition-colors z-[60] text-gray-700"
               aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               aria-expanded={isMenuOpen}
             >
@@ -124,44 +118,40 @@ export const Header: React.FC = () => {
             </button>
           </div>
         </nav>
-      </motion.header>
+      </header>
 
       {/* Overlay plein écran */}
       <div
         className={`fixed inset-0 z-[55] flex flex-col lg:hidden transition-all duration-500 ${
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
-        style={{ background: '#1A2332' }}
+        style={{ background: NAVY }}
         aria-hidden={!isMenuOpen}
       >
-        <div className="flex flex-col items-center justify-center flex-1 gap-10 px-8">
-          {navLinks.map((link, index) =>
-            link.href.startsWith('#') ? (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)}
-                className={`text-4xl font-bold text-white/80 hover:text-white transition-all duration-300 hover:scale-105 ${
-                  isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-                }`}
-                style={{ transitionDelay: `${index * 80 + 100}ms` }}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={handleNavClick}
-                className={`text-4xl font-bold text-white/80 hover:text-white transition-all duration-300 hover:scale-105 ${
-                  isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-                }`}
-                style={{ transitionDelay: `${index * 80 + 100}ms` }}
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+        <div className="flex flex-col items-center justify-center flex-1 gap-9 px-8">
+          {mobileLinks.map((link, index) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              onClick={handleNavClick}
+              className={`text-4xl font-bold text-white/80 hover:text-white transition-all duration-300 hover:scale-105 ${
+                isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: `${index * 80 + 100}ms` }}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            onClick={handleNavClick}
+            className={`mt-4 inline-flex items-center px-7 py-4 rounded-lg text-lg font-semibold transition-all duration-300 ${
+              isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+            }`}
+            style={{ background: GOLD, color: NAVY, transitionDelay: `${mobileLinks.length * 80 + 100}ms` }}
+          >
+            Réserver le pré-audit gratuit
+          </Link>
         </div>
 
         <div className="pb-12 flex justify-center">

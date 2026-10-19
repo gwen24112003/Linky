@@ -72,7 +72,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => 
                 activeId === heading.id ? 'font-semibold border-l-2 pl-3' : 'text-gray-600 pl-3'
               }`}
               style={
-                activeId === heading.id ? { color: '#C9A84C', borderColor: '#C9A84C' } : undefined
+                activeId === heading.id ? { color: '#8A6A1C', borderColor: '#C9A84C' } : undefined
               }
               onClick={(e) => {
                 e.preventDefault();

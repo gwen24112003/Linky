@@ -283,12 +283,13 @@ article strong {
 }
 
 article a {
-  color: #C9A84C !important;
-  text-decoration: none !important;
+  color: #8A6A1C !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
 }
 
 article a:hover {
-  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
 }
 
 article hr {

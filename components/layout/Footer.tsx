@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Instagram, Linkedin, Youtube } from 'lucide-react';
 import type { FooterSection } from '@/types';
+import { MobileCTABar } from '@/components/layout/MobileCTABar';
 
 const GOLD = '#C9A84C';
 const FOOTER_BG = '#11161F';
@@ -51,7 +52,7 @@ export const Footer: React.FC = () => {
       className="text-white"
       style={{ background: FOOTER_BG, borderTop: '1px solid rgba(255,255,255,0.10)' }}
     >
-      <div className="container mx-auto px-6 max-w-6xl py-16 md:py-20">
+      <div className="container mx-auto px-6 max-w-6xl pt-16 md:pt-20 pb-28 lg:pb-20">
         {/* Haut : marque (gauche) + colonnes de liens (droite) */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 pb-12 border-b border-white/10">
           <div className="md:col-span-5">
@@ -115,6 +116,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      <MobileCTABar />
     </footer>
   );
 };
