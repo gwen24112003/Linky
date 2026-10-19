@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SectionKicker } from '@/components/ui/SectionKicker';
+import { TrackFirstUse } from '@/components/analytics/TrackFirstUse';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
@@ -54,7 +55,9 @@ export const ToolPage: React.FC<ToolPageProps> = ({
         </section>
 
         <section className="py-14 md:py-20 bg-white">
-          <div className="container mx-auto px-6 max-w-6xl">{calculator}</div>
+          <div className="container mx-auto px-6 max-w-6xl">
+            <TrackFirstUse tool={breadcrumbName}>{calculator}</TrackFirstUse>
+          </div>
         </section>
 
         <section className="py-20 md:py-28" style={{ background: PAPER }}>

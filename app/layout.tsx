@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Bricolage_Grotesque, Lexend } from 'next/font/google';
 import './globals.css';
+import { ClickTracker } from '@/components/analytics/ClickTracker';
+import { UMAMI_WEBSITE_ID } from '@/lib/analytics';
 
 // Polices auto-hébergées au build (next/font) : aucune requête navigateur
 // vers Google au runtime, donc aucune fuite d'IP vers Google (RGPD) + plus rapide.
@@ -164,8 +166,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+        {/* Mesure d'audience Umami, sans cookie, servie par notre serveur ; inactive hors de opusadvisor.fr. */}
+        <script defer src="/s.js" data-website-id={UMAMI_WEBSITE_ID} data-domains="opusadvisor.fr" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ClickTracker />
+      </body>
     </html>
   );
 }

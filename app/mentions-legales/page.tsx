@@ -148,8 +148,9 @@ export default function MentionsLegalesPage() {
               </h2>
               <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
                 <p>
-                  Le site ne collecte aucune donnée personnelle à votre insu. Les seules données
-                  recueillies sont celles que vous transmettez volontairement, par e-mail, via le
+                  Le site ne collecte aucune donnée personnelle à votre insu. En dehors de la mesure
+                  d'audience anonyme décrite ci-dessous, les seules données recueillies sont celles
+                  que vous transmettez volontairement, par e-mail, via le
                   formulaire de contact ou via la prise de rendez-vous (pré-audit). Elles servent
                   uniquement à répondre à votre demande et ne sont ni vendues, ni cédées à des
                   tiers.
@@ -176,15 +177,42 @@ export default function MentionsLegalesPage() {
               </div>
             </div>
 
+            {/* Mesure d'audience */}
+            <div className="mb-12 md:mb-16">
+              <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6" style={{ color: NAVY }}>
+                Mesure d'audience
+              </h2>
+              <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
+                <p>
+                  Pour savoir quelles pages sont lues et quels outils servent, le site utilise Umami,
+                  un outil de mesure d'audience installé sur notre propre serveur. Il ne dépose aucun
+                  cookie et ne suit pas les visiteurs d'un site à l'autre.
+                </p>
+                <p>
+                  Sont enregistrés : la page consultée, le site d'où vous venez, le type de navigateur,
+                  de système et d'appareil, la langue, ainsi que le pays, la région et la ville de
+                  connexion. Votre adresse IP sert à déduire cette localisation, puis elle n'est pas
+                  conservée. Nous comptons aussi certains clics (demande de pré-audit, téléphone,
+                  e-mail) et l'utilisation des calculateurs, sans jamais enregistrer les montants
+                  saisis.
+                </p>
+                <p>
+                  Ces statistiques restent sur notre serveur et ne sont partagées avec personne. Ce
+                  dispositif, limité à la mesure d'audience, ne nécessite pas votre consentement. Vous
+                  pouvez néanmoins le bloquer avec un bloqueur de publicités ou de traceurs.
+                </p>
+              </div>
+            </div>
+
             {/* Cookies */}
             <div>
               <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6" style={{ color: NAVY }}>
                 Cookies
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Le site n'utilise pas de cookies publicitaires ni de traceurs de profilage. Seuls
-                des éléments techniques strictement nécessaires à son affichage peuvent être
-                déposés.
+                Le site n'utilise pas de cookies publicitaires ni de traceurs de profilage, et la
+                mesure d'audience fonctionne sans cookie. Seuls des éléments techniques strictement
+                nécessaires à son affichage peuvent être déposés.
               </p>
             </div>
           </div>

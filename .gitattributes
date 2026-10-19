@@ -3,3 +3,5 @@
 # Unites systemd copiees telles quelles sur le serveur
 infra/*.service text eol=lf
 infra/*.timer text eol=lf
+# Configuration Umami copiée telle quelle sur le serveur
+infra/umami/* text eol=lf
