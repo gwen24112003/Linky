@@ -1,5 +1,5 @@
 ---
-title: "13 heures par semaine sur l'administratif : le vrai salaire caché du patron BTP"
+title: "Temps administratif des artisans du BTP : 13 h par semaine"
 metaDescription: "Une étude d'avril 2026 chiffre à 13 h 21 par semaine le temps qu'un patron du bâtiment passe sur l'administratif. Soit une journée et demie. Où elle part, et comment en récupérer la moitié."
 date: "2026-06-02"
 keywords: ["temps administratif artisan BTP", "paperasse bâtiment", "gestion administrative second œuvre", "productivité patron BTP", "facturation électronique 2026"]

@@ -23,7 +23,7 @@ Tu es éditeur du blog Opus Advisor (opusadvisor.fr), conseil ops pour les patro
 ÉTAPE 3 — Rédaction (si un bon angle existe)
 Format du fichier public/articles/<slug>.md (slug en kebab-case, sans accent) :
 ---
-title: "Titre concret, sans 'Opus Advisor' (le template ajoute déjà | Opus Advisor), ~45-60 caractères"
+title: "Titre concret, sans 'Opus Advisor' (le template ajoute déjà | Opus Advisor), ~45-60 caractères, construit sur les mots que les patrons tapent sur Google (vérifier avec les suggestions : https://suggestqueries.google.com/complete/search?client=firefox&hl=fr&gl=fr&q=<sujet>) : modèle, exemple, calcul, obligation…"
 metaDescription: "150-160 caractères max, mot-clé inclus, sans parallélisme négatif"
 date: "AAAA-MM-JJ"   # la date du jour récupérée à l'étape 1
 keywords: ["3 à 5 mots-clés BTP pertinents"]

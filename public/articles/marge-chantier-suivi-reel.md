@@ -1,6 +1,6 @@
 ---
-title: "Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre"
-metaDescription: "Les petites dépenses non suivies représentent 5 à 15 % du déboursé sec, et une équipe perd vite 40 000 €/an en heures improductives. Pourquoi le chiffrage ne suffit pas."
+title: "Calculer la marge d'un chantier : prévue contre réelle"
+metaDescription: "Comment calculer la marge réelle d'un chantier BTP : déboursé sec, heures improductives, petites dépenses oubliées. Avec un calculateur gratuit."
 date: "2026-07-03"
 keywords: ["marge chantier BTP", "rentabilité chantier", "déboursé sec", "suivi coûts second œuvre", "heures improductives BTP"]
 ---
@@ -45,7 +45,7 @@ Avec ça, à la fin de chaque chantier, vous avez un chiffre : marge prévue con
 
 ## Par où commencer
 
-Prenez votre dernier chantier terminé. Essayez de reconstituer, même à la louche : heures réellement passées, total des achats, avenants livrés. Comparez au devis. L'écart va vous surprendre, et il vous dira dans quel sens vous vous trompez sur vos prix.
+Prenez votre dernier chantier terminé. Essayez de reconstituer, même à la louche : heures réellement passées, total des achats, avenants livrés. Comparez au devis. L'écart va vous surprendre, et il vous dira dans quel sens vous vous trompez sur vos prix. Pour aller vite, notre [calculateur de marge chantier](/outils/calcul-marge-chantier/) fait le calcul à votre place.
 
 C'est exactement ce qu'on met en place au pré-audit : un suivi de marge chantier par chantier, à partir de vos données réelles, sans que vous ayez à ressaisir quoi que ce soit. On ne devine plus si un chantier est rentable. On le sait.
 

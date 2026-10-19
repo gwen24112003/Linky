@@ -2,8 +2,8 @@
     {
         "id": 18,
         "slug": "marge-chantier-suivi-reel",
-        "title": "Votre dernier chantier était-il rentable ? La plupart des patrons ne savent pas répondre",
-        "description": "Petites dépenses non suivies, heures improductives, avenants oubliés : où part vraiment votre marge chantier, et pourquoi le chiffrage ne suffit pas.",
+        "title": "Calculer la marge d'un chantier : prévue contre réelle",
+        "description": "Comment calculer la marge réelle d'un chantier BTP : déboursé sec, heures improductives, petites dépenses oubliées. Avec un calculateur gratuit.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "stethoscope",
         "publishedAt": "2026-07-03",
@@ -22,8 +22,8 @@
     {
         "id": 16,
         "slug": "sous-traitance-btp-paiement-direct",
-        "title": "Sous-traitance BTP : le droit qui vous fait payer même quand le donneur d'ordre coule",
-        "description": "47 % des factures BTP sont payées en retard. La loi de 1975 donne au sous-traitant un droit au paiement direct par le client final, souvent ignoré.",
+        "title": "Sous-traitance BTP : paiement direct et autoliquidation de TVA",
+        "description": "Sous-traitant BTP : obtenir le paiement direct du maître d'ouvrage (loi de 1975) et mettre la bonne mention d'autoliquidation de TVA sur vos factures.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "file-text",
         "publishedAt": "2026-06-10",
@@ -32,7 +32,7 @@
     {
         "id": 15,
         "slug": "temps-administratif-artisans-btp",
-        "title": "13 heures par semaine sur l'administratif : le vrai salaire caché du patron BTP",
+        "title": "Temps administratif des artisans du BTP : 13 h par semaine",
         "description": "Une étude d'avril 2026 chiffre à 13 h 21/semaine le temps administratif d'un patron du bâtiment. Où il part, et comment en récupérer la moitié.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "clock",
@@ -42,7 +42,7 @@
     {
         "id": 14,
         "slug": "penurie-main-doeuvre-organisation",
-        "title": "Pénurie de main-d'œuvre BTP : garder vos meilleurs se joue sur l'organisation",
+        "title": "Pénurie de main-d'œuvre dans le BTP : garder vos bons ouvriers",
         "description": "Recrutements en baisse de 16 % dans le BTP en 2026, profils qualifiés introuvables. Garder vos bons gars se joue surtout sur l'organisation des chantiers.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "users",
@@ -52,7 +52,7 @@
     {
         "id": 13,
         "slug": "maprimerenov-2026",
-        "title": "MaPrimeRénov' 2026 : trois changements de règles en un an. Vos dossiers suivent-ils ?",
+        "title": "MaPrimeRénov' 2026 : ce qui change pour les dossiers des artisans",
         "description": "Suspendue, rouverte, puis durcie avec l'exclusion du gaz : MaPrimeRénov' a changé trois fois en 2026. Sur votre boîte, ce qui coûte cher, c'est le dossier.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "alert-triangle",
@@ -72,8 +72,8 @@
     {
         "id": 12,
         "slug": "relances-automatiques-impayes-btp",
-        "title": "1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie.",
-        "description": "Un impayé BTP tourne autour de 3 000 €, souvent faute de relance partie à temps. Monter une séquence automatique en 2 semaines, sans changer d'outil.",
+        "title": "Facture impayée dans le BTP : modèles de relance et séquence",
+        "description": "Modèles de relance de facture impayée pour le BTP : rappel, relance par mail, dernier rappel avant mise en demeure, et la séquence pour les automatiser.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "wallet",
         "publishedAt": "2026-05-01",
@@ -82,7 +82,7 @@
     {
         "id": 7,
         "slug": "automatiser-sans-erp",
-        "title": "Votre boîte BTP peut s'équiper pour 200 à 500 € par mois au lieu d'un logiciel à 50 000 €",
+        "title": "Logiciel BTP : s'équiper pour 200 à 500 € par mois, sans ERP",
         "description": "Un commercial vous propose un tout-en-un à 35 000 € ? Le plus souvent, 200 à 500 €/mois d'outils existants couvrent 90 % du besoin. Pourquoi, et comment.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "workflow",
@@ -102,7 +102,7 @@
     {
         "id": 3,
         "slug": "organisation-avant-developpement",
-        "title": "Avant d'investir 30 000 € dans un nouvel outil, regardez ce que vous avez déjà",
+        "title": "Changer de logiciel BTP ? 4 questions avant de signer",
         "description": "Un patron sur deux veut changer de logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions avant de signer un devis à 30 000 €.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "layers",
@@ -112,8 +112,8 @@
     {
         "id": 2,
         "slug": "applications-glide",
-        "title": "Faut-il une app sur mesure pour vos chefs de chantier ? Ça dépend du projet.",
-        "description": "Glide, Softr, Bubble pour une boîte BTP : utiles dans 3 cas précis, inutiles ailleurs. Comment savoir avant d'investir 5 000 à 15 000 € dans une app maison.",
+        "title": "Appli de suivi de chantier sur mesure : quand ça vaut le coup",
+        "description": "Glide, Softr, Bubble : une application de suivi de chantier sur mesure est utile dans 3 cas précis. Comment le savoir avant d'y mettre 5 000 à 15 000 €.",
         "imageSrc": "/images/Logo_1200x630.png",
         "icon": "layout-dashboard",
         "publishedAt": "2026-04-25",

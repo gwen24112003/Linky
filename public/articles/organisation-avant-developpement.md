@@ -1,5 +1,5 @@
 ---
-title: "Avant d'investir 30 000 € dans un nouvel outil, regardez ce que vous avez déjà"
+title: "Changer de logiciel BTP ? 4 questions avant de signer"
 metaDescription: "Un patron sur deux qu'on rencontre veut acheter un nouveau logiciel. Le plus souvent, le frein vient de l'usage, pas de l'outil. Quatre questions à se poser avant de signer un devis à 30 000 €."
 date: "2026-04-25"
 keywords: ["changement logiciel BTP", "Batappli vs Obat", "audit usage logiciel bâtiment", "France Num BTP", "investissement numérique TPE BTP"]

@@ -1,13 +1,13 @@
 ---
-title: "1 artisan sur 3 attend ses paiements plus de 60 jours. Le système de relance qui arrête l'hémorragie."
-metaDescription: "Dans le BTP second œuvre, un impayé tourne autour de 3 000 € en moyenne, et la première cause reste la relance qui n'est jamais partie. Comment monter une séquence de relance automatique en 2 semaines, sans changer de logiciel."
+title: "Facture impayée dans le BTP : modèles de relance et séquence"
+metaDescription: "Modèles de relance de facture impayée pour le BTP : rappel, relance par mail, dernier rappel avant mise en demeure, et la séquence pour les automatiser."
 date: "2026-05-01"
-keywords: ["relance automatique impayés BTP", "recouvrement artisan bâtiment", "DSO entreprise BTP", "Make Batappli relance", "indemnité forfaitaire 40 euros"]
+keywords: ["relance facture impayée", "modèle relance facture impayée", "mise en demeure facture impayée", "relance impayés BTP", "indemnité forfaitaire 40 euros"]
 ---
 
 *Catégorie : Outils & organisation BTP — Lecture : 7 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-Les patrons de boîtes d'élec, de plomberie ou de chauffage-clim qu'on rencontre ont presque tous le même angle mort. Entre 8 et 20 % du chiffre facturé tourne à plus de 60 jours, et personne ne sait précisément qui doit quoi à quelle date. Le client n'est pas de mauvaise volonté, c'est le système qui manque. Voici comment on cadre le sujet : la séquence à mettre en place, les vrais délais légaux, et comment câbler tout ça sur Batappli, Obat, Tolteck ou EBP sans changer d'outil.
+Les patrons de boîtes d'élec, de plomberie ou de chauffage-clim qu'on rencontre ont presque tous le même angle mort. Entre 8 et 20 % du chiffre facturé tourne à plus de 60 jours, et personne ne sait précisément qui doit quoi à quelle date. Le client n'est pas de mauvaise volonté, c'est le système qui manque. Voici comment on cadre le sujet : la séquence à mettre en place, les vrais délais légaux, quatre modèles de relance prêts à copier, et comment câbler tout ça sur Batappli, Obat, Tolteck ou EBP sans changer d'outil.
 
 ## Le vrai coût des impayés dans le second œuvre
 
@@ -33,7 +33,7 @@ Le Code de commerce prévoit plusieurs leviers qui passent souvent à la trappe.
 
 **Le délai maximum de paiement entre professionnels est plafonné.** Article L441-10 du Code de commerce : 60 jours à compter de l'émission de la facture, ou 45 jours fin de mois si c'est expressément mentionné dans vos CGV. Tout délai supérieur convenu est nul. Vos CGV doivent le rappeler clairement.
 
-**Les pénalités de retard sont dues automatiquement.** Pas besoin de mise en demeure préalable. Le taux est au minimum celui de la BCE majoré de 10 points, soit autour de 13-14 % en 2026, à mentionner sur la facture et les CGV. Beaucoup d'artisans BTP ont la mention par défaut sur leur logiciel et ne s'en servent jamais.
+**Les pénalités de retard sont dues automatiquement.** Pas besoin de mise en demeure préalable. Leur taux est celui fixé dans vos CGV, sans pouvoir être inférieur à trois fois le taux d'intérêt légal ; si vos CGV ne disent rien, c'est le taux de la BCE majoré de 10 points. Il doit figurer sur la facture et dans les CGV. Beaucoup d'artisans BTP ont la mention par défaut sur leur logiciel et ne s'en servent jamais.
 
 **L'indemnité forfaitaire de 40 € pour frais de recouvrement est due de plein droit.** Article D441-5 du Code de commerce, pour chaque facture payée en retard. Si vous facturez 30 chantiers par mois et qu'un tiers paye en retard, c'est 400 € à 600 € par mois que vous n'allez jamais chercher.
 
@@ -51,9 +51,79 @@ La séquence type qui marche dans cette niche tient en 5 étapes. Elle commence 
 
 **J+15 : mise en demeure formelle par lettre recommandée.** Modèle pré-rédigé avec mention des pénalités de retard et de l'indemnité forfaitaire de 40 €. Cette étape change la perception du dossier côté client : vous arrêtez de relancer, vous commencez à constituer un dossier.
 
-**J+30 à J+45 : décision recouvrement.** Soit vous sous-traitez à une plateforme de recouvrement (GCollect, Rubypayeur, ou un huissier), soit vous saisissez le tribunal de commerce pour les montants supérieurs à 5 000 €. À ce stade, 80 % des dossiers se débloquent rien qu'à l'annonce.
+**J+30 à J+45 : décision recouvrement.** Soit vous sous-traitez à une plateforme de recouvrement (GCollect, Rubypayeur, ou un huissier), soit vous demandez une injonction de payer (au tribunal de commerce si votre client est une entreprise). À ce stade, 80 % des dossiers se débloquent rien qu'à l'annonce.
 
 Cette séquence est exécutée à 90 % par des outils, à 10 % par un humain. C'est ce ratio qu'il faut viser.
+
+## Les modèles de relance, prêts à copier
+
+Quatre modèles qui suivent la séquence ci-dessus. Remplacez les éléments entre crochets. Ils sont écrits pour un client professionnel : si votre client est un particulier, retirez la mention des pénalités de retard et de l'indemnité de 40 €, qui ne s'appliquent qu'entre professionnels. Pour un particulier, la somme due porte intérêt au taux légal à partir de la mise en demeure (article 1231-6 du Code civil).
+
+### Modèle 1 : rappel avant échéance (J-3, par mail)
+
+> **Objet : Facture [numéro] : échéance le [date]**
+>
+> Bonjour [Prénom],
+>
+> Petit rappel : notre facture n° [numéro] du [date], d'un montant de [montant] € TTC, arrive à échéance le [date d'échéance]. Vous la trouverez de nouveau en pièce jointe.
+>
+> Si le règlement est déjà parti, ne tenez pas compte de ce message.
+>
+> Bonne journée,
+>
+> [Signature]
+
+### Modèle 2 : première relance (J+1, par mail)
+
+> **Objet : Facture [numéro] : échéance dépassée**
+>
+> Bonjour [Prénom],
+>
+> Sauf erreur de notre part, la facture n° [numéro] du [date] ([montant] € TTC), arrivée à échéance hier, reste à régler.
+>
+> Pouvez-vous nous indiquer la date de paiement prévue ? Si un point des travaux pose problème, appelez-moi directement au [téléphone] et on le règle ensemble.
+>
+> Merci d'avance,
+>
+> [Signature]
+
+### Modèle 3 : dernier rappel avant mise en demeure (après l'appel de J+8, par mail)
+
+> **Objet : Facture [numéro] : dernier rappel avant mise en demeure**
+>
+> Bonjour [Prénom],
+>
+> Malgré notre relance du [date] et notre échange téléphonique du [date], la facture n° [numéro] ([montant] € TTC), échue depuis le [date d'échéance], n'est toujours pas réglée.
+>
+> Sans paiement d'ici le [date], nous vous adresserons une mise en demeure par lettre recommandée, avec application des pénalités de retard prévues à nos conditions générales et de l'indemnité forfaitaire de 40 € pour frais de recouvrement.
+>
+> Nous préférerions en rester là.
+>
+> [Signature]
+
+### Modèle 4 : mise en demeure (J+15, lettre recommandée avec accusé de réception)
+
+> [Votre entreprise, adresse, SIRET]
+>
+> [Nom du client, adresse]
+>
+> [Ville], le [date]
+>
+> **Objet : Mise en demeure de payer, facture n° [numéro]**
+>
+> Madame, Monsieur,
+>
+> Par la présente, je vous mets en demeure de régler, dans un délai de 8 jours à compter de la réception de ce courrier, la somme de [montant] € TTC correspondant à notre facture n° [numéro] du [date], échue le [date d'échéance], relative aux travaux réalisés à [adresse du chantier].
+>
+> Conformément à l'article L441-10 du Code de commerce, cette somme est majorée des pénalités de retard prévues à nos conditions générales de vente, ainsi que de l'indemnité forfaitaire de 40 € pour frais de recouvrement prévue à l'article D441-5 du même code.
+>
+> À défaut de paiement dans ce délai, je saisirai la juridiction compétente sans autre avis.
+>
+> Veuillez agréer, Madame, Monsieur, mes salutations distinguées.
+>
+> [Nom, fonction, signature]
+
+Le plus dur n'est pas d'écrire ces messages, c'est de les envoyer à la bonne date, à chaque facture, sans que vous ayez à y penser.
 
 ## Comment l'automatiser sur vos outils actuels
 

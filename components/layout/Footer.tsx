@@ -34,6 +34,7 @@ export const Footer: React.FC = () => {
       links: [
         { label: 'Cas clients', href: '/cas-clients' },
         { label: 'Articles', href: '/articles' },
+        { label: 'Calcul de marge chantier', href: '/outils/calcul-marge-chantier' },
         { label: 'Équipe', href: '/equipe' },
         { label: 'Contact', href: '/contact' },
       ],

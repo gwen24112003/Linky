@@ -1,6 +1,6 @@
 ---
-title: "Sous-traitance BTP : le droit qui vous fait payer même quand le donneur d'ordre coule"
-metaDescription: "47 % des factures BTP sont payées en retard. La loi de 1975 donne au sous-traitant un droit au paiement direct par le client final, souvent ignoré. Ce qu'il faut cadrer."
+title: "Sous-traitance BTP : paiement direct et autoliquidation de TVA"
+metaDescription: "Sous-traitant BTP : obtenir le paiement direct du maître d'ouvrage (loi de 1975) et mettre la bonne mention d'autoliquidation de TVA sur vos factures."
 date: "2026-06-10"
 keywords: ["sous-traitance BTP", "paiement direct loi 1975", "autoliquidation TVA sous-traitance", "retard paiement artisan", "contrat sous-traitance bâtiment"]
 ---

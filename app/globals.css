@@ -292,6 +292,23 @@ article a:hover {
   text-decoration-thickness: 2px !important;
 }
 
+article blockquote {
+  font-style: normal !important;
+  border-left: 3px solid #C9A84C !important;
+  background: #FAF7F0;
+  padding: 1rem 1.25rem !important;
+  margin: 1.5rem 0 !important;
+}
+
+article blockquote p::before,
+article blockquote p::after {
+  content: none !important;
+}
+
+article blockquote p {
+  margin-bottom: 0.75rem !important;
+}
+
 article hr {
   margin: 2rem 0 !important;
   border-color: #d1d5db !important;
