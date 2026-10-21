@@ -12,10 +12,10 @@ const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
 
 const SITE_URL = 'https://opusadvisor.fr';
-const PAGE_URL = `${SITE_URL}/consultant-btp-rennes/`;
-const PAGE_TITLE = 'Consultant BTP à Rennes : organisation et outils du second œuvre';
+const PAGE_URL = `${SITE_URL}/consultant-rennes/`;
+const PAGE_TITLE = 'Consultant en organisation et automatisation à Rennes';
 const PAGE_DESCRIPTION =
-  "Opus Advisor, consultants installés à Rennes, aide les électriciens, plombiers et chauffagistes d'Ille-et-Vilaine et des départements voisins à relier leurs outils. Pré-audit gratuit.";
+  "Opus Advisor, à Rennes, automatise la gestion des organismes de formation, conciergeries, agences immobilières et entreprises du BTP d'Ille-et-Vilaine et des départements voisins. Pré-audit gratuit.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -37,28 +37,28 @@ const zones = [
 
 const topics = [
   {
-    title: 'Les factures qui partent en retard et les relances oubliées',
-    text: 'Une séquence de relance qui part toute seule depuis votre logiciel de devis, à la bonne date.',
-    href: '/articles/relances-automatiques-impayes-btp/',
-    link: 'Modèles de relance',
+    title: "Les dossiers d'un organisme de formation",
+    text: 'Conventions, convocations et dossiers pour les financeurs générés et envoyés automatiquement.',
+    href: '/secteurs/formation/',
+    link: 'Organismes de formation',
   },
   {
-    title: 'Les situations de travaux et les retenues de garantie',
-    text: 'Des situations envoyées à date, des retenues notées dès la réception et réclamées un an après.',
-    href: '/outils/calcul-situation-de-travaux/',
-    link: 'Calculateur de situation',
+    title: 'La facturation des propriétaires d’une conciergerie',
+    text: 'Un seul traitement pour tous les propriétaires, des plannings de ménage qui suivent les réservations.',
+    href: '/secteurs/immobilier/',
+    link: 'Immobilier et conciergerie',
   },
   {
-    title: 'La marge de chaque chantier',
-    text: 'Les heures, les achats et les avenants rattachés au bon chantier, pour comparer le prévu au réel.',
-    href: '/outils/calcul-marge-chantier/',
-    link: 'Calculateur de marge',
+    title: 'Le suivi d’une équipe d’agents immobiliers',
+    text: 'Les dossiers de chaque agent, l’état de chaque bien et l’avancement des ventes, au même endroit.',
+    href: '/cas-clients/',
+    link: 'Le cas client',
   },
   {
-    title: 'La facturation électronique de septembre 2027',
-    text: 'Plateforme agréée, fichier clients complet, flux de factures recensés : ce qui doit être prêt pour émettre.',
-    href: '/articles/facturation-electronique-2026/',
-    link: 'Le point sur la réforme',
+    title: 'Les devis, situations et relances dans le BTP',
+    text: 'Des relances qui partent seules, des situations envoyées à date, la marge suivie chantier par chantier.',
+    href: '/secteurs/btp/',
+    link: 'BTP second œuvre',
   },
 ];
 
@@ -69,7 +69,7 @@ const faq = [
   },
   {
     q: 'Vous vendez un logiciel ?',
-    a: 'Non, on ne revend aucun logiciel. On part de ce que vous utilisez déjà, Batappli, Obat, Tolteck, EBP ou Excel, et on ne vous fait changer d’outil que si c’est vraiment nécessaire.',
+    a: 'Non, on ne revend aucun logiciel. On part de ce que vous utilisez déjà, votre logiciel métier, vos tableurs, vos mails, et on ne vous fait changer d’outil que si c’est vraiment nécessaire.',
   },
   {
     q: 'Combien ça coûte ?',
@@ -84,16 +84,16 @@ export default function ConsultantRennesPage() {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/` },
-        { '@type': 'ListItem', position: 2, name: 'Consultant BTP à Rennes', item: PAGE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Consultant à Rennes', item: PAGE_URL },
       ],
     },
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      name: 'Conseil en organisation pour les entreprises du BTP second œuvre',
+      name: 'Organisation et automatisation de la gestion des petites entreprises',
       url: PAGE_URL,
       provider: { '@id': `${SITE_URL}/#organization` },
-      serviceType: 'Consultant ops BTP',
+      serviceType: 'Organisation et automatisation de la gestion',
       areaServed: [
         { '@type': 'City', name: 'Rennes' },
         { '@type': 'AdministrativeArea', name: 'Ille-et-Vilaine' },
@@ -121,12 +121,12 @@ export default function ConsultantRennesPage() {
           <div className="container mx-auto px-6 max-w-6xl">
             <SectionKicker label="Rennes · Ille-et-Vilaine" className="mb-6" />
             <h1 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-6xl max-w-4xl" style={{ color: NAVY }}>
-              Consultant en organisation pour le BTP, à Rennes
+              Consultant en organisation et automatisation, à Rennes
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-              Opus Advisor est installé à Rennes. On travaille avec les entreprises d'électricité, de
-              plomberie et de chauffage-climatisation, de 8 à plus de 60 salariés, pour relier les outils qu'elles ont
-              déjà : logiciel de devis, Excel, WhatsApp, banque et comptabilité.
+              Opus Advisor est installé à Rennes. On automatise la gestion des petites entreprises de la région, avec
+              les outils qu'elles ont déjà : organismes de formation, conciergeries et agences immobilières, entreprises
+              du BTP.
             </p>
             <Link
               href="/contact/"
@@ -164,8 +164,8 @@ export default function ConsultantRennesPage() {
               Ce qu'on règle le plus souvent
             </h2>
             <p className="mt-6 text-lg text-gray-700 leading-relaxed max-w-2xl">
-              Ces problèmes reviennent dans la plupart des entreprises du second œuvre, quelle que soit
-              leur taille.
+              Selon le secteur, ce sont surtout ces sujets-là. Le point commun : des informations ressaisies dans
+              plusieurs outils, et un administratif qui déborde.
             </p>
             <ul className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-12">
               {topics.map((t) => (
@@ -188,13 +188,13 @@ export default function ConsultantRennesPage() {
             <div className="md:col-span-5">
               <SectionKicker label="Opus Pilotes" className="mb-6" />
               <h2 id="pilotes-titre" className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-4xl" style={{ color: NAVY }}>
-                Trois places en Bretagne et Pays-de-la-Loire
+                Trois places pour le BTP en Bretagne et Pays-de-la-Loire
               </h2>
             </div>
             <div className="md:col-span-7">
               <p className="text-lg text-gray-700 leading-relaxed">
-                On met en place le système complet chez trois entreprises du second œuvre de la région, à 40 % de moins
-                que le tarif habituel. En échange, on publie le cas au bout de six mois, chiffres à l'appui. On vient sur
+                Pour le bâtiment, on met en place le système complet chez trois entreprises du second œuvre de la région,
+                à 40 % de moins que le tarif habituel. En échange, on publie le cas au bout de six mois, chiffres à l'appui. On vient sur
                 site au moins deux fois pendant la mission.
               </p>
               <Link href="/cas-clients/" className="mt-5 inline-block font-semibold underline underline-offset-4 hover:opacity-70" style={{ color: GOLD_INK }}>

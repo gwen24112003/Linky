@@ -31,7 +31,7 @@ interface Member {
 const team: Member[] = [
   {
     name: 'Enzo Monnier',
-    role: 'Consultant ops · Fondateur',
+    role: 'Fondateur · Organisation et automatisation',
     photo: '/images/enzo.jpg',
     location: 'Rennes · Interventions partout en France',
     experience: 'Epitech · 5 ans de dev avant Opus',
@@ -39,7 +39,7 @@ const team: Member[] = [
     heading: 'Je code encore ce que je déploie chez vous.',
     bullets: [
       {
-        title: 'Dev pendant 5 ans, consultant ops depuis',
+        title: 'Développeur pendant 5 ans, consultant depuis',
         desc: "J'ai développé des logiciels métier pendant 5 ans avant de passer au conseil. Je code moi-même ce que j'installe chez vous : vous n'aurez jamais affaire à un sous-traitant.",
       },
       {

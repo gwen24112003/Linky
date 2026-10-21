@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
         { label: 'Cas clients', href: '/cas-clients' },
         { label: 'Articles', href: '/articles' },
         { label: 'Outils gratuits', href: '/outils' },
-        { label: 'Consultant BTP à Rennes', href: '/consultant-btp-rennes' },
+        { label: 'Consultant à Rennes', href: '/consultant-rennes' },
         { label: 'Équipe', href: '/equipe' },
         { label: 'Contact', href: '/contact' },
       ],

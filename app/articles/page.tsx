@@ -6,7 +6,7 @@ import { ArticlesGrid } from '@/components/pages/ArticlesGrid';
 import { getAllArticles } from '@/lib/articles';
 
 const PAGE_URL = 'https://opusadvisor.fr/articles';
-const PAGE_TITLE = 'Articles — BTP second œuvre';
+const PAGE_TITLE = 'Articles : organisation et gestion des entreprises du BTP';
 const PAGE_DESCRIPTION =
   "Conseils et retours terrain pour les patrons du BTP second œuvre : consolidation des outils, comparatifs Batappli/Obat/EBP, facturation 2027, automatisations.";
 

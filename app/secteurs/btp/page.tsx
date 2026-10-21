@@ -18,7 +18,7 @@ const GOLD_INK = '#8A6A1C';
 const RULE = 'rgba(26,35,50,0.16)';
 
 const PAGE_URL = 'https://opusadvisor.fr/secteurs/btp/';
-const PAGE_TITLE = 'Consultant ops BTP second œuvre : devis, relances, chantiers';
+const PAGE_TITLE = 'BTP second œuvre : automatiser devis, relances et suivi de chantier';
 const PAGE_DESCRIPTION =
   'On rend 10 h par semaine aux patrons du BTP second œuvre : relances automatiques, chantiers centralisés, devis qui partent vite. Outils gratuits et pré-audit de 30 minutes.';
 
@@ -65,8 +65,8 @@ const BtpResources = () => (
           Les articles pour le BTP
           <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
         </Link>
-        <Link href="/consultant-btp-rennes" className="group inline-flex items-center gap-2 font-semibold text-base" style={{ color: NAVY }}>
-          Entreprises du bâtiment autour de Rennes
+        <Link href="/consultant-rennes" className="group inline-flex items-center gap-2 font-semibold text-base" style={{ color: NAVY }}>
+          Nos interventions autour de Rennes
           <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
