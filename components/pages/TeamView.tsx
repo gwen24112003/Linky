@@ -47,8 +47,8 @@ const team: Member[] = [
         desc: "Un logiciel bien choisi mais mal installé ne sert à rien. J'ai souvent vu un outil payé 3 000 € par an utilisé à 20 %. Mon travail, c'est que celui que vous avez, ou celui qu'on choisira ensemble, serve vraiment au quotidien.",
       },
       {
-        title: 'Pourquoi le second œuvre',
-        desc: "Un électricien ou un plombier de 15 salariés fait 1 à 3 M€ de chiffre d'affaires par an. À cette taille, le patron est encore sur les chantiers et la compta se fait à 22 h. C'est là qu'on gagne 10 heures par semaine avec les bons outils, sans embaucher d'assistant.",
+        title: 'Pourquoi les petites entreprises',
+        desc: "Organisme de formation, conciergerie ou entreprise du bâtiment : à cette taille, le dirigeant est encore sur le terrain et l'administratif se fait le soir. C'est là qu'on gagne 10 heures par semaine avec les bons outils, sans embaucher d'assistant.",
       },
     ],
   },

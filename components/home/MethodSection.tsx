@@ -15,9 +15,9 @@ const steps = [
   { name: 'Gardien du système', price: '400 à 1 500 €/mois', line: "On surveille le système et on l'adapte quand votre boîte change." },
 ];
 
-export const MethodSection: React.FC = () => {
+export const MethodSection: React.FC<{ background?: string }> = ({ background = '#FFFFFF' }) => {
   return (
-    <section id="methode" className="py-24 md:py-32 bg-white scroll-mt-24" aria-labelledby="method-title">
+    <section id="methode" className="py-24 md:py-32 scroll-mt-24" style={{ background }} aria-labelledby="method-title">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end">
           <h2

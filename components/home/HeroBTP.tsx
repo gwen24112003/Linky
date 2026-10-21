@@ -29,7 +29,7 @@ export const HeroBTP: React.FC = () => {
           style={{ borderColor: RULE }}
         >
           <p className="md:col-span-4 text-sm text-gray-600 leading-relaxed">
-            Opus Advisor, deux associés installés à Rennes.
+            Opus Advisor, à Rennes.
             <br />
             On intervient partout en France.
           </p>

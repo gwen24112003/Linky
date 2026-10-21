@@ -32,6 +32,7 @@ export const Footer: React.FC = () => {
     {
       title: 'Navigation',
       links: [
+        { label: 'Secteurs', href: '/secteurs' },
         { label: 'Cas clients', href: '/cas-clients' },
         { label: 'Articles', href: '/articles' },
         { label: 'Outils gratuits', href: '/outils' },
@@ -54,7 +55,7 @@ export const Footer: React.FC = () => {
       className="text-white"
       style={{ background: FOOTER_BG, borderTop: '1px solid rgba(255,255,255,0.10)' }}
     >
-      <div className="container mx-auto px-6 max-w-6xl pt-16 md:pt-20 pb-28 lg:pb-20">
+      <div className="container mx-auto px-6 max-w-6xl pt-16 md:pt-20 pb-28 xl:pb-20">
         {/* Haut : marque (gauche) + colonnes de liens (droite) */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 pb-12 border-b border-white/10">
           <div className="md:col-span-5">
@@ -64,8 +65,8 @@ export const Footer: React.FC = () => {
               className="h-11 md:h-12 object-contain"
             />
             <p className="mt-5 text-sm md:text-[15px] text-white/55 leading-relaxed max-w-xs">
-              Consultant ops pour les patrons du BTP second œuvre. On rend 10 h par semaine à votre
-              entreprise.
+              Organisation et automatisation de la gestion des petites entreprises : formation,
+              immobilier, BTP. On rend 10 h par semaine à votre entreprise.
             </p>
           </div>
 
@@ -95,7 +96,7 @@ export const Footer: React.FC = () => {
         {/* Bas : copyright + réseaux */}
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="text-xs md:text-sm text-white/60">
-            © {new Date().getFullYear()} Opus Advisor · Consultant ops BTP second œuvre ·{' '}
+            © {new Date().getFullYear()} Opus Advisor · Automatisation de la gestion des PME ·{' '}
             <Link href="/mentions-legales" className="hover:text-white transition-colors duration-200">
               Mentions légales
             </Link>

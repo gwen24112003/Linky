@@ -1,27 +1,31 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { faqs } from '@/lib/faqData';
+import type { Faq } from '@/lib/faqData';
 
 const NAVY = '#1A2332';
 const RULE = 'rgba(26,35,50,0.16)';
 
 // Accordéon natif <details> : toutes les réponses sont dans le HTML (lisibles par Google,
 // par les moteurs d'IA et sans JavaScript), et l'ouverture marche au clavier sans code.
-export const FAQSectionBTP: React.FC = () => {
+export const FAQSection: React.FC<{ items: Faq[]; title?: string; background?: string }> = ({
+  items,
+  title = 'Vos questions',
+  background = '#FFFFFF',
+}) => {
   return (
-    <section className="py-24 md:py-32 bg-white" aria-labelledby="faq-title">
+    <section className="py-24 md:py-32" style={{ background }} aria-labelledby="faq-title">
       <div className="container mx-auto px-6 max-w-4xl">
         <h2
           id="faq-title"
           className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl mb-10 md:mb-12"
           style={{ color: NAVY }}
         >
-          Vos questions
+          {title}
         </h2>
 
         <div style={{ borderBottom: `1px solid ${RULE}` }}>
-          {faqs.map((faq, index) => (
+          {items.map((faq, index) => (
             <details key={faq.question} open={index === 0} className="group border-t" style={{ borderColor: RULE }}>
               <summary className="flex items-start justify-between gap-6 py-6 md:py-7 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                 <span

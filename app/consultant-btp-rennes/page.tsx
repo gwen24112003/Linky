@@ -124,7 +124,7 @@ export default function ConsultantRennesPage() {
               Consultant en organisation pour le BTP, à Rennes
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-              Opus Advisor, ce sont deux associés installés à Rennes. On travaille avec les entreprises d'électricité, de
+              Opus Advisor est installé à Rennes. On travaille avec les entreprises d'électricité, de
               plomberie et de chauffage-climatisation, de 8 à plus de 60 salariés, pour relier les outils qu'elles ont
               déjà : logiciel de devis, Excel, WhatsApp, banque et comptabilité.
             </p>

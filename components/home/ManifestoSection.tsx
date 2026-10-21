@@ -19,17 +19,17 @@ export const ManifestoSection: React.FC = () => {
         <div className="mt-8 space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed">
           <p>
             Les éditeurs de logiciels vendent leur outil, puis passent à l'entreprise suivante. Les
-            cabinets de conseil livrent une feuille de route, et c'est au patron de l'appliquer seul,
-            le soir, entre deux chantiers.
+            cabinets de conseil livrent une feuille de route, et c'est au dirigeant de l'appliquer seul,
+            le soir, après sa journée.
           </p>
           <p>
             Entre les deux, personne ne branche les outils entre eux, et personne ne reste ensuite
             pour les faire tourner. C'est ce qu'on fait.
           </p>
           <p>
-            Vous gardez Batappli, Obat ou EBP. On les relie à votre banque, à votre boîte mail et au
-            WhatsApp de vos équipes. Au bout de deux mois, vous devez récupérer 10 heures par semaine.
-            On les mesure avec vous, sur vos chiffres.
+            Vous gardez vos logiciels. On les relie à vos tableurs, à votre boîte mail, à votre banque
+            et au WhatsApp de vos équipes. Au bout de deux mois, vous devez récupérer 10 heures par
+            semaine. On les mesure avec vous, sur vos chiffres.
           </p>
         </div>
 

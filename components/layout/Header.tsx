@@ -13,6 +13,7 @@ const GOLD = '#C9A84C';
 // "Contact" n'est plus un lien : c'est le bouton de réservation, toujours visible.
 const navLinks: NavLink[] = [
   { label: 'Services', href: '/services' },
+  { label: 'Secteurs', href: '/secteurs' },
   { label: 'Cas clients', href: '/cas-clients' },
   { label: 'Articles', href: '/articles' },
   { label: 'Outils', href: '/outils' },
@@ -73,8 +74,8 @@ export const Header: React.FC = () => {
               />
             </Link>
 
-            {/* Navigation ordinateur + bouton de réservation */}
-            <div className="hidden lg:flex items-center gap-9">
+            {/* Navigation ordinateur + bouton de réservation (en dessous de 1280 px : menu burger) */}
+            <div className="hidden xl:flex items-center gap-8">
               {navLinks.map((link) => {
                 const active = isActive(link.href);
                 return (
@@ -82,7 +83,7 @@ export const Header: React.FC = () => {
                     <Link
                       href={link.href}
                       onClick={handleNavClick}
-                      className={`text-[13px] font-semibold uppercase tracking-[0.14em] transition-colors ${
+                      className={`whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.14em] transition-colors ${
                         active ? 'text-[#1A2332]' : 'text-[#5b6472] hover:text-[#1A2332]'
                       }`}
                     >
@@ -102,7 +103,7 @@ export const Header: React.FC = () => {
               <Link
                 href="/contact"
                 onClick={handleNavClick}
-                className="inline-flex items-center px-5 py-2.5 rounded-md text-sm font-semibold bg-[#1A2332] text-[#FAF7F0] hover:bg-[#26334a] transition-colors"
+                className="inline-flex items-center whitespace-nowrap px-5 py-2.5 rounded-md text-sm font-semibold bg-[#1A2332] text-[#FAF7F0] hover:bg-[#26334a] transition-colors"
               >
                 Pré-audit gratuit
               </Link>
@@ -111,7 +112,7 @@ export const Header: React.FC = () => {
             {/* Burger button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden transition-colors z-[60] text-gray-700"
+              className="xl:hidden transition-colors z-[60] text-gray-700"
               aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               aria-expanded={isMenuOpen}
             >
@@ -123,7 +124,7 @@ export const Header: React.FC = () => {
 
       {/* Overlay plein écran */}
       <div
-        className={`fixed inset-0 z-[55] flex flex-col lg:hidden transition-all duration-500 ${
+        className={`fixed inset-0 z-[55] flex flex-col xl:hidden transition-all duration-500 ${
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         style={{ background: NAVY }}

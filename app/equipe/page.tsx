@@ -6,7 +6,7 @@ import { TeamView } from '@/components/pages/TeamView';
 const PAGE_URL = 'https://opusadvisor.fr/equipe';
 const PAGE_TITLE = "Qui bosse sur votre système";
 const PAGE_DESCRIPTION =
-  "Enzo Monnier, développeur devenu consultant ops pour le BTP second œuvre. Il code lui-même les systèmes qu'il installe chez vous, sans sous-traitant.";
+  "Enzo Monnier, développeur devenu consultant en organisation et automatisation des petites entreprises. Il code lui-même les systèmes qu'il installe chez vous, sans sous-traitant.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

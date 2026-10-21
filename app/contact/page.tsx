@@ -5,9 +5,9 @@ import { ContactView } from '@/components/pages/ContactView';
 
 const PAGE_URL = 'https://opusadvisor.fr/contact';
 const PAGE_TITLE =
-  'Pré-audit gratuit 30 min — BTP second œuvre';
+  'Pré-audit gratuit de 30 minutes en visio';
 const PAGE_DESCRIPTION =
-  "Réservez 30 min en visio. On passe en revue vos outils (Batappli, Obat, Tolteck, EBP) et on identifie 3 points de friction en direct. Gratuit, sans engagement.";
+  "Réservez 30 minutes en visio. On passe en revue vos outils et on repère 3 points de friction en direct. Gratuit, sans engagement.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
