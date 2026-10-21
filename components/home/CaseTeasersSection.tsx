@@ -30,6 +30,7 @@ export const CaseTeasersSection: React.FC = () => {
     <section className="py-24 md:py-32" style={{ background: '#FAF7F0' }} aria-labelledby="builds-title">
       <div className="container mx-auto px-6 max-w-6xl">
         <h2
+          data-reveal
           id="builds-title"
           className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
           style={{ color: NAVY }}
@@ -42,9 +43,11 @@ export const CaseTeasersSection: React.FC = () => {
         </p>
 
         <ul className="mt-12">
-          {builds.map((b) => (
+          {builds.map((b, i) => (
             <li
               key={b.title}
+              data-reveal
+              data-reveal-delay={String(i + 1)}
               className="grid grid-cols-1 md:grid-cols-12 gap-x-10 gap-y-2 py-7 border-t"
               style={{ borderColor: RULE }}
             >

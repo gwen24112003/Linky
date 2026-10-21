@@ -11,6 +11,7 @@ export const FinalCTASection: React.FC = () => {
     <section id="contact" className="py-24 md:py-32" style={{ background: NAVY }} aria-labelledby="cta-title">
       <div className="container mx-auto px-6 max-w-5xl">
         <h2
+          data-reveal
           id="cta-title"
           className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl text-white"
         >
@@ -19,7 +20,7 @@ export const FinalCTASection: React.FC = () => {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-y-0 md:gap-x-14">
           {/* Pré-audit */}
-          <div className="pt-7 border-t flex flex-col" style={{ borderColor: RULE }}>
+          <div data-reveal data-reveal-delay="1" className="pt-7 border-t flex flex-col" style={{ borderColor: RULE }}>
             <div className="flex items-baseline justify-between gap-4 mb-4">
               <h3 className="font-heading font-bold text-2xl md:text-3xl text-white">Le pré-audit</h3>
               <span className="font-heading font-bold text-lg whitespace-nowrap" style={{ color: GOLD }}>
@@ -41,7 +42,7 @@ export const FinalCTASection: React.FC = () => {
           </div>
 
           {/* Audit Stack */}
-          <div className="pt-7 border-t flex flex-col" style={{ borderColor: RULE }}>
+          <div data-reveal data-reveal-delay="2" className="pt-7 border-t flex flex-col" style={{ borderColor: RULE }}>
             <div className="flex items-baseline justify-between gap-4 mb-4">
               <h3 className="font-heading font-bold text-2xl md:text-3xl text-white">L'Audit Stack</h3>
               <span className="font-heading font-bold text-lg whitespace-nowrap" style={{ color: GOLD }}>

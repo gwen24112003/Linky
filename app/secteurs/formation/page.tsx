@@ -70,6 +70,7 @@ export default function FormationPage() {
           desc: "Chaque document est rangé au moment où il est produit, prêt pour l'audit Qualiopi et pour le BPF.",
         },
       ]}
+      demo={['formation']}
       cases={casesFor('formation')}
       ctaTitle="Combien d'heures par session passent dans les dossiers ?"
       ctaText="Pendant le pré-audit, on suit le parcours d'un stagiaire dans vos outils, de l'inscription à la facturation, et on repère ce qui peut partir tout seul. 30 minutes en visio, gratuites."

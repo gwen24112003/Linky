@@ -27,6 +27,7 @@ export const ConvictionsSection: React.FC = () => {
     <section className="py-24 md:py-32" style={{ background: NAVY }} aria-labelledby="convictions-title">
       <div className="container mx-auto px-6 max-w-5xl">
         <h2
+          data-reveal
           id="convictions-title"
           className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl text-white max-w-3xl"
         >
@@ -34,8 +35,8 @@ export const ConvictionsSection: React.FC = () => {
         </h2>
 
         <ul className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-14">
-          {rules.map((r) => (
-            <li key={r.title} className="py-7 border-t" style={{ borderColor: RULE }}>
+          {rules.map((r, i) => (
+            <li key={r.title} data-reveal data-reveal-delay={String(i % 2 + 1)} className="py-7 border-t" style={{ borderColor: RULE }}>
               <h3 className="font-heading font-semibold text-xl md:text-2xl leading-snug text-white">
                 {r.title}
               </h3>

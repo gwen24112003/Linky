@@ -17,6 +17,7 @@ export const FAQSection: React.FC<{ items: Faq[]; title?: string; background?: s
     <section className="py-24 md:py-32" style={{ background }} aria-labelledby="faq-title">
       <div className="container mx-auto px-6 max-w-4xl">
         <h2
+          data-reveal
           id="faq-title"
           className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl mb-10 md:mb-12"
           style={{ color: NAVY }}

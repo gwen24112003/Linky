@@ -11,7 +11,7 @@ export const WhyNowSection: React.FC = () => {
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
           {/* Date : ancre typographique */}
-          <div className="md:col-span-4">
+          <div data-reveal className="md:col-span-4">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/60 mb-2">
               1ᵉʳ septembre
             </p>
@@ -20,7 +20,7 @@ export const WhyNowSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="md:col-span-8">
+          <div data-reveal data-reveal-delay="2" className="md:col-span-8">
             <h2
               id="why-now-title"
               className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl text-white"

@@ -5,6 +5,7 @@ import { HeroHome } from '@/components/home/HeroHome';
 import { CasesSection } from '@/components/home/CasesSection';
 import { SectorsSection } from '@/components/home/SectorsSection';
 import { ApproachSection } from '@/components/home/ApproachSection';
+import { TimeLossSection } from '@/components/home/TimeLossSection';
 import { ManifestoSection } from '@/components/home/ManifestoSection';
 import { ConvictionsSection } from '@/components/home/ConvictionsSection';
 import { MethodSection } from '@/components/home/MethodSection';
@@ -112,6 +113,7 @@ export default function HomePage() {
         />
         <SectorsSection />
         <ApproachSection />
+        <TimeLossSection />
         <ConvictionsSection />
         <ManifestoSection />
         <WhyNowSection />

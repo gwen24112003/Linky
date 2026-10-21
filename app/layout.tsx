@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Bricolage_Grotesque, Lexend } from 'next/font/google';
 import './globals.css';
 import { ClickTracker } from '@/components/analytics/ClickTracker';
+import { RevealProvider } from '@/components/motion/RevealProvider';
 import { UMAMI_WEBSITE_ID } from '@/lib/analytics';
 
 // Polices auto-hébergées au build (next/font) : aucune requête navigateur
@@ -175,6 +176,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <ClickTracker />
+        <RevealProvider />
       </body>
     </html>
   );

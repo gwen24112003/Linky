@@ -7,7 +7,7 @@ const RULE = 'rgba(26,35,50,0.16)';
 export const ManifestoSection: React.FC = () => {
   return (
     <section className="py-24 md:py-32 bg-white" aria-labelledby="manifeste-title">
-      <div className="container mx-auto px-6 max-w-3xl">
+      <div data-reveal className="container mx-auto px-6 max-w-3xl">
         <h2
           id="manifeste-title"
           className="font-heading font-bold leading-tight tracking-tight text-3xl md:text-4xl"

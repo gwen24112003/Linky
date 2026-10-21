@@ -25,6 +25,7 @@ const layers = [
 export const ApproachSection: React.FC = () => (
   <section className="py-24 md:py-32 bg-white" aria-labelledby="approach-title">
     <div className="container mx-auto px-6 max-w-5xl">
+      <div data-reveal>
       <h2
         id="approach-title"
         className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
@@ -36,10 +37,11 @@ export const ApproachSection: React.FC = () => (
         Un logiciel développé pour vous prend des mois et coûte cher. Dans la plupart des entreprises, les outils sont
         déjà là ; ce qui manque, ce sont les liens entre eux.
       </p>
+      </div>
 
       <dl className="mt-12">
-        {layers.map((l) => (
-          <div key={l.what} className="grid grid-cols-1 md:grid-cols-12 gap-x-10 gap-y-2 py-7 border-t" style={{ borderColor: RULE }}>
+        {layers.map((l, i) => (
+          <div key={l.what} data-reveal data-reveal-delay={String(i + 1)} className="grid grid-cols-1 md:grid-cols-12 gap-x-10 gap-y-2 py-7 border-t" style={{ borderColor: RULE }}>
             <dt className="md:col-span-5">
               <span className="block font-semibold text-lg md:text-xl leading-snug" style={{ color: NAVY }}>
                 {l.what}
@@ -52,7 +54,7 @@ export const ApproachSection: React.FC = () => (
         <div className="border-t" style={{ borderColor: RULE }} />
       </dl>
 
-      <p className="mt-8 text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl">
+      <p data-reveal className="mt-8 text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl">
         Quand aucun outil existant ne fait l'affaire, on construit le vôtre, comme l'outil de suivi de l'équipe
         d'agents immobiliers présenté plus haut. C'est l'exception, et on vous le dit avant de le chiffrer.
       </p>
