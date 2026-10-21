@@ -12,7 +12,7 @@ export const HeroBTP: React.FC = () => {
     <section
       className="pt-32 md:pt-40 pb-20 md:pb-28"
       style={{ background: PAPER, color: NAVY }}
-      aria-label="Opus Advisor — Consultant ops pour les patrons du BTP second œuvre"
+      aria-label="Opus Advisor pour les entreprises du BTP second œuvre"
     >
       <div className="container mx-auto px-6 max-w-6xl">
         <p className="text-xs font-semibold uppercase tracking-[0.24em]" style={{ color: GOLD_INK }}>

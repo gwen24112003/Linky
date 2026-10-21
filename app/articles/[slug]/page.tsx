@@ -75,7 +75,7 @@ export default async function ArticlePage({ params }: PageProps) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
     datePublished: article.publishedAt,
     dateModified: article.updatedAt ?? article.publishedAt,
-    articleSection: 'Conseil ops PME et BTP second œuvre',
+    articleSection: 'Organisation et gestion des entreprises du BTP',
     ...(frontMatter.keywords && frontMatter.keywords.length > 0
       ? { keywords: frontMatter.keywords.join(', ') }
       : {}),
@@ -83,7 +83,7 @@ export default async function ArticlePage({ params }: PageProps) {
       '@type': 'Person',
       name: 'Enzo Monnier',
       url: 'https://opusadvisor.fr/equipe/',
-      jobTitle: 'Consultant ops · Fondateur',
+      jobTitle: "Fondateur d'Opus Advisor",
       worksFor: {
         '@type': 'Organization',
         name: 'Opus Advisor',

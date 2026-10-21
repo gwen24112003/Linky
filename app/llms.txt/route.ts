@@ -35,7 +35,7 @@ ${articles}
 
 ## À propos
 - [Équipe](${SITE_URL}/equipe/): Enzo Monnier (fondateur, ancien développeur) et Gwendoline (associée).
-- [Consultant BTP à Rennes](${SITE_URL}/consultant-btp-rennes/): installés à Rennes, déplacements sur site pendant les missions à moins de deux heures de Rennes (Bretagne, Pays-de-la-Loire) ; pré-audit en visio partout en France.
+- [Consultant à Rennes](${SITE_URL}/consultant-rennes/): installés à Rennes, déplacements sur site pendant les missions à moins de deux heures de Rennes (Bretagne, Pays-de-la-Loire) ; pré-audit en visio partout en France.
 - [Cas clients](${SITE_URL}/cas-clients/): dossiers de financement automatisés pour un organisme de formation, facturation de tous les propriétaires d'une conciergerie en une seule automatisation, outil de suivi pour un manager d'agents immobiliers. Programme Opus Pilotes : 3 places pour le BTP second œuvre en Bretagne et Pays-de-la-Loire.
 - [Secteurs](${SITE_URL}/secteurs/): [formation](${SITE_URL}/secteurs/formation/), [immobilier et conciergerie](${SITE_URL}/secteurs/immobilier/), [BTP second œuvre](${SITE_URL}/secteurs/btp/).
 - Contact : enzo@opusadvisor.fr

@@ -1,6 +1,6 @@
 # Opus Advisor - Site Web
 
-Site vitrine d'**Opus Advisor**, consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim).
+Site vitrine d'**Opus Advisor** : organisation et automatisation de la gestion des petites entreprises (organismes de formation, immobilier et conciergerie, BTP second œuvre).
 
 On rend 10h/semaine aux patrons en centralisant leurs outils : devis, chantiers, relances, facturation 2027.
 
