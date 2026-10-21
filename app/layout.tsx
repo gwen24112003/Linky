@@ -29,9 +29,9 @@ const lexend = Lexend({
 
 const SITE_URL = 'https://opusadvisor.fr';
 const SITE_NAME = 'Opus Advisor';
-const DEFAULT_TITLE = 'Opus Advisor — Consultant ops BTP second œuvre';
+const DEFAULT_TITLE = 'Opus Advisor : automatisation de la gestion des PME';
 const DEFAULT_DESCRIPTION =
-  "On rend 10h/semaine aux patrons d'électricité, plomberie, chauffage. Relances auto, chantiers centralisés, devis qui ne traînent plus. Diagnostic 2 500 €, pré-audit gratuit.";
+  'On relie vos logiciels, vos tableurs et vos mails pour que dossiers, factures et relances se fassent tout seuls. Formation, immobilier, BTP. Pré-audit gratuit de 30 minutes.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,16 +41,14 @@ export const metadata: Metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   keywords: [
+    'automatisation gestion PME',
+    'consultant organisation entreprise Rennes',
+    'automatisation organisme de formation',
+    'automatisation conciergerie',
+    'automatisation agence immobilière',
     'consultant ops BTP second œuvre',
-    'automatisation devis plombier électricien',
-    'relance automatique impayés BTP',
-    'centralisation chantiers second œuvre',
-    'système unifié entreprise bâtiment',
-    'logiciel gestion électricien PME',
-    'Batappli Obat Tolteck EBP Bâtiment',
-    'automatisation Make n8n BTP',
-    'gestion chantier second œuvre',
-    'consultant automatisation BTP',
+    'relance automatique impayés',
+    'automatisation Make n8n',
   ],
   robots: { index: true, follow: true },
   icons: {
@@ -70,7 +68,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/Logo_1200x630.png`,
         width: 1200,
         height: 630,
-        alt: 'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre',
+        alt: 'Opus Advisor',
       },
     ],
   },
@@ -82,7 +80,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${SITE_URL}/images/Logo_1200x630.png`,
-        alt: 'Opus Advisor — Consultant ops pour les patrons du BTP second œuvre',
+        alt: 'Opus Advisor',
       },
     ],
   },
@@ -97,14 +95,14 @@ const organizationJsonLd = {
       name: SITE_NAME,
       alternateName: 'Opus Advisor',
       description:
-        "Consultant ops pour les patrons du BTP second œuvre (électricité, plomberie, chauffage-clim). On monte un système unique qui unifie devis, chantiers, relances et facturation. Diagnostic chiffré, mise en œuvre, formation équipe.",
+        "Organisation et automatisation de la gestion des petites entreprises (organismes de formation, immobilier et conciergerie, BTP second œuvre), à partir des outils qu'elles utilisent déjà. Diagnostic chiffré, mise en œuvre, formation de l'équipe, suivi.",
       url: SITE_URL,
       email: 'enzo@opusadvisor.fr',
       telephone: '+33615756549',
       founder: {
         '@type': 'Person',
         name: 'Enzo Monnier',
-        jobTitle: 'Consultant ops BTP second œuvre',
+        jobTitle: 'Consultant en organisation et automatisation',
         url: 'https://www.linkedin.com/in/enzo-monnier-7524ab205/',
       },
       address: {
@@ -125,15 +123,20 @@ const organizationJsonLd = {
       },
       areaServed: { '@type': 'Country', name: 'France' },
       serviceType: [
-        'Consultant ops BTP',
-        'Système de gestion second œuvre',
-        'Automatisation devis et relances',
+        'Automatisation de la gestion administrative',
+        'Automatisation pour organismes de formation',
+        'Automatisation pour conciergeries et agences immobilières',
+        'Consultant ops BTP second œuvre',
         'Mise en conformité facturation électronique 2027',
-        "Mise en œuvre Batappli / Obat / Tolteck / EBP Bâtiment",
         'Automatisation Make et n8n',
-        'Formation équipe BTP',
+        "Formation de l'équipe",
       ],
       knowsAbout: [
+        'organismes de formation',
+        'Qualiopi',
+        'conciergerie',
+        'location courte durée',
+        'agences immobilières',
         'second œuvre',
         'électricité',
         'plomberie',

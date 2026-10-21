@@ -37,8 +37,8 @@ export const CaseTeasersSection: React.FC = () => {
           Trois systèmes qu'on sait monter
         </h2>
         <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-          On démarre, et on n'a pas encore de client à vous présenter. Voici trois systèmes typiques,
-          qu'on documentera avec nos premiers clients pilotes.
+          Pas encore de client du bâtiment à vous présenter. Voici trois systèmes typiques, qu'on
+          documentera avec nos premiers clients pilotes.
         </p>
 
         <ul className="mt-12">

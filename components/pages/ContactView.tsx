@@ -166,17 +166,17 @@ export const ContactView: React.FC = () => {
 
                   <div>
                     <label htmlFor="metier" className="block text-xs font-medium mb-1.5 text-gray-600">
-                      Votre métier
+                      Votre secteur
                     </label>
-                    <select id="metier" name="Métier" required defaultValue="" className={fieldClass} style={{ borderColor: RULE }}>
+                    <select id="metier" name="Secteur" required defaultValue="" className={fieldClass} style={{ borderColor: RULE }}>
                       <option value="" disabled>
                         Choisir…
                       </option>
-                      <option>Électricité</option>
-                      <option>Plomberie</option>
-                      <option>Chauffage-climatisation</option>
-                      <option>Multi-technique / tous corps d'état</option>
-                      <option>Autre second œuvre</option>
+                      <option>Organisme de formation</option>
+                      <option>Conciergerie, location courte durée</option>
+                      <option>Agence immobilière</option>
+                      <option>BTP second œuvre</option>
+                      <option>Autre</option>
                     </select>
                   </div>
 

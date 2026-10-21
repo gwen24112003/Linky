@@ -85,11 +85,11 @@ const services: ServiceData[] = [
     title: 'Mise en œuvre système',
     hook: 'On installe le système, puis on forme vos équipes dessus.',
     description:
-      "On met en place le système défini au diagnostic : paramétrage de votre logiciel métier (Batappli, Obat, Tolteck, EBP), automatisations avec Make ou n8n, dossier partagé des chantiers dans Notion ou Google Workspace, relié à WhatsApp Business. On teste sur vos vrais chantiers, on forme l'équipe et on vous laisse une documentation écrite.",
+      "On met en place le système défini au diagnostic : paramétrage de votre logiciel métier, automatisations avec Make ou n8n, documents partagés dans Notion ou Google Workspace, reliés à vos mails ou à WhatsApp Business. On teste sur vos vrais dossiers, on forme l'équipe et on vous laisse une documentation écrite.",
     deliverables: [
       'Votre logiciel métier paramétré et exploité à fond',
       'Les automatisations en service : relances, rapports, synchronisations',
-      'Le dossier partagé des chantiers, relié à WhatsApp',
+      'Les documents partagés, au même endroit pour toute l’équipe',
       "La formation de l'équipe, en français, sur vos données",
       'La documentation et les schémas du système',
     ],
@@ -119,8 +119,8 @@ const services: ServiceData[] = [
 
 const comparisons = [
   {
-    vs: 'Face à un éditeur de logiciel BTP',
-    text: "Un éditeur vend son outil, puis passe à l'entreprise suivante. Nous, on ne vend aucun logiciel : on relie votre Batappli, votre Obat ou votre EBP à vos autres outils, plutôt que d'en ajouter un onzième.",
+    vs: 'Face à un éditeur de logiciel',
+    text: "Un éditeur vend son outil, puis passe à l'entreprise suivante. Nous, on ne vend aucun logiciel : on relie le logiciel que vous avez déjà à vos autres outils, plutôt que d'en ajouter un onzième.",
   },
   {
     vs: 'Face à un cabinet de conseil',
@@ -137,7 +137,7 @@ const comparisons = [
 ];
 
 const summary = [
-  'Spécialisés dans le second œuvre, et rien d’autre',
+  'Des missions réelles en formation et en immobilier, des outils dédiés au BTP',
   'On travaille avec les outils que vous avez déjà',
   'On reste après la mise en œuvre, avec le Gardien',
   'On mesure le temps gagné, sur vos chiffres',
@@ -291,7 +291,7 @@ export const ServicesView: React.FC = () => {
                 Opus Pilotes : construisez la première version avec nous
               </h3>
               <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed mb-5 flex-1">
-                Trois boîtes du second œuvre, 40 % moins cher que le tarif normal, avec un accès direct.
+                Pour le BTP : trois entreprises du second œuvre, 40 % moins cher que le tarif normal, avec un accès direct.
                 En échange, on documente ensemble ce qui marche.
               </p>
               <span className="inline-flex items-center gap-2 font-semibold text-sm md:text-base" style={{ color: NAVY }}>
@@ -306,8 +306,8 @@ export const ServicesView: React.FC = () => {
                 Nos articles, pour voir comment on travaille
               </h3>
               <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed mb-5 flex-1">
-                Facturation électronique, relances, marge chantier, outils comparés : des articles
-                courts, écrits pour des patrons du second œuvre.
+                Facturation électronique, relances, marge, outils comparés : des articles courts,
+                écrits d'abord pour les patrons du BTP.
               </p>
               <span className="inline-flex items-center gap-2 font-semibold text-sm md:text-base" style={{ color: NAVY }}>
                 Lire les articles

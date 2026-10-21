@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SectionKicker } from '@/components/ui/SectionKicker';
+import { CasesSection } from '@/components/home/CasesSection';
+import { cases } from '@/lib/cases';
 import { ArrowRight, Check } from 'lucide-react';
 
 const NAVY = '#1A2332';
@@ -13,9 +15,9 @@ const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
 
 const PAGE_URL = 'https://opusadvisor.fr/cas-clients';
-const PAGE_TITLE = 'Opus Pilotes — 3 boîtes pour construire la v1 ensemble';
+const PAGE_TITLE = 'Cas clients : formation, conciergerie, immobilier';
 const PAGE_DESCRIPTION =
-  "3 places pilotes en Bretagne et Pays-de-la-Loire : système complet à tarif pilote (-40 %), cas publié après 6 mois. Candidatures ouvertes.";
+  "Ce qu'on a mis en place chez nos clients : dossiers de financement automatisés, facturation des propriétaires en une seule automatisation, suivi d'une équipe d'agents immobiliers. Et 3 places pilotes pour le BTP.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -82,14 +84,30 @@ export default function CasClientsPage() {
         {/* Hero */}
         <section className="pt-36 pb-20 md:pt-44 md:pb-24" style={{ background: NAVY }}>
           <div className="container mx-auto px-6 max-w-5xl">
-            <SectionKicker label="Opus Pilotes · Candidatures ouvertes" tone="dark" className="mb-8" />
+            <SectionKicker label="Cas clients" tone="dark" className="mb-8" />
             <h1 className="font-heading font-bold leading-[1.0] tracking-tight text-5xl md:text-6xl lg:text-7xl text-white">
-              3 places pour construire la v1 avec nous.
+              Ce qu'on a mis en place chez nos clients.
             </h1>
             <p className="mt-7 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
-              On démarre Opus Advisor. Plutôt que d'inventer des cas clients bidons, on ouvre 3
-              places pilotes pour des boîtes du second œuvre en Bretagne et Pays-de-la-Loire. Système
-              complet, tarif pilote, et on publie le cas après 6 mois de prod.
+              Trois missions récentes, dans la formation et l'immobilier. Les noms des clients restent
+              confidentiels ; on peut entrer dans le détail pendant le pré-audit.
+            </p>
+          </div>
+        </section>
+
+        <CasesSection cases={cases} title="Trois missions, trois problèmes concrets" />
+
+        {/* Programme pilote BTP */}
+        <section className="py-20 md:py-28" style={{ background: NAVY }}>
+          <div className="container mx-auto px-6 max-w-5xl">
+            <SectionKicker label="Opus Pilotes · BTP" tone="dark" className="mb-8" />
+            <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl text-white max-w-3xl">
+              3 places pour les entreprises du bâtiment.
+            </h2>
+            <p className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
+              On n'a pas encore de mission dans le BTP à vous montrer. Plutôt que d'en inventer une, on
+              ouvre 3 places pilotes pour des entreprises du second œuvre en Bretagne et Pays-de-la-Loire :
+              système complet à tarif pilote, et le cas publié après 6 mois.
             </p>
           </div>
         </section>
@@ -98,7 +116,7 @@ export default function CasClientsPage() {
         <section className="py-20 md:py-28" style={{ background: PAPER }}>
           <div className="container mx-auto px-6 max-w-5xl">
             <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl mb-12" style={{ color: NAVY }}>
-              Vous correspondez si…
+              Le programme est pour vous si…
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14">
@@ -137,7 +155,7 @@ export default function CasClientsPage() {
               </div>
 
               <div className="border-t pt-7" style={{ borderColor: RULE }}>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-5" style={{ color: 'rgba(26,35,50,0.45)' }}>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] mb-5" style={{ color: 'rgba(26,35,50,0.65)' }}>
                   Ce qu'on vous demande
                 </p>
                 <ul className="space-y-3.5">
@@ -153,47 +171,22 @@ export default function CasClientsPage() {
           </div>
         </section>
 
-        {/* Pourquoi ce format */}
-        <section className="py-20 md:py-28" style={{ background: PAPER }}>
-          <div className="container mx-auto px-6 max-w-3xl">
-            <h2 className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-4xl lg:text-5xl mb-8" style={{ color: NAVY }}>
-              On refuse de vendre une méthode qu'on n'a pas validée sur du vrai.
-            </h2>
-            <div className="space-y-5 text-lg text-gray-700 leading-relaxed">
-              <p>
-                Plein de consultants vendent des frameworks sortis de webinaires LinkedIn. Nous, on
-                part du postulat inverse : la méthode Opus doit se tester sur 3 boîtes réelles, avec
-                de vraies contraintes métier, avant qu'on la passe au catalogue standard.
-              </p>
-              <p>
-                C'est pour ça qu'on ouvre 3 places à tarif pilote. Vous gagnez un système complet
-                pour 40% de moins. On gagne la validation terrain qu'il nous faut pour construire la
-                suite sérieusement.
-              </p>
-            </div>
-            <p className="mt-8 pt-6 border-t text-sm text-gray-500 italic" style={{ borderColor: RULE }}>
-              Places ouvertes jusqu'aux 3 premiers cas publiés. Les pilotes conservent leur tarif
-              pendant les 6 mois de suivi.
-            </p>
-          </div>
-        </section>
-
         {/* CTA final */}
         <section className="py-20 md:py-28" style={{ background: NAVY }}>
           <div className="container mx-auto px-6 max-w-5xl">
             <h2 className="font-heading font-bold leading-[1.02] tracking-tight text-4xl md:text-5xl text-white max-w-3xl">
-              3 places. Pré-audit gratuit pour qualifier la compatibilité.
+              Un projet ? Tout commence par le pré-audit.
             </h2>
             <p className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl">
-              30 minutes en visio. Vous nous montrez vos outils et votre contexte. Si votre boîte
-              colle au profil pilote, on vous envoie une proposition chiffrée sous 72h.
+              30 minutes en visio. Vous nous montrez vos outils et votre contexte. Pour une entreprise du
+              bâtiment qui correspond au programme pilote, on vous envoie une proposition chiffrée sous 72 h.
             </p>
             <Link
               href="/contact"
               className="group mt-9 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm md:text-base transition-all duration-200 hover:scale-[1.02]"
               style={{ background: GOLD, color: NAVY }}
             >
-              Postuler boîte pilote
+              Réserver le pré-audit gratuit
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

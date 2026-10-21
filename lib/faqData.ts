@@ -1,7 +1,86 @@
-export const faqs = [
+export interface Faq {
+  question: string;
+  answer: string;
+}
+
+// FAQ de l'accueil, valable pour tous les secteurs.
+export const faqs: Faq[] = [
+  {
+    question: 'Avec quels types d’entreprises travaillez-vous ?',
+    answer: `Surtout avec des organismes de formation, des entreprises de l'immobilier (agences, conciergeries) et le BTP second œuvre.
+
+Le point commun : du travail sur le terrain ou auprès des clients, et un administratif qui déborde. Dossiers, factures, relances, plannings, le tout ressaisi dans plusieurs outils.
+
+Si votre entreprise ne correspond pas à ce profil, on vous le dit dès le pré-audit.`,
+  },
+  {
+    question: 'Faut-il changer de logiciel ?',
+    answer: `En général, non. On ne vous fait changer de logiciel que si le vôtre est vraiment inadapté, et c'est rare.
+
+On garde votre logiciel métier, on corrige son paramétrage et on le relie au reste : tableurs, mails, banque, planning.
+
+On ne revend aucun logiciel. Si on vous conseille d'en changer, on n'y gagne rien.`,
+  },
+  {
+    question: 'Combien ça coûte ?',
+    answer: `Chaque étape a son prix, affiché sur la page Services :
+
+- **Audit Stack** : 990 € ;
+- **Diagnostic** : 2 500 € ;
+- **Mise en œuvre** : à partir de 5 500 € ;
+- **Gardien du système** : 400 à 1 500 € par mois, sans engagement.
+
+Pour une entreprise d'une dizaine de personnes, comptez environ 17 500 € sur deux ans, suivi compris. Pour voir clair avant de vous engager, commencez par l'Audit Stack.`,
+  },
+  {
+    question: 'Combien de temps avant de voir des résultats ?',
+    answer: `On s'engage sur 10 heures par semaine rendues à votre entreprise à partir du deuxième mois.
+
+Dans le détail :
+- le diagnostic est livré 2 à 3 semaines après le cadrage ;
+- la mise en œuvre prend 4 à 10 semaines selon ce qu'il y a à installer ;
+- les premiers gains se mesurent dès la deuxième semaine de mise en œuvre.
+
+Si on ne peut pas chiffrer le gain au départ, on ne s'engage pas.`,
+  },
+  {
+    question: "Je ne suis pas à l'aise avec l'informatique. Il va falloir apprendre 10 outils ?",
+    answer: `Non, on fait le contraire.
+
+On part de ce que vous et vos équipes savez déjà utiliser : votre logiciel, Excel, vos mails, WhatsApp. On relie ces outils entre eux au lieu d'en ajouter de nouveaux.
+
+Quand il faut quand même ajouter quelque chose, on forme la personne qui gère l'administratif en 2 heures, et les équipes en 1 heure. La documentation reste chez vous.`,
+  },
+  {
+    question: 'Et la facturation électronique, vous gérez ?',
+    answer: `Oui, on l'aborde à chaque mission.
+
+Depuis septembre 2026, toutes les entreprises doivent pouvoir recevoir des factures électroniques. En septembre 2027, les PME devront aussi les émettre. Un système propre se prépare en 2 à 3 mois : plus vous attendez, plus la mise en conformité coûtera cher dans l'urgence.
+
+La veille réglementaire de votre secteur est comprise dans le Gardien du système.`,
+  },
+  {
+    question: "Qu'est-ce qui se passe si vous disparaissez dans 2 ans ?",
+    answer: `Votre système continue de tourner sans nous. Pour que ce soit vrai, on prend trois engagements :
+- une documentation complète remise à votre équipe à la fin de la mise en œuvre ;
+- la formation des personnes qui utilisent le système au quotidien ;
+- tous les comptes et tous les outils restent à votre nom, jamais au nôtre.
+
+Le Gardien est sans engagement, sauf la formule Premium (12 mois). Vous le gardez tant qu'il vous sert.`,
+  },
+  {
+    question: 'Vous pouvez travailler avec mon expert-comptable ?',
+    answer: `Oui, et c'est même souvent une bonne idée.
+
+On se partage le travail : votre expert-comptable garde la comptabilité et le pilotage financier, on s'occupe des outils et de la façon dont ils s'enchaînent au quotidien.`,
+  },
+];
+
+// FAQ de la page Secteurs > BTP.
+export const faqsBtp: Faq[] = [
   {
     question: 'Vous travaillez avec des boîtes comme la mienne ?',
-    answer: `Oui. On travaille uniquement avec le second œuvre : électricité, plomberie, chauffage-clim et multi-technique, de 8 à 60+ collaborateurs. Ça va de l'artisan bien organisé à la PME qui a plusieurs agences.
+    answer: `Oui. Dans le BTP, on travaille avec le second œuvre : électricité, plomberie, chauffage-clim et multi-technique, de 8 à 60+ collaborateurs. Ça va de l'artisan bien organisé à la PME qui a plusieurs agences.
 
 On connaît votre vocabulaire (CCTP, DPGF, situation, retenue de garantie, MaPrimeRénov', RGE, autoliquidation de TVA) et vos logiciels (Batappli, Tolteck, Obat, EBP Bâtiment, Onaya, Sage Batigest).
 
@@ -46,7 +125,7 @@ Quand il faut quand même ajouter quelque chose, par exemple une appli mobile po
   },
   {
     question: 'Et la facturation électronique, vous gérez ?',
-    answer: `Oui, c'est un sujet qu'on traite dans presque toutes les missions.
+    answer: `Oui, on l'aborde à chaque mission.
 
 Depuis septembre 2026, toutes les entreprises doivent pouvoir recevoir des factures électroniques. En septembre 2027, les PME devront aussi les émettre. Un système propre se prépare en 2 à 3 mois : plus vous attendez, plus la mise en conformité coûtera cher dans l'urgence.
 
@@ -75,10 +154,10 @@ Les experts-comptables repèrent souvent des fuites chez leurs clients : situati
 const plainText = (md: string): string =>
   md.replace(/\*\*/g, '').replace(/^- /gm, '• ').trim();
 
-export const faqJsonLd = {
+export const faqPageJsonLd = (items: Faq[]) => ({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: items.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: {
@@ -86,4 +165,6 @@ export const faqJsonLd = {
       text: plainText(faq.answer),
     },
   })),
-};
+});
+
+export const faqJsonLd = faqPageJsonLd(faqs);

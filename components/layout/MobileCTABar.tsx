@@ -27,7 +27,7 @@ export const MobileCTABar: React.FC = () => {
 
   return (
     <div
-      className={`lg:hidden fixed inset-x-0 bottom-0 z-40 transition-transform duration-300 ${
+      className={`xl:hidden fixed inset-x-0 bottom-0 z-40 transition-transform duration-300 ${
         visible ? 'translate-y-0' : 'translate-y-full'
       }`}
       style={{ background: NAVY, paddingBottom: 'env(safe-area-inset-bottom)' }}

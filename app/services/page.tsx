@@ -5,7 +5,7 @@ import { ServicesView } from '@/components/pages/ServicesView';
 
 const PAGE_URL = 'https://opusadvisor.fr/services';
 const PAGE_TITLE =
-  'Services & tarifs — BTP second œuvre';
+  'Services et tarifs : pré-audit, audit, diagnostic, mise en œuvre';
 const PAGE_DESCRIPTION =
   'Pré-audit gratuit, Audit Stack 990 €, Diagnostic 2 500 €, Mise en œuvre dès 5 500 €, Gardien dès 400 €/mois. Cinq étapes chiffrées, sans surprise.';
 
