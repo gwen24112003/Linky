@@ -32,6 +32,7 @@ export const ContextSection: React.FC = () => {
     <section id="contexte" className="py-24 md:py-32 scroll-mt-24 bg-white" aria-labelledby="context-title">
       <div className="container mx-auto px-6 max-w-6xl">
         <h2
+          data-reveal
           id="context-title"
           className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
           style={{ color: NAVY }}
@@ -44,6 +45,8 @@ export const ContextSection: React.FC = () => {
           {stats.map((s, i) => (
             <div
               key={s.figure}
+              data-reveal
+              data-reveal-delay={String((i % 4) + 1)}
               className={`py-7 lg:pr-6 ${i > 0 ? 'lg:pl-6 lg:border-l' : ''} ${i > 0 ? 'border-t sm:border-t-0' : ''}`}
               style={{ borderColor: RULE }}
             >

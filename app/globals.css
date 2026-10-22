@@ -318,3 +318,43 @@ article hr {
 .bg-overlay {
   background: linear-gradient(135deg, rgba(26,35,50,0.75), rgba(26,35,50,0.55));
 }
+
+/* ------------------------------------------------------------------------------------------
+   Animations d'apparition au défilement.
+   Un élément n'est masqué que si le script l'a pris en charge (classe reveal-armed). Sans
+   JavaScript, avec « réduire les animations », ou si le script rate un élément, tout reste
+   visible, pour les visiteurs comme pour Google et les assistants IA.
+   ------------------------------------------------------------------------------------------ */
+[data-reveal].reveal-armed {
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+[data-reveal].reveal-armed:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(18px);
+}
+[data-reveal-delay='1'].reveal-armed { transition-delay: 0.08s; }
+[data-reveal-delay='2'].reveal-armed { transition-delay: 0.16s; }
+[data-reveal-delay='3'].reveal-armed { transition-delay: 0.24s; }
+[data-reveal-delay='4'].reveal-armed { transition-delay: 0.32s; }
+
+/* Fil de la méthode : il se trace quand la frise apparaît. */
+.method-line { transform-origin: left center; }
+[data-reveal].reveal-armed .method-line { transition: transform 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s; }
+[data-reveal].reveal-armed:not(.is-visible) .method-line { transform: scaleX(0); }
+
+/* Schémas avant/après des cas clients : l'état « après » s'allume à l'apparition. */
+[data-reveal].reveal-armed .schema-after { transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s; }
+[data-reveal].reveal-armed:not(.is-visible) .schema-after { opacity: 0.25; transform: translateX(-6px); }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal].reveal-armed,
+  [data-reveal].reveal-armed .method-line,
+  [data-reveal].reveal-armed .schema-after { transition: none !important; }
+  [data-reveal].reveal-armed:not(.is-visible),
+  [data-reveal].reveal-armed:not(.is-visible) .method-line,
+  [data-reveal].reveal-armed:not(.is-visible) .schema-after { opacity: 1 !important; transform: none !important; }
+}
+
+@media print {
+  [data-reveal].reveal-armed:not(.is-visible) { opacity: 1 !important; transform: none !important; }
+}

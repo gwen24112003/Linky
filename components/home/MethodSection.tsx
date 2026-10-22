@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+const GOLD = '#C9A84C';
 const GOLD_INK = '#8A6A1C';
 const NAVY = '#1A2332';
 const RULE = 'rgba(26,35,50,0.16)';
@@ -19,7 +20,7 @@ export const MethodSection: React.FC<{ background?: string }> = ({ background = 
   return (
     <section id="methode" className="py-24 md:py-32 scroll-mt-24" style={{ background }} aria-labelledby="method-title">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end">
+        <div data-reveal className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end">
           <h2
             id="method-title"
             className="md:col-span-7 font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl"
@@ -32,13 +33,20 @@ export const MethodSection: React.FC<{ background?: string }> = ({ background = 
           </p>
         </div>
 
-        <ol className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border-t" style={{ borderColor: NAVY }}>
+        <ol data-reveal className="relative mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border-t" style={{ borderColor: RULE }}>
+          {/* Fil doré qui se trace d'une étape à l'autre quand la frise apparaît */}
+          <span aria-hidden="true" className="method-line absolute -top-px left-0 right-0 h-[3px]" style={{ background: GOLD }} />
           {steps.map((s, i) => (
             <li
               key={s.name}
-              className={`py-7 lg:pr-5 ${i > 0 ? 'lg:pl-5 lg:border-l border-t lg:border-t-0' : ''} ${i === 1 ? 'sm:border-t-0' : ''}`}
+              className={`relative py-7 lg:pr-5 ${i > 0 ? 'lg:pl-5 lg:border-l border-t lg:border-t-0' : ''} ${i === 1 ? 'sm:border-t-0' : ''}`}
               style={{ borderColor: RULE }}
             >
+              <span
+                aria-hidden="true"
+                className="hidden lg:block absolute -top-[7px] h-3 w-3 rounded-full border-2 bg-white"
+                style={{ borderColor: GOLD, left: i > 0 ? '1.25rem' : 0 }}
+              />
               <span className="block text-sm text-gray-500">Étape {i + 1}</span>
               <span className="block mt-2 font-semibold text-lg leading-snug" style={{ color: NAVY }}>
                 {s.name}

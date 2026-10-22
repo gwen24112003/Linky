@@ -70,6 +70,7 @@ export default function ImmobilierPage() {
           desc: "Les dossiers de chaque agent, l'état de chaque bien et l'avancement des ventes, au même endroit.",
         },
       ]}
+      demo={['conciergerie', 'agence']}
       cases={casesFor('immobilier')}
       ctaTitle="Combien de temps vous prend la fin de mois ?"
       ctaText="On regarde ensemble votre facturation des propriétaires ou le suivi de votre équipe, et ce qui peut se faire tout seul. 30 minutes en visio, gratuites."
