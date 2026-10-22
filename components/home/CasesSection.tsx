@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import type { ClientCase } from '@/lib/cases';
 import { CaseSchema } from '@/components/motion/CaseSchema';
+import { CaseVisual } from '@/components/motion/CaseVisual';
 
 const NAVY = '#1A2332';
 const GOLD_INK = '#8A6A1C';
@@ -65,16 +66,8 @@ export const CasesSection: React.FC<CasesSectionProps> = ({ cases, title, intro,
             </dl>
             {showVisuals && c.visual && (
               <figure className="lg:col-span-8 lg:col-start-5 mt-4">
-                <div className="rounded-2xl overflow-hidden" style={{ background: NAVY }}>
-                  <img
-                    src={c.visual.src}
-                    width={c.visual.width}
-                    height={c.visual.height}
-                    alt={c.visual.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className="block w-full h-auto"
-                  />
+                <div className="rounded-2xl p-2.5 md:p-4" style={{ background: NAVY }}>
+                  <CaseVisual slug={c.slug} />
                 </div>
                 <figcaption className="mt-3 text-sm text-gray-600">{c.visual.caption}</figcaption>
               </figure>
