@@ -101,6 +101,11 @@ server {
     listen [::]:80;
     server_name $DOMAIN www.$DOMAIN;
 
+    # Une seule adresse pour Google : www renvoie vers le domaine nu.
+    if (\$host = www.$DOMAIN) {
+        return 301 https://$DOMAIN\$request_uri;
+    }
+
     root $WEBROOT/current;
     index index.html;
     include snippets/security-headers.conf;
@@ -116,6 +121,13 @@ server {
     location /_next/static/ {
         include snippets/security-headers.conf;
         add_header Cache-Control "public, max-age=31536000, immutable";
+        try_files \$uri =404;
+    }
+
+    # Images (noms non versionnés) : cache d'un mois
+    location /images/ {
+        include snippets/security-headers.conf;
+        add_header Cache-Control "public, max-age=2592000";
         try_files \$uri =404;
     }
 
@@ -147,3 +159,5 @@ sudo nginx -t
 sudo systemctl reload nginx
 
 echo "==> Terminé. Étape suivante : certbot, une fois que le DNS pointe sur ce serveur."
+echo "    Puis activer HTTP/2 : ajouter « http2 on; » sous les lignes « listen 443 ssl » du vhost $DOMAIN,"
+echo "    et faire pointer la redirection http de www vers https://$DOMAIN (bloc port 80 créé par certbot)."

@@ -3,7 +3,7 @@ import { SectorPage } from '@/components/pages/SectorPage';
 import { casesFor } from '@/lib/cases';
 
 const PAGE_URL = 'https://opusadvisor.fr/secteurs/immobilier/';
-const PAGE_TITLE = 'Automatisation pour conciergeries et agences immobilières';
+const PAGE_TITLE = 'Automatisation conciergerie et agence immobilière';
 const PAGE_DESCRIPTION =
   "Facturation des propriétaires, plannings de ménage, suivi des agents : une application centrale reliée à vos outils, plus aucune ressaisie. Pré-audit gratuit.";
 

@@ -12,9 +12,9 @@ const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
 
 const PAGE_URL = 'https://opusadvisor.fr/outils/';
-const PAGE_TITLE = 'Outils gratuits pour le BTP : calculateurs et indice BT01';
+const PAGE_TITLE = 'Outils gratuits BTP : calculateurs et indice BT01';
 const PAGE_DESCRIPTION =
-  'Calculateurs gratuits pour les entreprises du bâtiment : marge chantier, coût horaire, indice BT01 et révision de prix, pénalités de retard, retenue de garantie, facture de situation. Sans inscription.';
+  'Calculateurs gratuits BTP : marge chantier, coût horaire, indice BT01, pénalités de retard, retenue de garantie, situation de travaux. Sans inscription.';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

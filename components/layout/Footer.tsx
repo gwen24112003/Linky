@@ -60,9 +60,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 pb-12 border-b border-white/10">
           <div className="md:col-span-5">
             <img
-              src="/images/opus-logo-white.png"
+              src="/images/opus-logo-white.webp"
               alt="Opus Advisor"
-              className="h-11 md:h-12 object-contain"
+              width={192}
+              height={48}
+              loading="lazy"
+              className="h-11 w-auto md:h-12 object-contain"
             />
             <p className="mt-5 text-sm md:text-[15px] text-white/55 leading-relaxed max-w-xs">
               Organisation et automatisation de la gestion des petites entreprises : formation,

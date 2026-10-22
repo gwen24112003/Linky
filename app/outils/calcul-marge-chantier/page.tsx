@@ -14,7 +14,7 @@ const PAPER = '#FAF7F0';
 const RULE = 'rgba(26,35,50,0.16)';
 
 const PAGE_URL = 'https://opusadvisor.fr/outils/calcul-marge-chantier/';
-const PAGE_TITLE = 'Calcul de marge chantier : calculateur gratuit pour le BTP';
+const PAGE_TITLE = 'Calcul de marge chantier BTP : calculateur gratuit';
 const PAGE_DESCRIPTION =
   'Calculez la marge d’un chantier BTP : déboursé sec, prix de revient, marge brute, bénéfice et prix de vente conseillé. Gratuit et sans inscription.';
 
