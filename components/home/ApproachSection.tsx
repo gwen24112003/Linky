@@ -5,23 +5,23 @@ const RULE = 'rgba(26,35,50,0.16)';
 
 const layers = [
   {
-    what: 'Votre logiciel métier',
-    tools: 'Logiciel de gestion de formation, channel manager, logiciel de devis…',
-    desc: "On corrige son paramétrage et on s'en sert jusqu'au bout. Si vous n'en avez pas, on le choisit avec vous.",
+    what: 'Vos logiciels métier',
+    tools: 'Facturation, réservations, gestion de formation, devis…',
+    desc: "Ils restent en place. On corrige leur paramétrage et on s'en sert jusqu'au bout. S'il en manque un, on le choisit avec vous.",
   },
   {
-    what: 'Vos tableurs et vos documents',
-    tools: 'Google Sheets, Airtable, Notion, Drive',
-    desc: 'Une seule source pour chaque information, au lieu de trois fichiers qui se contredisent.',
+    what: "L'application centrale",
+    tools: 'Une base Airtable ou un outil développé pour vous',
+    desc: "Elle reçoit les informations de tous vos logiciels. Chaque donnée y est saisie une fois, au lieu de trois fichiers qui se contredisent, et vous suivez l'activité depuis un seul écran.",
   },
   {
-    what: 'Les liaisons entre vos outils',
+    what: 'Les automatisations',
     tools: 'Make ou n8n',
-    desc: 'Les documents se génèrent, les mails partent et les factures se préparent sans ressaisie.',
+    desc: "Elles partent de l'application centrale : les documents se génèrent, les mails partent et les factures se préparent sans ressaisie.",
   },
 ];
 
-/** Ce qui nous distingue d'une agence qui développe un logiciel sur mesure. */
+/** Comment le système est construit : vos logiciels, une application centrale, les automatisations. */
 export const ApproachSection: React.FC = () => (
   <section className="py-24 md:py-32 bg-white" aria-labelledby="approach-title">
     <div className="container mx-auto px-6 max-w-5xl">
@@ -31,11 +31,11 @@ export const ApproachSection: React.FC = () => (
         className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
         style={{ color: NAVY }}
       >
-        Vos outils d'abord. Du sur-mesure seulement s'il le faut.
+        Vos logiciels restent. Au milieu, une application qui centralise tout.
       </h2>
       <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-        Un logiciel développé pour vous prend des mois et coûte cher. Dans la plupart des entreprises, les outils sont
-        déjà là ; ce qui manque, ce sont les liens entre eux.
+        Chaque logiciel fait bien son travail : l'un facture, l'autre gère les réservations ou les inscriptions. Ce qui
+        manque, c'est un endroit où tout se retrouve. On l'installe, et les automatisations partent de là.
       </p>
       </div>
 
@@ -55,8 +55,10 @@ export const ApproachSection: React.FC = () => (
       </dl>
 
       <p data-reveal className="mt-8 text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl">
-        Quand aucun outil existant ne fait l'affaire, on construit le vôtre, comme l'outil de suivi de l'équipe
-        d'agents immobiliers présenté plus haut. C'est l'exception, et on vous le dit avant de le chiffrer.
+        Une conciergerie, par exemple, a un logiciel de réservation et un logiciel de facturation. L'application centrale
+        reçoit les réservations, calcule ce qui revient à chaque propriétaire, et c'est elle qui déclenche les factures.
+        L'outil de suivi de l'équipe d'agents immobiliers, présenté plus haut, est une application centrale développée
+        sur mesure.
       </p>
     </div>
   </section>
