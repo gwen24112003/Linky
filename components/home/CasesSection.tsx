@@ -14,10 +14,12 @@ interface CasesSectionProps {
   intro?: string;
   background?: string;
   link?: { href: string; label: string };
+  /** Affiche le grand visuel de chaque cas (page Cas clients) au lieu du mini-schéma. */
+  showVisuals?: boolean;
 }
 
 /** Missions réelles : le point de départ, ce qu'on a fait, ce qui a changé. */
-export const CasesSection: React.FC<CasesSectionProps> = ({ cases, title, intro, background = '#FFFFFF', link }) => (
+export const CasesSection: React.FC<CasesSectionProps> = ({ cases, title, intro, background = '#FFFFFF', link, showVisuals = false }) => (
   <section className="py-24 md:py-32" style={{ background }} aria-labelledby="cases-title">
     <div className="container mx-auto px-6 max-w-6xl">
       <div data-reveal>
@@ -47,7 +49,7 @@ export const CasesSection: React.FC<CasesSectionProps> = ({ cases, title, intro,
               <h3 className="mt-2 font-heading font-bold text-xl md:text-2xl leading-snug" style={{ color: NAVY }}>
                 {c.title}
               </h3>
-              <CaseSchema slug={c.slug} />
+              {!(showVisuals && c.visual) && <CaseSchema slug={c.slug} />}
             </div>
             <dl className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4">
               {[
@@ -61,6 +63,22 @@ export const CasesSection: React.FC<CasesSectionProps> = ({ cases, title, intro,
                 </div>
               ))}
             </dl>
+            {showVisuals && c.visual && (
+              <figure className="lg:col-span-8 lg:col-start-5 mt-4">
+                <div className="rounded-2xl overflow-hidden" style={{ background: NAVY }}>
+                  <img
+                    src={c.visual.src}
+                    width={c.visual.width}
+                    height={c.visual.height}
+                    alt={c.visual.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="block w-full h-auto"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-gray-600">{c.visual.caption}</figcaption>
+              </figure>
+            )}
           </li>
         ))}
         <li className="border-t" style={{ borderColor: RULE }} aria-hidden="true" />
