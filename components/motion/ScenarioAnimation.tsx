@@ -3,6 +3,7 @@
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { Table2, Sigma, Layers, FileText, FolderOpen, Mail, Split, User, Clock, type LucideIcon } from 'lucide-react';
 import { scenarios, type AppKey, type ScenarioKey, type ScenarioModule } from '@/lib/caseVisuals';
+import { PauseButton } from '@/components/motion/PauseButton';
 
 const APPS: Record<AppKey, { name: string; color: string; icon: LucideIcon; ink?: string }> = {
   airtable: { name: 'Airtable', color: '#2D7FF9', icon: Table2 },
@@ -133,8 +134,8 @@ const Module: React.FC<{ p: Placed; state: State; wrapAt: number }> = ({ p, stat
 
 /**
  * Exécution animée d'un scénario façon Make : les modules s'allument un par un, une branche
- * différente du If-else à chaque passage. Sans JavaScript ou avec « réduire les animations »,
- * le schéma complet s'affiche, immobile.
+ * différente du If-else à chaque passage, avec un bouton pause. Sans JavaScript, le schéma complet
+ * s'affiche, immobile. Avec « réduire les animations », l'exécution tourne sans le halo qui pulse.
  */
 export const ScenarioAnimation: React.FC<{ scenario: ScenarioKey }> = ({ scenario }) => {
   const { s, placed, branches, height, wrapAt } = useMemo(() => layout(scenario), [scenario]);
@@ -144,10 +145,11 @@ export const ScenarioAnimation: React.FC<{ scenario: ScenarioKey }> = ({ scenari
   const [running, setRunning] = useState(false);
   const [step, setStep] = useState(0); // module en cours ; placed.length = branche ; au-delà = terminé
   const [branch, setBranch] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const pausedRef = useRef(false);
   const total = placed.length + 1;
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const io = new IntersectionObserver(([e]) => (inView.current = e.isIntersecting), { threshold: 0.25 });
     if (box.current) io.observe(box.current);
     setRunning(true);
@@ -155,7 +157,7 @@ export const ScenarioAnimation: React.FC<{ scenario: ScenarioKey }> = ({ scenari
     let b = 0;
     let wait = 0;
     const id = setInterval(() => {
-      if (!inView.current || document.hidden) return;
+      if (pausedRef.current || !inView.current || document.hidden) return;
       if (k < total) k += 1;
       else {
         wait += STEP_MS;
@@ -178,69 +180,81 @@ export const ScenarioAnimation: React.FC<{ scenario: ScenarioKey }> = ({ scenari
   const finished = running && step >= total;
 
   return (
-    <svg
-      ref={box}
-      viewBox={`0 0 ${W} ${height}`}
-      className="block w-full h-auto"
-      role="img"
-      aria-labelledby={`${uid}-t ${uid}-d`}
-      style={{ fontFamily: 'inherit' }}
-    >
-      <title id={`${uid}-t`}>{s.title}</title>
-      <desc id={`${uid}-d`}>{s.description}</desc>
-      <defs>
-        <clipPath id={`${uid}-clip`}>
-          <rect width={W} height={height} rx={18} />
-        </clipPath>
-        <pattern id={`${uid}-dots`} width={20} height={20} patternUnits="userSpaceOnUse">
-          <circle cx={2} cy={2} r={1.4} fill="#CBD0D8" />
-        </pattern>
-      </defs>
-      <g clipPath={`url(#${uid}-clip)`}>
-        <rect width={W} height={height} fill="#F3F4F6" />
-        <rect y={HEAD} width={W} height={height - HEAD} fill={`url(#${uid}-dots)`} />
-        <rect width={W} height={HEAD} fill="#FFFFFF" />
-        <line x1={0} x2={W} y1={HEAD} y2={HEAD} stroke="#E5E7EB" />
-        <text x={26} y={40} fontSize={21} fontWeight={700} fill="#111827">
-          {s.title}
-        </text>
-        {running ? (
-          <g>
-            <circle cx={W - 26 - (finished ? 168 : 196)} cy={34} r={6} fill={finished ? '#22A55B' : GOLD} />
-            <text x={W - 26} y={40} fontSize={17} fill="#4B5563" textAnchor="end">
-              {finished ? 'Exécution terminée' : 'Exécution en cours…'}
-            </text>
-          </g>
-        ) : (
-          <g>
-            <Clock x={W - 26 - s.schedule.length * 8.4 - 26} y={24} width={18} height={18} color="#6B7280" />
-            <text x={W - 26} y={40} fontSize={17} fill="#4B5563" textAnchor="end">
-              {s.schedule}
-            </text>
-          </g>
-        )}
-
-        {/* Liaisons : pointillés gris, puis dorés sur le chemin déjà parcouru */}
-        <g fill="none" strokeLinecap="round">
-          {[...placed, ...branches].map((p, i) =>
-            p.seg ? <path key={`b${i}`} d={p.seg} stroke="#9CA3AF" strokeWidth={4} strokeDasharray="0.1 11" /> : null,
+    <div>
+      <svg
+        ref={box}
+        viewBox={`0 0 ${W} ${height}`}
+        className="block w-full h-auto"
+        role="img"
+        aria-labelledby={`${uid}-t ${uid}-d`}
+        style={{ fontFamily: 'inherit' }}
+      >
+        <title id={`${uid}-t`}>{s.title}</title>
+        <desc id={`${uid}-d`}>{s.description}</desc>
+        <defs>
+          <clipPath id={`${uid}-clip`}>
+            <rect width={W} height={height} rx={18} />
+          </clipPath>
+          <pattern id={`${uid}-dots`} width={20} height={20} patternUnits="userSpaceOnUse">
+            <circle cx={2} cy={2} r={1.4} fill="#CBD0D8" />
+          </pattern>
+        </defs>
+        <g clipPath={`url(#${uid}-clip)`}>
+          <rect width={W} height={height} fill="#F3F4F6" />
+          <rect y={HEAD} width={W} height={height - HEAD} fill={`url(#${uid}-dots)`} />
+          <rect width={W} height={HEAD} fill="#FFFFFF" />
+          <line x1={0} x2={W} y1={HEAD} y2={HEAD} stroke="#E5E7EB" />
+          <text x={26} y={40} fontSize={21} fontWeight={700} fill="#111827">
+            {s.title}
+          </text>
+          {running ? (
+            <g>
+              <circle cx={W - 26 - (finished || paused ? 168 : 196)} cy={34} r={6} fill={finished ? '#22A55B' : paused ? '#9CA3AF' : GOLD} />
+              <text x={W - 26} y={40} fontSize={17} fill="#4B5563" textAnchor="end">
+                {finished ? 'Exécution terminée' : paused ? 'Exécution en pause' : 'Exécution en cours…'}
+              </text>
+            </g>
+          ) : (
+            <g>
+              <Clock x={W - 26 - s.schedule.length * 8.4 - 26} y={24} width={18} height={18} color="#6B7280" />
+              <text x={W - 26} y={40} fontSize={17} fill="#4B5563" textAnchor="end">
+                {s.schedule}
+              </text>
+            </g>
           )}
-          {running &&
-            placed.map((p, i) =>
-              p.seg && i <= step ? <path key={`g${i}`} d={p.seg} stroke={GOLD} strokeWidth={5} strokeDasharray="0.1 11" /> : null,
+
+          {/* Liaisons : pointillés gris, puis dorés sur le chemin déjà parcouru */}
+          <g fill="none" strokeLinecap="round">
+            {[...placed, ...branches].map((p, i) =>
+              p.seg ? <path key={`b${i}`} d={p.seg} stroke="#9CA3AF" strokeWidth={4} strokeDasharray="0.1 11" /> : null,
             )}
-          {running && step >= placed.length && (
-            <path d={branches[branch].seg!} stroke={GOLD} strokeWidth={5} strokeDasharray="0.1 11" />
-          )}
-        </g>
+            {running &&
+              placed.map((p, i) =>
+                p.seg && i <= step ? <path key={`g${i}`} d={p.seg} stroke={GOLD} strokeWidth={5} strokeDasharray="0.1 11" /> : null,
+              )}
+            {running && step >= placed.length && (
+              <path d={branches[branch].seg!} stroke={GOLD} strokeWidth={5} strokeDasharray="0.1 11" />
+            )}
+          </g>
 
-        {placed.map((p, i) => (
-          <Module key={`m${i}`} p={p} state={stateOf(i)} wrapAt={wrapAt} />
-        ))}
-        {branches.map((p, j) => (
-          <Module key={`br${j}`} p={p} state={branchState(j)} wrapAt={wrapAt} />
-        ))}
-      </g>
-    </svg>
+          {placed.map((p, i) => (
+            <Module key={`m${i}`} p={p} state={stateOf(i)} wrapAt={wrapAt} />
+          ))}
+          {branches.map((p, j) => (
+            <Module key={`br${j}`} p={p} state={branchState(j)} wrapAt={wrapAt} />
+          ))}
+        </g>
+      </svg>
+      {/* Toujours rendu pour ne rien décaler au chargement ; masqué tant que l'exécution ne tourne pas. */}
+      <div className={`mt-2 flex justify-end ${running ? '' : 'invisible'}`}>
+        <PauseButton
+          paused={paused}
+          onToggle={() => {
+            pausedRef.current = !pausedRef.current;
+            setPaused(pausedRef.current);
+          }}
+        />
+      </div>
+    </div>
   );
 };
