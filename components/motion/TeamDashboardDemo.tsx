@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { LayoutDashboard } from 'lucide-react';
+import { PauseButton } from '@/components/motion/PauseButton';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
@@ -79,21 +80,23 @@ const UPDATE_DELAY_MS = 1600;
 
 /**
  * Maquette vivante de l'outil de suivi : chiffres qui se comptent, sélection qui passe d'un agent
- * à l'autre, statut d'un bien qui se met à jour. Sans JavaScript ou avec « réduire les animations » :
- * maquette fixe, premier agent sélectionné. Un clic sur un agent l'affiche et arrête le défilement.
+ * à l'autre, statut d'un bien qui se met à jour, avec un bouton pause. Sans JavaScript : maquette fixe,
+ * premier agent sélectionné. Avec « réduire les animations », tout tourne sans le clignotement du bien
+ * mis à jour. Un clic sur un agent l'affiche et arrête le défilement.
  */
 export const TeamDashboardDemo: React.FC = () => {
   const box = useRef<HTMLDivElement>(null);
   const inView = useRef(false);
   const pinned = useRef(false);
   const [animate, setAnimate] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const pausedRef = useRef(false);
   const [counts, setCounts] = useState(KPIS.map((k) => k.value));
   const [sel, setSel] = useState(0);
   const selRef = useRef(0);
   const [updated, setUpdated] = useState<number | null>(null); // index de l'agent dont un bien vient de changer
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     setAnimate(true);
     setCounts(KPIS.map(() => 0));
     let counted = false;
@@ -117,12 +120,12 @@ export const TeamDashboardDemo: React.FC = () => {
     return () => io.disconnect();
   }, []);
 
-  // Une seule horloge, en pause hors écran, onglet masqué ou après un clic sur un agent.
+  // Une seule horloge, en pause sur le bouton, hors écran, onglet masqué ou après un clic sur un agent.
   useEffect(() => {
     if (!animate) return;
     let elapsed = 0;
     const id = setInterval(() => {
-      if (pinned.current || !inView.current || document.hidden) return;
+      if (pausedRef.current || pinned.current || !inView.current || document.hidden) return;
       elapsed += TICK_MS;
       if (elapsed === UPDATE_DELAY_MS) setUpdated(selRef.current);
       if (elapsed >= AGENT_MS) {
@@ -143,8 +146,18 @@ export const TeamDashboardDemo: React.FC = () => {
         <span className="flex items-center gap-2.5 font-extrabold text-base md:text-lg" style={{ color: NAVY }}>
           <LayoutDashboard size={20} aria-hidden="true" /> Suivi de l'équipe
         </span>
-        <span className="text-xs md:text-sm text-gray-600">
-          Octobre · <b style={{ color: NAVY }}>Manager</b>
+        <span className="flex items-center gap-3">
+          <span className="hidden sm:inline text-xs md:text-sm text-gray-600">
+            Octobre · <b style={{ color: NAVY }}>Manager</b>
+          </span>
+          <PauseButton
+            paused={paused}
+            onToggle={() => {
+              pausedRef.current = !pausedRef.current;
+              setPaused(pausedRef.current);
+            }}
+            className={animate ? '' : 'invisible'}
+          />
         </span>
       </div>
 

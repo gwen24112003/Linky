@@ -6,6 +6,7 @@ import {
   LayoutDashboard, BarChart3, FileSignature, Hammer, Receipt, AlarmClock, Check, type LucideIcon,
 } from 'lucide-react';
 import { demoFlows, type DemoIcon, type DemoKey } from '@/lib/demoFlows';
+import { PauseButton } from '@/components/motion/PauseButton';
 
 const NAVY = '#1A2332';
 const GOLD = '#C9A84C';
@@ -28,8 +29,9 @@ interface AutomationDemoProps {
 }
 
 /**
- * Démonstration d'une automatisation : les étapes s'allument l'une après l'autre.
- * Sans JavaScript ou avec « réduire les animations », toutes les étapes sont affichées, cochées.
+ * Démonstration d'une automatisation : les étapes s'allument l'une après l'autre, avec un bouton pause.
+ * Sans JavaScript, toutes les étapes sont affichées, cochées. Avec « réduire les animations », le déroulé
+ * tourne quand même, sans le léger glissement de l'étape en cours.
  */
 export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
   const flows = keys ? demoFlows.filter((f) => keys.includes(f.key)) : demoFlows;
@@ -38,6 +40,9 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
   // -1 = état statique (tout coché) ; 0..n-1 = étape en cours ; n = tout coché, en pause.
   const [step, setStep] = useState(-1);
   const [animate, setAnimate] = useState(false);
+  const [reduce, setReduce] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const pausedRef = useRef(false);
   const box = useRef<HTMLDivElement>(null);
   const inView = useRef(true);
   const pinned = useRef(flows.length === 1);
@@ -48,7 +53,7 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
   const flow = flows.find((f) => f.key === key) ?? flows[0];
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setReduce(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     setAnimate(true);
     stepRef.current = 0;
     setStep(0);
@@ -58,7 +63,7 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
 
     let pause = 0;
     const id = setInterval(() => {
-      if (!inView.current || document.hidden) return; // en pause hors écran
+      if (pausedRef.current || !inView.current || document.hidden) return; // en pause : bouton, hors écran, onglet masqué
       const len = (flows.find((f) => f.key === keyRef.current) ?? flows[0]).steps.length;
       let s = stepRef.current;
       if (s < len) {
@@ -94,6 +99,11 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
     }
   };
 
+  const togglePause = () => {
+    pausedRef.current = !pausedRef.current;
+    setPaused(pausedRef.current);
+  };
+
   const state = (i: number) => (!animate || step === -1 || i < step ? 'done' : i === step ? 'active' : 'todo');
 
   return (
@@ -122,7 +132,11 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
         </div>
       )}
 
-      <p className="text-sm text-gray-600 mb-4">{flow.trigger}</p>
+      <div className="flex items-center justify-between gap-3 mb-4">
+        <p className="text-sm text-gray-600">{flow.trigger}</p>
+        {/* Toujours rendu pour ne rien décaler au chargement ; masqué tant que l'animation ne tourne pas. */}
+        <PauseButton paused={paused} onToggle={togglePause} className={animate ? 'shrink-0' : 'shrink-0 invisible'} />
+      </div>
 
       <ol>
         {flow.steps.map((s, i) => {
@@ -143,7 +157,7 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
                   borderColor: st === 'active' ? GOLD : RULE,
                   background: st === 'active' ? '#FAF7F0' : '#FFFFFF',
                   opacity: st === 'todo' ? 0.5 : 1,
-                  transform: st === 'active' ? 'translateX(4px)' : 'none',
+                  transform: st === 'active' && !reduce ? 'translateX(4px)' : 'none',
                 }}
               >
                 <span
