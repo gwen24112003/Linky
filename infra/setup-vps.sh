@@ -77,6 +77,15 @@ else
   echo 'server_tokens off;' | sudo tee /etc/nginx/conf.d/hardening.conf >/dev/null
 fi
 
+# Pages HTML revalidées à chaque visite (304 si rien n'a changé) : jamais d'ancienne version servie
+# après une mise en ligne. Les fichiers /_next/static/ ont un nom versionné et gardent un cache d'un an.
+sudo tee /etc/nginx/conf.d/html-cache.conf >/dev/null <<'EOF'
+map $sent_http_content_type $html_cache_control {
+    ~*text/html "no-cache";
+    default "";
+}
+EOF
+
 # En-têtes de sécurité, inclus dans chaque bloc (add_header ne s'hérite pas dans les location qui en ont).
 # Pas de Permissions-Policy camera/micro : l'iframe cal.com de /contact les déclare.
 sudo tee /etc/nginx/snippets/security-headers.conf >/dev/null <<'EOF'
@@ -95,6 +104,7 @@ server {
     root $WEBROOT/current;
     index index.html;
     include snippets/security-headers.conf;
+    add_header Cache-Control \$html_cache_control;
 
     # Export statique Next.js (trailingSlash: true)
     location / {
