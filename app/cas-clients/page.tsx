@@ -95,7 +95,7 @@ export default function CasClientsPage() {
           </div>
         </section>
 
-        <CasesSection cases={cases} title="Trois missions, trois problèmes concrets" />
+        <CasesSection cases={cases} title="Trois missions, trois problèmes concrets" showVisuals />
 
         {/* Programme pilote BTP */}
         <section className="py-20 md:py-28" style={{ background: NAVY }}>
