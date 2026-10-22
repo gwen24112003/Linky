@@ -13,9 +13,9 @@ const RULE = 'rgba(26,35,50,0.16)';
 
 const SITE_URL = 'https://opusadvisor.fr';
 const PAGE_URL = `${SITE_URL}/consultant-rennes/`;
-const PAGE_TITLE = 'Consultant en organisation et automatisation à Rennes';
+const PAGE_TITLE = 'Consultant automatisation et organisation à Rennes';
 const PAGE_DESCRIPTION =
-  "Opus Advisor, à Rennes, automatise la gestion des organismes de formation, conciergeries, agences immobilières et entreprises du BTP d'Ille-et-Vilaine et des départements voisins. Pré-audit gratuit.";
+  "À Rennes, Opus Advisor construit des systèmes de gestion automatisés pour la formation, l'immobilier et le BTP, en Ille-et-Vilaine et autour. Pré-audit gratuit.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

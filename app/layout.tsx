@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Bricolage_Grotesque, Lexend } from 'next/font/google';
+import { Inter, Bricolage_Grotesque } from 'next/font/google';
 import './globals.css';
 import { ClickTracker } from '@/components/analytics/ClickTracker';
 import { RevealProvider } from '@/components/motion/RevealProvider';
@@ -19,13 +19,6 @@ const bricolage = Bricolage_Grotesque({
   weight: ['400', '600', '700', '800'],
   display: 'swap',
   variable: '--font-bricolage',
-});
-
-const lexend = Lexend({
-  subsets: ['latin'],
-  weight: ['300', '400', '600', '700'],
-  display: 'swap',
-  variable: '--font-lexend',
 });
 
 const SITE_URL = 'https://opusadvisor.fr';
@@ -96,12 +89,15 @@ const organizationJsonLd = {
       name: SITE_NAME,
       alternateName: 'Opus Advisor',
       description:
-        "Organisation et automatisation de la gestion des petites entreprises (organismes de formation, immobilier et conciergerie, BTP second œuvre)  : des systèmes construits à l'image de chaque entreprise, des automatisations entre les logiciels existants jusqu'au système complet monté de A à Z. Diagnostic chiffré, mise en œuvre, formation de l'équipe, suivi.",
+        "Organisation et automatisation de la gestion des petites entreprises (organismes de formation, immobilier et conciergerie, BTP second œuvre) : des systèmes construits à l'image de chaque entreprise, des automatisations entre les logiciels existants jusqu'au système complet monté de A à Z. Diagnostic chiffré, mise en œuvre, formation de l'équipe, suivi.",
       url: SITE_URL,
+      logo: `${SITE_URL}/images/opus-icon.png`,
+      image: `${SITE_URL}/images/Logo_1200x630.png`,
       email: 'enzo@opusadvisor.fr',
       telephone: '+33615756549',
       founder: {
         '@type': 'Person',
+        '@id': `${SITE_URL}/equipe/#enzo-monnier`,
         name: 'Enzo Monnier',
         jobTitle: 'Consultant en organisation et automatisation',
         url: 'https://www.linkedin.com/in/enzo-monnier-7524ab205/',
@@ -163,9 +159,8 @@ const organizationJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${bricolage.variable} ${lexend.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${bricolage.variable}`}>
       <head>
-        <link rel="preload" as="image" href="/images/opus-icon.png" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

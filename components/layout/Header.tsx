@@ -68,8 +68,10 @@ export const Header: React.FC = () => {
               onClick={() => window.scrollTo(0, 0)}
             >
               <img
-                src="/images/Logo_1200x630.png"
+                src="/images/opus-logo-header.webp"
                 alt="Logo Opus Advisor"
+                width={240}
+                height={48}
                 className="h-10 w-[185px] md:h-12 md:w-[240px] object-cover object-center"
               />
             </Link>
@@ -129,6 +131,7 @@ export const Header: React.FC = () => {
         }`}
         style={{ background: NAVY }}
         aria-hidden={!isMenuOpen}
+        inert={!isMenuOpen}
       >
         <div className="flex flex-col items-center justify-center flex-1 gap-9 px-8">
           {mobileLinks.map((link, index) => (
@@ -160,7 +163,10 @@ export const Header: React.FC = () => {
           <img
             src="/images/opus-icon.png"
             alt="Logo Opus Advisor"
-            className="h-16 object-contain opacity-30"
+            width={64}
+            height={64}
+            loading="lazy"
+            className="h-16 w-16 object-contain opacity-30"
           />
         </div>
       </div>

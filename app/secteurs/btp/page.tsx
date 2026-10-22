@@ -12,15 +12,26 @@ import { FAQSection } from '@/components/home/FAQSection';
 import { FinalCTASection } from '@/components/home/FinalCTASection';
 import { faqsBtp, faqPageJsonLd } from '@/lib/faqData';
 import { tools } from '@/lib/tools';
+import { getAllArticles } from '@/lib/articles';
 
 const NAVY = '#1A2332';
 const GOLD_INK = '#8A6A1C';
 const RULE = 'rgba(26,35,50,0.16)';
 
 const PAGE_URL = 'https://opusadvisor.fr/secteurs/btp/';
-const PAGE_TITLE = 'BTP second œuvre : automatiser devis, relances et suivi de chantier';
+
+// Articles mis en avant sur la page BTP, dans l'ordre d'affichage.
+const BTP_ARTICLES = [
+  'relances-automatiques-impayes-btp',
+  'marge-chantier-suivi-reel',
+  'temps-administratif-artisans-btp',
+  'sous-traitance-btp-paiement-direct',
+  'maprimerenov-2026',
+  'facturation-electronique-2026',
+];
+const PAGE_TITLE = 'BTP second œuvre : automatiser devis et relances';
 const PAGE_DESCRIPTION =
-  'On rend 10 h par semaine aux patrons du BTP second œuvre : relances automatiques, chantiers centralisés, devis qui partent vite. Outils gratuits et pré-audit de 30 minutes.';
+  'On rend 10 h par semaine aux patrons du second œuvre : relances automatiques, chantiers centralisés, devis qui partent vite. Pré-audit gratuit de 30 min.';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -60,9 +71,27 @@ const BtpResources = () => (
           </li>
         ))}
       </ul>
+
+      <h3 className="mt-20 font-heading font-bold leading-tight text-2xl md:text-3xl" style={{ color: NAVY }}>
+        À lire pour le second œuvre
+      </h3>
+      <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-10">
+        {BTP_ARTICLES.map((slug) => getAllArticles().find((a) => a.slug === slug))
+          .filter((a) => a !== undefined)
+          .map((a) => (
+            <li key={a.slug} className="border-t" style={{ borderColor: RULE }}>
+              <Link href={`/articles/${a.slug}/`} className="group block py-6">
+                <span className="block font-semibold text-lg leading-snug group-hover:underline underline-offset-4" style={{ color: NAVY }}>
+                  {a.title}
+                </span>
+                <span className="block mt-2 text-sm text-gray-600 leading-relaxed">{a.description}</span>
+              </Link>
+            </li>
+          ))}
+      </ul>
       <div className="mt-10 flex flex-col sm:flex-row gap-5 sm:gap-10">
         <Link href="/articles" className="group inline-flex items-center gap-2 font-semibold text-base" style={{ color: NAVY }}>
-          Les articles pour le BTP
+          Tous les articles pour le BTP
           <ArrowRight size={18} style={{ color: GOLD_INK }} className="group-hover:translate-x-1 transition-transform" />
         </Link>
         <Link href="/consultant-rennes" className="group inline-flex items-center gap-2 font-semibold text-base" style={{ color: NAVY }}>
