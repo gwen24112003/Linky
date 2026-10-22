@@ -15,9 +15,9 @@ Si votre entreprise ne correspond pas à ce profil, on vous le dit dès le pré-
   },
   {
     question: 'Faut-il changer de logiciel ?',
-    answer: `En général, non. On ne vous fait changer de logiciel que si le vôtre est vraiment inadapté, et c'est rare.
+    answer: `Pas forcément. Si vos logiciels font l'affaire, on les garde : on corrige leur paramétrage, on les relie au reste (tableurs, mails, banque, planning) et, si besoin, on ajoute une application centrale plus simple à utiliser.
 
-On garde votre logiciel métier, on corrige son paramétrage et on le relie au reste : tableurs, mails, banque, planning. Le plus souvent, on ajoute une application centrale qui reçoit les informations de tous vos logiciels ; c'est depuis elle que partent les automatisations.
+S'ils sont inadaptés, ou si vous partez de zéro, on construit le système complet avec vous.
 
 On ne revend aucun logiciel. Si on vous conseille d'en changer, on n'y gagne rien.`,
   },
@@ -47,7 +47,7 @@ Si on ne peut pas chiffrer le gain au départ, on ne s'engage pas.`,
     question: "Je ne suis pas à l'aise avec l'informatique. Il va falloir apprendre 10 outils ?",
     answer: `Non, on fait le contraire.
 
-On garde ce que vous et vos équipes savez déjà utiliser : votre logiciel, Excel, vos mails, WhatsApp. Quand on ajoute une application centrale, c'est pour qu'il y ait un seul écran à ouvrir au lieu de cinq.
+Le système est construit pour les personnes qui l'utilisent. Ce que vous savez déjà utiliser reste (votre logiciel, Excel, vos mails, WhatsApp), et ce qu'on ajoute est fait pour être simple : un seul écran à ouvrir au lieu de cinq.
 
 On forme la personne qui gère l'administratif en 2 heures, et les équipes en 1 heure. La documentation reste chez vous.`,
   },
@@ -88,9 +88,9 @@ Si votre boîte ne correspond pas à ce profil, on vous le dit dès le premier a
   },
   {
     question: "J'utilise déjà Batappli (ou Tolteck, Obat, EBP). Il faut que je change ?",
-    answer: `En général, non. On ne vous fait changer de logiciel que si le vôtre est vraiment inadapté, et c'est rare.
+    answer: `Pas forcément. Si votre logiciel fait l'affaire, on le garde : on corrige son paramétrage, on le relie au reste (Excel, WhatsApp, la banque, le planning) et, si besoin, on ajoute une application centrale où se retrouvent vos chantiers.
 
-On garde votre logiciel métier, on corrige son paramétrage et on le relie au reste : Excel, WhatsApp, la banque, le planning. Le plus souvent, on ajoute une application centrale où se retrouvent vos chantiers ; c'est depuis elle que partent les relances et les rapports.
+S'il est inadapté, ou si vous partez de zéro, on construit le système complet avec vous.
 
 On ne revend aucun logiciel. Si on vous conseille d'en changer, on n'y gagne rien.`,
   },
@@ -119,7 +119,7 @@ Si on ne peut pas chiffrer le gain au départ, on ne s'engage pas.`,
     question: "Je suis nul en informatique. Vous allez m'obliger à apprendre 10 outils ?",
     answer: `Non, on fait le contraire.
 
-On garde ce que vous et vos équipes savez déjà utiliser : Batappli, Excel, WhatsApp, vos mails. Quand on ajoute une application centrale, c'est pour qu'il y ait un seul écran à ouvrir au lieu de cinq. Pour les équipes sur le terrain, elle peut tenir dans une appli sur leur téléphone.
+Le système est construit pour les personnes qui l'utilisent. Ce que vous savez déjà utiliser reste (Batappli, Excel, WhatsApp, vos mails), et ce qu'on ajoute est fait pour être simple : un seul écran à ouvrir au lieu de cinq, ou une appli sur le téléphone pour les équipes sur le terrain.
 
 On forme votre secrétaire en 2 heures et vos chefs d'équipe en 1 heure. La documentation reste chez vous.`,
   },

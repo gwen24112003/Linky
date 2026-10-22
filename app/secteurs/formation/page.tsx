@@ -21,7 +21,7 @@ export default function FormationPage() {
       breadcrumbName="Organismes de formation"
       kicker="Organismes de formation"
       title="Automatiser la gestion d'un organisme de formation"
-      intro="Inscriptions, conventions, convocations, émargements, dossiers pour les financeurs : chaque session produit une pile de documents. On réunit les stagiaires et les sessions dans une base centrale, reliée à vos outils, pour que ces documents se préparent et partent tout seuls. Votre logiciel de gestion de formation reste en place."
+      intro="Inscriptions, conventions, convocations, émargements, dossiers pour les financeurs : chaque session produit une pile de documents. On réunit les stagiaires et les sessions dans une base centrale, reliée à vos outils, pour que ces documents se préparent et partent tout seuls. Si votre logiciel de gestion de formation fait l'affaire, il reste en place."
       painsTitle="Ce qui prend le plus de temps"
       pains={[
         {

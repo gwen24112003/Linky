@@ -21,13 +21,13 @@ export const HeroHome: React.FC = () => {
           </p>
 
           <h1 className="font-heading font-bold leading-[1.02] tracking-tight text-[2.5rem] sm:text-6xl mt-6">
-            On centralise et on automatise la gestion des petites entreprises.
+            On construit un système de gestion à votre image, complet et automatisé.
           </h1>
 
           <p className="mt-7 text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-            Vos logiciels restent en place. On les relie et, le plus souvent, on installe au milieu une application
-            centrale qui reçoit tout : c'est d'elle que partent les dossiers, les factures et les relances. Puis on reste
-            pour faire tourner le système.
+            Tout construire de A à Z, réunir vos logiciels dans une application centrale plus simple à utiliser, ou
+            seulement automatiser ce qui se fait encore à la main : on fait ce dont votre entreprise a besoin. Puis on
+            reste pour faire tourner le système.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">

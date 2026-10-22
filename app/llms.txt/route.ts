@@ -18,7 +18,7 @@ export function GET() {
 
   const body = `# Opus Advisor
 
-> Opus Advisor organise et automatise la gestion des petites entreprises : automatisations entre les outils qu'elles utilisent déjà (logiciel métier, tableurs, mails, banque, comptabilité) et, le plus souvent, une application centrale qui reçoit leurs informations et d'où partent les automatisations. Secteurs : organismes de formation, immobilier et conciergerie, BTP second œuvre. Objectif annoncé : rendre 10 heures par semaine au dirigeant à partir du deuxième mois. Basé à Rennes, intervient partout en France. Indépendant de tout éditeur de logiciel.
+> Opus Advisor organise et automatise la gestion des petites entreprises  : des systèmes complets et automatisés, construits à l'image de chaque entreprise. Selon le besoin, des automatisations entre les outils déjà en place (logiciel métier, tableurs, mails, banque, comptabilité), une application centrale qui réunit ces outils, ou un système monté de A à Z. Secteurs : organismes de formation, immobilier et conciergerie, BTP second œuvre. Objectif annoncé : rendre 10 heures par semaine au dirigeant à partir du deuxième mois. Basé à Rennes, intervient partout en France. Indépendant de tout éditeur de logiciel.
 
 ## Offres
 - [Pré-audit gratuit](${SITE_URL}/contact/): 30 minutes en visio pour repérer 3 points de friction dans les outils de l'entreprise. Gratuit et sans engagement.

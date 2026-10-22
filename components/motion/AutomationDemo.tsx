@@ -187,7 +187,7 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
       <p className="mt-5 pt-4 border-t text-xs text-gray-600 flex items-center justify-between gap-3" style={{ borderColor: RULE }}>
         <span>Exemple de déroulé, sans ressaisie</span>
         <span className="font-semibold" style={{ color: GOLD_INK }}>
-          Vos outils, reliés à une base centrale
+          Un système qui tourne tout seul
         </span>
       </p>
     </div>

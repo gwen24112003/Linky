@@ -69,7 +69,7 @@ const faq = [
   },
   {
     q: 'Vous vendez un logiciel ?',
-    a: 'Non, on ne revend aucun logiciel. On part de ce que vous utilisez déjà, votre logiciel métier, vos tableurs, vos mails, et on ne vous fait changer d’outil que si c’est vraiment nécessaire. Le plus souvent, on installe une application centrale qui réunit les informations de ces outils. Elle est à votre nom, comme tous les comptes du système.',
+    a: 'Non, on ne revend aucun logiciel. On construit le système dont vous avez besoin : des automatisations sur vos outils actuels, une application centrale qui les réunit, ou un système complet si vous partez de zéro. Tout est à votre nom.',
   },
   {
     q: 'Combien ça coûte ?',
@@ -124,8 +124,8 @@ export default function ConsultantRennesPage() {
               Consultant en organisation et automatisation, à Rennes
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-              Opus Advisor est installé à Rennes. On centralise et on automatise la gestion des petites entreprises de la
-              région : organismes de formation, conciergeries et agences immobilières, entreprises
+              Opus Advisor est installé à Rennes. On construit pour les petites entreprises de la région des systèmes de gestion
+              complets et automatisés : organismes de formation, conciergeries et agences immobilières, entreprises
               du BTP.
             </p>
             <Link

@@ -54,7 +54,7 @@ export default function ImmobilierPage() {
         {
           what: 'Une application centrale, reliée à votre logiciel',
           tools: 'Channel manager (Beds24, Smoobu, Lodgify…) ou logiciel de transaction (Apimo, Hektor, Netty…)',
-          desc: "Elle reçoit les réservations ou les mandats de votre logiciel, et c'est d'elle que partent la facturation, les plannings et le reporting. Votre logiciel reste en place.",
+          desc: "Elle reçoit les réservations ou les mandats de votre logiciel, et c'est d'elle que partent la facturation, les plannings et le reporting. S'il fait l'affaire, votre logiciel reste en place.",
         },
         {
           what: 'La facturation des propriétaires en un seul traitement',

@@ -18,8 +18,8 @@ import { cases } from '@/lib/cases';
 const PAGE_URL = 'https://opusadvisor.fr/';
 const PAGE_TITLE = 'Automatisation de la gestion des PME, à Rennes | Opus Advisor';
 const PAGE_DESCRIPTION =
-  "On relie vos logiciels autour d'une application centrale : dossiers, factures et relances se font tout seuls. Formation, immobilier, BTP. Pré-audit gratuit.";
-const OG_TITLE = 'Opus Advisor : on centralise et on automatise la gestion des petites entreprises';
+  'Un système de gestion complet et automatisé, à votre image : dossiers, factures et relances se font seuls. Formation, immobilier, BTP. Pré-audit gratuit.';
+const OG_TITLE = 'Opus Advisor : un système de gestion complet et automatisé, à votre image';
 
 export const metadata: Metadata = {
   title: { absolute: PAGE_TITLE },

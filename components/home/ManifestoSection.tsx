@@ -27,8 +27,9 @@ export const ManifestoSection: React.FC = () => {
             pour les faire tourner. C'est ce qu'on fait.
           </p>
           <p>
-            Vous gardez vos logiciels. On les relie à vos tableurs, à votre boîte mail, à votre banque,
-            et le plus souvent à une application centrale où tout se retrouve. Au bout de deux mois, vous devez récupérer 10 heures par
+            On construit le système dont votre entreprise a besoin, qu'il s'agisse de quelques
+            automatisations, d'une application centrale qui réunit vos logiciels ou d'un système complet
+            monté de A à Z. Au bout de deux mois, vous devez récupérer 10 heures par
             semaine. On les mesure avec vous, sur vos chiffres.
           </p>
         </div>

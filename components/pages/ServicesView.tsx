@@ -49,7 +49,7 @@ const services: ServiceData[] = [
     title: 'Audit Stack',
     hook: '990 €, 10 jours, et vous savez où vous en êtes.',
     description:
-      "On cartographie vos outils et on repère les points de friction. Pour chaque outil, vous recevez une recommandation claire : l'ajouter, le remplacer ou le relier aux autres. Vous savez aussi s'il faut une application centrale pour tout réunir. On ne revend aucun logiciel, donc on n'a aucun intérêt à vous en placer un.",
+      "On cartographie vos outils et on repère les points de friction. Pour chaque outil, vous recevez une recommandation claire : l'ajouter, le remplacer ou le relier aux autres. Vous savez aussi de quel système vous avez besoin : des automatisations, une application centrale ou un système complet. On ne revend aucun logiciel, donc on n'a aucun intérêt à vous en placer un.",
     deliverables: [
       'La carte complète de vos outils actuels',
       'Les points de friction, par ordre de priorité',
@@ -85,9 +85,9 @@ const services: ServiceData[] = [
     title: 'Mise en œuvre système',
     hook: 'On installe le système, puis on forme vos équipes dessus.',
     description:
-      "On met en place le système défini au diagnostic : l'application centrale qui réunit vos informations (base Airtable ou outil développé pour vous), le paramétrage de votre logiciel métier, les automatisations avec Make ou n8n, reliées à vos mails ou à WhatsApp Business. On teste sur vos vrais dossiers, on forme l'équipe et on vous laisse une documentation écrite.",
+      "On construit le système défini au diagnostic, à votre image : selon les cas, les automatisations seules (Make ou n8n), une application centrale qui réunit vos logiciels (base Airtable ou outil développé pour vous), ou tout le système de A à Z. On teste sur vos vrais dossiers, on forme l'équipe et on vous laisse une documentation écrite.",
     deliverables: [
-      "L'application centrale, où se retrouvent toutes vos informations",
+      "L'application centrale, si le diagnostic la prévoit",
       'Votre logiciel métier paramétré et exploité à fond',
       'Les automatisations en service : relances, rapports, synchronisations',
       'Les documents partagés, au même endroit pour toute l’équipe',
@@ -121,7 +121,7 @@ const services: ServiceData[] = [
 const comparisons = [
   {
     vs: 'Face à un éditeur de logiciel',
-    text: "Un éditeur vend son outil, puis passe à l'entreprise suivante. On ne revend aucun logiciel : vos logiciels restent en place, et l'application centrale qu'on installe est construite pour votre façon de travailler, à votre nom.",
+    text: "Un éditeur vend le même outil à tout le monde, puis passe à l'entreprise suivante. On ne revend aucun logiciel : on construit un système à votre image, qui reprend vos logiciels quand ils font l'affaire.",
   },
   {
     vs: 'Face à un cabinet de conseil',
@@ -139,7 +139,7 @@ const comparisons = [
 
 const summary = [
   'Des missions réelles en formation et en immobilier, des outils dédiés au BTP',
-  'Vos logiciels restent en place, reliés à une application centrale',
+  'Un système à votre image, des automatisations au système complet',
   'On reste après la mise en œuvre, avec le Gardien',
   'On mesure le temps gagné, sur vos chiffres',
   'Indépendants de tous les éditeurs de logiciels',
