@@ -5,7 +5,7 @@ import { casesFor } from '@/lib/cases';
 const PAGE_URL = 'https://opusadvisor.fr/secteurs/immobilier/';
 const PAGE_TITLE = 'Automatisation pour conciergeries et agences immobilières';
 const PAGE_DESCRIPTION =
-  "Facturation des propriétaires, plannings de ménage, factures prestataires, suivi des mandats et des agents : on relie vos outils pour supprimer la ressaisie. Pré-audit gratuit.";
+  "Facturation des propriétaires, plannings de ménage, suivi des agents : une application centrale reliée à vos outils, plus aucune ressaisie. Pré-audit gratuit.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -21,7 +21,7 @@ export default function ImmobilierPage() {
       breadcrumbName="Immobilier et conciergerie"
       kicker="Immobilier et conciergerie"
       title="Automatiser la gestion d'une conciergerie ou d'une agence immobilière"
-      intro="Réservations, ménages, facturation des propriétaires, suivi des mandats et des agents : on relie vos outils pour que l'information circule sans ressaisie, et qu'un propriétaire ou un dossier de plus ne demande pas un travail à part."
+      intro="Réservations, ménages, facturation des propriétaires, suivi des mandats et des agents : on réunit l'information dans une application centrale, reliée à vos outils, pour qu'elle circule sans ressaisie et qu'un propriétaire ou un dossier de plus ne demande pas un travail à part."
       painsTitle="Ce qui prend le plus de temps"
       pains={[
         {
@@ -52,9 +52,9 @@ export default function ImmobilierPage() {
       setupTitle="Ce qu'on met en place"
       setup={[
         {
-          what: 'Votre logiciel relié au reste',
+          what: 'Une application centrale, reliée à votre logiciel',
           tools: 'Channel manager (Beds24, Smoobu, Lodgify…) ou logiciel de transaction (Apimo, Hektor, Netty…)',
-          desc: 'On part de celui que vous utilisez et on le connecte à vos tableurs, à vos mails et à votre comptabilité.',
+          desc: "Elle reçoit les réservations ou les mandats de votre logiciel, et c'est d'elle que partent la facturation, les plannings et le reporting. S'il fait l'affaire, votre logiciel reste en place.",
         },
         {
           what: 'La facturation des propriétaires en un seul traitement',

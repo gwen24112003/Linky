@@ -21,7 +21,7 @@ export default function FormationPage() {
       breadcrumbName="Organismes de formation"
       kicker="Organismes de formation"
       title="Automatiser la gestion d'un organisme de formation"
-      intro="Inscriptions, conventions, convocations, émargements, dossiers pour les financeurs : chaque session produit une pile de documents. On relie vos outils pour qu'ils se préparent et partent tout seuls, sans changer votre logiciel de gestion de formation."
+      intro="Inscriptions, conventions, convocations, émargements, dossiers pour les financeurs : chaque session produit une pile de documents. On réunit les stagiaires et les sessions dans une base centrale, reliée à vos outils, pour que ces documents se préparent et partent tout seuls. Si votre logiciel de gestion de formation fait l'affaire, il reste en place."
       painsTitle="Ce qui prend le plus de temps"
       pains={[
         {
@@ -52,7 +52,7 @@ export default function FormationPage() {
       setupTitle="Ce qu'on met en place"
       setup={[
         {
-          what: 'Une seule base des stagiaires et des sessions',
+          what: 'Une base centrale des stagiaires et des sessions',
           tools: 'Votre logiciel de gestion de formation (Digiforma, Dendreo…), Airtable ou Google Sheets',
           desc: 'Chaque information est saisie une fois, au bon endroit, et sert à tous les documents.',
         },
