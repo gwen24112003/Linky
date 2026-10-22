@@ -120,6 +120,7 @@ export const SectorPage: React.FC<SectorPageProps> = (p) => {
             cases={p.cases}
             title={p.cases.length > 1 ? 'Ce qu’on a déjà mis en place dans ce secteur' : 'Une mission dans ce secteur'}
             link={{ href: '/cas-clients', label: 'Tous les cas clients' }}
+            showVisuals
           />
         )}
 
