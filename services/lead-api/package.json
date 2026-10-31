@@ -4,14 +4,20 @@
   "type": "module",
   "description": "Enregistre les leads du diagnostic facture électronique et envoie les mails (opusadvisor.fr).",
   "engines": {
-    "node": ">=22.18"
+    "node": ">=22.13"
   },
   "scripts": {
-    "start": "node --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON server.ts",
-    "reminders": "node --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON reminders.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --disable-warning=ExperimentalWarning dist/services/lead-api/server.js",
+    "reminders": "node --disable-warning=ExperimentalWarning dist/services/lead-api/reminders.js",
+    "dev": "node --disable-warning=ExperimentalWarning server.ts",
     "check": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "nodemailer": "^10.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.17",
+    "typescript": "5.9.3"
   }
 }

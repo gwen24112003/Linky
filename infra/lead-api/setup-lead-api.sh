@@ -6,8 +6,8 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 VHOST=/etc/nginx/sites-available/opusadvisor.fr
 
-node -e 'const [a,b]=process.versions.node.split(".").map(Number); process.exit(a>22||(a===22&&b>=18)?0:1)' \
-  || { echo "Node 22.18 ou plus récent requis (node:sqlite et TypeScript natif)" >&2; exit 1; }
+node -e 'const [a,b]=process.versions.node.split(".").map(Number); process.exit(a>22||(a===22&&b>=13)?0:1)' \
+  || { echo "Node 22.13 ou plus récent requis (module node:sqlite)" >&2; exit 1; }
 
 echo "==> Utilisateur système et dossiers"
 id opuslead >/dev/null 2>&1 || sudo useradd --system --no-create-home --shell /usr/sbin/nologin opuslead

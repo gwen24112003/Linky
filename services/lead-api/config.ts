@@ -1,8 +1,11 @@
 // Réglages du service, lus dans l'environnement (sur le VPS : /etc/opus-lead-api.env, voir README.md).
-import { dirname, join } from 'node:path';
+import { dirname, join, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
+// Racine du dépôt, depuis services/lead-api (TypeScript exécuté tel quel) ou depuis la version compilée sous dist/.
+const HERE = dirname(fileURLToPath(import.meta.url));
+const DIST = `${sep}dist${sep}`;
+const ROOT = join(HERE.includes(DIST) ? HERE.slice(0, HERE.indexOf(DIST)) : HERE, '..', '..');
 const env = process.env;
 
 export const config = {

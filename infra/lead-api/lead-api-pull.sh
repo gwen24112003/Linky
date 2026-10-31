@@ -23,7 +23,8 @@ CHANGED=$(git -C "$DIR" diff --name-only "$CUR" "$NEW" -- "${PATHS[@]}" | wc -l)
 git -C "$DIR" reset -q --hard FETCH_HEAD
 if [ "$CHANGED" -eq 0 ] && [ -z "${FIRST:-}" ]; then exit 0; fi
 
-(cd "$DIR/services/lead-api" && npm ci --omit=dev --no-audit --no-fund --silent)
+# Le Node d'Ubuntu n'exécute pas le TypeScript : on compile (TypeScript est une dépendance de développement du service).
+(cd "$DIR/services/lead-api" && npm ci --no-audit --no-fund --silent && npm run build --silent)
 if systemctl is-enabled -q opus-lead-api 2>/dev/null; then
   sudo systemctl restart opus-lead-api
 fi
