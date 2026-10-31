@@ -32,6 +32,7 @@ test('micro-entreprise en franchise, sans plateforme, avec des clients pros', ()
   // 5 factures par mois × 12 × 50 € = 3 000 €, sous le plafond.
   assert.equal(d.amende?.montant, 3_000);
   assert.match(d.amende?.texte ?? '', /pas un montant certain/);
+  assert.match(d.amende?.texte ?? '', /première infraction réparée dans les 30 jours/);
   assert.match(d.recommandation, /Word, Excel ou Canva/);
   assert.equal(d.plan[0].titre, 'Désigner votre plateforme agréée de réception');
   assert.equal(d.plan.at(-1)?.date, '2027-09-01');

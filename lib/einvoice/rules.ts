@@ -3,6 +3,8 @@
 // ailleurs : à relire et à redater (RULES_UPDATED_AT) à chaque évolution des textes.
 // Sources : FAQ « Tout savoir sur la facturation électronique » (impots.gouv.fr),
 // entreprendre.service-public.gouv.fr (F39785), CGI art. 289 bis, 1737 et 1788 D.
+// Montants des amendes vérifiés le 31/10/2026 sur Légifrance : CGI art. 1737, III, IV bis et V, dans sa version
+// en vigueur depuis le 21/02/2026 (loi n° 2026-103 du 19 février 2026, art. 123).
 
 import type { Volume } from './questions.ts';
 
@@ -25,6 +27,8 @@ export const AMENDES = {
   miseEnDemeureMois: 3,
   receptionPremiere: 500,
   receptionSuivantes: 1_000,
+  /** Pas d'amende d'émission pour une première infraction réparée dans ce délai après une demande de l'administration (CGI art. 1737, V). */
+  delaiReparationJours: 30,
 } as const;
 
 /** Milieu de chaque tranche de la question 7 ; « plus de 200 » compte pour 300 (le plafond est atteint bien avant). */
@@ -108,7 +112,7 @@ export const TEXTS = {
     enVigueur: (qui: string, date: string) => `Vous facturez ${qui}. Depuis le ${date}, vous devez transmettre les données de ces ventes à l'administration par votre plateforme : c'est l'e-reporting.`,
     qui: { particuliers: 'des particuliers', etranger: "des clients à l'étranger", lesDeux: "des particuliers et des clients à l'étranger" },
   },
-  amende: (montant: string) => `Ordre de grandeur, si vos factures aux entreprises ne passaient pas au format électronique : jusqu'à ${montant} d'amende par an (${euros(AMENDES.parFacture)} par facture, dans la limite de ${euros(AMENDES.plafondAnnuel)} par an). C'est une estimation à partir de vos réponses, pas un montant certain.`,
+  amende: (montant: string) => `Ordre de grandeur, si vos factures aux entreprises ne passaient pas au format électronique : jusqu'à ${montant} d'amende par an (${euros(AMENDES.parFacture)} par facture, dans la limite de ${euros(AMENDES.plafondAnnuel)} par an). Une première infraction réparée dans les ${AMENDES.delaiReparationJours} jours après une demande de l'administration n'est pas sanctionnée. C'est une estimation à partir de vos réponses, pas un montant certain.`,
   recommandation: {
     bureautique: 'Word, Excel ou Canva ne pourront pas émettre de facture électronique. Il vous faut une solution de facturation reliée à une plateforme agréée. Plusieurs proposent une offre gratuite pour les petites structures.',
     logiciel: (nom: string) => `Vérifiez que ${nom ? `votre logiciel (${nom})` : 'votre logiciel'} est une plateforme agréée, ou qu'il est connecté à une plateforme de la liste officielle publiée sur impots.gouv.fr.`,
@@ -194,6 +198,6 @@ export const FAQ = [
   },
   {
     question: 'Quelles sont les sanctions ?',
-    answer: `Une amende de ${euros(AMENDES.parFacture)} par facture qui n'est pas émise au format électronique, dans la limite de ${euros(AMENDES.plafondAnnuel)} par an. Sans plateforme pour recevoir vos factures, l'administration envoie d'abord une mise en demeure : sans régularisation dans les ${AMENDES.miseEnDemeureMois} mois, l'amende est de ${euros(AMENDES.receptionPremiere)}, puis de ${euros(AMENDES.receptionSuivantes)} tous les ${AMENDES.miseEnDemeureMois} mois. L'administration annonce une approche pédagogique en 2026 pour les entreprises qui se mettent en conformité.`,
+    answer: `Une amende de ${euros(AMENDES.parFacture)} par facture qui n'est pas émise au format électronique, dans la limite de ${euros(AMENDES.plafondAnnuel)} par an ; une première infraction réparée dans les ${AMENDES.delaiReparationJours} jours après une demande de l'administration n'est pas sanctionnée. Sans plateforme pour recevoir vos factures, l'administration envoie d'abord une mise en demeure : sans régularisation dans les ${AMENDES.miseEnDemeureMois} mois, l'amende est de ${euros(AMENDES.receptionPremiere)}, puis de ${euros(AMENDES.receptionSuivantes)} tous les ${AMENDES.miseEnDemeureMois} mois. L'administration annonce une approche pédagogique en 2026 pour les entreprises qui se mettent en conformité.`,
   },
 ];
