@@ -3,7 +3,7 @@ import { ToolPage, ToolH2, ToolP, Formula, ToolLink, ToolTable } from '@/compone
 import { SituationCalculator } from '@/components/pages/calc/SituationCalculator';
 
 const PAGE_URL = 'https://opusadvisor.fr/outils/calcul-situation-de-travaux/';
-const PAGE_TITLE = 'Facture de situation de travaux : calcul et exemple chiffré';
+const PAGE_TITLE = 'Situation de travaux : calcul et exemple chiffré';
 const PAGE_DESCRIPTION =
   "Calculez une situation de travaux à partir de l'avancement cumulé : montant HT, TVA, retenue de garantie et net à payer, avec un exemple chiffré.";
 

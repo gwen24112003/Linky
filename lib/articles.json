@@ -8,7 +8,17 @@
         "icon": "stethoscope",
         "publishedAt": "2026-07-03",
         "updatedAt": "2026-10-19",
-        "category": "Méthode"
+        "category": "Méthode",
+        "seoTitle": "Calculer la marge d'un chantier : prévue contre réelle",
+        "related": [
+            "temps-administratif-artisans-btp",
+            "diagnostic-operationnel-pme",
+            "automatiser-sans-erp"
+        ],
+        "tools": [
+            "calcul-marge-chantier",
+            "calcul-cout-horaire-main-doeuvre"
+        ]
     },
     {
         "id": 17,
@@ -19,7 +29,13 @@
         "icon": "workflow",
         "publishedAt": "2026-06-25",
         "updatedAt": "2026-10-19",
-        "category": "Outils & systèmes"
+        "category": "Outils & systèmes",
+        "seoTitle": "IA dans le BTP : inutile tant que vos données sont en vrac",
+        "related": [
+            "automatiser-sans-erp",
+            "organisation-avant-developpement",
+            "applications-glide"
+        ]
     },
     {
         "id": 16,
@@ -30,7 +46,17 @@
         "icon": "file-text",
         "publishedAt": "2026-06-10",
         "updatedAt": "2026-10-19",
-        "category": "Réglementation"
+        "category": "Réglementation",
+        "seoTitle": "Sous-traitance BTP : paiement direct et autoliquidation",
+        "related": [
+            "relances-automatiques-impayes-btp",
+            "facturation-electronique-2026",
+            "marge-chantier-suivi-reel"
+        ],
+        "tools": [
+            "calcul-retenue-de-garantie",
+            "calcul-situation-de-travaux"
+        ]
     },
     {
         "id": 15,
@@ -41,7 +67,16 @@
         "icon": "clock",
         "publishedAt": "2026-06-02",
         "updatedAt": "2026-10-19",
-        "category": "Organisation"
+        "category": "Organisation",
+        "seoTitle": "Temps administratif des artisans BTP : 13 h par semaine",
+        "related": [
+            "relances-automatiques-impayes-btp",
+            "automatiser-sans-erp",
+            "penurie-main-doeuvre-organisation"
+        ],
+        "tools": [
+            "calcul-cout-horaire-main-doeuvre"
+        ]
     },
     {
         "id": 14,
@@ -52,7 +87,16 @@
         "icon": "users",
         "publishedAt": "2026-05-29",
         "updatedAt": "2026-10-19",
-        "category": "Organisation"
+        "category": "Organisation",
+        "seoTitle": "Pénurie de main-d'œuvre BTP : garder vos bons ouvriers",
+        "related": [
+            "temps-administratif-artisans-btp",
+            "applications-glide",
+            "diagnostic-operationnel-pme"
+        ],
+        "tools": [
+            "calcul-cout-horaire-main-doeuvre"
+        ]
     },
     {
         "id": 13,
@@ -63,7 +107,13 @@
         "icon": "alert-triangle",
         "publishedAt": "2026-05-22",
         "updatedAt": "2026-10-19",
-        "category": "Réglementation"
+        "category": "Réglementation",
+        "seoTitle": "MaPrimeRénov' 2026 : ce qui change pour les artisans",
+        "related": [
+            "facturation-electronique-2026",
+            "temps-administratif-artisans-btp",
+            "sous-traitance-btp-paiement-direct"
+        ]
     },
     {
         "id": 11,
@@ -74,7 +124,16 @@
         "icon": "file-text",
         "publishedAt": "2026-05-20",
         "updatedAt": "2026-10-19",
-        "category": "Réglementation"
+        "category": "Réglementation",
+        "seoTitle": "Facturation électronique 2026 : 4 TPE sur 10 pas prêtes",
+        "related": [
+            "automatiser-sans-erp",
+            "relances-automatiques-impayes-btp",
+            "maprimerenov-2026"
+        ],
+        "tools": [
+            "calcul-situation-de-travaux"
+        ]
     },
     {
         "id": 12,
@@ -85,7 +144,16 @@
         "icon": "wallet",
         "publishedAt": "2026-05-01",
         "updatedAt": "2026-10-19",
-        "category": "Organisation"
+        "category": "Organisation",
+        "seoTitle": "Facture impayée BTP : modèles de relance et séquence",
+        "related": [
+            "sous-traitance-btp-paiement-direct",
+            "facturation-electronique-2026",
+            "temps-administratif-artisans-btp"
+        ],
+        "tools": [
+            "calcul-penalites-de-retard"
+        ]
     },
     {
         "id": 7,
@@ -96,7 +164,13 @@
         "icon": "workflow",
         "publishedAt": "2026-04-25",
         "updatedAt": "2026-10-19",
-        "category": "Outils & systèmes"
+        "category": "Outils & systèmes",
+        "seoTitle": "Logiciel BTP sans ERP : s'équiper pour 200 à 500 €/mois",
+        "related": [
+            "organisation-avant-developpement",
+            "ia-btp-donnees-propres",
+            "applications-glide"
+        ]
     },
     {
         "id": 6,
@@ -107,7 +181,16 @@
         "icon": "stethoscope",
         "publishedAt": "2026-04-25",
         "updatedAt": "2026-10-19",
-        "category": "Méthode"
+        "category": "Méthode",
+        "seoTitle": "Diagnostiquer une entreprise du second œuvre en 3 semaines",
+        "related": [
+            "marge-chantier-suivi-reel",
+            "organisation-avant-developpement",
+            "temps-administratif-artisans-btp"
+        ],
+        "tools": [
+            "calcul-marge-chantier"
+        ]
     },
     {
         "id": 3,
@@ -118,7 +201,13 @@
         "icon": "layers",
         "publishedAt": "2026-04-25",
         "updatedAt": "2026-10-19",
-        "category": "Outils & systèmes"
+        "category": "Outils & systèmes",
+        "seoTitle": "Changer de logiciel BTP ? 4 questions avant de signer",
+        "related": [
+            "automatiser-sans-erp",
+            "diagnostic-operationnel-pme",
+            "ia-btp-donnees-propres"
+        ]
     },
     {
         "id": 2,
@@ -129,6 +218,12 @@
         "icon": "layout-dashboard",
         "publishedAt": "2026-04-25",
         "updatedAt": "2026-10-19",
-        "category": "Outils & systèmes"
+        "category": "Outils & systèmes",
+        "seoTitle": "Appli de chantier sur mesure : quand ça vaut le coup",
+        "related": [
+            "penurie-main-doeuvre-organisation",
+            "automatiser-sans-erp",
+            "ia-btp-donnees-propres"
+        ]
     }
 ]

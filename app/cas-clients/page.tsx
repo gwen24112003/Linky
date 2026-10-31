@@ -17,7 +17,7 @@ const RULE = 'rgba(26,35,50,0.16)';
 const PAGE_URL = 'https://opusadvisor.fr/cas-clients';
 const PAGE_TITLE = 'Cas clients : formation, conciergerie, immobilier';
 const PAGE_DESCRIPTION =
-  "Ce qu'on a mis en place chez nos clients : dossiers de financement automatisés, facturation des propriétaires en une seule automatisation, suivi d'une équipe d'agents immobiliers. Et 3 places pilotes pour le BTP.";
+  "Dossiers de financement automatisés, facturation de tous les propriétaires en une automatisation, outil de suivi d'agents immobiliers : nos missions réelles.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

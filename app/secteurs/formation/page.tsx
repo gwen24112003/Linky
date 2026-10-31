@@ -3,7 +3,7 @@ import { SectorPage } from '@/components/pages/SectorPage';
 import { casesFor } from '@/lib/cases';
 
 const PAGE_URL = 'https://opusadvisor.fr/secteurs/formation/';
-const PAGE_TITLE = 'Automatisation pour organismes de formation : dossiers, convocations, financeurs';
+const PAGE_TITLE = 'Automatisation pour organisme de formation';
 const PAGE_DESCRIPTION =
   'Conventions, convocations, émargements et dossiers pour les financeurs générés et envoyés automatiquement, à partir de vos outils actuels. Pré-audit gratuit.';
 

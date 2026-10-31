@@ -4,9 +4,9 @@ import { LaborCostCalculator } from '@/components/pages/calc/LaborCostCalculator
 import { DEFAULT_LABOR, laborCost } from '@/lib/labor-cost';
 
 const PAGE_URL = 'https://opusadvisor.fr/outils/calcul-cout-horaire-main-doeuvre/';
-const PAGE_TITLE = "Coût horaire de la main-d'œuvre dans le bâtiment : calcul du taux horaire";
+const PAGE_TITLE = "Calcul du coût horaire de main-d'œuvre (bâtiment)";
 const PAGE_DESCRIPTION =
-  "Calculez le coût horaire réel d'un compagnon (salaire chargé, indemnités, véhicule, heures facturées) et le taux horaire à facturer pour couvrir vos frais et dégager une marge.";
+  "Calculez le coût horaire réel d'un compagnon (salaire chargé, indemnités, véhicule, heures facturées) et le taux horaire à facturer pour dégager une marge.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
