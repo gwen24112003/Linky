@@ -1,0 +1,12 @@
+{
+  // Compilation pour le serveur : le Node d'Ubuntu n'exécute pas le TypeScript directement.
+  // Les imports « ./x.ts » deviennent « ./x.js » ; services/lead-api et lib/einvoice gardent leur place sous dist/.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "rewriteRelativeImportExtensions": true,
+    "rootDir": "../..",
+    "outDir": "dist"
+  },
+  "exclude": ["../../lib/einvoice/*.test.ts", "dist", "node_modules"]
+}

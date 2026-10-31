@@ -38,3 +38,4 @@ next-env.d.ts
 # base SQLite des leads (diagnostic facture électronique), jamais versionnée
 /data/
 node_modules/
+/services/lead-api/dist/

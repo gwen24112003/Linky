@@ -10,7 +10,7 @@ Group=opuslead
 WorkingDirectory=/opt/opus-lead-api/services/lead-api
 EnvironmentFile=/etc/opus-lead-api.env
 Environment=DB_PATH=/var/lib/opus-lead-api/leads.db
-ExecStart=/usr/bin/node --disable-warning=ExperimentalWarning reminders.ts
+ExecStart=/usr/bin/node --disable-warning=ExperimentalWarning dist/services/lead-api/reminders.js
 
 NoNewPrivileges=yes
 ProtectSystem=strict
