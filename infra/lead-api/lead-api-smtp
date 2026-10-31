@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Enregistre le mot de passe d'application Google Workspace dans /etc/opus-lead-api.env, sans l'afficher
+# ni le laisser dans l'historique. Usage : ssh -t opus-vps sudo lead-api-smtp
+# Installé sur le serveur dans /usr/local/sbin/lead-api-smtp.
+set -euo pipefail
+ENV=/etc/opus-lead-api.env
+[ "$(id -u)" -eq 0 ] || { echo "À lancer avec sudo" >&2; exit 1; }
+
+read -rsp "Mot de passe d'application Google (16 lettres) : " PASS; echo
+[ -n "$PASS" ] || { echo "Vide, rien n'a changé." >&2; exit 1; }
+PASS=${PASS// /}
+
+TMP=$(mktemp)
+grep -v '^SMTP_PASS=' "$ENV" > "$TMP"
+printf 'SMTP_PASS=%s\n' "$PASS" >> "$TMP"
+install -m 640 -o root -g opuslead "$TMP" "$ENV"
+rm -f "$TMP"
+systemctl restart opus-lead-api
+echo "Mot de passe enregistré, service redémarré."

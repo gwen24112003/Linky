@@ -42,3 +42,15 @@ Installation sur un serveur neuf :
 3. `sudo install -m 755 umami-password /usr/local/bin/` puis `sudo umami-password --lock` : le compte `admin/umami` créé par défaut est aussitôt verrouillé.
 4. Copier `umami-proxy.conf` dans `/etc/nginx/snippets/` et l'inclure dans le vhost du site ; copier `stats.opusadvisor.fr.conf` dans `sites-available/`, l'activer, puis `sudo certbot --nginx -d stats.opusadvisor.fr`.
 5. Le site Umami (ID dans `lib/analytics.ts`) est déjà en base ; sur une base neuve, le recréer depuis le tableau de bord et reporter le nouvel ID.
+
+## Diagnostic facture électronique (leads)
+La page `/diagnostic-facture-electronique` envoie ses leads à un petit service Node (`services/lead-api`, détails dans son README), joint par nginx sur `/api/diagnostic-lead` (snippet `lead-api-proxy.conf`, port local 3101).
+- Code : `/opt/opus-lead-api` (clone partiel de `main`), mis à jour par `opus-lead-api-pull`, lancé après `opus-pull`.
+- Base SQLite : `/var/lib/opus-lead-api/leads.db`, hors du site. Elle est comprise dans la sauvegarde automatique OVH.
+- Secrets : `/etc/opus-lead-api.env`. `ADMIN_TOKEN` est généré à l'installation ; le mot de passe SMTP se saisit sans transiter en clair : `ssh -t opus-vps sudo lead-api-smtp`.
+- Rappels : `opus-lead-reminders.timer`, chaque jour à 9 h 30.
+- Export CSV : `ssh opus-vps sudo leads-export > leads.csv`.
+
+Installation, une fois le code dans `main` :
+1. `scp -r infra/lead-api opus-vps:/tmp/ && ssh opus-vps 'bash /tmp/lead-api/setup-lead-api.sh'`
+2. `ssh -t opus-vps sudo lead-api-smtp` (mot de passe d'application Google Workspace)
