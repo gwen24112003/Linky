@@ -47,10 +47,11 @@ Installation sur un serveur neuf :
 La page `/diagnostic-facture-electronique` envoie ses leads à un petit service Node (`services/lead-api`, détails dans son README), joint par nginx sur `/api/diagnostic-lead` (snippet `lead-api-proxy.conf`, port local 3101).
 - Code : `/opt/opus-lead-api` (clone partiel de `main`), mis à jour par `opus-lead-api-pull`, lancé après `opus-pull`.
 - Base SQLite : `/var/lib/opus-lead-api/leads.db`, hors du site. Elle est comprise dans la sauvegarde automatique OVH.
-- Secrets : `/etc/opus-lead-api.env`. `ADMIN_TOKEN` est généré à l'installation ; le mot de passe SMTP se saisit sans transiter en clair : `ssh -t opus-vps sudo lead-api-smtp`.
+- Secrets : `/etc/opus-lead-api.env`. `ADMIN_TOKEN` est généré à l'installation.
+- Mails : relais Google Workspace (`smtp-relay.gmail.com:587`), sans mot de passe. Il est déclaré dans la console d'administration Google (Applications > Google Workspace > Gmail > Routage > Service de relais SMTP), qui n'accepte que les adresses IP du serveur : 15.235.62.83 et 2607:5300:205:200::c99f. Le 31/10/2026, Gmail refusait les mots de passe d'application pour ce compte (erreur 535).
 - Rappels : `opus-lead-reminders.timer`, chaque jour à 9 h 30.
 - Export CSV : `ssh opus-vps sudo leads-export > leads.csv`.
 
 Installation, une fois le code dans `main` :
 1. `scp -r infra/lead-api opus-vps:/tmp/ && ssh opus-vps 'bash /tmp/lead-api/setup-lead-api.sh'`
-2. `ssh -t opus-vps sudo lead-api-smtp` (mot de passe d'application Google Workspace)
+2. Déclarer le relais SMTP dans la console d'administration Google avec les adresses IP du nouveau serveur (voir plus haut).

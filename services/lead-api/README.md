@@ -14,9 +14,9 @@ Aucune dépendance native : SQLite vient de Node (`node:sqlite`, Node 22.13 ou p
 
 | Variable | Rôle |
 |---|---|
-| `SMTP_HOST`, `SMTP_PORT` | `smtp.gmail.com`, `465` |
-| `SMTP_USER` | `enzo@opusadvisor.fr` |
-| `SMTP_PASS` | mot de passe d'application Google, jamais le mot de passe du compte |
+| `SMTP_HOST`, `SMTP_PORT` | `smtp-relay.gmail.com`, `587` : relais Google Workspace, qui autorise le serveur par son adresse IP |
+| `SMTP_USER` | `enzo@opusadvisor.fr`, adresse d'expédition |
+| `SMTP_PASS` | vide avec le relais ; sinon mot de passe d'application Google (`smtp.gmail.com`, port 465) |
 | `LEAD_NOTIFY_EMAIL` | reçoit la notification de chaque lead |
 | `ADMIN_TOKEN` | protège l'export CSV (24 caractères minimum ; le service refuse de démarrer sans) |
 | `MAIL_FROM` | facultatif, par défaut `"Opus Advisor" <SMTP_USER>` |
