@@ -7,11 +7,15 @@ essentiel:
   - "Depuis le 1er septembre 2026, toutes les entreprises assujetties à la TVA doivent pouvoir recevoir des factures électroniques, via une plateforme agréée."
   - "Le 1er septembre 2027, les PME et les microentreprises devront aussi les émettre."
   - "Trois chantiers pour s'y préparer : choisir une plateforme agréée, compléter le fichier clients (SIREN, adresse de livraison), recenser vos flux de factures."
+ctaMid:
+  text: "Où en est votre entreprise ? Le diagnostic gratuit vous le dit en 2 minutes : réception, émission et dates qui vous concernent. Le verdict s'affiche sans laisser votre email."
+  label: "Faire le diagnostic"
+  href: "/diagnostic-facture-electronique/"
 ---
 
 *Catégorie : Réglementation BTP — Lecture : 6 minutes — Auteur : Enzo Monnier, Opus Advisor*
 
-*Mise à jour d'octobre 2026 : cet article a été écrit en mai 2026, avant l'échéance du 1er septembre 2026, qui est maintenant passée. La prochaine étape arrive le 1er septembre 2027, quand les PME devront émettre leurs factures au format électronique. Les trois chantiers décrits plus bas (plateforme agréée, fichier clients, flux de factures) restent ceux à mener pour s'y préparer.*
+*Mise à jour d'octobre 2026 : cet article a été écrit en mai 2026, avant l'échéance du 1er septembre 2026, qui est maintenant passée. La prochaine étape arrive le 1er septembre 2027, quand les PME devront émettre leurs factures au format électronique. Les trois chantiers décrits plus bas (plateforme agréée, fichier clients, flux de factures) restent ceux à mener pour s'y préparer. Pour savoir où en est votre entreprise, le [diagnostic gratuit](/diagnostic-facture-electronique/) prend 2 minutes.*
 
 Un sondage récent chiffre l'impréparation des TPE françaises à un peu plus de 3 mois de l'échéance : 40 % ne seront pas prêtes au 1er septembre 2026. Pour les entreprises du BTP, le retard est probablement pire. Et le plus inquiétant, c'est que beaucoup de patrons croient encore que ça ne les concerne qu'en 2027.
 
@@ -21,7 +25,7 @@ Vous avez sûrement entendu parler de la facturation électronique obligatoire a
 
 À cette date, toutes les entreprises françaises assujetties à la TVA, y compris la vôtre, doivent être **capables de recevoir** des factures électroniques. Fini le papier et le PDF par mail. On parle de factures structurées au format Factur-X, UBL ou CII, qui transitent par une Plateforme Agréée par l'État.
 
-Concrètement : à partir de septembre 2026, vos fournisseurs de matériaux qui sont des grandes entreprises ou des ETI vont commencer à vous envoyer leurs factures uniquement par voie électronique. Si vous n'avez pas désigné de Plateforme Agréée, vous ne pourrez pas les recevoir. Vous bloquez vos commandes. Vous perdez la déduction TVA. Et vous prenez 500 € d'amende, puis 1 000 € tous les 3 mois tant que vous ne vous mettez pas en règle.
+Concrètement : à partir de septembre 2026, vos fournisseurs de matériaux qui sont des grandes entreprises ou des ETI vont commencer à vous envoyer leurs factures uniquement par voie électronique. Si vous n'avez pas désigné de Plateforme Agréée, vous ne pourrez pas les recevoir. Vous bloquez vos commandes. Vous perdez la déduction TVA. Et après une mise en demeure restée sans effet pendant 3 mois, vous prenez 500 € d'amende, puis 1 000 € tous les 3 mois tant que vous ne vous mettez pas en règle.
 
 Vos fournisseurs de cuivre, de chaudières, de gaines, de PVC, ce sont souvent des ETI ou des grandes entreprises. Ils seront obligés de basculer en septembre 2026. Pas vous, mais vous devrez les recevoir.
 

@@ -68,7 +68,8 @@ export default function SituationPage() {
         Une situation est une facture à part entière. À partir du 1er septembre 2027, les PME devront donc l'émettre au
         format électronique, comme leurs autres factures entre entreprises. Notre point sur la{' '}
         <ToolLink href="/articles/facturation-electronique-2026/">facturation électronique</ToolLink> explique comment s'y
-        préparer.
+        préparer, et le <ToolLink href="/diagnostic-facture-electronique/">diagnostic gratuit</ToolLink> vous dit en 2 minutes où en est votre
+        entreprise.
       </ToolP>
 
       <ToolH2>Les erreurs qui retardent le paiement</ToolH2>

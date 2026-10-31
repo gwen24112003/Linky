@@ -57,6 +57,8 @@ On forme la personne qui gère l'administratif en 2 heures, et les équipes en 1
 
 Depuis septembre 2026, toutes les entreprises doivent pouvoir recevoir des factures électroniques. En septembre 2027, les PME devront aussi les émettre. Un système propre se prépare en 2 à 3 mois : plus vous attendez, plus la mise en conformité coûtera cher dans l'urgence.
 
+Pour savoir où vous en êtes, faites le [diagnostic gratuit](/diagnostic-facture-electronique/) : 7 questions, 2 minutes, sans laisser votre email.
+
 La veille réglementaire de votre secteur est comprise dans le Gardien du système.`,
   },
   {
@@ -129,6 +131,8 @@ On forme votre secrétaire en 2 heures et vos chefs d'équipe en 1 heure. La doc
 
 Depuis septembre 2026, toutes les entreprises doivent pouvoir recevoir des factures électroniques. En septembre 2027, les PME devront aussi les émettre. Un système propre se prépare en 2 à 3 mois : plus vous attendez, plus la mise en conformité coûtera cher dans l'urgence.
 
+Pour savoir où vous en êtes, faites le [diagnostic gratuit](/diagnostic-facture-electronique/) : 7 questions, 2 minutes, sans laisser votre email.
+
 La veille réglementaire (RE2020, MaPrimeRénov', facturation électronique, autoliquidation de TVA) est comprise dans le Gardien du système.`,
   },
   {
@@ -152,7 +156,7 @@ Les experts-comptables repèrent souvent des fuites chez leurs clients : situati
 
 // Texte aplati (sans markdown) pour le schema FAQPage.
 const plainText = (md: string): string =>
-  md.replace(/\*\*/g, '').replace(/^- /gm, '• ').trim();
+  md.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/^- /gm, '• ').trim();
 
 export const faqPageJsonLd = (items: Faq[]) => ({
   '@context': 'https://schema.org',

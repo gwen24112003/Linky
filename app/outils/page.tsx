@@ -65,6 +65,26 @@ export default function ToolsPage() {
 
         <section className="py-14 md:py-20 bg-white">
           <div className="container mx-auto px-6 max-w-6xl">
+            <Link
+              href="/diagnostic-facture-electronique/"
+              className="group mb-12 block rounded-2xl px-6 py-7 md:px-8 md:py-8"
+              style={{ background: PAPER, border: `1px solid ${RULE}` }}
+            >
+              <span className="block text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GOLD_INK }}>
+                Nouveau · facture électronique
+              </span>
+              <span className="mt-3 block font-heading font-bold text-2xl md:text-3xl tracking-tight group-hover:underline underline-offset-4" style={{ color: NAVY }}>
+                Facture électronique : où en est votre entreprise ?
+              </span>
+              <span className="mt-2 block text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl">
+                7 questions, 2 minutes : réception, émission, e-reporting, les dates qui vous concernent et ce qu'il reste à
+                faire. Le verdict s'affiche sans laisser votre email.
+              </span>
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold" style={{ color: GOLD_INK }}>
+                Faire le diagnostic
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
             <ol>
               {tools.map((tool, i) => (
                 <li key={tool.slug} className="border-t" style={{ borderColor: RULE }}>

@@ -10,7 +10,7 @@ export const dynamic = 'force-static';
 // Date de la dernière modification réelle du contenu de chaque page. À mettre à jour quand on
 // modifie une page : une date qui change à chaque mise en ligne finit ignorée par Google.
 const PAGES: { path: string; updated: string; changeFrequency: 'weekly' | 'monthly' | 'yearly'; priority: number }[] = [
-  { path: '/', updated: '2026-10-23', changeFrequency: 'weekly', priority: 1.0 },
+  { path: '/', updated: '2026-10-31', changeFrequency: 'weekly', priority: 1.0 },
   { path: '/services/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/secteurs/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/secteurs/formation/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.8 },
@@ -19,7 +19,7 @@ const PAGES: { path: string; updated: string; changeFrequency: 'weekly' | 'month
   { path: '/cas-clients/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/equipe/', updated: '2026-10-31', changeFrequency: 'monthly', priority: 0.6 },
   { path: '/contact/', updated: '2026-10-31', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/outils/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/outils/', updated: '2026-10-31', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/consultant-rennes/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/diagnostic-facture-electronique/', updated: '2026-10-31', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/mentions-legales/', updated: '2026-10-31', changeFrequency: 'yearly', priority: 0.1 },

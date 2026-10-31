@@ -5,7 +5,7 @@ import { track } from '@/lib/analytics';
 
 /**
  * Compte les clics qui comptent pour l'activité, sur tout le site, sans toucher à chaque bouton :
- * demandes de pré-audit, prise de rendez-vous, téléphone et e-mail.
+ * demandes de pré-audit, diagnostic facture électronique, prise de rendez-vous, téléphone et e-mail.
  */
 export function ClickTracker() {
   useEffect(() => {
@@ -19,6 +19,7 @@ export function ClickTracker() {
       };
 
       if (href.startsWith('/contact')) track('Clic pré-audit', data);
+      else if (href.startsWith('/diagnostic-facture-electronique')) track('Clic diagnostic', data);
       else if (href.includes('cal.com/')) track('Clic prise de rendez-vous', data);
       else if (href.startsWith('tel:')) track('Clic téléphone', data);
       else if (href.startsWith('mailto:')) track('Clic e-mail', data);

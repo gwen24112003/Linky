@@ -32,7 +32,7 @@ La CAPEB chiffrait déjà cette charge à 15 ou 20 % du temps de travail total. 
 
 Deux raisons rendent le sujet plus brûlant qu'il y a deux ans.
 
-D'abord la facturation électronique. À partir du 1er septembre 2026, toutes les entreprises devront être capables de recevoir des factures électroniques, puis de les émettre l'année suivante. Une couche administrative de plus, sur des boîtes déjà saturées.
+D'abord la facturation électronique. Depuis le 1er septembre 2026, toutes les entreprises doivent être capables de recevoir des factures électroniques, et les PME devront les émettre à partir de septembre 2027. Une couche administrative de plus, sur des boîtes déjà saturées. Le [diagnostic facture électronique](/diagnostic-facture-electronique/) vous dit en 2 minutes où en est la vôtre.
 
 Ensuite la trésorerie. Avec des retards de paiement qui s'allongent et un marché de la rénovation qui se contracte, chaque heure passée à courir après une facture compte double. Le temps administratif n'est plus juste pénible : il pèse directement sur la survie de la boîte.
 
