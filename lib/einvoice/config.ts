@@ -10,4 +10,4 @@ export const OFFER_PRICE = '';
 export const LEAD_API_URL = '/api/diagnostic-lead';
 
 /** Page qui porte la politique de confidentialité (section « Données personnelles »). */
-export const PRIVACY_URL = '/mentions-legales/';
+export const PRIVACY_URL = '/mentions-legales/#donnees-personnelles';

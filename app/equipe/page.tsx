@@ -42,7 +42,7 @@ const personJsonLd = {
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'Epitech' },
   workLocation: { '@type': 'Place', name: 'Rennes' },
   knowsAbout: ['automatisation', 'Make', 'n8n', 'Airtable', 'organismes de formation', 'conciergerie', 'BTP second œuvre'],
-  sameAs: ['https://www.linkedin.com/in/enzo-monnier-7524ab205/'],
+  sameAs: ['https://www.linkedin.com/in/enzo-monnier/'],
 };
 
 export default function EquipePage() {

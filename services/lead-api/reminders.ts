@@ -26,5 +26,11 @@ for (const lead of store.active()) {
 }
 
 console.log(`rappels du ${today} : ${sent} envoyé(s), ${failed} en échec`);
+
+// Conservation : les leads sont supprimés 3 ans après la demande (mentions légales, « Données personnelles »).
+const limit = new Date();
+limit.setUTCFullYear(limit.getUTCFullYear() - 3);
+const purged = store.purgeBefore(limit.toISOString());
+if (purged) console.log(`${purged} lead(s) de plus de 3 ans supprimé(s)`);
 store.close();
 process.exit(failed > 0 && sent === 0 ? 1 : 0);

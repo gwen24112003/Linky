@@ -271,7 +271,7 @@ export const ContactView: React.FC = () => {
                   +33 6 15 75 65 49
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/enzo-monnier-7524ab205/"
+                  href="https://www.linkedin.com/in/enzo-monnier/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-sm md:text-base font-medium hover:opacity-70 transition-opacity"

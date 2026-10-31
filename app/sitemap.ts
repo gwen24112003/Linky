@@ -17,12 +17,12 @@ const PAGES: { path: string; updated: string; changeFrequency: 'weekly' | 'month
   { path: '/secteurs/immobilier/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/secteurs/btp/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/cas-clients/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/equipe/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.6 },
-  { path: '/contact/', updated: '2026-10-22', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/equipe/', updated: '2026-10-31', changeFrequency: 'monthly', priority: 0.6 },
+  { path: '/contact/', updated: '2026-10-31', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/outils/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/consultant-rennes/', updated: '2026-10-23', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/diagnostic-facture-electronique/', updated: '2026-10-31', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/mentions-legales/', updated: '2026-10-19', changeFrequency: 'yearly', priority: 0.1 },
+  { path: '/mentions-legales/', updated: '2026-10-31', changeFrequency: 'yearly', priority: 0.1 },
 ];
 const TOOLS_UPDATED = '2026-10-23';
 
