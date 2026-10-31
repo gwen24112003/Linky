@@ -28,9 +28,10 @@ export const WhyNowSection: React.FC = () => {
               La facturation électronique arrive pour les PME.
             </h2>
             <p className="mt-6 text-lg md:text-xl text-white/75 leading-relaxed">
-              À cette date, une PME doit émettre ses factures entre entreprises au format
-              électronique, via une plateforme agréée. Une facture tapée sur Excel puis envoyée en
-              PDF ne sera plus valable.
+              Depuis le 1er septembre 2026, chaque entreprise doit déjà recevoir ses factures par une
+              plateforme agréée. Le 1er septembre 2027, une PME devra aussi émettre ses factures entre
+              entreprises au format électronique. Une facture tapée sur Excel puis envoyée en PDF ne
+              sera plus valable.
             </p>
             <p className="mt-4 text-base md:text-lg text-white/75 leading-relaxed">
               <span className="text-white font-semibold">Un système propre se monte en 2 à 3 mois.</span>{' '}
@@ -39,11 +40,11 @@ export const WhyNowSection: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-9">
               <Link
-                href="/contact"
+                href="/diagnostic-facture-electronique/"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-sm md:text-base transition-colors"
                 style={{ background: GOLD, color: NAVY }}
               >
-                Commencer par le pré-audit
+                Faire le diagnostic gratuit (2 min)
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link

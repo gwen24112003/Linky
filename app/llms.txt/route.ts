@@ -11,6 +11,7 @@ export const dynamic = 'force-static';
 const plain = (md: string) =>
   md
     .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/\[([^\]]+)\]\((\/[^)]*)\)/g, `$1 (${SITE_URL}$2)`)
     .replace(/^- /gm, '')
     .replace(/\s*\n+\s*/g, ' ')
     .trim();
@@ -39,6 +40,9 @@ export function GET() {
 - Application centrale : les logiciels restent en place et une application plus simple à utiliser les réunit (base Airtable ou outil développé sur mesure). Chaque information y est saisie une fois et les automatisations partent de là. Exemple : une conciergerie avec un logiciel de réservation et un logiciel de facturation.
 - Système complet : quand rien d'adapté n'est en place, on construit tout le système, du choix des outils à la formation de l'équipe.
 - Tous les comptes et tous les outils restent au nom du client ; une documentation complète lui est remise.
+
+## Diagnostic gratuit
+- [Diagnostic facture électronique](${SITE_URL}/diagnostic-facture-electronique/): 7 questions, 2 minutes. Réception, émission, e-reporting : où en est l'entreprise, les dates qui la concernent et ce qu'il reste à faire. Verdict sans email ; plan d'action daté envoyé sur demande.
 
 ## Offres (TVA non applicable, art. 293 B du CGI)
 - [Pré-audit gratuit](${SITE_URL}/contact/): 30 minutes en visio pour repérer 3 points de friction dans les outils de l'entreprise. Gratuit et sans engagement.
