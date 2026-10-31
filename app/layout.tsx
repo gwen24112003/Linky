@@ -32,7 +32,7 @@ const SITE_URL = 'https://opusadvisor.fr';
 const SITE_NAME = 'Opus Advisor';
 const DEFAULT_TITLE = 'Opus Advisor : automatisation de la gestion des PME';
 const DEFAULT_DESCRIPTION =
-  'On relie vos logiciels, vos tableurs et vos mails pour que dossiers, factures et relances se fassent tout seuls. Formation, immobilier, BTP. Pré-audit gratuit de 30 minutes.';
+  'Un système de gestion complet et automatisé, à votre image : dossiers, factures et relances se font seuls. Formation, immobilier, BTP. Pré-audit gratuit.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -96,7 +96,7 @@ const organizationJsonLd = {
       name: SITE_NAME,
       alternateName: 'Opus Advisor',
       description:
-        "Organisation et automatisation de la gestion des petites entreprises (organismes de formation, immobilier et conciergerie, BTP second œuvre), à partir des outils qu'elles utilisent déjà. Diagnostic chiffré, mise en œuvre, formation de l'équipe, suivi.",
+        "Organisation et automatisation de la gestion des petites entreprises (organismes de formation, immobilier et conciergerie, BTP second œuvre)  : des systèmes construits à l'image de chaque entreprise, des automatisations entre les logiciels existants jusqu'au système complet monté de A à Z. Diagnostic chiffré, mise en œuvre, formation de l'équipe, suivi.",
       url: SITE_URL,
       email: 'enzo@opusadvisor.fr',
       telephone: '+33615756549',
