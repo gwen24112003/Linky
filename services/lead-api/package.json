@@ -1,0 +1,17 @@
+{
+  "name": "opus-lead-api",
+  "private": true,
+  "type": "module",
+  "description": "Enregistre les leads du diagnostic facture électronique et envoie les mails (opusadvisor.fr).",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON server.ts",
+    "reminders": "node --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON reminders.ts",
+    "check": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "nodemailer": "^10.3.1"
+  }
+}

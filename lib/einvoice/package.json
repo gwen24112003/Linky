@@ -1,0 +1,5 @@
+{
+  "type": "module",
+  "private": true,
+  "description": "Règles et calcul du diagnostic facture électronique, partagés par le site et services/lead-api (exécutés tels quels par Node)."
+}

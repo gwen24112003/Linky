@@ -1,0 +1,9 @@
+[Unit]
+Description=Envoie chaque matin les rappels du diagnostic facture electronique
+
+[Timer]
+OnCalendar=*-*-* 09:30 Europe/Paris
+Persistent=true
+
+[Install]
+WantedBy=timers.target

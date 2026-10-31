@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Sort le CSV des leads sans manipuler le jeton : appelle l'export local avec ADMIN_TOKEN.
+# Usage depuis le PC : ssh opus-vps sudo leads-export > leads.csv
+# Installé sur le serveur dans /usr/local/sbin/leads-export.
+set -euo pipefail
+TOKEN=$(grep '^ADMIN_TOKEN=' /etc/opus-lead-api.env | cut -d= -f2-)
+exec curl -sf -H "Authorization: Bearer $TOKEN" http://127.0.0.1:3101/api/diagnostic-lead/export
