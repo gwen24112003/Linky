@@ -29,4 +29,6 @@ export const config = {
   rateLimit: { max: 5, windowMs: 60 * 60 * 1000 },
 };
 
-export const smtpConfigured = () => Boolean(config.smtp.host && config.smtp.user && config.smtp.pass && config.mailFrom);
+// Sans SMTP_PASS, l'envoi passe sans authentification : c'est le cas du relais Google Workspace
+// (smtp-relay.gmail.com), qui reconnaît le serveur à son adresse IP.
+export const smtpConfigured = () => Boolean(config.smtp.host && config.mailFrom);

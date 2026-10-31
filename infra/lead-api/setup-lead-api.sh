@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Installe le service des leads du diagnostic facture électronique sur le VPS. Idempotent.
 # Depuis le dépôt :  scp -r infra/lead-api opus-vps:/tmp/ && ssh opus-vps 'bash /tmp/lead-api/setup-lead-api.sh'
-# Ensuite, le mot de passe SMTP :  ssh -t opus-vps sudo lead-api-smtp
+# Ensuite : autoriser les IP du serveur dans le relais SMTP de Google Workspace (voir infra/README.md).
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 VHOST=/etc/nginx/sites-available/opusadvisor.fr
@@ -51,4 +51,4 @@ fi
 
 sleep 1
 curl -sf http://127.0.0.1:3101/api/diagnostic-lead/health && echo " service OK"
-echo "==> Terminé. Reste à saisir le mot de passe SMTP : ssh -t opus-vps sudo lead-api-smtp"
+echo "==> Terminé. Reste à autoriser les IP du serveur dans le relais SMTP de Google Workspace (infra/README.md)."

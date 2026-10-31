@@ -33,7 +33,9 @@ export async function sendMail(mail: Mail): Promise<boolean> {
     port,
     secure: port === 465,
     requireTLS: port === 587,
-    auth: { user, pass },
+    // Nom annoncé au serveur d'envoi (le relais Google refuse les noms comme « localhost »).
+    name: new URL(config.siteUrl).hostname,
+    ...(user && pass ? { auth: { user, pass } } : {}),
     connectionTimeout: 10_000,
     greetingTimeout: 10_000,
     socketTimeout: 20_000,
