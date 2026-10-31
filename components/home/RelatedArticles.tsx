@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import articlesData from '@/lib/articles.json';
+import { tools } from '@/lib/tools';
 import { SectionKicker } from '@/components/ui/SectionKicker';
 
 // Or foncé pour le texte et les icônes sur fond clair : l'or d'origine y tombe à 2,1:1 de contraste.
@@ -22,6 +23,9 @@ interface ArticleMetadata {
   title: string;
   description: string;
   publishedAt?: string;
+  category?: string;
+  related?: string[];
+  tools?: string[];
 }
 
 const formatDate = (d?: string): string => {
@@ -34,9 +38,20 @@ const formatDate = (d?: string): string => {
 };
 
 export const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentArticleId }) => {
-  const related = (articlesData as ArticleMetadata[])
-    .filter((article) => article.id !== currentArticleId)
-    .slice(0, 2);
+  const all = articlesData as ArticleMetadata[];
+  const current = all.find((a) => a.id === currentArticleId);
+  // Articles choisis par sujet (champ « related ») ; à défaut, même catégorie, puis les plus récents.
+  const picked = (current?.related ?? [])
+    .map((slug) => all.find((a) => a.slug === slug))
+    .filter((a): a is ArticleMetadata => Boolean(a));
+  const fallback = all.filter(
+    (a) => a.id !== currentArticleId && !picked.includes(a) && a.category === current?.category,
+  );
+  const rest = all.filter((a) => a.id !== currentArticleId && !picked.includes(a) && !fallback.includes(a));
+  const related = [...picked, ...fallback, ...rest].slice(0, 3);
+  const relatedTools = (current?.tools ?? [])
+    .map((slug) => tools.find((t) => t.slug === slug))
+    .filter((t): t is (typeof tools)[number] => Boolean(t));
 
   if (related.length === 0) return null;
 
@@ -77,6 +92,28 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentArticle
           ))}
           <div className="border-t" style={{ borderColor: RULE }} />
         </div>
+
+        {relatedTools.length > 0 && (
+          <div className="mt-12">
+            <SectionKicker label="Outils gratuits liés" className="mb-6" />
+            <ul>
+              {relatedTools.map((t) => (
+                <li key={t.slug} className="border-t" style={{ borderColor: RULE }}>
+                  <Link href={`/outils/${t.slug}/`} className="group flex items-center justify-between gap-4 py-5">
+                    <span>
+                      <span className="block font-semibold text-lg leading-snug text-[#1A2332] group-hover:text-[#8A6A1C] transition-colors duration-200">
+                        {t.title}
+                      </span>
+                      <span className="block mt-1 text-sm text-gray-600 leading-relaxed">{t.description}</span>
+                    </span>
+                    <ArrowRight size={18} aria-hidden="true" className="shrink-0" style={{ color: GOLD_INK }} />
+                  </Link>
+                </li>
+              ))}
+              <li className="border-t" style={{ borderColor: RULE }} aria-hidden="true" />
+            </ul>
+          </div>
+        )}
 
         <div className="mt-10">
           <Link

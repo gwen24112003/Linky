@@ -10,8 +10,8 @@ const pillars = [
     desc: "On corrige le paramétrage et on s'en sert jusqu'au bout : devis, acomptes, situations. Si vous n'en avez pas encore, on le choisit avec vous.",
   },
   {
-    what: 'Le dossier de chaque chantier',
-    tools: 'Notion ou Google Drive, relié à WhatsApp',
+    what: "L'application centrale des chantiers",
+    tools: 'Airtable, Notion ou un outil développé pour vous, relié à WhatsApp',
     desc: 'Photos, imprévus et SAV arrivent au même endroit. Le bureau voit ce que voit le chef de chantier.',
   },
   {
@@ -35,8 +35,8 @@ export const SystemSection: React.FC = () => {
           Vous gardez Batappli. On le branche sur le reste.
         </h2>
         <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-          Chaque boîte a déjà un logiciel de devis, un drive et un groupe WhatsApp. Ce qui manque, ce
-          sont les liens entre eux.
+          Chaque boîte a déjà un logiciel de devis, un drive et un groupe WhatsApp. Ce qui manque, c'est
+          un endroit où tout se retrouve, et les liens entre ces outils.
         </p>
 
         <dl className="mt-12">

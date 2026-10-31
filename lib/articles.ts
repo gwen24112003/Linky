@@ -14,6 +14,12 @@ export interface ArticleMetadata {
   publishedAt?: string;
   updatedAt?: string;
   category?: string;
+  /** Titre affiché par Google (60 caractères au plus), sans le suffixe de marque. */
+  seoTitle?: string;
+  /** Slugs des articles proposés en « À lire aussi ». */
+  related?: string[];
+  /** Slugs des outils gratuits liés. */
+  tools?: string[];
 }
 
 export interface ArticleFrontMatter {

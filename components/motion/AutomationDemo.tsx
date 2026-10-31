@@ -156,7 +156,6 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
                 style={{
                   borderColor: st === 'active' ? GOLD : RULE,
                   background: st === 'active' ? '#FAF7F0' : '#FFFFFF',
-                  opacity: st === 'todo' ? 0.5 : 1,
                   transform: st === 'active' && !reduce ? 'translateX(4px)' : 'none',
                 }}
               >
@@ -167,10 +166,10 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
                   <Icon size={18} aria-hidden="true" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block text-sm font-semibold leading-snug" style={{ color: NAVY }}>
+                  <span className="block text-sm font-semibold leading-snug" style={{ color: st === 'todo' ? '#6b7280' : NAVY }}>
                     {s.title}
                   </span>
-                  <span className="block text-xs text-gray-600">{s.detail}</span>
+                  <span className={`block text-xs ${st === 'todo' ? 'text-gray-500' : 'text-gray-600'}`}>{s.detail}</span>
                 </span>
                 <Check
                   size={18}
@@ -187,7 +186,7 @@ export const AutomationDemo: React.FC<AutomationDemoProps> = ({ keys }) => {
       <p className="mt-5 pt-4 border-t text-xs text-gray-600 flex items-center justify-between gap-3" style={{ borderColor: RULE }}>
         <span>Exemple de déroulé, sans ressaisie</span>
         <span className="font-semibold" style={{ color: GOLD_INK }}>
-          Vos outils, reliés entre eux
+          Un système qui tourne tout seul
         </span>
       </p>
     </div>

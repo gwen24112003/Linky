@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : 'https://opusadvisor.fr/images/opus-icon.png';
   const ogImageAlt = `Illustration de l'article : ${article.title}`;
   return {
-    title: article.title,
+    title: article.seoTitle ? { absolute: article.seoTitle } : article.title,
     description: article.description,
     ...(frontMatter.keywords && frontMatter.keywords.length > 0
       ? { keywords: frontMatter.keywords }
@@ -81,6 +81,7 @@ export default async function ArticlePage({ params }: PageProps) {
       : {}),
     author: {
       '@type': 'Person',
+      '@id': 'https://opusadvisor.fr/equipe/#enzo-monnier',
       name: 'Enzo Monnier',
       url: 'https://opusadvisor.fr/equipe/',
       jobTitle: "Fondateur d'Opus Advisor",

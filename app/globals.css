@@ -56,11 +56,6 @@ h6 {
   font-family: var(--font-bricolage), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* Subtitle utility class uses Lexend */
-.subtitle {
-  font-family: var(--font-lexend), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
 /* Lead / paragraph helper */
 .lead {
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;

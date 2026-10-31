@@ -3,7 +3,7 @@ import { ToolPage, ToolH2, ToolP, Formula, ToolLink, ToolTable } from '@/compone
 import { PenaltyCalculator } from '@/components/pages/calc/PenaltyCalculator';
 
 const PAGE_URL = 'https://opusadvisor.fr/outils/calcul-penalites-de-retard/';
-const PAGE_TITLE = 'Calcul des pénalités de retard : calculateur gratuit (taux 2026)';
+const PAGE_TITLE = 'Calcul des pénalités de retard (taux 2026)';
 const PAGE_DESCRIPTION =
   "Calculez les pénalités de retard d'une facture entre professionnels au bon taux (12,40 % au 2nd semestre 2026) et l'indemnité forfaitaire de 40 €.";
 

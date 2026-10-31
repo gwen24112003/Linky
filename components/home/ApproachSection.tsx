@@ -3,25 +3,25 @@ import React from 'react';
 const NAVY = '#1A2332';
 const RULE = 'rgba(26,35,50,0.16)';
 
-const layers = [
+const levels = [
   {
-    what: 'Votre logiciel métier',
-    tools: 'Logiciel de gestion de formation, channel manager, logiciel de devis…',
-    desc: "On corrige son paramétrage et on s'en sert jusqu'au bout. Si vous n'en avez pas, on le choisit avec vous.",
+    what: 'Les automatisations',
+    tools: 'Make ou n8n, sur vos logiciels actuels',
+    desc: "Vos logiciels font l'affaire. On automatise ce qui se fait encore à la main : les documents se génèrent, les mails partent et les factures se préparent sans ressaisie.",
   },
   {
-    what: 'Vos tableurs et vos documents',
-    tools: 'Google Sheets, Airtable, Notion, Drive',
-    desc: 'Une seule source pour chaque information, au lieu de trois fichiers qui se contredisent.',
+    what: 'Une application centrale',
+    tools: 'Une base Airtable ou un outil développé pour vous',
+    desc: "Vos logiciels restent, et une application plus simple à utiliser les réunit. Chaque information y est saisie une fois, vous suivez l'activité depuis un seul écran, et les automatisations partent de là.",
   },
   {
-    what: 'Les liaisons entre vos outils',
-    tools: 'Make ou n8n',
-    desc: 'Les documents se génèrent, les mails partent et les factures se préparent sans ressaisie.',
+    what: 'Le système complet, de A à Z',
+    tools: 'Choix des outils, application, automatisations, formation',
+    desc: "Rien d'adapté en place, ou trop d'outils qui ne se parlent pas : on construit tout le système avec vous, jusqu'à ce qu'il tourne dans votre entreprise.",
   },
 ];
 
-/** Ce qui nous distingue d'une agence qui développe un logiciel sur mesure. */
+/** Les trois points de départ possibles : automatisations seules, application centrale, système complet. */
 export const ApproachSection: React.FC = () => (
   <section className="py-24 md:py-32 bg-white" aria-labelledby="approach-title">
     <div className="container mx-auto px-6 max-w-5xl">
@@ -31,16 +31,17 @@ export const ApproachSection: React.FC = () => (
         className="font-heading font-bold leading-[1.05] tracking-tight text-3xl md:text-5xl max-w-3xl"
         style={{ color: NAVY }}
       >
-        Vos outils d'abord. Du sur-mesure seulement s'il le faut.
+        Un système à votre image, quel que soit votre point de départ.
       </h2>
       <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-        Un logiciel développé pour vous prend des mois et coûte cher. Dans la plupart des entreprises, les outils sont
-        déjà là ; ce qui manque, ce sont les liens entre eux.
+        Certaines entreprises ont seulement besoin d'automatisations. D'autres ont besoin d'une application centrale pour
+        réunir leurs logiciels, ou d'un système monté de A à Z. On part de votre situation, et à la fin vous avez un
+        système complet qui tourne tout seul.
       </p>
       </div>
 
       <dl className="mt-12">
-        {layers.map((l, i) => (
+        {levels.map((l, i) => (
           <div key={l.what} data-reveal data-reveal-delay={String(i + 1)} className="grid grid-cols-1 md:grid-cols-12 gap-x-10 gap-y-2 py-7 border-t" style={{ borderColor: RULE }}>
             <dt className="md:col-span-5">
               <span className="block font-semibold text-lg md:text-xl leading-snug" style={{ color: NAVY }}>
@@ -55,8 +56,10 @@ export const ApproachSection: React.FC = () => (
       </dl>
 
       <p data-reveal className="mt-8 text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl">
-        Quand aucun outil existant ne fait l'affaire, on construit le vôtre, comme l'outil de suivi de l'équipe
-        d'agents immobiliers présenté plus haut. C'est l'exception, et on vous le dit avant de le chiffrer.
+        Une conciergerie, par exemple, a un logiciel de réservation et un logiciel de facturation : une application
+        centrale reçoit les réservations, calcule ce qui revient à chaque propriétaire et déclenche les factures. Dans les
+        cas présentés plus haut, l'organisme de formation et la conciergerie avaient besoin d'automatisations ; pour
+        l'équipe d'agents immobiliers, on a construit l'outil de zéro.
       </p>
     </div>
   </section>

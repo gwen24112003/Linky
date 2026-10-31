@@ -3,7 +3,7 @@ import { ToolPage, ToolH2, ToolP, Formula, ToolLink, ToolTable } from '@/compone
 import { RetentionCalculator } from '@/components/pages/calc/RetentionCalculator';
 
 const PAGE_URL = 'https://opusadvisor.fr/outils/calcul-retenue-de-garantie/';
-const PAGE_TITLE = 'Calcul de la retenue de garantie : HT ou TTC, taux, libération';
+const PAGE_TITLE = 'Calcul de la retenue de garantie : HT ou TTC ?';
 const PAGE_DESCRIPTION =
   "Calculez la retenue de garantie d'un marché de travaux : 5 % au maximum, sur le HT ou le TTC selon le marché, et sa libération un an après la réception.";
 

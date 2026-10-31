@@ -7,7 +7,7 @@ import { FinalCTASection } from '@/components/home/FinalCTASection';
 import { cases } from '@/lib/cases';
 
 const PAGE_URL = 'https://opusadvisor.fr/secteurs/';
-const PAGE_TITLE = 'Secteurs : formation, immobilier et conciergerie, BTP';
+const PAGE_TITLE = 'Nos secteurs : formation, immobilier et BTP';
 const PAGE_DESCRIPTION =
   "Organismes de formation, conciergeries et agences immobilières, entreprises du BTP second œuvre : ce qu'on automatise dans chaque secteur, avec des exemples réels.";
 

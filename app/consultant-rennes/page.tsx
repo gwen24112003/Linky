@@ -13,9 +13,9 @@ const RULE = 'rgba(26,35,50,0.16)';
 
 const SITE_URL = 'https://opusadvisor.fr';
 const PAGE_URL = `${SITE_URL}/consultant-rennes/`;
-const PAGE_TITLE = 'Consultant en organisation et automatisation à Rennes';
+const PAGE_TITLE = 'Consultant automatisation et organisation à Rennes';
 const PAGE_DESCRIPTION =
-  "Opus Advisor, à Rennes, automatise la gestion des organismes de formation, conciergeries, agences immobilières et entreprises du BTP d'Ille-et-Vilaine et des départements voisins. Pré-audit gratuit.";
+  "À Rennes, Opus Advisor construit des systèmes de gestion automatisés pour la formation, l'immobilier et le BTP, en Ille-et-Vilaine et autour. Pré-audit gratuit.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -69,7 +69,7 @@ const faq = [
   },
   {
     q: 'Vous vendez un logiciel ?',
-    a: 'Non, on ne revend aucun logiciel. On part de ce que vous utilisez déjà, votre logiciel métier, vos tableurs, vos mails, et on ne vous fait changer d’outil que si c’est vraiment nécessaire.',
+    a: 'Non, on ne revend aucun logiciel. On construit le système dont vous avez besoin : des automatisations sur vos outils actuels, une application centrale qui les réunit, ou un système complet si vous partez de zéro. Tout est à votre nom.',
   },
   {
     q: 'Combien ça coûte ?',
@@ -124,8 +124,8 @@ export default function ConsultantRennesPage() {
               Consultant en organisation et automatisation, à Rennes
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-              Opus Advisor est installé à Rennes. On automatise la gestion des petites entreprises de la région, avec
-              les outils qu'elles ont déjà : organismes de formation, conciergeries et agences immobilières, entreprises
+              Opus Advisor est installé à Rennes. On construit pour les petites entreprises de la région des systèmes de gestion
+              complets et automatisés : organismes de formation, conciergeries et agences immobilières, entreprises
               du BTP.
             </p>
             <Link

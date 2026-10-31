@@ -3,7 +3,7 @@ import { SectorPage } from '@/components/pages/SectorPage';
 import { casesFor } from '@/lib/cases';
 
 const PAGE_URL = 'https://opusadvisor.fr/secteurs/formation/';
-const PAGE_TITLE = 'Automatisation pour organismes de formation : dossiers, convocations, financeurs';
+const PAGE_TITLE = 'Automatisation pour organisme de formation';
 const PAGE_DESCRIPTION =
   'Conventions, convocations, émargements et dossiers pour les financeurs générés et envoyés automatiquement, à partir de vos outils actuels. Pré-audit gratuit.';
 
@@ -21,7 +21,7 @@ export default function FormationPage() {
       breadcrumbName="Organismes de formation"
       kicker="Organismes de formation"
       title="Automatiser la gestion d'un organisme de formation"
-      intro="Inscriptions, conventions, convocations, émargements, dossiers pour les financeurs : chaque session produit une pile de documents. On relie vos outils pour qu'ils se préparent et partent tout seuls, sans changer votre logiciel de gestion de formation."
+      intro="Inscriptions, conventions, convocations, émargements, dossiers pour les financeurs : chaque session produit une pile de documents. On réunit les stagiaires et les sessions dans une base centrale, reliée à vos outils, pour que ces documents se préparent et partent tout seuls. Si votre logiciel de gestion de formation fait l'affaire, il reste en place."
       painsTitle="Ce qui prend le plus de temps"
       pains={[
         {
@@ -52,7 +52,7 @@ export default function FormationPage() {
       setupTitle="Ce qu'on met en place"
       setup={[
         {
-          what: 'Une seule base des stagiaires et des sessions',
+          what: 'Une base centrale des stagiaires et des sessions',
           tools: 'Votre logiciel de gestion de formation (Digiforma, Dendreo…), Airtable ou Google Sheets',
           desc: 'Chaque information est saisie une fois, au bon endroit, et sert à tous les documents.',
         },

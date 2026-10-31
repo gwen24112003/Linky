@@ -28,8 +28,8 @@ export const HeroBTP: React.FC = () => {
           </h1>
 
           <p className="mt-7 text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-            Le devis part le jour de la visite, et la relance s'envoie toute seule quand le client tarde à payer. On garde
-            vos outils, on les relie entre eux.
+            Le devis part le jour de la visite, et la relance s'envoie toute seule quand le client tarde à payer. On construit
+            le système qu'il vous faut, à partir de vos outils ou de zéro.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
