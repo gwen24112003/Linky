@@ -100,7 +100,7 @@ const organizationJsonLd = {
         '@id': `${SITE_URL}/equipe/#enzo-monnier`,
         name: 'Enzo Monnier',
         jobTitle: 'Consultant en organisation et automatisation',
-        url: 'https://www.linkedin.com/in/enzo-monnier-7524ab205/',
+        url: 'https://www.linkedin.com/in/enzo-monnier/',
       },
       address: {
         '@type': 'PostalAddress',
@@ -149,7 +149,7 @@ const organizationJsonLd = {
         'WhatsApp Business',
       ],
       sameAs: [
-        'https://www.linkedin.com/in/enzo-monnier-7524ab205/',
+        'https://www.linkedin.com/in/enzo-monnier/',
         'https://www.instagram.com/opusadvisor/',
         'https://x.com/opusadvisor',
       ],

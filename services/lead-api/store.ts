@@ -86,6 +86,7 @@ export function openStore(path: string) {
   const unsubscribeEmail = db.prepare('UPDATE leads SET unsubscribed_at = ? WHERE email = ? AND unsubscribed_at IS NULL');
   const all = db.prepare('SELECT * FROM leads ORDER BY id');
   const active = db.prepare('SELECT * FROM leads WHERE consent = 1 AND unsubscribed_at IS NULL ORDER BY id');
+  const purge = db.prepare('DELETE FROM leads WHERE created_at < ?');
 
   return {
     /** Enregistre un lead et renvoie son id et son jeton de désinscription. */
@@ -117,6 +118,8 @@ export function openStore(path: string) {
     unsubscribe: (email: string) => Number(unsubscribeEmail.run(new Date().toISOString(), email).changes),
     all: () => all.all() as unknown as LeadRow[],
     active: () => active.all() as unknown as LeadRow[],
+    /** Supprime les leads enregistrés avant cette date (durée de conservation annoncée dans les mentions légales). */
+    purgeBefore: (iso: string) => Number(purge.run(iso).changes),
     close: () => db.close(),
   };
 }

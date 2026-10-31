@@ -142,7 +142,7 @@ export default function MentionsLegalesPage() {
             </div>
 
             {/* Données personnelles */}
-            <div className="mb-12 md:mb-16">
+            <div id="donnees-personnelles" className="mb-12 md:mb-16 scroll-mt-28">
               <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6" style={{ color: NAVY }}>
                 Données personnelles
               </h2>
@@ -151,9 +151,20 @@ export default function MentionsLegalesPage() {
                   Le site ne collecte aucune donnée personnelle à votre insu. En dehors de la mesure
                   d'audience anonyme décrite ci-dessous, les seules données recueillies sont celles
                   que vous transmettez volontairement, par e-mail, via le
-                  formulaire de contact ou via la prise de rendez-vous (pré-audit). Elles servent
-                  uniquement à répondre à votre demande et ne sont ni vendues, ni cédées à des
-                  tiers.
+                  formulaire de contact, via la prise de rendez-vous (pré-audit) ou via le diagnostic
+                  facture électronique. Elles servent uniquement à répondre à votre demande et ne sont
+                  ni vendues, ni cédées à des tiers.
+                </p>
+                <p>
+                  Diagnostic facture électronique : si vous demandez votre plan d'action, nous
+                  enregistrons votre prénom, votre adresse e-mail, le nom de votre entreprise, vos
+                  réponses au questionnaire et le lien par lequel vous êtes arrivé. Ces données servent à
+                  vous envoyer votre plan d'action et des rappels avant vos échéances, et à vous
+                  recontacter au sujet de la facturation électronique. Ce traitement repose sur votre
+                  consentement, donné en cochant la case du formulaire. Les données restent sur notre
+                  serveur et sont supprimées 3 ans après votre demande. Les e-mails partent par notre
+                  messagerie Google Workspace. Chacun contient un lien de désinscription en un clic, et
+                  vous pouvez retirer votre consentement à tout moment en nous écrivant.
                 </p>
                 <p>
                   Le site est hébergé sur un serveur situé au Canada, pays reconnu par la Commission
@@ -161,12 +172,12 @@ export default function MentionsLegalesPage() {
                   (décision d'adéquation).
                 </p>
                 <p>
-                  Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de
-                  suppression de vos données. Pour l'exercer, écrivez à{' '}
+                  Conformément au RGPD, vous disposez d'un droit d'accès, de rectification,
+                  d'opposition et de suppression de vos données. Pour l'exercer, écrivez à{' '}
                   <a href="mailto:enzo@opusadvisor.fr" className="underline hover:opacity-70" style={{ color: NAVY }}>
                     enzo@opusadvisor.fr
                   </a>
-                  .
+                  . Vous pouvez aussi adresser une réclamation à la CNIL (cnil.fr).
                 </p>
                 <p>
                   La prise de rendez-vous s'appuie sur un service tiers (Cal.com), et le formulaire de
